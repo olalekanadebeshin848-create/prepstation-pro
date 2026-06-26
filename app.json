@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "PrepStation Pro",
+    "slug": "prepstation-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f172a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.delmamatiagroups.prepstationpro"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0f172a",
+        "foregroundImage": "./assets/logo.png"
+      },
+      "package": "com.delmamatiagroups.prepstationpro"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-image",
+      "expo-asset"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ba328969-45f2-4d72-ae6b-3c3622109e90"
+      }
+    }
+  }
+}
