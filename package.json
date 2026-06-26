@@ -20,7 +20,6 @@
     "katex": "^0.17.0",
     "react": "19.2.3",
     "react-native": "0.85.3",
-    "react-native-math-view": "^3.9.5",
     "react-native-render-html": "^6.3.4",
     "react-native-safe-area-context": "~5.7.0",
     "react-native-webview": "13.16.1",
