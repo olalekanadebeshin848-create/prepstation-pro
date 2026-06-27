@@ -65,6 +65,26 @@ export async function initDatabase() {
 
     console.log('✅ Base schema created successfully');
 
+// ── SCHEMA MIGRATION: Add missing columns to existing installs ──
+const migrations = [
+  `ALTER TABLE exam_history ADD COLUMN raw_score INTEGER DEFAULT 0;`,
+  `ALTER TABLE exam_history ADD COLUMN final_score INTEGER DEFAULT 0;`,
+  `ALTER TABLE exam_history ADD COLUMN penalty_deduction INTEGER DEFAULT 0;`,
+  `ALTER TABLE exam_history ADD COLUMN wrong_answers TEXT;`,
+  `ALTER TABLE exam_history ADD COLUMN bundle_name TEXT;`,
+  `ALTER TABLE exam_history ADD COLUMN required_score INTEGER DEFAULT 50;`,
+  `ALTER TABLE exam_history ADD COLUMN tab_switch_count INTEGER DEFAULT 0;`,
+];
+
+for (const migration of migrations) {
+  try {
+    await db.runAsync(migration);
+    console.log('✅ Migration applied:', migration.substring(0, 60));
+  } catch (e) {
+    // Column already exists — safe to ignore
+  }
+}
+
     // Check if we have subjects, if not seed initial data
     const subjectCheck = await db.getAllAsync("SELECT COUNT(*) as count FROM subjects;");
     const subjectCount = subjectCheck[0]?.count || 0;

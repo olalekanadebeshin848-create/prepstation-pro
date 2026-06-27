@@ -625,11 +625,7 @@ const handleToggleSubject = (subject) => {
   // ── GATE 1: Strata subject validation (HARD BLOCK) ──
   const strataNames = getStrataSubjectNames();
   if (strataNames && !isSubjectInStrata(subject, strataNames)) {
-    const blockedBundle = (isMegaStrataActive ? megaStrataData : activeStrataData)
-    .bundles?.find(b => b.id === selectedBundleId);
-
-  // REPLACE the Alert inside GATE 1:
-Alert.alert(
+    Alert.alert(
   "❌ Subject Blocked by Strata",
   `"${subject.name}" is not in your uploaded strata file.\n\n` +
   `Available subjects:\n${strataNames.map(n => `• ${n}`).join('\n')}\n\n` +
