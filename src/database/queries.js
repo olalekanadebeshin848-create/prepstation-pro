@@ -1,7 +1,7 @@
 // queries.js
 import * as SQLite from 'expo-sqlite';
 
-const DB_NAME = 'questions.db';
+const DB_NAME = 'questions_v2.db';
 let dbInstance = null;
 let connectionPromise = null;
 

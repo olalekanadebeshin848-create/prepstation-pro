@@ -2,7 +2,7 @@
 import * as SQLite from 'expo-sqlite';
 import * as FileSystem from 'expo-file-system';
 
-const DB_NAME = 'questions.db';
+const DB_NAME = 'questions_v2.db';
 
 export async function initDatabase() {
   try {
