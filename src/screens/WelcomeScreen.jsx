@@ -6,222 +6,351 @@ import {
   Animated,
   StatusBar,
   Dimensions,
+  ImageBackground,
 } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
 export default function WelcomeScreen({ onFinish }) {
-  // Animation hooks for sleek production feel
-  const fadeAnim = useRef(new Animated.Value(0)).current;
-  const slideAnim = useRef(new Animated.Value(20)).current;
+  const heroFade = useRef(new Animated.Value(0)).current;
+  const heroSlide = useRef(new Animated.Value(28)).current;
+  const cardFade = useRef(new Animated.Value(0)).current;
+  const cardSlide = useRef(new Animated.Value(22)).current;
+  const loaderWidth = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    // Run content entry animations
-    Animated.parallel([
-      Animated.timing(fadeAnim, {
-        toValue: 1,
-        duration: 1000,
-        useNativeDriver: true,
-      }),
-      Animated.timing(slideAnim, {
-        toValue: 0,
-        duration: 1000,
-        useNativeDriver: true,
-      }),
+    Animated.sequence([
+      Animated.delay(300),
+      Animated.parallel([
+        Animated.timing(heroFade, { toValue: 1, duration: 800, useNativeDriver: true }),
+        Animated.timing(heroSlide, { toValue: 0, duration: 800, useNativeDriver: true }),
+      ]),
+      Animated.delay(200),
+      Animated.parallel([
+        Animated.timing(cardFade, { toValue: 1, duration: 700, useNativeDriver: true }),
+        Animated.timing(cardSlide, { toValue: 0, duration: 700, useNativeDriver: true }),
+      ]),
     ]).start();
 
-    // ── CONFIGURABLE WAIT TIME FOR USER READING ──
-    // 8.5 seconds ensures ample time to read the mission statement fully
+    Animated.timing(loaderWidth, {
+      toValue: width * 0.5,
+      duration: 7800,
+      useNativeDriver: false,
+    }).start();
+
     const timer = setTimeout(() => {
-      // Fade out completely before transitioning
-      Animated.timing(fadeAnim, {
+      Animated.timing(heroFade, {
         toValue: 0,
-        duration: 800,
+        duration: 600,
         useNativeDriver: true,
       }).start(() => {
-        if (typeof onFinish === 'function') {
-          onFinish();
-        }
+        if (typeof onFinish === 'function') onFinish();
       });
     }, 8500);
 
     return () => clearTimeout(timer);
-  }, [fadeAnim, slideAnim]);
+  }, []);
 
   return (
-    <View style={styles.rootContainer}>
-      <StatusBar barStyle="light-content" backgroundColor="#0f172a" />
-      
-      <Animated.ScrollView 
-        style={[styles.scrollView, { opacity: fadeAnim, transform: [{ translateY: slideAnim }] }]}
-        contentContainerStyle={styles.scrollContent}
-        showsVerticalScrollIndicator={false}
+    <ImageBackground
+      source={require('../../assets/images/welcome-bg.png')}
+      style={styles.root}
+      resizeMode="cover"
+    >
+      <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+
+      {/* Top fade — darkens status bar area only */}
+      <View style={styles.overlayTop} />
+
+      {/* Bottom panel dark base */}
+      <View style={styles.overlayBottom} />
+
+      {/* ── HERO — sits over the photo ── */}
+      <Animated.View
+        style={[
+          styles.heroSection,
+          { opacity: heroFade, transform: [{ translateY: heroSlide }] },
+        ]}
       >
-        {/* BRAND IDENTITY HEADER BLOCK */}
-        <View style={styles.brandHeroBlock}>
-          <Text style={styles.mainTitle}>PrepStation Pro</Text>
-          <Text style={styles.tagline}>
-            YOUR BEST EXAMINATION COMPANION THAT BUILDS CONFIDENCE
-          </Text>
-          <View style={styles.brandDividerLine} />
-          <Text style={styles.corporateCredit}>
-            BUILT BY DELMA MATIA GROUPS (DMS GROUPS)
-          </Text>
+        {/* Live badge */}
+        <View style={styles.liveBadge}>
+          <View style={styles.liveDot} />
+          <Text style={styles.liveBadgeText}>EXAM SEASON IS HERE</Text>
         </View>
 
-        {/* CORE MISSION STATEMENT & TARGET DEMOGRAPHIC */}
-        <View style={styles.missionCard}>
-          <Text style={styles.sectionHeading}>Why We Built This App & Who It Is For</Text>
-          
-          <Text style={styles.missionBodyText}>
-            The app is for those who after exposure to study & past questions, then want to genuinely know their strength and build examination confidence through exposure to both basic and premium questions that matches standard requirement for <Text style={styles.highlightText}>UTME (JAMB)</Text>, <Text style={styles.highlightText}>WAEC (SSCE)</Text> & <Text style={styles.highlightText}>NECO (NABTEB INCLUSIVE)</Text>.
-          </Text>
-
-          {/* CRITICAL WARNING BENCHMARK */}
-          <View style={styles.warningCalloutContainer}>
-            <Text style={styles.warningCalloutTxt}>
-              IF YOU DON'T USE THIS APP, YOU ARE NOT ADVISED TO EXPECT TOO MUCH FROM THE COMING EXAM.
-            </Text>
+        {/* App name — the hero element */}
+        <Text style={styles.brandPrep}>Prep</Text>
+        <View style={styles.brandStationRow}>
+          <Text style={styles.brandStation}>Station</Text>
+          <View style={styles.proPill}>
+            <Text style={styles.proText}>PRO</Text>
           </View>
         </View>
-      </Animated.ScrollView>
 
-      {/* FOOTER SYSTEM VERSION MARKER */}
-      <Animated.View style={[styles.systemFooter, { opacity: fadeAnim }]}>
-        <Text style={styles.footerLoadingIndicator}>Loading secure examination base...</Text>
-        <View style={styles.loadingBarTrack}>
-          <Animated.View style={styles.loadingBarFill} />
-        </View>
+        <Text style={styles.heroTagline}>
+          Your edge into the{'\n'}examination hall.
+        </Text>
       </Animated.View>
-    </View>
+
+      {/* ── BOTTOM INFO CARD ── */}
+      <Animated.View
+        style={[
+          styles.bottomCard,
+          { opacity: cardFade, transform: [{ translateY: cardSlide }] },
+        ]}
+      >
+        {/* Exam bodies */}
+        <View style={styles.examRow}>
+          {['JAMB', 'WAEC', 'NECO', 'NABTEB'].map((body, i) => (
+            <React.Fragment key={body}>
+              <Text style={styles.examBody}>{body}</Text>
+              {i < 3 && <View style={styles.examDot} />}
+            </React.Fragment>
+          ))}
+        </View>
+
+        <View style={styles.divider} />
+
+        {/* Core message */}
+        <Text style={styles.coreMessage}>
+          Official syllabus. Rigorous questions.{'\n'}Built for candidates who mean business.
+        </Text>
+
+        {/* Advisory */}
+        <View style={styles.advisory}>
+          <Text style={styles.advisoryIcon}>⚠</Text>
+          <Text style={styles.advisoryText}>
+            Brace yourself — these questions are not for the faint-hearted.
+          </Text>
+        </View>
+
+        {/* Loader */}
+        <View style={styles.loaderBlock}>
+          <View style={styles.loaderTrack}>
+            <Animated.View style={[styles.loaderFill, { width: loaderWidth }]} />
+          </View>
+          <Text style={styles.loaderLabel}>Preparing your environment…</Text>
+        </View>
+
+        {/* Credit */}
+        <Text style={styles.credit}>PrepStation Pro · Delma Matia Groups</Text>
+      </Animated.View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  rootContainer: {
+  root: {
     flex: 1,
-    backgroundColor: '#0f172a', // Deep corporate dark midnight theme matching your application colors
-    justifyContent: 'space-between',
-  },
-  scrollView: {
-    flex: 1,
-  },
-  scrollContent: {
-    paddingHorizontal: 24,
-    paddingTop: 80,
-    paddingBottom: 40,
-    alignItems: 'center',
-  },
-  brandHeroBlock: {
-    alignItems: 'center',
-    marginBottom: 40,
-    width: '100%',
-  },
-  mainTitle: {
-    fontSize: 38,
-    fontWeight: '900',
-    color: '#ffffff',
-    letterSpacing: -1,
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  },
-  tagline: {
-    fontSize: 16,
-    fontWeight: '800',
-    color: '#38bdf8', // Accent vibrant color pop
-    textAlign: 'center',
-    marginTop: 10,
-    lineHeight: 24,
-    paddingHorizontal: 12,
-    letterSpacing: 0.3,
-  },
-  brandDividerLine: {
-    width: 80,
-    height: 4,
-    backgroundColor: '#10b981',
-    borderRadius: 2,
-    marginVertical: 20,
-  },
-  corporateCredit: {
-    fontSize: 12,
-    fontWeight: '700',
-    color: '#94a3b8',
-    letterSpacing: 1.5,
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  },
-  missionCard: {
-    backgroundColor: '#1e293b',
-    borderRadius: 16,
-    padding: 24,
-    width: '100%',
-    borderWidth: 1,
-    borderColor: '#334155',
-    shadowColor: '#000000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 10,
-    elevation: 5,
-  },
-  sectionHeading: {
-    fontSize: 14,
-    fontWeight: '800',
-    color: '#94a3b8',
-    textTransform: 'uppercase',
-    letterSpacing: 0.5,
-    marginBottom: 14,
-    textAlign: 'center',
-  },
-  missionBodyText: {
-    fontSize: 15,
-    color: '#cbd5e1',
-    lineHeight: 25,
-    textAlign: 'center',
-    fontWeight: '500',
-  },
-  highlightText: {
-    color: '#ffffff',
-    fontWeight: '800',
-  },
-  warningCalloutContainer: {
-    marginTop: 24,
-    backgroundColor: 'rgba(239, 68, 68, 0.1)',
-    borderRadius: 10,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: 'rgba(239, 68, 68, 0.3)',
-  },
-  warningCalloutTxt: {
-    fontSize: 13,
-    fontWeight: '800',
-    color: '#fca5a5',
-    textAlign: 'center',
-    lineHeight: 20,
-    letterSpacing: 0.2,
-  },
-  systemFooter: {
-    paddingHorizontal: 32,
-    paddingBottom: 40,
-    alignItems: 'center',
-    width: '100%',
-  },
-  footerLoadingIndicator: {
-    fontSize: 11,
-    color: '#64748b',
-    fontWeight: '600',
-    marginBottom: 10,
-  },
-  loadingBarTrack: {
-    width: width * 0.4,
-    height: 3,
-    backgroundColor: '#1e293b',
-    borderRadius: 1.5,
-    overflow: 'hidden',
-  },
-  loadingBarFill: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#38bdf8',
+    justifyContent: 'space-between',
+  },
+
+  overlayTop: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 160,
+    backgroundColor: 'rgba(8, 2, 5, 0.75)',
+  },
+  overlayBottom: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: '48%',
+    backgroundColor: 'rgba(8, 2, 5, 0.88)',
+  },
+
+  /* ── HERO ── */
+  heroSection: {
+    paddingTop: 62,
+    paddingHorizontal: 28,
+  },
+
+  liveBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+    gap: 7,
+    backgroundColor: 'rgba(245, 200, 66, 0.12)',
+    borderWidth: 1,
+    borderColor: 'rgba(245, 200, 66, 0.35)',
+    borderRadius: 20,
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+    marginBottom: 22,
+  },
+  liveDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: '#f5c842',
+  },
+  liveBadgeText: {
+    fontSize: 10,
+    fontWeight: '800',
+    color: '#f5c842',
+    letterSpacing: 2,
+  },
+
+  /* Brand name treatment */
+  brandPrep: {
+    fontSize: 64,
+    fontWeight: '900',
+    color: '#ffffff',
+    letterSpacing: -2,
+    lineHeight: 64,
+    textShadowColor: 'rgba(0,0,0,0.55)',
+    textShadowOffset: { width: 0, height: 3 },
+    textShadowRadius: 10,
+  },
+  brandStationRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginBottom: 18,
+  },
+  brandStation: {
+    fontSize: 64,
+    fontWeight: '900',
+    color: '#f5c842',
+    letterSpacing: -2,
+    lineHeight: 68,
+    textShadowColor: 'rgba(0,0,0,0.4)',
+    textShadowOffset: { width: 0, height: 3 },
+    textShadowRadius: 10,
+  },
+  proPill: {
+    backgroundColor: '#f5c842',
+    borderRadius: 8,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    alignSelf: 'center',
+    marginBottom: 4,
+  },
+  proText: {
+    fontSize: 13,
+    fontWeight: '900',
+    color: '#1a0a00',
+    letterSpacing: 1.5,
+  },
+
+  heroTagline: {
+    fontSize: 15,
+    fontWeight: '500',
+    color: 'rgba(255,255,255,0.72)',
+    lineHeight: 24,
+    letterSpacing: 0.2,
+  },
+
+  /* ── BOTTOM CARD ── */
+  bottomCard: {
+    marginHorizontal: 16,
+    marginBottom: 40,
+    backgroundColor: 'rgba(14, 4, 9, 0.75)',
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.09)',
+    paddingHorizontal: 22,
+    paddingTop: 20,
+    paddingBottom: 22,
+  },
+
+  /* Exam body row */
+  examRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 10,
+    marginBottom: 16,
+  },
+  examBody: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#f5c842',
+    letterSpacing: 1.2,
+  },
+  examDot: {
+    width: 3,
+    height: 3,
     borderRadius: 1.5,
+    backgroundColor: 'rgba(245,200,66,0.4)',
+  },
+
+  divider: {
+    height: 1,
+    backgroundColor: 'rgba(255,255,255,0.07)',
+    marginBottom: 16,
+  },
+
+  coreMessage: {
+    fontSize: 13.5,
+    fontWeight: '500',
+    color: 'rgba(255,255,255,0.65)',
+    lineHeight: 22,
+    textAlign: 'center',
+    marginBottom: 16,
+  },
+
+  /* Advisory */
+  advisory: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 10,
+    backgroundColor: 'rgba(239,68,68,0.09)',
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(239,68,68,0.22)',
+    paddingVertical: 11,
+    paddingHorizontal: 14,
+    marginBottom: 20,
+  },
+  advisoryIcon: {
+    fontSize: 13,
+    color: '#ef4444',
+    marginTop: 1,
+  },
+  advisoryText: {
+    fontSize: 12.5,
+    fontWeight: '600',
+    color: '#fca5a5',
+    lineHeight: 19,
+    flex: 1,
+  },
+
+  /* Loader */
+  loaderBlock: {
+    alignItems: 'center',
+    gap: 8,
+    marginBottom: 16,
+  },
+  loaderTrack: {
+    width: width * 0.5,
+    height: 2,
+    backgroundColor: 'rgba(255,255,255,0.07)',
+    borderRadius: 1,
+    overflow: 'hidden',
+  },
+  loaderFill: {
+    height: '100%',
+    backgroundColor: '#f5c842',
+    borderRadius: 1,
+  },
+  loaderLabel: {
+    fontSize: 10.5,
+    color: 'rgba(255,255,255,0.32)',
+    fontWeight: '500',
+    letterSpacing: 0.3,
+  },
+
+  credit: {
+    fontSize: 10,
+    color: 'rgba(255,255,255,0.22)',
+    textAlign: 'center',
+    fontWeight: '500',
+    letterSpacing: 0.4,
   },
 });

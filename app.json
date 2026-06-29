@@ -4,12 +4,11 @@
     "slug": "prepstation-pro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0f172a"
+      "backgroundColor": "#0f172a",
+      "resizeMode": "contain"
     },
     "ios": {
       "supportsTablet": true,
@@ -17,19 +16,28 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#0f172a",
-        "foregroundImage": "./assets/logo.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0f172a"
       },
       "package": "com.delmamatiagroups.prepstationpro"
     },
     "web": {
-      "favicon": "./assets/logo.png"
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
       "expo-sqlite",
       "expo-secure-store",
       "expo-image",
-      "expo-asset"
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0f172a",
+          "image": "./assets/icon.png",
+          "imageWidth": 1,
+          "resizeMode": "contain"
+        }
+      ]
     ],
     "extra": {
       "eas": {

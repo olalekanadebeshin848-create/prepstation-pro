@@ -1,17 +1,13 @@
-// setup.js - Complete Database Initialization
 import * as SQLite from 'expo-sqlite';
-import * as FileSystem from 'expo-file-system';
+import { setDbInstance } from './queries';
 
 const DB_NAME = 'questions_v2.db';
 
 export async function initDatabase() {
   try {
-    console.log('🚀 Opening database via native driver...');
+    console.log('🚀 Opening database...');
     const db = await SQLite.openDatabaseAsync(DB_NAME);
 
-    console.log('📦 Executing base database schema migrations...');
-    
-    // Create all tables with proper schema
     await db.execAsync(`
       PRAGMA foreign_keys = ON;
       PRAGMA journal_mode = WAL;
@@ -57,42 +53,31 @@ export async function initDatabase() {
         FOREIGN KEY(subject_id) REFERENCES subjects(id) ON DELETE SET NULL
       );
 
-      -- Indexes for better performance
       CREATE INDEX IF NOT EXISTS idx_exam_history_subject ON exam_history(subject_id);
       CREATE INDEX IF NOT EXISTS idx_exam_history_timestamp ON exam_history(timestamp DESC);
       CREATE INDEX IF NOT EXISTS idx_questions_subject ON questions(subject_id);
     `);
 
-    console.log('✅ Base schema created successfully');
+    console.log('✅ Schema ready');
 
-// ── SCHEMA MIGRATION: Add missing columns to existing installs ──
-const migrations = [
-  `ALTER TABLE exam_history ADD COLUMN raw_score INTEGER DEFAULT 0;`,
-  `ALTER TABLE exam_history ADD COLUMN final_score INTEGER DEFAULT 0;`,
-  `ALTER TABLE exam_history ADD COLUMN penalty_deduction INTEGER DEFAULT 0;`,
-  `ALTER TABLE exam_history ADD COLUMN wrong_answers TEXT;`,
-  `ALTER TABLE exam_history ADD COLUMN bundle_name TEXT;`,
-  `ALTER TABLE exam_history ADD COLUMN required_score INTEGER DEFAULT 50;`,
-  `ALTER TABLE exam_history ADD COLUMN tab_switch_count INTEGER DEFAULT 0;`,
-];
+    const migrations = [
+      `ALTER TABLE exam_history ADD COLUMN raw_score INTEGER DEFAULT 0;`,
+      `ALTER TABLE exam_history ADD COLUMN final_score INTEGER DEFAULT 0;`,
+      `ALTER TABLE exam_history ADD COLUMN penalty_deduction INTEGER DEFAULT 0;`,
+      `ALTER TABLE exam_history ADD COLUMN wrong_answers TEXT;`,
+      `ALTER TABLE exam_history ADD COLUMN bundle_name TEXT;`,
+      `ALTER TABLE exam_history ADD COLUMN required_score INTEGER DEFAULT 50;`,
+      `ALTER TABLE exam_history ADD COLUMN tab_switch_count INTEGER DEFAULT 0;`,
+    ];
 
-for (const migration of migrations) {
-  try {
-    await db.runAsync(migration);
-    console.log('✅ Migration applied:', migration.substring(0, 60));
-  } catch (e) {
-    // Column already exists — safe to ignore
-  }
-}
+    for (const migration of migrations) {
+      try { await db.runAsync(migration); } catch (e) { /* column exists */ }
+    }
 
-    // Check if we have subjects, if not seed initial data
     const subjectCheck = await db.getAllAsync("SELECT COUNT(*) as count FROM subjects;");
-    const subjectCount = subjectCheck[0]?.count || 0;
+    if ((subjectCheck[0]?.count || 0) === 0) {
+      console.log('🌱 Seeding data...');
 
-    if (subjectCount === 0) {
-      console.log('🌱 Seeding initial practice data...');
-      
-      // Insert subjects
       await db.execAsync(`
         INSERT INTO subjects (id, name, exam_body, color) VALUES 
           (1, 'Mathematics', 'JAMB', '#8b5cf6'),
@@ -113,79 +98,64 @@ for (const migration of migrations) {
           (16, 'Literature in English', 'WAEC', '#f43f5e');
       `);
 
-      // Insert sample questions
       await db.execAsync(`
         INSERT INTO questions (subject_id, year, question_text, option_a, option_b, option_c, option_d, correct_option, explanation, topic_name) VALUES
           (1, 2024, 'Solve for x if 2x + 5 = 15.', '3', '5', '10', '20', 'B', 'Subtract 5 from both sides: 2x = 10. Divide by 2: x = 5.', 'Algebra'),
           (1, 2024, 'Find the value of log10(100).', '1', '2', '3', '10', 'B', 'Since 10 squared is 100, log10(100) = 2.', 'Logarithms'),
           (1, 2024, 'What is the derivative of x^2?', 'x', '2x', 'x^2', '2', 'B', 'The derivative of x^n is nx^(n-1), so derivative of x^2 is 2x.', 'Calculus'),
-          (2, 2024, 'Choose the correct spelling: _____', 'Accomodate', 'Acommodate', 'Accommodate', 'Acomodate', 'C', 'The correct spelling is "Accommodate" with double "c" and double "m".', 'Spelling'),
-          (2, 2024, 'The word "benevolent" means:', 'Kind and generous', 'Cruel and harsh', 'Lazy and idle', 'Brave and bold', 'A', 'Benevolent means showing or motivated by sympathy and understanding.', 'Vocabulary'),
-          (3, 2023, 'A triangle has angles 45° and 45°. What is the third angle?', '40°', '60°', '90°', '180°', 'C', 'Angles in a triangle total 180°. 180 - (45 + 45) = 90°.', 'Geometry'),
-          (3, 2023, 'Calculate the area of a circle with radius 7cm. (Use π = 22/7)', '154 cm²', '44 cm²', '22 cm²', '154 cm²', 'A', 'Area = πr² = 22/7 × 7 × 7 = 154 cm².', 'Geometry'),
-          (5, 2024, 'What is the SI unit of force?', 'Newton', 'Joule', 'Watt', 'Pascal', 'A', 'The SI unit of force is the Newton (N).', 'Mechanics');
+          (2, 2024, 'Choose the correct spelling:', 'Accomodate', 'Acommodate', 'Accommodate', 'Acomodate', 'C', 'The correct spelling is Accommodate.', 'Spelling'),
+          (2, 2024, 'The word benevolent means:', 'Kind and generous', 'Cruel and harsh', 'Lazy and idle', 'Brave and bold', 'A', 'Benevolent means showing sympathy and understanding.', 'Vocabulary'),
+          (3, 2023, 'A triangle has angles 45 and 45 degrees. What is the third angle?', '40', '60', '90', '180', 'C', 'Angles in a triangle total 180. 180 minus 90 equals 90.', 'Geometry'),
+          (3, 2023, 'Calculate the area of a circle with radius 7cm using pi as 22/7.', '154 cm2', '44 cm2', '22 cm2', '308 cm2', 'A', 'Area equals pi r squared equals 154 cm2.', 'Geometry'),
+          (5, 2024, 'What is the SI unit of force?', 'Newton', 'Joule', 'Watt', 'Pascal', 'A', 'The SI unit of force is the Newton.', 'Mechanics');
       `);
 
-      console.log('✅ Sample questions seeded successfully');
-    } else {
-      console.log(`📊 Database already has ${subjectCount} subjects`);
+      console.log('✅ Seed complete');
     }
 
-    // Verify everything works
-    const testQuery = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");
-    console.log(`📈 Exam history has ${testQuery[0]?.count || 0} records`);
+    const historyCheck = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");
+    console.log(`📈 Exam history has ${historyCheck[0]?.count || 0} records`);
 
-    console.log('✅ Database initialization complete!');
+    // ── Share this connection with queries.js ──
+    setDbInstance(db);
+
+    console.log('✅ Database ready');
     return true;
   } catch (error) {
-    console.error('❌ CRITICAL: Database initialization failed:', error);
+    console.error('❌ Database init failed:', error);
     return false;
   }
 }
 
-// Helper function to reset the entire database (for testing)
 export async function resetDatabase() {
   try {
     const db = await SQLite.openDatabaseAsync(DB_NAME);
-    
-    // Drop all tables
     await db.execAsync(`
       DROP TABLE IF EXISTS exam_history;
       DROP TABLE IF EXISTS questions;
       DROP TABLE IF EXISTS subjects;
     `);
-    
-    console.log('🗑️ Database reset complete');
+    console.log('🗑️ Database reset');
     return true;
   } catch (error) {
-    console.error('❌ Failed to reset database:', error);
+    console.error('❌ Reset failed:', error);
     return false;
   }
 }
 
-// Helper function to get database stats
 export async function getDatabaseStats() {
   try {
     const db = await SQLite.openDatabaseAsync(DB_NAME);
-    
-    const stats = {
-      subjects: 0,
-      questions: 0,
-      examHistory: 0,
+    const s = await db.getAllAsync("SELECT COUNT(*) as count FROM subjects;");
+    const q = await db.getAllAsync("SELECT COUNT(*) as count FROM questions;");
+    const h = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");
+    return {
+      subjects:    s[0]?.count || 0,
+      questions:   q[0]?.count || 0,
+      examHistory: h[0]?.count || 0,
     };
-    
-    const subjectResult = await db.getAllAsync("SELECT COUNT(*) as count FROM subjects;");
-    stats.subjects = subjectResult[0]?.count || 0;
-    
-    const questionResult = await db.getAllAsync("SELECT COUNT(*) as count FROM questions;");
-    stats.questions = questionResult[0]?.count || 0;
-    
-    const historyResult = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");
-    stats.examHistory = historyResult[0]?.count || 0;
-    
-    return stats;
   } catch (error) {
-    console.error('Failed to get database stats:', error);
+    console.error('Failed to get stats:', error);
     return null;
   }
 }

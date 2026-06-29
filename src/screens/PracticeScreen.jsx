@@ -15,35 +15,12 @@ import { logExamResult } from '../database/queries';
 import { WebView } from 'react-native-webview';
 import { katexCSS, katexJS, autoRenderJS } from '../../assets/katex/katex-bundle';
 import ResultScreen from './ResultScreen'; 
-// ─────────────────────────────────────────────────────────────────────────────
-// MATH RENDERING SETUP — Pure JS, works in Expo Go
-// Install:  npx expo install react-native-webview
-// ─────────────────────────────────────────────────────────────────────────────
-
+import { applyBundleCompletionToStorage } from './HomeScreen';
 const { width } = Dimensions.get('window');
 
-// ─────────────────────────────────────────────────────────────────────────────
-// RAW TEXT → LaTeX NORMALISER
-//
-// Converts plain-text math notation from your JSON questions into proper
-// LaTeX so KaTeX can render it beautifully.
-//
-// Handles:
-//   Superscripts    x^2        →  x^{2}
-//   Subscripts      H_2O       →  H_{2}O
-//   Fractions       a/b        →  \frac{a}{b}   (only inside math tokens)
-//   Square roots    √(...)     →  \sqrt{...}
-//   Greek letters   π α β γ δ θ λ μ Ω Σ
-//   ± × ÷ ≤ ≥ ≠ ∞ ∑ ∫
-//   Chemical arrow  →          →  \rightarrow
-//   Degree symbol   °          →  ^{\circ}
-//   Subscript nums  CO2 H2O    →  CO_{2}  H_{2}O
-// ─────────────────────────────────────────────────────────────────────────────
 function toLatex(raw) {
   if (!raw) return '';
   let s = raw;
-
-  // Greek & special symbols
   const symbolMap = {
     'π': '\\pi',
     'α': '\\alpha', 'β': '\\beta', 'γ': '\\gamma', 'δ': '\\delta',
@@ -60,72 +37,32 @@ function toLatex(raw) {
   Object.entries(symbolMap).forEach(([sym, latex]) => {
     s = s.split(sym).join(latex);
   });
-
-  // Superscripts written as ^2, ^3, ^n  → ^{2}, ^{3}, ^{n}
-  // Only wrap if not already wrapped
   s = s.replace(/\^(\w+)/g, (_, exp) => `^{${exp}}`);
-
-  // Explicit subscripts written as _2, _n → _{2}, _{n}
   s = s.replace(/_(\w+)/g, (_, sub) => `_{${sub}}`);
-
-  // Chemical / scientific subscript numbers:
-  // Letters immediately followed by digits  e.g. CO2 H2SO4 NH3 C6H12O6
-  // Only when the letter is uppercase (element symbol) or a known pattern
   s = s.replace(/([A-Za-z])(\d+)/g, (_, letter, digits) => `${letter}_{${digits}}`);
-
-  // sqrt with parentheses  \sqrt(expr)  → \sqrt{expr}
   s = s.replace(/\\sqrt\(([^)]+)\)/g, (_, inner) => `\\sqrt{${inner}}`);
-
-  // Simple inline fractions  a/b  — only when surrounded by math tokens
-  // Avoid converting things like "3/4 of students" (prose text)
-  // We only convert when both sides are purely numeric/algebraic
   s = s.replace(/([A-Za-z0-9\}]+)\/([A-Za-z0-9\{][A-Za-z0-9\{\}]*)/g, (match, num, den) => {
-    // Skip if it looks like a URL or file path
     if (match.includes('://')) return match;
     return `\\frac{${num}}{${den}}`;
   });
-
   return s;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SEGMENT PARSER
-//
-// Splits a question/option string into alternating plain-text and math
-// segments.  A math segment is anything between $...$ or $$...$$, OR any
-// token that contains a known math indicator (^, _, \, digits after letters,
-// special symbols already converted to \-commands, etc.).
-//
-// Strategy:
-//   1. If the author wrapped content in $...$ / $$...$$ → use as-is.
-//   2. Otherwise auto-detect "math-looking" tokens by splitting on spaces and
-//      checking each word.
-// ─────────────────────────────────────────────────────────────────────────────
 const MATH_TOKEN_RE = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$)/g;
 
-// Heuristic: does this word look like it contains math?
 function looksLikeMath(word) {
-  // Already a LaTeX command
   if (/\\[a-zA-Z]/.test(word)) return true;
-  // Contains superscript or subscript markers
   if (/[\^_{}]/.test(word)) return true;
-  // Pure number or simple decimal
-  if (/^-?\d+(\.\d+)?$/.test(word)) return false; // plain number → keep as text
-  // Letter(s) followed by digit(s) — chemical/algebraic
+  if (/^-?\d+(\.\d+)?$/.test(word)) return false;
   if (/[A-Za-z]\d/.test(word)) return true;
-  // Fraction pattern
   if (/\d+\/\d+/.test(word)) return true;
-  // Contains math operators that were converted
   if (/\\(frac|sqrt|pm|times|div|leq|geq|neq|infty|sum|int|pi|alpha|rightarrow)/.test(word)) return true;
   return false;
 }
 
 function parseSegments(rawText) {
   if (!rawText) return [{ type: 'text', content: '' }];
-
   const preprocessed = toLatex(rawText);
-
-  // If explicit $ delimiters exist, use them
   if (MATH_TOKEN_RE.test(preprocessed)) {
     MATH_TOKEN_RE.lastIndex = 0;
     const parts = [];
@@ -145,13 +82,10 @@ function parseSegments(rawText) {
     }
     return parts;
   }
-
-  // Auto-detect: split into words, group consecutive math words
   const words = preprocessed.split(/(\s+)/);
   const segments = [];
   let currentText = '';
   let currentMath = '';
-
   words.forEach((word) => {
     const isSpace = /^\s+$/.test(word);
     if (isSpace) {
@@ -159,7 +93,6 @@ function parseSegments(rawText) {
       else { currentText += word; }
       return;
     }
-
     if (looksLikeMath(word)) {
       if (currentText.trim()) {
         segments.push({ type: 'text', content: currentText });
@@ -174,22 +107,11 @@ function parseSegments(rawText) {
       currentText += (currentText ? ' ' : '') + word;
     }
   });
-
   if (currentMath.trim()) segments.push({ type: 'math', content: currentMath.trim() });
   if (currentText.trim()) segments.push({ type: 'text', content: currentText.trim() });
-
   return segments.length > 0 ? segments : [{ type: 'text', content: preprocessed }];
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// KaTeX WebView Renderer
-//
-// Renders a full question/option string (which may contain math) inside a
-// lightweight WebView that loads KaTeX from CDN.
-// Works in Expo Go — no native rebuild needed.
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Build the KaTeX HTML page for a given LaTeX string
 function buildKatexHtml(latex, fontSize, color) {
   return `
 <!DOCTYPE html>
@@ -238,29 +160,19 @@ function buildKatexHtml(latex, fontSize, color) {
 </html>`;
 }
 
-// MathText — auto-sizes its WebView to content height
 function MathText({ text, textStyle, containerStyle }) {
   const [webHeight, setWebHeight] = useState(30);
-
   const segments = parseSegments(text || '');
   const hasMath = segments.some(s => s.type === 'math');
-
-  // Extract style values with safe defaults
   const fontSize = StyleSheet.flatten(textStyle)?.fontSize || 15;
   const color    = StyleSheet.flatten(textStyle)?.color    || '#0f172a';
-
-  // Pure text — no WebView overhead
   if (!hasMath) {
     return <Text style={textStyle}>{text}</Text>;
   }
-
-  // Reconstruct the string with $...$ delimiters around math segments
   const marked = segments.map(seg =>
     seg.type === 'math' ? `$${seg.content}$` : seg.content
   ).join('');
-
   const html = buildKatexHtml(marked, fontSize, color);
-
   return (
     <View style={[{ width: '100%', height: webHeight }, containerStyle]}>
       <WebView
@@ -273,19 +185,25 @@ function MathText({ text, textStyle, containerStyle }) {
           if (!isNaN(h) && h > 0) setWebHeight(h + 4);
         }}
         style={{ backgroundColor: 'transparent', flex: 1 }}
-        // Needed for transparent bg on Android
         androidLayerType="software"
       />
     </View>
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// MAIN SCREEN
-// ─────────────────────────────────────────────────────────────────────────────
 export default function PracticeScreen({ sessionPayload, onExit }) {
   const insets = useSafeAreaInsets();
-  const { questions, mode, timeAllowed, subjectMeta, subjectPartitions = [] } = sessionPayload;
+  const {
+    questions,
+    mode,
+    timeAllowed,
+    subjectMeta,
+    subjectPartitions = [],
+    bundleId,
+    requiredScore,
+    examCategory,
+    onBundleComplete,   // ── callback passed from HomeScreen
+  } = sessionPayload;
 
   const SUBJECT_ABBREVIATIONS = {
     'Use of English': 'ENG',
@@ -339,7 +257,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     setShowGridMenu(false);
   };
 
-  // Countdown timer
   useEffect(() => {
     if (isTimed) {
       timerRef.current = setInterval(() => {
@@ -355,6 +272,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     }
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [isTimed]);
+
   useEffect(() => {
     if (!testStarted) return;
     const subscription = AppState.addEventListener('change', (nextState) => {
@@ -377,6 +295,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     });
     return () => subscription.remove();
   }, [testStarted]);
+
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -396,146 +315,119 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     setRevealedAnswers({ ...revealedAnswers, [currentQuestion.id]: true });
   };
 
-  const calculateScore = () => {
-    let score = 0;
-    questions.forEach((q) => {
-      if (selectedAnswers[q.id] === q.correct_option) score++;
-    });
-    const penaltyDeduction = Math.round(score * (tabSwitchCount * 0.10));
-    return Math.max(0, score - penaltyDeduction);
-  };
-
+  // ─────────────────────────────────────────────────────────────────────────
+  // buildWrongAnswers — FIX: include correctAnswerText & explanation
+  // These are only shown in ResultScreen when the user PASSED.
+  // ─────────────────────────────────────────────────────────────────────────
   const buildWrongAnswers = () => {
     return questions
       .filter(q => selectedAnswers[q.id] !== q.correct_option)
       .map(q => {
-        // Find which subject partition this question belongs to
         const qGlobalIndex = questions.indexOf(q);
         const partition = subjectPartitions.find(
           p => qGlobalIndex >= p.startIndex && qGlobalIndex <= p.endIndex
         );
         const studentKey = selectedAnswers[q.id] || null;
-  
+
         const getOptionText = key => {
           if (!key) return 'Not answered';
           const map = { A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d };
           return map[key] || key;
         };
-  
+
         return {
-          id:           q.id,
-          questionText: q.question_text,
-          subjectName:  partition?.subjectName || subjectMeta.name,
+          id:                 q.id,
+          questionText:       q.question_text,
+          subjectName:        partition?.subjectName || subjectMeta.name,
           studentKey,
-          studentAnswer: getOptionText(studentKey),
-          // ← correct answer deliberately omitted here
+          studentAnswer:      getOptionText(studentKey),
+          // ── included so ResultScreen can show them when user passed ──
+          correctKey:         q.correct_option,
+          correctAnswerText:  q.correct_answer_text || getOptionText(q.correct_option),
+          explanation:        q.explanation || '',
         };
       });
   };
-  
 
-  const handleAutoSubmit = async () => {
+  // ─────────────────────────────────────────────────────────────────────────
+  // finaliseResult — called by both auto-submit (timer) and manual submit
+  // ─────────────────────────────────────────────────────────────────────────
+  const finaliseResult = async (snapshotAnswers) => {
     if (timerRef.current) clearInterval(timerRef.current);
-  
+
     let rawScore = 0;
     questions.forEach(q => {
-      if (selectedAnswers[q.id] === q.correct_option) rawScore++;
+      if (snapshotAnswers[q.id] === q.correct_option) rawScore++;
     });
-    const penaltyDeduction = Math.round(rawScore * (tabSwitchCount * 0.10));
-    const finalScore       = Math.max(0, rawScore - penaltyDeduction);
-    const totalQ           = questions.length;
-    const percentage       = Math.round((finalScore / totalQ) * 100);
-  
-    const wrongAnswers = buildWrongAnswers();
-  
-    // FIX: Combined into a single uniform object signature
-    await logExamResult({
-      subjectId: subjectMeta.id,
-      subjectName: subjectMeta.name,
-      examBody: subjectMeta.exam_body,
-      score: rawScore,
-      totalQuestions: totalQ,
-      finalScore,
-      rawScore,
-      percentage,
-      requiredScore: sessionPayload.requiredScore || 70,
-      tabSwitchCount,
-      bundleName: subjectMeta.name,
-      penaltyDeduction,
-      wrongAnswers,
-    });
-  
+
+    const totalQ            = questions.length;
+    const penaltyDeduction  = Math.round(rawScore * (tabSwitchCount * 0.10));
+    const finalScore        = Math.max(0, rawScore - penaltyDeduction);
+    const percentage        = totalQ > 0 ? Math.round((finalScore / totalQ) * 100) : 0;
+    const effectiveRequired = typeof requiredScore === 'number' ? requiredScore : 70;
+    const passed            = percentage >= effectiveRequired;
+
+    const wrongAnswers = questions
+      .filter(q => snapshotAnswers[q.id] !== q.correct_option)
+      .map(q => {
+        const qIdx      = questions.indexOf(q);
+        const partition = subjectPartitions.find(p => qIdx >= p.startIndex && qIdx <= p.endIndex);
+        const studentKey = snapshotAnswers[q.id] || null;
+        const getOpt = key => !key ? 'Not answered' : ({A:q.option_a,B:q.option_b,C:q.option_c,D:q.option_d}[key]||key);
+        return {
+          id:                q.id,
+          questionText:      q.question_text,
+          subjectName:       partition?.subjectName || subjectMeta.name,
+          studentKey,
+          studentAnswer:     getOpt(studentKey),
+          correctKey:        q.correct_option,
+          correctAnswerText: q.correct_answer_text || getOpt(q.correct_option),
+          explanation:       q.explanation || '',
+        };
+      });
+
+    // Log result (non-blocking)
+    logExamResult({
+      subjectId: subjectMeta.id ?? null, subjectName: subjectMeta.name,
+      examBody: subjectMeta.exam_body, score: rawScore, totalQuestions: totalQ,
+      finalScore, rawScore, percentage, requiredScore: effectiveRequired,
+      tabSwitchCount, bundleName: subjectMeta.name, penaltyDeduction, wrongAnswers,
+    }).catch(err => console.error('logExamResult:', err));
+
+    // ── WRITE completion to AsyncStorage FIRST, synchronously ──
+    // This is the ONLY source of truth. HomeScreen will re-read from here.
+    let completionMeta = null;
+    if (bundleId && examCategory) {
+      completionMeta = await applyBundleCompletionToStorage(bundleId, percentage, examCategory);
+    }
+
+    // Now show result screen, passing completionMeta so ResultScreen
+    // can forward it to onSessionComplete when the user taps exit
     setResultPayload({
-      rawScore,
-      penaltyDeduction,
-      finalScore,
-      totalQ,
-      percentage,
-      tabSwitchCount,
-      bundleName:    subjectMeta.name,
-      examBody:      subjectMeta.exam_body || 'EXAM',
-      requiredScore: sessionPayload.requiredScore || 70,
-      wrongAnswers,
+      rawScore, penaltyDeduction, finalScore, totalQ, percentage,
+      tabSwitchCount, bundleName: subjectMeta.name,
+      examBody: subjectMeta.exam_body || 'EXAM',
+      requiredScore: effectiveRequired, passed, wrongAnswers,
+      completionMeta,   // ← forwarded to ResultScreen → onExit
     });
+  };
+
+  const handleAutoSubmit = async () => {
+    await finaliseResult({ ...selectedAnswers });
   };
 
   const handleManualSubmit = () => {
-    const unansweredCount = questions.length - Object.keys(selectedAnswers).length;
-    let warningMsg = 'Are you sure you want to end this examination session?';
-    if (unansweredCount > 0)
-      warningMsg += ` You have ${unansweredCount} unanswered question${unansweredCount > 1 ? 's' : ''}.`;
-  
-    Alert.alert('Submit Examination', warningMsg, [
+    const unanswered = questions.length - Object.keys(selectedAnswers).length;
+    const msg = unanswered > 0
+      ? `Are you sure? You have ${unanswered} unanswered question${unanswered > 1 ? 's' : ''}.`
+      : 'Are you sure you want to end this examination session?';
+    const snapshot = { ...selectedAnswers };
+    Alert.alert('Submit Examination', msg, [
       { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Submit Sheet',
-        onPress: async () => {
-          if (timerRef.current) clearInterval(timerRef.current);
-  
-          let rawScore = 0;
-          questions.forEach(q => {
-            if (selectedAnswers[q.id] === q.correct_option) rawScore++;
-          });
-          const penaltyDeduction = Math.round(rawScore * (tabSwitchCount * 0.10));
-          const finalScore       = Math.max(0, rawScore - penaltyDeduction);
-          const totalQ           = questions.length;
-          const percentage       = Math.round((finalScore / totalQ) * 100);
-  
-          const wrongAnswers = buildWrongAnswers();
-  
-          // FIX: Combined into a single uniform object signature
-          await logExamResult({
-            subjectId: subjectMeta.id,
-            subjectName: subjectMeta.name,
-            examBody: subjectMeta.exam_body,
-            score: rawScore,
-            totalQuestions: totalQ,
-            finalScore,
-            rawScore,
-            percentage,
-            requiredScore: sessionPayload.requiredScore || 70,
-            tabSwitchCount,
-            bundleName: subjectMeta.name,
-            penaltyDeduction,
-            wrongAnswers,
-          });
-  
-          setResultPayload({
-            rawScore,
-            penaltyDeduction,
-            finalScore,
-            totalQ,
-            percentage,
-            tabSwitchCount,
-            bundleName:    subjectMeta.name,
-            examBody:      subjectMeta.exam_body || 'EXAM',
-            requiredScore: sessionPayload.requiredScore || 70,
-            wrongAnswers,
-          });
-        },
-      },
+      { text: 'Submit Sheet', onPress: () => finaliseResult(snapshot) },
     ]);
   };
+
   
 
   const handleExitPrematurely = () => {
@@ -561,58 +453,54 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         { key: 'D', text: currentQuestion.option_d },
       ].filter(opt => opt.text != null);
 
-
       if (resultPayload) {
         return (
           <ResultScreen
             resultPayload={resultPayload}
+            onSessionComplete={sessionPayload.onSessionComplete}
             onExit={onExit}
           />
         );
       }
-      return (
 
-        
-        <View style={[styles.container, { paddingTop: insets.top }]}>
-    
-          {/* ── PRE-TEST WARNING MODAL ── */}
-          <Modal visible={showWarningModal} transparent animationType="fade">
-            <View style={styles.warningOverlay}>
-              <View style={styles.warningCard}>
-                <Text style={styles.warningTitle}>⚠️ EXAM RULES</Text>
-                <Text style={styles.warningBody}>
-                  {`Before you begin, note the following:\n\n`}
-                  {`🚫 Do NOT minimize this app\n`}
-                  {`🚫 Do NOT press the Home button\n`}
-                  {`🚫 Do NOT switch to another app\n`}
-                  {`🚫 Do NOT allow app overlays\n\n`}
-                  {`Every tab switch or screen exit will attract a `}
-                  <Text style={{ fontWeight: '900', color: '#dc2626' }}>10-mark penalty</Text>
-                  {`, deducted from your final score.\n\nPenalties accumulate for every violation.`}
-                </Text>
-                <TouchableOpacity
-                  style={styles.warningAcceptBtn}
-                  onPress={() => {
-                    setShowWarningModal(false);
-                    setTestStarted(true);
-                  }}
-                >
-                  <Text style={styles.warningAcceptText}>I Understand — Begin Exam</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          </Modal>
+  return (
+    <View style={[styles.container, { paddingTop: insets.top }]}>
 
-      {/* ── PENALTY BANNER ── */}
+      <Modal visible={showWarningModal} transparent animationType="fade">
+        <View style={styles.warningOverlay}>
+          <View style={styles.warningCard}>
+            <Text style={styles.warningTitle}>⚠️ EXAM RULES</Text>
+            <Text style={styles.warningBody}>
+              {`Before you begin, note the following:\n\n`}
+              {`🚫 Do NOT minimize this app\n`}
+              {`🚫 Do NOT press the Home button\n`}
+              {`🚫 Do NOT switch to another app\n`}
+              {`🚫 Do NOT allow app overlays\n\n`}
+              {`Every tab switch or screen exit will attract a `}
+              <Text style={{ fontWeight: '900', color: '#dc2626' }}>10% penalty</Text>
+              {`, deducted from your final score.\n\nPenalties accumulate for every violation.`}
+            </Text>
+            <TouchableOpacity
+              style={styles.warningAcceptBtn}
+              onPress={() => {
+                setShowWarningModal(false);
+                setTestStarted(true);
+              }}
+            >
+              <Text style={styles.warningAcceptText}>I Understand — Begin Exam</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
+
       {penaltyPoints > 0 && (
         <View style={styles.penaltyBanner}>
           <Text style={styles.penaltyBannerText}>
-          🚨 TAB VIOLATIONS: {tabSwitchCount}x  |  PENALTY: -{tabSwitchCount * 10}% of earned score
+            🚨 TAB VIOLATIONS: {tabSwitchCount}x  |  PENALTY: -{tabSwitchCount * 10}% of earned score
           </Text>
         </View>
       )}
 
-      {/* 1. Header */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.closeBtn} onPress={handleExitPrematurely}>
           <Text style={styles.closeBtnText}>✕ Close</Text>
@@ -634,7 +522,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         )}
       </View>
 
-      {/* Subject tabs */}
       {subjectPartitions.length > 0 && (
         <ScrollView
           horizontal
@@ -662,7 +549,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         </ScrollView>
       )}
 
-      {/* 2. Question workspace */}
       <ScrollView contentContainerStyle={styles.questionWorkspace} showsVerticalScrollIndicator={false}>
         <View style={styles.progressRow}>
           <Text style={styles.progressText}>
@@ -673,7 +559,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
           </TouchableOpacity>
         </View>
 
-        {/* ── Question Card with MathText ── */}
         <View style={styles.questionCard}>
           <MathText
             text={currentQuestion.question_text}
@@ -681,7 +566,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
           />
         </View>
 
-        {/* ── Answer Options ── */}
         <View style={styles.optionsWrapper}>
           {optionMapping.map((opt) => {
             const isSelected = currentSelection === opt.key;
@@ -710,8 +594,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
                     {opt.key}
                   </Text>
                 </View>
-
-                {/* ── Option text rendered with MathText ── */}
                 <MathText
                   text={opt.text}
                   textStyle={[styles.optionBodyText, customTextStyle]}
@@ -722,7 +604,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
           })}
         </View>
 
-        {/* Explanation block */}
         {mode === 'PRACTICE' && isCurrentRevealed && currentQuestion.explanation && (
           <View style={styles.explanationBlock}>
             <Text style={styles.explanationTitle}>💡 Architectural Review Insight:</Text>
@@ -734,7 +615,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         )}
       </ScrollView>
 
-      {/* 3. Grid overlay */}
       {showGridMenu && (
         <View style={[styles.gridOverlay, { top: 65 + insets.top }]}>
           <Text style={styles.gridMenuHeading}>Jump to Question Profile:</Text>
@@ -766,7 +646,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         </View>
       )}
 
-      {/* 4. Footer */}
       <View style={[styles.footerToolbar, { paddingBottom: insets.bottom + 12 }]}>
         <View style={styles.footerNavRow}>
           <TouchableOpacity
@@ -799,13 +678,8 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
   );
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// STYLES
-// ─────────────────────────────────────────────────────────────────────────────
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: '#f1f5f9' },
-
-  // Header
   header: { height: 65, backgroundColor: '#ffffff', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, borderBottomWidth: 1, borderColor: '#e2e8f0' },
   closeBtn: { paddingVertical: 6, paddingHorizontal: 10, backgroundColor: '#fee2e2', borderRadius: 6 },
   closeBtnText: { fontSize: 13, fontWeight: '700', color: '#dc2626' },
@@ -818,8 +692,6 @@ const styles = StyleSheet.create({
   timerTextUrgent: { color: '#dc2626' },
   practiceBox: { paddingVertical: 6, paddingHorizontal: 12, backgroundColor: '#eff6ff', borderRadius: 6 },
   practiceText: { fontSize: 13, fontWeight: '700', color: '#2563eb' },
-
-  // Subject tabs
   subjectTabBar: { backgroundColor: '#1e293b', borderBottomWidth: 1, borderColor: '#334155' },
   subjectTabBarContent: { paddingHorizontal: 10, paddingVertical: 6, gap: 8, flexDirection: 'row' },
   subjectTab: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, backgroundColor: '#334155', alignItems: 'center', minWidth: 60 },
@@ -828,18 +700,13 @@ const styles = StyleSheet.create({
   subjectTabTextActive: { color: '#ffffff' },
   subjectTabCount: { fontSize: 9, fontWeight: '600', color: '#64748b', marginTop: 1 },
   subjectTabCountActive: { color: '#bfdbfe' },
-
-  // Workspace
   questionWorkspace: { padding: 16, paddingBottom: 120 },
   progressRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
   progressText: { fontSize: 13, fontWeight: '600', color: '#64748b' },
   gridToggleButton: { paddingVertical: 6, paddingHorizontal: 10, backgroundColor: '#ffffff', borderRadius: 6, borderWidth: 1, borderColor: '#cbd5e1' },
   gridToggleText: { fontSize: 12, fontWeight: '700', color: '#475569' },
-
-  // Question card
   questionCard: { backgroundColor: '#ffffff', padding: 20, borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', marginBottom: 16, elevation: 1 },
   questionBodyText: { fontSize: 16, fontWeight: '500', color: '#0f172a', lineHeight: 26 },
-  // Options
   optionsWrapper: { gap: 10 },
   optionCard: { backgroundColor: '#ffffff', padding: 14, borderRadius: 10, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#e2e8f0' },
   selectedOptionCard: { backgroundColor: '#eff6ff', borderColor: '#3b82f6', borderWidth: 1.5 },
@@ -853,11 +720,9 @@ const styles = StyleSheet.create({
   selectedOptionText: { color: '#1e40af' },
   correctOptionText: { color: '#166534' },
   wrongOptionText: { color: '#991b1b' },
-  // Grid overlay
   explanationBlock: { marginTop: 20, backgroundColor: '#f8fafc', padding: 16, borderRadius: 10, borderWidth: 1, borderColor: '#e2e8f0', borderLeftWidth: 4, borderLeftColor: '#3b82f6' },
   explanationTitle: { fontSize: 13, fontWeight: '700', color: '#1e40af', marginBottom: 6 },
   explanationText: { fontSize: 13, color: '#475569', lineHeight: 20 },
-  // Grid overlay
   gridOverlay: { position: 'absolute', left: 0, right: 0, bottom: 80, backgroundColor: '#ffffff', padding: 16, borderBottomWidth: 2, borderColor: '#cbd5e1', zIndex: 99, maxHeight: 255 },
   gridMenuHeading: { fontSize: 13, fontWeight: '700', color: '#475569', marginBottom: 12, textTransform: 'uppercase' },
   gridMatrixLayout: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, paddingBottom: 10 },
@@ -867,8 +732,6 @@ const styles = StyleSheet.create({
   gridChipText: { fontSize: 14, fontWeight: '700', color: '#475569' },
   gridChipTextAnswered: { color: '#1e293b' },
   gridChipTextCurrent: { color: '#ffffff' },
-
-  // Footer
   footerToolbar: { position: 'absolute', bottom: 0, left: 0, right: 0, backgroundColor: '#ffffff', paddingHorizontal: 16, paddingTop: 12, borderTopWidth: 1, borderColor: '#e2e8f0' },
   footerNavRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: 12 },
   navBtn: { flex: 1, backgroundColor: '#475569', paddingVertical: 14, borderRadius: 8, alignItems: 'center' },
@@ -878,17 +741,12 @@ const styles = StyleSheet.create({
   actionVerificationText: { color: '#ffffff', fontSize: 14, fontWeight: '700' },
   submitExamBtn: { flex: 1.2, backgroundColor: '#10b981', paddingVertical: 14, borderRadius: 8, alignItems: 'center' },
   submitExamText: { color: '#ffffff', fontSize: 14, fontWeight: '700' },
-
-  // Warning modal
   warningOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.85)', justifyContent: 'center', alignItems: 'center', padding: 24 },
   warningCard: { backgroundColor: '#ffffff', borderRadius: 16, padding: 24, width: '100%', maxWidth: 380 },
   warningTitle: { fontSize: 20, fontWeight: '900', color: '#dc2626', textAlign: 'center', marginBottom: 16 },
   warningBody: { fontSize: 13, color: '#1e293b', lineHeight: 22, marginBottom: 20 },
   warningAcceptBtn: { backgroundColor: '#2563eb', paddingVertical: 14, borderRadius: 10, alignItems: 'center' },
   warningAcceptText: { color: '#ffffff', fontSize: 14, fontWeight: '800' },
-
-  // Penalty banner
   penaltyBanner: { backgroundColor: '#dc2626', paddingVertical: 6, paddingHorizontal: 16, alignItems: 'center' },
   penaltyBannerText: { color: '#ffffff', fontSize: 11, fontWeight: '900', letterSpacing: 0.5 },
 });
-

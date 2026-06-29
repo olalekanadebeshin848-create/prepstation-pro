@@ -1,335 +1,517 @@
 import React, { useState, useEffect } from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ScrollView,
-  ActivityIndicator,
-  Alert,
+  StyleSheet, Text, View, TouchableOpacity,
+  ScrollView, ActivityIndicator, Alert,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { getExamHistory, clearExamHistory } from '../database/queries'; 
+import { getExamHistory, clearExamHistory } from '../database/queries';
 
-// ── Vibrant & Fresh Subject Color Profiles ──
 const SUBJECT_COLORS = {
-  'English Language':                  { bg: '#0f172a', accent: '#38bdf8', gradient: '#0284c7', lightBg: '#e0f2fe' },
-  'Use of English':                    { bg: '#0f172a', accent: '#38bdf8', gradient: '#0284c7', lightBg: '#e0f2fe' },
-  'Mathematics':                       { bg: '#1e1b4b', accent: '#6366f1', gradient: '#4f46e5', lightBg: '#e0e7ff' },
-  'Further Mathematics':               { bg: '#1e1b4b', accent: '#818cf8', gradient: '#4f46e5', lightBg: '#e0e7ff' },
-  'Physics':                           { bg: '#071e3d', accent: '#06b6d4', gradient: '#0891b2', lightBg: '#ecfeff' },
-  'Chemistry':                         { bg: '#062f4f', accent: '#10b981', gradient: '#059669', lightBg: '#dcfce7' },
-  'Biology':                           { bg: '#064e3b', accent: '#22c55e', gradient: '#16a34a', lightBg: '#dcfce7' },
-  'Agricultural Science':              { bg: '#1c2d11', accent: '#84cc16', gradient: '#65a30d', lightBg: '#f7fee7' },
-  'Geography':                         { bg: '#065f46', accent: '#14b8a6', gradient: '#0d9488', lightBg: '#ccfbf1' },
-  'Economics':                         { bg: '#451a03', accent: '#f59e0b', gradient: '#d97706', lightBg: '#fef3c7' },
-  'Government':                        { bg: '#701a75', accent: '#e879f9', gradient: '#c084fc', lightBg: '#fae8ff' },
-  'Literature in English':             { bg: '#581c87', accent: '#c084fc', gradient: '#9333ea', lightBg: '#f3e8ff' },
-  'Christian Religious Studies':       { bg: '#1e3a8a', accent: '#60a5fa', gradient: '#3b82f6', lightBg: '#dbeafe' },
-  'Islamic Religious Studies':         { bg: '#14532d', accent: '#4ade80', gradient: '#22c55e', lightBg: '#dcfce7' },
-  'Civic Education':                   { bg: '#111827', accent: '#9ca3af', gradient: '#4b5563', lightBg: '#f3f4f6' },
-  'Commerce':                          { bg: '#312e81', accent: '#a5b4fc', gradient: '#4f46e5', lightBg: '#e0e7ff' },
-  'Financial Accounting':              { bg: '#1e293b', accent: '#94a3b8', gradient: '#475569', lightBg: '#f1f5f9' },
-  'History':                           { bg: '#451a03', accent: '#fb923c', gradient: '#ea580c', lightBg: '#ffedd5' },
+  'English Language':            '#38bdf8',
+  'Use of English':              '#38bdf8',
+  'Mathematics':                 '#818cf8',
+  'Further Mathematics':         '#a78bfa',
+  'Physics':                     '#22d3ee',
+  'Chemistry':                   '#4ade80',
+  'Biology':                     '#86efac',
+  'Agricultural Science':        '#a3e635',
+  'Geography':                   '#34d399',
+  'Economics':                   '#fbbf24',
+  'Government':                  '#c084fc',
+  'Literature in English':       '#f87171',
+  'Christian Religious Studies': '#fb923c',
+  'Islamic Religious Studies':   '#a78bfa',
+  'Commerce':                    '#facc15',
+  'Accounting':                  '#2dd4bf',
 };
+const DEFAULT_ACCENT = '#64748b';
 
-const DEFAULT_COLOR = { bg: '#1e293b', accent: '#3b82f6', gradient: '#2563eb', lightBg: '#eff6ff' };
+function getAccent(name) {
+  if (!name) return DEFAULT_ACCENT;
+  const key = Object.keys(SUBJECT_COLORS).find(k =>
+    name.toLowerCase().includes(k.toLowerCase()) ||
+    k.toLowerCase().includes(name.toLowerCase())
+  );
+  return key ? SUBJECT_COLORS[key] : DEFAULT_ACCENT;
+}
+
+function ScoreBadge({ pct }) {
+  const color = pct >= 70 ? '#22c55e' : pct >= 50 ? '#f59e0b' : '#ef4444';
+  return (
+    <View style={[badge.wrap, { borderColor: color }]}>
+      <Text style={[badge.txt, { color }]}>{pct}%</Text>
+    </View>
+  );
+}
+const badge = StyleSheet.create({
+  wrap: { borderWidth: 1.5, borderRadius: 8, paddingHorizontal: 10, paddingVertical: 4, minWidth: 54, alignItems: 'center' },
+  txt:  { fontSize: 14, fontWeight: '900' },
+});
+
+function MiniBar({ value, max, color }) {
+  const pct = max > 0 ? Math.min((value / max) * 100, 100) : 0;
+  return (
+    <View style={bar.track}>
+      <View style={[bar.fill, { width: `${pct}%`, backgroundColor: color }]} />
+    </View>
+  );
+}
+const bar = StyleSheet.create({
+  track: { height: 6, backgroundColor: '#1e293b', borderRadius: 3, overflow: 'hidden', flex: 1 },
+  fill:  { height: '100%', borderRadius: 3 },
+});
 
 export default function AnalyticsScreen({ onBack }) {
   const insets = useSafeAreaInsets();
   const [loading, setLoading] = useState(true);
   const [history, setHistory] = useState([]);
+  const [activeTab, setActiveTab] = useState('OVERVIEW');
 
-  useEffect(() => {
-    loadTelemetryLogs();
-  }, []);
+  useEffect(() => { loadHistory(); }, []);
 
-  const loadTelemetryLogs = async () => {
+  const loadHistory = async () => {
     setLoading(true);
     const data = await getExamHistory();
     setHistory(data || []);
     setLoading(false);
   };
 
-  const handleWipeHistory = () => {
+  const handleClear = () => {
     Alert.alert(
-      "Wipe Core Logs",
-      "Are you sure you want to completely delete your local diagnostic results history metrics? This process cannot be undone.",
+      'Clear All History',
+      'This permanently deletes all your exam records. This cannot be undone.',
       [
-        { text: "Cancel", style: "cancel" },
-        { 
-          text: "Wipe System Base", 
-          style: "destructive",
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete Everything',
+          style: 'destructive',
           onPress: async () => {
-            const success = await clearExamHistory();
-            if (success) {
-              setHistory([]);
-              Alert.alert("Success", "Diagnostic history metrics cleared completely.");
-            }
-          }
-        }
+            await clearExamHistory();
+            setHistory([]);
+          },
+        },
       ]
     );
   };
 
-  // ── Metrics Aggregations ──
-  const totalExams = history.length;
-  const averagePercentage = totalExams > 0 
-    ? Math.round(history.reduce((acc, curr) => acc + (curr.percentage || 0), 0) / totalExams) 
+  // ── Aggregations ──
+  const total = history.length;
+  const avgPct = total > 0
+    ? Math.round(history.reduce((s, r) => s + (r.percentage || 0), 0) / total)
     : 0;
-  
-  const passedExams = history.filter(item => (item.percentage || 0) >= (item.required_score || 50)).length;
-  const globalPassRate = totalExams > 0 ? Math.round((passedExams / totalExams) * 100) : 0;
-  const totalViolations = history.reduce((acc, curr) => acc + (curr.tab_switch_count || 0), 0);
+  const passed = history.filter(r => (r.percentage || 0) >= (r.required_score || 50)).length;
+  const passRate = total > 0 ? Math.round((passed / total) * 100) : 0;
+  const totalViolations = history.reduce((s, r) => s + (r.tab_switch_count || 0), 0);
+  const totalPenalty = history.reduce((s, r) => s + (r.penalty_deduction || 0), 0);
 
-  // Subject Performance Parsing
+  // Per-subject breakdown
   const subjectMap = {};
-  history.forEach(item => {
-    const name = item.subject_name || 'General Evaluation';
-    if (!subjectMap[name]) {
-      subjectMap[name] = { totalPct: 0, count: 0 };
-    }
-    subjectMap[name].totalPct += (item.percentage || 0);
+  history.forEach(r => {
+    const name = r.subject_name || 'General Practice';
+    if (!subjectMap[name]) subjectMap[name] = { total: 0, count: 0, passed: 0 };
+    subjectMap[name].total += (r.percentage || 0);
     subjectMap[name].count += 1;
+    if ((r.percentage || 0) >= (r.required_score || 50)) subjectMap[name].passed += 1;
   });
 
-  let weakestSubject = null;
-  let strongestSubject = null;
-  let minAvg = 999;
-  let maxAvg = -1;
+  const subjectStats = Object.entries(subjectMap).map(([name, d]) => ({
+    name,
+    avg: Math.round(d.total / d.count),
+    count: d.count,
+    passed: d.passed,
+    accent: getAccent(name),
+  })).sort((a, b) => b.avg - a.avg);
 
-  Object.keys(subjectMap).forEach(name => {
-    const avg = Math.round(subjectMap[name].totalPct / subjectMap[name].count);
-    if (avg < minAvg) { minAvg = avg; weakestSubject = { name, avg }; }
-    if (avg > maxAvg) { maxAvg = avg; strongestSubject = { name, avg }; }
+  const strongest = subjectStats[0] || null;
+  const weakest   = subjectStats[subjectStats.length - 1] || null;
+
+  // Exam body breakdown
+  const examBodyMap = {};
+  history.forEach(r => {
+    const body = r.exam_body || 'CBT';
+    if (!examBodyMap[body]) examBodyMap[body] = { total: 0, count: 0 };
+    examBodyMap[body].total += (r.percentage || 0);
+    examBodyMap[body].count += 1;
   });
+
+  const TABS = ['OVERVIEW', 'SUBJECTS', 'HISTORY'];
+
+  if (loading) {
+    return (
+      <View style={s.loadingWrap}>
+        <ActivityIndicator size="large" color="#2563eb" />
+        <Text style={s.loadingTxt}>Loading performance data...</Text>
+      </View>
+    );
+  }
 
   return (
-    <View style={[styles.root, { paddingTop: Math.max(insets.top, 16), paddingBottom: Math.max(insets.bottom, 16) }]}>
-      
-      {/* HEADER SECTION MAPS DIRECTLY TO APP.JS ONBACK ROUTER SWITCH */}
-      <View style={styles.headerContainer}>
-        <View style={styles.titleGroup}>
-          <TouchableOpacity style={styles.backButton} onPress={onBack} activeOpacity={0.7}>
-            <Text style={styles.backButtonText}>✕</Text>
-          </TouchableOpacity>
-          <View style={styles.headerTextWrapper}>
-            <Text style={styles.headerTitle}>Performance Insights</Text>
-            <Text style={styles.headerSub}>Localized CBT Metrics & Historical Analysis</Text>
-          </View>
-        </View>
+    <View style={[s.root, { paddingTop: Math.max(insets.top, 16) }]}>
 
-        <TouchableOpacity style={styles.closeActionBadge} onPress={onBack} activeOpacity={0.8}>
-          <Text style={styles.closeActionBadgeTxt}>Close Dashboard</Text>
+      {/* ── HEADER ── */}
+      <View style={s.header}>
+        <TouchableOpacity style={s.backBtn} onPress={onBack} activeOpacity={0.7}>
+          <Text style={s.backBtnTxt}>✕</Text>
         </TouchableOpacity>
+        <View style={{ flex: 1 }}>
+          <Text style={s.headerTitle}>Performance Analytics</Text>
+          <Text style={s.headerSub}>Exam history & subject breakdown</Text>
+        </View>
+        {total > 0 && (
+          <TouchableOpacity style={s.clearBtn} onPress={handleClear}>
+            <Text style={s.clearBtnTxt}>Clear</Text>
+          </TouchableOpacity>
+        )}
       </View>
 
-      {loading ? (
-        <View style={styles.centerMode}>
-          <ActivityIndicator size="large" color="#2563eb" />
-          <Text style={styles.loadingTxt}>Parsing Database History Cache...</Text>
-        </View>
-      ) : totalExams === 0 ? (
-        <View style={styles.emptyContainer}>
-          <View style={styles.illustrationContainer}>
-            <View style={[styles.blob, styles.blob1]} />
-            <View style={[styles.blob, styles.blob2]} />
-            <View style={[styles.blob, styles.blob3]} />
-            <Text style={styles.emptyIcon}>📊</Text>
-          </View>
-          <Text style={styles.emptyTitle}>No Performance History Yet</Text>
-          <Text style={styles.emptyDesc}>
-            Complete your first examination simulation using the practice suite to populate analytical evaluation metrics.
+      {/* ── TABS ── */}
+      <View style={s.tabRow}>
+        {TABS.map(tab => (
+          <TouchableOpacity
+            key={tab}
+            style={[s.tab, activeTab === tab && s.tabActive]}
+            onPress={() => setActiveTab(tab)}
+          >
+            <Text style={[s.tabTxt, activeTab === tab && s.tabTxtActive]}>{tab}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+
+      {total === 0 ? (
+        // ── EMPTY STATE ──
+        <View style={s.emptyWrap}>
+          <Text style={s.emptyIcon}>📊</Text>
+          <Text style={s.emptyTitle}>No Exam Records Yet</Text>
+          <Text style={s.emptyDesc}>
+            Complete at least one examination session to populate your analytics dashboard.
           </Text>
-          <TouchableOpacity style={styles.returnButton} onPress={onBack} activeOpacity={0.8}>
-            <Text style={styles.returnButtonText}>Return to Dashboard</Text>
+          <TouchableOpacity style={s.emptyBtn} onPress={onBack}>
+            <Text style={s.emptyBtnTxt}>Go Practice Now</Text>
           </TouchableOpacity>
         </View>
       ) : (
-        <ScrollView style={styles.scrollBody} contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-          
-          {/* SCOREBOARD SUMMARY MATRICES */}
-          <View style={styles.gridContainer}>
-            <View style={styles.metricCard}>
-              <Text style={styles.cardLabel}>Exams Taken</Text>
-              <Text style={styles.cardValue}>{totalExams}</Text>
-              <Text style={styles.cardIndicator}>Session instances</Text>
-            </View>
 
-            <View style={styles.metricCard}>
-              <Text style={styles.cardLabel}>Average Score</Text>
-              <Text style={[styles.cardValue, { color: averagePercentage >= 50 ? '#10b981' : '#ef4444' }]}>
-                {averagePercentage}%
-              </Text>
-              <Text style={styles.cardIndicator}>Cumulative performance</Text>
-            </View>
+        <ScrollView
+          style={{ flex: 1 }}
+          contentContainerStyle={s.scroll}
+          showsVerticalScrollIndicator={false}
+        >
 
-            <View style={styles.metricCard}>
-              <Text style={styles.cardLabel}>Global Pass Rate</Text>
-              <Text style={styles.cardValue}>{globalPassRate}%</Text>
-              <Text style={styles.cardIndicator}>{passedExams} of {totalExams} passed</Text>
-            </View>
-
-            <View style={styles.metricCard}>
-              <Text style={styles.cardLabel}>Security Exceptions</Text>
-              <Text style={[styles.cardValue, { color: totalViolations > 0 ? '#f59e0b' : '#64748b' }]}>
-                {totalViolations}
-              </Text>
-              <Text style={styles.cardIndicator}>Tab navigation alerts</Text>
-            </View>
-          </View>
-
-          {/* DIAGNOSTIC INSIGHT TILES */}
-          {strongestSubject && (
-            <View style={styles.strongCard}>
-              <View style={styles.strongLabel}>
-                <Text style={styles.strongLabelTxt}>TOP COMPETENCY VECTOR</Text>
+          {/* ══════════════════════════════════════════
+              TAB: OVERVIEW
+          ══════════════════════════════════════════ */}
+          {activeTab === 'OVERVIEW' && (
+            <>
+              {/* KPI Grid */}
+              <View style={s.kpiGrid}>
+                <View style={s.kpiCard}>
+                  <Text style={s.kpiValue}>{total}</Text>
+                  <Text style={s.kpiLabel}>Exams Taken</Text>
+                </View>
+                <View style={s.kpiCard}>
+                  <Text style={[s.kpiValue, { color: avgPct >= 50 ? '#22c55e' : '#ef4444' }]}>{avgPct}%</Text>
+                  <Text style={s.kpiLabel}>Average Score</Text>
+                </View>
+                <View style={s.kpiCard}>
+                  <Text style={s.kpiValue}>{passRate}%</Text>
+                  <Text style={s.kpiLabel}>Pass Rate</Text>
+                </View>
+                <View style={s.kpiCard}>
+                  <Text style={[s.kpiValue, { color: totalViolations > 0 ? '#f59e0b' : '#64748b' }]}>
+                    {totalViolations}
+                  </Text>
+                  <Text style={s.kpiLabel}>Tab Violations</Text>
+                </View>
               </View>
-              <Text style={styles.strongName}>{strongestSubject.name}</Text>
-              <Text style={styles.strongSub}>Achieved a dominant average velocity score of {strongestSubject.avg}%</Text>
-            </View>
-          )}
 
-          {weakestSubject && weakestSubject.name !== strongestSubject?.name && (
-            <View style={styles.weakCard}>
-              <View style={styles.weakLabel}>
-                <Text style={styles.weakLabelTxt}>ATTENTION REQUIRED</Text>
+              {/* Pass vs Fail bar */}
+              <View style={s.card}>
+                <Text style={s.cardTitle}>Pass / Fail Ratio</Text>
+                <View style={s.pfRow}>
+                  <View style={[s.pfBlock, { backgroundColor: '#052e16', borderColor: '#22c55e' }]}>
+                    <Text style={[s.pfNum, { color: '#22c55e' }]}>{passed}</Text>
+                    <Text style={s.pfLbl}>Passed</Text>
+                  </View>
+                  <View style={[s.pfBlock, { backgroundColor: '#450a0a', borderColor: '#ef4444' }]}>
+                    <Text style={[s.pfNum, { color: '#ef4444' }]}>{total - passed}</Text>
+                    <Text style={s.pfLbl}>Failed</Text>
+                  </View>
+                </View>
+                <View style={s.pfBarWrap}>
+                  <View style={[s.pfBarSegment, {
+                    flex: passed,
+                    backgroundColor: '#22c55e',
+                    borderTopLeftRadius: 4, borderBottomLeftRadius: 4
+                  }]} />
+                  <View style={[s.pfBarSegment, {
+                    flex: total - passed,
+                    backgroundColor: '#ef4444',
+                    borderTopRightRadius: 4, borderBottomRightRadius: 4
+                  }]} />
+                </View>
               </View>
-              <Text style={styles.weakName}>{weakestSubject.name}</Text>
-              <Text style={styles.weakSub}>Current historical average sits below benchmark thresholds at {weakestSubject.avg}%</Text>
-            </View>
-          )}
 
-          {/* HISTORICAL FEED LOG */}
-          <View style={styles.listHeaderRow}>
-            <Text style={styles.sectionHeaderTitle}>Sequential Performance Records</Text>
-            <TouchableOpacity onPress={handleWipeHistory} activeOpacity={0.7}>
-              <Text style={styles.inlineWipeTxt}>Clear History</Text>
-            </TouchableOpacity>
-          </View>
-          
-          {history.map((log) => {
-            const subjectName = log.subject_name || 'General Evaluation';
-            const colorMeta = SUBJECT_COLORS[subjectName] || DEFAULT_COLOR;
-            const isPassed = (log.percentage || 0) >= (log.required_score || 50);
-
-            return (
-              <View key={log.id} style={styles.historyLogCard}>
-                <View style={styles.logHeaderRow}>
-                  <View style={styles.subjectIdentityBlock}>
-                    <View style={[styles.colorPillIndicator, { backgroundColor: colorMeta.accent }]} />
-                    <View style={styles.identityTextContainer}>
-                      <Text style={styles.identityTitle} numberOfLines={1}>{subjectName}</Text>
-                      <Text style={styles.identityExamBody}>{log.exam_body || 'CBT'}</Text>
+              {/* Penalty summary */}
+              {totalViolations > 0 && (
+                <View style={[s.card, { borderColor: '#f59e0b' }]}>
+                  <Text style={s.cardTitle}>⚠️ Security Violations Summary</Text>
+                  <View style={s.violationRow}>
+                    <View style={s.violationCell}>
+                      <Text style={[s.violationNum, { color: '#f59e0b' }]}>{totalViolations}</Text>
+                      <Text style={s.violationLbl}>Total Breaches</Text>
+                    </View>
+                    <View style={s.violationCell}>
+                      <Text style={[s.violationNum, { color: '#ef4444' }]}>{totalPenalty}</Text>
+                      <Text style={s.violationLbl}>Total Marks Lost</Text>
                     </View>
                   </View>
+                </View>
+              )}
 
-                  <View style={[styles.verdictBadge, { backgroundColor: isPassed ? '#dcfce7' : '#fee2e2' }]}>
-                    <Text style={[styles.verdictText, { color: isPassed ? '#16a34a' : '#ef4444' }]}>
-                      {log.percentage || 0}%
-                    </Text>
+              {/* Exam body breakdown */}
+              {Object.keys(examBodyMap).length > 0 && (
+                <View style={s.card}>
+                  <Text style={s.cardTitle}>Performance by Exam Body</Text>
+                  {Object.entries(examBodyMap).map(([body, d]) => {
+                    const avg = Math.round(d.total / d.count);
+                    const color = avg >= 70 ? '#22c55e' : avg >= 50 ? '#f59e0b' : '#ef4444';
+                    return (
+                      <View key={body} style={s.examBodyRow}>
+                        <Text style={s.examBodyName}>{body}</Text>
+                        <MiniBar value={avg} max={100} color={color} />
+                        <Text style={[s.examBodyPct, { color }]}>{avg}%</Text>
+                      </View>
+                    );
+                  })}
+                </View>
+              )}
+
+              {/* Insight cards */}
+              {strongest && (
+                <View style={[s.insightCard, { backgroundColor: '#052e16', borderColor: '#22c55e' }]}>
+                  <View style={[s.insightBadge, { backgroundColor: '#dcfce7' }]}>
+                    <Text style={[s.insightBadgeTxt, { color: '#16a34a' }]}>STRONGEST SUBJECT</Text>
                   </View>
+                  <Text style={[s.insightName, { color: '#4ade80' }]}>{strongest.name}</Text>
+                  <Text style={[s.insightSub, { color: '#86efac' }]}>
+                    Average {strongest.avg}% across {strongest.count} session{strongest.count !== 1 ? 's' : ''}
+                  </Text>
                 </View>
+              )}
 
-                <View style={styles.performanceMetricSummaryRow}>
-                  <Text style={styles.metricRowSubtext}>
-                    Raw: <Text style={styles.boldText}>{log.raw_score || log.score || 0}</Text>/{log.total_questions || 0}
+              {weakest && weakest.name !== strongest?.name && (
+                <View style={[s.insightCard, { backgroundColor: '#450a0a', borderColor: '#ef4444' }]}>
+                  <View style={[s.insightBadge, { backgroundColor: '#fee2e2' }]}>
+                    <Text style={[s.insightBadgeTxt, { color: '#ef4444' }]}>NEEDS ATTENTION</Text>
+                  </View>
+                  <Text style={[s.insightName, { color: '#f87171' }]}>{weakest.name}</Text>
+                  <Text style={[s.insightSub, { color: '#fca5a5' }]}>
+                    Average {weakest.avg}% — prioritise this in your next session
                   </Text>
-                  <Text style={styles.metricRowSubtext}>
-                    Final: <Text style={styles.boldText}>{log.final_score || 0}</Text> pts
-                  </Text>
-                  {log.tab_switch_count > 0 && (
-                    <Text style={styles.securityFlagText}>
-                      ⚠️ {log.tab_switch_count} Breach (-{log.penalty_deduction || 0} pts)
-                    </Text>
-                  )}
                 </View>
+              )}
+            </>
+          )}
 
-                <View style={styles.logMetaFooter}>
-                  <Text style={styles.miniLogPill}>{log.bundle_name || 'Standard Matrix'}</Text>
-                  <Text style={styles.logDateText}>
-                    {log.timestamp ? new Date(log.timestamp).toLocaleDateString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : 'Prior Session'}
-                  </Text>
-                </View>
-              </View>
-            );
-          })}
+          {/* ══════════════════════════════════════════
+              TAB: SUBJECTS
+          ══════════════════════════════════════════ */}
+          {activeTab === 'SUBJECTS' && (
+            <>
+              {subjectStats.length === 0 ? (
+                <Text style={s.emptyTabTxt}>No subject data available yet.</Text>
+              ) : (
+                subjectStats.map(sub => (
+                  <View key={sub.name} style={s.subjectCard}>
+                    <View style={s.subjectTopRow}>
+                      <View style={[s.subjectAccentBar, { backgroundColor: sub.accent }]} />
+                      <View style={{ flex: 1 }}>
+                        <Text style={s.subjectName}>{sub.name}</Text>
+                        <Text style={s.subjectMeta}>
+                          {sub.count} session{sub.count !== 1 ? 's' : ''} · {sub.passed} passed
+                        </Text>
+                      </View>
+                      <ScoreBadge pct={sub.avg} />
+                    </View>
+                    <View style={s.subjectBarRow}>
+                      <MiniBar value={sub.avg} max={100} color={sub.accent} />
+                      <Text style={[s.subjectBarLabel, { color: sub.accent }]}>{sub.avg}%</Text>
+                    </View>
+                  </View>
+                ))
+              )}
+            </>
+          )}
+
+          {/* ══════════════════════════════════════════
+              TAB: HISTORY
+          ══════════════════════════════════════════ */}
+          {activeTab === 'HISTORY' && (
+            <>
+              {[...history].reverse().map(r => {
+                const accent = getAccent(r.subject_name);
+                const isPassed = (r.percentage || 0) >= (r.required_score || 50);
+                const date = r.timestamp
+                  ? new Date(r.timestamp).toLocaleDateString(undefined, {
+                      month: 'short', day: 'numeric',
+                      hour: '2-digit', minute: '2-digit'
+                    })
+                  : 'Unknown date';
+
+                return (
+                  <View key={r.id} style={s.historyCard}>
+                    {/* Subject + score */}
+                    <View style={s.historyTopRow}>
+                      <View style={[s.historyAccentBar, { backgroundColor: accent }]} />
+                      <View style={{ flex: 1 }}>
+                        <Text style={s.historySubject} numberOfLines={1}>
+                          {r.subject_name || 'General Practice'}
+                        </Text>
+                        <Text style={s.historyExamBody}>{r.exam_body || 'CBT'}</Text>
+                      </View>
+                      <View style={[s.verdictPill, {
+                        backgroundColor: isPassed ? '#052e16' : '#450a0a',
+                        borderColor: isPassed ? '#22c55e' : '#ef4444',
+                      }]}>
+                        <Text style={[s.verdictPillTxt, { color: isPassed ? '#22c55e' : '#ef4444' }]}>
+                          {r.percentage || 0}% · {isPassed ? 'PASS' : 'FAIL'}
+                        </Text>
+                      </View>
+                    </View>
+
+                    {/* Score breakdown */}
+                    <View style={s.historyStatsRow}>
+                      <Text style={s.historyStatItem}>
+                        Raw: <Text style={s.historyStatBold}>{r.raw_score ?? r.score ?? 0}</Text>
+                      </Text>
+                      <Text style={s.historyStatItem}>
+                        Final: <Text style={s.historyStatBold}>{r.final_score ?? 0}</Text>/{r.total_questions ?? 0}
+                      </Text>
+                      <Text style={s.historyStatItem}>
+                        Pass mark: <Text style={s.historyStatBold}>{r.required_score ?? 50}%</Text>
+                      </Text>
+                    </View>
+
+                    {/* Violations row */}
+                    {(r.tab_switch_count > 0) && (
+                      <View style={s.violationBanner}>
+                        <Text style={s.violationBannerTxt}>
+                          ⚠️ {r.tab_switch_count} tab violation{r.tab_switch_count > 1 ? 's' : ''} · -{r.penalty_deduction || 0} marks penalty
+                        </Text>
+                      </View>
+                    )}
+
+                    {/* Footer */}
+                    <View style={s.historyFooter}>
+                      <View style={s.bundlePill}>
+                        <Text style={s.bundlePillTxt}>{r.bundle_name || 'Standard'}</Text>
+                      </View>
+                      <Text style={s.historyDate}>{date}</Text>
+                    </View>
+                  </View>
+                );
+              })}
+            </>
+          )}
+
         </ScrollView>
       )}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#f8fafc' },
-  centerMode: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#f8fafc' },
-  loadingTxt: { marginTop: 12, fontSize: 13, color: '#64748b', fontWeight: '600' },
-  
-  headerContainer: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 16, paddingBottom: 16, borderBottomWidth: 1, borderColor: '#e2e8f0', backgroundColor: '#ffffff' },
-  titleGroup: { flexDirection: 'row', alignItems: 'center', flex: 1, marginRight: 8 },
-  backButton: { marginRight: 12, backgroundColor: '#f1f5f9', width: 36, height: 36, borderRadius: 18, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: '#e2e8f0' },
-  backButtonText: { fontSize: 14, color: '#475569', fontWeight: '800' },
-  headerTextWrapper: { flex: 1 },
-  headerTitle: { fontSize: 20, fontWeight: '900', color: '#0f172a', letterSpacing: -0.5 },
-  headerSub: { fontSize: 11, color: '#64748b', marginTop: 1, fontWeight: '500' },
-  
-  closeActionBadge: { paddingVertical: 8, paddingHorizontal: 14, borderRadius: 8, backgroundColor: '#0f172a' },
-  closeActionBadgeTxt: { fontSize: 12, fontWeight: '700', color: '#ffffff' },
+const s = StyleSheet.create({
+  root:        { flex: 1, backgroundColor: '#0f172a' },
+  loadingWrap: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0f172a' },
+  loadingTxt:  { color: '#64748b', fontSize: 13, fontWeight: '600', marginTop: 12 },
 
-  scrollBody: { flex: 1 },
-  scrollContent: { padding: 16, paddingBottom: 40 },
+  // Header
+  header:      { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 16, paddingBottom: 14, paddingTop: 4, borderBottomWidth: 1, borderColor: '#1e293b' },
+  backBtn:     { width: 36, height: 36, borderRadius: 18, backgroundColor: '#1e293b', justifyContent: 'center', alignItems: 'center', marginRight: 12, borderWidth: 1, borderColor: '#334155' },
+  backBtnTxt:  { color: '#94a3b8', fontSize: 14, fontWeight: '800' },
+  headerTitle: { fontSize: 18, fontWeight: '900', color: '#f8fafc', letterSpacing: -0.3 },
+  headerSub:   { fontSize: 11, color: '#475569', fontWeight: '500', marginTop: 1 },
+  clearBtn:    { paddingVertical: 6, paddingHorizontal: 12, backgroundColor: '#450a0a', borderRadius: 8, borderWidth: 1, borderColor: '#dc2626' },
+  clearBtnTxt: { color: '#f87171', fontSize: 12, fontWeight: '700' },
 
-  gridContainer: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 20 },
-  metricCard: { backgroundColor: '#ffffff', borderRadius: 14, padding: 16, width: '47%', flexGrow: 1, borderWidth: 1, borderColor: '#e2e8f0', shadowColor: '#0f172a', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.03, shadowRadius: 8, elevation: 2 },
-  cardLabel: { fontSize: 11, fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: 0.5 },
-  cardValue: { fontSize: 24, fontWeight: '900', color: '#0f172a', marginVertical: 4, letterSpacing: -0.5 },
-  cardIndicator: { fontSize: 10, color: '#94a3b8', fontWeight: '500' },
+  // Tabs
+  tabRow:      { flexDirection: 'row', paddingHorizontal: 16, paddingVertical: 10, gap: 8 },
+  tab:         { flex: 1, paddingVertical: 8, borderRadius: 8, backgroundColor: '#1e293b', alignItems: 'center', borderWidth: 1, borderColor: '#334155' },
+  tabActive:   { backgroundColor: '#2563eb', borderColor: '#1d4ed8' },
+  tabTxt:      { fontSize: 11, fontWeight: '700', color: '#64748b' },
+  tabTxtActive:{ color: '#ffffff' },
 
-  strongCard: { backgroundColor: '#f0fdf4', borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#bbf7d0' },
-  strongLabel: { alignSelf: 'flex-start', backgroundColor: '#dcfce7', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 3, marginBottom: 6 },
-  strongLabelTxt: { fontSize: 9, fontWeight: '800', color: '#16a34a', letterSpacing: 0.5 },
-  strongName: { fontSize: 16, fontWeight: '800', color: '#14532d' },
-  strongSub: { fontSize: 12, color: '#15803d', marginTop: 4, fontWeight: '500' },
+  scroll: { padding: 16, paddingBottom: 40 },
 
-  weakCard: { backgroundColor: '#fef2f2', borderRadius: 14, padding: 16, marginBottom: 24, borderWidth: 1, borderColor: '#fca5a5' },
-  weakLabel: { alignSelf: 'flex-start', backgroundColor: '#fee2e2', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 3, marginBottom: 6 },
-  weakLabelTxt: { fontSize: 9, fontWeight: '800', color: '#ef4444', letterSpacing: 0.5 },
-  weakName: { fontSize: 16, fontWeight: '800', color: '#7f1d1d' },
-  weakSub: { fontSize: 12, color: '#b91c1c', marginTop: 4, fontWeight: '500' },
+  // Empty
+  emptyWrap:   { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 32 },
+  emptyIcon:   { fontSize: 48, marginBottom: 16 },
+  emptyTitle:  { fontSize: 18, fontWeight: '800', color: '#f8fafc', marginBottom: 8 },
+  emptyDesc:   { fontSize: 13, color: '#64748b', textAlign: 'center', lineHeight: 20, marginBottom: 24 },
+  emptyBtn:    { backgroundColor: '#2563eb', paddingVertical: 12, paddingHorizontal: 24, borderRadius: 10 },
+  emptyBtnTxt: { color: '#fff', fontSize: 13, fontWeight: '700' },
+  emptyTabTxt: { color: '#475569', fontSize: 13, textAlign: 'center', marginTop: 20 },
 
-  listHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
-  sectionHeaderTitle: { fontSize: 16, fontWeight: '800', color: '#0f172a', letterSpacing: -0.3 },
-  inlineWipeTxt: { fontSize: 13, color: '#ef4444', fontWeight: '700' },
+  // KPI
+  kpiGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, marginBottom: 14 },
+  kpiCard: { backgroundColor: '#1e293b', borderRadius: 12, padding: 14, width: '47%', flexGrow: 1, borderWidth: 1, borderColor: '#334155' },
+  kpiValue:{ fontSize: 26, fontWeight: '900', color: '#f8fafc', letterSpacing: -0.5 },
+  kpiLabel:{ fontSize: 10, color: '#64748b', fontWeight: '700', textTransform: 'uppercase', marginTop: 4 },
 
-  historyLogCard: { backgroundColor: '#ffffff', borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#e2e8f0', shadowColor: '#0f172a', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.02, shadowRadius: 4, elevation: 1 },
-  logHeaderRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 },
-  subjectIdentityBlock: { flexDirection: 'row', alignItems: 'center', flex: 1, marginRight: 12 },
-  colorPillIndicator: { width: 4, height: 28, borderRadius: 2, marginRight: 10 },
-  identityTextContainer: { flex: 1 },
-  identityTitle: { fontSize: 15, fontWeight: '700', color: '#0f172a' },
-  identityExamBody: { fontSize: 11, fontWeight: '600', color: '#64748b', marginTop: 1 },
-  
-  verdictBadge: { paddingHorizontal: 10, paddingVertical: 4, borderRadius: 8, minWidth: 54, alignItems: 'center' },
-  verdictText: { fontSize: 14, fontWeight: '800' },
+  // Card
+  card:        { backgroundColor: '#1e293b', borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#334155' },
+  cardTitle:   { fontSize: 13, fontWeight: '800', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 14 },
 
-  performanceMetricSummaryRow: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center', gap: 14, paddingVertical: 10, borderTopWidth: 1, borderBottomWidth: 1, borderColor: '#f1f5f9', marginBottom: 10 },
-  metricRowSubtext: { fontSize: 12, color: '#475569', fontWeight: '500' },
-  boldText: { fontWeight: '700', color: '#0f172a' },
-  securityFlagText: { fontSize: 12, fontWeight: '700', color: '#d97706' },
+  // Pass/Fail
+  pfRow:       { flexDirection: 'row', gap: 10, marginBottom: 12 },
+  pfBlock:     { flex: 1, borderRadius: 10, borderWidth: 1, padding: 12, alignItems: 'center' },
+  pfNum:       { fontSize: 22, fontWeight: '900' },
+  pfLbl:       { fontSize: 10, color: '#64748b', fontWeight: '700', marginTop: 2 },
+  pfBarWrap:   { flexDirection: 'row', height: 8, borderRadius: 4, overflow: 'hidden' },
+  pfBarSegment:{ height: '100%' },
 
-  logMetaFooter: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  miniLogPill: { fontSize: 11, fontWeight: '600', color: '#475569', backgroundColor: '#f1f5f9', paddingHorizontal: 8, paddingVertical: 3, borderRadius: 6 },
-  logDateText: { fontSize: 11, color: '#94a3b8', fontWeight: '500' },
+  // Exam body
+  examBodyRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 10 },
+  examBodyName:{ fontSize: 12, fontWeight: '700', color: '#cbd5e1', width: 50 },
+  examBodyPct: { fontSize: 12, fontWeight: '800', width: 38, textAlign: 'right' },
 
-  emptyContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 32, paddingBottom: 60 },
-  illustrationContainer: { width: 100, height: 100, justifyContent: 'center', alignItems: 'center', marginBottom: 20 },
-  blob: { position: 'absolute', borderRadius: 50, opacity: 0.06 },
-  blob1: { width: 100, height: 100, backgroundColor: '#2563eb' },
-  blob2: { width: 85, height: 85, backgroundColor: '#38bdf8' },
-  blob3: { width: 70, height: 70, backgroundColor: '#10b981' },
-  emptyIcon: { fontSize: 36, color: '#64748b' },
-  emptyTitle: { fontSize: 18, fontWeight: '800', color: '#0f172a', marginBottom: 8 },
-  emptyDesc: { fontSize: 13, color: '#64748b', textAlign: 'center', lineHeight: 20, marginBottom: 24 },
-  returnButton: { backgroundColor: '#2563eb', paddingVertical: 12, paddingHorizontal: 20, borderRadius: 10 },
-  returnButtonText: { color: '#ffffff', fontSize: 13, fontWeight: '700' },
+  // Violations
+  violationRow: { flexDirection: 'row', gap: 16, marginTop: 4 },
+  violationCell:{ flex: 1, alignItems: 'center' },
+  violationNum: { fontSize: 24, fontWeight: '900' },
+  violationLbl: { fontSize: 10, color: '#64748b', fontWeight: '700', marginTop: 2, textAlign: 'center' },
+
+  // Insight cards
+  insightCard:      { borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1 },
+  insightBadge:     { alignSelf: 'flex-start', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 3, marginBottom: 8 },
+  insightBadgeTxt:  { fontSize: 9, fontWeight: '900', letterSpacing: 0.5 },
+  insightName:      { fontSize: 16, fontWeight: '800', marginBottom: 4 },
+  insightSub:       { fontSize: 12, fontWeight: '500' },
+
+  // Subject tab
+  subjectCard:    { backgroundColor: '#1e293b', borderRadius: 12, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: '#334155' },
+  subjectTopRow:  { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
+  subjectAccentBar:{ width: 4, height: 36, borderRadius: 2, marginRight: 10 },
+  subjectName:    { fontSize: 14, fontWeight: '700', color: '#f8fafc' },
+  subjectMeta:    { fontSize: 11, color: '#64748b', fontWeight: '500', marginTop: 2 },
+  subjectBarRow:  { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  subjectBarLabel:{ fontSize: 11, fontWeight: '800', width: 36, textAlign: 'right' },
+
+  // History tab
+  historyCard:     { backgroundColor: '#1e293b', borderRadius: 12, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: '#334155' },
+  historyTopRow:   { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
+  historyAccentBar:{ width: 4, height: 36, borderRadius: 2, marginRight: 10 },
+  historySubject:  { fontSize: 14, fontWeight: '700', color: '#f8fafc' },
+  historyExamBody: { fontSize: 11, color: '#64748b', fontWeight: '500', marginTop: 1 },
+  verdictPill:     { borderWidth: 1, borderRadius: 8, paddingHorizontal: 8, paddingVertical: 4 },
+  verdictPillTxt:  { fontSize: 11, fontWeight: '900' },
+  historyStatsRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, paddingVertical: 8, borderTopWidth: 1, borderColor: '#334155', marginBottom: 8 },
+  historyStatItem: { fontSize: 11, color: '#64748b', fontWeight: '500' },
+  historyStatBold: { fontWeight: '800', color: '#cbd5e1' },
+  violationBanner: { backgroundColor: '#451a03', borderRadius: 6, padding: 8, marginBottom: 8, borderWidth: 1, borderColor: '#92400e' },
+  violationBannerTxt: { fontSize: 11, color: '#fbbf24', fontWeight: '700' },
+  historyFooter:   { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  bundlePill:      { backgroundColor: '#0f172a', borderRadius: 6, paddingHorizontal: 8, paddingVertical: 3 },
+  bundlePillTxt:   { fontSize: 10, color: '#475569', fontWeight: '600' },
+  historyDate:     { fontSize: 10, color: '#475569', fontWeight: '500' },
 });

@@ -1,111 +1,78 @@
-// queries.js
 import * as SQLite from 'expo-sqlite';
 
 const DB_NAME = 'questions_v2.db';
 let dbInstance = null;
-let connectionPromise = null;
 
-/**
- * Thread-safe singleton accessor for the database handle.
- */
-async function getDb() {
-  if (dbInstance) {
-    return dbInstance;
-  }
-
-  if (!connectionPromise) {
-    connectionPromise = (async () => {
-      try {
-        const db = await SQLite.openDatabaseAsync(DB_NAME);
-        
-        try {
-          if (typeof db.runAsync === 'function') {
-            await db.runAsync('PRAGMA journal_mode = WAL;');
-            await db.runAsync('PRAGMA foreign_keys = ON;');
-          }
-        } catch (pragmaErr) {
-          console.log("Pragma tuning skipped or unsupported on this device profile:", pragmaErr.message);
-        }
-
-        dbInstance = db;
-        return db;
-      } catch (error) {
-        console.error("Critical database connection initialization failure:", error);
-        throw error;
-      } finally {
-        connectionPromise = null;
-      }
-    })();
-  }
-
-  return connectionPromise;
+export function setDbInstance(instance) {
+  dbInstance = instance;
+  console.log('✅ queries.js received shared DB instance');
 }
 
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// SUBJECT QUERIES
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+async function getDb() {
+  if (dbInstance) return dbInstance;
+  console.warn('⚠️ getDb fallback triggered');
+  dbInstance = await SQLite.openDatabaseAsync(DB_NAME);
+  return dbInstance;
+}
 
-/**
- * Get all subjects for a specific exam body
- */
 export async function getSubjectsByExamBody(examBody) {
   try {
     const db = await getDb();
-    const sanitizedExamBody = examBody || 'JAMB';
-
-    if (typeof db.getAllAsync === 'function') {
-      return await db.getAllAsync(
-        "SELECT * FROM subjects WHERE exam_body = ? ORDER BY name ASC;",
-        [sanitizedExamBody]
-      );
-    }
-    return [];
+    return await db.getAllAsync(
+      "SELECT * FROM subjects WHERE exam_body = ? ORDER BY name ASC;",
+      [examBody || 'JAMB']
+    );
   } catch (error) {
-    console.error("Failed to fetch subjects by exam body:", error);
+    console.error("Failed to fetch subjects:", error);
     return [];
   }
 }
 
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// QUESTION BANK ENGINE QUERIES
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-/**
- * Fetch localized sample randomized questions for test configurations
- */
 export async function getQuestionsForSubject(subjectId, limit = 40) {
   try {
     const db = await getDb();
-    
-    const sanitizedSubjectId = Number(subjectId) || 0;
-    const sanitizedLimit = Number(limit) && Number(limit) > 0 ? Number(limit) : 40;
-
-    if (typeof db.getAllAsync === 'function') {
-      return await db.getAllAsync(
-        "SELECT * FROM questions WHERE subject_id = ? ORDER BY RANDOM() LIMIT ?;",
-        [sanitizedSubjectId, sanitizedLimit]
-      );
-    }
-    return [];
+    return await db.getAllAsync(
+      "SELECT * FROM questions WHERE subject_id = ? ORDER BY RANDOM() LIMIT ?;",
+      [Number(subjectId) || 0, Number(limit) || 40]
+    );
   } catch (error) {
-    console.error("Failed to load active question vectors:", error);
+    console.error("Failed to load questions:", error);
     return [];
   }
 }
 
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-// EXAM SESSION OPERATION LOGS (ANALYTICS ENGINE)
-// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+export async function getCustomQuestionSet({ subjectId, limit }) {
+  try {
+    const db = await getDb();
+    return await db.getAllAsync(
+      "SELECT * FROM questions WHERE subject_id = ? ORDER BY RANDOM() LIMIT ?;",
+      [Number(subjectId) || 0, Number(limit) || 40]
+    );
+  } catch (error) {
+    console.error("Failed to load custom question set:", error);
+    return [];
+  }
+}
 
-/**
- * Commit single test results bundle payload into persistent cache store
- */
+export async function getTopicsBySubject(subjectId) {
+  try {
+    const db = await getDb();
+    const rows = await db.getAllAsync(
+      "SELECT DISTINCT topic_name FROM questions WHERE subject_id = ? AND topic_name IS NOT NULL;",
+      [Number(subjectId) || 0]
+    );
+    return rows.map(r => r.topic_name);
+  } catch (error) {
+    console.error("Failed to load topics:", error);
+    return [];
+  }
+}
+
 export async function logExamResult(resultPayload) {
   try {
     const db = await getDb();
-    const timestamp = new Date().toISOString();
     const safePayload = resultPayload || {};
-    
+
     const subjectId        = safePayload.subjectId ?? safePayload.subject_id ?? null;
     const subjectName      = safePayload.subjectName ?? safePayload.subject_name ?? 'General Practice';
     const examBody         = safePayload.examBody ?? safePayload.exam_body ?? 'JAMB';
@@ -118,93 +85,64 @@ export async function logExamResult(resultPayload) {
     const tabSwitchCount   = safePayload.tabSwitchCount ?? 0;
     const penaltyDeduction = safePayload.penaltyDeduction ?? 0;
     const bundleName       = safePayload.bundleName || null;
+    const wrongAnswers     = safePayload.wrongAnswers || [];
+    const wrongAnswersStr  = typeof wrongAnswers === 'string' ? wrongAnswers : JSON.stringify(wrongAnswers);
+    const timestamp        = new Date().toISOString();
 
-    const wrongAnswers = safePayload.wrongAnswers || [];
-    const wrongAnswersStr = typeof wrongAnswers === 'string' ? wrongAnswers : JSON.stringify(wrongAnswers);
+    await db.runAsync(
+      `INSERT INTO exam_history (
+        subject_id, subject_name, exam_body, score, total_questions,
+        final_score, raw_score, percentage, required_score,
+        tab_switch_count, penalty_deduction, wrong_answers, bundle_name, timestamp
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
+      [
+        subjectId ? Number(subjectId) : null,
+        subjectName, examBody,
+        Number(score), Number(totalQuestions),
+        Number(finalScore), Number(rawScore),
+        Number(percentage), Number(requiredScore),
+        Number(tabSwitchCount), Number(penaltyDeduction),
+        wrongAnswersStr, bundleName, timestamp,
+      ]
+    );
 
-    const query = `INSERT INTO exam_history (
-      subject_id, subject_name, exam_body, score, total_questions,
-      final_score, raw_score, percentage, required_score,
-      tab_switch_count, penalty_deduction, wrong_answers, bundle_name, timestamp
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`;
-
-    const params = [
-      subjectId ? Number(subjectId) : null,
-      subjectName,
-      examBody,
-      Number(score),
-      Number(totalQuestions),
-      Number(finalScore),
-      Number(rawScore),
-      Number(percentage),
-      Number(requiredScore),
-      Number(tabSwitchCount),
-      Number(penaltyDeduction),
-      wrongAnswersStr,
-      bundleName,
-      timestamp
-    ];
-
-    if (typeof db.runAsync === 'function') {
-      await db.runAsync(query, params);
-      return true;
-    }
-    return false;
+    console.log('✅ Exam result logged successfully');
+    return true;
   } catch (error) {
-    console.error("Failed recording exam instance profile details safely:", error);
+    console.error("Failed to log exam result:", error);
     return false;
   }
 }
 
-/**
- * Read sequential analytics telemetry lists
- */
 export async function getExamHistory() {
   try {
     const db = await getDb();
-    if (typeof db.getAllAsync === 'function') {
-      return await db.getAllAsync("SELECT * FROM exam_history ORDER BY id ASC;");
-    }
-    return [];
+    return await db.getAllAsync("SELECT * FROM exam_history ORDER BY id ASC;");
   } catch (error) {
-    console.error("Failed fetching complete analytical history logs:", error);
+    console.error("Failed fetching exam history:", error);
     return [];
   }
 }
 
-/**
- * Get count of questions for a subject
- */
 export async function getQuestionCount(subjectId) {
   try {
     const db = await getDb();
-    const sanitizedSubjectId = Number(subjectId) || 0;
-
-    if (typeof db.getFirstAsync === 'function') {
-      const result = await db.getFirstAsync(
-        "SELECT COUNT(*) as count FROM questions WHERE subject_id = ?;",
-        [sanitizedSubjectId]
-      );
-      return result?.count || 0;
-    }
-    return 0;
+    const result = await db.getFirstAsync(
+      "SELECT COUNT(*) as count FROM questions WHERE subject_id = ?;",
+      [Number(subjectId) || 0]
+    );
+    return result?.count || 0;
   } catch (error) {
     console.error("Failed to get question count:", error);
     return 0;
   }
 }
 
-/**
- * Clear all exam history (for testing)
- */
 export async function clearExamHistory() {
   try {
     const db = await getDb();
-    if (typeof db.runAsync === 'function') {
-      await db.runAsync("DELETE FROM exam_history;");
-      return true;
-    }
-    return false;
+    await db.runAsync("DELETE FROM exam_history;");
+    return true;
   } catch (error) {
     console.error("Failed to clear exam history:", error);
     return false;
