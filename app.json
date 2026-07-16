@@ -8,6 +8,7 @@
     "userInterfaceStyle": "light",
     "splash": {
       "backgroundColor": "#0f172a",
+      "image": "./assets/splash-icon-with-text.png",
       "resizeMode": "contain"
     },
     "ios": {
@@ -16,10 +17,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/adaptive-icon-foreground.png",
         "backgroundColor": "#0f172a"
       },
-      "package": "com.delmamatiagroups.prepstationpro"
+      "package": "com.delmamatiagroups.prepstationpro",
+      "permissions": [
+        "CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/icon.png"
@@ -29,6 +33,12 @@
       "expo-secure-store",
       "expo-image",
       "expo-asset",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow PrepStation Pro to use your camera to scan a pupil's PG Map QR code."
+        }
+      ],
       [
         "expo-splash-screen",
         {

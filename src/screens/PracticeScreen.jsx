@@ -8,7 +8,8 @@ import {
   Alert,
   Dimensions,
   AppState,
-  Modal
+  Modal,
+  Image,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { logExamResult } from '../database/queries';
@@ -191,6 +192,62 @@ function MathText({ text, textStyle, containerStyle }) {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// QuestionImage — renders base64 images including SVG via WebView
+// React Native's <Image> does not support SVG base64, so we use WebView
+// for all question images regardless of format.
+// ─────────────────────────────────────────────────────────────────────────────
+function QuestionImage({ imageUri }) {
+  const [imgHeight, setImgHeight] = useState(220);
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; background: transparent; }
+    img, svg-wrapper {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    img {
+      max-width: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <img
+    src="${imageUri}"
+    onload="window.ReactNativeWebView.postMessage(String(Math.ceil(this.naturalHeight * (window.innerWidth / this.naturalWidth))))"
+    onerror="document.body.innerHTML='<p style=color:#ef4444;font-size:12px;padding:8px>Image failed to load</p>'"
+  />
+</body>
+</html>`;
+
+  return (
+    <View style={{ width: '100%', height: imgHeight, marginBottom: 14, borderRadius: 8, overflow: 'hidden', backgroundColor: '#f1f5f9' }}>
+      <WebView
+        originWhitelist={['*']}
+        source={{ html }}
+        scrollEnabled={false}
+        showsVerticalScrollIndicator={false}
+        style={{ backgroundColor: 'transparent', flex: 1 }}
+        androidLayerType="software"
+        onMessage={(e) => {
+          const h = parseInt(e.nativeEvent.data, 10);
+          if (!isNaN(h) && h > 0 && h < 600) {
+            setImgHeight(h);
+          }
+        }}
+      />
+    </View>
+  );
+}
+
 export default function PracticeScreen({ sessionPayload, onExit }) {
   const insets = useSafeAreaInsets();
   const {
@@ -202,7 +259,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     bundleId,
     requiredScore,
     examCategory,
-    onBundleComplete,   // ── callback passed from HomeScreen
+    onBundleComplete,
   } = sessionPayload;
 
   const SUBJECT_ABBREVIATIONS = {
@@ -228,6 +285,10 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     'Hausa': 'HAU',
   };
 
+  const [showCalculator, setShowCalculator] = useState(false);
+  const [calcDisplay, setCalcDisplay] = useState('0');
+  const [calcExpression, setCalcExpression] = useState('');
+  const [calcJustEvaluated, setCalcJustEvaluated] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [revealedAnswers, setRevealedAnswers] = useState({});
@@ -315,10 +376,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     setRevealedAnswers({ ...revealedAnswers, [currentQuestion.id]: true });
   };
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // buildWrongAnswers — FIX: include correctAnswerText & explanation
-  // These are only shown in ResultScreen when the user PASSED.
-  // ─────────────────────────────────────────────────────────────────────────
   const buildWrongAnswers = () => {
     return questions
       .filter(q => selectedAnswers[q.id] !== q.correct_option)
@@ -336,22 +393,19 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         };
 
         return {
-          id:                 q.id,
-          questionText:       q.question_text,
-          subjectName:        partition?.subjectName || subjectMeta.name,
+          id:                q.id,
+          questionText:      q.question_text,
+          image:             q.image || null,
+          subjectName:       partition?.subjectName || subjectMeta.name,
           studentKey,
-          studentAnswer:      getOptionText(studentKey),
-          // ── included so ResultScreen can show them when user passed ──
-          correctKey:         q.correct_option,
-          correctAnswerText:  q.correct_answer_text || getOptionText(q.correct_option),
-          explanation:        q.explanation || '',
+          studentAnswer:     getOptionText(studentKey),
+          correctKey:        q.correct_option,
+          correctAnswerText: q.correct_answer_text || getOptionText(q.correct_option),
+          explanation:       q.explanation || '',
         };
       });
   };
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // finaliseResult — called by both auto-submit (timer) and manual submit
-  // ─────────────────────────────────────────────────────────────────────────
   const finaliseResult = async (snapshotAnswers) => {
     if (timerRef.current) clearInterval(timerRef.current);
 
@@ -370,10 +424,10 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     const wrongAnswers = questions
       .filter(q => snapshotAnswers[q.id] !== q.correct_option)
       .map(q => {
-        const qIdx      = questions.indexOf(q);
-        const partition = subjectPartitions.find(p => qIdx >= p.startIndex && qIdx <= p.endIndex);
+        const qIdx       = questions.indexOf(q);
+        const partition  = subjectPartitions.find(p => qIdx >= p.startIndex && qIdx <= p.endIndex);
         const studentKey = snapshotAnswers[q.id] || null;
-        const getOpt = key => !key ? 'Not answered' : ({A:q.option_a,B:q.option_b,C:q.option_c,D:q.option_d}[key]||key);
+        const getOpt     = key => !key ? 'Not answered' : ({ A: q.option_a, B: q.option_b, C: q.option_c, D: q.option_d }[key] || key);
         return {
           id:                q.id,
           questionText:      q.question_text,
@@ -386,7 +440,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         };
       });
 
-    // Log result (non-blocking)
     logExamResult({
       subjectId: subjectMeta.id ?? null, subjectName: subjectMeta.name,
       examBody: subjectMeta.exam_body, score: rawScore, totalQuestions: totalQ,
@@ -394,21 +447,14 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
       tabSwitchCount, bundleName: subjectMeta.name, penaltyDeduction, wrongAnswers,
     }).catch(err => console.error('logExamResult:', err));
 
-    // ── WRITE completion to AsyncStorage FIRST, synchronously ──
-    // This is the ONLY source of truth. HomeScreen will re-read from here.
-    let completionMeta = null;
     if (bundleId && examCategory) {
-      completionMeta = await applyBundleCompletionToStorage(bundleId, percentage, examCategory);
+      await applyBundleCompletionToStorage(bundleId, percentage, examCategory);
     }
-
-    // Now show result screen, passing completionMeta so ResultScreen
-    // can forward it to onSessionComplete when the user taps exit
     setResultPayload({
       rawScore, penaltyDeduction, finalScore, totalQ, percentage,
       tabSwitchCount, bundleName: subjectMeta.name,
       examBody: subjectMeta.exam_body || 'EXAM',
       requiredScore: effectiveRequired, passed, wrongAnswers,
-      completionMeta,   // ← forwarded to ResultScreen → onExit
     });
   };
 
@@ -428,8 +474,6 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     ]);
   };
 
-  
-
   const handleExitPrematurely = () => {
     Alert.alert(
       "Exit Workspace",
@@ -439,6 +483,227 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         { text: "Exit & Discard", style: "destructive", onPress: onExit }
       ]
     );
+  };
+
+  // ─────────────────────────────────────────────────────────────────────────────
+  // SCIENTIFIC CALCULATOR
+  // ─────────────────────────────────────────────────────────────────────────────
+  const handleCalcInput = (value) => {
+    if (value === 'AC') {
+      setCalcDisplay('0');
+      setCalcExpression('');
+      setCalcJustEvaluated(false);
+      return;
+    }
+
+    if (value === '⌫') {
+      if (calcDisplay.length > 1) {
+        setCalcDisplay(calcDisplay.slice(0, -1));
+      } else {
+        setCalcDisplay('0');
+      }
+      return;
+    }
+
+    if (value === '=') {
+      try {
+        // Build full expression — always append display if it's not the "hidden zero" placeholder
+        let fullExpr = calcExpression;
+        const expressionEndsClosed = /[)]$/.test(calcExpression); // already closed, e.g. "tan(45)"
+        if (calcDisplay === '0' && calcExpression === '') {
+          fullExpr = '0';
+        } else if (expressionEndsClosed) {
+          // Expression already complete (ends in closing bracket) — don't append display
+          fullExpr = calcExpression;
+        } else if (calcDisplay !== '' && !(calcDisplay === '0' && calcExpression !== '' && /[+\-×÷^(]$/.test(calcExpression))) {
+          fullExpr += calcDisplay;
+        }
+    
+        // Strip any trailing operator (incomplete expression) before evaluating
+        fullExpr = fullExpr.replace(/[+\-×÷^]+$/, '');
+    
+        // ── Auto-close any unmatched opening brackets (e.g. from sin(, log(, etc.) ──
+        const openCount  = (fullExpr.match(/\(/g) || []).length;
+        const closeCount = (fullExpr.match(/\)/g) || []).length;
+        if (openCount > closeCount) {
+          fullExpr += ')'.repeat(openCount - closeCount);
+        }
+    
+        // For trig functions, JAMB/WAEC convention is DEGREES, not radians.
+        // Convert degree inputs to radians before applying Math.sin/cos/tan.
+        const sanitized = fullExpr
+          .replace(/×/g, '*')
+          .replace(/÷/g, '/')
+          .replace(/π/g, Math.PI.toString())
+          .replace(/sin\(([^()]*)\)/g, 'Math.sin(($1)*Math.PI/180)')
+          .replace(/cos\(([^()]*)\)/g, 'Math.cos(($1)*Math.PI/180)')
+          .replace(/tan\(([^()]*)\)/g, 'Math.tan(($1)*Math.PI/180)')
+          .replace(/log\(/g, 'Math.log10(')
+          .replace(/ln\(/g, 'Math.log(')
+          .replace(/√\(/g, 'Math.sqrt(')
+          .replace(/\^/g, '**');
+    
+        // eslint-disable-next-line no-eval
+        const result = eval(sanitized);
+        const resultStr = Number.isFinite(result)
+          ? parseFloat(result.toFixed(10)).toString()
+          : 'Error';
+        setCalcDisplay(resultStr);
+        setCalcExpression('');
+        setCalcJustEvaluated(true);
+      } catch {
+        setCalcDisplay('Error');
+        setCalcExpression('');
+        setCalcJustEvaluated(true);
+      }
+      return;
+    }
+
+    const operators = ['+', '-', '×', '÷', '^'];
+    const isOperator = operators.includes(value);
+
+    const funcTokens = ['sin(', 'cos(', 'tan(', 'log(', 'ln(', '√('];
+    const isFunc = funcTokens.includes(value);
+
+    if (isFunc) {
+      if (calcJustEvaluated) {
+        setCalcExpression(calcDisplay + value);
+        setCalcDisplay('0');
+        setCalcJustEvaluated(false);
+      } else {
+        const prefix = calcDisplay === '0' ? '' : calcDisplay;
+        setCalcExpression(calcExpression + prefix + value);
+        setCalcDisplay('0');
+      }
+      return;
+    }
+
+    if (isOperator) {
+      // ── Prevent consecutive operators from stacking ──
+      // If display is the hidden "0" placeholder (meaning an operator was
+      // already pressed and no new number typed yet), swap the trailing
+      // operator in the expression instead of appending a new one.
+      if (calcDisplay === '0' && calcExpression !== '') {
+        const lastCharIsOperator = /[+\-×÷^]$/.test(calcExpression);
+        if (lastCharIsOperator) {
+          if (value === '-' && !/--$/.test(calcExpression)) {
+            setCalcExpression(calcExpression + value);
+          } else {
+            setCalcExpression(calcExpression.slice(0, -1) + value);
+          }
+          return;
+        }
+      }
+
+      // Allow leading minus for negative numbers when display is fresh
+      if (calcDisplay === '0' && calcExpression === '' && value === '-') {
+        setCalcDisplay('-');
+        return;
+      }
+
+      const prefix = calcDisplay === '0' ? '' : calcDisplay;
+      setCalcExpression(calcExpression + prefix + value);
+      setCalcDisplay('0');
+      setCalcJustEvaluated(false);
+      return;
+    }
+
+    if (value === ')') {
+      const prefix = calcDisplay === '0' ? '' : calcDisplay;
+      setCalcExpression(calcExpression + prefix + ')');
+      setCalcDisplay('0');
+      return;
+    }
+
+    if (value === 'π') {
+      setCalcDisplay(Math.PI.toFixed(8).toString());
+      setCalcJustEvaluated(false);
+      return;
+    }
+
+    if (value === 'x²') {
+      try {
+        const sq = parseFloat(calcDisplay) ** 2;
+        setCalcDisplay(parseFloat(sq.toFixed(10)).toString());
+        setCalcJustEvaluated(true);
+      } catch {
+        setCalcDisplay('Error');
+      }
+      return;
+    }
+
+    if (value === '%') {
+      try {
+        const pct = parseFloat(calcDisplay) / 100;
+        setCalcDisplay(parseFloat(pct.toFixed(10)).toString());
+        setCalcJustEvaluated(true);
+      } catch {
+        setCalcDisplay('Error');
+      }
+      return;
+    }
+
+    if (value === '+/-') {
+      if (calcDisplay !== '0' && calcDisplay !== 'Error') {
+        setCalcDisplay(
+          calcDisplay.startsWith('-') ? calcDisplay.slice(1) : '-' + calcDisplay
+        );
+      }
+      return;
+    }
+
+    // Number / decimal input
+    if (calcJustEvaluated) {
+      setCalcDisplay(value === '.' ? '0.' : value);
+      setCalcJustEvaluated(false);
+      return;
+    }
+
+    if (value === '.') {
+      if (!calcDisplay.includes('.')) {
+        setCalcDisplay(calcDisplay + '.');
+      }
+      return;
+    }
+
+    if (calcDisplay === '0' || calcDisplay === '') {
+      setCalcDisplay(value);
+    } else {
+      if (calcDisplay.length < 12) {
+        setCalcDisplay(calcDisplay + value);
+      }
+    }
+  };
+
+  const CALC_BUTTONS = [
+    ['sin(', 'cos(', 'tan(', 'AC'],
+    ['log(', 'ln(',  '√(',   '⌫'],
+    ['x²',  'π',    '%',    '÷'],
+    ['7',   '8',    '9',    '×'],
+    ['4',   '5',    '6',    '-'],
+    ['1',   '2',    '3',    '+'],
+    ['+/-', '0',    '.',    '^'],
+    ['(',   ')',    '',     '='],
+  ];
+
+  const getCalcButtonStyle = (val) => {
+    if (val === '=')   return { backgroundColor: '#2563eb' };
+    if (val === 'AC')  return { backgroundColor: '#ef4444' };
+    if (val === '⌫')   return { backgroundColor: '#f59e0b' };
+    if (['+', '-', '×', '÷', '^'].includes(val)) return { backgroundColor: '#334155' };
+    if (['sin(','cos(','tan(','log(','ln(','√(','x²','π','%','+/-','(',')'].includes(val))
+      return { backgroundColor: '#1e3a5f' };
+    return { backgroundColor: '#1e293b' };
+  };
+
+  const getCalcTextStyle = (val) => {
+    if (val === '=')  return { color: '#ffffff', fontWeight: '900' };
+    if (val === 'AC') return { color: '#ffffff', fontWeight: '900' };
+    if (val === '⌫')  return { color: '#ffffff', fontWeight: '900' };
+    if (['+', '-', '×', '÷', '^'].includes(val)) return { color: '#38bdf8', fontWeight: '800' };
+    if (['sin(','cos(','tan(','log(','ln(','√('].includes(val))
+      return { color: '#a5f3fc', fontWeight: '700', fontSize: 11 };
+    return { color: '#f1f5f9', fontWeight: '700' };
   };
 
   const currentSelection = selectedAnswers[currentQuestion.id];
@@ -453,15 +718,15 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         { key: 'D', text: currentQuestion.option_d },
       ].filter(opt => opt.text != null);
 
-      if (resultPayload) {
-        return (
-          <ResultScreen
-            resultPayload={resultPayload}
-            onSessionComplete={sessionPayload.onSessionComplete}
-            onExit={onExit}
-          />
-        );
-      }
+  if (resultPayload) {
+    return (
+      <ResultScreen
+        resultPayload={resultPayload}
+        onSessionComplete={sessionPayload.onSessionComplete}
+        onExit={onExit}
+      />
+    );
+  }
 
   return (
     <View style={[styles.container, { paddingTop: insets.top }]}>
@@ -560,6 +825,9 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         </View>
 
         <View style={styles.questionCard}>
+          {currentQuestion.image ? (
+            <QuestionImage imageUri={currentQuestion.image} />
+          ) : null}
           <MathText
             text={currentQuestion.question_text}
             textStyle={styles.questionBodyText}
@@ -674,11 +942,85 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
           )}
         </View>
       </View>
+
+      {/* ── FLOATING CALCULATOR BUTTON ── */}
+      {!showGridMenu && (
+        <TouchableOpacity
+          style={calcStyles.floatingBtn}
+          onPress={() => setShowCalculator(true)}
+          activeOpacity={0.85}
+        >
+          <Text style={calcStyles.floatingBtnText}>🧮</Text>
+        </TouchableOpacity>
+      )}
+
+      {/* ── CALCULATOR MODAL ── */}
+      <Modal
+        visible={showCalculator}
+        transparent
+        animationType="slide"
+        onRequestClose={() => setShowCalculator(false)}
+      >
+        <View style={calcStyles.modalOverlay}>
+          <View style={[calcStyles.calcContainer, { paddingBottom: Math.max(insets.bottom, 16) + 16 }]}>
+
+            {/* Header */}
+            <View style={calcStyles.calcHeader}>
+              <Text style={calcStyles.calcTitle}>Scientific Calculator</Text>
+              <TouchableOpacity onPress={() => setShowCalculator(false)} style={calcStyles.closeCalcBtn}>
+                <Text style={calcStyles.closeCalcBtnText}>✕</Text>
+              </TouchableOpacity>
+            </View>
+
+            {/* Display */}
+            <View style={calcStyles.displayBox}>
+              <Text style={calcStyles.expressionText} numberOfLines={1}>
+                {calcExpression || ' '}
+              </Text>
+              <Text style={calcStyles.displayText} numberOfLines={1} adjustsFontSizeToFit>
+                {calcDisplay === '0' && calcExpression !== '' ? '' : calcDisplay}
+              </Text>
+            </View>
+
+            {/* Buttons */}
+            <View style={calcStyles.buttonGrid}>
+              {CALC_BUTTONS.map((row, ri) => (
+                <View key={ri} style={calcStyles.buttonRow}>
+                  {row.map((btn, bi) => (
+                    btn === '' ? (
+                      <View key={bi} style={calcStyles.buttonPlaceholder} />
+                    ) : (
+                      <TouchableOpacity
+                        key={bi}
+                        style={[calcStyles.calcButton, getCalcButtonStyle(btn), btn === '=' && calcStyles.equalsBtn]}
+                        onPress={() => handleCalcInput(btn)}
+                        activeOpacity={0.7}
+                      >
+                        <Text style={[calcStyles.calcButtonText, getCalcTextStyle(btn)]}>
+                          {btn}
+                        </Text>
+                      </TouchableOpacity>
+                    )
+                  ))}
+                </View>
+              ))}
+            </View>
+
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  questionImage: {
+    width: '100%',
+    height: 200,
+    borderRadius: 8,
+    marginBottom: 14,
+    backgroundColor: '#f1f5f9',
+  },
   container: { flex: 1, backgroundColor: '#f1f5f9' },
   header: { height: 65, backgroundColor: '#ffffff', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, borderBottomWidth: 1, borderColor: '#e2e8f0' },
   closeBtn: { paddingVertical: 6, paddingHorizontal: 10, backgroundColor: '#fee2e2', borderRadius: 6 },
@@ -708,15 +1050,15 @@ const styles = StyleSheet.create({
   questionCard: { backgroundColor: '#ffffff', padding: 20, borderRadius: 12, borderWidth: 1, borderColor: '#e2e8f0', marginBottom: 16, elevation: 1 },
   questionBodyText: { fontSize: 16, fontWeight: '500', color: '#0f172a', lineHeight: 26 },
   optionsWrapper: { gap: 10 },
-  optionCard: { backgroundColor: '#ffffff', padding: 14, borderRadius: 10, flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#e2e8f0' },
+  optionCard: { backgroundColor: '#ffffff', padding: 14, borderRadius: 10, flexDirection: 'row', alignItems: 'flex-start', borderWidth: 1, borderColor: '#e2e8f0' },
   selectedOptionCard: { backgroundColor: '#eff6ff', borderColor: '#3b82f6', borderWidth: 1.5 },
   correctOptionCard: { backgroundColor: '#f0fdf4', borderColor: '#22c55e', borderWidth: 1.5 },
   wrongOptionCard: { backgroundColor: '#fef2f2', borderColor: '#ef4444', borderWidth: 1.5 },
-  bulletIndicator: { width: 28, height: 28, borderRadius: 14, backgroundColor: '#f1f5f9', alignItems: 'center', justifyContent: 'center', marginRight: 12, borderWidth: 1, borderColor: '#cbd5e1' },
+  bulletIndicator: { width: 28, height: 28, borderRadius: 14, backgroundColor: '#f1f5f9', alignItems: 'center', justifyContent: 'center', marginRight: 12, marginTop: 2, borderWidth: 1, borderColor: '#cbd5e1', flexShrink: 0 },
   bulletSelected: { backgroundColor: '#3b82f6', borderColor: '#3b82f6' },
   bulletText: { fontSize: 13, fontWeight: '700', color: '#475569' },
   bulletTextSelected: { color: '#ffffff' },
-  optionBodyText: { fontSize: 14, fontWeight: '600', color: '#334155', lineHeight: 22 },
+  optionBodyText: { fontSize: 14, fontWeight: '600', color: '#334155', lineHeight: 22, flexShrink: 1, flexWrap: 'wrap' },
   selectedOptionText: { color: '#1e40af' },
   correctOptionText: { color: '#166534' },
   wrongOptionText: { color: '#991b1b' },
@@ -749,4 +1091,119 @@ const styles = StyleSheet.create({
   warningAcceptText: { color: '#ffffff', fontSize: 14, fontWeight: '800' },
   penaltyBanner: { backgroundColor: '#dc2626', paddingVertical: 6, paddingHorizontal: 16, alignItems: 'center' },
   penaltyBannerText: { color: '#ffffff', fontSize: 11, fontWeight: '900', letterSpacing: 0.5 },
+});
+
+const calcStyles = StyleSheet.create({
+  floatingBtn: {
+    position: 'absolute',
+    bottom: 90,
+    right: 16,
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: '#1e293b',
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 6,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    borderWidth: 1.5,
+    borderColor: '#38bdf8',
+    zIndex: 50,
+  },
+  floatingBtnText: {
+    fontSize: 22,
+  },
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    justifyContent: 'flex-end',
+  },
+  calcContainer: {
+    backgroundColor: '#0f172a',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    paddingHorizontal: 12,
+    paddingTop: 8,
+    borderWidth: 1,
+    borderColor: '#1e293b',
+  },
+  calcHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 8,
+    paddingVertical: 10,
+  },
+  calcTitle: {
+    color: '#94a3b8',
+    fontSize: 13,
+    fontWeight: '700',
+    letterSpacing: 0.5,
+  },
+  closeCalcBtn: {
+    width: 30,
+    height: 30,
+    borderRadius: 15,
+    backgroundColor: '#1e293b',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  closeCalcBtnText: {
+    color: '#94a3b8',
+    fontSize: 14,
+    fontWeight: '800',
+  },
+  displayBox: {
+    backgroundColor: '#1e293b',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    marginHorizontal: 4,
+    marginBottom: 12,
+    alignItems: 'flex-end',
+    minHeight: 80,
+    justifyContent: 'flex-end',
+  },
+  expressionText: {
+    color: '#475569',
+    fontSize: 13,
+    fontWeight: '500',
+    marginBottom: 4,
+  },
+  displayText: {
+    color: '#f8fafc',
+    fontSize: 32,
+    fontWeight: '800',
+    letterSpacing: -0.5,
+  },
+  buttonGrid: {
+    gap: 8,
+    paddingHorizontal: 4,
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    gap: 8,
+  },
+  calcButton: {
+    flex: 1,
+    height: 52,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  equalsBtn: {
+    backgroundColor: '#2563eb',
+  },
+  buttonPlaceholder: {
+    flex: 1,
+    height: 52,
+  },
+  calcButtonText: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#f1f5f9',
+  },
 });

@@ -87,14 +87,22 @@ export async function logExamResult(resultPayload) {
     const bundleName       = safePayload.bundleName || null;
     const wrongAnswers     = safePayload.wrongAnswers || [];
     const wrongAnswersStr  = typeof wrongAnswers === 'string' ? wrongAnswers : JSON.stringify(wrongAnswers);
+
+    // ── Supervising-teacher / class-level testing fields ──
+    const durationSeconds  = safePayload.durationSeconds ?? safePayload.duration_seconds ?? safePayload.duration ?? 0;
+    const startedAt        = safePayload.startedAt ?? safePayload.started_at ?? null;
+    const teacherCode      = safePayload.teacherCode ?? safePayload.teacher_code ?? null;
+    const classLevel       = safePayload.classLevel ?? safePayload.class_level ?? null;
+
     const timestamp        = new Date().toISOString();
 
     await db.runAsync(
       `INSERT INTO exam_history (
         subject_id, subject_name, exam_body, score, total_questions,
         final_score, raw_score, percentage, required_score,
-        tab_switch_count, penalty_deduction, wrong_answers, bundle_name, timestamp
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
+        tab_switch_count, penalty_deduction, wrong_answers, bundle_name,
+        duration_seconds, started_at, teacher_code, class_level, timestamp
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
       [
         subjectId ? Number(subjectId) : null,
         subjectName, examBody,
@@ -102,7 +110,9 @@ export async function logExamResult(resultPayload) {
         Number(finalScore), Number(rawScore),
         Number(percentage), Number(requiredScore),
         Number(tabSwitchCount), Number(penaltyDeduction),
-        wrongAnswersStr, bundleName, timestamp,
+        wrongAnswersStr, bundleName,
+        Number(durationSeconds), startedAt, teacherCode, classLevel,
+        timestamp,
       ]
     );
 
@@ -145,6 +155,214 @@ export async function clearExamHistory() {
     return true;
   } catch (error) {
     console.error("Failed to clear exam history:", error);
+    return false;
+  }
+}
+
+// ────────────────────────────────────────────────────────────
+//  0–100% ACADEMIC RATE (plain percentages — no topic weighting)
+// ────────────────────────────────────────────────────────────
+
+// Overall rate = average of all test percentages. Optionally scope to
+// a class level (e.g. 'JSS 2') by passing it in; omit for all history.
+export async function getPupilRate(classLevel = null) {
+  try {
+    const db = await getDb();
+    const row = classLevel
+      ? await db.getFirstAsync(
+          "SELECT AVG(percentage) as rate, COUNT(*) as tests FROM exam_history WHERE class_level = ?;",
+          [classLevel]
+        )
+      : await db.getFirstAsync(
+          "SELECT AVG(percentage) as rate, COUNT(*) as tests FROM exam_history;"
+        );
+
+    return {
+      rate: Math.round(row?.rate || 0),   // 0–100
+      testsTaken: row?.tests || 0,
+    };
+  } catch (error) {
+    console.error("Failed to compute pupil rate:", error);
+    return { rate: 0, testsTaken: 0 };
+  }
+}
+
+// Per-subject rate, weakest first — this is the "what still needs work"
+// view for both the pupil and (later) the supervising teacher.
+export async function getSubjectRates(classLevel = null) {
+  try {
+    const db = await getDb();
+    const rows = classLevel
+      ? await db.getAllAsync(
+          `SELECT subject_name,
+                  ROUND(AVG(percentage)) as rate,
+                  COUNT(*) as tests
+           FROM exam_history
+           WHERE class_level = ?
+           GROUP BY subject_name
+           ORDER BY rate ASC;`,
+          [classLevel]
+        )
+      : await db.getAllAsync(
+          `SELECT subject_name,
+                  ROUND(AVG(percentage)) as rate,
+                  COUNT(*) as tests
+           FROM exam_history
+           GROUP BY subject_name
+           ORDER BY rate ASC;`
+        );
+
+    return rows.map(r => ({
+      subject: r.subject_name || 'General',
+      rate: r.rate || 0,   // 0–100
+      tests: r.tests || 0,
+    }));
+  } catch (error) {
+    console.error("Failed to compute subject rates:", error);
+    return [];
+  }
+}
+
+// One-pass rate summary for every class level that has recorded tests.
+// Shape: { "JSS 2": { overallRate, testsTaken, subjects: [{ subject, rate, tests }] } }
+// Subjects are weakest-first — this is exactly the plain performance picture
+// the supervising teacher reads out of a pupil's PG Map.
+export async function getClassPerformanceSummary() {
+  try {
+    const db = await getDb();
+
+    const overallRows = await db.getAllAsync(
+      `SELECT class_level,
+              ROUND(AVG(percentage)) as rate,
+              COUNT(*) as tests
+       FROM exam_history
+       WHERE class_level IS NOT NULL AND class_level != ''
+       GROUP BY class_level;`
+    );
+
+    const subjectRows = await db.getAllAsync(
+      `SELECT class_level,
+              subject_name,
+              ROUND(AVG(percentage)) as rate,
+              COUNT(*) as tests
+       FROM exam_history
+       WHERE class_level IS NOT NULL AND class_level != ''
+       GROUP BY class_level, subject_name
+       ORDER BY class_level ASC, rate ASC;`
+    );
+
+    const summary = {};
+    for (const r of overallRows) {
+      summary[r.class_level] = {
+        overallRate: r.rate || 0,   // 0–100, plain average of test %
+        testsTaken:  r.tests || 0,
+        subjects:    [],
+      };
+    }
+    for (const s of subjectRows) {
+      if (!summary[s.class_level]) {
+        summary[s.class_level] = { overallRate: 0, testsTaken: 0, subjects: [] };
+      }
+      summary[s.class_level].subjects.push({
+        subject: s.subject_name || 'General',
+        rate:    s.rate || 0,       // 0–100
+        tests:   s.tests || 0,
+      });
+    }
+    return summary;
+  } catch (error) {
+    console.error("Failed to build class performance summary:", error);
+    return {};
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TEACHER ROSTER — teacher mode stores each pupil decoded from their PG Map.
+// A pupil is keyed by the device code in their snapshot, so re-loading an
+// updated PG Map for the same pupil overwrites (upserts) their record.
+// ─────────────────────────────────────────────────────────────────────────────
+
+function safeParse(str, fallback) {
+  try { return str ? JSON.parse(str) : fallback; } catch { return fallback; }
+}
+
+export async function upsertRosterPupil(pupil) {
+  try {
+    const db = await getDb();
+    const {
+      pupilDeviceCode, fullName = '', classLevels = [], overallRate = 0,
+      performance = {}, teacherCode = '', snapshot = {},
+    } = pupil || {};
+    if (!pupilDeviceCode) return false;
+    await db.runAsync(
+      `INSERT INTO teacher_roster
+         (pupil_device_code, full_name, class_levels, overall_rate, performance, teacher_code, snapshot, updated_at)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+       ON CONFLICT(pupil_device_code) DO UPDATE SET
+         full_name    = excluded.full_name,
+         class_levels = excluded.class_levels,
+         overall_rate = excluded.overall_rate,
+         performance  = excluded.performance,
+         teacher_code = excluded.teacher_code,
+         snapshot     = excluded.snapshot,
+         updated_at   = excluded.updated_at;`,
+      [
+        pupilDeviceCode,
+        fullName,
+        JSON.stringify(classLevels),
+        Math.round(overallRate) || 0,
+        JSON.stringify(performance),
+        teacherCode,
+        JSON.stringify(snapshot),
+        new Date().toISOString(),
+      ]
+    );
+    return true;
+  } catch (error) {
+    console.error("Failed to upsert roster pupil:", error);
+    return false;
+  }
+}
+
+export async function getRosterPupils() {
+  try {
+    const db = await getDb();
+    const rows = await db.getAllAsync("SELECT * FROM teacher_roster ORDER BY updated_at DESC;");
+    return rows.map((r) => ({
+      id:              r.id,
+      pupilDeviceCode: r.pupil_device_code,
+      fullName:        r.full_name || 'Unnamed pupil',
+      classLevels:     safeParse(r.class_levels, []),
+      overallRate:     r.overall_rate || 0,
+      performance:     safeParse(r.performance, {}),
+      teacherCode:     r.teacher_code || '',
+      snapshot:        safeParse(r.snapshot, {}),
+      updatedAt:       r.updated_at,
+    }));
+  } catch (error) {
+    console.error("Failed to read roster:", error);
+    return [];
+  }
+}
+
+export async function deleteRosterPupil(pupilDeviceCode) {
+  try {
+    const db = await getDb();
+    await db.runAsync("DELETE FROM teacher_roster WHERE pupil_device_code = ?;", [pupilDeviceCode]);
+    return true;
+  } catch (error) {
+    console.error("Failed to delete roster pupil:", error);
+    return false;
+  }
+}
+
+export async function clearRoster() {
+  try {
+    const db = await getDb();
+    await db.runAsync("DELETE FROM teacher_roster;");
+    return true;
+  } catch (error) {
+    console.error("Failed to clear roster:", error);
     return false;
   }
 }

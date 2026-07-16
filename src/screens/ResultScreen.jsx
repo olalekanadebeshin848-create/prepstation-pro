@@ -11,6 +11,8 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Linking } from 'react-native';
 import { logExamResult } from '../database/queries';
+import { WebView } from 'react-native-webview';
+
 const { width } = Dimensions.get('window');
 
 const SUBJECT_COLORS = {
@@ -82,6 +84,53 @@ const badge = StyleSheet.create({
   count: { fontSize: 10, fontWeight: '600', marginTop: 1 },
 });
 
+// ─────────────────────────────────────────────────────────────────────────────
+// ResultQuestionImage — renders SVG and base64 images via WebView
+// <Image> does not support SVG base64 URIs in React Native
+// ─────────────────────────────────────────────────────────────────────────────
+function ResultQuestionImage({ imageUri }) {
+  const [imgHeight, setImgHeight] = useState(200);
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; background: transparent; }
+    img { width: 100%; height: auto; display: block; max-width: 100%; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <img
+    src="${imageUri}"
+    onload="window.ReactNativeWebView.postMessage(String(Math.ceil(this.naturalHeight * (window.innerWidth / this.naturalWidth))))"
+    onerror="document.body.innerHTML='<p style=color:#ef4444;font-size:12px;padding:8px>Image failed to load</p>'"
+  />
+</body>
+</html>`;
+
+  return (
+    <View style={{ width: '100%', height: imgHeight, marginBottom: 10, borderRadius: 8, overflow: 'hidden', backgroundColor: '#0f172a' }}>
+      <WebView
+        originWhitelist={['*']}
+        source={{ html }}
+        scrollEnabled={false}
+        showsVerticalScrollIndicator={false}
+        style={{ backgroundColor: 'transparent', flex: 1 }}
+        androidLayerType="software"
+        onMessage={(e) => {
+          const h = parseInt(e.nativeEvent.data, 10);
+          if (!isNaN(h) && h > 0 && h < 600) {
+            setImgHeight(h);
+          }
+        }}
+      />
+    </View>
+  );
+}
+
 function WrongRow({ item, globalIndex, passed }) {
   const [expanded, setExpanded] = useState(false);
   const c = getSubjectColor(item.subjectName);
@@ -112,6 +161,11 @@ function WrongRow({ item, globalIndex, passed }) {
           <Text style={[row.subjectTag, { color: c.accent }]}>
             {item.subjectName.toUpperCase()}
           </Text>
+
+          {/* Question image — uses WebView to support SVG base64 */}
+          {item.image ? (
+            <ResultQuestionImage imageUri={item.image} />
+          ) : null}
 
           {/* Your answer */}
           <View style={[row.answerChip, notAnswered ? row.skipChip : row.wrongChip]}>
@@ -187,14 +241,6 @@ const row = StyleSheet.create({
   communityNudgeText: { fontSize: 12, color: '#c4b5fd', lineHeight: 17 },
 });
 
-// ─────────────────────────────────────────────────────────────────────────────
-// MAIN COMPONENT
-// Props:
-//   resultPayload — scores, wrongAnswers, passed, completionMeta, etc.
-//   onExit        — navigates back to HomeScreen
-//   onSessionComplete (optional) — called with completionMeta before exit
-//                                   so HomeScreen can reload strata from storage
-// ─────────────────────────────────────────────────────────────────────────────
 export default function ResultScreen({ resultPayload, onExit, onSessionComplete }) {
   const insets = useSafeAreaInsets();
   const {
@@ -209,7 +255,7 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
     requiredScore,
     wrongAnswers,
     passed,
-    completionMeta,   // ← written by PracticeScreen via applyBundleCompletionToStorage
+    completionMeta,
   } = resultPayload;
 
   useEffect(() => {
@@ -230,10 +276,6 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
     });
   }, []);
 
-  // ── THE KEY CHANGE: before navigating away, tell HomeScreen to
-  // reload strata from AsyncStorage and select the next bundle.
-  // onSessionComplete is passed down from PracticeScreen which gets
-  // it from sessionPayload.onSessionComplete set by HomeScreen.
   const handleExit = () => {
     if (typeof onSessionComplete === 'function') {
       onSessionComplete(completionMeta || null);
@@ -267,7 +309,6 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
           <Text style={s.headerEyebrow}>{examBody}  •  {bundleName}</Text>
           <Text style={s.headerTitle}>RESULT PROFILE</Text>
         </View>
-        {/* ── CHANGED: was onExit, now handleExit ── */}
         <TouchableOpacity style={s.exitBtn} onPress={handleExit}>
           <Text style={s.exitBtnText}>
             {passed ? 'Next Bundle →' : 'Retake'}
@@ -484,8 +525,7 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
           </View>
         )}
 
-        {/* BOTTOM EXIT BUTTON — also uses handleExit */}
-        {/* ── CHANGED: was onExit, now handleExit ── */}
+        {/* BOTTOM EXIT BUTTON */}
         <TouchableOpacity
           style={[s.bottomExitBtn, { backgroundColor: passed ? '#16a34a' : '#2563eb' }]}
           onPress={handleExit}

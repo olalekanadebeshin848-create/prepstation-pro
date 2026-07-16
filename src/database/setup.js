@@ -49,6 +49,10 @@ export async function initDatabase() {
         bundle_name TEXT,
         penalty_deduction INTEGER DEFAULT 0,
         wrong_answers TEXT,
+        duration_seconds INTEGER DEFAULT 0,
+        started_at TEXT,
+        teacher_code TEXT,
+        class_level TEXT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY(subject_id) REFERENCES subjects(id) ON DELETE SET NULL
       );
@@ -56,6 +60,20 @@ export async function initDatabase() {
       CREATE INDEX IF NOT EXISTS idx_exam_history_subject ON exam_history(subject_id);
       CREATE INDEX IF NOT EXISTS idx_exam_history_timestamp ON exam_history(timestamp DESC);
       CREATE INDEX IF NOT EXISTS idx_questions_subject ON questions(subject_id);
+
+      CREATE TABLE IF NOT EXISTS teacher_roster (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        pupil_device_code TEXT UNIQUE,
+        full_name TEXT,
+        class_levels TEXT,
+        overall_rate INTEGER DEFAULT 0,
+        performance TEXT,
+        teacher_code TEXT,
+        snapshot TEXT,
+        updated_at TEXT
+      );
+
+      CREATE INDEX IF NOT EXISTS idx_roster_pupil ON teacher_roster(pupil_device_code);
     `);
 
     console.log('✅ Schema ready');
@@ -68,6 +86,11 @@ export async function initDatabase() {
       `ALTER TABLE exam_history ADD COLUMN bundle_name TEXT;`,
       `ALTER TABLE exam_history ADD COLUMN required_score INTEGER DEFAULT 50;`,
       `ALTER TABLE exam_history ADD COLUMN tab_switch_count INTEGER DEFAULT 0;`,
+      // ── Supervising-teacher / class-level testing additions ──
+      `ALTER TABLE exam_history ADD COLUMN duration_seconds INTEGER DEFAULT 0;`,
+      `ALTER TABLE exam_history ADD COLUMN started_at TEXT;`,
+      `ALTER TABLE exam_history ADD COLUMN teacher_code TEXT;`,
+      `ALTER TABLE exam_history ADD COLUMN class_level TEXT;`,
     ];
 
     for (const migration of migrations) {
