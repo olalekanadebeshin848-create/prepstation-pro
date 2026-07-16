@@ -26,6 +26,7 @@ const NIGERIAN_STATES = [
 ];
 
 const EXAMS = ['JAMB/UTME','WAEC','NECO','NABTEB','GCE','POST-UTME','OTHERS'];
+const CLASS_LEVELS = ['BASIC Classes','JSS Classes','SS (Senior) Classes'];
 const SEX_OPTIONS = ['Male','Female'];
 const PREV_EXAM_OPTIONS = ['Never written before','Written once','Written twice','Written 3+ times'];
 const EXPECTATIONS = [
@@ -98,6 +99,7 @@ export default function ProfileScreen({ onComplete }) {
   const [sex,             setSex]             = useState('');
   const [phone,           setPhone]           = useState('');
   const [forthcomingExam, setForthcomingExam] = useState([]);
+  const [classLevel,      setClassLevel]      = useState('');
   const [prevExam,        setPrevExam]        = useState('');
   const [expectation,     setExpectation]     = useState('');
   const [intendedCourse,  setIntendedCourse]  = useState('');
@@ -152,6 +154,7 @@ export default function ProfileScreen({ onComplete }) {
         sex,
         phone:          phone.trim(),
         forthcomingExam,
+        classLevel,
         prevExam,
         expectation,
         intendedCourse: intendedCourse.trim(),
@@ -279,6 +282,13 @@ export default function ProfileScreen({ onComplete }) {
               onSelect={setForthcomingExam}
               multi
             />
+          </View>
+
+          {/* ── Class Level (school pupils, teacher-supervised) ── */}
+          <View style={styles.fieldBlock}>
+            <FieldLabel text="Class Level (if currently in school)" />
+            <Text style={styles.hint}>Leave blank if you're a self-study candidate only</Text>
+            <SelectChips options={CLASS_LEVELS} selected={classLevel} onSelect={setClassLevel} />
           </View>
 
           {/* ── Previously Written ── */}

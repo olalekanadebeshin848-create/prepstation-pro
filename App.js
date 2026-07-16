@@ -11,6 +11,7 @@ import AnalyticsScreen from './src/screens/AnalyticsScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 
+import TeacherHomeScreen from './src/screens/TeacherHomeScreen';
 SplashScreen.preventAutoHideAsync();
 
 function MainNavigationRouter() {
@@ -58,7 +59,13 @@ function MainNavigationRouter() {
   if (currentView === 'ANALYTICS') {
     return <AnalyticsScreen onBack={() => setCurrentView('HOME')} />;
   }
+if (currentView === 'ANALYTICS') {
+    return <AnalyticsScreen onBack={() => setCurrentView('HOME')} />;
+  }
 
+  if (currentView === 'TEACHER') {
+    return <TeacherHomeScreen onSwitchToPupil={() => setCurrentView('HOME')} />;
+  }
   if (currentView === 'PRACTICE') {
     return (
       <PracticeScreen
@@ -83,6 +90,16 @@ function MainNavigationRouter() {
         setActiveSession(null);
         setCurrentView('ANALYTICS');
       }}
+
+      onOpenAnalytics={() => {
+        setActiveSession(null);
+        setCurrentView('ANALYTICS');
+      }}
+      onSwitchToTeacher={() => {
+        setActiveSession(null);
+        setCurrentView('TEACHER');
+      }}
+    
     />
   );
 }

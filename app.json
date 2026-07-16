@@ -22,7 +22,9 @@
       },
       "package": "com.delmamatiagroups.prepstationpro",
       "permissions": [
-        "CAMERA"
+        "CAMERA",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
       ]
     },
     "web": {
@@ -51,8 +53,9 @@
     ],
     "extra": {
       "eas": {
-        "projectId": "ba328969-45f2-4d72-ae6b-3c3622109e90"
+        "projectId": "99c0e8aa-2fbe-4dfc-9233-09877690f82c"
       }
-    }
+    },
+    "owner": "adebeshinolalekan848-create"
   }
 }

@@ -2,18 +2,37 @@ import * as SQLite from 'expo-sqlite';
 
 const DB_NAME = 'questions_v2.db';
 let dbInstance = null;
+let dbReadyPromise = null;
 
 export function setDbInstance(instance) {
   dbInstance = instance;
   console.log('✅ queries.js received shared DB instance');
 }
 
+// Called by setup.js the moment initDatabase() starts, so anyone who calls
+// getDb() before setup finishes awaits the SAME in-flight promise instead
+// of opening a second competing connection.
+export function setDbReadyPromise(promise) {
+  dbReadyPromise = promise;
+}
+
 async function getDb() {
   if (dbInstance) return dbInstance;
-  console.warn('⚠️ getDb fallback triggered');
+  if (dbReadyPromise) {
+    dbInstance = await dbReadyPromise;
+    return dbInstance;
+  }
+  // Only reached if setup.js's initDatabase() was never called at all.
+  console.warn('⚠️ getDb fallback triggered — initDatabase() was never called');
   dbInstance = await SQLite.openDatabaseAsync(DB_NAME);
   return dbInstance;
 }
+
+// ... rest of queries.js (getSubjectsByExamBody, getQuestionsForSubject,
+// getCustomQuestionSet, getTopicsBySubject, logExamResult, getExamHistory,
+// getQuestionCount, clearExamHistory, getPupilRate, getSubjectRates,
+// getClassPerformanceSummary, upsertRosterPupil, getRosterPupils,
+// deleteRosterPupil, clearRoster) — unchanged, keep exactly as you have them.
 
 export async function getSubjectsByExamBody(examBody) {
   try {

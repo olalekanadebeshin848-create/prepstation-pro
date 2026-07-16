@@ -109,6 +109,18 @@ export default function WelcomeScreen({ onFinish }) {
           ))}
         </View>
 
+        {/* Class levels — school pupils, teacher-supervised */}
+        <View style={styles.classRow}>
+          {['BASIC', 'JSS', 'SS (SENIOR)'].map((level, i) => (
+            <React.Fragment key={level}>
+              <Text style={styles.classLevel}>{level}</Text>
+              {i < 2 && <View style={styles.classDot} />}
+            </React.Fragment>
+          ))}
+        </View>
+
+        <Text style={styles.classRowCaption}>School class levels · teacher-supervised</Text>
+
         <View style={styles.divider} />
 
         {/* Core message */}
@@ -278,6 +290,36 @@ const styles = StyleSheet.create({
     height: 3,
     borderRadius: 1.5,
     backgroundColor: 'rgba(245,200,66,0.4)',
+  },
+
+  /* Class-level row — visually distinct (blue) from exam bodies (gold) */
+  classRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    paddingHorizontal: 6,
+    marginBottom: 6,
+  },
+  classLevel: {
+    fontSize: 11,
+    fontWeight: '800',
+    color: '#60a5fa',
+    letterSpacing: 0.8,
+  },
+  classDot: {
+    width: 3,
+    height: 3,
+    borderRadius: 1.5,
+    backgroundColor: 'rgba(96,165,250,0.4)',
+  },
+  classRowCaption: {
+    fontSize: 9.5,
+    color: 'rgba(96,165,250,0.55)',
+    fontWeight: '600',
+    textAlign: 'center',
+    marginBottom: 16,
   },
 
   divider: {

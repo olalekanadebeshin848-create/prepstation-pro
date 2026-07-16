@@ -30,10 +30,10 @@ export const CATEGORIES = [
   { id: 'NECO', label: 'NECO', type: 'exam', group: null, subjectSlots: 5, fallbackTotal: 500, theoryCompulsory: true  },
 
   // ── Class levels (teacher-supervised) ──
-  { id: 'BASIC 3', label: 'Basic 3', type: 'class', group: 'Basic', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
-  { id: 'BASIC 4', label: 'Basic 4', type: 'class', group: 'Basic', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
-  { id: 'BASIC 5', label: 'Basic 5', type: 'class', group: 'Basic', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
-  { id: 'BASIC 6', label: 'Basic 6', type: 'class', group: 'Basic', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
+  { id: 'BASIC 3', label: 'BASIC 3', type: 'class', group: 'BASIC', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
+  { id: 'BASIC 4', label: 'BASIC 4', type: 'class', group: 'BASIC', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
+  { id: 'BASIC 5', label: 'BASIC 5', type: 'class', group: 'BASIC', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
+  { id: 'BASIC 6', label: 'BASIC 6', type: 'class', group: 'BASIC', subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
   { id: 'JSS 1',   label: 'JSS 1',   type: 'class', group: 'JSS',   subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
   { id: 'JSS 2',   label: 'JSS 2',   type: 'class', group: 'JSS',   subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
   { id: 'JSS 3',   label: 'JSS 3',   type: 'class', group: 'JSS',   subjectSlots: 5, fallbackTotal: null, theoryCompulsory: false },
@@ -61,7 +61,7 @@ export function emptyCategoryMap(fill = () => []) {
 }
 
 // Class levels grouped, for a two-step picker (Basic ▸ 3/4/5/6, etc.).
-export const CLASS_GROUPS = ['Basic', 'JSS', 'SS'].map(group => ({
+export const CLASS_GROUPS = ['BASIC', 'JSS', 'SS'].map(group => ({
   group,
   levels: CATEGORIES.filter(c => c.type === 'class' && c.group === group),
 }));

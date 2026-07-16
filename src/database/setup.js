@@ -1,10 +1,18 @@
 import * as SQLite from 'expo-sqlite';
-import { setDbInstance } from './queries';
+import { setDbInstance, setDbReadyPromise } from './queries';
 
 const DB_NAME = 'questions_v2.db';
 
-export async function initDatabase() {
-  try {
+// Single shared promise — every caller (queries.js's getDb(), App.js's boot,
+// resetDatabase, getDatabaseStats) awaits THIS SAME promise instead of each
+// independently calling SQLite.openDatabaseAsync(). That's what was racing
+// and causing the native NullPointerException.
+let dbReadyPromise = null;
+
+function openAndSetupDb() {
+  if (dbReadyPromise) return dbReadyPromise;
+
+  dbReadyPromise = (async () => {
     console.log('🚀 Opening database...');
     const db = await SQLite.openDatabaseAsync(DB_NAME);
 
@@ -86,7 +94,6 @@ export async function initDatabase() {
       `ALTER TABLE exam_history ADD COLUMN bundle_name TEXT;`,
       `ALTER TABLE exam_history ADD COLUMN required_score INTEGER DEFAULT 50;`,
       `ALTER TABLE exam_history ADD COLUMN tab_switch_count INTEGER DEFAULT 0;`,
-      // ── Supervising-teacher / class-level testing additions ──
       `ALTER TABLE exam_history ADD COLUMN duration_seconds INTEGER DEFAULT 0;`,
       `ALTER TABLE exam_history ADD COLUMN started_at TEXT;`,
       `ALTER TABLE exam_history ADD COLUMN teacher_code TEXT;`,
@@ -139,10 +146,26 @@ export async function initDatabase() {
     const historyCheck = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");
     console.log(`📈 Exam history has ${historyCheck[0]?.count || 0} records`);
 
-    // ── Share this connection with queries.js ──
     setDbInstance(db);
-
     console.log('✅ Database ready');
+    return db;
+  })();
+
+  // Publish the promise immediately (not just on resolve) so anything that
+  // calls getDb() while we're still mid-setup awaits THIS run instead of
+  // firing its own openDatabaseAsync().
+  setDbReadyPromise(dbReadyPromise);
+
+  // If init throws, clear the cached promise so a later retry isn't stuck
+  // forever awaiting a rejected promise.
+  dbReadyPromise.catch(() => { dbReadyPromise = null; });
+
+  return dbReadyPromise;
+}
+
+export async function initDatabase() {
+  try {
+    await openAndSetupDb();
     return true;
   } catch (error) {
     console.error('❌ Database init failed:', error);
@@ -152,7 +175,7 @@ export async function initDatabase() {
 
 export async function resetDatabase() {
   try {
-    const db = await SQLite.openDatabaseAsync(DB_NAME);
+    const db = await openAndSetupDb();
     await db.execAsync(`
       DROP TABLE IF EXISTS exam_history;
       DROP TABLE IF EXISTS questions;
@@ -168,7 +191,7 @@ export async function resetDatabase() {
 
 export async function getDatabaseStats() {
   try {
-    const db = await SQLite.openDatabaseAsync(DB_NAME);
+    const db = await openAndSetupDb();
     const s = await db.getAllAsync("SELECT COUNT(*) as count FROM subjects;");
     const q = await db.getAllAsync("SELECT COUNT(*) as count FROM questions;");
     const h = await db.getAllAsync("SELECT COUNT(*) as count FROM exam_history;");

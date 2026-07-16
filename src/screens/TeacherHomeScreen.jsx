@@ -25,12 +25,12 @@ import {
 // Rate colour scale — one meaning per band, reused everywhere a rate appears.
 // ─────────────────────────────────────────────────────────────────────────────
 const rateColor = (r) =>
-  r >= 75 ? '#10b981' : r >= 60 ? '#3b82f6' : r >= 40 ? '#f59e0b' : '#ef4444';
+  r >= 75 ? '#059669' : r >= 60 ? '#2563eb' : r >= 40 ? '#d97706' : '#dc2626';
+const rateSoft = (r) =>
+  r >= 75 ? '#d1fae5' : r >= 60 ? '#dbeafe' : r >= 40 ? '#fef3c7' : '#fee2e2';
 const rateLabel = (r) =>
   r >= 75 ? 'Strong' : r >= 60 ? 'Steady' : r >= 40 ? 'Needs work' : 'At risk';
 
-// Headline rate for a pupil = average of their class rates, weighted by how many
-// tests sit behind each (so a class with more evidence counts for more).
 function computeHeadlineRate(performance) {
   const entries = Object.values(performance || {});
   if (!entries.length) return 0;
@@ -43,7 +43,6 @@ function computeHeadlineRate(performance) {
   return weight ? Math.round(sum / weight) : 0;
 }
 
-// Weakest subject across every class a pupil has tested in.
 function weakestSubject(performance) {
   let weakest = null;
   for (const e of Object.values(performance || {})) {
@@ -55,7 +54,7 @@ function weakestSubject(performance) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// A circular rate ring — the signature data element of teacher mode.
+// Circular rate ring — the signature data element of teacher mode.
 // ─────────────────────────────────────────────────────────────────────────────
 function RateRing({ rate = 0, size = 56, stroke = 6, track = '#e2e8f0', textColor = '#0f172a' }) {
   const r = (size - stroke) / 2;
@@ -69,24 +68,15 @@ function RateRing({ rate = 0, size = 56, stroke = 6, track = '#e2e8f0', textColo
         <Circle cx={size / 2} cy={size / 2} r={r} stroke={track} strokeWidth={stroke} fill="none" />
         <G rotation={-90} origin={`${size / 2}, ${size / 2}`}>
           <Circle
-            cx={size / 2}
-            cy={size / 2}
-            r={r}
-            stroke={color}
-            strokeWidth={stroke}
-            fill="none"
-            strokeDasharray={`${c} ${c}`}
-            strokeDashoffset={offset}
-            strokeLinecap="round"
+            cx={size / 2} cy={size / 2} r={r} stroke={color} strokeWidth={stroke} fill="none"
+            strokeDasharray={`${c} ${c}`} strokeDashoffset={offset} strokeLinecap="round"
           />
         </G>
       </Svg>
       <View style={{ position: 'absolute', alignItems: 'center' }}>
-        <Text style={{ fontSize: size * 0.30, fontWeight: '900', color: textColor }}>{clamped}</Text>
+        <Text style={{ fontSize: size * 0.30, fontWeight: '800', color: textColor }}>{clamped}</Text>
         {size >= 92 && (
-          <Text style={{ fontSize: size * 0.11, fontWeight: '800', color: textColor, opacity: 0.55, letterSpacing: 1 }}>
-            RATE
-          </Text>
+          <Text style={{ fontSize: size * 0.11, fontWeight: '700', color: textColor, opacity: 0.5, letterSpacing: 1 }}>RATE</Text>
         )}
       </View>
     </View>
@@ -100,25 +90,27 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
   const [myCode, setMyCode] = useState(null);
   const [roster, setRoster] = useState([]);
   const [pasteValue, setPasteValue] = useState('');
-  const [status, setStatus] = useState(null); // { type: 'success' | 'error', msg }
+  const [status, setStatus] = useState(null);
   const [selectedClass, setSelectedClass] = useState(null);
   const [detailPupil, setDetailPupil] = useState(null);
   const [scanModalVisible, setScanModalVisible] = useState(false);
+  const [addOpen, setAddOpen] = useState(false);
   const [permission, requestPermission] = useCameraPermissions();
   const scanLock = useRef(false);
-
   const fade = useRef(new Animated.Value(0)).current;
 
+  // Palette — indigo identity for teacher mode, on the app's slate base.
   const t = {
-    bg:        isDarkMode ? '#0f172a' : '#f8fafc',
-    card:      isDarkMode ? '#1e293b' : '#ffffff',
-    textMain:  isDarkMode ? '#f8fafc' : '#0f172a',
-    textSub:   isDarkMode ? '#94a3b8' : '#64748b',
-    border:    isDarkMode ? '#334155' : '#e2e8f0',
-    innerPanel:isDarkMode ? '#0f172a' : '#f1f5f9',
+    bg:         isDarkMode ? '#0b1120' : '#f1f5f9',
+    card:       isDarkMode ? '#111c33' : '#ffffff',
+    textMain:   isDarkMode ? '#f8fafc' : '#0f172a',
+    textSub:    isDarkMode ? '#94a3b8' : '#64748b',
+    textFaint:  isDarkMode ? '#64748b' : '#94a3b8',
+    border:     isDarkMode ? '#1e293b' : '#e9edf3',
+    innerPanel: isDarkMode ? '#0b1120' : '#f4f6fb',
   };
-  const ACCENT = '#6366f1';
-  const ACCENT_DEEP = '#4f46e5';
+  const ACCENT = '#4f46e5';
+  const ACCENT_SOFT = isDarkMode ? '#1e1b4b' : '#eef2ff';
 
   const loadRoster = useCallback(async () => {
     const list = await getRosterPupils();
@@ -130,10 +122,9 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
       setMyCode(await getMyTeacherCode());
       await loadRoster();
     })();
-    Animated.timing(fade, { toValue: 1, duration: 350, useNativeDriver: true }).start();
+    Animated.timing(fade, { toValue: 1, duration: 380, useNativeDriver: true }).start();
   }, [loadRoster, fade]);
 
-  // ── derived views ──
   const classes = useMemo(() => {
     const map = {};
     for (const p of roster) {
@@ -159,12 +150,10 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
     [roster, selectedClass]
   );
 
-  // ── actions ──
-  // Shared pipeline for a pupil string, whether it was pasted or scanned.
+  // ── actions (unchanged logic) ──
   const processPupilString = async (raw) => {
     const trimmed = (raw || '').trim();
     if (!trimmed) return { type: 'error', msg: 'Paste a pupil PG Map string first.' };
-
     const snap = decodePGMapPayload(trimmed);
     if (!snap) return { type: 'error', msg: "Couldn't read that code. Use the full string or a clearer scan." };
     if (!snap.teacherCode) return { type: 'error', msg: "This pupil hasn't linked a teacher yet." };
@@ -174,7 +163,6 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
     const perf = snap.classPerformance || {};
     const classLevels = Object.keys(perf);
     if (classLevels.length === 0) return { type: 'error', msg: "No class-test results in this pupil's code yet." };
-
     const record = {
       pupilDeviceCode: snap.deviceCode || `pupil_${Date.now()}`,
       fullName: (snap.student && snap.student.fullName) || 'Unnamed pupil',
@@ -198,9 +186,7 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
 
   const openScanner = async () => {
     let perm = permission;
-    if (!perm || !perm.granted) {
-      perm = await requestPermission();
-    }
+    if (!perm || !perm.granted) perm = await requestPermission();
     if (!perm || !perm.granted) {
       Alert.alert('Camera needed', 'Allow camera access to scan a pupil\u2019s QR code, or paste the string instead.');
       return;
@@ -211,10 +197,11 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
   };
 
   const onBarcodeScanned = async ({ data }) => {
-    if (scanLock.current) return; // the camera fires repeatedly — take the first hit only
+    if (scanLock.current) return;
     scanLock.current = true;
     const res = await processPupilString(data);
     setScanModalVisible(false);
+    setAddOpen(true);
     setStatus(res);
   };
 
@@ -229,164 +216,187 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
     Alert.alert('Remove pupil', `Remove ${pupil.fullName} from your roster?`, [
       { text: 'Cancel', style: 'cancel' },
       {
-        text: 'Remove',
-        style: 'destructive',
-        onPress: async () => {
-          await deleteRosterPupil(pupil.pupilDeviceCode);
-          setDetailPupil(null);
-          loadRoster();
-        },
+        text: 'Remove', style: 'destructive',
+        onPress: async () => { await deleteRosterPupil(pupil.pupilDeviceCode); setDetailPupil(null); loadRoster(); },
       },
     ]);
   };
 
+  const keyGrouped = myCode ? myCode.replace(/(\d{4})(?=\d)/g, '$1 ') : '\u2022'.repeat(TEACHER_CODE_LENGTH);
+
   // ─────────────────────────────────────────────────────────────────────────
   return (
-    <View style={[styles.root, { backgroundColor: t.bg, paddingTop: insets.top }]}>
-      {/* Top bar */}
-      <View style={styles.topBar}>
-        <View>
-          <Text style={[styles.eyebrow, { color: ACCENT }]}>PREPSTATION PRO</Text>
-          <Text style={[styles.topTitle, { color: t.textMain }]}>Teacher</Text>
-        </View>
-        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-          <TouchableOpacity
-            onPress={() => setIsDarkMode((v) => !v)}
-            style={[styles.iconBtn, { backgroundColor: t.card, borderColor: t.border }]}
-          >
-            <Text style={{ fontSize: 16 }}>{isDarkMode ? '☀️' : '🌙'}</Text>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={onSwitchToPupil} style={[styles.roleSwitch, { borderColor: ACCENT }]}>
-            <Text style={{ fontSize: 12 }}>🎓</Text>
-            <Text style={[styles.roleSwitchText, { color: ACCENT }]}>Pupil mode</Text>
-          </TouchableOpacity>
+    <View style={[styles.root, { backgroundColor: t.bg }]}>
+      {/* Header band — indigo, spans the status bar for a clean edge-to-edge top */}
+      <View style={[styles.header, { paddingTop: insets.top + 12, backgroundColor: ACCENT }]}>
+        <View style={styles.headerRow}>
+          <View style={styles.brandRow}>
+            <View style={styles.brandMark}><Text style={{ fontSize: 18 }}>🏫</Text></View>
+            <View>
+              <Text style={styles.headerEyebrow}>PREPSTATION PRO</Text>
+              <Text style={styles.headerTitle}>Teacher Studio</Text>
+            </View>
+          </View>
+          <View style={styles.headerActions}>
+            <TouchableOpacity onPress={() => setIsDarkMode((v) => !v)} style={styles.headerIconBtn} activeOpacity={0.8}>
+              <Text style={{ fontSize: 15 }}>{isDarkMode ? '☀️' : '🌙'}</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={onSwitchToPupil} style={styles.pupilBtn} activeOpacity={0.85}>
+              <Text style={{ fontSize: 12 }}>🎓</Text>
+              <Text style={styles.pupilBtnText}>Pupil</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
 
-      <Animated.View style={{ flex: 1, opacity: fade, transform: [{ translateY: fade.interpolate({ inputRange: [0, 1], outputRange: [12, 0] }) }] }}>
+      <Animated.View style={{ flex: 1, opacity: fade, transform: [{ translateY: fade.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }}>
         <ScrollView
-          contentContainerStyle={{ padding: 16, paddingBottom: insets.bottom + 32 }}
+          contentContainerStyle={{ padding: 16, paddingTop: 18, paddingBottom: insets.bottom + 36 }}
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
         >
-          {/* CLASS KEY — the thing a teacher reads aloud to their pupils */}
-          <View style={[styles.keyCard, { backgroundColor: ACCENT_DEEP }]}>
+          {/* CLASS KEY — presented like an access card the teacher reads aloud */}
+          <View style={styles.keyCard}>
             <View style={styles.keyBlobA} />
             <View style={styles.keyBlobB} />
-            <Text style={styles.keyEyebrow}>YOUR CLASS KEY</Text>
-            <Text style={styles.keyDigits} selectable>{myCode || '•'.repeat(TEACHER_CODE_LENGTH)}</Text>
+            <View style={styles.keyTopRow}>
+              <Text style={styles.keyEyebrow}>YOUR CLASS KEY</Text>
+              <View style={styles.keyChip}><Text style={styles.keyChipText}>{TEACHER_CODE_LENGTH}-DIGIT</Text></View>
+            </View>
+            <Text style={styles.keyDigits} selectable>{keyGrouped}</Text>
             <Text style={styles.keyHint}>
-              Read this to your class. Each pupil enters it once, and their results come back to you.
+              Read this to your class. Each pupil enters it once, and their results flow back to you.
             </Text>
-            <TouchableOpacity style={styles.keyShareBtn} onPress={shareMyKey}>
-              <Text style={styles.keyShareText}>🔗  Share key</Text>
+            <TouchableOpacity style={styles.keyShareBtn} onPress={shareMyKey} activeOpacity={0.85}>
+              <Text style={styles.keyShareText}>Share key</Text>
+              <Text style={{ fontSize: 13, color: '#fff' }}>↗</Text>
             </TouchableOpacity>
           </View>
 
-          {/* ADD A PUPIL */}
-          <View style={[styles.card, { backgroundColor: t.card, borderColor: t.border }]}>
-            <Text style={[styles.cardTitle, { color: t.textMain }]}>Add a pupil's results</Text>
-            <Text style={[styles.cardSub, { color: t.textSub }]}>
-              Paste a pupil's PG Map string, or scan their code.
-            </Text>
-            <TextInput
-              style={[styles.paste, { backgroundColor: t.innerPanel, color: t.textMain, borderColor: t.border }]}
-              placeholder="Paste PG Map string here"
-              placeholderTextColor={isDarkMode ? '#475569' : '#94a3b8'}
-              value={pasteValue}
-              onChangeText={(v) => { setPasteValue(v); if (status) setStatus(null); }}
-              multiline
-              textAlignVertical="top"
-            />
-            <View style={{ flexDirection: 'row', gap: 10, marginTop: 10 }}>
-              <TouchableOpacity style={[styles.primaryBtn, { backgroundColor: ACCENT }]} onPress={handleAddFromString}>
-                <Text style={styles.primaryBtnText}>Load results</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={[styles.ghostBtn, { borderColor: ACCENT }]} onPress={openScanner}>
-                <Text style={[styles.ghostBtnText, { color: ACCENT }]}>📷  Scan code</Text>
-              </TouchableOpacity>
-            </View>
-            {status && (
-              <View style={[styles.statusRow, { backgroundColor: status.type === 'success' ? '#ecfdf5' : '#fef2f2' }]}>
-                <Text style={{ color: status.type === 'success' ? '#047857' : '#b91c1c', fontSize: 12.5, fontWeight: '700' }}>
-                  {status.type === 'success' ? '✓ ' : '⚠ '}{status.msg}
-                </Text>
-              </View>
-            )}
-          </View>
-
-          {/* STATS STRIP */}
+          {/* OVERVIEW STATS */}
           <View style={styles.statsRow}>
             {[
-              { k: 'Pupils', v: stats.pupils },
-              { k: 'Classes', v: stats.classes },
-              { k: 'Class average', v: roster.length ? `${stats.avg}%` : '—' },
+              { k: 'Pupils', v: `${stats.pupils}`, tint: ACCENT },
+              { k: 'Classes', v: `${stats.classes}`, tint: '#0891b2' },
+              { k: 'Avg rate', v: roster.length ? `${stats.avg}%` : '\u2014', tint: roster.length ? rateColor(stats.avg) : t.textFaint },
             ].map((s) => (
               <View key={s.k} style={[styles.statCell, { backgroundColor: t.card, borderColor: t.border }]}>
-                <Text style={[styles.statValue, { color: t.textMain }]}>{s.v}</Text>
+                <Text style={[styles.statValue, { color: s.tint }]}>{s.v}</Text>
                 <Text style={[styles.statKey, { color: t.textSub }]}>{s.k}</Text>
               </View>
             ))}
           </View>
 
+          {/* ADD A PUPIL — collapsible so the roster stays the focus */}
+          <View style={[styles.card, { backgroundColor: t.card, borderColor: t.border }]}>
+            <TouchableOpacity
+              activeOpacity={0.7}
+              onPress={() => { setAddOpen((v) => !v); if (status) setStatus(null); }}
+              style={styles.addHead}
+            >
+              <View style={[styles.addIcon, { backgroundColor: ACCENT_SOFT }]}>
+                <Text style={{ fontSize: 17 }}>➕</Text>
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={[styles.cardTitle, { color: t.textMain }]}>Add a pupil</Text>
+                <Text style={[styles.cardSub, { color: t.textSub }]}>Scan their QR or paste their PG Map string</Text>
+              </View>
+              <Text style={[styles.addChevron, { color: t.textFaint }]}>{addOpen ? '▲' : '▼'}</Text>
+            </TouchableOpacity>
+
+            {addOpen && (
+              <View style={{ marginTop: 14 }}>
+                <TouchableOpacity style={[styles.scanCta, { backgroundColor: ACCENT }]} onPress={openScanner} activeOpacity={0.9}>
+                  <Text style={{ fontSize: 16 }}>📷</Text>
+                  <Text style={styles.scanCtaText}>Scan pupil QR</Text>
+                </TouchableOpacity>
+
+                <View style={styles.orRow}>
+                  <View style={[styles.orLine, { backgroundColor: t.border }]} />
+                  <Text style={[styles.orText, { color: t.textFaint }]}>or paste string</Text>
+                  <View style={[styles.orLine, { backgroundColor: t.border }]} />
+                </View>
+
+                <TextInput
+                  style={[styles.paste, { backgroundColor: t.innerPanel, color: t.textMain, borderColor: t.border }]}
+                  placeholder="Paste PG Map string here"
+                  placeholderTextColor={t.textFaint}
+                  value={pasteValue}
+                  onChangeText={(v) => { setPasteValue(v); if (status) setStatus(null); }}
+                  multiline
+                  textAlignVertical="top"
+                />
+                <TouchableOpacity
+                  style={[styles.loadBtn, { backgroundColor: pasteValue.trim() ? ACCENT : (isDarkMode ? '#1e293b' : '#e2e8f0') }]}
+                  onPress={handleAddFromString}
+                  disabled={!pasteValue.trim()}
+                  activeOpacity={0.9}
+                >
+                  <Text style={[styles.loadBtnText, { color: pasteValue.trim() ? '#fff' : t.textFaint }]}>Load results</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+
+            {status && (
+              <View style={[styles.statusRow, { backgroundColor: status.type === 'success' ? (isDarkMode ? '#052e2b' : '#ecfdf5') : (isDarkMode ? '#3b1113' : '#fef2f2') }]}>
+                <Text style={{ fontSize: 13 }}>{status.type === 'success' ? '✅' : '⚠️'}</Text>
+                <Text style={{ flex: 1, color: status.type === 'success' ? '#059669' : '#dc2626', fontSize: 12.5, fontWeight: '700', lineHeight: 17 }}>
+                  {status.msg}
+                </Text>
+              </View>
+            )}
+          </View>
+
           {/* CLASSES */}
           {classes.length > 0 && (
-            <>
+            <View style={{ marginTop: 4 }}>
               <View style={styles.sectionHead}>
                 <Text style={[styles.sectionTitle, { color: t.textMain }]}>Classes</Text>
-                {selectedClass && (
-                  <TouchableOpacity onPress={() => setSelectedClass(null)}>
-                    <Text style={[styles.clearFilter, { color: ACCENT }]}>Clear filter</Text>
-                  </TouchableOpacity>
-                )}
+                {selectedClass
+                  ? <TouchableOpacity onPress={() => setSelectedClass(null)}><Text style={[styles.clearFilter, { color: ACCENT }]}>Clear filter</Text></TouchableOpacity>
+                  : <Text style={[styles.countBadge, { color: t.textFaint }]}>{classes.length}</Text>}
               </View>
-              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 10, paddingVertical: 2 }}>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 12, paddingVertical: 2, paddingRight: 4 }}>
                 {classes.map((c) => {
                   const active = selectedClass === c.class;
                   return (
                     <TouchableOpacity
-                      key={c.class}
-                      activeOpacity={0.85}
+                      key={c.class} activeOpacity={0.85}
                       onPress={() => setSelectedClass(active ? null : c.class)}
-                      style={[
-                        styles.classCard,
-                        { backgroundColor: active ? ACCENT : t.card, borderColor: active ? ACCENT : t.border },
-                      ]}
+                      style={[styles.classCard, { backgroundColor: active ? ACCENT : t.card, borderColor: active ? ACCENT : t.border }]}
                     >
-                      <Text style={[styles.className, { color: active ? '#fff' : t.textMain }]}>{c.class}</Text>
-                      <Text style={[styles.classMeta, { color: active ? '#e0e7ff' : t.textSub }]}>
-                        {c.count} {c.count === 1 ? 'pupil' : 'pupils'}
-                      </Text>
-                      <View style={[styles.classAvgPill, { backgroundColor: active ? 'rgba(255,255,255,0.18)' : t.innerPanel }]}>
-                        <View style={[styles.dot, { backgroundColor: rateColor(c.avg) }]} />
-                        <Text style={[styles.classAvgText, { color: active ? '#fff' : t.textMain }]}>{c.avg}% avg</Text>
+                      <View style={styles.classCardTop}>
+                        <Text style={[styles.className, { color: active ? '#fff' : t.textMain }]}>{c.class}</Text>
+                        <View style={[styles.classRateDot, { backgroundColor: active ? 'rgba(255,255,255,0.9)' : rateColor(c.avg) }]} />
                       </View>
+                      <Text style={[styles.classAvgBig, { color: active ? '#fff' : rateColor(c.avg) }]}>{c.avg}%</Text>
+                      <Text style={[styles.classMeta, { color: active ? '#dbeafe' : t.textSub }]}>
+                        {c.count} {c.count === 1 ? 'pupil' : 'pupils'} · avg
+                      </Text>
                     </TouchableOpacity>
                   );
                 })}
               </ScrollView>
-            </>
+            </View>
           )}
 
           {/* ROSTER */}
-          <View style={[styles.sectionHead, { marginTop: 18 }]}>
+          <View style={[styles.sectionHead, { marginTop: 22 }]}>
             <Text style={[styles.sectionTitle, { color: t.textMain }]}>
-              Pupils{selectedClass ? ` · ${selectedClass}` : ''}
+              Pupils{selectedClass ? <Text style={{ color: ACCENT }}>{`  ·  ${selectedClass}`}</Text> : ''}
             </Text>
-            {roster.length > 0 && (
-              <Text style={[styles.countBadge, { color: t.textSub }]}>{filteredRoster.length}</Text>
-            )}
+            {roster.length > 0 && <Text style={[styles.countBadge, { color: t.textFaint }]}>{filteredRoster.length}</Text>}
           </View>
 
           {filteredRoster.length === 0 ? (
             <View style={[styles.empty, { backgroundColor: t.card, borderColor: t.border }]}>
-              <Text style={{ fontSize: 34, marginBottom: 8 }}>👥</Text>
+              <View style={[styles.emptyIcon, { backgroundColor: ACCENT_SOFT }]}><Text style={{ fontSize: 26 }}>👥</Text></View>
               <Text style={[styles.emptyTitle, { color: t.textMain }]}>
-                {roster.length === 0 ? 'No pupils yet' : 'No pupils in this class'}
+                {roster.length === 0 ? 'No pupils yet' : 'None in this class'}
               </Text>
               <Text style={[styles.emptySub, { color: t.textSub }]}>
                 {roster.length === 0
-                  ? 'Share your class key, then load a pupil’s PG Map to see how they’re doing.'
+                  ? 'Share your class key, then scan or paste a pupil\u2019s PG Map to see how they\u2019re doing.'
                   : 'Clear the filter to see your whole roster.'}
               </Text>
             </View>
@@ -395,28 +405,29 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
               const weak = weakestSubject(p.performance);
               return (
                 <TouchableOpacity
-                  key={p.pupilDeviceCode}
-                  activeOpacity={0.85}
+                  key={p.pupilDeviceCode} activeOpacity={0.85}
                   onPress={() => setDetailPupil(p)}
                   style={[styles.pupilCard, { backgroundColor: t.card, borderColor: t.border }]}
                 >
-                  <RateRing rate={p.overallRate} size={56} stroke={6} track={t.innerPanel} textColor={t.textMain} />
+                  <RateRing rate={p.overallRate} size={54} stroke={6} track={t.innerPanel} textColor={t.textMain} />
                   <View style={{ flex: 1, marginLeft: 14 }}>
                     <Text style={[styles.pupilName, { color: t.textMain }]} numberOfLines={1}>{p.fullName}</Text>
-                    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 5 }}>
+                    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 6 }}>
                       {(p.classLevels || []).map((cl) => (
-                        <View key={cl} style={[styles.classTag, { backgroundColor: t.innerPanel }]}>
-                          <Text style={[styles.classTagText, { color: t.textSub }]}>{cl}</Text>
+                        <View key={cl} style={[styles.classTag, { backgroundColor: ACCENT_SOFT }]}>
+                          <Text style={[styles.classTagText, { color: ACCENT }]}>{cl}</Text>
                         </View>
                       ))}
                     </View>
                     {weak && (
-                      <Text style={[styles.weakLine, { color: t.textSub }]} numberOfLines={1}>
-                        Weakest: <Text style={{ color: rateColor(weak.rate), fontWeight: '800' }}>{weak.subject} {weak.rate}%</Text>
-                      </Text>
+                      <View style={[styles.weakPill, { backgroundColor: rateSoft(weak.rate) }]}>
+                        <Text style={{ fontSize: 10.5, fontWeight: '800', color: rateColor(weak.rate) }} numberOfLines={1}>
+                          ↓ {weak.subject} {weak.rate}%
+                        </Text>
+                      </View>
                     )}
                   </View>
-                  <Text style={[styles.chev, { color: t.textSub }]}>›</Text>
+                  <Text style={[styles.chev, { color: t.textFaint }]}>›</Text>
                 </TouchableOpacity>
               );
             })
@@ -424,7 +435,7 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
         </ScrollView>
       </Animated.View>
 
-      {/* SCAN A PUPIL'S QR */}
+      {/* SCAN MODAL */}
       <Modal visible={scanModalVisible} animationType="slide" onRequestClose={() => setScanModalVisible(false)}>
         <View style={{ flex: 1, backgroundColor: '#000' }}>
           <CameraView
@@ -437,20 +448,8 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
             <Text style={{ color: '#fff', fontSize: 16, fontWeight: '800' }}>Scan a pupil's PG Map QR</Text>
             <Text style={{ color: '#e2e8f0', fontSize: 12.5, marginTop: 4 }}>Hold their code inside the frame</Text>
           </View>
-          <View
-            pointerEvents="none"
-            style={{
-              position: 'absolute', top: '50%', left: '50%', width: 244, height: 244,
-              marginLeft: -122, marginTop: -122, borderWidth: 3, borderColor: ACCENT, borderRadius: 22,
-            }}
-          />
-          <TouchableOpacity
-            onPress={() => setScanModalVisible(false)}
-            style={{
-              position: 'absolute', bottom: insets.bottom + 32, alignSelf: 'center',
-              backgroundColor: 'rgba(255,255,255,0.16)', paddingVertical: 13, paddingHorizontal: 34, borderRadius: 12,
-            }}
-          >
+          <View pointerEvents="none" style={styles.scanFrame} />
+          <TouchableOpacity onPress={() => setScanModalVisible(false)} style={[styles.scanCancel, { bottom: insets.bottom + 32 }]} activeOpacity={0.85}>
             <Text style={{ color: '#fff', fontWeight: '800', fontSize: 14 }}>Cancel</Text>
           </TouchableOpacity>
         </View>
@@ -464,10 +463,13 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
               <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.sheetHandle} />
                 <View style={{ alignItems: 'center', marginTop: 6 }}>
-                  <RateRing rate={detailPupil.overallRate} size={104} stroke={9} track={t.innerPanel} textColor={t.textMain} />
+                  <RateRing rate={detailPupil.overallRate} size={110} stroke={10} track={t.innerPanel} textColor={t.textMain} />
                   <Text style={[styles.sheetName, { color: t.textMain }]}>{detailPupil.fullName}</Text>
-                  <View style={[styles.bandPill, { backgroundColor: rateColor(detailPupil.overallRate) }]}>
-                    <Text style={styles.bandPillText}>{rateLabel(detailPupil.overallRate)} · {detailPupil.overallRate}%</Text>
+                  <View style={[styles.bandPill, { backgroundColor: rateSoft(detailPupil.overallRate) }]}>
+                    <View style={[styles.dot, { backgroundColor: rateColor(detailPupil.overallRate) }]} />
+                    <Text style={[styles.bandPillText, { color: rateColor(detailPupil.overallRate) }]}>
+                      {rateLabel(detailPupil.overallRate)} · {detailPupil.overallRate}%
+                    </Text>
                   </View>
                 </View>
 
@@ -480,7 +482,7 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
                       </Text>
                     </View>
                     {(data.subjects || []).map((s) => (
-                      <View key={s.subject} style={{ marginTop: 10 }}>
+                      <View key={s.subject} style={{ marginTop: 12 }}>
                         <View style={styles.subjRow}>
                           <Text style={[styles.subjName, { color: t.textMain }]} numberOfLines={1}>{s.subject}</Text>
                           <Text style={[styles.subjRate, { color: rateColor(s.rate) }]}>{s.rate}%</Text>
@@ -493,14 +495,14 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
                   </View>
                 ))}
 
-                <Text style={[styles.updatedLine, { color: t.textSub }]}>
-                  Updated {detailPupil.updatedAt ? new Date(detailPupil.updatedAt).toLocaleDateString() : '—'}
+                <Text style={[styles.updatedLine, { color: t.textFaint }]}>
+                  Updated {detailPupil.updatedAt ? new Date(detailPupil.updatedAt).toLocaleDateString() : '\u2014'}
                 </Text>
 
-                <TouchableOpacity style={styles.removeBtn} onPress={() => removePupil(detailPupil)}>
+                <TouchableOpacity style={[styles.removeBtn, { backgroundColor: isDarkMode ? '#3b1113' : '#fef2f2' }]} onPress={() => removePupil(detailPupil)} activeOpacity={0.85}>
                   <Text style={styles.removeBtnText}>Remove pupil</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={[styles.closeSheetBtn, { borderColor: t.border }]} onPress={() => setDetailPupil(null)}>
+                <TouchableOpacity style={[styles.closeSheetBtn, { borderColor: t.border }]} onPress={() => setDetailPupil(null)} activeOpacity={0.85}>
                   <Text style={[styles.closeSheetText, { color: t.textSub }]}>Close</Text>
                 </TouchableOpacity>
               </ScrollView>
@@ -512,94 +514,114 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
   );
 }
 
+const shadow = (e) => Platform.select({
+  android: { elevation: e },
+  ios: { shadowColor: '#0f172a', shadowOpacity: 0.08, shadowRadius: e * 1.6, shadowOffset: { width: 0, height: e * 0.5 } },
+});
+
 const styles = StyleSheet.create({
   root: { flex: 1 },
-  topBar: {
-    paddingHorizontal: 16, paddingBottom: 10, paddingTop: 6,
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
-  },
-  eyebrow: { fontSize: 10, fontWeight: '900', letterSpacing: 1.5 },
-  topTitle: { fontSize: 24, fontWeight: '900', marginTop: 1 },
-  iconBtn: { width: 40, height: 40, borderRadius: 10, borderWidth: 1, alignItems: 'center', justifyContent: 'center' },
-  roleSwitch: {
-    flexDirection: 'row', alignItems: 'center', gap: 6,
-    borderWidth: 1.5, borderRadius: 10, paddingVertical: 9, paddingHorizontal: 12,
-  },
-  roleSwitchText: { fontSize: 12.5, fontWeight: '800' },
 
-  // Class key
-  keyCard: { borderRadius: 20, padding: 22, overflow: 'hidden', marginBottom: 16 },
-  keyBlobA: { position: 'absolute', width: 180, height: 180, borderRadius: 90, backgroundColor: 'rgba(139,92,246,0.35)', top: -70, right: -40 },
-  keyBlobB: { position: 'absolute', width: 120, height: 120, borderRadius: 60, backgroundColor: 'rgba(255,255,255,0.08)', bottom: -50, left: -20 },
+  // Header band
+  header: { paddingHorizontal: 16, paddingBottom: 20, borderBottomLeftRadius: 22, borderBottomRightRadius: 22, ...shadow(6) },
+  headerRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  brandRow: { flexDirection: 'row', alignItems: 'center', gap: 11 },
+  brandMark: { width: 40, height: 40, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.16)', alignItems: 'center', justifyContent: 'center' },
+  headerEyebrow: { color: '#c7d2fe', fontSize: 9.5, fontWeight: '900', letterSpacing: 1.6 },
+  headerTitle: { color: '#ffffff', fontSize: 20, fontWeight: '900', marginTop: 1 },
+  headerActions: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  headerIconBtn: { width: 38, height: 38, borderRadius: 11, backgroundColor: 'rgba(255,255,255,0.16)', alignItems: 'center', justifyContent: 'center' },
+  pupilBtn: { flexDirection: 'row', alignItems: 'center', gap: 6, backgroundColor: 'rgba(255,255,255,0.16)', borderRadius: 11, paddingVertical: 9, paddingHorizontal: 13 },
+  pupilBtnText: { color: '#fff', fontSize: 12.5, fontWeight: '800' },
+
+  // Class key card
+  keyCard: { borderRadius: 22, padding: 22, overflow: 'hidden', marginBottom: 16, backgroundColor: '#312e81', ...shadow(8) },
+  keyBlobA: { position: 'absolute', width: 200, height: 200, borderRadius: 100, backgroundColor: 'rgba(99,102,241,0.45)', top: -80, right: -50 },
+  keyBlobB: { position: 'absolute', width: 130, height: 130, borderRadius: 65, backgroundColor: 'rgba(255,255,255,0.06)', bottom: -55, left: -25 },
+  keyTopRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   keyEyebrow: { color: '#c7d2fe', fontSize: 11, fontWeight: '900', letterSpacing: 2 },
-  keyDigits: { color: '#ffffff', fontSize: 46, fontWeight: '900', letterSpacing: 10, marginTop: 8, ...Platform.select({ ios: { fontVariant: ['tabular-nums'] }, android: {} }) },
-  keyHint: { color: '#e0e7ff', fontSize: 12.5, lineHeight: 18, marginTop: 10, maxWidth: '92%' },
-  keyShareBtn: { alignSelf: 'flex-start', marginTop: 16, backgroundColor: 'rgba(255,255,255,0.16)', borderRadius: 10, paddingVertical: 10, paddingHorizontal: 16 },
+  keyChip: { backgroundColor: 'rgba(255,255,255,0.14)', borderRadius: 20, paddingVertical: 4, paddingHorizontal: 10 },
+  keyChipText: { color: '#e0e7ff', fontSize: 9.5, fontWeight: '900', letterSpacing: 1 },
+  keyDigits: { color: '#ffffff', fontSize: 40, fontWeight: '900', letterSpacing: 6, marginTop: 12, ...Platform.select({ ios: { fontVariant: ['tabular-nums'] }, android: {} }) },
+  keyHint: { color: '#c7d2fe', fontSize: 12.5, lineHeight: 18, marginTop: 12, maxWidth: '94%' },
+  keyShareBtn: { flexDirection: 'row', alignItems: 'center', gap: 7, alignSelf: 'flex-start', marginTop: 18, backgroundColor: 'rgba(255,255,255,0.18)', borderRadius: 12, paddingVertical: 11, paddingHorizontal: 18 },
   keyShareText: { color: '#ffffff', fontWeight: '800', fontSize: 13 },
 
-  // Generic card
-  card: { borderRadius: 16, borderWidth: 1, padding: 16, marginBottom: 16 },
-  cardTitle: { fontSize: 16, fontWeight: '900' },
-  cardSub: { fontSize: 12.5, marginTop: 3, lineHeight: 18 },
-  paste: { marginTop: 12, minHeight: 74, borderWidth: 1, borderRadius: 12, padding: 12, fontSize: 12.5, fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace' },
-  primaryBtn: { flex: 1, borderRadius: 12, paddingVertical: 13, alignItems: 'center' },
-  primaryBtnText: { color: '#fff', fontWeight: '800', fontSize: 14 },
-  ghostBtn: { flex: 1, borderRadius: 12, paddingVertical: 13, alignItems: 'center', borderWidth: 1.5 },
-  ghostBtnText: { fontWeight: '800', fontSize: 14 },
-  statusRow: { marginTop: 12, borderRadius: 10, paddingVertical: 10, paddingHorizontal: 12 },
-
   // Stats
-  statsRow: { flexDirection: 'row', gap: 10, marginBottom: 6 },
-  statCell: { flex: 1, borderRadius: 14, borderWidth: 1, paddingVertical: 14, alignItems: 'center' },
-  statValue: { fontSize: 22, fontWeight: '900' },
+  statsRow: { flexDirection: 'row', gap: 11, marginBottom: 16 },
+  statCell: { flex: 1, borderRadius: 16, borderWidth: 1, paddingVertical: 15, alignItems: 'center', ...shadow(2) },
+  statValue: { fontSize: 24, fontWeight: '900' },
   statKey: { fontSize: 11, fontWeight: '700', marginTop: 3, textAlign: 'center' },
 
+  // Card + add-pupil
+  card: { borderRadius: 18, borderWidth: 1, padding: 16, marginBottom: 18, ...shadow(2) },
+  addHead: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  addIcon: { width: 40, height: 40, borderRadius: 12, alignItems: 'center', justifyContent: 'center' },
+  cardTitle: { fontSize: 15.5, fontWeight: '900' },
+  cardSub: { fontSize: 12, marginTop: 2, lineHeight: 16 },
+  addChevron: { fontSize: 12, fontWeight: '900' },
+  scanCta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 9, borderRadius: 13, paddingVertical: 14, ...shadow(3) },
+  scanCtaText: { color: '#fff', fontWeight: '800', fontSize: 14.5 },
+  orRow: { flexDirection: 'row', alignItems: 'center', gap: 10, marginVertical: 14 },
+  orLine: { flex: 1, height: 1 },
+  orText: { fontSize: 11, fontWeight: '700' },
+  paste: { minHeight: 70, borderWidth: 1, borderRadius: 12, padding: 12, fontSize: 12.5, fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace' },
+  loadBtn: { borderRadius: 12, paddingVertical: 13, alignItems: 'center', marginTop: 10 },
+  loadBtnText: { fontWeight: '800', fontSize: 14 },
+  statusRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 14, borderRadius: 12, paddingVertical: 11, paddingHorizontal: 12 },
+
   // Sections
-  sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 16, marginBottom: 10 },
-  sectionTitle: { fontSize: 17, fontWeight: '900' },
+  sectionHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 12 },
+  sectionTitle: { fontSize: 18, fontWeight: '900' },
   clearFilter: { fontSize: 12.5, fontWeight: '800' },
   countBadge: { fontSize: 14, fontWeight: '800' },
 
   // Class card
-  classCard: { width: 130, borderRadius: 16, borderWidth: 1, padding: 14 },
-  className: { fontSize: 16, fontWeight: '900' },
-  classMeta: { fontSize: 12, fontWeight: '600', marginTop: 2 },
-  classAvgPill: { flexDirection: 'row', alignItems: 'center', gap: 6, alignSelf: 'flex-start', borderRadius: 20, paddingVertical: 5, paddingHorizontal: 10, marginTop: 12 },
-  classAvgText: { fontSize: 12, fontWeight: '800' },
-  dot: { width: 8, height: 8, borderRadius: 4 },
+  classCard: { width: 138, borderRadius: 18, borderWidth: 1, padding: 15, ...shadow(2) },
+  classCardTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  className: { fontSize: 15, fontWeight: '900' },
+  classRateDot: { width: 9, height: 9, borderRadius: 5 },
+  classAvgBig: { fontSize: 26, fontWeight: '900', marginTop: 8 },
+  classMeta: { fontSize: 11.5, fontWeight: '600', marginTop: 2 },
 
   // Pupil card
-  pupilCard: { flexDirection: 'row', alignItems: 'center', borderRadius: 16, borderWidth: 1, padding: 14, marginBottom: 10 },
+  pupilCard: { flexDirection: 'row', alignItems: 'center', borderRadius: 18, borderWidth: 1, padding: 14, marginBottom: 11, ...shadow(2) },
   pupilName: { fontSize: 15.5, fontWeight: '800' },
-  classTag: { borderRadius: 6, paddingVertical: 3, paddingHorizontal: 8 },
+  classTag: { borderRadius: 7, paddingVertical: 3, paddingHorizontal: 9 },
   classTagText: { fontSize: 10.5, fontWeight: '800' },
-  weakLine: { fontSize: 12, marginTop: 6 },
+  weakPill: { alignSelf: 'flex-start', borderRadius: 7, paddingVertical: 4, paddingHorizontal: 9, marginTop: 8 },
   chev: { fontSize: 26, fontWeight: '300', marginLeft: 6 },
 
   // Empty
-  empty: { borderRadius: 16, borderWidth: 1, borderStyle: 'dashed', padding: 26, alignItems: 'center' },
-  emptyTitle: { fontSize: 15, fontWeight: '900' },
-  emptySub: { fontSize: 12.5, textAlign: 'center', marginTop: 6, lineHeight: 18, maxWidth: '90%' },
+  empty: { borderRadius: 18, borderWidth: 1, borderStyle: 'dashed', padding: 28, alignItems: 'center' },
+  emptyIcon: { width: 56, height: 56, borderRadius: 18, alignItems: 'center', justifyContent: 'center', marginBottom: 12 },
+  emptyTitle: { fontSize: 16, fontWeight: '900' },
+  emptySub: { fontSize: 12.5, textAlign: 'center', marginTop: 6, lineHeight: 18, maxWidth: '88%' },
+
+  // Scan overlay
+  scanFrame: { position: 'absolute', top: '50%', left: '50%', width: 244, height: 244, marginLeft: -122, marginTop: -122, borderWidth: 3, borderColor: '#818cf8', borderRadius: 24 },
+  scanCancel: { position: 'absolute', alignSelf: 'center', backgroundColor: 'rgba(255,255,255,0.18)', paddingVertical: 13, paddingHorizontal: 36, borderRadius: 13 },
 
   // Detail sheet
-  sheetOverlay: { flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'flex-end' },
-  sheet: { maxHeight: '88%', borderTopLeftRadius: 24, borderTopRightRadius: 24, paddingHorizontal: 18, paddingTop: 10 },
-  sheetHandle: { alignSelf: 'center', width: 44, height: 5, borderRadius: 3, backgroundColor: '#cbd5e1', marginBottom: 10 },
-  sheetName: { fontSize: 20, fontWeight: '900', marginTop: 12 },
-  bandPill: { borderRadius: 20, paddingVertical: 6, paddingHorizontal: 14, marginTop: 8 },
-  bandPillText: { color: '#fff', fontWeight: '800', fontSize: 12.5 },
-  classBlock: { borderRadius: 16, borderWidth: 1, padding: 14, marginTop: 16 },
+  sheetOverlay: { flex: 1, backgroundColor: 'rgba(15,23,42,0.55)', justifyContent: 'flex-end' },
+  sheet: { maxHeight: '90%', borderTopLeftRadius: 26, borderTopRightRadius: 26, paddingHorizontal: 18, paddingTop: 10 },
+  sheetHandle: { alignSelf: 'center', width: 44, height: 5, borderRadius: 3, backgroundColor: '#cbd5e1', marginBottom: 12 },
+  sheetName: { fontSize: 21, fontWeight: '900', marginTop: 14 },
+  bandPill: { flexDirection: 'row', alignItems: 'center', gap: 7, borderRadius: 20, paddingVertical: 6, paddingHorizontal: 14, marginTop: 9 },
+  bandPillText: { fontWeight: '800', fontSize: 12.5 },
+  dot: { width: 8, height: 8, borderRadius: 4 },
+  classBlock: { borderRadius: 18, borderWidth: 1, padding: 16, marginTop: 16 },
   classBlockHead: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   classBlockTitle: { fontSize: 15, fontWeight: '900' },
   classBlockMeta: { fontSize: 12, fontWeight: '700' },
-  subjRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 5 },
+  subjRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 },
   subjName: { fontSize: 13, fontWeight: '700', flex: 1, marginRight: 10 },
   subjRate: { fontSize: 13, fontWeight: '900' },
-  barTrack: { height: 8, borderRadius: 4, overflow: 'hidden' },
-  barFill: { height: 8, borderRadius: 4 },
-  updatedLine: { fontSize: 11.5, textAlign: 'center', marginTop: 18 },
-  removeBtn: { marginTop: 14, backgroundColor: '#fef2f2', borderRadius: 12, paddingVertical: 13, alignItems: 'center' },
+  barTrack: { height: 9, borderRadius: 5, overflow: 'hidden' },
+  barFill: { height: 9, borderRadius: 5 },
+  updatedLine: { fontSize: 11.5, textAlign: 'center', marginTop: 20 },
+  removeBtn: { marginTop: 14, borderRadius: 13, paddingVertical: 14, alignItems: 'center' },
   removeBtnText: { color: '#dc2626', fontWeight: '800', fontSize: 14 },
-  closeSheetBtn: { marginTop: 10, borderRadius: 12, borderWidth: 1, paddingVertical: 13, alignItems: 'center' },
+  closeSheetBtn: { marginTop: 10, borderRadius: 13, borderWidth: 1, paddingVertical: 14, alignItems: 'center' },
   closeSheetText: { fontWeight: '800', fontSize: 14 },
 });

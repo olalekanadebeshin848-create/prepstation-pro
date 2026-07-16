@@ -5,6 +5,8 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
+  KeyboardAvoidingView,
+  Platform,
   Alert,
   Modal,
   TextInput,
@@ -133,7 +135,7 @@ function TickerBanner({ isDarkMode, t }) {
 // reveals its levels with a fade+slide. Whatever id we set here is exactly what
 // an uploaded strata file must carry as structuralStrata.examCategory.
 // ───────────────────────────────────────────────────────────────────────────────────────
-const GROUP_ACCENT = { Basic: '#0ea5e9', JSS: '#8b5cf6', SS: '#f59e0b' };
+const GROUP_ACCENT = { BASIC: '#0ea5e9', JSS: '#8b5cf6', SS: '#f59e0b' };
 
 function CategoryPill({ label, active, showDot, compact, isDarkMode, t, onPress }) {
   return (
@@ -956,11 +958,11 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
   return (
     <View style={[styles.container, { paddingTop: insets.top, backgroundColor: t.bg }]}>
 
-      <View style={styles.topToolbarHeader}>
+      <View style={[styles.topToolbarHeader, { backgroundColor: '#312e81', borderBottomColor: '#1e1b4b' }]}>
         <View style={styles.headerTextInfoGroup}>
-          <Text style={styles.brandTitleText}>PrepStation Pro</Text>
-          <Text style={styles.brandSubTitleText}>⚡ PREMIUM EXAM COMPANION • {currentStrataVersion.toUpperCase()}</Text>
-        </View>
+  <Text style={[styles.brandTitleText, { color: '#FFD700' }]} numberOfLines={1}>PrepStation Pro</Text>
+  <Text style={styles.brandSubTitleText} numberOfLines={1}>⚡ PREMIUM EXAM COMPANION • {currentStrataVersion.toUpperCase()}</Text>
+</View>
         <View style={styles.headerRightActionsGroup}>
           <TouchableOpacity style={styles.headerActionButton} onPress={handleOpenPGMap}>
             <Text style={styles.actionButtonEmoji}>📱</Text>
@@ -971,8 +973,10 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
           <TouchableOpacity style={styles.headerActionButton} onPress={onOpenAnalytics}>
             <Text style={styles.actionButtonEmoji}>📊</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.headerActionButton} onPress={onSwitchToTeacher}>
-            <Text style={styles.actionButtonEmoji}>🏫</Text>
+          
+          <TouchableOpacity style={styles.helpButtonWrapper} onPress={onSwitchToTeacher} activeOpacity={0.8}>
+            <View style={[styles.helpIconCircle, { backgroundColor: '#8b5cf6' }]}><Text style={styles.helpIconEmoji}>🏫</Text></View>
+            <Text style={[styles.helpLabelText, { color: '#a78bfa' }]}>TEACHER</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.helpButtonWrapper} onPress={handleOpenWhatsAppSupport} activeOpacity={0.8}>
             <View style={styles.helpIconCircle}><Text style={styles.helpIconEmoji}>📞</Text></View>
@@ -1349,8 +1353,16 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
       </Modal>
 
       <Modal animationType="fade" transparent visible={pgMapModalVisible} onRequestClose={() => setPgMapModalVisible(false)}>
-        <View style={pgMapStyles.overlay}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          style={pgMapStyles.overlay}
+        >
           <View style={pgMapStyles.card}>
+            <ScrollView
+              showsVerticalScrollIndicator={false}
+              keyboardShouldPersistTaps="handled"
+              contentContainerStyle={{ padding: 20 }}
+            >
             <Text style={pgMapStyles.title}>📱 PG Map</Text>
             <Text style={pgMapStyles.subtitle}>
               Your encrypted progress code — scan this at PrepStation Community to verify your test history.
@@ -1364,7 +1376,7 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
                 // makes a very dense QR that OOM-crashes low-RAM (<4GB) devices, so
                 // above the threshold we skip the QR and lean on the copyable string.
                 pgMapPayload.length <= 1200 ? (
-                  <QRCode value={pgMapPayload} size={220} ecl="L" backgroundColor="#ffffff" color="#0f172a" />
+                  <QRCode value={pgMapPayload} size={200} ecl="L" backgroundColor="#ffffff" color="#0f172a" />
                 ) : (
                   <View style={{ alignItems: 'center', paddingHorizontal: 12 }}>
                     <Text style={{ fontSize: 38, marginBottom: 8 }}>📋</Text>
@@ -1377,10 +1389,6 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
                 <Text style={pgMapStyles.loadingText}>No progress data yet.</Text>
               )}
             </View>
-
-            <Text style={pgMapStyles.note}>
-              🔒 This code is locked. It cannot be edited and only an admin can decode it to view your attempt history, scores, and bundle progress.
-            </Text>
 
             {pgMapPayload ? (
               <View style={pgMapStyles.encodedStringBox}>
@@ -1401,65 +1409,49 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
               </View>
             ) : null}
 
-            <View style={{ width: '100%', borderTopWidth: 1, borderTopColor: '#e2e8f0', marginTop: 12, paddingTop: 12 }}>
+            <View style={pgMapStyles.teacherSection}>
               {editingTeacherCode ? (
                 <View>
-                  <Text style={{ fontSize: 12, fontWeight: '700', color: '#0f172a', marginBottom: 6 }}>
-                    Supervising teacher code ({TEACHER_CODE_LENGTH} digits)
+                  <Text style={pgMapStyles.teacherLabel}>
+                    SUPERVISING TEACHER CODE ({TEACHER_CODE_LENGTH} DIGITS)
                   </Text>
                   <TextInput
-                    style={{
-                      borderWidth: 1.5, borderColor: '#2563eb', borderRadius: 10, paddingVertical: 10,
-                      textAlign: 'center', fontSize: 20, fontWeight: '800', letterSpacing: 6, color: '#0f172a',
-                    }}
+                    style={pgMapStyles.teacherInput}
                     keyboardType="number-pad"
                     maxLength={TEACHER_CODE_LENGTH}
                     placeholder={'0'.repeat(TEACHER_CODE_LENGTH)}
-                    placeholderTextColor="#cbd5e1"
+                    placeholderTextColor="#94a3b8"
                     value={teacherCodeDraft}
                     onChangeText={(v) => setTeacherCodeDraft(v.replace(/[^0-9]/g, ''))}
                     autoFocus
                   />
-                  <View style={{ flexDirection: 'row', gap: 8, marginTop: 10 }}>
-                    <TouchableOpacity
-                      style={{ flex: 1, backgroundColor: '#2563eb', borderRadius: 10, paddingVertical: 11, alignItems: 'center' }}
-                      onPress={saveEditedTeacherCode}
-                    >
-                      <Text style={{ color: '#ffffff', fontWeight: '800', fontSize: 13 }}>Save</Text>
+                  <View style={{ flexDirection: 'row', gap: 10, marginTop: 12 }}>
+                    <TouchableOpacity style={pgMapStyles.teacherSaveBtn} onPress={saveEditedTeacherCode}>
+                      <Text style={pgMapStyles.teacherSaveText}>Save</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                      style={{ flex: 1, backgroundColor: '#f1f5f9', borderRadius: 10, paddingVertical: 11, alignItems: 'center' }}
-                      onPress={() => setEditingTeacherCode(false)}
-                    >
-                      <Text style={{ color: '#475569', fontWeight: '800', fontSize: 13 }}>Cancel</Text>
+                    <TouchableOpacity style={pgMapStyles.teacherCancelBtn} onPress={() => setEditingTeacherCode(false)}>
+                      <Text style={pgMapStyles.teacherCancelText}>Cancel</Text>
                     </TouchableOpacity>
                   </View>
                 </View>
               ) : (
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <View style={{ flex: 1, paddingRight: 8 }}>
-                    <Text style={{ fontSize: 11, color: '#64748b', fontWeight: '700', letterSpacing: 0.5 }}>SUPERVISING TEACHER</Text>
-                    <Text style={{
-                      fontSize: 16, fontWeight: '800', marginTop: 2,
-                      color: pgMapTeacherCode ? '#0f172a' : '#94a3b8',
-                      letterSpacing: pgMapTeacherCode ? 3 : 0,
-                    }}>
+                  <View style={{ flex: 1, paddingRight: 10 }}>
+                    <Text style={pgMapStyles.teacherLabel}>SUPERVISING TEACHER</Text>
+                    <Text style={[pgMapStyles.teacherValue, { color: pgMapTeacherCode ? '#0f172a' : '#94a3b8', letterSpacing: pgMapTeacherCode ? 2 : 0 }]}>
                       {pgMapTeacherCode || 'Not linked yet'}
                     </Text>
                   </View>
                   <View style={{ flexDirection: 'row', gap: 8 }}>
                     <TouchableOpacity
-                      style={{ backgroundColor: '#eff6ff', borderRadius: 8, paddingVertical: 8, paddingHorizontal: 12 }}
+                      style={pgMapStyles.teacherChangeBtn}
                       onPress={() => { setTeacherCodeDraft(pgMapTeacherCode || ''); setEditingTeacherCode(true); }}
                     >
-                      <Text style={{ color: '#2563eb', fontWeight: '800', fontSize: 12 }}>{pgMapTeacherCode ? 'Change' : 'Add'}</Text>
+                      <Text style={pgMapStyles.teacherChangeText}>{pgMapTeacherCode ? 'Change' : 'Add'}</Text>
                     </TouchableOpacity>
                     {pgMapTeacherCode ? (
-                      <TouchableOpacity
-                        style={{ backgroundColor: '#fef2f2', borderRadius: 8, paddingVertical: 8, paddingHorizontal: 12 }}
-                        onPress={clearTeacherCode}
-                      >
-                        <Text style={{ color: '#dc2626', fontWeight: '800', fontSize: 12 }}>Unlink</Text>
+                      <TouchableOpacity style={pgMapStyles.teacherUnlinkBtn} onPress={clearTeacherCode}>
+                        <Text style={pgMapStyles.teacherUnlinkText}>Unlink</Text>
                       </TouchableOpacity>
                     ) : null}
                   </View>
@@ -1470,8 +1462,9 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
             <TouchableOpacity style={pgMapStyles.closeBtn} onPress={() => setPgMapModalVisible(false)}>
               <Text style={pgMapStyles.closeBtnText}>Close</Text>
             </TouchableOpacity>
+            </ScrollView>
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </Modal>
 
       <Modal
@@ -1510,9 +1503,9 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
             <TouchableOpacity
               style={{
                 marginTop: 18, borderRadius: 12, paddingVertical: 14, alignItems: 'center',
-                backgroundColor: teacherCodeInput.length === 6 ? '#2563eb' : (isDarkMode ? '#1e293b' : '#cbd5e1'),
+                backgroundColor: teacherCodeInput.length === TEACHER_CODE_LENGTH ? '#2563eb' : (isDarkMode ? '#1e293b' : '#cbd5e1'),
               }}
-              disabled={teacherCodeInput.length !== 6 || savingTeacherCode}
+              disabled={teacherCodeInput.length !== TEACHER_CODE_LENGTH || savingTeacherCode}
               onPress={confirmTeacherCodeLink}
             >
               <Text style={{ color: '#ffffff', fontSize: 15, fontWeight: '800' }}>
@@ -1538,18 +1531,55 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  helpButtonWrapper: { alignItems: 'center', justifyContent: 'center', marginLeft: 2, marginTop: 12 },
-  helpIconCircle: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#25D366', alignItems: 'center', justifyContent: 'center', elevation: 4 },
-  helpIconEmoji: { fontSize: 16 },
-  helpLabelText: { fontSize: 7, fontWeight: '900', color: '#25D366', letterSpacing: 0.5, marginTop: 2 },
-  topToolbarHeader: { height: 76, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingLeft: 16, paddingRight: 8, backgroundColor: '#111827', position: 'relative' },
-  headerTextInfoGroup: { justifyContent: 'center', flex: 1, marginRight: 8 },
-  brandTitleText: { fontSize: 19, fontWeight: '900', color: '#ffffff', letterSpacing: 0.4 },
-  brandSubTitleText: { fontSize: 9, color: '#38bdf8', fontWeight: '800', marginTop: 2, letterSpacing: 0.6 },
-  headerRightActionsGroup: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  headerActionButton: { width: 36, height: 36, borderRadius: 8, alignItems: 'center', backgroundColor: 'rgba(255,255,255,0.07)', borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)', justifyContent: 'center' },
-  actionButtonEmoji: { fontSize: 15 },
-  headerAccentBottomIndicatorLine: { position: 'absolute', bottom: 0, left: 0, right: 0, height: 3, backgroundColor: '#a855f7' },
+  helpButtonWrapper: {
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+  helpIconCircle: { width: 26, height: 26, borderRadius: 13, backgroundColor: '#25D366', alignItems: 'center', justifyContent: 'center', elevation: 4 },
+  helpIconEmoji: { fontSize: 12 },
+  helpLabelText: { fontSize: 6, fontWeight: '900', color: '#25D366', letterSpacing: 0.3, marginTop: 2 },
+  topToolbarHeader: {
+  paddingVertical: 10,
+  paddingHorizontal: 14,
+  paddingBottom: 12,
+  borderBottomWidth: 1,
+  position: 'relative',
+},
+headerTextInfoGroup: {
+  marginBottom: 7,
+},
+headerRightActionsGroup: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'space-evenly',
+  width: '100%',
+  marginTop: 3,
+},
+brandTitleText: {
+  fontSize: 18,
+  fontWeight: '900',
+  letterSpacing: 0.3,
+},
+brandSubTitleText: {
+  fontSize: 8,
+  color: '#c7d2fe',          // light indigo — pops on the deep header
+  fontWeight: '800',
+  marginTop: 3,
+  letterSpacing: 0.4,
+},
+  headerActionButton: {
+  width: 25,
+  height: 25,
+  borderRadius: 6,
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderWidth: 1,
+  backgroundColor: 'rgba(255,255,255,0.14)',
+  borderColor: 'rgba(255,255,255,0.22)',
+},
+
+  actionButtonEmoji: { fontSize: 11 },
+  headerAccentBottomIndicatorLine: { position: 'absolute', bottom: 0, left: 0, right: 0, height: 2, backgroundColor: '#a855f7' },
   scrollWorkspaceContainer: { padding: 16, paddingBottom: 110 },
   sectionLabel: { fontSize: 11, fontWeight: '800', marginBottom: 8, textTransform: 'uppercase', marginTop: 10 },
   structuralGridRow: { flexDirection: 'row', gap: 10, marginBottom: 14 },
@@ -1643,25 +1673,24 @@ const pgMapStyles = StyleSheet.create({
   overlay: {
     flex: 1,
     backgroundColor: 'rgba(15,23,42,0.85)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 24,
+    justifyContent: 'flex-end',
   },
   card: {
     width: '100%',
-    maxWidth: 360,
+    maxHeight: '92%',
     backgroundColor: '#1e293b',
-    borderRadius: 20,
-    padding: 24,
-    alignItems: 'center',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
     borderWidth: 1.5,
     borderColor: '#334155',
+    overflow: 'hidden',
   },
   title: {
     fontSize: 20,
     fontWeight: '900',
     color: '#f8fafc',
     marginBottom: 6,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 12,
@@ -1693,16 +1722,79 @@ const pgMapStyles = StyleSheet.create({
     fontWeight: '600',
   },
   closeBtn: {
-    backgroundColor: '#2563eb',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 10,
+    backgroundColor: '#334155',
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 16,
   },
   closeBtnText: {
-    color: '#ffffff',
+    color: '#f8fafc',
     fontSize: 14,
     fontWeight: '800',
   },
+  teacherSection: {
+    borderTopWidth: 1,
+    borderTopColor: '#334155',
+    marginTop: 16,
+    paddingTop: 16,
+  },
+  teacherLabel: {
+    fontSize: 10,
+    color: '#94a3b8',
+    fontWeight: '900',
+    letterSpacing: 0.8,
+    marginBottom: 8,
+  },
+  teacherValue: {
+    fontSize: 18,
+    fontWeight: '900',
+    marginTop: 2,
+  },
+  teacherInput: {
+    borderWidth: 1.5,
+    borderColor: '#4f46e5',
+    borderRadius: 12,
+    backgroundColor: '#0f172a',
+    paddingVertical: 13,
+    textAlign: 'center',
+    fontSize: 22,
+    fontWeight: '900',
+    letterSpacing: 6,
+    color: '#f8fafc',
+  },
+  teacherSaveBtn: {
+    flex: 1,
+    backgroundColor: '#4f46e5',
+    borderRadius: 12,
+    paddingVertical: 13,
+    alignItems: 'center',
+  },
+  teacherSaveText: { color: '#ffffff', fontWeight: '800', fontSize: 14 },
+  teacherCancelBtn: {
+    flex: 1,
+    backgroundColor: '#334155',
+    borderRadius: 12,
+    paddingVertical: 13,
+    alignItems: 'center',
+  },
+  teacherCancelText: { color: '#e2e8f0', fontWeight: '800', fontSize: 14 },
+  teacherChangeBtn: {
+    backgroundColor: '#4f46e5',
+    borderRadius: 10,
+    paddingVertical: 9,
+    paddingHorizontal: 16,
+  },
+  teacherChangeText: { color: '#ffffff', fontWeight: '800', fontSize: 12.5 },
+  teacherUnlinkBtn: {
+    backgroundColor: 'rgba(220,38,38,0.15)',
+    borderWidth: 1,
+    borderColor: 'rgba(220,38,38,0.4)',
+    borderRadius: 10,
+    paddingVertical: 9,
+    paddingHorizontal: 14,
+  },
+  teacherUnlinkText: { color: '#f87171', fontWeight: '800', fontSize: 12.5 },
   encodedStringBox: {
     width: '100%',
     backgroundColor: '#0f172a',
