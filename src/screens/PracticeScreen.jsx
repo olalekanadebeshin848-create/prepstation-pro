@@ -12,7 +12,9 @@ import {
   Image,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { logExamResult } from '../database/queries';
+import { isClassCategory } from '../config/categories';
 import { WebView } from 'react-native-webview';
 import { katexCSS, katexJS, autoRenderJS } from '../../assets/katex/katex-bundle';
 import ResultScreen from './ResultScreen'; 
@@ -440,11 +442,23 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         };
       });
 
+    // A class test's category (e.g. "JSS 2", "SS 1") must be persisted as
+    // class_level, and the pupil's linked supervising-teacher code as
+    // teacher_code — otherwise getClassTestsForReport() / getClassPerformanceSummary()
+    // (both filter WHERE class_level IS NOT NULL) never see this result, the
+    // pupil's "Send answer breakdown to teacher" always reports "No class
+    // tests yet", and the teacher never has anything valid to import.
+    const classLevel = isClassCategory(examCategory) ? examCategory : null;
+    const teacherCode = classLevel
+      ? await AsyncStorage.getItem('supervisingTeacherCode')
+      : null;
+
     logExamResult({
       subjectId: subjectMeta.id ?? null, subjectName: subjectMeta.name,
       examBody: subjectMeta.exam_body, score: rawScore, totalQuestions: totalQ,
       finalScore, rawScore, percentage, requiredScore: effectiveRequired,
       tabSwitchCount, bundleName: subjectMeta.name, penaltyDeduction, wrongAnswers,
+      classLevel, teacherCode,
     }).catch(err => console.error('logExamResult:', err));
 
     if (bundleId && examCategory) {

@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Linking } from 'react-native';
-import { logExamResult } from '../database/queries';
 import { WebView } from 'react-native-webview';
 
 const { width } = Dimensions.get('window');
@@ -257,24 +256,6 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
     passed,
     completionMeta,
   } = resultPayload;
-
-  useEffect(() => {
-    logExamResult({
-      subjectId:        resultPayload.subjectId ?? null,
-      subjectName:      resultPayload.subjectName ?? 'General Practice',
-      examBody:         examBody,
-      rawScore:         rawScore,
-      finalScore:       finalScore,
-      score:            finalScore,
-      totalQuestions:   totalQ,
-      percentage:       percentage,
-      requiredScore:    requiredScore,
-      tabSwitchCount:   tabSwitchCount,
-      penaltyDeduction: penaltyDeduction,
-      bundleName:       bundleName,
-      wrongAnswers:     wrongAnswers,
-    });
-  }, []);
 
   const handleExit = () => {
     if (typeof onSessionComplete === 'function') {
