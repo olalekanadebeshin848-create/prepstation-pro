@@ -7,7 +7,6 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
-  Alert,
   Modal,
   TextInput,
   Linking,
@@ -16,11 +15,15 @@ import {
 } from 'react-native';
 
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useIsDesktop, DESKTOP_CONTENT_MAX_WIDTH } from '../hooks/useResponsive';
+import { Alert } from '../components/AlertProvider';
 import * as DocumentPicker from 'expo-document-picker';
 import { getSubjectsByExamBody, getCustomQuestionSet, getTopicsBySubject } from '../database/queries';
 import { getOrCreateDeviceLicense, validateLicenseInFile } from '../services/LicenseService';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { buildPGMapPayload, TEACHER_CODE_LENGTH } from '../services/PGMapService';
+import { exportAnswerBreakdownFile } from '../services/ReportService';
+import * as Sharing from 'expo-sharing';
 import QRCode from 'react-native-qrcode-svg';
 import {
   CLASS_GROUPS,
@@ -374,8 +377,18 @@ export async function applyBundleCompletionToStorage(bundleId, score, examCatego
 // HOME SCREEN
 // No pendingCompletionMeta prop needed — reads directly from AsyncStorage
 // ─────────────────────────────────────────────────────────────────────────────
+// On web, a ScrollView nested inside flex:1 parents doesn't get a bounded
+// height unless it (and this style) explicitly says minHeight: 0 — without
+// it, the content just keeps growing the page instead of clipping and
+// becoming scrollable, which is why mouse-wheel/trackpad scrolling appeared
+// to do nothing on desktop. Harmless on native (minHeight: 0 is the default
+// there anyway).
+const webScrollFix = { flex: 1, minHeight: 0 };
+
 export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchToTeacher, historicalPerformanceData }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
+  const pgScrollRef = useRef(null);
   const [deviceLicenseCode, setDeviceLicenseCode] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -590,6 +603,52 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
     rebuildPGMapPayload();
   };
 
+  // Export the pupil's per-question answer breakdown as a small COMPRESSED .psr
+  // file and share it one-tap (WhatsApp / Bluetooth / etc.). Deliberately a file,
+  // not a QR or a long paste — a 500-question test's detail is far too large for
+  // either. The teacher picks the file to import it.
+  const handleSendBreakdown = async () => {
+    const linked = await AsyncStorage.getItem('supervisingTeacherCode');
+    if (!linked) {
+      Alert.alert('Link your teacher first', 'Add your supervising teacher\u2019s code above, then send. Without it your teacher can\u2019t match this breakdown to you.');
+      return;
+    }
+    const { uri, testCount, isElectron, error } = await exportAnswerBreakdownFile();
+    if (error) {
+      Alert.alert('Export failed', 'The answer breakdown could not be created. Please try again.');
+      return;
+    }
+    if (!uri || testCount === 0) {
+      Alert.alert('No class tests yet', 'Take at least one class test first — then you can send its answer breakdown to your teacher.');
+      return;
+    }
+
+    // DESKTOP (Electron): no share sheet exists — reveal the file in the OS
+    // file explorer so the pupil can attach it to WhatsApp/email themselves.
+    if (isElectron) {
+      if (window.electronFile) {
+        await window.electronFile.showInFolder(uri);
+      }
+      Alert.alert('Breakdown ready', `Saved as:\n${uri}\n\nIt has been revealed in your file explorer — attach it to WhatsApp/email to send it to your teacher.`);
+      return;
+    }
+
+    // NATIVE / plain web: original expo-sharing path.
+    const available = await Sharing.isAvailableAsync();
+    if (!available) {
+      Alert.alert('Sharing unavailable', 'This device can\u2019t open the share screen. Update the app or try another device.');
+      return;
+    }
+    try {
+      await Sharing.shareAsync(uri, {
+        mimeType: 'application/octet-stream',
+        dialogTitle: 'Send answer breakdown to your teacher',
+      });
+    } catch (e) {
+      // user dismissed the share sheet, or the share failed — nothing to do
+    }
+  };
+
   const selectCategory = (catId) => {
     setSelectedExam(catId);
     setSelectedSubjects([]);
@@ -670,8 +729,13 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
       setCustomSubjectAllocations(prev => { const u = { ...prev }; delete u[name]; return u; });
       return;
     }
-    if (selectedSubjects.length >= currentLimit) {
-      Alert.alert('Limit Enforced', `${categoryLabel(selectedExam)} allows up to ${currentLimit} subjects.`);
+    // A bundle's own subject list is the real requirement — use it as the
+    // cap when known, so a bundle with more subjects than the category's
+    // usual slot count is never impossible to fully select.
+    const bundleSubjectCount = getStrataSubjectNames()?.length;
+    const effectiveLimit = bundleSubjectCount && bundleSubjectCount > 0 ? bundleSubjectCount : currentLimit;
+    if (selectedSubjects.length >= effectiveLimit) {
+      Alert.alert('Limit Enforced', `${categoryLabel(selectedExam)} allows up to ${effectiveLimit} subjects.`);
       return;
     }
     setSelectedSubjects(prev => [...prev, name]);
@@ -840,6 +904,30 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
       return;
     }
 
+    // A bundle with a defined subject list must be attempted IN FULL — every
+    // subject, every time. Without this, a pupil could select just one of a
+    // bundle's several subjects, get scored only on that subject's
+    // questions, clear the pass threshold, and the whole bundle (all its
+    // subjects, not just the one attempted) would be marked completed —
+    // letting them skip straight to the next bundle having never touched
+    // the rest. getStrataSubjectNames() returns null for the legacy
+    // custom/non-bundle mode, so that path is unaffected.
+    const requiredSubjects = getStrataSubjectNames();
+    if (requiredSubjects && requiredSubjects.length > 0) {
+      const normalize = (s) => s.toLowerCase().replace(/\s+/g, '');
+      const selectedNormalized = selectedSubjects.map(normalize);
+      const missing = requiredSubjects.filter(
+        (req) => !selectedNormalized.includes(normalize(req))
+      );
+      if (missing.length > 0) {
+        Alert.alert(
+          'All Subjects Required',
+          `This bundle must be attempted with every subject, not just some of them.\n\nStill missing:\n${missing.map(m => `• ${m}`).join('\n')}`
+        );
+        return;
+      }
+    }
+
     // Class pupils must be linked to a supervising teacher (a numeric code)
     // before their first class test. The code then rides along with every
     // result (PracticeScreen stores it) so the teacher's app can claim them.
@@ -958,20 +1046,20 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
   return (
     <View style={[styles.container, { paddingTop: insets.top, backgroundColor: t.bg }]}>
 
-      <View style={[styles.topToolbarHeader, { backgroundColor: '#312e81', borderBottomColor: '#1e1b4b' }]}>
-        <View style={styles.headerTextInfoGroup}>
-  <Text style={[styles.brandTitleText, { color: '#FFD700' }]} numberOfLines={1}>PrepStation Pro</Text>
+      <View style={[styles.topToolbarHeader, { backgroundColor: '#312e81', borderBottomColor: '#1e1b4b' }, isDesktop && styles.topToolbarHeaderDesktop]}>
+        <View style={[styles.headerTextInfoGroup, isDesktop && styles.headerTextInfoGroupDesktop]}>
+  <Text style={[styles.brandTitleText, { color: '#FFD700' }, isDesktop && styles.brandTitleTextDesktop]} numberOfLines={1}>PrepStation Pro</Text>
   <Text style={styles.brandSubTitleText} numberOfLines={1}>⚡ PREMIUM EXAM COMPANION • {currentStrataVersion.toUpperCase()}</Text>
 </View>
-        <View style={styles.headerRightActionsGroup}>
-          <TouchableOpacity style={styles.headerActionButton} onPress={handleOpenPGMap}>
-            <Text style={styles.actionButtonEmoji}>📱</Text>
+        <View style={[styles.headerRightActionsGroup, isDesktop && styles.headerRightActionsGroupDesktop]}>
+          <TouchableOpacity style={[styles.headerActionButton, isDesktop && styles.headerActionButtonDesktop]} onPress={handleOpenPGMap}>
+            <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>📱</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.headerActionButton} onPress={() => setIsDarkMode(!isDarkMode)}>
-            <Text style={styles.actionButtonEmoji}>{isDarkMode ? '☀️' : '🌙'}</Text>
+          <TouchableOpacity style={[styles.headerActionButton, isDesktop && styles.headerActionButtonDesktop]} onPress={() => setIsDarkMode(!isDarkMode)}>
+            <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>{isDarkMode ? '☀️' : '🌙'}</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.headerActionButton} onPress={onOpenAnalytics}>
-            <Text style={styles.actionButtonEmoji}>📊</Text>
+          <TouchableOpacity style={[styles.headerActionButton, isDesktop && styles.headerActionButtonDesktop]} onPress={onOpenAnalytics}>
+            <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>📊</Text>
           </TouchableOpacity>
           
           <TouchableOpacity style={styles.helpButtonWrapper} onPress={onSwitchToTeacher} activeOpacity={0.8}>
@@ -986,7 +1074,11 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
         <View style={styles.headerAccentBottomIndicatorLine} />
       </View>
 
-      <ScrollView contentContainerStyle={styles.scrollWorkspaceContainer} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={webScrollFix}
+        contentContainerStyle={[styles.scrollWorkspaceContainer, isDesktop && styles.scrollWorkspaceContainerDesktop]}
+        showsVerticalScrollIndicator={isDesktop}
+      >
 
         {!heroProfile ? (
           <View style={styles.heroCatchyOnboardingContainer}>
@@ -1181,7 +1273,7 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
         >
           <View style={styles.accordionHeaderLeftWrapper}>
             <Text style={[styles.accordionTitleText, { color: t.textMain }]}>
-              3. Select Group Subjects ({selectedSubjects.length} of {currentLimit} Selected)
+              3. Select Group Subjects ({selectedSubjects.length} of {getStrataSubjectNames()?.length || currentLimit} Selected)
             </Text>
           </View>
           <Text style={[styles.accordionChevronIcon, { color: t.textSub }]}>{expandSubjectSelector ? '▲' : '▼'}</Text>
@@ -1354,14 +1446,15 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
 
       <Modal animationType="fade" transparent visible={pgMapModalVisible} onRequestClose={() => setPgMapModalVisible(false)}>
         <KeyboardAvoidingView
-          behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
           style={pgMapStyles.overlay}
         >
           <View style={pgMapStyles.card}>
             <ScrollView
-              showsVerticalScrollIndicator={false}
+              ref={pgScrollRef}
+              showsVerticalScrollIndicator={isDesktop}
               keyboardShouldPersistTaps="handled"
-              contentContainerStyle={{ padding: 20 }}
+              contentContainerStyle={{ padding: 20, paddingBottom: insets.bottom + 24 }}
             >
             <Text style={pgMapStyles.title}>📱 PG Map</Text>
             <Text style={pgMapStyles.subtitle}>
@@ -1445,7 +1538,7 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
                   <View style={{ flexDirection: 'row', gap: 8 }}>
                     <TouchableOpacity
                       style={pgMapStyles.teacherChangeBtn}
-                      onPress={() => { setTeacherCodeDraft(pgMapTeacherCode || ''); setEditingTeacherCode(true); }}
+                      onPress={() => { setTeacherCodeDraft(pgMapTeacherCode || ''); setEditingTeacherCode(true); setTimeout(() => pgScrollRef.current?.scrollToEnd({ animated: true }), 150); }}
                     >
                       <Text style={pgMapStyles.teacherChangeText}>{pgMapTeacherCode ? 'Change' : 'Add'}</Text>
                     </TouchableOpacity>
@@ -1458,6 +1551,13 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
                 </View>
               )}
             </View>
+
+            <TouchableOpacity style={pgMapStyles.breakdownBtn} onPress={handleSendBreakdown}>
+              <Text style={pgMapStyles.breakdownBtnText}>📄  Send answer breakdown to teacher</Text>
+            </TouchableOpacity>
+            <Text style={pgMapStyles.breakdownHint}>
+              Sends the questions you missed and the option you picked — so your teacher can go over them with you.
+            </Text>
 
             <TouchableOpacity style={pgMapStyles.closeBtn} onPress={() => setPgMapModalVisible(false)}>
               <Text style={pgMapStyles.closeBtnText}>Close</Text>
@@ -1545,9 +1645,20 @@ const styles = StyleSheet.create({
   borderBottomWidth: 1,
   position: 'relative',
 },
+  topToolbarHeaderDesktop: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 36,
+    paddingVertical: 16,
+    paddingBottom: 16,
+  },
 headerTextInfoGroup: {
   marginBottom: 7,
 },
+  headerTextInfoGroupDesktop: {
+    marginBottom: 0,
+  },
 headerRightActionsGroup: {
   flexDirection: 'row',
   alignItems: 'center',
@@ -1555,11 +1666,20 @@ headerRightActionsGroup: {
   width: '100%',
   marginTop: 3,
 },
+  headerRightActionsGroupDesktop: {
+    width: 'auto',
+    justifyContent: 'flex-end',
+    gap: 16,
+    marginTop: 0,
+  },
 brandTitleText: {
   fontSize: 18,
   fontWeight: '900',
   letterSpacing: 0.3,
 },
+  brandTitleTextDesktop: {
+    fontSize: 24,
+  },
 brandSubTitleText: {
   fontSize: 8,
   color: '#c7d2fe',          // light indigo — pops on the deep header
@@ -1577,10 +1697,24 @@ brandSubTitleText: {
   backgroundColor: 'rgba(255,255,255,0.14)',
   borderColor: 'rgba(255,255,255,0.22)',
 },
+  headerActionButtonDesktop: {
+    width: 36,
+    height: 36,
+    borderRadius: 9,
+  },
 
   actionButtonEmoji: { fontSize: 11 },
+  actionButtonEmojiDesktop: { fontSize: 15 },
   headerAccentBottomIndicatorLine: { position: 'absolute', bottom: 0, left: 0, right: 0, height: 2, backgroundColor: '#a855f7' },
   scrollWorkspaceContainer: { padding: 16, paddingBottom: 110 },
+  scrollWorkspaceContainerDesktop: {
+    width: '100%',
+    maxWidth: DESKTOP_CONTENT_MAX_WIDTH,
+    alignSelf: 'center',
+    paddingHorizontal: 40,
+    paddingTop: 28,
+    paddingBottom: 80,
+  },
   sectionLabel: { fontSize: 11, fontWeight: '800', marginBottom: 8, textTransform: 'uppercase', marginTop: 10 },
   structuralGridRow: { flexDirection: 'row', gap: 10, marginBottom: 14 },
   examSelectionTab: { flex: 1, paddingVertical: 12, borderRadius: 10, alignItems: 'center', borderWidth: 1 },
@@ -1732,6 +1866,25 @@ const pgMapStyles = StyleSheet.create({
     color: '#f8fafc',
     fontSize: 14,
     fontWeight: '800',
+  },
+  breakdownBtn: {
+    backgroundColor: '#4f46e5',
+    paddingVertical: 14,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginTop: 18,
+  },
+  breakdownBtnText: {
+    color: '#ffffff',
+    fontSize: 13.5,
+    fontWeight: '800',
+  },
+  breakdownHint: {
+    fontSize: 11,
+    color: '#94a3b8',
+    textAlign: 'center',
+    lineHeight: 15,
+    marginTop: 8,
   },
   teacherSection: {
     borderTopWidth: 1,
