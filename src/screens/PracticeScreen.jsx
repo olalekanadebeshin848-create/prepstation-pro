@@ -5,13 +5,15 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
-  Alert,
   Dimensions,
   AppState,
   Modal,
   Image,
+  Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useIsDesktop } from '../hooks/useResponsive';
+import { Alert } from '../components/AlertProvider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { logExamResult } from '../database/queries';
 import { isClassCategory } from '../config/categories';
@@ -154,7 +156,11 @@ function buildKatexHtml(latex, fontSize, color) {
     });
     function sendHeight() {
       const h = document.body.scrollHeight;
-      window.ReactNativeWebView.postMessage(String(h));
+      if (window.ReactNativeWebView) {
+        window.ReactNativeWebView.postMessage(String(h));
+      } else if (window.parent) {
+        window.parent.postMessage(String(h), '*');
+      }
     }
     window.addEventListener('load', sendHeight);
     setTimeout(sendHeight, 300);
@@ -165,17 +171,49 @@ function buildKatexHtml(latex, fontSize, color) {
 
 function MathText({ text, textStyle, containerStyle }) {
   const [webHeight, setWebHeight] = useState(30);
+  const iframeRef = useRef(null);
   const segments = parseSegments(text || '');
   const hasMath = segments.some(s => s.type === 'math');
   const fontSize = StyleSheet.flatten(textStyle)?.fontSize || 15;
   const color    = StyleSheet.flatten(textStyle)?.color    || '#0f172a';
+
+  const marked = hasMath
+    ? segments.map(seg => (seg.type === 'math' ? `$${seg.content}$` : seg.content)).join('')
+    : '';
+  const html = hasMath ? buildKatexHtml(marked, fontSize, color) : '';
+
+  // Web/Electron: react-native-webview has no web implementation ("not
+  // supported on this platform"), so we render the same KaTeX HTML inside
+  // a plain iframe instead — the browser renders it natively.
+  useEffect(() => {
+    if (Platform.OS !== 'web' || !hasMath) return;
+    function handleMessage(event) {
+      if (iframeRef.current && event.source === iframeRef.current.contentWindow) {
+        const h = parseInt(event.data, 10);
+        if (!isNaN(h) && h > 0) setWebHeight(h + 4);
+      }
+    }
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [hasMath, html]);
+
   if (!hasMath) {
     return <Text style={textStyle}>{text}</Text>;
   }
-  const marked = segments.map(seg =>
-    seg.type === 'math' ? `$${seg.content}$` : seg.content
-  ).join('');
-  const html = buildKatexHtml(marked, fontSize, color);
+
+  if (Platform.OS === 'web') {
+    return (
+      <View style={[{ width: '100%', height: webHeight }, containerStyle]}>
+        {React.createElement('iframe', {
+          ref: iframeRef,
+          srcDoc: html,
+          style: { width: '100%', height: '100%', border: 'none', background: 'transparent' },
+          title: 'math-content',
+        })}
+      </View>
+    );
+  }
+
   return (
     <View style={[{ width: '100%', height: webHeight }, containerStyle]}>
       <WebView
@@ -201,6 +239,7 @@ function MathText({ text, textStyle, containerStyle }) {
 // ─────────────────────────────────────────────────────────────────────────────
 function QuestionImage({ imageUri }) {
   const [imgHeight, setImgHeight] = useState(220);
+  const iframeRef = useRef(null);
 
   const html = `
 <!DOCTYPE html>
@@ -224,11 +263,38 @@ function QuestionImage({ imageUri }) {
 <body>
   <img
     src="${imageUri}"
-    onload="window.ReactNativeWebView.postMessage(String(Math.ceil(this.naturalHeight * (window.innerWidth / this.naturalWidth))))"
+    onload="(function(h){ if (window.ReactNativeWebView) { window.ReactNativeWebView.postMessage(String(h)); } else if (window.parent) { window.parent.postMessage(String(h), '*'); } })(Math.ceil(this.naturalHeight * (window.innerWidth / this.naturalWidth)))"
     onerror="document.body.innerHTML='<p style=color:#ef4444;font-size:12px;padding:8px>Image failed to load</p>'"
   />
 </body>
 </html>`;
+
+  // Web/Electron: react-native-webview isn't implemented on web, so use a
+  // plain iframe there instead of WebView.
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+    function handleMessage(event) {
+      if (iframeRef.current && event.source === iframeRef.current.contentWindow) {
+        const h = parseInt(event.data, 10);
+        if (!isNaN(h) && h > 0 && h < 600) setImgHeight(h);
+      }
+    }
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [imageUri]);
+
+  if (Platform.OS === 'web') {
+    return (
+      <View style={{ width: '100%', height: imgHeight, marginBottom: 14, borderRadius: 8, overflow: 'hidden', backgroundColor: '#f1f5f9' }}>
+        {React.createElement('iframe', {
+          ref: iframeRef,
+          srcDoc: html,
+          style: { width: '100%', height: '100%', border: 'none', background: 'transparent' },
+          title: 'question-image',
+        })}
+      </View>
+    );
+  }
 
   return (
     <View style={{ width: '100%', height: imgHeight, marginBottom: 14, borderRadius: 8, overflow: 'hidden', backgroundColor: '#f1f5f9' }}>
@@ -250,10 +316,85 @@ function QuestionImage({ imageUri }) {
   );
 }
 
+// See HomeScreen.jsx for why this is needed — flex:1 ScrollViews on web
+// need minHeight: 0 or they grow instead of scrolling.
+const webScrollFix = { flex: 1, minHeight: 0 };
+
+// On React Native Web a horizontal ScrollView has no intrinsic height and
+
+// flex-grows to fill the column, stretching the subject tabs into tall bars.
+
+// Lock its height on web only; native (Android/iOS) already hugs its content.
+
+const webSubjectBarFix = Platform.OS === 'web' ? { height: 58, flexGrow: 0, flexShrink: 0 } : null;
+
+// ── Anti-cheat shuffling ──────────────────────────────────────────────────
+// Fisher-Yates shuffle.
+function shuffleArray(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// Shuffles one question's A/B/C/D option order and remaps correct_option to
+// match, so every other piece of code that trusts q.correct_option (scoring,
+// the answer-key highlight, wrong-answer breakdowns) keeps working unchanged
+// — it just always sees a correctly-updated key for wherever the right
+// answer landed after shuffling.
+function shuffleQuestionOptions(q) {
+  const keys = ['A', 'B', 'C', 'D'];
+  const pairs = keys
+    .filter(k => q[`option_${k.toLowerCase()}`] !== undefined && q[`option_${k.toLowerCase()}`] !== null)
+    .map(k => ({ originalKey: k, text: q[`option_${k.toLowerCase()}`] }));
+  const shuffled = shuffleArray(pairs);
+
+  const newQ = { ...q };
+  let newCorrectKey = q.correct_option;
+  shuffled.forEach((pair, i) => {
+    const newKey = keys[i];
+    newQ[`option_${newKey.toLowerCase()}`] = pair.text;
+    if (pair.originalKey === q.correct_option) newCorrectKey = newKey;
+  });
+  newQ.correct_option = newCorrectKey;
+  return newQ;
+}
+
+// Shuffles question ORDER within each subject's own partition range — the
+// range boundaries themselves (startIndex/endIndex) stay exactly where they
+// were, since the rest of the app locates a subject's questions by those
+// indices; only what's inside each range gets reordered. Falls back to
+// shuffling everything as one block when there are no partitions (the
+// legacy/custom, non-bundle mode). Every question also gets its own options
+// shuffled. This is called once, fresh, per mount (see the useState lazy
+// initializer below) — nothing here is cached or persisted, so exiting an
+// exam halfway and relaunching produces a brand new shuffle every time.
+function shuffleSessionQuestions(rawQuestions, subjectPartitions) {
+  if (!Array.isArray(rawQuestions) || rawQuestions.length === 0) return rawQuestions;
+
+  const result = rawQuestions.slice();
+
+  if (Array.isArray(subjectPartitions) && subjectPartitions.length > 0) {
+    subjectPartitions.forEach(({ startIndex, endIndex }) => {
+      const slice = shuffleArray(result.slice(startIndex, endIndex + 1));
+      for (let i = 0; i < slice.length; i++) result[startIndex + i] = slice[i];
+    });
+  } else {
+    const shuffledAll = shuffleArray(result);
+    for (let i = 0; i < shuffledAll.length; i++) result[i] = shuffledAll[i];
+  }
+
+  return result.map(shuffleQuestionOptions);
+}
+// ───────────────────────────────────────────────────────────────────────────
+
 export default function PracticeScreen({ sessionPayload, onExit }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
   const {
-    questions,
+    questions: rawQuestions,
     mode,
     timeAllowed,
     subjectMeta,
@@ -263,6 +404,11 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
     examCategory,
     onBundleComplete,
   } = sessionPayload;
+
+  // Lazy initializer runs exactly once, on mount — i.e. once per fresh
+  // launch. Relaunching after exiting mid-exam mounts a new PracticeScreen
+  // instance, so this runs again and produces a different shuffle.
+  const [questions] = useState(() => shuffleSessionQuestions(rawQuestions, subjectPartitions));
 
   const SUBJECT_ABBREVIATIONS = {
     'Use of English': 'ENG',
@@ -301,6 +447,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
   const timerRef = useRef(null);
   const appStateRef = useRef(AppState.currentState);
   const [tabSwitchCount, setTabSwitchCount] = useState(0);
+  const tabSwitchCountRef = useRef(0);
   const [penaltyPoints, setPenaltyPoints] = useState(0);
   const PENALTY_PER_SWITCH = 10;
   const [testStarted, setTestStarted] = useState(false);
@@ -326,7 +473,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         setTimeLeft((prev) => {
           if (prev <= 1) {
             clearInterval(timerRef.current);
-            handleAutoSubmit();
+            handleAutoSubmitRef.current();
             return 0;
           }
           return prev - 1;
@@ -343,16 +490,15 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         appStateRef.current === 'active' &&
         (nextState === 'background' || nextState === 'inactive')
       ) {
-        setTabSwitchCount(prev => {
-          const newCount = prev + 1;
-          const newPenalty = newCount * PENALTY_PER_SWITCH;
-          setPenaltyPoints(newPenalty);
-          Alert.alert(
-            '⚠️ Tab Switch Detected!',
-            `You left the exam screen.\n\nPenalty applied: ${PENALTY_PER_SWITCH} marks\nTotal penalty so far: ${newPenalty} marks\n\nReturn to the exam immediately.`
-          );
-          return newCount;
-        });
+        const newCount = tabSwitchCountRef.current + 1;
+        tabSwitchCountRef.current = newCount;
+        const newPenalty = newCount * PENALTY_PER_SWITCH;
+        setTabSwitchCount(newCount);
+        setPenaltyPoints(newPenalty);
+        Alert.alert(
+          '⚠️ Tab Switch Detected!',
+          `You left the exam screen.\n\nPenalty applied: ${PENALTY_PER_SWITCH} marks\nTotal penalty so far: ${newPenalty} marks\n\nReturn to the exam immediately.`
+        );
       }
       appStateRef.current = nextState;
     });
@@ -442,24 +588,48 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         };
       });
 
-    // A class test's category (e.g. "JSS 2", "SS 1") must be persisted as
-    // class_level, and the pupil's linked supervising-teacher code as
-    // teacher_code — otherwise getClassTestsForReport() / getClassPerformanceSummary()
-    // (both filter WHERE class_level IS NOT NULL) never see this result, the
-    // pupil's "Send answer breakdown to teacher" always reports "No class
-    // tests yet", and the teacher never has anything valid to import.
-    const classLevel = isClassCategory(examCategory) ? examCategory : null;
-    const teacherCode = classLevel
-      ? await AsyncStorage.getItem('supervisingTeacherCode')
-      : null;
+    // Stamp class-level + supervising-teacher onto the record when this is a
+    // class test (examCategory is the class level id, e.g. 'JSS 2'). Without
+    // this the result saves with class_level = null and never reaches the
+    // teacher's answer breakdown.
+    const isClass    = isClassCategory(examCategory);
+    const classLevel = isClass ? examCategory : null;
+    let   teacherCode = null;
+    if (isClass) {
+      try { teacherCode = await AsyncStorage.getItem('supervisingTeacherCode'); } catch (e) { /* none linked */ }
+    }
 
-    logExamResult({
-      subjectId: subjectMeta.id ?? null, subjectName: subjectMeta.name,
-      examBody: subjectMeta.exam_body, score: rawScore, totalQuestions: totalQ,
-      finalScore, rawScore, percentage, requiredScore: effectiveRequired,
-      tabSwitchCount, bundleName: subjectMeta.name, penaltyDeduction, wrongAnswers,
-      classLevel, teacherCode,
-    }).catch(err => console.error('logExamResult:', err));
+    // AWAITED (not fire-and-forget) with a timeout safety net. expo-sqlite has
+    // a known bug where a failing db.runAsync() call never resolves *or*
+    // rejects — it just hangs forever with no error, which is why this was
+    // silently failing with nothing in the console. Racing against a timeout
+    // guarantees we always find out one way or another, and surfaces it to
+    // the user instead of losing the result silently.
+    let saveOk = false;
+    try {
+      saveOk = await Promise.race([
+        logExamResult({
+          subjectId: subjectMeta.id ?? null, subjectName: subjectMeta.name,
+          examBody: subjectMeta.exam_body, score: rawScore, totalQuestions: totalQ,
+          finalScore, rawScore, percentage, requiredScore: effectiveRequired,
+          tabSwitchCount, bundleName: subjectMeta.name, penaltyDeduction, wrongAnswers,
+          classLevel, teacherCode,
+        }),
+        new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('logExamResult timed out after 6s — db.runAsync never resolved')), 6000)
+        ),
+      ]);
+    } catch (err) {
+      console.error('❌ logExamResult failed or hung:', err.message || err);
+    }
+
+    if (!saveOk) {
+      console.warn(`⚠️ This result (score ${percentage}%, ${classLevel ? 'class test: ' + classLevel : subjectMeta.exam_body}) may NOT have been saved to device history.`);
+      Alert.alert(
+        'Result Not Saved',
+        `Your score (${percentage}%) could not be saved to this device right now. This test won't count toward your class breakdown or bundle progress. Please try submitting again, or restart the app if this keeps happening.`
+      );
+    }
 
     if (bundleId && examCategory) {
       await applyBundleCompletionToStorage(bundleId, percentage, examCategory);
@@ -475,6 +645,20 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
   const handleAutoSubmit = async () => {
     await finaliseResult({ ...selectedAnswers });
   };
+
+  // The timer's setInterval below is created once (see the effect with
+  // [isTimed] as its only dependency) and never re-created, so its callback
+  // permanently closes over whatever `handleAutoSubmit` was at that first
+  // render — which itself closed over `selectedAnswers` and `tabSwitchCount`
+  // as they were at mount (empty/zero). Left alone, a timeout always
+  // auto-submits that stale empty snapshot regardless of what the pupil
+  // actually answered, silently scoring 0%. This ref is kept pointing at the
+  // latest render's handleAutoSubmit on every render, so the timer always
+  // invokes a version closing over the pupil's real, current answers.
+  const handleAutoSubmitRef = useRef(handleAutoSubmit);
+  useEffect(() => {
+    handleAutoSubmitRef.current = handleAutoSubmit;
+  });
 
   const handleManualSubmit = () => {
     const unanswered = questions.length - Object.keys(selectedAnswers).length;
@@ -780,7 +964,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         </View>
       )}
 
-      <View style={styles.header}>
+      <View style={[styles.header, isDesktop && styles.headerDesktop]}>
         <TouchableOpacity style={styles.closeBtn} onPress={handleExitPrematurely}>
           <Text style={styles.closeBtnText}>✕ Close</Text>
         </TouchableOpacity>
@@ -805,7 +989,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          style={styles.subjectTabBar}
+          style={[styles.subjectTabBar, webSubjectBarFix]}
           contentContainerStyle={styles.subjectTabBarContent}
         >
           {subjectPartitions.map((partition, idx) => {
@@ -828,7 +1012,11 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
         </ScrollView>
       )}
 
-      <ScrollView contentContainerStyle={styles.questionWorkspace} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={webScrollFix}
+        contentContainerStyle={[styles.questionWorkspace, isDesktop && styles.questionWorkspaceDesktop]}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.progressRow}>
           <Text style={styles.progressText}>
             Question {currentIndex + 1} of {filteredQuestions.length}
@@ -898,7 +1086,7 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
       </ScrollView>
 
       {showGridMenu && (
-        <View style={[styles.gridOverlay, { top: 65 + insets.top }]}>
+        <View style={[styles.gridOverlay, { top: 65 + insets.top }, isDesktop && styles.gridOverlayDesktop]}>
           <Text style={styles.gridMenuHeading}>Jump to Question Profile:</Text>
           <ScrollView contentContainerStyle={styles.gridMatrixLayout} horizontal={false}>
             {filteredQuestions.map((q, idx) => {
@@ -1037,6 +1225,7 @@ const styles = StyleSheet.create({
   },
   container: { flex: 1, backgroundColor: '#f1f5f9' },
   header: { height: 65, backgroundColor: '#ffffff', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 16, borderBottomWidth: 1, borderColor: '#e2e8f0' },
+  headerDesktop: { height: 72, paddingHorizontal: 40 },
   closeBtn: { paddingVertical: 6, paddingHorizontal: 10, backgroundColor: '#fee2e2', borderRadius: 6 },
   closeBtnText: { fontSize: 13, fontWeight: '700', color: '#dc2626' },
   metaHeaderInfo: { flex: 1, alignItems: 'center', paddingHorizontal: 10 },
@@ -1049,7 +1238,7 @@ const styles = StyleSheet.create({
   practiceBox: { paddingVertical: 6, paddingHorizontal: 12, backgroundColor: '#eff6ff', borderRadius: 6 },
   practiceText: { fontSize: 13, fontWeight: '700', color: '#2563eb' },
   subjectTabBar: { backgroundColor: '#1e293b', borderBottomWidth: 1, borderColor: '#334155' },
-  subjectTabBarContent: { paddingHorizontal: 10, paddingVertical: 6, gap: 8, flexDirection: 'row' },
+  subjectTabBarContent: { paddingHorizontal: 10, paddingVertical: 6, gap: 8, flexDirection: 'row', alignItems: 'center' },
   subjectTab: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, backgroundColor: '#334155', alignItems: 'center', minWidth: 60 },
   subjectTabActive: { backgroundColor: '#2563eb' },
   subjectTabText: { fontSize: 11, fontWeight: '800', color: '#94a3b8' },
@@ -1057,6 +1246,13 @@ const styles = StyleSheet.create({
   subjectTabCount: { fontSize: 9, fontWeight: '600', color: '#64748b', marginTop: 1 },
   subjectTabCountActive: { color: '#bfdbfe' },
   questionWorkspace: { padding: 16, paddingBottom: 120 },
+  questionWorkspaceDesktop: {
+    width: '100%',
+    maxWidth: 820,
+    alignSelf: 'center',
+    paddingHorizontal: 8,
+    paddingTop: 28,
+  },
   progressRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 },
   progressText: { fontSize: 13, fontWeight: '600', color: '#64748b' },
   gridToggleButton: { paddingVertical: 6, paddingHorizontal: 10, backgroundColor: '#ffffff', borderRadius: 6, borderWidth: 1, borderColor: '#cbd5e1' },
@@ -1080,6 +1276,7 @@ const styles = StyleSheet.create({
   explanationTitle: { fontSize: 13, fontWeight: '700', color: '#1e40af', marginBottom: 6 },
   explanationText: { fontSize: 13, color: '#475569', lineHeight: 20 },
   gridOverlay: { position: 'absolute', left: 0, right: 0, bottom: 80, backgroundColor: '#ffffff', padding: 16, borderBottomWidth: 2, borderColor: '#cbd5e1', zIndex: 99, maxHeight: 255 },
+  gridOverlayDesktop: { width: 640, left: '50%', right: 'auto', marginLeft: -320, borderRadius: 12, borderWidth: 1, borderBottomWidth: 1, boxShadow: '0 12px 32px rgba(0,0,0,0.18)' },
   gridMenuHeading: { fontSize: 13, fontWeight: '700', color: '#475569', marginBottom: 12, textTransform: 'uppercase' },
   gridMatrixLayout: { flexDirection: 'row', flexWrap: 'wrap', gap: 10, paddingBottom: 10 },
   gridChip: { width: 42, height: 42, borderRadius: 8, backgroundColor: '#f1f5f9', alignItems: 'center', justifyContent: 'center', borderWidth: 1, borderColor: '#cbd5e1' },
