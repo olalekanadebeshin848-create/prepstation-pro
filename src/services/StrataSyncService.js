@@ -132,12 +132,7 @@ export async function fetchStrataCatalog() {
   try {
     // Add cache-busting timestamp query to always get freshest uploads
     const fetchUrl = url.includes('?') ? `${url}&_t=${Date.now()}` : `${url}?_t=${Date.now()}`;
-    const response = await fetch(fetchUrl, {
-      headers: {
-        'Accept': 'application/json',
-        'Cache-Control': 'no-cache',
-      },
-    });
+    const response = await fetch(fetchUrl);
 
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: Failed fetching strata catalog`);

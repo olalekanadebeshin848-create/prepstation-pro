@@ -98,6 +98,7 @@ async function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,   // keep the page isolated from Node
       nodeIntegration: false,   // the UI never gets raw Node access
+      webSecurity: false,       // allow cross-origin fetching to public strata CDNs
     },
   });
 
