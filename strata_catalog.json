@@ -2,9 +2,39 @@
   "catalogVersion": 1,
   "appName": "PrepStation Pro",
   "organization": "Delmama Groups",
-  "lastUpdated": "2026-10-25T11:55:59.986Z",
+  "lastUpdated": "2026-10-25T11:57:32.393Z",
   "totalCount": 5,
   "strataList": [
+    {
+      "id": "jss3bb_stra1_bst_h_e_sos_mat_eng_",
+      "strataId": "strata_1",
+      "examCategory": "JSS 3",
+      "displayName": "JSS 3 Strata 1 — Complete Question Set",
+      "description": "JSS 3 First Term — comprehensive practice drills.",
+      "tier": "basic",
+      "version": "1.0.0",
+      "fileType": "json",
+      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS3BB_STRA1(BST-H.E-SOS-MAT-ENG).json",
+      "size": "205 KB",
+      "totalBundles": 5,
+      "totalQuestions": 500,
+      "updatedAt": "2026-10-25T11:55:26.487Z"
+    },
+    {
+      "id": "jss3bb_tra1_bus_crs_sos_mat_eng__362802",
+      "strataId": "strata_1",
+      "examCategory": "JSS 3",
+      "displayName": "JSS3BB TRA1(BUS-CRS-SOS-MAT-ENG) 362802",
+      "description": "JSS3BB TRA1(BUS-CRS-SOS-MAT-ENG) 362802 questions and bundle drills.",
+      "tier": "basic",
+      "version": "1.0.0",
+      "fileType": "psz",
+      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS3BB_TRA1(BUS-CRS-SOS-MAT-ENG)_362802.psz",
+      "size": "126 KB",
+      "totalBundles": 10,
+      "totalQuestions": 200,
+      "updatedAt": "2026-10-25T11:55:26.490Z"
+    },
     {
       "id": "ss_1_once_upon_an_elephant_stg1",
       "strataId": "strata_1",
@@ -18,7 +48,7 @@
       "size": "155 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-25T11:55:54.650Z"
+      "updatedAt": "2026-10-12T12:43:13.509Z"
     },
     {
       "id": "ss_1_once_upon_an_elephant_stg2",
@@ -33,37 +63,7 @@
       "size": "141 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-25T11:55:54.650Z"
-    },
-    {
-      "id": "jss3bb_stra1_bst_h_e_sos_mat_eng_",
-      "strataId": "strata_1",
-      "examCategory": "SS 3",
-      "displayName": "JSS 3 Strata 1 — Complete Question Set",
-      "description": "JSS 3 First Term — comprehensive practice drills.",
-      "tier": "basic",
-      "version": "1.0.0",
-      "fileType": "json",
-      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS3BB_STRA1(BST-H.E-SOS-MAT-ENG).json",
-      "size": "202 KB",
-      "totalBundles": 5,
-      "totalQuestions": 500,
-      "updatedAt": "2026-10-25T11:55:54.649Z"
-    },
-    {
-      "id": "jss3bb_tra1_bus_crs_sos_mat_eng__362802",
-      "strataId": "strata_1",
-      "examCategory": "SS 3",
-      "displayName": "JSS3BB TRA1(BUS-CRS-SOS-MAT-ENG) 362802",
-      "description": "JSS3BB TRA1(BUS-CRS-SOS-MAT-ENG) 362802 questions and bundle drills.",
-      "tier": "basic",
-      "version": "1.0.0",
-      "fileType": "psz",
-      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS3BB_TRA1(BUS-CRS-SOS-MAT-ENG)_362802.psz",
-      "size": "126 KB",
-      "totalBundles": 10,
-      "totalQuestions": 200,
-      "updatedAt": "2026-10-25T11:55:54.650Z"
+      "updatedAt": "2026-10-12T15:56:21.579Z"
     },
     {
       "id": "ss_3_bb_stra1_agr_bio_phy_chm_mat_eng_",
@@ -75,10 +75,10 @@
       "version": "1.0.0",
       "fileType": "json",
       "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/SS_3_BB_STRA1(AGR-BIO-PHY-CHM-MAT-ENG).json",
-      "size": "257 KB",
+      "size": "262 KB",
       "totalBundles": 5,
       "totalQuestions": 600,
-      "updatedAt": "2026-10-25T11:55:54.650Z"
+      "updatedAt": "2026-10-25T11:55:26.494Z"
     }
   ]
 }
