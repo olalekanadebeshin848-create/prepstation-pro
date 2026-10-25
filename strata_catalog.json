@@ -2,23 +2,23 @@
   "catalogVersion": 1,
   "appName": "PrepStation Pro",
   "organization": "Delmama Groups",
-  "lastUpdated": "2026-10-25T13:20:18.116Z",
+  "lastUpdated": "2026-10-25T13:36:50.107Z",
   "totalCount": 6,
   "strataList": [
     {
-      "id": "jss2bb_stra1_bus_cbst_sos_mat_eng__569587_569587",
+      "id": "jss2bb_stra1_bus_cbst_sos_mat_eng_",
       "strataId": "strata_1",
       "examCategory": "JSS 2",
-      "displayName": "JS 2 Strata 1 — Complete Question Set",
-      "description": "JS 2 First Term — comprehensive practice drills.",
+      "displayName": "JSS 2 Strata 1 — Complete Question Set",
+      "description": "JSS 2 First Term — comprehensive practice drills.",
       "tier": "basic",
       "version": "1.0.0",
       "fileType": "json",
-      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS2BB_STRA1(BUS-CBST-SOS-MAT-ENG)_569587_569587.json",
+      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/JSS2BB_STRA1(BUS-CBST-SOS-MAT-ENG).json",
       "size": "182 KB",
       "totalBundles": 5,
       "totalQuestions": 500,
-      "updatedAt": "2026-10-25T13:20:13.697Z"
+      "updatedAt": "2026-10-25T13:36:46.023Z"
     },
     {
       "id": "jss3bb_stra1_bst_h_e_sos_mat_eng_",
@@ -33,7 +33,7 @@
       "size": "202 KB",
       "totalBundles": 5,
       "totalQuestions": 500,
-      "updatedAt": "2026-10-25T13:20:13.697Z"
+      "updatedAt": "2026-10-25T13:36:46.024Z"
     },
     {
       "id": "jss3bb_tra1_bus_crs_sos_mat_eng__362802",
@@ -48,7 +48,7 @@
       "size": "126 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-25T13:20:13.698Z"
+      "updatedAt": "2026-10-25T13:36:46.024Z"
     },
     {
       "id": "ss_1_once_upon_an_elephant_stg1",
@@ -63,7 +63,7 @@
       "size": "155 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-25T13:20:13.698Z"
+      "updatedAt": "2026-10-25T13:36:46.024Z"
     },
     {
       "id": "ss_1_once_upon_an_elephant_stg2",
@@ -78,7 +78,7 @@
       "size": "141 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-25T13:20:13.698Z"
+      "updatedAt": "2026-10-25T13:36:46.024Z"
     },
     {
       "id": "ss_3_bb_stra1_agr_bio_phy_chm_mat_eng_",
@@ -93,7 +93,7 @@
       "size": "257 KB",
       "totalBundles": 5,
       "totalQuestions": 600,
-      "updatedAt": "2026-10-25T13:20:13.699Z"
+      "updatedAt": "2026-10-25T13:36:46.025Z"
     }
   ]
 }
