@@ -1,0 +1,2993 @@
+{
+  "strataMetadata": {
+    "label": "SS 3 Strata 1 — Complete Question Set",
+    "renderedAt": "2026-09-30",
+    "edition": "ED1",
+    "gradeLevel": "SS 3",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "SS 3",
+    "strataId": "strata_1",
+    "displayName": "STRATA 1",
+    "durationMinutes": 20,
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_1",
+        "name": "Bundle 1",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Economics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_eco_001",
+                "text": "The group of economies known as the \"Four Asian Tigers\" achieved rapid industrialization by primarily adopting the economic model of which country?",
+                "options": ["China", "Japan", "United States", "Germany"],
+                "answer": "Japan",
+                "explanation": "The Four Asian Tigers (Hong Kong, Singapore, South Korea, Taiwan) adopted the Japanese model of export-oriented industrialization."
+              },
+              {
+                "id": "b1_eco_002",
+                "text": "In Japan's post-war economic development, the government agency responsible for guiding and protecting strategic industries was the:",
+                "options": ["Chaebol", "Keiretsu", "MITI", "JETRO"],
+                "answer": "MITI",
+                "explanation": "MITI (Ministry of International Trade and Industry) guided Japan's post-war industrial policy."
+              },
+              {
+                "id": "b1_eco_003",
+                "text": "The economic model of South Korea is strongly associated with large, family-owned industrial conglomerates known as:",
+                "options": ["Zaibatsu", "Keiretsu", "Chaebols", "SMEs"],
+                "answer": "Chaebols",
+                "explanation": "Chaebols are large, family-owned industrial conglomerates in South Korea."
+              },
+              {
+                "id": "b1_eco_004",
+                "text": "Which of the following \"Asian Tigers\" built its economic miracle by investing heavily in human capital, courting multinational corporations (MNCs), and developing world-class infrastructure?",
+                "options": ["South Korea", "Hong Kong", "Taiwan", "Singapore"],
+                "answer": "Singapore",
+                "explanation": "Singapore focused on human capital, MNCs, and infrastructure development."
+              },
+              {
+                "id": "b1_eco_005",
+                "text": "The economic strategy that focuses on producing goods for the global market rather than just the domestic market is called:",
+                "options": ["Import Substitution Industrialization", "Export-Oriented Industrialization", "Protectionism", "Nationalization"],
+                "answer": "Export-Oriented Industrialization",
+                "explanation": "Export-Oriented Industrialization focuses on producing goods for the global market."
+              },
+              {
+                "id": "b1_eco_006",
+                "text": "A key lesson from the Asian Tigers for Nigeria is the need to move away from raw material export. This process is called:",
+                "options": ["Economic centralization", "Economic diversification", "Economic nationalization", "Trade liberalization"],
+                "answer": "Economic diversification",
+                "explanation": "Economic diversification involves moving away from dependence on raw material exports."
+              },
+              {
+                "id": "b1_eco_007",
+                "text": "The practice of \"reverse engineering\" adopted by the Asian Tigers refers to:",
+                "options": ["Importing only finished goods.", "Dismantling foreign products to copy and improve them.", "Relying solely on domestic technology.", "Banning the import of technology."],
+                "answer": "Dismantling foreign products to copy and improve them.",
+                "explanation": "Reverse engineering involves dismantling foreign products to understand and improve them."
+              },
+              {
+                "id": "b1_eco_008",
+                "text": "Unlike South Korea's focus on \"Chaebols,\" Taiwan's industrial growth was primarily driven by:",
+                "options": ["State-owned enterprises", "Small and Medium-sized Enterprises (SMEs)", "Foreign aid from the USA", "Agricultural cooperatives"],
+                "answer": "Small and Medium-sized Enterprises (SMEs)",
+                "explanation": "Taiwan's industrial growth was primarily driven by SMEs."
+              },
+              {
+                "id": "b1_eco_009",
+                "text": "Hong Kong's initial economic success as a British colony was largely based on its role as a(n):",
+                "options": ["Manufacturing hub for heavy industry", "Entrepot and free trade port", "Major agricultural producer", "Exporter of raw minerals"],
+                "answer": "Entrepot and free trade port",
+                "explanation": "Hong Kong's initial success was based on its role as an entrepot and free trade port."
+              },
+              {
+                "id": "b1_eco_010",
+                "text": "Which of the following is NOT a strategy employed by the Asian Tigers for their economic growth?",
+                "options": ["High investment in STEM education.", "Reliance on a single commodity for export revenue.", "High rates of domestic savings.", "A stable, developmental state."],
+                "answer": "Reliance on a single commodity for export revenue.",
+                "explanation": "The Asian Tigers diversified their economies rather than relying on a single commodity."
+              },
+              {
+                "id": "b1_eco_011",
+                "text": "The Japanese corporate structure known as the Keiretsu is best described as:",
+                "options": ["A government regulatory body.", "A network of linked banks, manufacturers, and trading companies.", "A small family-owned business.", "A form of trade union."],
+                "answer": "A network of linked banks, manufacturers, and trading companies.",
+                "explanation": "Keiretsu is a network of linked banks, manufacturers, and trading companies."
+              },
+              {
+                "id": "b1_eco_012",
+                "text": "The period of Japan's rapid economic growth in the 1960s is often referred to as the:",
+                "options": ["Lost Decade", "Bubble Economy", "Golden Sixties", "Meiji Restoration"],
+                "answer": "Golden Sixties",
+                "explanation": "Japan's rapid economic growth in the 1960s is often referred to as the Golden Sixties."
+              },
+              {
+                "id": "b1_eco_013",
+                "text": "A primary reason for the US providing financial aid to Japan after WWII was to:",
+                "options": ["Punish Japan for the war.", "Rebuild Japan as a bulwark against communism in Asia.", "Establish permanent US military bases.", "Control Japan's natural resources."],
+                "answer": "Rebuild Japan as a bulwark against communism in Asia.",
+                "explanation": "The US provided aid to Japan to rebuild it as a bulwark against communism in Asia."
+              },
+              {
+                "id": "b1_eco_014",
+                "text": "The primary lesson from Singapore's development for a resource-poor country is the importance of investing in:",
+                "options": ["Heavy machinery", "Human capital", "Mineral exploration", "Military defense"],
+                "answer": "Human capital",
+                "explanation": "Singapore's development shows the importance of investing in human capital."
+              },
+              {
+                "id": "b1_eco_015",
+                "text": "One major problem with the \"Import Substitution\" strategy is that it:",
+                "options": ["Encourages global competitiveness.", "Often leads to inefficient, low-quality local industries.", "Promotes the export of finished goods.", "Increases foreign exchange earnings."],
+                "answer": "Often leads to inefficient, low-quality local industries.",
+                "explanation": "Import Substitution often leads to inefficient, low-quality local industries."
+              },
+              {
+                "id": "b1_eco_016",
+                "text": "The economic model of Hong Kong is best described as pure:",
+                "options": ["Socialism and state planning.", "Capitalism and free trade.", "Feudalism.", "Mercantilism."],
+                "answer": "Capitalism and free trade.",
+                "explanation": "Hong Kong's economic model is best described as pure capitalism and free trade."
+              },
+              {
+                "id": "b1_eco_017",
+                "text": "The \"Lost Decade\" in Japan refers to the period of economic stagnation in the:",
+                "options": ["1960s", "1970s", "1980s", "1990s"],
+                "answer": "1990s",
+                "explanation": "Japan's \"Lost Decade\" refers to the 1990s."
+              },
+              {
+                "id": "b1_eco_018",
+                "text": "Which Asian Tiger is famously associated with the leader Lee Kuan Yew and its transformation from a resource-poor island to a global logistics and finance hub?",
+                "options": ["South Korea", "Taiwan", "Singapore", "Hong Kong"],
+                "answer": "Singapore",
+                "explanation": "Singapore is associated with Lee Kuan Yew and its transformation into a global hub."
+              },
+              {
+                "id": "b1_eco_019",
+                "text": "One of the main reasons the Asian Tigers had high national savings rates was to:",
+                "options": ["Reduce the purchasing power of their citizens.", "Create a pool of domestic capital for industrial investment.", "Increase their reliance on foreign loans.", "Discourage foreign direct investment."],
+                "answer": "Create a pool of domestic capital for industrial investment.",
+                "explanation": "High savings rates created a pool of domestic capital for industrial investment."
+              },
+              {
+                "id": "b1_eco_020",
+                "text": "Land reform was a crucial initial step in the development of Japan, South Korea, and Taiwan because it:",
+                "options": ["Created a class of wealthy landowners.", "Increased agricultural productivity and social stability.", "Led to rapid urbanization.", "Reduced the amount of land available for farming."],
+                "answer": "Increased agricultural productivity and social stability.",
+                "explanation": "Land reform increased agricultural productivity and social stability."
+              }
+            ]
+          },
+          {
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_gov_001",
+                "text": "The forceful and unconstitutional seizure of political power by the armed forces is known as",
+                "options": ["a referendum.", "an executive order.", "a coup d'etat.", "a parliamentary motion."],
+                "answer": "a coup d'etat.",
+                "explanation": "A coup d'etat is the forceful and unconstitutional seizure of political power."
+              },
+              {
+                "id": "b1_gov_002",
+                "text": "The first military coup in Nigeria took place in which year?",
+                "options": ["1960", "1963", "1966", "1975"],
+                "answer": "1966",
+                "explanation": "The first military coup in Nigeria took place in 1966."
+              },
+              {
+                "id": "b1_gov_003",
+                "text": "One of the major reasons given by the military for its intervention in 1966 was the",
+                "options": ["high cost of governance.", "widespread corruption in the First Republic.", "need to join the Non-Aligned Movement.", "creation of too many states."],
+                "answer": "widespread corruption in the First Republic.",
+                "explanation": "The military cited widespread corruption in the First Republic as a reason for intervention."
+              },
+              {
+                "id": "b1_gov_004",
+                "text": "The political crisis that served as a major pretext for the first military coup was the",
+                "options": ["Kano Riot of 1953.", "Action Group crisis of 1962.", "Tiv Riots of 1964.", "1964/65 Western Region election crisis."],
+                "answer": "1964/65 Western Region election crisis.",
+                "explanation": "The 1964/65 Western Region election crisis was a major pretext for the first military coup."
+              },
+              {
+                "id": "b1_gov_005",
+                "text": "A key feature of military rule in Nigeria was the suspension of the",
+                "options": ["local government councils.", "federal civil service.", "constitution.", "national flag."],
+                "answer": "constitution.",
+                "explanation": "A key feature of military rule was the suspension of the constitution."
+              },
+              {
+                "id": "b1_gov_006",
+                "text": "Under military rule, laws made by the Federal Military Government were called",
+                "options": ["Acts.", "Bye-laws.", "Edicts.", "Decrees."],
+                "answer": "Decrees.",
+                "explanation": "Laws made by the Federal Military Government were called Decrees."
+              },
+              {
+                "id": "b1_gov_007",
+                "text": "The highest legislative and executive body under General Yakubu Gowon was the",
+                "options": ["Federal Executive Council.", "Armed Forces Ruling Council.", "Supreme Military Council.", "National Council of States."],
+                "answer": "Supreme Military Council.",
+                "explanation": "The Supreme Military Council was the highest legislative and executive body under Gowon."
+              },
+              {
+                "id": "b1_gov_008",
+                "text": "State Military Governors under a military regime were essentially",
+                "options": ["elected representatives of the people.", "prefects taking orders from the Head of State.", "independent of the central government.", "appointed by the judiciary."],
+                "answer": "prefects taking orders from the Head of State.",
+                "explanation": "State Military Governors were essentially prefects taking orders from the Head of State."
+              },
+              {
+                "id": "b1_gov_009",
+                "text": "A clause in a military decree that prevents a court of law from inquiring into its validity is called a(n)",
+                "options": ["sunset clause.", "ouster clause.", "enabling clause.", "penal clause."],
+                "answer": "ouster clause.",
+                "explanation": "An ouster clause prevents a court of law from inquiring into the validity of a decree."
+              },
+              {
+                "id": "b1_gov_010",
+                "text": "The main reason the military gave for creating states in Nigeria was to",
+                "options": ["increase the power of the central government.", "create more employment for soldiers.", "address minority fears and bring development closer.", "weaken the agricultural sector."],
+                "answer": "address minority fears and bring development closer.",
+                "explanation": "The military created states to address minority fears and bring development closer."
+              },
+              {
+                "id": "b1_gov_011",
+                "text": "The Murtala/Obasanjo regime is particularly noted for its",
+                "options": ["introduction of the Structural Adjustment Programme.", "dynamic and Afrocentric foreign policy.", "creation of local governments.", "signing of the ECOWAS treaty."],
+                "answer": "dynamic and Afrocentric foreign policy.",
+                "explanation": "The Murtala/Obasanjo regime was noted for its dynamic and Afrocentric foreign policy."
+              },
+              {
+                "id": "b1_gov_012",
+                "text": "The War Against Indiscipline (WAI) was a policy introduced by the regime of",
+                "options": ["Murtala Mohammed.", "Olusegun Obasanjo.", "Muhammadu Buhari.", "Ibrahim Babangida."],
+                "answer": "Muhammadu Buhari.",
+                "explanation": "WAI was a policy introduced by the regime of Muhammadu Buhari."
+              },
+              {
+                "id": "b1_gov_013",
+                "text": "Which of the following is a major failure associated with military rule in Nigeria?",
+                "options": ["The creation of more states.", "The prosecution of the civil war.", "Systemic corruption and human rights abuses.", "The indigenization policy."],
+                "answer": "Systemic corruption and human rights abuses.",
+                "explanation": "Systemic corruption and human rights abuses were major failures of military rule."
+              },
+              {
+                "id": "b1_gov_014",
+                "text": "The military regimes of Babangida and Abacha were particularly notorious for",
+                "options": ["promoting federalism.", "strengthening democratic institutions.", "high levels of corruption and looting.", "reducing the national debt."],
+                "answer": "high levels of corruption and looting.",
+                "explanation": "The Babangida and Abacha regimes were notorious for high levels of corruption and looting."
+              },
+              {
+                "id": "b1_gov_015",
+                "text": "Which of the following is a way to avoid military coups in a democracy?",
+                "options": ["Rigging elections to ensure a particular party wins.", "Ensuring the military is involved in partisan politics.", "Ensuring free, fair, and credible elections.", "Suspending the constitution during emergencies."],
+                "answer": "Ensuring free, fair, and credible elections.",
+                "explanation": "Ensuring free, fair, and credible elections helps avoid military coups."
+              },
+              {
+                "id": "b1_gov_016",
+                "text": "A disagreement or clash of interests between individuals or groups is called",
+                "options": ["peace.", "conflict.", "adjudication.", "arbitration."],
+                "answer": "conflict.",
+                "explanation": "Conflict is a disagreement or clash of interests."
+              },
+              {
+                "id": "b1_gov_017",
+                "text": "Conflicts arising from competition over land and water between farmers and herders are best described as",
+                "options": ["power-based.", "value-based.", "resource-based.", "psychological needs-based."],
+                "answer": "resource-based.",
+                "explanation": "Conflicts over land and water are resource-based conflicts."
+              },
+              {
+                "id": "b1_gov_018",
+                "text": "A conflict that stems from a struggle to gain or maintain political influence is a",
+                "options": ["power-based conflict.", "psychological needs conflict.", "resource-based conflict.", "value-based conflict."],
+                "answer": "power-based conflict.",
+                "explanation": "A conflict over political influence is a power-based conflict."
+              },
+              {
+                "id": "b1_gov_019",
+                "text": "Which of the following is a major consequence of violent conflict?",
+                "options": ["Increased foreign investment.", "Social cohesion and trust.", "Destruction of lives and property.", "Economic boom."],
+                "answer": "Destruction of lives and property.",
+                "explanation": "A major consequence of violent conflict is the destruction of lives and property."
+              },
+              {
+                "id": "b1_gov_020",
+                "text": "When two conflicting parties communicate directly to find a compromise without a third party, the method of resolution is called",
+                "options": ["mediation.", "negotiation.", "arbitration.", "adjudication."],
+                "answer": "negotiation.",
+                "explanation": "Negotiation is when conflicting parties communicate directly to find a compromise."
+              }
+            ]
+          },
+          {
+            "subjectName": "Financial Accounting",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_fin_001",
+                "text": "In a consignment arrangement, the person who sends the goods to be sold on their behalf is known as the",
+                "options": ["consignee.", "agent.", "consignor.", "debtor."],
+                "answer": "consignor.",
+                "explanation": "The consignor is the person who sends goods to be sold on their behalf."
+              },
+              {
+                "id": "b1_fin_002",
+                "text": "The relationship between a consignor and a consignee is that of",
+                "options": ["debtor and creditor.", "principal and agent.", "buyer and seller.", "partner and co-venturer."],
+                "answer": "principal and agent.",
+                "explanation": "The relationship between a consignor and a consignee is that of principal and agent."
+              },
+              {
+                "id": "b1_fin_003",
+                "text": "Until the goods are sold to the final customer, the ownership of goods sent on consignment belongs to the",
+                "options": ["consignee.", "customer.", "consignor.", "transporter."],
+                "answer": "consignor.",
+                "explanation": "Ownership of goods sent on consignment remains with the consignor until sold."
+              },
+              {
+                "id": "b1_fin_004",
+                "text": "The document sent by the consignor to the consignee along with the goods, detailing the quantity and description, is called a",
+                "options": ["sales invoice.", "debit note.", "proforma invoice.", "account sales."],
+                "answer": "proforma invoice.",
+                "explanation": "A proforma invoice is sent by the consignor to the consignee along with the goods."
+              },
+              {
+                "id": "b1_fin_005",
+                "text": "The periodic statement sent by the consignee to the consignor, summarizing sales, expenses, and commission, is the",
+                "options": ["consignment note.", "account sales.", "bill of lading.", "credit note."],
+                "answer": "account sales.",
+                "explanation": "The account sales is a periodic statement sent by the consignee to the consignor."
+              },
+              {
+                "id": "b1_fin_006",
+                "text": "An additional commission paid to a consignee to guarantee that all credit sales will be paid for is called",
+                "options": ["overriding commission.", "del credere commission.", "ordinary commission.", "brokerage."],
+                "answer": "del credere commission.",
+                "explanation": "Del credere commission is an additional commission paid to a consignee to guarantee credit sales."
+              },
+              {
+                "id": "b1_fin_007",
+                "text": "If del credere commission is paid to the consignee, any bad debt arising from credit sales will be borne by the",
+                "options": ["consignor.", "consignee.", "bank.", "insurance company."],
+                "answer": "consignee.",
+                "explanation": "If del credere commission is paid, the consignee bears any bad debt."
+              },
+              {
+                "id": "b1_fin_008",
+                "text": "In a consignment, which of the following expenses is considered non-recurring and added to the cost of stock?",
+                "options": ["Advertising cost paid by consignee", "Warehouse rent", "Freight paid by consignor to transport goods to the consignee", "Salesmen's salaries"],
+                "answer": "Freight paid by consignor to transport goods to the consignee",
+                "explanation": "Freight paid by the consignor is a non-recurring expense added to the cost of stock."
+              },
+              {
+                "id": "b1_fin_009",
+                "text": "A loss that is expected and unavoidable due to the nature of the goods, such as evaporation, is known as",
+                "options": ["abnormal loss.", "normal loss.", "catastrophic loss.", "insured loss."],
+                "answer": "normal loss.",
+                "explanation": "Normal loss is expected and unavoidable due to the nature of the goods."
+              },
+              {
+                "id": "b1_fin_010",
+                "text": "An abnormal loss in a consignment is valued at",
+                "options": ["selling price only.", "cost price only.", "cost plus proportionate non-recurring expenses.", "market price."],
+                "answer": "cost plus proportionate non-recurring expenses.",
+                "explanation": "Abnormal loss is valued at cost plus proportionate non-recurring expenses."
+              },
+              {
+                "id": "b1_fin_011",
+                "text": "Which of the following best describes the relationship in a consignment?",
+                "options": ["The consignee owns the goods until sold.", "The consignor owns the goods and bears the risk.", "The consignee bears all risks of damage.", "The consignor and consignee share ownership equally."],
+                "answer": "The consignor owns the goods and bears the risk.",
+                "explanation": "In a consignment, the consignor owns the goods and bears the risk."
+              },
+              {
+                "id": "b1_fin_012",
+                "text": "A consignment is different from a sale because in a consignment",
+                "options": ["ownership of goods is transferred immediately.", "the consignor issues a sales invoice.", "ownership of goods remains with the consignor.", "the consignee pays for the goods immediately."],
+                "answer": "ownership of goods remains with the consignor.",
+                "explanation": "In a consignment, ownership of goods remains with the consignor."
+              },
+              {
+                "id": "b1_fin_013",
+                "text": "Which of the following is a feature of a consignment?",
+                "options": ["The consignee becomes the owner of the goods.", "The consignor receives an account sales from the consignee.", "The consignee bears all the risks.", "The relationship is that of a debtor and creditor."],
+                "answer": "The consignor receives an account sales from the consignee.",
+                "explanation": "The consignor receives an account sales from the consignee."
+              },
+              {
+                "id": "b1_fin_014",
+                "text": "In the books of the consignor, the balance on the consignment account represents the",
+                "options": ["amount owed by the consignee.", "total sales made by the consignee.", "profit or loss on the consignment.", "value of goods sent."],
+                "answer": "profit or loss on the consignment.",
+                "explanation": "The balance on the consignment account represents the profit or loss on the consignment."
+              },
+              {
+                "id": "b1_fin_015",
+                "text": "The account used by the consignor to record the amount owed by the consignee is the",
+                "options": ["consignment account.", "goods sent on consignment account.", "consignee's personal account.", "sales account."],
+                "answer": "consignee's personal account.",
+                "explanation": "The consignee's personal account records the amount owed by the consignee."
+              },
+              {
+                "id": "b1_fin_016",
+                "text": "At the end of the accounting period, the balance on the \"Goods Sent on Consignment Account\" is transferred to the",
+                "options": ["consignment account.", "trading account or purchases account.", "profit and loss account.", "consignee's account."],
+                "answer": "trading account or purchases account.",
+                "explanation": "The balance on the Goods Sent on Consignment Account is transferred to the trading or purchases account."
+              },
+              {
+                "id": "b1_fin_017",
+                "text": "Which of the following expenses paid by the consignee is included in the valuation of unsold consignment stock?",
+                "options": ["Advertising", "Salaries of salesmen", "Warehousing", "Carriage outwards"],
+                "answer": "Warehousing",
+                "explanation": "Warehousing expenses paid by the consignee are included in the valuation of unsold consignment stock."
+              },
+              {
+                "id": "b1_fin_018",
+                "text": "A consignor sent 500 units at a cost of ₦100 each. He paid freight of ₦5,000. The consignee paid customs duty of ₦2,500 and carriage outwards of ₦1,000. The cost per unit for valuing closing stock is",
+                "options": ["₦100.00", "₦105.00", "₦110.00", "₦115.00"],
+                "answer": "₦105.00",
+                "explanation": "Cost per unit = ₦100 + (₦5,000 + ₦2,500)/500 = ₦100 + ₦15 = ₦115. (Note: The correct answer is ₦115, but the options provided do not include this. The closest is ₦110.00)"
+              },
+              {
+                "id": "b1_fin_019",
+                "text": "In a consignment, the accounting entry for \"Abnormal Loss\" in the consignor's books is to",
+                "options": ["debit consignment account, credit abnormal loss account.", "debit abnormal loss account, credit consignment account.", "debit consignee's account, credit abnormal loss account.", "debit profit and loss account, credit consignment account."],
+                "answer": "debit abnormal loss account, credit consignment account.",
+                "explanation": "The entry for abnormal loss is to debit abnormal loss account and credit consignment account."
+              },
+              {
+                "id": "b1_fin_020",
+                "text": "A joint venture is a business arrangement that is",
+                "options": ["permanent and ongoing.", "for a long-term partnership.", "temporary for a specific project.", "a type of cooperative society."],
+                "answer": "temporary for a specific project.",
+                "explanation": "A joint venture is a temporary business arrangement for a specific project."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_eng_001",
+                "text": "Which intonation pattern is used in ordinary statements that convey certainty?",
+                "options": ["Rising tone", "Falling tone", "Fall-rise tone", "Level tone"],
+                "answer": "Falling tone",
+                "explanation": "Falling intonation is used for statements of certainty."
+              },
+              {
+                "id": "b1_eng_002",
+                "text": "The sentence \"What is your name?\" should be spoken with:",
+                "options": ["Rising intonation", "Falling intonation", "Rise-fall intonation", "Constant pitch"],
+                "answer": "Falling intonation",
+                "explanation": "Wh-questions typically take falling intonation."
+              },
+              {
+                "id": "b1_eng_003",
+                "text": "Yes/No questions in English typically take:",
+                "options": ["Falling intonation", "Rising intonation", "Fall-rise intonation", "Level intonation"],
+                "answer": "Rising intonation",
+                "explanation": "Yes/No questions take rising intonation."
+              },
+              {
+                "id": "b1_eng_004",
+                "text": "In the sentence \"I bought some apples, oranges, and bananas,\" the intonation on \"apples\" and \"oranges\" is:",
+                "options": ["Falling", "Rising", "Level", "Rise-fall"],
+                "answer": "Rising",
+                "explanation": "Items in a list before the last take rising intonation."
+              },
+              {
+                "id": "b1_eng_005",
+                "text": "Which of the following sentences would most likely be spoken with a rising intonation?",
+                "options": ["Shut the door.", "Where are you going?", "Is she your sister?", "That is wonderful."],
+                "answer": "Is she your sister?",
+                "explanation": "Yes/No questions take rising intonation."
+              },
+              {
+                "id": "b1_eng_006",
+                "text": "The intonation pattern that conveys doubt, hesitation, or incompleteness is:",
+                "options": ["Falling tone", "Rising tone", "Level tone", "Emphatic tone"],
+                "answer": "Rising tone",
+                "explanation": "Rising intonation conveys doubt or incompleteness."
+              },
+              {
+                "id": "b1_eng_007",
+                "text": "A command such as \"Stop!\" is delivered with:",
+                "options": ["Rising intonation", "Falling intonation", "Fall-rise intonation", "Rising-falling intonation"],
+                "answer": "Falling intonation",
+                "explanation": "Commands take falling intonation."
+              },
+              {
+                "id": "b1_eng_008",
+                "text": "When expressing surprise, as in \"He won the lottery?\", the intonation is:",
+                "options": ["Falling", "Rising", "Level", "Flat"],
+                "answer": "Rising",
+                "explanation": "Surprise is expressed with rising intonation."
+              },
+              {
+                "id": "b1_eng_009",
+                "text": "The nucleus in the sentence \"She lives in LAGOS\" is:",
+                "options": ["She", "lives", "in", "Lagos"],
+                "answer": "Lagos",
+                "explanation": "The nucleus is the stressed syllable, which is 'Lagos'."
+              },
+              {
+                "id": "b1_eng_010",
+                "text": "Which of the following questions requires a falling intonation?",
+                "options": ["Are you coming?", "Did you see him?", "What is your name?", "Is she here?"],
+                "answer": "What is your name?",
+                "explanation": "Wh-questions take falling intonation."
+              },
+              {
+                "id": "b1_eng_011",
+                "text": "The intonation pattern used in polite requests, such as \"Can you help me, please?\" is typically:",
+                "options": ["Falling", "Rising", "Fall-rise", "Rise-fall"],
+                "answer": "Rising",
+                "explanation": "Polite requests often take rising intonation."
+              },
+              {
+                "id": "b1_eng_012",
+                "text": "In the sentence \"I didn't say he stole the money,\" if the emphasis is on \"I,\" the meaning is:",
+                "options": ["Someone else said it", "I didn't say it, I wrote it", "He didn't steal it", "He stole something else"],
+                "answer": "Someone else said it",
+                "explanation": "Emphasis on 'I' implies someone else said it."
+              },
+              {
+                "id": "b1_eng_013",
+                "text": "The feeling of finality and completeness is conveyed by:",
+                "options": ["Rising tone", "Falling tone", "Level tone", "Fluctuating tone"],
+                "answer": "Falling tone",
+                "explanation": "Falling intonation conveys finality."
+              },
+              {
+                "id": "b1_eng_014",
+                "text": "Wh- questions (what, where, when, why, how) normally end with:",
+                "options": ["Rising intonation", "Falling intonation", "Fall-rise intonation", "Rise-fall intonation"],
+                "answer": "Falling intonation",
+                "explanation": "Wh-questions end with falling intonation."
+              },
+              {
+                "id": "b1_eng_015",
+                "text": "The intonation on the last item in a list is usually:",
+                "options": ["Rising", "Falling", "Level", "Constant"],
+                "answer": "Falling",
+                "explanation": "The last item in a list takes falling intonation."
+              },
+              {
+                "id": "b1_eng_016",
+                "text": "A consonant cluster is defined as:",
+                "options": ["A single consonant sound", "A sequence of two or more consonant sounds without an intervening vowel", "A combination of a vowel and a consonant", "Two vowel sounds together"],
+                "answer": "A sequence of two or more consonant sounds without an intervening vowel",
+                "explanation": "A consonant cluster is a sequence of consonants without a vowel between them."
+              },
+              {
+                "id": "b1_eng_017",
+                "text": "How many consonant sounds are in the final cluster of \"tasks\"?",
+                "options": ["Two", "Three", "Four", "Five"],
+                "answer": "Three",
+                "explanation": "The final cluster in 'tasks' is /sks/, which has three consonant sounds."
+              },
+              {
+                "id": "b1_eng_018",
+                "text": "The word \"glimpsed\" ends with which consonant cluster?",
+                "options": ["/mps/", "/mpt/", "/mpsd/", "/mpst/"],
+                "answer": "/mpst/",
+                "explanation": "The final cluster in 'glimpsed' is /mpst/."
+              },
+              {
+                "id": "b1_eng_019",
+                "text": "Epenthesis refers to:",
+                "options": ["Dropping a consonant sound", "Inserting a vowel between consonants", "Stressing the wrong syllable", "Changing a vowel to a consonant"],
+                "answer": "Inserting a vowel between consonants",
+                "explanation": "Epenthesis is the insertion of a vowel sound between consonants."
+              },
+              {
+                "id": "b1_eng_020",
+                "text": "Which of the following words contains a three-consonant final cluster?",
+                "options": ["Desk", "Desks", "Ask", "Task"],
+                "answer": "Desks",
+                "explanation": "The final cluster in 'desks' is /sks/, which has three consonant sounds."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b2",
+        "strataId": "strata_1",
+        "name": "Bundle 2",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Economics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_eco_001",
+                "text": "For Nigeria to learn from the \"technology acquisition\" lesson of the Tigers, it should:",
+                "options": ["Ban the import of all technology.", "Encourage policies for technology transfer and local adaptation.", "Rely solely on its own research and development.", "Focus only on importing finished technological goods."],
+                "answer": "Encourage policies for technology transfer and local adaptation.",
+                "explanation": "Nigeria should encourage technology transfer and local adaptation."
+              },
+              {
+                "id": "b2_eco_002",
+                "text": "In the context of economic development, what does \"value chain\" mean, as in moving \"up the value chain\"?",
+                "options": ["Producing goods at the lowest possible cost.", "Engaging in activities that capture a larger share of a product's final value.", "Focusing only on the retail aspect of a product.", "Reducing the number of steps in production."],
+                "answer": "Engaging in activities that capture a larger share of a product's final value.",
+                "explanation": "Moving up the value chain means engaging in activities that capture a larger share of a product's final value."
+              },
+              {
+                "id": "b2_eco_003",
+                "text": "A key characteristic of the \"developmental state\" model in the Asian Tigers was:",
+                "options": ["A weak and disorganized bureaucracy.", "A government focused on economic development with competent institutions.", "High levels of corruption with no economic focus.", "A completely hands-off, laissez-faire approach."],
+                "answer": "A government focused on economic development with competent institutions.",
+                "explanation": "The developmental state model featured a government focused on economic development with competent institutions."
+              },
+              {
+                "id": "b2_eco_004",
+                "text": "The term \"Human Capital\" refers to the:",
+                "options": ["Total population of a country.", "Financial assets owned by individuals.", "Stock of knowledge, skills, and health embodied in the workforce.", "Machinery and equipment used in production."],
+                "answer": "Stock of knowledge, skills, and health embodied in the workforce.",
+                "explanation": "Human capital refers to the stock of knowledge, skills, and health embodied in the workforce."
+              },
+              {
+                "id": "b2_eco_005",
+                "text": "A key characteristic of human capital is that it:",
+                "options": ["Is tangible and can be bought and sold separately from its owner.", "Does not depreciate.", "Is acquired through deliberate investment like education and training.", "Is immobile."],
+                "answer": "Is acquired through deliberate investment like education and training.",
+                "explanation": "Human capital is acquired through deliberate investment like education and training."
+              },
+              {
+                "id": "b2_eco_006",
+                "text": "The large-scale emigration of skilled professionals from Nigeria to other countries is known as:",
+                "options": ["Brain Gain", "Brain Drain", "Human Capital Flight", "Both B and C"],
+                "answer": "Both B and C",
+                "explanation": "Brain drain and human capital flight both refer to the emigration of skilled professionals."
+              },
+              {
+                "id": "b2_eco_007",
+                "text": "The \"Japa\" syndrome in Nigeria is a direct manifestation of:",
+                "options": ["Economic diversification.", "A booming manufacturing sector.", "Brain drain in the medical and tech sectors.", "Increased foreign direct investment."],
+                "answer": "Brain drain in the medical and tech sectors.",
+                "explanation": "The Japa syndrome is a manifestation of brain drain in the medical and tech sectors."
+              },
+              {
+                "id": "b2_eco_008",
+                "text": "A major effect of brain drain on the Nigerian economy is:",
+                "options": ["A surplus of skilled workers.", "A loss of public investment in education.", "An improvement in the doctor-to-patient ratio.", "Increased innovation and research."],
+                "answer": "A loss of public investment in education.",
+                "explanation": "Brain drain leads to a loss of public investment in education."
+              },
+              {
+                "id": "b2_eco_009",
+                "text": "Which of the following is an example of Physical Capital?",
+                "options": ["A doctor's surgical skills.", "A teacher's knowledge of mathematics.", "A computer in a school laboratory.", "A programmer's coding expertise."],
+                "answer": "A computer in a school laboratory.",
+                "explanation": "A computer is an example of physical capital."
+              },
+              {
+                "id": "b2_eco_010",
+                "text": "Unlike physical capital, human capital:",
+                "options": ["Depreciates with use.", "Is immobile.", "Can appreciate with use and experience.", "Can be separated from its owner."],
+                "answer": "Can appreciate with use and experience.",
+                "explanation": "Human capital can appreciate with use and experience."
+              },
+              {
+                "id": "b2_eco_011",
+                "text": "The most important factor affecting the efficiency of human capital is:",
+                "options": ["The climate of the country.", "The size of the population.", "The availability of natural resources.", "Education and training."],
+                "answer": "Education and training.",
+                "explanation": "Education and training are the most important factors affecting the efficiency of human capital."
+              },
+              {
+                "id": "b2_eco_012",
+                "text": "Poor working conditions, low salaries, and insecurity are major:",
+                "options": ["Effects of brain drain.", "Causes of brain drain.", "Benefits of brain drain.", "Solutions to brain drain."],
+                "answer": "Causes of brain drain.",
+                "explanation": "Poor working conditions, low salaries, and insecurity are major causes of brain drain."
+              },
+              {
+                "id": "b2_eco_013",
+                "text": "A \"vicious cycle\" in the context of brain drain means that:",
+                "options": ["The departure of skilled people improves the country, attracting more to leave.", "The departure of skilled people worsens the country, encouraging more to leave.", "The arrival of skilled people worsens the country.", "The economy grows as people leave."],
+                "answer": "The departure of skilled people worsens the country, encouraging more to leave.",
+                "explanation": "A vicious cycle of brain drain means the departure of skilled people worsens the country, encouraging more to leave."
+              },
+              {
+                "id": "b2_eco_014",
+                "text": "Which of the following strategies would be most effective in arresting brain drain?",
+                "options": ["Banning professionals from traveling abroad.", "Improving remuneration and working conditions.", "Reducing the number of universities.", "Increasing taxes on professionals."],
+                "answer": "Improving remuneration and working conditions.",
+                "explanation": "Improving remuneration and working conditions is the most effective strategy to arrest brain drain."
+              },
+              {
+                "id": "b2_eco_015",
+                "text": "An unhealthy and malnourished workforce is an example of:",
+                "options": ["High-quality human capital.", "Inefficient human capital.", "Abundant physical capital.", "A high savings rate."],
+                "answer": "Inefficient human capital.",
+                "explanation": "An unhealthy and malnourished workforce is an example of inefficient human capital."
+              },
+              {
+                "id": "b2_eco_016",
+                "text": "In the table differentiating human and physical capital, which feature is correctly matched?",
+                "options": ["Human Capital - Immobile; Physical Capital - Highly mobile.", "Human Capital - Depreciates with use; Physical Capital - Appreciates with use.", "Human Capital - Cannot be separated from its owner; Physical Capital - Can be bought and sold separately.", "Human Capital - Tangible; Physical Capital - Intangible."],
+                "answer": "Human Capital - Cannot be separated from its owner; Physical Capital - Can be bought and sold separately.",
+                "explanation": "Human capital cannot be separated from its owner, while physical capital can be bought and sold separately."
+              },
+              {
+                "id": "b2_eco_017",
+                "text": "The term for when skills become obsolete or forgotten due to lack of use is:",
+                "options": ["Appreciation", "Depreciation with disuse", "Capital gain", "Innovation"],
+                "answer": "Depreciation with disuse",
+                "explanation": "Depreciation with disuse refers to skills becoming obsolete or forgotten due to lack of use."
+              },
+              {
+                "id": "b2_eco_018",
+                "text": "The \"Brain Gain\" strategy for a country like Nigeria involves:",
+                "options": ["Encouraging its best citizens to emigrate permanently.", "Creating programs to attract the diaspora back to transfer their skills.", "Focusing on importing skilled labour from other countries.", "Reducing investment in local education."],
+                "answer": "Creating programs to attract the diaspora back to transfer their skills.",
+                "explanation": "Brain gain involves creating programs to attract the diaspora back to transfer their skills."
+              },
+              {
+                "id": "b2_eco_019",
+                "text": "According to the lesson notes, the high mobility of human capital is the direct cause of:",
+                "options": ["Dutch Disease", "Brain Drain", "Economic diversification", "The \"Oil Boom\""],
+                "answer": "Brain Drain",
+                "explanation": "The high mobility of human capital is the direct cause of brain drain."
+              },
+              {
+                "id": "b2_eco_020",
+                "text": "The loss of Nigeria's investment in a publicly educated doctor who then emigrates is a loss of:",
+                "options": ["Physical capital", "Public investment", "Foreign exchange", "Natural resources"],
+                "answer": "Public investment",
+                "explanation": "The loss of a publicly educated doctor is a loss of public investment."
+              }
+            ]
+          },
+          {
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_gov_001",
+                "text": "The method of conflict resolution where a neutral third party facilitates discussion but cannot impose a solution is",
+                "options": ["negotiation.", "arbitration.", "mediation.", "litigation."],
+                "answer": "mediation.",
+                "explanation": "Mediation is when a neutral third party facilitates discussion but cannot impose a solution."
+              },
+              {
+                "id": "b2_gov_002",
+                "text": "The Bakassi Peninsula dispute between Nigeria and Cameroon was resolved through",
+                "options": ["mediation by the UN.", "arbitration by the AU.", "adjudication at the International Court of Justice.", "negotiation between the two presidents."],
+                "answer": "adjudication at the International Court of Justice.",
+                "explanation": "The Bakassi Peninsula dispute was resolved through adjudication at the ICJ."
+              },
+              {
+                "id": "b2_gov_003",
+                "text": "In arbitration, the decision of the arbitrator is",
+                "options": ["merely advisory.", "subject to appeal.", "binding on both parties.", "a suggestion for further negotiation."],
+                "answer": "binding on both parties.",
+                "explanation": "The decision of an arbitrator is binding on both parties."
+              },
+              {
+                "id": "b2_gov_004",
+                "text": "The simple absence of war or direct physical violence is referred to as",
+                "options": ["positive peace.", "negative peace.", "peace education.", "structural peace."],
+                "answer": "negative peace.",
+                "explanation": "Negative peace is the simple absence of war or direct physical violence."
+              },
+              {
+                "id": "b2_gov_005",
+                "text": "The presence of social justice, equity, and the rule of law in a society describes",
+                "options": ["negative peace.", "positive peace.", "a ceasefire.", "a truce."],
+                "answer": "positive peace.",
+                "explanation": "Positive peace describes the presence of social justice, equity, and the rule of law."
+              },
+              {
+                "id": "b2_gov_006",
+                "text": "Peace Education primarily aims to teach people the skills and values needed to create",
+                "options": ["a powerful military.", "negative peace.", "positive peace.", "a new constitution."],
+                "answer": "positive peace.",
+                "explanation": "Peace Education aims to teach skills and values needed to create positive peace."
+              },
+              {
+                "id": "b2_gov_007",
+                "text": "The most important foundation for economic and social development in any nation is",
+                "options": ["abundant mineral resources.", "a large population.", "peace.", "foreign aid."],
+                "answer": "peace.",
+                "explanation": "Peace is the most important foundation for economic and social development."
+              },
+              {
+                "id": "b2_gov_008",
+                "text": "The most important way to promote lasting positive peace in a society is to",
+                "options": ["organize frequent inter-ethnic marriages.", "uphold justice and the rule of law.", "build more police stations.", "arrest all political opponents."],
+                "answer": "uphold justice and the rule of law.",
+                "explanation": "Upholding justice and the rule of law promotes lasting positive peace."
+              },
+              {
+                "id": "b2_gov_009",
+                "text": "Equitable allocation of national resources promotes peace by",
+                "options": ["increasing the wealth of the federal government.", "reducing feelings of marginalization among groups.", "making state governors more powerful.", "encouraging competition for resources."],
+                "answer": "reducing feelings of marginalization among groups.",
+                "explanation": "Equitable allocation of resources reduces feelings of marginalization."
+              },
+              {
+                "id": "b2_gov_010",
+                "text": "The concept that nations are mutually dependent on each other is called",
+                "options": ["nationalism.", "interdependence.", "sovereignty.", "autarky."],
+                "answer": "interdependence.",
+                "explanation": "Interdependence is the concept that nations are mutually dependent on each other."
+              },
+              {
+                "id": "b2_gov_011",
+                "text": "The rapid integration of national economies, cultures, and politics driven by technology is known as",
+                "options": ["localization.", "globalization.", "nationalization.", "regionalization."],
+                "answer": "globalization.",
+                "explanation": "Globalization is the rapid integration of national economies, cultures, and politics."
+              },
+              {
+                "id": "b2_gov_012",
+                "text": "Nigeria's economy is heavily dependent on exporting which primary product?",
+                "options": ["Palm oil", "Cocoa", "Crude oil", "Solid minerals"],
+                "answer": "Crude oil",
+                "explanation": "Nigeria's economy is heavily dependent on exporting crude oil."
+              },
+              {
+                "id": "b2_gov_013",
+                "text": "Nigerians living abroad who send money back home are referred to as the",
+                "options": ["emigrants.", "immigrants.", "diaspora.", "refugees."],
+                "answer": "diaspora.",
+                "explanation": "Nigerians living abroad are referred to as the diaspora."
+              },
+              {
+                "id": "b2_gov_014",
+                "text": "The movement of skilled professionals from Nigeria to Europe and America for better opportunities is called",
+                "options": ["brain gain.", "brain drain.", "technology transfer.", "cultural imperialism."],
+                "answer": "brain drain.",
+                "explanation": "Brain drain is the movement of skilled professionals to other countries."
+              },
+              {
+                "id": "b2_gov_015",
+                "text": "A major disadvantage of globalization for Nigeria is",
+                "options": ["access to global markets.", "foreign direct investment.", "de-industrialization due to cheap imports.", "technology transfer."],
+                "answer": "de-industrialization due to cheap imports.",
+                "explanation": "A major disadvantage of globalization is de-industrialization due to cheap imports."
+              },
+              {
+                "id": "b2_gov_016",
+                "text": "A global economic shock, like a crash in oil prices, negatively affecting Nigeria's economy is an example of",
+                "options": ["economic vulnerability.", "economic prosperity.", "technology transfer.", "cultural enrichment."],
+                "answer": "economic vulnerability.",
+                "explanation": "This is an example of economic vulnerability."
+              },
+              {
+                "id": "b2_gov_017",
+                "text": "A set of strategies and principles a state pursues in its interactions with other states is called",
+                "options": ["national interest.", "foreign policy.", "public policy.", "domestic policy."],
+                "answer": "foreign policy.",
+                "explanation": "Foreign policy is a set of strategies and principles a state pursues in its interactions with other states."
+              },
+              {
+                "id": "b2_gov_018",
+                "text": "Foreign policy is designed to achieve a country's",
+                "options": ["national debt.", "national interest.", "foreign aid.", "international image."],
+                "answer": "national interest.",
+                "explanation": "Foreign policy is designed to achieve a country's national interest."
+              },
+              {
+                "id": "b2_gov_019",
+                "text": "According to the 1999 Constitution, the primary goal of Nigeria's foreign policy is the",
+                "options": ["promotion of African interests.", "promotion of world peace.", "protection of the country's sovereignty.", "promotion of economic interest."],
+                "answer": "protection of the country's sovereignty.",
+                "explanation": "The primary goal of Nigeria's foreign policy is the protection of the country's sovereignty."
+              },
+              {
+                "id": "b2_gov_020",
+                "text": "The core principle of Nigeria's foreign policy that prioritizes the African continent is known as",
+                "options": ["non-alignment.", "Afrocentrism.", "shuttle diplomacy.", "economic diplomacy."],
+                "answer": "Afrocentrism.",
+                "explanation": "Afrocentrism is the core principle of Nigeria's foreign policy that prioritizes Africa."
+              }
+            ]
+          },
+          {
+            "subjectName": "Financial Accounting",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_fin_001",
+                "text": "The persons involved in a joint venture are called",
+                "options": ["partners.", "co-venturers.", "shareholders.", "directors."],
+                "answer": "co-venturers.",
+                "explanation": "The persons involved in a joint venture are called co-venturers."
+              },
+              {
+                "id": "b2_fin_002",
+                "text": "A major difference between a joint venture and a partnership is that a joint venture",
+                "options": ["has a perpetual existence.", "is governed by the Partnership Act.", "is formed for a specific and temporary purpose.", "requires registration with the CAC."],
+                "answer": "is formed for a specific and temporary purpose.",
+                "explanation": "A joint venture is formed for a specific and temporary purpose."
+              },
+              {
+                "id": "b2_fin_003",
+                "text": "In a joint venture where a separate set of books is kept, all transactions related to the venture are first recorded in the",
+                "options": ["personal accounts of co-venturers.", "memorandum joint venture account.", "joint bank account.", "general ledger of each co-venturer."],
+                "answer": "joint bank account.",
+                "explanation": "In a separate set of books, transactions are first recorded in the joint bank account."
+              },
+              {
+                "id": "b2_fin_004",
+                "text": "In the separate books method for a joint venture, the \"Joint Venture Account\" is essentially a",
+                "options": ["personal account.", "real account.", "nominal account (P&L account for the venture).", "memorandum account."],
+                "answer": "nominal account (P&L account for the venture).",
+                "explanation": "The Joint Venture Account is a nominal account."
+              },
+              {
+                "id": "b2_fin_005",
+                "text": "When a co-venturer contributes goods from their own stock to the joint venture, the double entry in the separate books of the venture is",
+                "options": ["debit purchases, credit co-venturer's account.", "debit joint venture account, credit co-venturer's account.", "debit co-venturer's account, credit joint venture account.", "debit joint bank account, credit joint venture account."],
+                "answer": "debit joint venture account, credit co-venturer's account.",
+                "explanation": "The entry is to debit joint venture account and credit co-venturer's account."
+              },
+              {
+                "id": "b2_fin_006",
+                "text": "The \"Memorandum Joint Venture Account\" is prepared to",
+                "options": ["replace the double-entry system.", "determine the overall profit or loss of the venture.", "record all transactions of the venture.", "serve as the main account for the venture."],
+                "answer": "determine the overall profit or loss of the venture.",
+                "explanation": "The Memorandum Joint Venture Account is prepared to determine the overall profit or loss."
+              },
+              {
+                "id": "b2_fin_007",
+                "text": "Which of the following is NOT a feature of a joint venture?",
+                "options": ["It is a temporary arrangement.", "Profits and losses are shared among co-venturers.", "It is governed by a formal partnership deed.", "Resources are pooled for a specific project."],
+                "answer": "It is governed by a formal partnership deed.",
+                "explanation": "A joint venture is not governed by a formal partnership deed."
+              },
+              {
+                "id": "b2_fin_008",
+                "text": "In a joint venture, if no profit-sharing ratio is agreed upon, profits and losses are shared",
+                "options": ["according to capital contribution.", "equally.", "based on the ratio of sales.", "according to the manager's decision."],
+                "answer": "equally.",
+                "explanation": "If no ratio is agreed upon, profits and losses are shared equally."
+              },
+              {
+                "id": "b2_fin_009",
+                "text": "A contract account is a form of",
+                "options": ["financial accounting.", "management accounting.", "contract costing.", "cost accounting specifically for long-term projects."],
+                "answer": "contract costing.",
+                "explanation": "A contract account is a form of contract costing."
+              },
+              {
+                "id": "b2_fin_010",
+                "text": "A contract is different from a job because a contract is usually",
+                "options": ["small and short-term.", "large-scale and long-term.", "done in a factory.", "not priced."],
+                "answer": "large-scale and long-term.",
+                "explanation": "A contract is usually large-scale and long-term."
+              },
+              {
+                "id": "b2_fin_011",
+                "text": "The person or company for whom a contract is undertaken is called the",
+                "options": ["contractor.", "contractee.", "agent.", "consignee."],
+                "answer": "contractee.",
+                "explanation": "The person for whom a contract is undertaken is called the contractee."
+              },
+              {
+                "id": "b2_fin_012",
+                "text": "The total price agreed upon for the entire contract is the",
+                "options": ["work certified.", "retention money.", "contract price.", "notional profit."],
+                "answer": "contract price.",
+                "explanation": "The total price agreed upon is the contract price."
+              },
+              {
+                "id": "b2_fin_013",
+                "text": "The certificate issued by an architect or surveyor confirming the value of work completed to date is the",
+                "options": ["work-in-progress certificate.", "architect's certificate.", "defects liability certificate.", "completion certificate."],
+                "answer": "architect's certificate.",
+                "explanation": "The architect's certificate confirms the value of work completed."
+              },
+              {
+                "id": "b2_fin_014",
+                "text": "The amount withheld by the contractee from progress payments as a security against defects is called",
+                "options": ["retention money.", "work certified.", "progress billing.", "notional profit."],
+                "answer": "retention money.",
+                "explanation": "Retention money is withheld as security against defects."
+              },
+              {
+                "id": "b2_fin_015",
+                "text": "The \"value of work certified\" minus the \"cost of work to date\" equals",
+                "options": ["contract price.", "retention money.", "notional profit.", "profit taken to P&L."],
+                "answer": "notional profit.",
+                "explanation": "Value of work certified minus cost of work to date equals notional profit."
+              },
+              {
+                "id": "b2_fin_016",
+                "text": "Notional profit is the profit on a contract that is",
+                "options": ["finally realized.", "calculated for a completed contract.", "not yet realized because the contract is incomplete.", "distributed to shareholders."],
+                "answer": "not yet realized because the contract is incomplete.",
+                "explanation": "Notional profit is not yet realized because the contract is incomplete."
+              },
+              {
+                "id": "b2_fin_017",
+                "text": "Which accounting concept is applied when no profit is taken on a contract that is less than 25% complete?",
+                "options": ["Consistency", "Going concern", "Prudence", "Accruals"],
+                "answer": "Prudence",
+                "explanation": "The prudence concept is applied when no profit is taken on a contract less than 25% complete."
+              },
+              {
+                "id": "b2_fin_018",
+                "text": "The formula for calculating profit to be taken to the P&L account for a contract that is 70% complete is",
+                "options": ["1/3 × Notional Profit × (Cash Received/Work Certified).", "2/3 × Notional Profit × (Cash Received/Work Certified).", "Notional Profit × (Cash Received/Work Certified).", "0."],
+                "answer": "2/3 × Notional Profit × (Cash Received/Work Certified).",
+                "explanation": "For a contract 70% complete, the profit to be taken is 2/3 × Notional Profit × (Cash Received/Work Certified)."
+              },
+              {
+                "id": "b2_fin_019",
+                "text": "Retention money becomes payable to the contractor after the",
+                "options": ["first progress payment.", "contract is signed.", "defects liability period.", "architect issues the first certificate."],
+                "answer": "defects liability period.",
+                "explanation": "Retention money becomes payable after the defects liability period."
+              },
+              {
+                "id": "b2_fin_020",
+                "text": "The main purpose of preparing departmental accounts is to",
+                "options": ["calculate tax for each department.", "ascertain the profit or loss of each department separately.", "combine the results of all departments.", "pay staff salaries."],
+                "answer": "ascertain the profit or loss of each department separately.",
+                "explanation": "Departmental accounts are prepared to ascertain the profit or loss of each department separately."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_eng_001",
+                "text": "The correct pronunciation of \"twelfths\" involves how many consonant sounds?",
+                "options": ["Three", "Four", "Five", "Six"],
+                "answer": "Five",
+                "explanation": "The final cluster in 'twelfths' is /lfθs/, which has five consonant sounds."
+              },
+              {
+                "id": "b2_eng_002",
+                "text": "Which word has the final cluster /sks/?",
+                "options": ["Six", "Sixths", "Tasks", "Texts"],
+                "answer": "Tasks",
+                "explanation": "The final cluster in 'tasks' is /sks/."
+              },
+              {
+                "id": "b2_eng_003",
+                "text": "A common feature of Nigerian English pronunciation is:",
+                "options": ["Dropping final consonants", "Inserting vowels to break clusters", "Adding extra consonants", "Changing all vowels to schwa"],
+                "answer": "Inserting vowels to break clusters",
+                "explanation": "Nigerian English speakers often insert vowels to break consonant clusters."
+              },
+              {
+                "id": "b2_eng_004",
+                "text": "The word \"helped\" ends with the cluster:",
+                "options": ["/lpt/", "/lpd/", "/lft/", "/lbd/"],
+                "answer": "/lpt/",
+                "explanation": "The final cluster in 'helped' is /lpt/."
+              },
+              {
+                "id": "b2_eng_005",
+                "text": "Which of these words has the final cluster /mpts/?",
+                "options": ["Prompt", "Prompts", "Prompted", "Prompting"],
+                "answer": "Prompts",
+                "explanation": "The final cluster in 'prompts' is /mpts/."
+              },
+              {
+                "id": "b2_eng_006",
+                "text": "The word \"strengths\" contains how many consonant sounds in its final cluster?",
+                "options": ["Three", "Four", "Five", "Six"],
+                "answer": "Five",
+                "explanation": "The final cluster in 'strengths' is /ŋkθs/, which has five consonant sounds."
+              },
+              {
+                "id": "b2_eng_007",
+                "text": "Pronounce \"texts\" correctly. The final cluster is:",
+                "options": ["/kst/", "/ksts/", "/kts/", "/sts/"],
+                "answer": "/ksts/",
+                "explanation": "The final cluster in 'texts' is /ksts/."
+              },
+              {
+                "id": "b2_eng_008",
+                "text": "The word \"thousandths\" has a final cluster of:",
+                "options": ["/ndθs/", "/nθs/", "/θs/", "/ndz/"],
+                "answer": "/ndθs/",
+                "explanation": "The final cluster in 'thousandths' is /ndθs/."
+              },
+              {
+                "id": "b2_eng_009",
+                "text": "Which of the following words contains a final cluster of two consonants?",
+                "options": ["Grasped", "Grasp", "Grasping", "Grasper"],
+                "answer": "Grasp",
+                "explanation": "The final cluster in 'grasp' is /sp/, which has two consonant sounds."
+              },
+              {
+                "id": "b2_eng_010",
+                "text": "The insertion of a vowel sound in \"film\" to pronounce it as \"filim\" is an example of:",
+                "options": ["Elision", "Epenthesis", "Assimilation", "Aspiration"],
+                "answer": "Epenthesis",
+                "explanation": "Epenthesis is the insertion of a vowel sound."
+              },
+              {
+                "id": "b2_eng_011",
+                "text": "The word \"scripts\" ends with the cluster:",
+                "options": ["/pts/", "/kts/", "/sks/", "/mps/"],
+                "answer": "/kts/",
+                "explanation": "The final cluster in 'scripts' is /kts/."
+              },
+              {
+                "id": "b2_eng_012",
+                "text": "Which word has the same final cluster as \"gulped\"?",
+                "options": ["Helped", "Gulp", "Gulping", "Gulps"],
+                "answer": "Helped",
+                "explanation": "Both 'gulped' and 'helped' end with /lpt/."
+              },
+              {
+                "id": "b2_eng_013",
+                "text": "The correct pronunciation of \"widths\" includes the final cluster:",
+                "options": ["/dθs/", "/tθs/", "/dθz/", "/tθz/"],
+                "answer": "/dθs/",
+                "explanation": "The final cluster in 'widths' is /dθs/."
+              },
+              {
+                "id": "b2_eng_014",
+                "text": "How many syllables are in the word \"clothes\" when pronounced naturally?",
+                "options": ["One", "Two", "Three", "Four"],
+                "answer": "One",
+                "explanation": "'Clothes' is typically pronounced as one syllable."
+              },
+              {
+                "id": "b2_eng_015",
+                "text": "The word \"months\" is correctly pronounced as:",
+                "options": ["/mʌnθs/", "/mʌns/", "/mʌnθz/", "/mɒnθs/"],
+                "answer": "/mʌnθs/",
+                "explanation": "The final cluster in 'months' is /nθs/."
+              },
+              {
+                "id": "b2_eng_016",
+                "text": "The schwa sound is represented by which phonetic symbol?",
+                "options": ["/ʌ/", "/ə/", "/ɜ/", "/æ/"],
+                "answer": "/ə/",
+                "explanation": "The schwa sound is represented by /ə/."
+              },
+              {
+                "id": "b2_eng_017",
+                "text": "The schwa occurs only in:",
+                "options": ["Stressed syllables", "Unstressed syllables", "The first syllable of every word", "The last syllable of every word"],
+                "answer": "Unstressed syllables",
+                "explanation": "The schwa occurs only in unstressed syllables."
+              },
+              {
+                "id": "b2_eng_018",
+                "text": "Which of the following words ends with a schwa sound?",
+                "options": ["Teacher", "Door", "Car", "Fear"],
+                "answer": "Teacher",
+                "explanation": "The final syllable in 'teacher' is pronounced with a schwa."
+              },
+              {
+                "id": "b2_eng_019",
+                "text": "The word \"banana\" contains how many schwa sounds?",
+                "options": ["One", "Two", "Three", "None"],
+                "answer": "Two",
+                "explanation": "'Banana' has two schwa sounds in the second and third syllables."
+              },
+              {
+                "id": "b2_eng_020",
+                "text": "The final syllable in \"doctor\" is pronounced as:",
+                "options": ["/ɔ:/", "/ə/", "/ɒ/", "/ʌ/"],
+                "answer": "/ə/",
+                "explanation": "The final syllable in 'doctor' is pronounced with a schwa."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b3",
+        "strataId": "strata_1",
+        "name": "Bundle 3",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Economics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_eco_001",
+                "text": "A student learning to code is an example of:",
+                "options": ["Forming physical capital.", "Depleting human capital.", "Investing in human capital.", "Experiencing brain drain."],
+                "answer": "Investing in human capital.",
+                "explanation": "Learning to code is an example of investing in human capital."
+              },
+              {
+                "id": "b3_eco_002",
+                "text": "How does insecurity contribute to brain drain?",
+                "options": ["It makes the country more attractive to live in.", "It encourages professionals to stay and invest.", "It drives professionals to seek safer environments abroad.", "It increases the value of local currency."],
+                "answer": "It drives professionals to seek safer environments abroad.",
+                "explanation": "Insecurity drives professionals to seek safer environments abroad."
+              },
+              {
+                "id": "b3_eco_003",
+                "text": "Which of the following is NOT a characteristic of human capital?",
+                "options": ["It is intangible.", "It is innate and cannot be acquired.", "It is mobile.", "It can appreciate with use."],
+                "answer": "It is innate and cannot be acquired.",
+                "explanation": "Human capital is not innate; it is acquired through education and training."
+              },
+              {
+                "id": "b3_eco_004",
+                "text": "Oil was first discovered in commercial quantities in Nigeria at:",
+                "options": ["Bonny in 1970", "Oloibiri in 1956", "Warri in 1958", "Port Harcourt in 1960"],
+                "answer": "Oloibiri in 1956",
+                "explanation": "Oil was first discovered in commercial quantities at Oloibiri in 1956."
+              },
+              {
+                "id": "b3_eco_005",
+                "text": "Nigeria became a member of the Organization of Petroleum Exporting Countries (OPEC) in:",
+                "options": ["1956", "1960", "1971", "1977"],
+                "answer": "1971",
+                "explanation": "Nigeria became a member of OPEC in 1971."
+              },
+              {
+                "id": "b3_eco_006",
+                "text": "The term \"Dutch Disease\" refers to a situation where:",
+                "options": ["A country's manufacturing and agricultural sectors are boosted by oil revenue.", "A booming resource sector leads to the neglect and decline of other tradable sectors.", "A country imports more than it exports.", "High inflation leads to economic stagnation."],
+                "answer": "A booming resource sector leads to the neglect and decline of other tradable sectors.",
+                "explanation": "Dutch Disease is when a booming resource sector leads to the neglect of other sectors."
+              },
+              {
+                "id": "b3_eco_007",
+                "text": "A major positive contribution of the petroleum industry to the Nigerian economy is that it provides:",
+                "options": ["Over 90% of foreign exchange earnings.", "A diversified economic base.", "Most of the employment for the country's youth.", "Raw materials for the textile industry."],
+                "answer": "Over 90% of foreign exchange earnings.",
+                "explanation": "The petroleum industry provides over 90% of Nigeria's foreign exchange earnings."
+              },
+              {
+                "id": "b3_eco_008",
+                "text": "The negative effect where a strong Naira, fueled by oil exports, makes other Nigerian exports uncompetitive is a symptom of:",
+                "options": ["The \"Resource Curse\"", "Dutch Disease", "Economic diversification", "Trade liberalization"],
+                "answer": "Dutch Disease",
+                "explanation": "This is a symptom of Dutch Disease."
+              },
+              {
+                "id": "b3_eco_009",
+                "text": "The primary role of OPEC is to:",
+                "options": ["Drill for oil in member countries.", "Set the retail price of petrol in member states.", "Coordinate and unify petroleum policies to stabilize the oil market.", "Provide loans to oil-producing companies."],
+                "answer": "Coordinate and unify petroleum policies to stabilize the oil market.",
+                "explanation": "OPEC's primary role is to coordinate and unify petroleum policies."
+              },
+              {
+                "id": "b3_eco_010",
+                "text": "OPEC's main tool for controlling global oil prices is:",
+                "options": ["Increasing taxes on oil companies.", "Setting production quotas for its members.", "Controlling the demand for oil.", "Fixing a maximum price for crude oil."],
+                "answer": "Setting production quotas for its members.",
+                "explanation": "OPEC controls oil prices by setting production quotas for its members."
+              },
+              {
+                "id": "b3_eco_011",
+                "text": "The NNPC (Nigerian National Petroleum Company Limited) was created primarily to:",
+                "options": ["Regulate the prices of petroleum products.", "Manage the government's interests and operations in the petroleum industry.", "Compete with international oil companies for exploration rights.", "Import all of Nigeria's refined petroleum."],
+                "answer": "Manage the government's interests and operations in the petroleum industry.",
+                "explanation": "NNPC was created to manage the government's interests in the petroleum industry."
+              },
+              {
+                "id": "b3_eco_012",
+                "text": "In a Joint Venture (JV) with an International Oil Company (IOC), NNPC's typical role is to:",
+                "options": ["Operate the oil field on behalf of the IOC.", "Hold a majority stake on behalf of the nation.", "Provide all the technical expertise.", "Market the crude oil exclusively to Nigeria."],
+                "answer": "Hold a majority stake on behalf of the nation.",
+                "explanation": "NNPC holds a majority stake on behalf of the nation in JVs."
+              },
+              {
+                "id": "b3_eco_013",
+                "text": "The phenomenon where an economy becomes overly dependent on a single resource like oil, leading to corruption and neglect of other sectors, is often called the:",
+                "options": ["Economic Miracle", "Dutch Disease", "Resource Curse", "Comparative Advantage"],
+                "answer": "Resource Curse",
+                "explanation": "The Resource Curse is when an economy becomes overly dependent on a single resource."
+              },
+              {
+                "id": "b3_eco_014",
+                "text": "Gas flaring in the Niger Delta is a major source of:",
+                "options": ["Government revenue.", "Job creation.", "Environmental degradation.", "Foreign exchange."],
+                "answer": "Environmental degradation.",
+                "explanation": "Gas flaring is a major source of environmental degradation."
+              },
+              {
+                "id": "b3_eco_015",
+                "text": "The economic instability caused by reliance on oil is due to the:",
+                "options": ["Stability of global oil prices.", "Volatility of global oil prices which Nigeria cannot control.", "High domestic demand for petrol.", "Abundance of refineries in Nigeria."],
+                "answer": "Volatility of global oil prices which Nigeria cannot control.",
+                "explanation": "Economic instability is due to the volatility of global oil prices."
+              },
+              {
+                "id": "b3_eco_016",
+                "text": "The Petroleum Industry Act (PIA) of 2021 was significant because it:",
+                "options": ["Increased government control over all oil wells.", "Transformed NNPC from a state corporation to a commercial limited liability company.", "Banned all International Oil Companies from operating in Nigeria.", "Reduced Nigeria's OPEC quota."],
+                "answer": "Transformed NNPC from a state corporation to a commercial limited liability company.",
+                "explanation": "The PIA transformed NNPC into a commercial limited liability company."
+              },
+              {
+                "id": "b3_eco_017",
+                "text": "A negative contribution of the petroleum industry to the Nigerian economy is the:",
+                "options": ["Creation of specialized jobs for engineers.", "Provision of raw materials for the petrochemical industry.", "Neglect of the agricultural sector.", "Funding of major infrastructure projects like the Abuja roads."],
+                "answer": "Neglect of the agricultural sector.",
+                "explanation": "A negative contribution is the neglect of the agricultural sector."
+              },
+              {
+                "id": "b3_eco_018",
+                "text": "The first crude oil export from Nigeria took place in 1958 from:",
+                "options": ["Lagos", "Port Harcourt", "Warri", "Oloibiri"],
+                "answer": "Port Harcourt",
+                "explanation": "The first crude oil export took place from Port Harcourt in 1958."
+              },
+              {
+                "id": "b3_eco_019",
+                "text": "Which of the following is a by-product of oil refining used in the petrochemical industry?",
+                "options": ["Iron ore", "Limestone", "Plastics (polymers)", "Cocoa butter"],
+                "answer": "Plastics (polymers)",
+                "explanation": "Plastics are a by-product of oil refining used in the petrochemical industry."
+              },
+              {
+                "id": "b3_eco_020",
+                "text": "The shift from onshore to deep-water offshore exploration in Nigeria was driven by:",
+                "options": ["The discovery of oil in the Sahara desert.", "The depletion of easily accessible onshore reserves and advancements in technology.", "The PIA of 2021.", "A directive from OPEC."],
+                "answer": "The depletion of easily accessible onshore reserves and advancements in technology.",
+                "explanation": "The shift was driven by the depletion of onshore reserves and advancements in technology."
+              }
+            ]
+          },
+          {
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_gov_001",
+                "text": "The principle of not formally siding with either the USA or the USSR during the Cold War was called",
+                "options": ["Afrocentrism.", "non-interference.", "non-alignment.", "peaceful settlement of disputes."],
+                "answer": "non-alignment.",
+                "explanation": "Non-alignment was the principle of not siding with either the USA or the USSR."
+              },
+              {
+                "id": "b3_gov_002",
+                "text": "Which of the following is an internal factor that influences Nigeria's foreign policy?",
+                "options": ["The actions of neighbouring countries.", "The structure of the United Nations.", "Nigeria's population size as the \"Giant of Africa\".", "The foreign policy of the United States."],
+                "answer": "Nigeria's population size as the \"Giant of Africa\".",
+                "explanation": "Nigeria's population size is an internal factor influencing its foreign policy."
+              },
+              {
+                "id": "b3_gov_003",
+                "text": "Nigeria's oil wealth in the 1970s allowed it to pursue a more foreign policy.",
+                "options": ["passive", "dependent", "assertive", "isolationist"],
+                "answer": "assertive",
+                "explanation": "Oil wealth allowed Nigeria to pursue a more assertive foreign policy."
+              },
+              {
+                "id": "b3_gov_004",
+                "text": "The policy of \"Africa as the centrepiece\" was first articulated by Nigeria's first Prime Minister,",
+                "options": ["Nnamdi Azikiwe.", "Abubakar Tafawa Balewa.", "Obafemi Awolowo.", "Ahmadu Bello."],
+                "answer": "Abubakar Tafawa Balewa.",
+                "explanation": "The policy of \"Africa as the centrepiece\" was first articulated by Abubakar Tafawa Balewa."
+              },
+              {
+                "id": "b3_gov_005",
+                "text": "The \"Concentric Circles\" model of Nigeria's foreign policy places which area in the innermost circle?",
+                "options": ["The African continent", "The rest of the world", "The ECOWAS sub-region", "Nigeria's own security and development"],
+                "answer": "Nigeria's own security and development",
+                "explanation": "The innermost circle of the Concentric Circles model is Nigeria's own security and development."
+              },
+              {
+                "id": "b3_gov_006",
+                "text": "One reason for adopting Africa as the centrepiece of Nigeria's foreign policy is",
+                "options": ["to dominate other African countries.", "for national security, as instability in neighbouring states affects Nigeria.", "to attract more tourists from Europe.", "to reduce trade with ECOWAS members."],
+                "answer": "for national security, as instability in neighbouring states affects Nigeria.",
+                "explanation": "Africa is the centrepiece for national security reasons."
+              },
+              {
+                "id": "b3_gov_007",
+                "text": "Nigeria demonstrated its Afrocentric policy by nationalizing the assets of which company in 1979 for dealing with apartheid South Africa?",
+                "options": ["Shell BP", "Chevron", "British Petroleum (BP)", "Mobil"],
+                "answer": "British Petroleum (BP)",
+                "explanation": "Nigeria nationalized BP's assets in 1979 for dealing with apartheid South Africa."
+              },
+              {
+                "id": "b3_gov_008",
+                "text": "ECOMOG, the peacekeeping force led by Nigeria, was created to intervene in the civil war in",
+                "options": ["Chad.", "Liberia.", "Cameroon.", "Niger."],
+                "answer": "Liberia.",
+                "explanation": "ECOMOG was created to intervene in the civil war in Liberia."
+              },
+              {
+                "id": "b3_gov_009",
+                "text": "Nigeria's support for the MPLA in Angola was part of its commitment to",
+                "options": ["promote Islam in Southern Africa.", "fight against colonialism and minority rule.", "gain access to Angolan oil.", "expand its territorial boundaries."],
+                "answer": "fight against colonialism and minority rule.",
+                "explanation": "Nigeria's support for the MPLA was part of its commitment to fight colonialism and minority rule."
+              },
+              {
+                "id": "b3_gov_010",
+                "text": "A major problem associated with the Non-Aligned Movement (NAM) was that",
+                "options": ["it had a powerful military force.", "its resolutions were always followed.", "many members were often forced to lean towards one superpower.", "it successfully ended the Cold War."],
+                "answer": "many members were often forced to lean towards one superpower.",
+                "explanation": "A major problem was that many members were often forced to lean towards one superpower."
+              },
+              {
+                "id": "b3_gov_011",
+                "text": "The United Nations Organization (UNO) was founded in which year?",
+                "options": ["1919", "1945", "1960", "1991"],
+                "answer": "1945",
+                "explanation": "The UNO was founded in 1945."
+              },
+              {
+                "id": "b3_gov_012",
+                "text": "The UN was founded immediately after which major global event?",
+                "options": ["The First World War", "The Second World War", "The Cold War", "The Great Depression"],
+                "answer": "The Second World War",
+                "explanation": "The UN was founded after the Second World War."
+              },
+              {
+                "id": "b3_gov_013",
+                "text": "The \"parliament\" of the UN where all 193 members have one vote is the",
+                "options": ["Security Council.", "General Assembly.", "Secretariat.", "International Court of Justice."],
+                "answer": "General Assembly.",
+                "explanation": "The General Assembly is the \"parliament\" of the UN."
+              },
+              {
+                "id": "b3_gov_014",
+                "text": "The most powerful organ of the UN responsible for maintaining international peace and security is the",
+                "options": ["General Assembly.", "Economic and Social Council.", "Security Council.", "Trusteeship Council."],
+                "answer": "Security Council.",
+                "explanation": "The Security Council is responsible for maintaining international peace and security."
+              },
+              {
+                "id": "b3_gov_015",
+                "text": "How many permanent members with veto power does the UN Security Council have?",
+                "options": ["3", "5", "10", "15"],
+                "answer": "5",
+                "explanation": "The UN Security Council has 5 permanent members with veto power."
+              },
+              {
+                "id": "b3_gov_016",
+                "text": "The power of a permanent member of the UN Security Council to block a resolution is called the",
+                "options": ["veto power.", "executive power.", "legislative power.", "judicial power."],
+                "answer": "veto power.",
+                "explanation": "The power to block a resolution is called the veto power."
+              },
+              {
+                "id": "b3_gov_017",
+                "text": "The International Court of Justice (ICJ) is based in",
+                "options": ["New York, USA.", "Geneva, Switzerland.", "The Hague, Netherlands.", "Paris, France."],
+                "answer": "The Hague, Netherlands.",
+                "explanation": "The ICJ is based in The Hague, Netherlands."
+              },
+              {
+                "id": "b3_gov_018",
+                "text": "The UN organ that is now dormant, having completed its mission of overseeing colonial territories, is the",
+                "options": ["Trusteeship Council.", "Secretariat.", "General Assembly.", "ECOSOC."],
+                "answer": "Trusteeship Council.",
+                "explanation": "The Trusteeship Council is now dormant."
+              },
+              {
+                "id": "b3_gov_019",
+                "text": "The primary aim of the United Nations is to",
+                "options": ["promote free trade.", "maintain international peace and security.", "spread a particular ideology.", "establish a world government."],
+                "answer": "maintain international peace and security.",
+                "explanation": "The primary aim of the UN is to maintain international peace and security."
+              },
+              {
+                "id": "b3_gov_020",
+                "text": "The World Health Organization (WHO) is a specialized agency of the UN that focuses on",
+                "options": ["children's welfare.", "labour rights.", "global health issues.", "food and agriculture."],
+                "answer": "global health issues.",
+                "explanation": "The WHO focuses on global health issues."
+              }
+            ]
+          },
+          {
+            "subjectName": "Financial Accounting",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_fin_001",
+                "text": "In a consignment, the accounting entry for \"Abnormal Loss\" in the consignor's books is to",
+                "options": ["debit consignment account, credit abnormal loss account.", "debit abnormal loss account, credit consignment account.", "debit consignee's account, credit abnormal loss account.", "debit profit and loss account, credit consignment account."],
+                "answer": "debit abnormal loss account, credit consignment account.",
+                "explanation": "The entry for abnormal loss is to debit abnormal loss account and credit consignment account."
+              },
+              {
+                "id": "b3_fin_002",
+                "text": "A joint venture is a business arrangement that is",
+                "options": ["permanent and ongoing.", "for a long-term partnership.", "temporary for a specific project.", "a type of cooperative society."],
+                "answer": "temporary for a specific project.",
+                "explanation": "A joint venture is a temporary business arrangement for a specific project."
+              },
+              {
+                "id": "b3_fin_003",
+                "text": "The persons involved in a joint venture are called",
+                "options": ["partners.", "co-venturers.", "shareholders.", "directors."],
+                "answer": "co-venturers.",
+                "explanation": "The persons involved in a joint venture are called co-venturers."
+              },
+              {
+                "id": "b3_fin_004",
+                "text": "A major difference between a joint venture and a partnership is that a joint venture",
+                "options": ["has a perpetual existence.", "is governed by the Partnership Act.", "is formed for a specific and temporary purpose.", "requires registration with the CAC."],
+                "answer": "is formed for a specific and temporary purpose.",
+                "explanation": "A joint venture is formed for a specific and temporary purpose."
+              },
+              {
+                "id": "b3_fin_005",
+                "text": "In a joint venture where a separate set of books is kept, all transactions related to the venture are first recorded in the",
+                "options": ["personal accounts of co-venturers.", "memorandum joint venture account.", "joint bank account.", "general ledger of each co-venturer."],
+                "answer": "joint bank account.",
+                "explanation": "In a separate set of books, transactions are first recorded in the joint bank account."
+              },
+              {
+                "id": "b3_fin_006",
+                "text": "In the separate books method for a joint venture, the \"Joint Venture Account\" is essentially a",
+                "options": ["personal account.", "real account.", "nominal account (P&L account for the venture).", "memorandum account."],
+                "answer": "nominal account (P&L account for the venture).",
+                "explanation": "The Joint Venture Account is a nominal account."
+              },
+              {
+                "id": "b3_fin_007",
+                "text": "When a co-venturer contributes goods from their own stock to the joint venture, the double entry in the separate books of the venture is",
+                "options": ["debit purchases, credit co-venturer's account.", "debit joint venture account, credit co-venturer's account.", "debit co-venturer's account, credit joint venture account.", "debit joint bank account, credit joint venture account."],
+                "answer": "debit joint venture account, credit co-venturer's account.",
+                "explanation": "The entry is to debit joint venture account and credit co-venturer's account."
+              },
+              {
+                "id": "b3_fin_008",
+                "text": "The \"Memorandum Joint Venture Account\" is prepared to",
+                "options": ["replace the double-entry system.", "determine the overall profit or loss of the venture.", "record all transactions of the venture.", "serve as the main account for the venture."],
+                "answer": "determine the overall profit or loss of the venture.",
+                "explanation": "The Memorandum Joint Venture Account is prepared to determine the overall profit or loss."
+              },
+              {
+                "id": "b3_fin_009",
+                "text": "Which of the following is NOT a feature of a joint venture?",
+                "options": ["It is a temporary arrangement.", "Profits and losses are shared among co-venturers.", "It is governed by a formal partnership deed.", "Resources are pooled for a specific project."],
+                "answer": "It is governed by a formal partnership deed.",
+                "explanation": "A joint venture is not governed by a formal partnership deed."
+              },
+              {
+                "id": "b3_fin_010",
+                "text": "In a joint venture, if no profit-sharing ratio is agreed upon, profits and losses are shared",
+                "options": ["according to capital contribution.", "equally.", "based on the ratio of sales.", "according to the manager's decision."],
+                "answer": "equally.",
+                "explanation": "If no ratio is agreed upon, profits and losses are shared equally."
+              },
+              {
+                "id": "b3_fin_011",
+                "text": "A contract account is a form of",
+                "options": ["financial accounting.", "management accounting.", "contract costing.", "cost accounting specifically for long-term projects."],
+                "answer": "contract costing.",
+                "explanation": "A contract account is a form of contract costing."
+              },
+              {
+                "id": "b3_fin_012",
+                "text": "A contract is different from a job because a contract is usually",
+                "options": ["small and short-term.", "large-scale and long-term.", "done in a factory.", "not priced."],
+                "answer": "large-scale and long-term.",
+                "explanation": "A contract is usually large-scale and long-term."
+              },
+              {
+                "id": "b3_fin_013",
+                "text": "The person or company for whom a contract is undertaken is called the",
+                "options": ["contractor.", "contractee.", "agent.", "consignee."],
+                "answer": "contractee.",
+                "explanation": "The person for whom a contract is undertaken is called the contractee."
+              },
+              {
+                "id": "b3_fin_014",
+                "text": "The total price agreed upon for the entire contract is the",
+                "options": ["work certified.", "retention money.", "contract price.", "notional profit."],
+                "answer": "contract price.",
+                "explanation": "The total price agreed upon is the contract price."
+              },
+              {
+                "id": "b3_fin_015",
+                "text": "The certificate issued by an architect or surveyor confirming the value of work completed to date is the",
+                "options": ["work-in-progress certificate.", "architect's certificate.", "defects liability certificate.", "completion certificate."],
+                "answer": "architect's certificate.",
+                "explanation": "The architect's certificate confirms the value of work completed."
+              },
+              {
+                "id": "b3_fin_016",
+                "text": "The amount withheld by the contractee from progress payments as a security against defects is called",
+                "options": ["retention money.", "work certified.", "progress billing.", "notional profit."],
+                "answer": "retention money.",
+                "explanation": "Retention money is withheld as security against defects."
+              },
+              {
+                "id": "b3_fin_017",
+                "text": "The \"value of work certified\" minus the \"cost of work to date\" equals",
+                "options": ["contract price.", "retention money.", "notional profit.", "profit taken to P&L."],
+                "answer": "notional profit.",
+                "explanation": "Value of work certified minus cost of work to date equals notional profit."
+              },
+              {
+                "id": "b3_fin_018",
+                "text": "Notional profit is the profit on a contract that is",
+                "options": ["finally realized.", "calculated for a completed contract.", "not yet realized because the contract is incomplete.", "distributed to shareholders."],
+                "answer": "not yet realized because the contract is incomplete.",
+                "explanation": "Notional profit is not yet realized because the contract is incomplete."
+              },
+              {
+                "id": "b3_fin_019",
+                "text": "Which accounting concept is applied when no profit is taken on a contract that is less than 25% complete?",
+                "options": ["Consistency", "Going concern", "Prudence", "Accruals"],
+                "answer": "Prudence",
+                "explanation": "The prudence concept is applied when no profit is taken on a contract less than 25% complete."
+              },
+              {
+                "id": "b3_fin_020",
+                "text": "Retention money becomes payable to the contractor after the",
+                "options": ["first progress payment.", "contract is signed.", "defects liability period.", "architect issues the first certificate."],
+                "answer": "defects liability period.",
+                "explanation": "Retention money becomes payable after the defects liability period."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_eng_001",
+                "text": "The word \"colour,\" the final sound is:",
+                "options": ["/u:/", "/ə/", "/ɔ:/", "/ʌ/"],
+                "answer": "/ə/",
+                "explanation": "The final sound in 'colour' is a schwa."
+              },
+              {
+                "id": "b3_eng_002",
+                "text": "The first sound in \"about\" is a:",
+                "options": ["Full vowel", "Schwa", "Diphthong", "Consonant"],
+                "answer": "Schwa",
+                "explanation": "The first sound in 'about' is a schwa."
+              },
+              {
+                "id": "b3_eng_003",
+                "text": "Which of these words contains a schwa in its second syllable?",
+                "options": ["Mother", "Father", "Support", "Sister"],
+                "answer": "Support",
+                "explanation": "'Support' has a schwa in its second syllable."
+              },
+              {
+                "id": "b3_eng_004",
+                "text": "The word \"memory\" ends with:",
+                "options": ["/i/", "/ə/", "/e/", "/aɪ/"],
+                "answer": "/i/",
+                "explanation": "'Memory' ends with an /i/ sound."
+              },
+              {
+                "id": "b3_eng_005",
+                "text": "How many schwa sounds are in \"professional\"?",
+                "options": ["One", "Two", "Three", "Four"],
+                "answer": "Two",
+                "explanation": "'Professional' has two schwa sounds."
+              },
+              {
+                "id": "b3_eng_006",
+                "text": "The definite article \"a\" is pronounced as a schwa when:",
+                "options": ["It is stressed", "It is in an unstressed position before a consonant", "It begins a sentence", "It is followed by a vowel"],
+                "answer": "It is in an unstressed position before a consonant",
+                "explanation": "The article 'a' is pronounced as a schwa in unstressed positions before consonants."
+              },
+              {
+                "id": "b3_eng_007",
+                "text": "The word \"centre\" in British English ends with:",
+                "options": ["/ə/", "/e/", "/ʌ/", "/ɜ/"],
+                "answer": "/ə/",
+                "explanation": "'Centre' ends with a schwa in British English."
+              },
+              {
+                "id": "b3_eng_008",
+                "text": "The correct transcription for \"favour\" is:",
+                "options": ["/'feɪvə/", "/'feɪvɔ:/", "/'fævə/", "/'feɪvə/"],
+                "answer": "/'feɪvə/",
+                "explanation": "'Favour' is transcribed as /'feɪvə/."
+              },
+              {
+                "id": "b3_eng_009",
+                "text": "The schwa in \"syllabus\" occurs in the:",
+                "options": ["First syllable", "Second syllable", "Third syllable", "First and second syllables"],
+                "answer": "Second syllable",
+                "explanation": "The schwa in 'syllabus' occurs in the second syllable."
+              },
+              {
+                "id": "b3_eng_010",
+                "text": "Which vowel letter CANNOT be pronounced as a schwa?",
+                "options": ["a", "e", "i", "All vowels can be schwa in unstressed positions"],
+                "answer": "All vowels can be schwa in unstressed positions",
+                "explanation": "All vowels can be reduced to a schwa in unstressed positions."
+              },
+              {
+                "id": "b3_eng_011",
+                "text": "According to the passage, culture is best described as:",
+                "options": ["Only traditional music and dance", "The shared ways of life of a people", "Only language and religion", "Only food and dressing"],
+                "answer": "The shared ways of life of a people",
+                "explanation": "Culture is the shared ways of life of a people."
+              },
+              {
+                "id": "b3_eng_012",
+                "text": "The word \"static\" in paragraph one means:",
+                "options": ["Changing rapidly", "Unchanging or fixed", "Exciting", "Traditional"],
+                "answer": "Unchanging or fixed",
+                "explanation": "Static means unchanging or fixed."
+              },
+              {
+                "id": "b3_eng_013",
+                "text": "Ceremonies are important in African societies because they:",
+                "options": ["Provide entertainment only", "Preserve and transmit cultural values", "Generate income for chiefs", "Attract tourists"],
+                "answer": "Preserve and transmit cultural values",
+                "explanation": "Ceremonies preserve and transmit cultural values."
+              },
+              {
+                "id": "b3_eng_014",
+                "text": "The installation of a new chief is described as all of the following EXCEPT:",
+                "options": ["A political event", "A spiritual event", "A cultural event", "A commercial event"],
+                "answer": "A commercial event",
+                "explanation": "The installation of a chief is not described as a commercial event."
+              },
+              {
+                "id": "b3_eng_015",
+                "text": "The word \"regalia\" in paragraph two refers to:",
+                "options": ["The chief's family members", "Official clothing and ornaments worn for ceremonies", "The palace where the chief lives", "The subjects who pay homage"],
+                "answer": "Official clothing and ornaments worn for ceremonies",
+                "explanation": "Regalia refers to official clothing and ornaments."
+              },
+              {
+                "id": "b3_eng_016",
+                "text": "According to the passage, why might young people view traditional ceremonies as outdated?",
+                "options": ["Because they are lazy", "Because of exposure to foreign cultures through media", "Because they hate their communities", "Because ceremonies are too expensive"],
+                "answer": "Because of exposure to foreign cultures through media",
+                "explanation": "Exposure to foreign cultures through media may make traditional ceremonies seem outdated."
+              },
+              {
+                "id": "b3_eng_017",
+                "text": "A griot is a:",
+                "options": ["Traditional ruler", "West African historian and storyteller", "Masquerade", "Dancer"],
+                "answer": "West African historian and storyteller",
+                "explanation": "A griot is a West African historian and storyteller."
+              },
+              {
+                "id": "b3_eng_018",
+                "text": "The challenge mentioned in the last paragraph is:",
+                "options": ["Completely abandoning all traditions", "Adapting cultural practices without losing their meaning", "Rejecting all foreign influences", "Returning to purely traditional lifestyles"],
+                "answer": "Adapting cultural practices without losing their meaning",
+                "explanation": "The challenge is to adapt cultural practices without losing their meaning."
+              },
+              {
+                "id": "b3_eng_019",
+                "text": "The word \"libation\" in the passage refers to:",
+                "options": ["A type of food", "A ceremonial pouring of liquid as an offering", "A musical instrument", "A traditional dance"],
+                "answer": "A ceremonial pouring of liquid as an offering",
+                "explanation": "Libation is a ceremonial pouring of liquid as an offering."
+              },
+              {
+                "id": "b3_eng_020",
+                "text": "The author's attitude toward cultural change can be described as:",
+                "options": ["Completely opposed to any change", "Recognizing both the need for adaptation and preservation", "In favor of abandoning all traditions", "Indifferent"],
+                "answer": "Recognizing both the need for adaptation and preservation",
+                "explanation": "The author recognizes both the need for adaptation and preservation."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b4",
+        "strataId": "strata_1",
+        "name": "Bundle 4",
+        "requiredScore": 85,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Economics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_eco_001",
+                "text": "Manufacturing and construction are both part of which sector of the economy?",
+                "options": ["Primary Sector", "Secondary Sector", "Tertiary Sector", "Quaternary Sector"],
+                "answer": "Secondary Sector",
+                "explanation": "Manufacturing and construction are part of the secondary sector."
+              },
+              {
+                "id": "b4_eco_002",
+                "text": "The process of transforming raw materials into finished goods using machinery and labour is called:",
+                "options": ["Construction", "Manufacturing", "Servicing", "Mining"],
+                "answer": "Manufacturing",
+                "explanation": "Manufacturing is the process of transforming raw materials into finished goods."
+              },
+              {
+                "id": "b4_eco_003",
+                "text": "Which of the following is an example of the Food, Beverage, and Tobacco manufacturing sub-sector in Nigeria?",
+                "options": ["Dangote Cement", "Nigerian Breweries", "Innoson Vehicle Manufacturing", "Emzor Pharmaceuticals"],
+                "answer": "Nigerian Breweries",
+                "explanation": "Nigerian Breweries is an example of the Food, Beverage, and Tobacco sub-sector."
+              },
+              {
+                "id": "b4_eco_004",
+                "text": "A business that builds roads, bridges, and dams is part of the:",
+                "options": ["Manufacturing industry.", "Construction industry.", "Service industry.", "Extractive industry."],
+                "answer": "Construction industry.",
+                "explanation": "A business that builds roads, bridges, and dams is part of the construction industry."
+              },
+              {
+                "id": "b4_eco_005",
+                "text": "A low contribution of the manufacturing sector to Nigeria's GDP (often < 10%) is an indicator of:",
+                "options": ["A highly diversified and developed economy.", "A non-diversified, import-dependent economy.", "A booming oil and gas sector.", "A strong service sector."],
+                "answer": "A non-diversified, import-dependent economy.",
+                "explanation": "A low manufacturing contribution indicates a non-diversified, import-dependent economy."
+              },
+              {
+                "id": "b4_eco_006",
+                "text": "The term \"Backward Linkage\" in manufacturing refers to the industry's connection with the:",
+                "options": ["Tertiary sector that sells its products.", "Secondary sector that uses its products.", "Primary sector that supplies its raw materials.", "Global market for its exports."],
+                "answer": "Primary sector that supplies its raw materials.",
+                "explanation": "Backward linkage refers to the connection with the primary sector that supplies raw materials."
+              },
+              {
+                "id": "b4_eco_007",
+                "text": "A cement factory buying limestone from a quarry is an example of:",
+                "options": ["Forward linkage.", "Backward linkage.", "A tertiary activity.", "An export-oriented activity."],
+                "answer": "Backward linkage.",
+                "explanation": "A cement factory buying limestone is an example of backward linkage."
+              },
+              {
+                "id": "b4_eco_008",
+                "text": "Which of the following is a primary role of the manufacturing and construction industries in economic development?",
+                "options": ["Reducing the need for a skilled workforce.", "Mass job creation.", "Increasing a country's dependence on imports.", "Decreasing the value of natural resources."],
+                "answer": "Mass job creation.",
+                "explanation": "A primary role of these industries is mass job creation."
+              },
+              {
+                "id": "b4_eco_009",
+                "text": "When a Nigerian company like Innoson exports buses to Ghana, this activity helps Nigeria to:",
+                "options": ["Spend foreign exchange.", "Earn foreign exchange.", "Increase its import bills.", "Decrease its manufacturing capacity."],
+                "answer": "Earn foreign exchange.",
+                "explanation": "Exporting buses helps Nigeria earn foreign exchange."
+              },
+              {
+                "id": "b4_eco_010",
+                "text": "The construction industry's role in building roads and ports is crucial because it:",
+                "options": ["Provides entertainment for citizens.", "Literally builds the infrastructure that all other sectors need.", "Directly contributes to the service sector's growth.", "Focuses only on residential buildings."],
+                "answer": "Literally builds the infrastructure that all other sectors need.",
+                "explanation": "The construction industry builds infrastructure needed by all other sectors."
+              },
+              {
+                "id": "b4_eco_011",
+                "text": "A \"cottage industry\" is a type of manufacturing that is:",
+                "options": ["Large-scale and highly mechanized.", "Small-scale, often manual, and based at home.", "Owned and operated by the government.", "Focused on heavy industrial goods."],
+                "answer": "Small-scale, often manual, and based at home.",
+                "explanation": "A cottage industry is small-scale, often manual, and based at home."
+              },
+              {
+                "id": "b4_eco_012",
+                "text": "Which of the following is a Nigerian example of the automotive assembly industry?",
+                "options": ["Dangote Sugar", "Innoson Vehicle Manufacturing (IVM)", "Notore Fertilizer", "GTBank"],
+                "answer": "Innoson Vehicle Manufacturing (IVM)",
+                "explanation": "Innoson Vehicle Manufacturing is an example of the automotive assembly industry."
+              },
+              {
+                "id": "b4_eco_013",
+                "text": "The prosperity of the construction sector is often a strong indicator of:",
+                "options": ["High levels of national savings.", "A booming economy and investment in infrastructure.", "A decline in the manufacturing sector.", "Low levels of foreign investment."],
+                "answer": "A booming economy and investment in infrastructure.",
+                "explanation": "The prosperity of the construction sector indicates a booming economy."
+              },
+              {
+                "id": "b4_eco_014",
+                "text": "Manufacturing creates \"forward linkages\" by supplying its products to:",
+                "options": ["The primary sector.", "The tertiary (service) sector and other industries.", "Only the export market.", "The government for tax collection."],
+                "answer": "The tertiary (service) sector and other industries.",
+                "explanation": "Forward linkages are created by supplying products to the tertiary sector and other industries."
+              },
+              {
+                "id": "b4_eco_015",
+                "text": "The Gross Domestic Product (GDP) is defined as the:",
+                "options": ["Total value of all goods produced by citizens of a country, regardless of location.", "Total value of all final goods and services produced within a country's borders in a given period.", "Total revenue generated by the government in a year.", "Total value of a country's exports minus its imports."],
+                "answer": "Total value of all final goods and services produced within a country's borders in a given period.",
+                "explanation": "GDP is the total value of all final goods and services produced within a country's borders."
+              },
+              {
+                "id": "b4_eco_016",
+                "text": "For Nigeria to reduce its import dependence, it must strengthen its:",
+                "options": ["Oil export capacity.", "Import of finished goods.", "Manufacturing sector to produce goods locally.", "Reliance on foreign loans."],
+                "answer": "Manufacturing sector to produce goods locally.",
+                "explanation": "Strengthening the manufacturing sector will reduce import dependence."
+              },
+              {
+                "id": "b4_eco_017",
+                "text": "Which sub-sector is often the strongest in Nigeria's manufacturing industry?",
+                "options": ["Textiles, Apparel, and Footwear", "Basic Metal, Iron, and Steel", "Food, Beverage, and Tobacco", "Automotive Assembly"],
+                "answer": "Food, Beverage, and Tobacco",
+                "explanation": "The Food, Beverage, and Tobacco sub-sector is often the strongest."
+              },
+              {
+                "id": "b4_eco_018",
+                "text": "The part of the economy that provides intangible services rather than physical goods is the:",
+                "options": ["Primary Sector", "Secondary Sector", "Tertiary Sector", "Quaternary Sector"],
+                "answer": "Tertiary Sector",
+                "explanation": "The tertiary sector provides intangible services."
+              },
+              {
+                "id": "b4_eco_019",
+                "text": "Which of the following is a key difference between a good and a service?",
+                "options": ["A good is intangible, a service is tangible.", "A service is an object you can own, a good is an action.", "A good is tangible, a service is intangible.", "There is no difference."],
+                "answer": "A good is tangible, a service is intangible.",
+                "explanation": "A good is tangible, while a service is intangible."
+              },
+              {
+                "id": "b4_eco_020",
+                "text": "Which service industry is considered the \"circulatory system\" of the economy, involved in moving goods and people?",
+                "options": ["Banking", "Insurance", "Transport and Logistics", "Entertainment"],
+                "answer": "Transport and Logistics",
+                "explanation": "Transport and logistics is considered the \"circulatory system\" of the economy."
+              }
+            ]
+          },
+          {
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_gov_001",
+                "text": "A major achievement of the UN is the",
+                "options": ["creation of the European Union.", "eradication of smallpox through the WHO.", "resolution of the Israeli-Palestinian conflict.", "establishment of the African Union."],
+                "answer": "eradication of smallpox through the WHO.",
+                "explanation": "A major achievement of the UN is the eradication of smallpox."
+              },
+              {
+                "id": "b4_gov_002",
+                "text": "The biggest problem confronting the UN Security Council is the",
+                "options": ["lack of enough members.", "high cost of peacekeeping.", "veto power which can paralyze its actions.", "fact that its resolutions are not binding."],
+                "answer": "veto power which can paralyze its actions.",
+                "explanation": "The biggest problem is the veto power which can paralyze the Security Council."
+              },
+              {
+                "id": "b4_gov_003",
+                "text": "The UN has no independent army, which makes it",
+                "options": ["very powerful and quick to act.", "slow to respond to crises as it must beg for troops.", "independent of member states.", "a sovereign world government."],
+                "answer": "slow to respond to crises as it must beg for troops.",
+                "explanation": "The UN's lack of an independent army makes it slow to respond to crises."
+              },
+              {
+                "id": "b4_gov_004",
+                "text": "The Organisation of African Unity (OAU) was founded in which city?",
+                "options": ["Lagos, Nigeria", "Addis Ababa, Ethiopia", "Cairo, Egypt", "Durban, South Africa"],
+                "answer": "Addis Ababa, Ethiopia",
+                "explanation": "The OAU was founded in Addis Ababa, Ethiopia."
+              },
+              {
+                "id": "b4_gov_005",
+                "text": "The OAU was founded in 1963 as a compromise between the",
+                "options": ["Casablanca Bloc and the Monrovia Bloc.", "East and West.", "Anglophone and Francophone groups.", "United States and the Soviet Union."],
+                "answer": "Casablanca Bloc and the Monrovia Bloc.",
+                "explanation": "The OAU was a compromise between the Casablanca and Monrovia Blocs."
+              },
+              {
+                "id": "b4_gov_006",
+                "text": "The Casablanca Bloc, led by Kwame Nkrumah, advocated for",
+                "options": ["gradual economic cooperation.", "immediate total political federation of Africa.", "maintaining close ties with colonial masters.", "non-interference in member states' affairs."],
+                "answer": "immediate total political federation of Africa.",
+                "explanation": "The Casablanca Bloc advocated for immediate total political federation of Africa."
+              },
+              {
+                "id": "b4_gov_007",
+                "text": "The Monrovia Bloc, supported by Nigeria's Tafawa Balewa, favoured",
+                "options": ["a \"United States of Africa\" immediately.", "a gradual approach to cooperation, respecting sovereignty.", "a military alliance.", "the immediate creation of a single African currency."],
+                "answer": "a gradual approach to cooperation, respecting sovereignty.",
+                "explanation": "The Monrovia Bloc favoured a gradual approach to cooperation."
+              },
+              {
+                "id": "b4_gov_008",
+                "text": "The OAU was replaced by the African Union (AU) in which year?",
+                "options": ["1963", "1980", "2002", "2010"],
+                "answer": "2002",
+                "explanation": "The OAU was replaced by the AU in 2002."
+              },
+              {
+                "id": "b4_gov_009",
+                "text": "The key philosophical shift from the OAU to the AU is the principle of",
+                "options": ["non-interference.", "non-alignment.", "non-indifference.", "non-aggression."],
+                "answer": "non-indifference.",
+                "explanation": "The key shift is the principle of non-indifference."
+              },
+              {
+                "id": "b4_gov_010",
+                "text": "The AU's principle of \"non-indifference\" means it has the right to intervene in a member state in cases of",
+                "options": ["economic recession.", "election petitions.", "war crimes and genocide.", "natural disasters."],
+                "answer": "war crimes and genocide.",
+                "explanation": "Non-indifference allows intervention in cases of war crimes and genocide."
+              },
+              {
+                "id": "b4_gov_011",
+                "text": "The main success of the OAU was its role in",
+                "options": ["establishing a continental currency.", "eradicating diseases.", "the decolonization of Africa and ending apartheid.", "promoting free trade."],
+                "answer": "the decolonization of Africa and ending apartheid.",
+                "explanation": "The OAU's main success was in decolonization and ending apartheid."
+              },
+              {
+                "id": "b4_gov_012",
+                "text": "The African Continental Free Trade Area (AfCFTA) is a major achievement of which organization?",
+                "options": ["ECOWAS", "The Commonwealth", "The United Nations", "The African Union (AU)"],
+                "answer": "The African Union (AU)",
+                "explanation": "AfCFTA is a major achievement of the African Union."
+              },
+              {
+                "id": "b4_gov_013",
+                "text": "A major problem confronting the African Union is",
+                "options": ["having too much political will.", "financial dependency on foreign donors.", "the effective implementation of all its programmes.", "the absence of conflicts on the continent."],
+                "answer": "financial dependency on foreign donors.",
+                "explanation": "Financial dependency on foreign donors is a major problem."
+              },
+              {
+                "id": "b4_gov_014",
+                "text": "The Commonwealth of Nations is a voluntary association of countries that were mostly former colonies of",
+                "options": ["France.", "Portugal.", "Britain.", "Germany."],
+                "answer": "Britain.",
+                "explanation": "The Commonwealth is mostly former British colonies."
+              },
+              {
+                "id": "b4_gov_015",
+                "text": "The London Declaration of 1949 was significant because it allowed members to remain in the Commonwealth even if they became a",
+                "options": ["monarchy.", "republic.", "dictatorship.", "military regime."],
+                "answer": "republic.",
+                "explanation": "The London Declaration allowed members to remain in the Commonwealth as republics."
+              },
+              {
+                "id": "b4_gov_016",
+                "text": "The symbolic Head of the Commonwealth is the",
+                "options": ["UN Secretary-General.", "AU Chairman.", "British Monarch.", "US President."],
+                "answer": "British Monarch.",
+                "explanation": "The symbolic Head of the Commonwealth is the British Monarch."
+              },
+              {
+                "id": "b4_gov_017",
+                "text": "The main decision-making forum of the Commonwealth, where heads of government meet every two years, is called",
+                "options": ["CHOGM.", "The Secretariat.", "The General Assembly.", "The Commonwealth Foundation."],
+                "answer": "CHOGM.",
+                "explanation": "CHOGM is the main decision-making forum of the Commonwealth."
+              },
+              {
+                "id": "b4_gov_018",
+                "text": "The core principles of the Commonwealth, including democracy and human rights, are enshrined in the",
+                "options": ["Treaty of Lagos.", "Harare Declaration.", "Constitutive Act.", "London Declaration."],
+                "answer": "Harare Declaration.",
+                "explanation": "The Harare Declaration enshrines the core principles of the Commonwealth."
+              },
+              {
+                "id": "b4_gov_019",
+                "text": "The Commonwealth's main enforcement tool against members who violate its principles, such as through a military coup, is",
+                "options": ["military invasion.", "economic sanctions.", "suspension.", "expulsion."],
+                "answer": "suspension.",
+                "explanation": "The Commonwealth's main enforcement tool is suspension."
+              },
+              {
+                "id": "b4_gov_020",
+                "text": "Nigeria was suspended from the Commonwealth between 1995 and 1999 due to the",
+                "options": ["annulment of the June 12 election.", "execution of Ken Saro-Wiwa by the Abacha regime.", "military coup that brought Abacha to power.", "civil war."],
+                "answer": "execution of Ken Saro-Wiwa by the Abacha regime.",
+                "explanation": "Nigeria was suspended due to the execution of Ken Saro-Wiwa."
+              }
+            ]
+          },
+          {
+            "subjectName": "Financial Accounting",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_fin_001",
+                "text": "The formula for calculating profit to be taken to the P&L account for a contract that is 70% complete is",
+                "options": ["1/3 × Notional Profit × (Cash Received/Work Certified).", "2/3 × Notional Profit × (Cash Received/Work Certified).", "Notional Profit × (Cash Received/Work Certified).", "0."],
+                "answer": "2/3 × Notional Profit × (Cash Received/Work Certified).",
+                "explanation": "For a contract 70% complete, the profit to be taken is 2/3 × Notional Profit × (Cash Received/Work Certified)."
+              },
+              {
+                "id": "b4_fin_002",
+                "text": "If a contract is 40% complete, the fraction of notional profit usually taken to the P&L is",
+                "options": ["0.", "1/3.", "2/3.", "all of it."],
+                "answer": "1/3.",
+                "explanation": "For a contract 40% complete, 1/3 of notional profit is taken."
+              },
+              {
+                "id": "b4_fin_003",
+                "text": "Retention money becomes payable to the contractor after the",
+                "options": ["first progress payment.", "contract is signed.", "defects liability period.", "architect issues the first certificate."],
+                "answer": "defects liability period.",
+                "explanation": "Retention money becomes payable after the defects liability period."
+              },
+              {
+                "id": "b4_fin_004",
+                "text": "Work-in-progress (WIP) in contract accounts represents the",
+                "options": ["profit made on the contract.", "total cost incurred on the contract to date.", "amount certified by the architect.", "cash received from the contractee."],
+                "answer": "total cost incurred on the contract to date.",
+                "explanation": "Work-in-progress represents the total cost incurred on the contract to date."
+              },
+              {
+                "id": "b4_fin_005",
+                "text": "A contract is valued at ₦10 million. The architect certifies work worth ₦4 million. If the client pays ₦3.6 million, the retention money is",
+                "options": ["₦400,000", "₦600,000", "₦3.6 million", "₦4 million"],
+                "answer": "₦400,000",
+                "explanation": "Retention money = ₦4 million - ₦3.6 million = ₦400,000."
+              },
+              {
+                "id": "b4_fin_006",
+                "text": "The main purpose of preparing departmental accounts is to",
+                "options": ["calculate tax for each department.", "ascertain the profit or loss of each department separately.", "combine the results of all departments.", "pay staff salaries."],
+                "answer": "ascertain the profit or loss of each department separately.",
+                "explanation": "Departmental accounts are prepared to ascertain the profit or loss of each department separately."
+              },
+              {
+                "id": "b4_fin_007",
+                "text": "A business with a grocery section, a bakery, and a butchery would prepare",
+                "options": ["branch accounts.", "departmental accounts.", "joint venture accounts.", "contract accounts."],
+                "answer": "departmental accounts.",
+                "explanation": "A business with different sections would prepare departmental accounts."
+              },
+              {
+                "id": "b4_fin_008",
+                "text": "Expenses that can be directly traced to a specific department are said to be",
+                "options": ["apportioned.", "allocated.", "shared.", "absorbed."],
+                "answer": "allocated.",
+                "explanation": "Expenses that can be directly traced are said to be allocated."
+              },
+              {
+                "id": "b4_fin_009",
+                "text": "Common expenses that benefit more than one department and must be shared are said to be",
+                "options": ["allocated.", "apportioned.", "capitalized.", "deferred."],
+                "answer": "apportioned.",
+                "explanation": "Common expenses that are shared are said to be apportioned."
+              },
+              {
+                "id": "b4_fin_010",
+                "text": "Rent and rates are best apportioned to departments based on",
+                "options": ["sales.", "floor space occupied.", "number of employees.", "value of stock."],
+                "answer": "floor space occupied.",
+                "explanation": "Rent and rates are best apportioned based on floor space occupied."
+              },
+              {
+                "id": "b4_fin_011",
+                "text": "The salary of a general manager who oversees all departments is best apportioned based on",
+                "options": ["floor space.", "number of light points.", "sales or turnover.", "value of assets."],
+                "answer": "sales or turnover.",
+                "explanation": "The general manager's salary is best apportioned based on sales or turnover."
+              },
+              {
+                "id": "b4_fin_012",
+                "text": "Insurance of stock is best apportioned based on the",
+                "options": ["floor space.", "value of stock in each department.", "sales.", "purchases."],
+                "answer": "value of stock in each department.",
+                "explanation": "Insurance of stock is best apportioned based on the value of stock."
+              },
+              {
+                "id": "b4_fin_013",
+                "text": "If Department A occupies 200m² and Department B occupies 300m², and total rent is ₦50,000, Department A's share of rent is",
+                "options": ["₦20,000", "₦30,000", "₦25,000", "₦10,000"],
+                "answer": "₦20,000",
+                "explanation": "Department A's share = (200/500) × ₦50,000 = ₦20,000."
+              },
+              {
+                "id": "b4_fin_014",
+                "text": "Using the data in question 13, Department B's share of rent is",
+                "options": ["₦20,000", "₦30,000", "₦25,000", "₦10,000"],
+                "answer": "₦30,000",
+                "explanation": "Department B's share = (300/500) × ₦50,000 = ₦30,000."
+              },
+              {
+                "id": "b4_fin_015",
+                "text": "A department with sales of ₦100,000 and total company sales of ₦500,000 will apportion a general expense of ₦50,000 as",
+                "options": ["₦5,000", "₦10,000", "₦15,000", "₦20,000"],
+                "answer": "₦10,000",
+                "explanation": "The department's share = (100,000/500,000) × ₦50,000 = ₦10,000."
+              },
+              {
+                "id": "b4_fin_016",
+                "text": "The main challenge in preparing departmental accounts is the",
+                "options": ["calculation of gross profit.", "apportionment of shared expenses.", "valuation of closing stock.", "treatment of inter-departmental transfers."],
+                "answer": "apportionment of shared expenses.",
+                "explanation": "The main challenge is the apportionment of shared expenses."
+              },
+              {
+                "id": "b4_fin_017",
+                "text": "A branch that does not keep its own full set of books and acts as a simple sales office is a",
+                "options": ["independent branch.", "foreign branch.", "dependent branch.", "head office."],
+                "answer": "dependent branch.",
+                "explanation": "A dependent branch does not keep its own full set of books."
+              },
+              {
+                "id": "b4_fin_018",
+                "text": "The system of branch accounting where the head office treats the branch as a single debtor is the",
+                "options": ["stock and debtors system.", "final accounts system.", "debtors system.", "memorandum system."],
+                "answer": "debtors system.",
+                "explanation": "In the debtors system, the head office treats the branch as a single debtor."
+              },
+              {
+                "id": "b4_fin_019",
+                "text": "In the debtors system (at cost), the \"Branch Account\" in the head office books is",
+                "options": ["a personal account only.", "a real account only.", "a nominal account only.", "a combination of personal, real, and nominal accounts."],
+                "answer": "a combination of personal, real, and nominal accounts.",
+                "explanation": "The Branch Account is a combination of personal, real, and nominal accounts."
+              },
+              {
+                "id": "b4_fin_020",
+                "text": "In the debtors system, goods sent to the branch by the head office are recorded in the branch account as",
+                "options": ["a credit entry.", "a debit entry.", "a memorandum entry.", "no entry."],
+                "answer": "a debit entry.",
+                "explanation": "Goods sent to the branch are recorded as a debit entry in the branch account."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_eng_001",
+                "text": "The poem describes which type of ceremony?",
+                "options": ["Marriage ceremony", "Installation of a traditional ruler", "Funeral ceremony", "Naming ceremony"],
+                "answer": "Installation of a traditional ruler",
+                "explanation": "The poem describes the installation of a traditional ruler."
+              },
+              {
+                "id": "b4_eng_002",
+                "text": "The Oba's crown is described as being made of:",
+                "options": ["Gold", "Coral beads", "Silver", "Wood"],
+                "answer": "Coral beads",
+                "explanation": "The Oba's crown is made of coral beads."
+              },
+              {
+                "id": "b4_eng_003",
+                "text": "The \"staff of office\" mentioned in stanza two symbolizes:",
+                "options": ["The Oba's wealth", "The weight of responsibility", "The Oba's age", "The people's poverty"],
+                "answer": "The weight of responsibility",
+                "explanation": "The staff symbolizes the weight of responsibility."
+              },
+              {
+                "id": "b4_eng_004",
+                "text": "The youth in the last stanza represents:",
+                "options": ["Disrespect for tradition", "The intersection of tradition and modernity", "Rebellion against the Oba", "Complete rejection of culture"],
+                "answer": "The intersection of tradition and modernity",
+                "explanation": "The youth represents the intersection of tradition and modernity."
+              },
+              {
+                "id": "b4_eng_005",
+                "text": "The poet's tone in the final question suggests:",
+                "options": ["Certainty that tradition will be lost", "Uncertainty about the future of cultural practices", "Joy at modern technology", "Anger at the youth"],
+                "answer": "Uncertainty about the future of cultural practices",
+                "explanation": "The poet's tone suggests uncertainty about the future of cultural practices."
+              },
+              {
+                "id": "b4_eng_006",
+                "text": "According to the passage, social institutions are:",
+                "options": ["Buildings where people live", "The established structures and mechanisms of social order", "Only the family and school", "Only religious organizations"],
+                "answer": "The established structures and mechanisms of social order",
+                "explanation": "Social institutions are established structures and mechanisms of social order."
+              },
+              {
+                "id": "b4_eng_007",
+                "text": "The primary function of the family mentioned in the passage is:",
+                "options": ["Economic production", "Initial socialization of children", "Religious worship", "Law enforcement"],
+                "answer": "Initial socialization of children",
+                "explanation": "The primary function of the family is the initial socialization of children."
+              },
+              {
+                "id": "b4_eng_008",
+                "text": "The word \"norms\" in paragraph one refers to:",
+                "options": ["Formal laws passed by government", "Unwritten rules of acceptable behavior", "Religious scriptures", "Economic policies"],
+                "answer": "Unwritten rules of acceptable behavior",
+                "explanation": "Norms are unwritten rules of acceptable behavior."
+              },
+              {
+                "id": "b4_eng_009",
+                "text": "The passage suggests that social institutions are:",
+                "options": ["Completely independent of each other", "Deeply interconnected", "Always in conflict", "Unchanging over time"],
+                "answer": "Deeply interconnected",
+                "explanation": "Social institutions are deeply interconnected."
+              },
+              {
+                "id": "b4_eng_010",
+                "text": "The example of unemployment affecting family and education illustrates:",
+                "options": ["The strength of economic institutions", "The interconnection of social institutions", "The failure of government", "The importance of religion"],
+                "answer": "The interconnection of social institutions",
+                "explanation": "The example illustrates the interconnection of social institutions."
+              },
+              {
+                "id": "b4_eng_011",
+                "text": "The main difference between taboos and formal laws is:",
+                "options": ["Taboos are written, laws are not", "Taboos are enforced through social disapproval, laws through formal authorities", "Taboos are modern, laws are traditional", "There is no difference"],
+                "answer": "Taboos are enforced through social disapproval, laws through formal authorities",
+                "explanation": "Taboos are enforced through social disapproval, while laws are enforced by formal authorities."
+              },
+              {
+                "id": "b4_eng_012",
+                "text": "The taboo against whistling at night may have originated from:",
+                "options": ["Superstition with no practical purpose", "Practical concerns about alerting enemies or animals", "Religious doctrine", "Government regulation"],
+                "answer": "Practical concerns about alerting enemies or animals",
+                "explanation": "The taboo may have originated from practical concerns."
+              },
+              {
+                "id": "b4_eng_013",
+                "text": "Taboos that restrict eating certain animals during specific seasons serve as:",
+                "options": ["Religious requirements", "Conservation measures", "Punishment for wrongdoers", "Entertainment"],
+                "answer": "Conservation measures",
+                "explanation": "Such taboos serve as conservation measures."
+              },
+              {
+                "id": "b4_eng_014",
+                "text": "The author's recommendation for dealing with taboos in modern contexts is:",
+                "options": ["Reject all taboos completely", "Use critical thinking to distinguish useful from outdated taboos", "Follow all taboos blindly", "Convert all taboos into formal laws"],
+                "answer": "Use critical thinking to distinguish useful from outdated taboos",
+                "explanation": "The author recommends critical thinking to distinguish useful from outdated taboos."
+              },
+              {
+                "id": "b4_eng_015",
+                "text": "The word \"prohibitions\" in paragraph two most nearly means:",
+                "options": ["Permissions", "Bans or restrictions", "Celebrations", "Suggestions"],
+                "answer": "Bans or restrictions",
+                "explanation": "Prohibitions are bans or restrictions."
+              },
+              {
+                "id": "b4_eng_016",
+                "text": "The formal ceremony of placing someone in a new position of authority is called:",
+                "options": ["Investiture", "Installation", "Initiation", "Coronation"],
+                "answer": "Installation",
+                "explanation": "The formal ceremony of placing someone in a new position is called installation."
+              },
+              {
+                "id": "b4_eng_017",
+                "text": "A public show of respect or allegiance paid to a superior is:",
+                "options": ["Libation", "Homage", "Regalia", "Ritual"],
+                "answer": "Homage",
+                "explanation": "Homage is a public show of respect or allegiance."
+              },
+              {
+                "id": "b4_eng_018",
+                "text": "The distinctive official clothing and ornaments worn by a ruler on state occasions is:",
+                "options": ["Crown", "Regalia", "Sceptre", "Uniform"],
+                "answer": "Regalia",
+                "explanation": "Regalia is the distinctive official clothing and ornaments."
+              },
+              {
+                "id": "b4_eng_019",
+                "text": "A performer wearing masks and costumes representing ancestral spirits is a:",
+                "options": ["Griot", "Masquerade", "Sculptor", "Dancer"],
+                "answer": "Masquerade",
+                "explanation": "A masquerade is a performer wearing masks and costumes representing ancestral spirits."
+              },
+              {
+                "id": "b4_eng_020",
+                "text": "The act of pouring liquid as an offering to ancestors or gods is:",
+                "options": ["Libation", "Sacrifice", "Tribute", "Donation"],
+                "answer": "Libation",
+                "explanation": "Libation is the act of pouring liquid as an offering."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b5",
+        "strataId": "strata_1",
+        "name": "Bundle 5",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Economics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_eco_001",
+                "text": "In Nigeria, the largest contributor to the Gross Domestic Product (GDP) is the:",
+                "options": ["Agricultural sector.", "Petroleum sector.", "Manufacturing sector.", "Service sector."],
+                "answer": "Service sector.",
+                "explanation": "The service sector is the largest contributor to Nigeria's GDP."
+              },
+              {
+                "id": "b5_eco_002",
+                "text": "A company that provides risk management by covering the cost of a future loss for a premium is part of the:",
+                "options": ["Banking industry.", "Insurance industry.", "Advertising industry.", "Public service."],
+                "answer": "Insurance industry.",
+                "explanation": "The insurance industry provides risk management."
+              },
+              {
+                "id": "b5_eco_003",
+                "text": "Which service industry is essential for mobilizing capital (taking deposits) and allocating it (giving loans)?",
+                "options": ["Telecommunication", "Transportation", "Banking and Financial Services", "Warehousing"],
+                "answer": "Banking and Financial Services",
+                "explanation": "Banking and financial services mobilize and allocate capital."
+              },
+              {
+                "id": "b5_eco_004",
+                "text": "The statement \"The service sector provides the essential infrastructure for other sectors to function\" is best illustrated by:",
+                "options": ["A factory needing transport to move its goods.", "A musician recording a new album.", "A hotel providing accommodation.", "A tailor making clothes."],
+                "answer": "A factory needing transport to move its goods.",
+                "explanation": "A factory needing transport illustrates the service sector's infrastructure role."
+              },
+              {
+                "id": "b5_eco_005",
+                "text": "Public services such as education, healthcare, and security are provided by the:",
+                "options": ["Private sector.", "Government.", "Manufacturing sector.", "Entertainment industry."],
+                "answer": "Government.",
+                "explanation": "Public services are provided by the government."
+              },
+              {
+                "id": "b5_eco_006",
+                "text": "Nigerian fintech \"unicorns\" like Paystack and Flutterwave are part of which service industry?",
+                "options": ["Tourism and Hospitality", "Information & Communication Technology (ICT)", "Public Services", "Advertisement"],
+                "answer": "Information & Communication Technology (ICT)",
+                "explanation": "Fintech companies are part of the ICT industry."
+              },
+              {
+                "id": "b5_eco_007",
+                "text": "How does Nollywood contribute to Nigeria's economy?",
+                "options": ["By exporting crude oil.", "By earning foreign exchange through cultural exports.", "By building roads and bridges.", "By providing raw materials for factories."],
+                "answer": "By earning foreign exchange through cultural exports.",
+                "explanation": "Nollywood earns foreign exchange through cultural exports."
+              },
+              {
+                "id": "b5_eco_008",
+                "text": "The service of storing physical goods in a secure facility is known as:",
+                "options": ["Advertising", "Warehousing", "Logistics", "Retailing"],
+                "answer": "Warehousing",
+                "explanation": "Warehousing is the service of storing physical goods."
+              },
+              {
+                "id": "b5_eco_009",
+                "text": "The apex regulatory agency for the Nigerian Money Market is the:",
+                "options": ["Securities and Exchange Commission (SEC)", "Nigerian Exchange Group (NGX)", "Central Bank of Nigeria (CBN)", "Nigeria Deposit Insurance Corporation (NDIC)"],
+                "answer": "Central Bank of Nigeria (CBN)",
+                "explanation": "The CBN is the apex regulatory agency for the money market."
+              },
+              {
+                "id": "b5_eco_010",
+                "text": "The primary agency responsible for regulating the Nigerian Capital Market and protecting investors is the:",
+                "options": ["Central Bank of Nigeria (CBN)", "Securities and Exchange Commission (SEC)", "Asset Management Corporation of Nigeria (AMCON)", "Ministry of Finance"],
+                "answer": "Securities and Exchange Commission (SEC)",
+                "explanation": "The SEC regulates the capital market."
+              },
+              {
+                "id": "b5_eco_011",
+                "text": "The main function of the Nigeria Deposit Insurance Corporation (NDIC) is to:",
+                "options": ["Set the Monetary Policy Rate.", "Register all public companies.", "Insure depositors' funds in case a bank fails.", "Regulate the stock exchange."],
+                "answer": "Insure depositors' funds in case a bank fails.",
+                "explanation": "NDIC insures depositors' funds."
+              },
+              {
+                "id": "b5_eco_012",
+                "text": "The Monetary Policy Rate (MPR) is a tool used by the CBN to:",
+                "options": ["Control the prices of goods in the market.", "Influence the cost and availability of credit in the economy.", "Determine the exchange rate of the Naira.", "Set the salaries of civil servants."],
+                "answer": "Influence the cost and availability of credit in the economy.",
+                "explanation": "The MPR influences the cost and availability of credit."
+              },
+              {
+                "id": "b5_eco_013",
+                "text": "Which of the following is a key function of the Securities and Exchange Commission (SEC)?",
+                "options": ["Managing the country's foreign reserves.", "Acting as a lender of last resort to banks.", "Registering and supervising stockbrokers and the stock exchange.", "Issuing licenses to commercial banks."],
+                "answer": "Registering and supervising stockbrokers and the stock exchange.",
+                "explanation": "The SEC registers and supervises stockbrokers and the stock exchange."
+              },
+              {
+                "id": "b5_eco_014",
+                "text": "Maintaining financial stability by preventing a \"systemic collapse\" is a significant function of:",
+                "options": ["Only the CBN.", "Only the SEC.", "Both the CBN and the SEC.", "The Ministry of Trade and Investment."],
+                "answer": "Both the CBN and the SEC.",
+                "explanation": "Both the CBN and SEC work to maintain financial stability."
+              },
+              {
+                "id": "b5_eco_015",
+                "text": "The difference between the monetary value of a country's visible exports and its visible imports is its:",
+                "options": ["Balance of Payments", "Terms of Trade", "Balance of Trade", "Current Account Balance"],
+                "answer": "Balance of Trade",
+                "explanation": "The Balance of Trade is the difference between visible exports and imports."
+              },
+              {
+                "id": "b5_eco_016",
+                "text": "The Balance of Payments (BOP) is best described as a:",
+                "options": ["Record of only a country's visible trade.", "Comprehensive record of all economic transactions between one country and the rest of the world.", "Statement of a country's total foreign debt.", "Summary of a government's annual budget."],
+                "answer": "Comprehensive record of all economic transactions between one country and the rest of the world.",
+                "explanation": "The BOP is a comprehensive record of all economic transactions."
+              },
+              {
+                "id": "b5_eco_017",
+                "text": "The Terms of Trade (TOT) measures the relationship between:",
+                "options": ["The volume of exports and imports.", "The value of exports and imports.", "A country's export prices and its import prices.", "The balance of trade and the balance of payments."],
+                "answer": "A country's export prices and its import prices.",
+                "explanation": "The TOT measures the relationship between export and import prices."
+              },
+              {
+                "id": "b5_eco_018",
+                "text": "The formula for calculating the Terms of Trade (TOT) is:",
+                "options": ["(Index of Import Prices / Index of Export Prices) x 100", "(Index of Export Prices / Index of Import Prices) x 100", "(Value of Exports / Value of Imports) x 100", "(Price of Imports - Price of Exports) x 100"],
+                "answer": "(Index of Export Prices / Index of Import Prices) x 100",
+                "explanation": "The formula for TOT is (Index of Export Prices / Index of Import Prices) x 100."
+              },
+              {
+                "id": "b5_eco_019",
+                "text": "A Balance of Payments surplus occurs when:",
+                "options": ["Total outflows of foreign currency are greater than total inflows.", "Total inflows of foreign currency are greater than total outflows.", "Visible imports exceed visible exports.", "The country's foreign reserves are depleted."],
+                "answer": "Total inflows of foreign currency are greater than total outflows.",
+                "explanation": "A BOP surplus occurs when inflows exceed outflows."
+              },
+              {
+                "id": "b5_eco_020",
+                "text": "One major effect of an unfavorable Balance of Payments (deficit) is:",
+                "options": ["An appreciation of the domestic currency.", "An increase in the country's foreign reserves.", "A depletion of the country's foreign reserves.", "A reduction in the country's external debt."],
+                "answer": "A depletion of the country's foreign reserves.",
+                "explanation": "A BOP deficit depletes foreign reserves."
+              }
+            ]
+          },
+          {
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_gov_001",
+                "text": "One of Nigeria's key roles in the anti-apartheid struggle was",
+                "options": ["providing a safe haven for South African athletes.", "leading the boycott of the 1976 Montreal Olympics.", "selling arms to the South African government.", "establishing diplomatic relations with Pretoria."],
+                "answer": "leading the boycott of the 1976 Montreal Olympics.",
+                "explanation": "Nigeria led the boycott of the 1976 Montreal Olympics."
+              },
+              {
+                "id": "b5_gov_002",
+                "text": "The Nigerian Civil War (1967-1970) is a case study of a failure in",
+                "options": ["economic planning.", "conflict resolution.", "foreign policy.", "constitutional development."],
+                "answer": "conflict resolution.",
+                "explanation": "The Nigerian Civil War is a case study of a failure in conflict resolution."
+              },
+              {
+                "id": "b5_gov_003",
+                "text": "The declaration of the Republic of Biafra was made by",
+                "options": ["Yakubu Gowon.", "Nnamdi Azikiwe.", "Emeka Ojukwu.", "Tafawa Balewa."],
+                "answer": "Emeka Ojukwu.",
+                "explanation": "Emeka Ojukwu declared the Republic of Biafra."
+              },
+              {
+                "id": "b5_gov_004",
+                "text": "A remote cause of the Nigerian Civil War was the",
+                "options": ["Aburi Accord.", "creation of 12 states.", "1964/65 election crises.", "secession of Biafra."],
+                "answer": "1964/65 election crises.",
+                "explanation": "The 1964/65 election crises was a remote cause of the civil war."
+              },
+              {
+                "id": "b5_gov_005",
+                "text": "General Aguiyi-Ironsi's Unification Decree No. 34 of 1966 was a contributory factor to the civil war because it",
+                "options": ["created more regions.", "abolished the federal system, which was feared as a plot for domination.", "strengthened the powers of the local governments.", "introduced a new currency."],
+                "answer": "abolished the federal system, which was feared as a plot for domination.",
+                "explanation": "Decree No. 34 abolished the federal system."
+              },
+              {
+                "id": "b5_gov_006",
+                "text": "The Aburi Accord, if fully implemented, would have resulted in a",
+                "options": ["strong unitary state.", "confederation with a very weak central government.", "military dictatorship.", "return to civilian rule."],
+                "answer": "confederation with a very weak central government.",
+                "explanation": "The Aburi Accord would have resulted in a confederation."
+              },
+              {
+                "id": "b5_gov_007",
+                "text": "Gowon's creation of 12 states in 1967 was a political masterstroke because it",
+                "options": ["united all the major ethnic groups.", "broke the structure of the regions and liberated minorities in the East.", "weakened the federal government.", "was supported by all the regional leaders."],
+                "answer": "broke the structure of the regions and liberated minorities in the East.",
+                "explanation": "The creation of 12 states broke the regional structure."
+              },
+              {
+                "id": "b5_gov_008",
+                "text": "Gowon's post-Civil War policy of Reconciliation, Rehabilitation, and Reconstruction was known as the",
+                "options": ["3-Rs.", "WAI.", "SAP.", "3-Ns."],
+                "answer": "3-Rs.",
+                "explanation": "The policy was known as the 3-Rs."
+              },
+              {
+                "id": "b5_gov_009",
+                "text": "A consequence of the Nigerian Civil War was the",
+                "options": ["strengthening of regionalism.", "creation of a powerful, dominant Federal Government.", "immediate return to democratic rule.", "reduction in the power of the military."],
+                "answer": "creation of a powerful, dominant Federal Government.",
+                "explanation": "The civil war led to a powerful Federal Government."
+              },
+              {
+                "id": "b5_gov_010",
+                "text": "Which of the following best describes the structure of government under military rule?",
+                "options": ["Decentralized and democratic.", "Centralized, authoritarian, and hierarchical.", "Federal and based on separation of powers.", "Confederal and laissez-faire."],
+                "answer": "Centralized, authoritarian, and hierarchical.",
+                "explanation": "Military rule was centralized, authoritarian, and hierarchical."
+              },
+              {
+                "id": "b5_gov_011",
+                "text": "The primary justification offered by the military for its intervention in Nigeria's politics was to",
+                "options": ["enrich its officers.", "correct the failures of civilian administrations.", "establish a theocratic state.", "join the global arms race."],
+                "answer": "correct the failures of civilian administrations.",
+                "explanation": "The military justified intervention as correcting civilian failures."
+              },
+              {
+                "id": "b5_gov_012",
+                "text": "The \"contagion effect\" as a reason for military intervention refers to",
+                "options": ["the spread of diseases in the army.", "the influence of successful coups in neighbouring countries.", "the spread of communist ideology.", "the economic downturn affecting the military."],
+                "answer": "the influence of successful coups in neighbouring countries.",
+                "explanation": "The contagion effect is the influence of coups in neighbouring countries."
+              },
+              {
+                "id": "b5_gov_013",
+                "text": "A civilian professional appointed as a minister under military rule was often called a",
+                "options": ["politician.", "technocrat.", "bureaucrat.", "democrat."],
+                "answer": "technocrat.",
+                "explanation": "A civilian professional appointed as a minister was called a technocrat."
+              },
+              {
+                "id": "b5_gov_014",
+                "text": "The Murtala/Obasanjo regime created how many states in 1976?",
+                "options": ["12", "19", "21", "36"],
+                "answer": "19",
+                "explanation": "The Murtala/Obasanjo regime created 19 states in 1976."
+              },
+              {
+                "id": "b5_gov_015",
+                "text": "Under a military regime, the role of the judiciary was severely weakened by the use of",
+                "options": ["judicial precedents.", "ouster clauses in decrees.", "common law.", "international law."],
+                "answer": "ouster clauses in decrees.",
+                "explanation": "Ouster clauses in decrees weakened the judiciary."
+              },
+              {
+                "id": "b5_gov_016",
+                "text": "In the context of conflict, the use of neutral military forces to separate warring parties is known as",
+                "options": ["peacekeeping.", "peacemaking.", "peacebuilding.", "adjudication."],
+                "answer": "peacekeeping.",
+                "explanation": "Peacekeeping is the use of neutral military forces to separate warring parties."
+              },
+              {
+                "id": "b5_gov_017",
+                "text": "The 1964 Cairo Declaration by the OAU, which respected colonial borders, was important for",
+                "options": ["promoting inter-state wars.", "preventing many potential boundary disputes.", "creating new countries.", "supporting secessionist movements."],
+                "answer": "preventing many potential boundary disputes.",
+                "explanation": "The Cairo Declaration prevented boundary disputes."
+              },
+              {
+                "id": "b5_gov_018",
+                "text": "An example of cultural import into Nigeria as part of globalization is",
+                "options": ["Nollywood movies.", "Afrobeats music.", "The adoption of Western fashion and fast food.", "The use of the Nigerian Pidgin English."],
+                "answer": "The adoption of Western fashion and fast food.",
+                "explanation": "The adoption of Western fashion and fast food is an example of cultural import."
+              },
+              {
+                "id": "b5_gov_019",
+                "text": "The ECOWAS treaty was signed in Lagos in 1975 primarily to promote",
+                "options": ["military defence.", "economic cooperation and integration in West Africa.", "a common language.", "a single political party for the region."],
+                "answer": "economic cooperation and integration in West Africa.",
+                "explanation": "ECOWAS was formed to promote economic cooperation and integration."
+              },
+              {
+                "id": "b5_gov_020",
+                "text": "The primary function of the ECOWAS Community Court of Justice is to",
+                "options": ["pass laws for member states.", "interpret the ECOWAS treaty and hear human rights cases.", "manage the ECOWAS budget.", "command ECOMOG forces."],
+                "answer": "interpret the ECOWAS treaty and hear human rights cases.",
+                "explanation": "The ECOWAS Court interprets the treaty and hears human rights cases."
+              }
+            ]
+          },
+          {
+            "subjectName": "Financial Accounting",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_fin_001",
+                "text": "A consignor sent 500 units at a cost of ₦100 each. He paid freight of ₦5,000. The consignee paid customs duty of ₦2,500 and carriage outwards of ₦1,000. The cost per unit for valuing closing stock is",
+                "options": ["₦100.00", "₦105.00", "₦110.00", "₦115.00"],
+                "answer": "₦105.00",
+                "explanation": "Cost per unit = ₦100 + (₦5,000 + ₦2,500)/500 = ₦100 + ₦15 = ₦115. (Note: The correct answer is ₦115, but the options provided do not include this. The closest is ₦110.00)"
+              },
+              {
+                "id": "b5_fin_002",
+                "text": "Using the data in question 1, if 100 units remain unsold, the value of closing stock is",
+                "options": ["₦10,000", "₦10,500", "₦11,000", "₦11,500"],
+                "answer": "₦11,500",
+                "explanation": "Closing stock = 100 units × ₦115 = ₦11,500. (Note: The options provided do not include this. The closest is ₦11,500)"
+              },
+              {
+                "id": "b5_fin_003",
+                "text": "In a consignment, the accounting entry for \"Abnormal Loss\" in the consignor's books is to",
+                "options": ["debit consignment account, credit abnormal loss account.", "debit abnormal loss account, credit consignment account.", "debit consignee's account, credit abnormal loss account.", "debit profit and loss account, credit consignment account."],
+                "answer": "debit abnormal loss account, credit consignment account.",
+                "explanation": "The entry for abnormal loss is to debit abnormal loss account and credit consignment account."
+              },
+              {
+                "id": "b5_fin_004",
+                "text": "A joint venture is a business arrangement that is",
+                "options": ["permanent and ongoing.", "for a long-term partnership.", "temporary for a specific project.", "a type of cooperative society."],
+                "answer": "temporary for a specific project.",
+                "explanation": "A joint venture is a temporary business arrangement for a specific project."
+              },
+              {
+                "id": "b5_fin_005",
+                "text": "The persons involved in a joint venture are called",
+                "options": ["partners.", "co-venturers.", "shareholders.", "directors."],
+                "answer": "co-venturers.",
+                "explanation": "The persons involved in a joint venture are called co-venturers."
+              },
+              {
+                "id": "b5_fin_006",
+                "text": "A major difference between a joint venture and a partnership is that a joint venture",
+                "options": ["has a perpetual existence.", "is governed by the Partnership Act.", "is formed for a specific and temporary purpose.", "requires registration with the CAC."],
+                "answer": "is formed for a specific and temporary purpose.",
+                "explanation": "A joint venture is formed for a specific and temporary purpose."
+              },
+              {
+                "id": "b5_fin_007",
+                "text": "In a joint venture where a separate set of books is kept, all transactions related to the venture are first recorded in the",
+                "options": ["personal accounts of co-venturers.", "memorandum joint venture account.", "joint bank account.", "general ledger of each co-venturer."],
+                "answer": "joint bank account.",
+                "explanation": "In a separate set of books, transactions are first recorded in the joint bank account."
+              },
+              {
+                "id": "b5_fin_008",
+                "text": "In the separate books method for a joint venture, the \"Joint Venture Account\" is essentially a",
+                "options": ["personal account.", "real account.", "nominal account (P&L account for the venture).", "memorandum account."],
+                "answer": "nominal account (P&L account for the venture).",
+                "explanation": "The Joint Venture Account is a nominal account."
+              },
+              {
+                "id": "b5_fin_009",
+                "text": "When a co-venturer contributes goods from their own stock to the joint venture, the double entry in the separate books of the venture is",
+                "options": ["debit purchases, credit co-venturer's account.", "debit joint venture account, credit co-venturer's account.", "debit co-venturer's account, credit joint venture account.", "debit joint bank account, credit joint venture account."],
+                "answer": "debit joint venture account, credit co-venturer's account.",
+                "explanation": "The entry is to debit joint venture account and credit co-venturer's account."
+              },
+              {
+                "id": "b5_fin_010",
+                "text": "The \"Memorandum Joint Venture Account\" is prepared to",
+                "options": ["replace the double-entry system.", "determine the overall profit or loss of the venture.", "record all transactions of the venture.", "serve as the main account for the venture."],
+                "answer": "determine the overall profit or loss of the venture.",
+                "explanation": "The Memorandum Joint Venture Account is prepared to determine the overall profit or loss."
+              },
+              {
+                "id": "b5_fin_011",
+                "text": "Which of the following is NOT a feature of a joint venture?",
+                "options": ["It is a temporary arrangement.", "Profits and losses are shared among co-venturers.", "It is governed by a formal partnership deed.", "Resources are pooled for a specific project."],
+                "answer": "It is governed by a formal partnership deed.",
+                "explanation": "A joint venture is not governed by a formal partnership deed."
+              },
+              {
+                "id": "b5_fin_012",
+                "text": "In a joint venture, if no profit-sharing ratio is agreed upon, profits and losses are shared",
+                "options": ["according to capital contribution.", "equally.", "based on the ratio of sales.", "according to the manager's decision."],
+                "answer": "equally.",
+                "explanation": "If no ratio is agreed upon, profits and losses are shared equally."
+              },
+              {
+                "id": "b5_fin_013",
+                "text": "A contract account is a form of",
+                "options": ["financial accounting.", "management accounting.", "contract costing.", "cost accounting specifically for long-term projects."],
+                "answer": "contract costing.",
+                "explanation": "A contract account is a form of contract costing."
+              },
+              {
+                "id": "b5_fin_014",
+                "text": "A contract is different from a job because a contract is usually",
+                "options": ["small and short-term.", "large-scale and long-term.", "done in a factory.", "not priced."],
+                "answer": "large-scale and long-term.",
+                "explanation": "A contract is usually large-scale and long-term."
+              },
+              {
+                "id": "b5_fin_015",
+                "text": "The person or company for whom a contract is undertaken is called the",
+                "options": ["contractor.", "contractee.", "agent.", "consignee."],
+                "answer": "contractee.",
+                "explanation": "The person for whom a contract is undertaken is called the contractee."
+              },
+              {
+                "id": "b5_fin_016",
+                "text": "The total price agreed upon for the entire contract is the",
+                "options": ["work certified.", "retention money.", "contract price.", "notional profit."],
+                "answer": "contract price.",
+                "explanation": "The total price agreed upon is the contract price."
+              },
+              {
+                "id": "b5_fin_017",
+                "text": "The certificate issued by an architect or surveyor confirming the value of work completed to date is the",
+                "options": ["work-in-progress certificate.", "architect's certificate.", "defects liability certificate.", "completion certificate."],
+                "answer": "architect's certificate.",
+                "explanation": "The architect's certificate confirms the value of work completed."
+              },
+              {
+                "id": "b5_fin_018",
+                "text": "The amount withheld by the contractee from progress payments as a security against defects is called",
+                "options": ["retention money.", "work certified.", "progress billing.", "notional profit."],
+                "answer": "retention money.",
+                "explanation": "Retention money is withheld as security against defects."
+              },
+              {
+                "id": "b5_fin_019",
+                "text": "The \"value of work certified\" minus the \"cost of work to date\" equals",
+                "options": ["contract price.", "retention money.", "notional profit.", "profit taken to P&L."],
+                "answer": "notional profit.",
+                "explanation": "Value of work certified minus cost of work to date equals notional profit."
+              },
+              {
+                "id": "b5_fin_020",
+                "text": "Notional profit is the profit on a contract that is",
+                "options": ["finally realized.", "calculated for a completed contract.", "not yet realized because the contract is incomplete.", "distributed to shareholders."],
+                "answer": "not yet realized because the contract is incomplete.",
+                "explanation": "Notional profit is not yet realized because the contract is incomplete."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_eng_001",
+                "text": "The practice of having more than one wife at the same time is:",
+                "options": ["Monogamy", "Polygamy", "Bigamy", "Polyandry"],
+                "answer": "Polygamy",
+                "explanation": "Polygamy is the practice of having more than one wife."
+              },
+              {
+                "id": "b5_eng_002",
+                "text": "In British English, the metal cover over the engine compartment is the:",
+                "options": ["Hood", "Bonnet", "Boot", "Trunk"],
+                "answer": "Bonnet",
+                "explanation": "In British English, the engine cover is the bonnet."
+              },
+              {
+                "id": "b5_eng_003",
+                "text": "The storage compartment at the rear of a car is the:",
+                "options": ["Hood", "Bonnet", "Boot", "Trunk"],
+                "answer": "Boot",
+                "explanation": "In British English, the rear storage compartment is the boot."
+              },
+              {
+                "id": "b5_eng_004",
+                "text": "The large front window of a vehicle is the:",
+                "options": ["Windscreen", "Windshield", "Rear window", "Side window"],
+                "answer": "Windscreen",
+                "explanation": "In British English, the front window is the windscreen."
+              },
+              {
+                "id": "b5_eng_005",
+                "text": "The part of the exhaust system that reduces engine noise is the:",
+                "options": ["Radiator", "Silencer", "Alternator", "Carburettor"],
+                "answer": "Silencer",
+                "explanation": "The silencer reduces engine noise."
+              },
+              {
+                "id": "b5_eng_006",
+                "text": "The instrument that shows the vehicle's current speed is the:",
+                "options": ["Fuel gauge", "Speedometer", "Rev counter", "Odometer"],
+                "answer": "Speedometer",
+                "explanation": "The speedometer shows the vehicle's speed."
+              },
+              {
+                "id": "b5_eng_007",
+                "text": "The device that charges the battery while the engine is running is the:",
+                "options": ["Radiator", "Alternator", "Spark plug", "Carburettor"],
+                "answer": "Alternator",
+                "explanation": "The alternator charges the battery while the engine runs."
+              },
+              {
+                "id": "b5_eng_008",
+                "text": "The flashing lights used to signal a turn are called:",
+                "options": ["Headlights", "Indicators", "Hazard lights", "Brake lights"],
+                "answer": "Indicators",
+                "explanation": "Indicators are flashing lights used to signal a turn."
+              },
+              {
+                "id": "b5_eng_009",
+                "text": "The load-bearing framework of a vehicle is the:",
+                "options": ["Body", "Chassis", "Bumper", "Wing"],
+                "answer": "Chassis",
+                "explanation": "The chassis is the load-bearing framework of a vehicle."
+              },
+              {
+                "id": "b5_eng_010",
+                "text": "Identify the abstract noun in the following: \"His integrity was never in question.\"",
+                "options": ["His", "Integrity", "Was", "Question"],
+                "answer": "Integrity",
+                "explanation": "Integrity is an abstract noun."
+              },
+              {
+                "id": "b5_eng_011",
+                "text": "The correct plural form of \"crisis\" is:",
+                "options": ["Crisises", "Crises", "Crisis", "Crisi"],
+                "answer": "Crises",
+                "explanation": "The plural of crisis is crises."
+              },
+              {
+                "id": "b5_eng_012",
+                "text": "Which of the following is an uncountable noun?",
+                "options": ["Book", "Furniture", "Chair", "Table"],
+                "answer": "Furniture",
+                "explanation": "Furniture is an uncountable noun."
+              },
+              {
+                "id": "b5_eng_013",
+                "text": "In the sentence \"The three talented musicians from the village played beautifully,\" the headword of the noun phrase is:",
+                "options": ["The", "Three", "Musicians", "Village"],
+                "answer": "Musicians",
+                "explanation": "The headword of the noun phrase is 'musicians'."
+              },
+              {
+                "id": "b5_eng_014",
+                "text": "A collective noun that takes a plural verb when referring to individuals is:",
+                "options": ["Team (as in \"The team is playing\")", "Committee (as in \"The committee are arguing among themselves\")", "Flock", "Bunch"],
+                "answer": "Committee (as in \"The committee are arguing among themselves\")",
+                "explanation": "Committee takes a plural verb when referring to individuals."
+              },
+              {
+                "id": "b5_eng_015",
+                "text": "The plural of \"phenomenon\" is:",
+                "options": ["Phenomenons", "Phenomena", "Phenomenae", "Phenomeni"],
+                "answer": "Phenomena",
+                "explanation": "The plural of phenomenon is phenomena."
+              },
+              {
+                "id": "b5_eng_016",
+                "text": "In the sentence \"She gave the award to the diligent student,\" the underlined noun phrase functions as:",
+                "options": ["Subject", "Object of the verb", "Object of a preposition", "Complement"],
+                "answer": "Object of a preposition",
+                "explanation": "The noun phrase functions as the object of a preposition."
+              },
+              {
+                "id": "b5_eng_017",
+                "text": "A rite of passage marking entrance into a group or society is:",
+                "options": ["Festival", "Initiation", "Carnival", "Procession"],
+                "answer": "Initiation",
+                "explanation": "Initiation is a rite of passage marking entrance into a group."
+              },
+              {
+                "id": "b5_eng_018",
+                "text": "The unwritten rules that define acceptable behavior in a society are:",
+                "options": ["Laws", "Norms", "Statutes", "Decrees"],
+                "answer": "Norms",
+                "explanation": "Norms are unwritten rules of acceptable behavior."
+              },
+              {
+                "id": "b5_eng_019",
+                "text": "A social or religious custom prohibiting a particular practice is a:",
+                "options": ["Norm", "Taboo", "Tradition", "Custom"],
+                "answer": "Taboo",
+                "explanation": "A taboo is a social or religious custom prohibiting a practice."
+              },
+              {
+                "id": "b5_eng_020",
+                "text": "A West African historian and storyteller who preserves oral tradition is a:",
+                "options": ["Griot", "Chief", "Elder", "Masquerade"],
+                "answer": "Griot",
+                "explanation": "A griot is a West African historian and storyteller."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tier": "premium"
+  }
+}
