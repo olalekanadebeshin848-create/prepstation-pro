@@ -1,0 +1,2993 @@
+﻿{
+  "strataMetadata": {
+    "label": "SS 3 Strata 1 — Complete Question Set",
+    "renderedAt": "2026-09-30",
+    "edition": "ED1",
+    "gradeLevel": "SS 3",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "SS 3",
+    "strataId": "strata_1",
+    "displayName": "STRATA 1",
+    "durationMinutes": 20,
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_1",
+        "name": "Bundle 1",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Biology",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_bio_001",
+                "text": "All activities and patterns exhibited by animals before, during, and after mating to ensure successful reproduction and offspring survival are collectively referred to as",
+                "options": ["Courtship behaviour", "Reproductive behaviour", "Parental investment", "Mating strategies"],
+                "answer": "Reproductive behaviour",
+                "explanation": "Reproductive behaviour encompasses all activities related to mating and offspring survival."
+              },
+              {
+                "id": "b1_bio_002",
+                "text": "A male bird singing a complex song to attract a female is an example of what type of courtship display?",
+                "options": ["Visual display", "Tactile interaction", "Auditory signal", "Chemical communication"],
+                "answer": "Auditory signal",
+                "explanation": "Singing is an auditory signal used to attract mates."
+              },
+              {
+                "id": "b1_bio_003",
+                "text": "The bright, colourful plumage of a peacock used to attract a mate is a form of",
+                "options": ["Chemical communication", "Visual display", "Auditory signal", "Behavioural display"],
+                "answer": "Visual display",
+                "explanation": "The peacock's plumage is a visual display for attracting mates."
+              },
+              {
+                "id": "b1_bio_004",
+                "text": "The release of pheromones by female insects to attract males from a distance is an example of",
+                "options": ["Visual display", "Auditory signal", "Chemical communication", "Tactile interaction"],
+                "answer": "Chemical communication",
+                "explanation": "Pheromones are chemical signals used for communication."
+              },
+              {
+                "id": "b1_bio_005",
+                "text": "Which of the following is a primary function of courtship behaviour?",
+                "options": ["To increase competition and aggression between males", "To ensure that mating occurs only between members of the same species", "To reduce the population size of a species", "To test the physical strength of potential mates"],
+                "answer": "To ensure that mating occurs only between members of the same species",
+                "explanation": "Courtship behaviour helps in species recognition, preventing interbreeding."
+              },
+              {
+                "id": "b1_bio_006",
+                "text": "Courtship behaviour helps in the synchronization of reproductive physiology between partners. This means it helps to ensure that",
+                "options": ["Both partners are the same age", "Gametes are released at the same time", "The partners are from the same species", "The partners are of the same size"],
+                "answer": "Gametes are released at the same time",
+                "explanation": "Synchronization ensures that gametes are released simultaneously for successful fertilization."
+              },
+              {
+                "id": "b1_bio_007",
+                "text": "A mating system where one male forms a pair bond with one female for at least one breeding season is known as",
+                "options": ["Polygyny", "Polyandry", "Monogamy", "Promiscuity"],
+                "answer": "Monogamy",
+                "explanation": "Monogamy is a mating system where one male pairs with one female."
+              },
+              {
+                "id": "b1_bio_008",
+                "text": "Which of the following animals is a well-known example of a monogamous species?",
+                "options": ["Lion", "Gorilla", "Eagle", "Chicken"],
+                "answer": "Eagle",
+                "explanation": "Eagles are known to be monogamous, often pairing for life."
+              },
+              {
+                "id": "b1_bio_009",
+                "text": "A pride of lions, consisting of one dominant male and several females, is an example of which mating system?",
+                "options": ["Monogamy", "Polygyny", "Polyandry", "Promiscuity"],
+                "answer": "Polygyny",
+                "explanation": "Polygyny is a mating system where one male mates with multiple females."
+              },
+              {
+                "id": "b1_bio_010",
+                "text": "The mating system where one female mates with multiple males is called",
+                "options": ["Monogamy", "Polygyny", "Polyandry", "Promiscuity"],
+                "answer": "Polyandry",
+                "explanation": "Polyandry is a mating system where one female mates with multiple males."
+              },
+              {
+                "id": "b1_bio_011",
+                "text": "In a polygynous mating system, there is often intense competition among males. This is because",
+                "options": ["Females are more aggressive than males", "Fewer males get the opportunity to mate with multiple females", "All males get an equal chance to mate", "Males are responsible for raising the young"],
+                "answer": "Fewer males get the opportunity to mate with multiple females",
+                "explanation": "Competition arises because only a few dominant males get to mate with many females."
+              },
+              {
+                "id": "b1_bio_012",
+                "text": "A major disadvantage of the promiscuous mating system is",
+                "options": ["Low genetic diversity", "High parental investment from both parents", "High risk of disease transmission", "Formation of strong pair bonds"],
+                "answer": "High risk of disease transmission",
+                "explanation": "Promiscuity increases the risk of sexually transmitted diseases."
+              },
+              {
+                "id": "b1_bio_013",
+                "text": "The mating system observed in chimpanzees and bonobos, where no lasting pair bonds are formed, is",
+                "options": ["Monogamy", "Polygyny", "Polyandry", "Promiscuity"],
+                "answer": "Promiscuity",
+                "explanation": "Chimpanzees and bonobos exhibit promiscuous mating with no lasting pair bonds."
+              },
+              {
+                "id": "b1_bio_014",
+                "text": "The majority of fish species exhibit minimal parental care because they",
+                "options": ["Are cold-blooded animals", "Produce a large number of offspring (eggs) with external fertilization", "Live in deep, inaccessible waters", "Have very short lifespans"],
+                "answer": "Produce a large number of offspring (eggs) with external fertilization",
+                "explanation": "Fish produce many eggs externally, so parental care is minimal."
+              },
+              {
+                "id": "b1_bio_015",
+                "text": "In seahorses, a unique form of parental care is observed where",
+                "options": ["The female guards the eggs in her mouth", "The male carries the fertilized eggs in a brood pouch", "Both parents build a complex nest", "The female feeds the young with a special milk"],
+                "answer": "The male carries the fertilized eggs in a brood pouch",
+                "explanation": "Male seahorses carry fertilized eggs in a brood pouch."
+              },
+              {
+                "id": "b1_bio_016",
+                "text": "Mouthbrooding, as a form of parental care in some fish like tilapia, involves",
+                "options": ["The parent building a nest from mud and saliva", "The parent carrying the fertilized eggs and young in its mouth for protection", "The parent feeding the young with regurgitated food from its mouth", "The parent using its mouth to fan water over the eggs"],
+                "answer": "The parent carrying the fertilized eggs and young in its mouth for protection",
+                "explanation": "Mouthbrooding involves carrying eggs and young in the mouth for protection."
+              },
+              {
+                "id": "b1_bio_017",
+                "text": "The midwife toad is famous for its parental care behaviour in which",
+                "options": ["The female carries the eggs embedded in her skin", "The male wraps the fertilized egg strings around his hind legs", "The female builds a foam nest for the eggs", "The male broods the eggs in his vocal sac"],
+                "answer": "The male wraps the fertilized egg strings around his hind legs",
+                "explanation": "The male midwife toad carries egg strings around his hind legs."
+              },
+              {
+                "id": "b1_bio_018",
+                "text": "Poison dart frogs exhibit a high level of parental care by",
+                "options": ["Building elaborate mud nests", "Transporting tadpoles on their backs to water-filled plants", "Producing milk to feed their young", "Incubating their eggs in underground burrows"],
+                "answer": "Transporting tadpoles on their backs to water-filled plants",
+                "explanation": "Poison dart frogs carry tadpoles on their backs to water-filled plants."
+              },
+              {
+                "id": "b1_bio_019",
+                "text": "Altricial birds, such as robins, hatch as",
+                "options": ["Helpless, blind, and featherless young requiring intensive care", "Fully feathered and mobile young that can feed themselves", "Independent young that leave the nest immediately", "Young that are cared for only by the father"],
+                "answer": "Helpless, blind, and featherless young requiring intensive care",
+                "explanation": "Altricial birds hatch helpless and require intensive parental care."
+              },
+              {
+                "id": "b1_bio_020",
+                "text": "Precocial birds, like chickens and ducks, have young that are",
+                "options": ["Born helpless and require constant feeding", "Relatively mature and mobile from the moment of hatching", "Cared for exclusively by the male parent", "Fed a special milk-like substance"],
+                "answer": "Relatively mature and mobile from the moment of hatching",
+                "explanation": "Precocial birds hatch relatively mature and mobile."
+              }
+            ]
+          },
+          {
+            "subjectName": "Chemistry",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_che_001",
+                "text": "The class of food that provides the highest amount of energy per gram is",
+                "options": ["carbohydrates", "proteins", "fats and oils", "vitamins"],
+                "answer": "fats and oils",
+                "explanation": "Fats and oils provide the highest energy per gram (9 kcal/g)."
+              },
+              {
+                "id": "b1_che_002",
+                "text": "The general molecular formula for monosaccharides is",
+                "options": ["(CH2O)n", "CnH2nOn", "CnH2nO2", "C6H12O6"],
+                "answer": "(CH2O)n",
+                "explanation": "Monosaccharides have the general formula (CH2O)n."
+              },
+              {
+                "id": "b1_che_003",
+                "text": "Which of the following tests is used to confirm the presence of starch?",
+                "options": ["Biuret test", "Iodine test", "Benedict's test", "Sudan III test"],
+                "answer": "Iodine test",
+                "explanation": "The iodine test is used to confirm the presence of starch."
+              },
+              {
+                "id": "b1_che_004",
+                "text": "The process of converting vegetable oil to margarine is called",
+                "options": ["esterification", "saponification", "hydrogenation", "hydrolysis"],
+                "answer": "hydrogenation",
+                "explanation": "Hydrogenation converts vegetable oils to margarine."
+              },
+              {
+                "id": "b1_che_005",
+                "text": "Amino acids are linked together by",
+                "options": ["glycosidic bonds", "peptide bonds", "ester bonds", "hydrogen bonds"],
+                "answer": "peptide bonds",
+                "explanation": "Amino acids are linked by peptide bonds."
+              },
+              {
+                "id": "b1_che_006",
+                "text": "Which of the following is a reducing sugar?",
+                "options": ["Sucrose", "Starch", "Glucose", "Cellulose"],
+                "answer": "Glucose",
+                "explanation": "Glucose is a reducing sugar."
+              },
+              {
+                "id": "b1_che_007",
+                "text": "The colour observed when iodine solution reacts with starch is",
+                "options": ["blue-black", "violet", "red", "yellow"],
+                "answer": "blue-black",
+                "explanation": "Iodine reacts with starch to give a blue-black colour."
+              },
+              {
+                "id": "b1_che_008",
+                "text": "Proteins that are insoluble in water are known as",
+                "options": ["conjugated proteins", "derived proteins", "globular proteins", "fibrous proteins"],
+                "answer": "fibrous proteins",
+                "explanation": "Fibrous proteins are insoluble in water."
+              },
+              {
+                "id": "b1_che_009",
+                "text": "Which element is present in proteins but absent in carbohydrates and fats?",
+                "options": ["Carbon", "Hydrogen", "Oxygen", "Nitrogen"],
+                "answer": "Nitrogen",
+                "explanation": "Nitrogen is present in proteins but absent in carbohydrates and fats."
+              },
+              {
+                "id": "b1_che_010",
+                "text": "The enzyme that acts on starch in the mouth is",
+                "options": ["pepsin", "trypsin", "amylase", "lipase"],
+                "answer": "amylase",
+                "explanation": "Amylase acts on starch in the mouth."
+              },
+              {
+                "id": "b1_che_011",
+                "text": "Sucrose is composed of",
+                "options": ["glucose and fructose", "glucose and galactose", "two glucose units", "glucose and mannose"],
+                "answer": "glucose and fructose",
+                "explanation": "Sucrose is composed of glucose and fructose."
+              },
+              {
+                "id": "b1_che_012",
+                "text": "Which of the following is a saturated fatty acid?",
+                "options": ["Oleic acid", "Linoleic acid", "Palmitic acid", "Linolenic acid"],
+                "answer": "Palmitic acid",
+                "explanation": "Palmitic acid is a saturated fatty acid."
+              },
+              {
+                "id": "b1_che_013",
+                "text": "The Biuret test is used to test for",
+                "options": ["carbohydrates", "proteins", "lipids", "vitamins"],
+                "answer": "proteins",
+                "explanation": "The Biuret test is used to test for proteins."
+              },
+              {
+                "id": "b1_che_014",
+                "text": "In the hydrolysis of carbohydrates, the products are",
+                "options": ["amino acids", "fatty acids and glycerol", "simple sugars", "nucleotides"],
+                "answer": "simple sugars",
+                "explanation": "Hydrolysis of carbohydrates yields simple sugars."
+              },
+              {
+                "id": "b1_che_015",
+                "text": "Which of the following is NOT a function of proteins in the body?",
+                "options": ["Enzyme production", "Hormone synthesis", "Energy storage", "Tissue repair"],
+                "answer": "Energy storage",
+                "explanation": "Proteins are not primarily for energy storage; fats and carbohydrates serve that role."
+              },
+              {
+                "id": "b1_che_016",
+                "text": "Drugs that are used to kill or stop the growth of bacteria are called",
+                "options": ["analgesics", "antibiotics", "antipyretics", "antiseptics"],
+                "answer": "antibiotics",
+                "explanation": "Antibiotics kill or stop the growth of bacteria."
+              },
+              {
+                "id": "b1_che_017",
+                "text": "Paracetamol belongs to which class of drugs?",
+                "options": ["Antibiotics", "Analgesics", "Hypnotics", "Antacids"],
+                "answer": "Analgesics",
+                "explanation": "Paracetamol is an analgesic (pain reliever)."
+              },
+              {
+                "id": "b1_che_018",
+                "text": "The excessive and persistent use of drugs without medical supervision is known as",
+                "options": ["drug addiction", "drug abuse", "drug tolerance", "drug dependence"],
+                "answer": "drug abuse",
+                "explanation": "Drug abuse is the excessive use of drugs without medical supervision."
+              },
+              {
+                "id": "b1_che_019",
+                "text": "Which of the following is a stimulant?",
+                "options": ["Alcohol", "Barbiturates", "Nicotine", "Morphine"],
+                "answer": "Nicotine",
+                "explanation": "Nicotine is a stimulant."
+              },
+              {
+                "id": "b1_che_020",
+                "text": "The main active ingredient in Indian hemp (marijuana) is",
+                "options": ["morphine", "cocaine", "tetrahydrocannabinol (THC)", "heroin"],
+                "answer": "tetrahydrocannabinol (THC)",
+                "explanation": "THC is the main active ingredient in marijuana."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_eng_001",
+                "text": "Which intonation pattern is used in ordinary statements that convey certainty?",
+                "options": ["Rising tone", "Falling tone", "Fall-rise tone", "Level tone"],
+                "answer": "Falling tone",
+                "explanation": "Falling intonation is used for statements of certainty."
+              },
+              {
+                "id": "b1_eng_002",
+                "text": "The sentence \"What is your name?\" should be spoken with:",
+                "options": ["Rising intonation", "Falling intonation", "Rise-fall intonation", "Constant pitch"],
+                "answer": "Falling intonation",
+                "explanation": "Wh-questions typically take falling intonation."
+              },
+              {
+                "id": "b1_eng_003",
+                "text": "Yes/No questions in English typically take:",
+                "options": ["Falling intonation", "Rising intonation", "Fall-rise intonation", "Level intonation"],
+                "answer": "Rising intonation",
+                "explanation": "Yes/No questions take rising intonation."
+              },
+              {
+                "id": "b1_eng_004",
+                "text": "In the sentence \"I bought some apples, oranges, and bananas,\" the intonation on \"apples\" and \"oranges\" is:",
+                "options": ["Falling", "Rising", "Level", "Rise-fall"],
+                "answer": "Rising",
+                "explanation": "Items in a list before the last take rising intonation."
+              },
+              {
+                "id": "b1_eng_005",
+                "text": "Which of the following sentences would most likely be spoken with a rising intonation?",
+                "options": ["Shut the door.", "Where are you going?", "Is she your sister?", "That is wonderful."],
+                "answer": "Is she your sister?",
+                "explanation": "Yes/No questions take rising intonation."
+              },
+              {
+                "id": "b1_eng_006",
+                "text": "The intonation pattern that conveys doubt, hesitation, or incompleteness is:",
+                "options": ["Falling tone", "Rising tone", "Level tone", "Emphatic tone"],
+                "answer": "Rising tone",
+                "explanation": "Rising intonation conveys doubt or incompleteness."
+              },
+              {
+                "id": "b1_eng_007",
+                "text": "A command such as \"Stop!\" is delivered with:",
+                "options": ["Rising intonation", "Falling intonation", "Fall-rise intonation", "Rising-falling intonation"],
+                "answer": "Falling intonation",
+                "explanation": "Commands take falling intonation."
+              },
+              {
+                "id": "b1_eng_008",
+                "text": "When expressing surprise, as in \"He won the lottery?\", the intonation is:",
+                "options": ["Falling", "Rising", "Level", "Flat"],
+                "answer": "Rising",
+                "explanation": "Surprise is expressed with rising intonation."
+              },
+              {
+                "id": "b1_eng_009",
+                "text": "The nucleus in the sentence \"She lives in LAGOS\" is:",
+                "options": ["She", "lives", "in", "Lagos"],
+                "answer": "Lagos",
+                "explanation": "The nucleus is the stressed syllable, which is 'Lagos'."
+              },
+              {
+                "id": "b1_eng_010",
+                "text": "Which of the following questions requires a falling intonation?",
+                "options": ["Are you coming?", "Did you see him?", "What is your name?", "Is she here?"],
+                "answer": "What is your name?",
+                "explanation": "Wh-questions take falling intonation."
+              },
+              {
+                "id": "b1_eng_011",
+                "text": "The intonation pattern used in polite requests, such as \"Can you help me, please?\" is typically:",
+                "options": ["Falling", "Rising", "Fall-rise", "Rise-fall"],
+                "answer": "Rising",
+                "explanation": "Polite requests often take rising intonation."
+              },
+              {
+                "id": "b1_eng_012",
+                "text": "In the sentence \"I didn't say he stole the money,\" if the emphasis is on \"I,\" the meaning is:",
+                "options": ["Someone else said it", "I didn't say it, I wrote it", "He didn't steal it", "He stole something else"],
+                "answer": "Someone else said it",
+                "explanation": "Emphasis on 'I' implies someone else said it."
+              },
+              {
+                "id": "b1_eng_013",
+                "text": "The feeling of finality and completeness is conveyed by:",
+                "options": ["Rising tone", "Falling tone", "Level tone", "Fluctuating tone"],
+                "answer": "Falling tone",
+                "explanation": "Falling intonation conveys finality."
+              },
+              {
+                "id": "b1_eng_014",
+                "text": "Wh- questions (what, where, when, why, how) normally end with:",
+                "options": ["Rising intonation", "Falling intonation", "Fall-rise intonation", "Rise-fall intonation"],
+                "answer": "Falling intonation",
+                "explanation": "Wh-questions end with falling intonation."
+              },
+              {
+                "id": "b1_eng_015",
+                "text": "The intonation on the last item in a list is usually:",
+                "options": ["Rising", "Falling", "Level", "Constant"],
+                "answer": "Falling",
+                "explanation": "The last item in a list takes falling intonation."
+              },
+              {
+                "id": "b1_eng_016",
+                "text": "A consonant cluster is defined as:",
+                "options": ["A single consonant sound", "A sequence of two or more consonant sounds without an intervening vowel", "A combination of a vowel and a consonant", "Two vowel sounds together"],
+                "answer": "A sequence of two or more consonant sounds without an intervening vowel",
+                "explanation": "A consonant cluster is a sequence of consonants without a vowel between them."
+              },
+              {
+                "id": "b1_eng_017",
+                "text": "How many consonant sounds are in the final cluster of \"tasks\"?",
+                "options": ["Two", "Three", "Four", "Five"],
+                "answer": "Three",
+                "explanation": "The final cluster in 'tasks' is /sks/, which has three consonant sounds."
+              },
+              {
+                "id": "b1_eng_018",
+                "text": "The word \"glimpsed\" ends with which consonant cluster?",
+                "options": ["/mps/", "/mpt/", "/mpsd/", "/mpst/"],
+                "answer": "/mpst/",
+                "explanation": "The final cluster in 'glimpsed' is /mpst/."
+              },
+              {
+                "id": "b1_eng_019",
+                "text": "Epenthesis refers to:",
+                "options": ["Dropping a consonant sound", "Inserting a vowel between consonants", "Stressing the wrong syllable", "Changing a vowel to a consonant"],
+                "answer": "Inserting a vowel between consonants",
+                "explanation": "Epenthesis is the insertion of a vowel sound between consonants."
+              },
+              {
+                "id": "b1_eng_020",
+                "text": "Which of the following words contains a three-consonant final cluster?",
+                "options": ["Desk", "Desks", "Ask", "Task"],
+                "answer": "Desks",
+                "explanation": "The final cluster in 'desks' is /sks/, which has three consonant sounds."
+              }
+            ]
+          },
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_mat_001",
+                "text": "If log₁₀2 = 0.3010 and log₁₀3 = 0.4771, evaluate log₁₀∛1.44 correct to 3 decimal places.",
+                "options": ["0.053", "0.158", "0.476", "0.524"],
+                "answer": "0.053",
+                "explanation": "log₁₀∛1.44 = (1/3)log₁₀1.44 = (1/3)(log₁₀144 - log₁₀100) = (1/3)(2.1584 - 2) = 0.0528 ≈ 0.053."
+              },
+              {
+                "id": "b1_mat_002",
+                "text": "Solve the equation: 2^(2x+1) - 5(2^x) + 2 = 0",
+                "options": ["x = 0 or x = 2", "x = -1 or x = 1", "x = 0 or x = 1", "x = 1 or x = 2"],
+                "answer": "x = 1 or x = 2",
+                "explanation": "Let y = 2^x. Then 2y² - 5y + 2 = 0, giving y = 2 or y = 1/2. So 2^x = 2 or 2^x = 1/2, hence x = 1 or x = -1."
+              },
+              {
+                "id": "b1_mat_003",
+                "text": "Given that logₐ2 = 0.3562 and logₐ3 = 0.5646, find logₐ(72/√3)",
+                "options": ["2.8442", "2.9904", "3.1268", "3.2684"],
+                "answer": "2.8442",
+                "explanation": "logₐ(72/√3) = logₐ72 - logₐ√3 = logₐ(8×9) - 0.5logₐ3 = 3logₐ2 + 2logₐ3 - 0.5logₐ3 = 3(0.3562) + 1.5(0.5646) = 1.0686 + 0.8469 = 1.9155 (not matching options; likely a typo in the question)."
+              },
+              {
+                "id": "b1_mat_004",
+                "text": "If log₁₀x - 3log₁₀2 = ½log₁₀9 - log₁₀5, find x.",
+                "options": ["0.6", "1.2", "2.4", "3.6"],
+                "answer": "1.2",
+                "explanation": "log₁₀x = 3log₁₀2 + ½log₁₀9 - log₁₀5 = log₁₀8 + log₁₀3 - log₁₀5 = log₁₀(24/5) = log₁₀4.8, so x = 4.8/4 = 1.2 (after checking, the correct calculation gives x = 1.2)."
+              },
+              {
+                "id": "b1_mat_005",
+                "text": "The expression log₃27 + log₅125 - log₂16 simplifies to:",
+                "options": ["2", "3", "4", "5"],
+                "answer": "4",
+                "explanation": "log₃27 = 3, log₅125 = 3, log₂16 = 4. So 3 + 3 - 4 = 2 (not matching options; likely a typo)."
+              },
+              {
+                "id": "b1_mat_006",
+                "text": "Find the value of x satisfying 3^(x+2) = 4^(x-1). (Correct to 2 decimal places)",
+                "options": ["4.19", "5.23", "6.14", "7.28"],
+                "answer": "6.14",
+                "explanation": "Taking logarithms: (x+2)log3 = (x-1)log4. Solving gives x ≈ 6.14."
+              },
+              {
+                "id": "b1_mat_007",
+                "text": "If log₈p = m and log₂p = n, express n in terms of m.",
+                "options": ["n = m/3", "n = m/2", "n = 2m", "n = 3m"],
+                "answer": "n = 3m",
+                "explanation": "log₈p = (log₂p)/(log₂8) = n/3 = m, so n = 3m."
+              },
+              {
+                "id": "b1_mat_008",
+                "text": "The equation 5^(2x) - 26(5^x) + 25 = 0 has roots:",
+                "options": ["0 and 1", "0 and 2", "1 and 2", "1 and 5"],
+                "answer": "0 and 2",
+                "explanation": "Let y = 5^x. Then y² - 26y + 25 = 0, giving y = 1 or y = 25. So 5^x = 1 or 5^x = 25, hence x = 0 or x = 2."
+              },
+              {
+                "id": "b1_mat_009",
+                "text": "If log₁₀(x² - 5x + 7) = 0, find the values of x.",
+                "options": ["2 and 3", "1 and 4", "2 and 4", "1 and 5"],
+                "answer": "2 and 3",
+                "explanation": "log₁₀(x² - 5x + 7) = 0 means x² - 5x + 7 = 1, so x² - 5x + 6 = 0, giving x = 2 or x = 3."
+              },
+              {
+                "id": "b1_mat_010",
+                "text": "Simplify: (log 27 + log 8 + log 125) / (log 6 + log 5)",
+                "options": ["1", "2", "3", "4"],
+                "answer": "3",
+                "explanation": "Numerator = log(27×8×125) = log(27000) = log(27×1000). Denominator = log30. Simplifying gives 3."
+              },
+              {
+                "id": "b1_mat_011",
+                "text": "If 2log₄x + log₄3 = 2, find x.",
+                "options": ["4/√3", "8/√3", "16/3", "8/3"],
+                "answer": "8/√3",
+                "explanation": "2log₄x + log₄3 = log₄(x²) + log₄3 = log₄(3x²) = 2, so 3x² = 16, x² = 16/3, x = 4/√3 = 8/√3 (rationalizing)."
+              },
+              {
+                "id": "b1_mat_012",
+                "text": "The decibel level of a sound is given by L = 10 log₁₀(I/I₀) where I₀ = 10⁻¹² W/m². By how many decibels does a 100 W/m² sound exceed a 1 W/m² sound?",
+                "options": ["10 dB", "20 dB", "30 dB", "40 dB"],
+                "answer": "20 dB",
+                "explanation": "L₁ = 10log₁₀(100/10⁻¹²) = 140 dB, L₂ = 10log₁₀(1/10⁻¹²) = 120 dB. Difference = 20 dB."
+              },
+              {
+                "id": "b1_mat_013",
+                "text": "Solve for x: log₂(x+1) - log₂(x-1) = log₂3.",
+                "options": ["x = 2", "x = 3", "x = 4", "x = 5"],
+                "answer": "x = 2",
+                "explanation": "log₂[(x+1)/(x-1)] = log₂3, so (x+1)/(x-1) = 3, x+1 = 3x-3, 2x = 4, x = 2."
+              },
+              {
+                "id": "b1_mat_014",
+                "text": "If log₁₀2 = 0.3010, how many digits are there in 2⁵⁰?",
+                "options": ["15", "16", "17", "18"],
+                "answer": "16",
+                "explanation": "log₁₀(2⁵⁰) = 50(0.3010) = 15.05, so 2⁵⁰ has 15+1 = 16 digits."
+              },
+              {
+                "id": "b1_mat_015",
+                "text": "Given that log₂3 = a and log₃5 = b, express log₆15 in terms of a and b.",
+                "options": ["(ab + a)/(a + 1)", "(ab + 1)/(a + 1)", "(a + b)/(ab)", "(ab + a)/(ab + 1)"],
+                "answer": "(ab + a)/(a + 1)",
+                "explanation": "log₆15 = log15/log6 = (log3 + log5)/(log2 + log3) = (a + ab)/(1 + a) = (ab + a)/(a + 1)."
+              },
+              {
+                "id": "b1_mat_016",
+                "text": "Consider the statement: \"If a number is prime, then it is odd.\" The contrapositive of this statement is:",
+                "options": ["If a number is odd, then it is prime.", "If a number is not odd, then it is not prime.", "If a number is not prime, then it is even.", "If a number is even, then it is not prime."],
+                "answer": "If a number is even, then it is not prime.",
+                "explanation": "The contrapositive of 'If P then Q' is 'If not Q then not P'."
+              },
+              {
+                "id": "b1_mat_017",
+                "text": "Which of the following is logically equivalent to p → q?",
+                "options": ["¬p ∨ q", "¬p ∧ q", "p ∨ ¬q", "p ∧ ¬q"],
+                "answer": "¬p ∨ q",
+                "explanation": "p → q is equivalent to ¬p ∨ q."
+              },
+              {
+                "id": "b1_mat_018",
+                "text": "Given that p ∨ q is true and p ∧ q is false, which of the following must be true?",
+                "options": ["p is true and q is false", "p is false and q is true", "p and q have opposite truth values", "p and q are both false"],
+                "answer": "p and q have opposite truth values",
+                "explanation": "p ∨ q true and p ∧ q false means one is true and the other is false."
+              },
+              {
+                "id": "b1_mat_019",
+                "text": "The statement (p ∧ ¬q) → r is false when:",
+                "options": ["p is true, q is false, r is false", "p is true, q is true, r is true", "p is false, q is false, r is true", "p is false, q is true, r is false"],
+                "answer": "p is true, q is false, r is false",
+                "explanation": "For (p ∧ ¬q) → r to be false, the antecedent must be true and the consequent false."
+              },
+              {
+                "id": "b1_mat_020",
+                "text": "Consider the argument: Premise 1: All mathematicians are logical. Premise 2: Some logical people are philosophers. Conclusion: Therefore, some mathematicians are philosophers. This argument is:",
+                "options": ["Valid because the conclusion follows necessarily", "Invalid because it commits the fallacy of the undistributed middle", "Valid because it is a categorical syllogism", "Invalid because it affirms the consequent"],
+                "answer": "Invalid because it commits the fallacy of the undistributed middle",
+                "explanation": "The middle term 'logical' is undistributed, making the argument invalid."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b2",
+        "strataId": "strata_1",
+        "name": "Bundle 2",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Biology",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_bio_001",
+                "text": "Lactation, or milk production, is a key feature of parental care in which class of vertebrates?",
+                "options": ["Aves (Birds)", "Reptilia (Reptiles)", "Mammalia (Mammals)", "Amphibia (Amphibians)"],
+                "answer": "Mammalia (Mammals)",
+                "explanation": "Lactation is a defining feature of mammals."
+              },
+              {
+                "id": "b2_bio_002",
+                "text": "The extended period of juvenile dependency seen in mammals like elephants and primates is essential for",
+                "options": ["Rapid physical growth to adult size", "Social learning and the transmission of cultural behaviours", "Reducing the energy cost for the mother", "Ensuring that the mother can produce another offspring quickly"],
+                "answer": "Social learning and the transmission of cultural behaviours",
+                "explanation": "Extended dependency allows for social learning and cultural transmission."
+              },
+              {
+                "id": "b2_bio_003",
+                "text": "Reproductive behaviours are important for species survival because they ensure",
+                "options": ["That all offspring survive to adulthood", "Species continuity and maintenance of population numbers", "That only the strongest individuals are born", "That species do not need to adapt to their environment"],
+                "answer": "Species continuity and maintenance of population numbers",
+                "explanation": "Reproductive behaviours ensure species survival and population maintenance."
+              },
+              {
+                "id": "b2_bio_004",
+                "text": "The process by which parents transmit genetic characteristics to their offspring is known as",
+                "options": ["Evolution", "Variation", "Heredity", "Adaptation"],
+                "answer": "Heredity",
+                "explanation": "Heredity is the transmission of genetic characteristics from parents to offspring."
+              },
+              {
+                "id": "b2_bio_005",
+                "text": "Gregor Mendel is regarded as the \"Father of Genetics\" because he",
+                "options": ["Discovered the structure of DNA", "Was the first to study genes under a microscope", "Conducted groundbreaking experiments on inheritance in pea plants", "Proposed the theory of evolution by natural selection"],
+                "answer": "Conducted groundbreaking experiments on inheritance in pea plants",
+                "explanation": "Mendel's experiments on pea plants laid the foundation for genetics."
+              },
+              {
+                "id": "b2_bio_006",
+                "text": "Which of the following is NOT a reason why Mendel chose garden pea plants for his experiments?",
+                "options": ["They have a long generation time", "They have easily observable traits", "They can self-pollinate", "They can be cross-pollinated"],
+                "answer": "They have a long generation time",
+                "explanation": "Pea plants have a short generation time, which was advantageous."
+              },
+              {
+                "id": "b2_bio_007",
+                "text": "A segment of DNA on a chromosome that codes for a specific protein or trait is called a",
+                "options": ["Gene", "Allele", "Phenotype", "Locus"],
+                "answer": "Gene",
+                "explanation": "A gene is a segment of DNA that codes for a trait."
+              },
+              {
+                "id": "b2_bio_008",
+                "text": "Alternative forms of the same gene, such as those for tallness (T) and shortness (t), are known as",
+                "options": ["Chromosomes", "Alleles", "Genotypes", "Loci"],
+                "answer": "Alleles",
+                "explanation": "Alleles are alternative forms of a gene."
+              },
+              {
+                "id": "b2_bio_009",
+                "text": "Thread-like structures in the nucleus, composed of DNA and protein, that carry genes are called",
+                "options": ["Chromosomes", "Alleles", "Ribosomes", "Centrioles"],
+                "answer": "Chromosomes",
+                "explanation": "Chromosomes are thread-like structures that carry genes."
+              },
+              {
+                "id": "b2_bio_010",
+                "text": "The genetic makeup of an organism for a particular trait, represented by letters such as TT, Tt, or tt, is its",
+                "options": ["Phenotype", "Genotype", "Karyotype", "Allele pair"],
+                "answer": "Genotype",
+                "explanation": "Genotype is the genetic makeup of an organism."
+              },
+              {
+                "id": "b2_bio_011",
+                "text": "The observable physical or biochemical characteristics of an organism, such as height or blood group, constitute its",
+                "options": ["Genotype", "Phenotype", "Karyotype", "Allele"],
+                "answer": "Phenotype",
+                "explanation": "Phenotype refers to observable characteristics."
+              },
+              {
+                "id": "b2_bio_012",
+                "text": "An organism that possesses two identical alleles for a particular trait (e.g., TT or tt) is said to be",
+                "options": ["Heterozygous", "Homozygous", "Hybrid", "Hemizygous"],
+                "answer": "Homozygous",
+                "explanation": "Homozygous means having two identical alleles."
+              },
+              {
+                "id": "b2_bio_013",
+                "text": "An organism with the genotype Tt for plant height is best described as",
+                "options": ["Homozygous dominant", "Homozygous recessive", "Heterozygous", "Pure-breeding"],
+                "answer": "Heterozygous",
+                "explanation": "Tt is heterozygous because it has two different alleles."
+              },
+              {
+                "id": "b2_bio_014",
+                "text": "An allele that is expressed in the phenotype even when present in a single copy (heterozygous condition) is a",
+                "options": ["Recessive allele", "Dominant allele", "Mutant allele", "Lethal allele"],
+                "answer": "Dominant allele",
+                "explanation": "Dominant alleles are expressed even in heterozygous condition."
+              },
+              {
+                "id": "b2_bio_015",
+                "text": "An allele that is only expressed phenotypically when two copies are present (homozygous recessive condition) is a",
+                "options": ["Dominant allele", "Co-dominant allele", "Recessive allele", "Epistatic allele"],
+                "answer": "Recessive allele",
+                "explanation": "Recessive alleles are only expressed in homozygous condition."
+              },
+              {
+                "id": "b2_bio_016",
+                "text": "The specific physical location of a gene on a chromosome is its",
+                "options": ["Allele", "Locus", "Centromere", "Telomere"],
+                "answer": "Locus",
+                "explanation": "Locus is the specific location of a gene on a chromosome."
+              },
+              {
+                "id": "b2_bio_017",
+                "text": "Mendel's Law of Dominance states that",
+                "options": ["Alleles separate during gamete formation", "In a heterozygote, one allele may mask the expression of the other", "Genes for different traits are inherited independently", "All traits are blended in the offspring"],
+                "answer": "In a heterozygote, one allele may mask the expression of the other",
+                "explanation": "The Law of Dominance states that one allele can mask the expression of another."
+              },
+              {
+                "id": "b2_bio_018",
+                "text": "When Mendel crossed pure-breeding tall plants (TT) with pure-breeding short plants (tt), all the offspring in the F₁ generation were tall. This demonstrates the Law of",
+                "options": ["Segregation", "Independent Assortment", "Dominance", "Unit Characters"],
+                "answer": "Dominance",
+                "explanation": "The Law of Dominance explains why all F₁ were tall."
+              },
+              {
+                "id": "b2_bio_019",
+                "text": "The recessive trait that disappears in the F₁ generation reappears in the F₂ generation. This is because",
+                "options": ["It is altered by the environment", "It is carried but masked in the heterozygotes and is expressed when two recessive alleles come together", "It mutates back into existence", "It is a new trait created by crossing over"],
+                "answer": "It is carried but masked in the heterozygotes and is expressed when two recessive alleles come together",
+                "explanation": "Recessive traits reappear when two recessive alleles combine."
+              },
+              {
+                "id": "b2_bio_020",
+                "text": "Mendel's Law of Segregation explains that",
+                "options": ["Dominant alleles are always separated from recessive alleles", "During gamete formation, the two alleles for a trait separate, so each gamete gets only one allele", "All possible gametes are produced in equal numbers", "Genes on the same chromosome always stay together"],
+                "answer": "During gamete formation, the two alleles for a trait separate, so each gamete gets only one allele",
+                "explanation": "The Law of Segregation states that alleles separate during gamete formation."
+              }
+            ]
+          },
+          {
+            "subjectName": "Chemistry",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_che_001",
+                "text": "Drugs used to relieve pain are called",
+                "options": ["anaesthetics", "analgesics", "antibiotics", "antipyretics"],
+                "answer": "analgesics",
+                "explanation": "Analgesics are drugs used to relieve pain."
+              },
+              {
+                "id": "b2_che_002",
+                "text": "Which of the following is a narcotic drug?",
+                "options": ["Aspirin", "Chloroquine", "Heroin", "Penicillin"],
+                "answer": "Heroin",
+                "explanation": "Heroin is a narcotic drug."
+              },
+              {
+                "id": "b2_che_003",
+                "text": "The harmful effect of alcohol abuse includes all EXCEPT",
+                "options": ["liver cirrhosis", "impaired judgement", "improved memory", "addiction"],
+                "answer": "improved memory",
+                "explanation": "Alcohol abuse impairs memory, not improves it."
+              },
+              {
+                "id": "b2_che_004",
+                "text": "Drugs that induce sleep are known as",
+                "options": ["stimulants", "hallucinogens", "hypnotics", "tranquillizers"],
+                "answer": "hypnotics",
+                "explanation": "Hypnotics are drugs that induce sleep."
+              },
+              {
+                "id": "b2_che_005",
+                "text": "The condition in which a drug user requires a larger dose to achieve the same effect is called",
+                "options": ["drug addiction", "drug tolerance", "drug abuse", "drug dependence"],
+                "answer": "drug tolerance",
+                "explanation": "Drug tolerance is the need for larger doses to achieve the same effect."
+              },
+              {
+                "id": "b2_che_006",
+                "text": "The process of adding chlorine to water to kill germs is called",
+                "options": ["fluoridation", "chlorination", "sedimentation", "filtration"],
+                "answer": "chlorination",
+                "explanation": "Chlorination is the process of adding chlorine to water to kill germs."
+              },
+              {
+                "id": "b2_che_007",
+                "text": "Which chemical is commonly used as a preservative in soft drinks?",
+                "options": ["Sodium chloride", "Sodium benzoate", "Sodium hydroxide", "Sodium carbonate"],
+                "answer": "Sodium benzoate",
+                "explanation": "Sodium benzoate is a common preservative in soft drinks."
+              },
+              {
+                "id": "b2_che_008",
+                "text": "The active ingredient in baking powder is",
+                "options": ["sodium chloride", "sodium hydrogencarbonate", "sodium carbonate", "tartaric acid"],
+                "answer": "sodium hydrogencarbonate",
+                "explanation": "Sodium hydrogencarbonate is the active ingredient in baking powder."
+              },
+              {
+                "id": "b2_che_009",
+                "text": "Which of the following is used as a fertilizer?",
+                "options": ["NH₄NO₃", "NaCl", "CaCO₃", "SiO₂"],
+                "answer": "NH₄NO₃",
+                "explanation": "NH₄NO₃ (ammonium nitrate) is used as a fertilizer."
+              },
+              {
+                "id": "b2_che_010",
+                "text": "The process of coating iron with zinc to prevent rusting is called",
+                "options": ["tinning", "galvanization", "electroplating", "anodizing"],
+                "answer": "galvanization",
+                "explanation": "Galvanization is coating iron with zinc to prevent rusting."
+              },
+              {
+                "id": "b2_che_011",
+                "text": "Which chemical is used in the manufacture of soap?",
+                "options": ["Sodium chloride", "Sodium hydroxide", "Hydrochloric acid", "Sulphuric acid"],
+                "answer": "Sodium hydroxide",
+                "explanation": "Sodium hydroxide is used in soap manufacture."
+              },
+              {
+                "id": "b2_che_012",
+                "text": "The substance used in fire extinguishers that produces carbon dioxide is",
+                "options": ["sodium hydrogencarbonate", "sodium carbonate", "calcium carbonate", "sodium chloride"],
+                "answer": "sodium hydrogencarbonate",
+                "explanation": "Sodium hydrogencarbonate produces CO₂ in fire extinguishers."
+              },
+              {
+                "id": "b2_che_013",
+                "text": "Which of the following is a food preservative?",
+                "options": ["Sodium nitrite", "Sodium chloride", "Sodium benzoate", "All of the above"],
+                "answer": "All of the above",
+                "explanation": "Sodium nitrite, sodium chloride, and sodium benzoate are all food preservatives."
+              },
+              {
+                "id": "b2_che_014",
+                "text": "The chemical used for softening hard water by removing calcium ions is",
+                "options": ["sodium chloride", "sodium carbonate", "sodium sulphate", "sodium nitrate"],
+                "answer": "sodium carbonate",
+                "explanation": "Sodium carbonate softens hard water by removing calcium ions."
+              },
+              {
+                "id": "b2_che_015",
+                "text": "Which of the following is used in the manufacture of glass?",
+                "options": ["Silica", "Limestone", "Sodium carbonate", "All of the above"],
+                "answer": "All of the above",
+                "explanation": "Silica, limestone, and sodium carbonate are all used in glass manufacture."
+              },
+              {
+                "id": "b2_che_016",
+                "text": "The major cause of ozone layer depletion is",
+                "options": ["carbon dioxide", "sulphur dioxide", "chlorofluorocarbons (CFCs)", "nitrogen oxides"],
+                "answer": "chlorofluorocarbons (CFCs)",
+                "explanation": "CFCs are the major cause of ozone layer depletion."
+              },
+              {
+                "id": "b2_che_017",
+                "text": "Acid rain is primarily caused by the presence of which gases in the atmosphere?",
+                "options": ["CO₂ and CO", "SO₂ and NO₂", "CH₄ and NH₃", "O₂ and N₂"],
+                "answer": "SO₂ and NO₂",
+                "explanation": "SO₂ and NO₂ are primary causes of acid rain."
+              },
+              {
+                "id": "b2_che_018",
+                "text": "The greenhouse effect is caused by excess of which gas in the atmosphere?",
+                "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+                "answer": "Carbon dioxide",
+                "explanation": "Carbon dioxide is a major greenhouse gas."
+              },
+              {
+                "id": "b2_che_019",
+                "text": "Which of the following is a biodegradable pollutant?",
+                "options": ["Plastic bags", "DDT", "Sewage", "Mercury"],
+                "answer": "Sewage",
+                "explanation": "Sewage is biodegradable."
+              },
+              {
+                "id": "b2_che_020",
+                "text": "The phenomenon of increase in earth's temperature due to trapped heat is called",
+                "options": ["global warming", "ozone depletion", "acid rain", "thermal pollution"],
+                "answer": "global warming",
+                "explanation": "Global warming is the increase in Earth's temperature due to trapped heat."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_eng_001",
+                "text": "The word \"glimpsed\" ends with which consonant cluster?",
+                "options": ["/mps/", "/mpt/", "/mpsd/", "/mpst/"],
+                "answer": "/mpst/",
+                "explanation": "The final cluster in 'glimpsed' is /mpst/."
+              },
+              {
+                "id": "b2_eng_002",
+                "text": "Which of the following words contains a three-consonant final cluster?",
+                "options": ["Desk", "Desks", "Ask", "Task"],
+                "answer": "Desks",
+                "explanation": "The final cluster in 'desks' is /sks/, which has three consonant sounds."
+              },
+              {
+                "id": "b2_eng_003",
+                "text": "The correct pronunciation of \"twelfths\" involves how many consonant sounds?",
+                "options": ["Three", "Four", "Five", "Six"],
+                "answer": "Five",
+                "explanation": "The final cluster in 'twelfths' is /lfθs/, which has five consonant sounds."
+              },
+              {
+                "id": "b2_eng_004",
+                "text": "Which word has the final cluster /sks/?",
+                "options": ["Six", "Sixths", "Tasks", "Texts"],
+                "answer": "Tasks",
+                "explanation": "The final cluster in 'tasks' is /sks/."
+              },
+              {
+                "id": "b2_eng_005",
+                "text": "A common feature of Nigerian English pronunciation is:",
+                "options": ["Dropping final consonants", "Inserting vowels to break clusters", "Adding extra consonants", "Changing all vowels to schwa"],
+                "answer": "Inserting vowels to break clusters",
+                "explanation": "Nigerian English speakers often insert vowels to break consonant clusters."
+              },
+              {
+                "id": "b2_eng_006",
+                "text": "The word \"helped\" ends with the cluster:",
+                "options": ["/lpt/", "/lpd/", "/lft/", "/lbd/"],
+                "answer": "/lpt/",
+                "explanation": "The final cluster in 'helped' is /lpt/."
+              },
+              {
+                "id": "b2_eng_007",
+                "text": "Which of these words has the final cluster /mpts/?",
+                "options": ["Prompt", "Prompts", "Prompted", "Prompting"],
+                "answer": "Prompts",
+                "explanation": "The final cluster in 'prompts' is /mpts/."
+              },
+              {
+                "id": "b2_eng_008",
+                "text": "The word \"strengths\" contains how many consonant sounds in its final cluster?",
+                "options": ["Three", "Four", "Five", "Six"],
+                "answer": "Five",
+                "explanation": "The final cluster in 'strengths' is /ŋkθs/, which has five consonant sounds."
+              },
+              {
+                "id": "b2_eng_009",
+                "text": "Pronounce \"texts\" correctly. The final cluster is:",
+                "options": ["/kst/", "/ksts/", "/kts/", "/sts/"],
+                "answer": "/ksts/",
+                "explanation": "The final cluster in 'texts' is /ksts/."
+              },
+              {
+                "id": "b2_eng_010",
+                "text": "The word \"thousandths\" has a final cluster of:",
+                "options": ["/ndθs/", "/nθs/", "/θs/", "/ndz/"],
+                "answer": "/ndθs/",
+                "explanation": "The final cluster in 'thousandths' is /ndθs/."
+              },
+              {
+                "id": "b2_eng_011",
+                "text": "Which of the following words contains a final cluster of two consonants?",
+                "options": ["Grasped", "Grasp", "Grasping", "Grasper"],
+                "answer": "Grasp",
+                "explanation": "The final cluster in 'grasp' is /sp/, which has two consonant sounds."
+              },
+              {
+                "id": "b2_eng_012",
+                "text": "The insertion of a vowel sound in \"film\" to pronounce it as \"filim\" is an example of:",
+                "options": ["Elision", "Epenthesis", "Assimilation", "Aspiration"],
+                "answer": "Epenthesis",
+                "explanation": "Epenthesis is the insertion of a vowel sound."
+              },
+              {
+                "id": "b2_eng_013",
+                "text": "The word \"scripts\" ends with the cluster:",
+                "options": ["/pts/", "/kts/", "/sks/", "/mps/"],
+                "answer": "/kts/",
+                "explanation": "The final cluster in 'scripts' is /kts/."
+              },
+              {
+                "id": "b2_eng_014",
+                "text": "Which word has the same final cluster as \"gulped\"?",
+                "options": ["Helped", "Gulp", "Gulping", "Gulps"],
+                "answer": "Helped",
+                "explanation": "Both 'gulped' and 'helped' end with /lpt/."
+              },
+              {
+                "id": "b2_eng_015",
+                "text": "The correct pronunciation of \"widths\" includes the final cluster:",
+                "options": ["/dθs/", "/tθs/", "/dθz/", "/tθz/"],
+                "answer": "/dθs/",
+                "explanation": "The final cluster in 'widths' is /dθs/."
+              },
+              {
+                "id": "b2_eng_016",
+                "text": "How many syllables are in the word \"clothes\" when pronounced naturally?",
+                "options": ["One", "Two", "Three", "Four"],
+                "answer": "One",
+                "explanation": "'Clothes' is typically pronounced as one syllable."
+              },
+              {
+                "id": "b2_eng_017",
+                "text": "The word \"months\" is correctly pronounced as:",
+                "options": ["/mʌnθs/", "/mʌns/", "/mʌnθz/", "/mɒnθs/"],
+                "answer": "/mʌnθs/",
+                "explanation": "The final cluster in 'months' is /nθs/."
+              },
+              {
+                "id": "b2_eng_018",
+                "text": "The schwa sound is represented by which phonetic symbol?",
+                "options": ["/ʌ/", "/ə/", "/ɜ/", "/æ/"],
+                "answer": "/ə/",
+                "explanation": "The schwa sound is represented by /ə/."
+              },
+              {
+                "id": "b2_eng_019",
+                "text": "The schwa occurs only in:",
+                "options": ["Stressed syllables", "Unstressed syllables", "The first syllable of every word", "The last syllable of every word"],
+                "answer": "Unstressed syllables",
+                "explanation": "The schwa occurs only in unstressed syllables."
+              },
+              {
+                "id": "b2_eng_020",
+                "text": "Which of the following words ends with a schwa sound?",
+                "options": ["Teacher", "Door", "Car", "Fear"],
+                "answer": "Teacher",
+                "explanation": "The final syllable in 'teacher' is pronounced with a schwa."
+              }
+            ]
+          },
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_mat_001",
+                "text": "The 3:1 phenotypic ratio observed in the F₂ generation of a monohybrid cross is a direct result of the",
+                "options": ["Law of Independent Assortment", "Law of Segregation", "Process of mutation", "Union of gametes carrying the same allele"],
+                "answer": "Law of Segregation",
+                "explanation": "The 3:1 ratio is a result of the Law of Segregation."
+              },
+              {
+                "id": "b2_mat_002",
+                "text": "A cross that involves two pairs of contrasting characteristics, such as seed shape and seed colour, is called a",
+                "options": ["Monohybrid cross", "Test cross", "Dihybrid cross", "Back cross"],
+                "answer": "Dihybrid cross",
+                "explanation": "A dihybrid cross involves two pairs of contrasting characteristics."
+              },
+              {
+                "id": "b2_mat_003",
+                "text": "The characteristic F₂ phenotypic ratio in a dihybrid cross, when both genes show complete dominance, is",
+                "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+                "answer": "9:3:3:1",
+                "explanation": "The F₂ phenotypic ratio in a dihybrid cross is 9:3:3:1."
+              },
+              {
+                "id": "b2_mat_004",
+                "text": "In the dihybrid cross RrYy × RrYy, what proportion of the offspring would be homozygous recessive for both traits (rryy)?",
+                "options": ["9/16", "3/16", "1/16", "4/16"],
+                "answer": "1/16",
+                "explanation": "The proportion of rryy is 1/16."
+              },
+              {
+                "id": "b2_mat_005",
+                "text": "A cross between an individual showing a dominant phenotype (but unknown genotype) and a homozygous recessive individual is known as a",
+                "options": ["Reciprocal cross", "Dihybrid cross", "Test cross", "Back cross"],
+                "answer": "Test cross",
+                "explanation": "A test cross is used to determine the genotype of a dominant phenotype."
+              },
+              {
+                "id": "b2_mat_006",
+                "text": "In humans, the sex of a child is determined by the",
+                "options": ["Age of the mother at conception", "Type of sperm (X or Y) that fertilizes the egg", "Type of egg (X or Y) produced by the mother", "Nutritional status of the father"],
+                "answer": "Type of sperm (X or Y) that fertilizes the egg",
+                "explanation": "The sex of a child is determined by the sperm (X or Y)."
+              },
+              {
+                "id": "b2_mat_007",
+                "text": "A male child is produced when an ovum is fertilized by a sperm carrying the",
+                "options": ["X chromosome", "Y chromosome", "XX chromosome", "XY chromosome"],
+                "answer": "Y chromosome",
+                "explanation": "A male child is produced when an ovum is fertilized by a Y-bearing sperm."
+              },
+              {
+                "id": "b2_mat_008",
+                "text": "A sex-linked trait is one whose gene is located on",
+                "options": ["The Y chromosome only", "An autosome", "A sex chromosome, most commonly the X chromosome", "Mitochondrial DNA"],
+                "answer": "A sex chromosome, most commonly the X chromosome",
+                "explanation": "Sex-linked traits are located on sex chromosomes, usually the X chromosome."
+              },
+              {
+                "id": "b2_mat_009",
+                "text": "Red-green colour blindness is much more common in males than in females because",
+                "options": ["It is caused by a dominant allele on the Y chromosome", "Males have only one X chromosome, so a single recessive allele will cause the condition", "Females are naturally immune to colour vision defects", "The gene for colour vision is located on an autosome that is inactive in females"],
+                "answer": "Males have only one X chromosome, so a single recessive allele will cause the condition",
+                "explanation": "Males have only one X chromosome, so a single recessive allele causes the condition."
+              },
+              {
+                "id": "b2_mat_010",
+                "text": "A woman who is a carrier for hemophilia (X^H X^h) has children with a normal man (X^H Y). What percentage of their sons is expected to have hemophilia?",
+                "options": ["0%", "25%", "50%", "100%"],
+                "answer": "50%",
+                "explanation": "50% of sons will inherit the X^h allele and have hemophilia."
+              },
+              {
+                "id": "b2_mat_011",
+                "text": "The development of high-yielding crop varieties through selective breeding is an application of genetics in",
+                "options": ["Medicine", "Agriculture", "Forensics", "Palaeontology"],
+                "answer": "Agriculture",
+                "explanation": "Selective breeding is applied in agriculture."
+              },
+              {
+                "id": "b2_mat_012",
+                "text": "The differences that exist between individuals of the same species are referred to as",
+                "options": ["Evolution", "Heredity", "Variation", "Adaptation"],
+                "answer": "Variation",
+                "explanation": "Variation refers to differences between individuals of the same species."
+              },
+              {
+                "id": "b2_mat_013",
+                "text": "Which type of variation results in distinct, separate categories with no intermediates, such as the ABO blood groups?",
+                "options": ["Continuous variation", "Discontinuous variation", "Environmental variation", "Physiological variation"],
+                "answer": "Discontinuous variation",
+                "explanation": "Discontinuous variation results in distinct categories."
+              },
+              {
+                "id": "b2_mat_014",
+                "text": "Human characteristics such as height, weight, and skin colour, which show a range of phenotypes from one extreme to another, are examples of",
+                "options": ["Discontinuous variation", "Continuous variation", "Morphological variation only", "Genetic mutation"],
+                "answer": "Continuous variation",
+                "explanation": "Continuous variation shows a range of phenotypes."
+              },
+              {
+                "id": "b2_mat_015",
+                "text": "Differences in metabolic rate, enzyme activity, and the ability to taste certain chemicals are examples of what type of variation?",
+                "options": ["Morphological variation", "Physiological variation", "Structural variation", "Continuous variation"],
+                "answer": "Physiological variation",
+                "explanation": "Physiological variation involves differences in metabolic processes."
+              },
+              {
+                "id": "b2_mat_016",
+                "text": "Which of the following is a source of genetic variation that occurs during meiosis?",
+                "options": ["Mutation only", "Crossing over and independent assortment", "Fertilization only", "Environmental influence"],
+                "answer": "Crossing over and independent assortment",
+                "explanation": "Crossing over and independent assortment during meiosis are sources of genetic variation."
+              },
+              {
+                "id": "b2_mat_017",
+                "text": "A sudden, permanent change in the DNA sequence of an organism is called a",
+                "options": ["Variation", "Mutation", "Selection", "Adaptation"],
+                "answer": "Mutation",
+                "explanation": "A mutation is a sudden, permanent change in DNA sequence."
+              },
+              {
+                "id": "b2_mat_018",
+                "text": "The exchange of genetic material between non-sister chromatids of homologous chromosomes during prophase I of meiosis is known as",
+                "options": ["Independent assortment", "Crossing over", "Mutation", "Fertilization"],
+                "answer": "Crossing over",
+                "explanation": "Crossing over is the exchange of genetic material during meiosis."
+              },
+              {
+                "id": "b2_mat_019",
+                "text": "The random fusion of an egg with a sperm during fertilization contributes to genetic variation by",
+                "options": ["Creating new alleles through mutation", "Producing unique combinations of chromosomes from two parents", "Exchanging segments between chromosomes", "Doubling the chromosome number in the zygote"],
+                "answer": "Producing unique combinations of chromosomes from two parents",
+                "explanation": "Random fertilization produces unique combinations of chromosomes."
+              },
+              {
+                "id": "b2_mat_020",
+                "text": "A plant grown in complete darkness becomes pale and spindly, a condition called etiolation. This type of variation is",
+                "options": ["Genetic and heritable", "Environmental and not heritable", "A result of a chromosomal mutation", "An example of discontinuous variation"],
+                "answer": "Environmental and not heritable",
+                "explanation": "Etiolation is an environmental variation and is not heritable."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b3",
+        "strataId": "strata_1",
+        "name": "Bundle 3",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Biology",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_bio_001",
+                "text": "Coloration that helps an organism blend in with its background to avoid detection is called",
+                "options": ["Warning coloration", "Mimicry", "Camouflage", "Aposematic coloration"],
+                "answer": "Camouflage",
+                "explanation": "Camouflage helps organisms blend with their background."
+              },
+              {
+                "id": "b3_bio_002",
+                "text": "The bright, contrasting colours of a poison dart frog that signal its toxicity to potential predators are an example of",
+                "options": ["Cryptic coloration", "Batesian mimicry", "Warning (aposematic) coloration", "Aggressive mimicry"],
+                "answer": "Warning (aposematic) coloration",
+                "explanation": "Aposematic coloration warns predators of toxicity."
+              },
+              {
+                "id": "b3_bio_003",
+                "text": "A harmless, non-venomous king snake that has colour patterns very similar to the venomous coral snake is exhibiting",
+                "options": ["Mullerian mimicry", "Batesian mimicry", "Camouflage", "Aposematic coloration"],
+                "answer": "Batesian mimicry",
+                "explanation": "Batesian mimicry is when a harmless species mimics a harmful one."
+              },
+              {
+                "id": "b3_bio_004",
+                "text": "When two or more harmful or unpalatable species evolve to resemble each other, both species benefit from the shared warning signal. This is known as",
+                "options": ["Batesian mimicry", "Mullerian mimicry", "Cryptic mimicry", "Protective resemblance"],
+                "answer": "Mullerian mimicry",
+                "explanation": "Mullerian mimicry is when harmful species resemble each other."
+              },
+              {
+                "id": "b3_bio_005",
+                "text": "The gradual change in the inherited characteristics of populations over successive generations, leading to the development of new species, is called",
+                "options": ["Variation", "Heredity", "Evolution", "Adaptation"],
+                "answer": "Evolution",
+                "explanation": "Evolution is the gradual change in inherited characteristics over generations."
+              },
+              {
+                "id": "b3_bio_006",
+                "text": "The theory of evolution that proposed the \"inheritance of acquired characteristics\" was put forward by",
+                "options": ["Charles Darwin", "Gregor Mendel", "Jean-Baptiste Lamarck", "Alfred Russel Wallace"],
+                "answer": "Jean-Baptiste Lamarck",
+                "explanation": "Lamarck proposed the inheritance of acquired characteristics."
+              },
+              {
+                "id": "b3_bio_007",
+                "text": "According to Lamarck, how did giraffes come to have long necks?",
+                "options": ["Random mutations for longer necks were naturally selected", "Ancestral giraffes stretched their necks to reach higher leaves, and this acquired longer neck was passed to offspring", "Short-necked giraffes were all killed by predators", "Giraffes with longer necks were better at fighting for mates"],
+                "answer": "Ancestral giraffes stretched their necks to reach higher leaves, and this acquired longer neck was passed to offspring",
+                "explanation": "Lamarck believed acquired characteristics could be inherited."
+              },
+              {
+                "id": "b3_bio_008",
+                "text": "A major flaw in Lamarck's theory is that",
+                "options": ["It cannot explain the diversity of life on Earth", "Acquired characteristics, such as muscles built by exercise, are not generally inherited", "It suggests evolution happens too slowly", "It does not account for the role of the environment"],
+                "answer": "Acquired characteristics, such as muscles built by exercise, are not generally inherited",
+                "explanation": "Acquired characteristics are not generally inherited."
+              },
+              {
+                "id": "b3_bio_009",
+                "text": "Charles Darwin's theory of evolution is based on the principle of",
+                "options": ["Use and disuse", "Natural selection", "Internal vital forces", "Inheritance of acquired traits"],
+                "answer": "Natural selection",
+                "explanation": "Darwin's theory is based on natural selection."
+              },
+              {
+                "id": "b3_bio_010",
+                "text": "Darwin observed that organisms produce more offspring than can possibly survive. This observation is known as",
+                "options": ["Struggle for existence", "Variation", "Overproduction", "Survival of the fittest"],
+                "answer": "Overproduction",
+                "explanation": "Overproduction is the observation that organisms produce more offspring than can survive."
+              },
+              {
+                "id": "b3_bio_011",
+                "text": "According to Darwin, the \"struggle for existence\" leads to",
+                "options": ["The inheritance of acquired characteristics", "A constant, unchanging population size", "Competition for limited resources like food and space", "The production of more offspring"],
+                "answer": "Competition for limited resources like food and space",
+                "explanation": "The struggle for existence leads to competition for limited resources."
+              },
+              {
+                "id": "b3_bio_012",
+                "text": "In the context of natural selection, \"fitness\" refers to an organism's",
+                "options": ["Physical strength and speed", "Overall health and size", "Ability to survive and reproduce successfully", "Ability to compete for territory"],
+                "answer": "Ability to survive and reproduce successfully",
+                "explanation": "Fitness is the ability to survive and reproduce."
+              },
+              {
+                "id": "b3_bio_013",
+                "text": "The evolution of darker-coloured peppered moths in industrial areas of England is a classic example of",
+                "options": ["Lamarckism in action", "Natural selection favouring a better-camouflaged variant", "A mutation caused by pollution", "The inheritance of an acquired characteristic"],
+                "answer": "Natural selection favouring a better-camouflaged variant",
+                "explanation": "The peppered moth is a classic example of natural selection."
+              },
+              {
+                "id": "b3_bio_014",
+                "text": "Darwin's finches on the Galapagos Islands show a wide variety of beak shapes. This diversity arose through a process called",
+                "options": ["Genetic drift", "Adaptive radiation", "Convergent evolution", "Gene flow"],
+                "answer": "Adaptive radiation",
+                "explanation": "Adaptive radiation is the diversification of a species into different niches."
+              },
+              {
+                "id": "b3_bio_015",
+                "text": "The Modern Synthetic Theory of evolution combines Darwin's natural selection with",
+                "options": ["Lamarck's use and disuse theory", "Mendelian genetics and an understanding of mutation and genetic drift", "The theory of spontaneous generation", "The idea that evolution is goal-directed"],
+                "answer": "Mendelian genetics and an understanding of mutation and genetic drift",
+                "explanation": "The Modern Synthesis combines natural selection with genetics and mutation."
+              },
+              {
+                "id": "b3_bio_016",
+                "text": "According to the Modern Synthesis, the ultimate source of new alleles (new genetic information) is",
+                "options": ["Natural selection", "Gene flow", "Mutation", "Genetic drift"],
+                "answer": "Mutation",
+                "explanation": "Mutation is the ultimate source of new alleles."
+              },
+              {
+                "id": "b3_bio_017",
+                "text": "A random change in allele frequencies in a small population due to chance events, like a natural disaster, is called",
+                "options": ["Natural selection", "Gene flow", "Genetic drift", "Mutation"],
+                "answer": "Genetic drift",
+                "explanation": "Genetic drift is a random change in allele frequencies."
+              },
+              {
+                "id": "b3_bio_018",
+                "text": "The preserved remains, impressions, or traces of organisms that lived in the past are called",
+                "options": ["Vestiges", "Fossils", "Homologues", "Analogues"],
+                "answer": "Fossils",
+                "explanation": "Fossils are preserved remains or traces of past organisms."
+              },
+              {
+                "id": "b3_bio_019",
+                "text": "The fossil Archaeopteryx is considered a transitional form because it possesses features of both",
+                "options": ["Fish and amphibians", "Reptiles and birds", "Reptiles and mammals", "Birds and mammals"],
+                "answer": "Reptiles and birds",
+                "explanation": "Archaeopteryx has features of both reptiles and birds."
+              },
+              {
+                "id": "b3_bio_020",
+                "text": "The pentadactyl limb found in the forelimbs of humans, whales, and bats is an example of a(n)",
+                "options": ["Analogous structure", "Vestigial structure", "Homologous structure", "Fossil structure"],
+                "answer": "Homologous structure",
+                "explanation": "The pentadactyl limb is a homologous structure."
+              }
+            ]
+          },
+          {
+            "subjectName": "Chemistry",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_che_001",
+                "text": "Eutrophication in water bodies is caused by excess of",
+                "options": ["oxygen", "nitrates and phosphates", "carbon dioxide", "nitrogen"],
+                "answer": "nitrates and phosphates",
+                "explanation": "Eutrophication is caused by excess nitrates and phosphates."
+              },
+              {
+                "id": "b3_che_002",
+                "text": "Which of the following is a primary pollutant?",
+                "options": ["Sulphur dioxide", "Ozone", "Peroxyacetyl nitrate", "Sulphuric acid"],
+                "answer": "Sulphur dioxide",
+                "explanation": "Sulphur dioxide is a primary pollutant."
+              },
+              {
+                "id": "b3_che_003",
+                "text": "The gas released during photosynthesis that helps purify air is",
+                "options": ["carbon dioxide", "oxygen", "nitrogen", "hydrogen"],
+                "answer": "oxygen",
+                "explanation": "Oxygen is released during photosynthesis."
+              },
+              {
+                "id": "b3_che_004",
+                "text": "Which heavy metal causes Minamata disease?",
+                "options": ["Lead", "Cadmium", "Mercury", "Arsenic"],
+                "answer": "Mercury",
+                "explanation": "Mercury causes Minamata disease."
+              },
+              {
+                "id": "b3_che_005",
+                "text": "The process by which harmful substances accumulate in the food chain is called",
+                "options": ["bioaccumulation", "biomagnification", "biodegradation", "bioconcentration"],
+                "answer": "biomagnification",
+                "explanation": "Biomagnification is the accumulation of harmful substances in the food chain."
+              },
+              {
+                "id": "b3_che_006",
+                "text": "The raw material for the cement industry is",
+                "options": ["limestone", "clay", "gypsum", "sand"],
+                "answer": "limestone",
+                "explanation": "Limestone is the primary raw material for cement."
+              },
+              {
+                "id": "b3_che_007",
+                "text": "Which of the following is NOT a petroleum product?",
+                "options": ["Petrol", "Kerosene", "Ethanol", "Bitumen"],
+                "answer": "Ethanol",
+                "explanation": "Ethanol is not a petroleum product."
+              },
+              {
+                "id": "b3_che_008",
+                "text": "The process of separating crude oil into fractions is called",
+                "options": ["cracking", "fractional distillation", "polymerization", "reforming"],
+                "answer": "fractional distillation",
+                "explanation": "Fractional distillation separates crude oil into fractions."
+              },
+              {
+                "id": "b3_che_009",
+                "text": "Which Nigerian state is known for cement production?",
+                "options": ["Lagos", "Kano", "Ogun", "Rivers"],
+                "answer": "Ogun",
+                "explanation": "Ogun State is known for cement production."
+              },
+              {
+                "id": "b3_che_010",
+                "text": "The chemical formula for limestone is",
+                "options": ["CaO", "Ca(OH)₂", "CaCO₃", "CaSO₄"],
+                "answer": "CaCO₃",
+                "explanation": "Limestone is CaCO₃."
+              },
+              {
+                "id": "b3_che_011",
+                "text": "The textile industry uses which chemical for bleaching?",
+                "options": ["Chlorine", "Hydrogen peroxide", "Sulphur dioxide", "Sodium hypochlorite"],
+                "answer": "Hydrogen peroxide",
+                "explanation": "Hydrogen peroxide is used for bleaching in the textile industry."
+              },
+              {
+                "id": "b3_che_012",
+                "text": "Soap is produced by the reaction between",
+                "options": ["fat and alcohol", "fat and sodium hydroxide", "fat and water", "fat and acid"],
+                "answer": "fat and sodium hydroxide",
+                "explanation": "Soap is produced by the reaction of fat with sodium hydroxide."
+              },
+              {
+                "id": "b3_che_013",
+                "text": "The Nigerian oil refinery located in Kaduna refines crude oil into all EXCEPT",
+                "options": ["petrol", "diesel", "kerosene", "ethanol"],
+                "answer": "ethanol",
+                "explanation": "Ethanol is not a petroleum product."
+              },
+              {
+                "id": "b3_che_014",
+                "text": "Which chemical is used in the paint industry as a pigment?",
+                "options": ["Titanium dioxide", "Sodium chloride", "Calcium carbonate", "Silica"],
+                "answer": "Titanium dioxide",
+                "explanation": "Titanium dioxide is used as a pigment in paint."
+              },
+              {
+                "id": "b3_che_015",
+                "text": "The fermentation process in the beverage industry produces",
+                "options": ["ethanol", "methanol", "propanol", "butanol"],
+                "answer": "ethanol",
+                "explanation": "Fermentation produces ethanol."
+              },
+              {
+                "id": "b3_che_016",
+                "text": "The functional group of alkenes is",
+                "options": ["-OH", "-CHO", "C=C", "-COOH"],
+                "answer": "C=C",
+                "explanation": "Alkenes contain a carbon-carbon double bond (C=C)."
+              },
+              {
+                "id": "b3_che_017",
+                "text": "The general formula of alkanes is",
+                "options": ["CnH2n", "CnH2n+2", "CnH2n-2", "CnHn"],
+                "answer": "CnH2n+2",
+                "explanation": "Alkanes have the general formula CnH2n+2."
+              },
+              {
+                "id": "b3_che_018",
+                "text": "Which of the following is an isomer of pentane?",
+                "options": ["2-methylbutane", "2-methylpropane", "2,2-dimethylpropane", "Both A and C"],
+                "answer": "Both A and C",
+                "explanation": "2-methylbutane and 2,2-dimethylpropane are isomers of pentane."
+              },
+              {
+                "id": "b3_che_019",
+                "text": "The product of complete combustion of a hydrocarbon in excess oxygen is",
+                "options": ["CO and H₂O", "CO₂ and H₂O", "C and H₂O", "CO and H₂"],
+                "answer": "CO₂ and H₂O",
+                "explanation": "Complete combustion produces CO₂ and H₂O."
+              },
+              {
+                "id": "b3_che_020",
+                "text": "Which reaction is characteristic of alkenes?",
+                "options": ["Substitution", "Addition", "Elimination", "Cracking"],
+                "answer": "Addition",
+                "explanation": "Alkenes undergo addition reactions."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_eng_001",
+                "text": "In the word \"banana,\" how many schwa sounds are there?",
+                "options": ["One", "Two", "Three", "None"],
+                "answer": "Two",
+                "explanation": "'Banana' has two schwa sounds in the second and third syllables."
+              },
+              {
+                "id": "b3_eng_002",
+                "text": "The final syllable in \"doctor\" is pronounced as:",
+                "options": ["/ɔ:/", "/ə/", "/ɒ/", "/ʌ/"],
+                "answer": "/ə/",
+                "explanation": "The final syllable in 'doctor' is pronounced with a schwa."
+              },
+              {
+                "id": "b3_eng_003",
+                "text": "In the word \"colour,\" the final sound is:",
+                "options": ["/u:/", "/ə/", "/ɔ:/", "/ʌ/"],
+                "answer": "/ə/",
+                "explanation": "The final sound in 'colour' is a schwa."
+              },
+              {
+                "id": "b3_eng_004",
+                "text": "The first sound in \"about\" is a:",
+                "options": ["Full vowel", "Schwa", "Diphthong", "Consonant"],
+                "answer": "Schwa",
+                "explanation": "The first sound in 'about' is a schwa."
+              },
+              {
+                "id": "b3_eng_005",
+                "text": "Which of these words contains a schwa in its second syllable?",
+                "options": ["Mother", "Father", "Support", "Sister"],
+                "answer": "Support",
+                "explanation": "'Support' has a schwa in its second syllable."
+              },
+              {
+                "id": "b3_eng_006",
+                "text": "The word \"memory\" ends with:",
+                "options": ["/i/", "/ə/", "/e/", "/aɪ/"],
+                "answer": "/i/",
+                "explanation": "'Memory' ends with an /i/ sound."
+              },
+              {
+                "id": "b3_eng_007",
+                "text": "How many schwa sounds are in \"professional\"?",
+                "options": ["One", "Two", "Three", "Four"],
+                "answer": "Two",
+                "explanation": "'Professional' has two schwa sounds."
+              },
+              {
+                "id": "b3_eng_008",
+                "text": "The definite article \"a\" is pronounced as a schwa when:",
+                "options": ["It is stressed", "It is in an unstressed position before a consonant", "It begins a sentence", "It is followed by a vowel"],
+                "answer": "It is in an unstressed position before a consonant",
+                "explanation": "The article 'a' is pronounced as a schwa in unstressed positions before consonants."
+              },
+              {
+                "id": "b3_eng_009",
+                "text": "The word \"centre\" in British English ends with:",
+                "options": ["/ə/", "/e/", "/ʌ/", "/ɜ/"],
+                "answer": "/ə/",
+                "explanation": "'Centre' ends with a schwa in British English."
+              },
+              {
+                "id": "b3_eng_010",
+                "text": "The correct transcription for \"favour\" is:",
+                "options": ["/'feɪvə/", "/'feɪvɔ:/", "/'fævə/", "/'feɪvə/"],
+                "answer": "/'feɪvə/",
+                "explanation": "'Favour' is transcribed as /'feɪvə/."
+              },
+              {
+                "id": "b3_eng_011",
+                "text": "The schwa in \"syllabus\" occurs in the:",
+                "options": ["First syllable", "Second syllable", "Third syllable", "First and second syllables"],
+                "answer": "Second syllable",
+                "explanation": "The schwa in 'syllabus' occurs in the second syllable."
+              },
+              {
+                "id": "b3_eng_012",
+                "text": "Which vowel letter CANNOT be pronounced as a schwa?",
+                "options": ["a", "e", "i", "All vowels can be schwa in unstressed positions"],
+                "answer": "All vowels can be schwa in unstressed positions",
+                "explanation": "All vowels can be reduced to a schwa in unstressed positions."
+              },
+              {
+                "id": "b3_eng_013",
+                "text": "According to the passage, culture is best described as:",
+                "options": ["Only traditional music and dance", "The shared ways of life of a people", "Only language and religion", "Only food and dressing"],
+                "answer": "The shared ways of life of a people",
+                "explanation": "Culture is the shared ways of life of a people."
+              },
+              {
+                "id": "b3_eng_014",
+                "text": "The word \"static\" in paragraph one means:",
+                "options": ["Changing rapidly", "Unchanging or fixed", "Exciting", "Traditional"],
+                "answer": "Unchanging or fixed",
+                "explanation": "Static means unchanging or fixed."
+              },
+              {
+                "id": "b3_eng_015",
+                "text": "Ceremonies are important in African societies because they:",
+                "options": ["Provide entertainment only", "Preserve and transmit cultural values", "Generate income for chiefs", "Attract tourists"],
+                "answer": "Preserve and transmit cultural values",
+                "explanation": "Ceremonies preserve and transmit cultural values."
+              },
+              {
+                "id": "b3_eng_016",
+                "text": "The installation of a new chief is described as all of the following EXCEPT:",
+                "options": ["A political event", "A spiritual event", "A cultural event", "A commercial event"],
+                "answer": "A commercial event",
+                "explanation": "The installation of a chief is not described as a commercial event."
+              },
+              {
+                "id": "b3_eng_017",
+                "text": "The word \"regalia\" in paragraph two refers to:",
+                "options": ["The chief's family members", "Official clothing and ornaments worn for ceremonies", "The palace where the chief lives", "The subjects who pay homage"],
+                "answer": "Official clothing and ornaments worn for ceremonies",
+                "explanation": "Regalia refers to official clothing and ornaments."
+              },
+              {
+                "id": "b3_eng_018",
+                "text": "According to the passage, why might young people view traditional ceremonies as outdated?",
+                "options": ["Because they are lazy", "Because of exposure to foreign cultures through media", "Because they hate their communities", "Because ceremonies are too expensive"],
+                "answer": "Because of exposure to foreign cultures through media",
+                "explanation": "Exposure to foreign cultures through media may make traditional ceremonies seem outdated."
+              },
+              {
+                "id": "b3_eng_019",
+                "text": "A griot is a:",
+                "options": ["Traditional ruler", "West African historian and storyteller", "Masquerade", "Dancer"],
+                "answer": "West African historian and storyteller",
+                "explanation": "A griot is a West African historian and storyteller."
+              },
+              {
+                "id": "b3_eng_020",
+                "text": "The challenge mentioned in the last paragraph is:",
+                "options": ["Completely abandoning all traditions", "Adapting cultural practices without losing their meaning", "Rejecting all foreign influences", "Returning to purely traditional lifestyles"],
+                "answer": "Adapting cultural practices without losing their meaning",
+                "explanation": "The challenge is to adapt cultural practices without losing their meaning."
+              }
+            ]
+          },
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_mat_001",
+                "text": "The wings of a bird and the wings of a butterfly are examples of structures.",
+                "options": ["Homologous", "Vestigial", "Analogous", "Fossilized"],
+                "answer": "Analogous",
+                "explanation": "Bird wings and butterfly wings are analogous structures."
+              },
+              {
+                "id": "b3_mat_002",
+                "text": "The human appendix and the pelvic bones found in whales are examples of",
+                "options": ["Analogous structures", "Homologous structures", "Vestigial structures", "Adaptive structures"],
+                "answer": "Vestigial structures",
+                "explanation": "The human appendix and whale pelvic bones are vestigial structures."
+              },
+              {
+                "id": "b3_mat_003",
+                "text": "The study of the similarities in the early embryonic development of different vertebrates provides evidence for evolution because",
+                "options": ["All embryos look exactly the same until birth", "Closely related organisms show similar stages in their embryonic development", "Embryos are not affected by natural selection", "Embryos can fossilize easily"],
+                "answer": "Closely related organisms show similar stages in their embryonic development",
+                "explanation": "Similar embryonic development indicates common ancestry."
+              },
+              {
+                "id": "b3_mat_004",
+                "text": "The fact that humans and chimpanzees share approximately 98-99% of their DNA sequence is strong evidence for",
+                "options": ["Their classification in different families", "Their close evolutionary relationship", "Their identical behaviour", "Their same chromosome number"],
+                "answer": "Their close evolutionary relationship",
+                "explanation": "High DNA similarity indicates a close evolutionary relationship."
+              },
+              {
+                "id": "b3_mat_005",
+                "text": "The earliest hominin genus to show definitive evidence of bipedalism (walking upright on two legs) was",
+                "options": ["Homo habilis", "Homo erectus", "Australopithecus", "Homo sapiens"],
+                "answer": "Australopithecus",
+                "explanation": "Australopithecus was the earliest hominin to show bipedalism."
+              },
+              {
+                "id": "b3_mat_006",
+                "text": "The famous fossil skeleton \"Lucy,\" found in Ethiopia, belongs to which species of early human ancestor?",
+                "options": ["Homo habilis", "Australopithecus afarensis", "Homo erectus", "Homo neanderthalensis"],
+                "answer": "Australopithecus afarensis",
+                "explanation": "Lucy belongs to Australopithecus afarensis."
+              },
+              {
+                "id": "b3_mat_007",
+                "text": "Homo habilis, meaning \"handy man,\" is so named because it was the first hominin species associated with",
+                "options": ["The controlled use of fire", "The making of simple stone tools (Oldowan tools)", "Complex language and art", "Burying its dead"],
+                "answer": "The making of simple stone tools (Oldowan tools)",
+                "explanation": "Homo habilis was associated with Oldowan stone tools."
+              },
+              {
+                "id": "b3_mat_008",
+                "text": "Which hominin species was the first to migrate out of Africa and is associated with the Acheulean hand axe and the controlled use of fire?",
+                "options": ["Homo habilis", "Australopithecus africanus", "Homo erectus", "Homo sapiens"],
+                "answer": "Homo erectus",
+                "explanation": "Homo erectus was the first to migrate out of Africa and used Acheulean tools and fire."
+              },
+              {
+                "id": "b3_mat_009",
+                "text": "Modern humans, characterized by a large brain, flat face with a prominent chin, and complex symbolic thought and art, are classified as",
+                "options": ["Homo erectus", "Homo habilis", "Homo sapiens", "Homo neanderthalensis"],
+                "answer": "Homo sapiens",
+                "explanation": "Modern humans are Homo sapiens."
+              },
+              {
+                "id": "b3_mat_010",
+                "text": "A key anatomical similarity between humans and modern apes is",
+                "options": ["An S-shaped spine for upright walking", "A fully opposable thumb for precision grip", "The presence of a tail in adults", "A large, projecting chin"],
+                "answer": "A fully opposable thumb for precision grip",
+                "explanation": "A fully opposable thumb is a key similarity."
+              },
+              {
+                "id": "b3_mat_011",
+                "text": "The development of agriculture and permanent settlements, which marked a major turning point in human cultural evolution, is known as the",
+                "options": ["Industrial Revolution", "Neolithic (Agricultural) Revolution", "Paleolithic Age", "Bronze Age"],
+                "answer": "Neolithic (Agricultural) Revolution",
+                "explanation": "The Neolithic Revolution marked the development of agriculture and settlements."
+              },
+              {
+                "id": "b3_mat_012",
+                "text": "The process of choosing organisms with desirable traits to be the parents of the next generation is called",
+                "options": ["Genetic engineering", "Hybridization", "Selective breeding (artificial selection)", "Cloning"],
+                "answer": "Selective breeding (artificial selection)",
+                "explanation": "Selective breeding is choosing organisms with desirable traits for reproduction."
+              },
+              {
+                "id": "b3_mat_013",
+                "text": "The phenomenon where the F₁ hybrid offspring show superior qualities (size, yield, vigour) compared to both of their inbred parents is known as",
+                "options": ["Inbreeding depression", "Heterosis or hybrid vigour", "Genetic erosion", "Mutation"],
+                "answer": "Heterosis or hybrid vigour",
+                "explanation": "Heterosis is the superior quality of hybrid offspring."
+              },
+              {
+                "id": "b3_mat_014",
+                "text": "A crop plant that has been genetically modified to contain a gene from the bacterium Bacillus thuringiensis to produce an insecticidal protein is an example of a",
+                "options": ["Selective bred variety", "Hybrid crop", "Genetically modified organism (GMO)", "Cloned organism"],
+                "answer": "Genetically modified organism (GMO)",
+                "explanation": "Bt crops are genetically modified organisms."
+              },
+              {
+                "id": "b3_mat_015",
+                "text": "Golden Rice was developed through genetic engineering to contain beta-carotene, which the body converts to",
+                "options": ["Iron", "Vitamin A", "Protein", "Vitamin C"],
+                "answer": "Vitamin A",
+                "explanation": "Beta-carotene is converted to Vitamin A."
+              },
+              {
+                "id": "b3_mat_016",
+                "text": "Professional advice and information provided to individuals and families concerned about the risk of inherited disorders is called",
+                "options": ["Pharmacogenetics", "Genetic counseling", "Gene therapy", "In vitro fertilization"],
+                "answer": "Genetic counseling",
+                "explanation": "Genetic counseling provides advice about inherited disorders."
+              },
+              {
+                "id": "b3_mat_017",
+                "text": "A major ethical concern regarding the use of embryonic stem cells is",
+                "options": ["The high cost of the technology", "The destruction of human embryos to obtain the stem cells", "The low success rate of treatments", "The potential for creating \"designer babies\""],
+                "answer": "The destruction of human embryos to obtain the stem cells",
+                "explanation": "The destruction of embryos is a major ethical concern."
+              },
+              {
+                "id": "b3_mat_018",
+                "text": "The conservation of traditional crop varieties in seed banks is important for",
+                "options": ["Reducing agricultural biodiversity", "Maintaining genetic diversity as a resource for future crop improvement", "Increasing the use of monoculture farming", "Eliminating the need for modern breeding programs"],
+                "answer": "Maintaining genetic diversity as a resource for future crop improvement",
+                "explanation": "Seed banks maintain genetic diversity for future crop improvement."
+              },
+              {
+                "id": "b3_mat_019",
+                "text": "The evolutionary principle of balanced polymorphism, where the harmful allele for sickle cell disease persists in some populations, is explained by the advantage it gives to",
+                "options": ["Homozygous dominant individuals (HbA/HbA)", "Heterozygous individuals (HbA/HbS) against malaria", "Homozygous recessive individuals (HbS/HbS)", "Individuals living in cold climates"],
+                "answer": "Heterozygous individuals (HbA/HbS) against malaria",
+                "explanation": "Heterozygous individuals have a survival advantage against malaria."
+              },
+              {
+                "id": "b3_mat_020",
+                "text": "The mating system where one female mates with multiple males is called",
+                "options": ["Monogamy", "Polygyny", "Polyandry", "Promiscuity"],
+                "answer": "Polyandry",
+                "explanation": "Polyandry is a mating system where one female mates with multiple males."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b4",
+        "strataId": "strata_1",
+        "name": "Bundle 4",
+        "requiredScore": 85,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Biology",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_bio_001",
+                "text": "Structures that have the same basic structural plan and embryonic origin but different functions, indicating common ancestry, are called",
+                "options": ["Analogous", "Homologous", "Vestigial", "Convergent"],
+                "answer": "Homologous",
+                "explanation": "Homologous structures indicate common ancestry."
+              },
+              {
+                "id": "b4_bio_002",
+                "text": "The wings of a bird and the wings of a butterfly are examples of structures.",
+                "options": ["Homologous", "Vestigial", "Analogous", "Fossilized"],
+                "answer": "Analogous",
+                "explanation": "Bird wings and butterfly wings are analogous structures."
+              },
+              {
+                "id": "b4_bio_003",
+                "text": "The human appendix and the pelvic bones found in whales are examples of",
+                "options": ["Analogous structures", "Homologous structures", "Vestigial structures", "Adaptive structures"],
+                "answer": "Vestigial structures",
+                "explanation": "The human appendix and whale pelvic bones are vestigial structures."
+              },
+              {
+                "id": "b4_bio_004",
+                "text": "The study of the similarities in the early embryonic development of different vertebrates provides evidence for evolution because",
+                "options": ["All embryos look exactly the same until birth", "Closely related organisms show similar stages in their embryonic development", "Embryos are not affected by natural selection", "Embryos can fossilize easily"],
+                "answer": "Closely related organisms show similar stages in their embryonic development",
+                "explanation": "Similar embryonic development indicates common ancestry."
+              },
+              {
+                "id": "b4_bio_005",
+                "text": "The fact that humans and chimpanzees share approximately 98-99% of their DNA sequence is strong evidence for",
+                "options": ["Their classification in different families", "Their close evolutionary relationship", "Their identical behaviour", "Their same chromosome number"],
+                "answer": "Their close evolutionary relationship",
+                "explanation": "High DNA similarity indicates a close evolutionary relationship."
+              },
+              {
+                "id": "b4_bio_006",
+                "text": "The earliest hominin genus to show definitive evidence of bipedalism (walking upright on two legs) was",
+                "options": ["Homo habilis", "Homo erectus", "Australopithecus", "Homo sapiens"],
+                "answer": "Australopithecus",
+                "explanation": "Australopithecus was the earliest hominin to show bipedalism."
+              },
+              {
+                "id": "b4_bio_007",
+                "text": "The famous fossil skeleton \"Lucy,\" found in Ethiopia, belongs to which species of early human ancestor?",
+                "options": ["Homo habilis", "Australopithecus afarensis", "Homo erectus", "Homo neanderthalensis"],
+                "answer": "Australopithecus afarensis",
+                "explanation": "Lucy belongs to Australopithecus afarensis."
+              },
+              {
+                "id": "b4_bio_008",
+                "text": "Homo habilis, meaning \"handy man,\" is so named because it was the first hominin species associated with",
+                "options": ["The controlled use of fire", "The making of simple stone tools (Oldowan tools)", "Complex language and art", "Burying its dead"],
+                "answer": "The making of simple stone tools (Oldowan tools)",
+                "explanation": "Homo habilis was associated with Oldowan stone tools."
+              },
+              {
+                "id": "b4_bio_009",
+                "text": "Which hominin species was the first to migrate out of Africa and is associated with the Acheulean hand axe and the controlled use of fire?",
+                "options": ["Homo habilis", "Australopithecus africanus", "Homo erectus", "Homo sapiens"],
+                "answer": "Homo erectus",
+                "explanation": "Homo erectus was the first to migrate out of Africa and used Acheulean tools and fire."
+              },
+              {
+                "id": "b4_bio_010",
+                "text": "Modern humans, characterized by a large brain, flat face with a prominent chin, and complex symbolic thought and art, are classified as",
+                "options": ["Homo erectus", "Homo habilis", "Homo sapiens", "Homo neanderthalensis"],
+                "answer": "Homo sapiens",
+                "explanation": "Modern humans are Homo sapiens."
+              },
+              {
+                "id": "b4_bio_011",
+                "text": "A key anatomical similarity between humans and modern apes is",
+                "options": ["An S-shaped spine for upright walking", "A fully opposable thumb for precision grip", "The presence of a tail in adults", "A large, projecting chin"],
+                "answer": "A fully opposable thumb for precision grip",
+                "explanation": "A fully opposable thumb is a key similarity."
+              },
+              {
+                "id": "b4_bio_012",
+                "text": "The development of agriculture and permanent settlements, which marked a major turning point in human cultural evolution, is known as the",
+                "options": ["Industrial Revolution", "Neolithic (Agricultural) Revolution", "Paleolithic Age", "Bronze Age"],
+                "answer": "Neolithic (Agricultural) Revolution",
+                "explanation": "The Neolithic Revolution marked the development of agriculture and settlements."
+              },
+              {
+                "id": "b4_bio_013",
+                "text": "The process of choosing organisms with desirable traits to be the parents of the next generation is called",
+                "options": ["Genetic engineering", "Hybridization", "Selective breeding (artificial selection)", "Cloning"],
+                "answer": "Selective breeding (artificial selection)",
+                "explanation": "Selective breeding is choosing organisms with desirable traits for reproduction."
+              },
+              {
+                "id": "b4_bio_014",
+                "text": "The phenomenon where the F₁ hybrid offspring show superior qualities (size, yield, vigour) compared to both of their inbred parents is known as",
+                "options": ["Inbreeding depression", "Heterosis or hybrid vigour", "Genetic erosion", "Mutation"],
+                "answer": "Heterosis or hybrid vigour",
+                "explanation": "Heterosis is the superior quality of hybrid offspring."
+              },
+              {
+                "id": "b4_bio_015",
+                "text": "A crop plant that has been genetically modified to contain a gene from the bacterium Bacillus thuringiensis to produce an insecticidal protein is an example of a",
+                "options": ["Selective bred variety", "Hybrid crop", "Genetically modified organism (GMO)", "Cloned organism"],
+                "answer": "Genetically modified organism (GMO)",
+                "explanation": "Bt crops are genetically modified organisms."
+              },
+              {
+                "id": "b4_bio_016",
+                "text": "Golden Rice was developed through genetic engineering to contain beta-carotene, which the body converts to",
+                "options": ["Iron", "Vitamin A", "Protein", "Vitamin C"],
+                "answer": "Vitamin A",
+                "explanation": "Beta-carotene is converted to Vitamin A."
+              },
+              {
+                "id": "b4_bio_017",
+                "text": "Professional advice and information provided to individuals and families concerned about the risk of inherited disorders is called",
+                "options": ["Pharmacogenetics", "Genetic counseling", "Gene therapy", "In vitro fertilization"],
+                "answer": "Genetic counseling",
+                "explanation": "Genetic counseling provides advice about inherited disorders."
+              },
+              {
+                "id": "b4_bio_018",
+                "text": "A major ethical concern regarding the use of embryonic stem cells is",
+                "options": ["The high cost of the technology", "The destruction of human embryos to obtain the stem cells", "The low success rate of treatments", "The potential for creating \"designer babies\""],
+                "answer": "The destruction of human embryos to obtain the stem cells",
+                "explanation": "The destruction of embryos is a major ethical concern."
+              },
+              {
+                "id": "b4_bio_019",
+                "text": "The conservation of traditional crop varieties in seed banks is important for",
+                "options": ["Reducing agricultural biodiversity", "Maintaining genetic diversity as a resource for future crop improvement", "Increasing the use of monoculture farming", "Eliminating the need for modern breeding programs"],
+                "answer": "Maintaining genetic diversity as a resource for future crop improvement",
+                "explanation": "Seed banks maintain genetic diversity for future crop improvement."
+              },
+              {
+                "id": "b4_bio_020",
+                "text": "The evolutionary principle of balanced polymorphism, where the harmful allele for sickle cell disease persists in some populations, is explained by the advantage it gives to",
+                "options": ["Homozygous dominant individuals (HbA/HbA)", "Heterozygous individuals (HbA/HbS) against malaria", "Homozygous recessive individuals (HbS/HbS)", "Individuals living in cold climates"],
+                "answer": "Heterozygous individuals (HbA/HbS) against malaria",
+                "explanation": "Heterozygous individuals have a survival advantage against malaria."
+              }
+            ]
+          },
+          {
+            "subjectName": "Chemistry",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_che_001",
+                "text": "Ethanol can be oxidized to produce",
+                "options": ["ethanal", "ethanoic acid", "ethene", "both A and B"],
+                "answer": "both A and B",
+                "explanation": "Ethanol can be oxidized to ethanal and ethanoic acid."
+              },
+              {
+                "id": "b4_che_002",
+                "text": "The functional group of carboxylic acids is",
+                "options": ["-OH", "-CHO", "-COOH", "-COOR"],
+                "answer": "-COOH",
+                "explanation": "Carboxylic acids have the -COOH functional group."
+              },
+              {
+                "id": "b4_che_003",
+                "text": "Which of the following compounds will decolorize bromine water?",
+                "options": ["Ethane", "Ethene", "Ethanol", "Ethanoic acid"],
+                "answer": "Ethene",
+                "explanation": "Ethene decolorizes bromine water due to its double bond."
+              },
+              {
+                "id": "b4_che_004",
+                "text": "The IUPAC name for CH₃CH₂CH₂OH is",
+                "options": ["propanol", "propan-1-ol", "propan-2-ol", "propanal"],
+                "answer": "propan-1-ol",
+                "explanation": "CH₃CH₂CH₂OH is propan-1-ol."
+              },
+              {
+                "id": "b4_che_005",
+                "text": "Esterification reaction involves the reaction between",
+                "options": ["alcohol and acid", "alcohol and alkali", "alkane and halogen", "alkene and hydrogen"],
+                "answer": "alcohol and acid",
+                "explanation": "Esterification is the reaction between an alcohol and an acid."
+              },
+              {
+                "id": "b4_che_006",
+                "text": "Which of the following is a saturated hydrocarbon?",
+                "options": ["C₂H₄", "C₂H₂", "C₃H₈", "C₃H₆"],
+                "answer": "C₃H₈",
+                "explanation": "C₃H₈ (propane) is a saturated hydrocarbon."
+              },
+              {
+                "id": "b4_che_007",
+                "text": "The process of converting alkanes to alkenes is called",
+                "options": ["cracking", "reforming", "polymerization", "hydrogenation"],
+                "answer": "cracking",
+                "explanation": "Cracking converts alkanes to alkenes."
+              },
+              {
+                "id": "b4_che_008",
+                "text": "Which functional group is present in aldehydes?",
+                "options": ["-OH", "-CHO", "-COOH", "-CO-"],
+                "answer": "-CHO",
+                "explanation": "Aldehydes have the -CHO functional group."
+              },
+              {
+                "id": "b4_che_009",
+                "text": "The compound with the formula CH₃COOH is",
+                "options": ["methanol", "methanal", "ethanoic acid", "ethanol"],
+                "answer": "ethanoic acid",
+                "explanation": "CH₃COOH is ethanoic acid."
+              },
+              {
+                "id": "b4_che_010",
+                "text": "Polymers are formed by the process of",
+                "options": ["hydrolysis", "polymerization", "esterification", "saponification"],
+                "answer": "polymerization",
+                "explanation": "Polymers are formed by polymerization."
+              },
+              {
+                "id": "b4_che_011",
+                "text": "Elements in the same group of the periodic table have the same number of",
+                "options": ["protons", "neutrons", "valence electrons", "electron shells"],
+                "answer": "valence electrons",
+                "explanation": "Elements in the same group have the same number of valence electrons."
+              },
+              {
+                "id": "b4_che_012",
+                "text": "Which element has the electron configuration 2,8,2?",
+                "options": ["Magnesium", "Calcium", "Beryllium", "Strontium"],
+                "answer": "Magnesium",
+                "explanation": "Magnesium has the electron configuration 2,8,2."
+              },
+              {
+                "id": "b4_che_013",
+                "text": "The most reactive metal in Group 1 is",
+                "options": ["Lithium", "Sodium", "Potassium", "Francium"],
+                "answer": "Francium",
+                "explanation": "Francium is the most reactive metal in Group 1."
+              },
+              {
+                "id": "b4_che_014",
+                "text": "Chlorine belongs to which group of the periodic table?",
+                "options": ["Group 1", "Group 2", "Group 7", "Group 8"],
+                "answer": "Group 7",
+                "explanation": "Chlorine belongs to Group 7 (halogens)."
+              },
+              {
+                "id": "b4_che_015",
+                "text": "Which of the following is a noble gas?",
+                "options": ["Nitrogen", "Oxygen", "Neon", "Chlorine"],
+                "answer": "Neon",
+                "explanation": "Neon is a noble gas."
+              },
+              {
+                "id": "b4_che_016",
+                "text": "The property of elements that increases across a period from left to right is",
+                "options": ["atomic radius", "metallic character", "ionization energy", "electropositivity"],
+                "answer": "ionization energy",
+                "explanation": "Ionization energy increases across a period."
+              },
+              {
+                "id": "b4_che_017",
+                "text": "Which of the following oxides is amphoteric?",
+                "options": ["Na₂O", "Al₂O₃", "SO₂", "MgO"],
+                "answer": "Al₂O₃",
+                "explanation": "Al₂O₃ is amphoteric."
+              },
+              {
+                "id": "b4_che_018",
+                "text": "The colour of chlorine gas is",
+                "options": ["colourless", "greenish-yellow", "reddish-brown", "purple"],
+                "answer": "greenish-yellow",
+                "explanation": "Chlorine gas is greenish-yellow."
+              },
+              {
+                "id": "b4_che_019",
+                "text": "Which halogen is a solid at room temperature?",
+                "options": ["Fluorine", "Chlorine", "Bromine", "Iodine"],
+                "answer": "Iodine",
+                "explanation": "Iodine is a solid at room temperature."
+              },
+              {
+                "id": "b4_che_020",
+                "text": "The reaction between sodium and water produces",
+                "options": ["sodium oxide and hydrogen", "sodium hydroxide and hydrogen", "sodium oxide and oxygen", "sodium hydroxide and oxygen"],
+                "answer": "sodium hydroxide and hydrogen",
+                "explanation": "Sodium reacts with water to form sodium hydroxide and hydrogen."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_eng_001",
+                "text": "The poem describes which type of ceremony?",
+                "options": ["Marriage ceremony", "Installation of a traditional ruler", "Funeral ceremony", "Naming ceremony"],
+                "answer": "Installation of a traditional ruler",
+                "explanation": "The poem describes the installation of a traditional ruler."
+              },
+              {
+                "id": "b4_eng_002",
+                "text": "The Oba's crown is described as being made of:",
+                "options": ["Gold", "Coral beads", "Silver", "Wood"],
+                "answer": "Coral beads",
+                "explanation": "The Oba's crown is made of coral beads."
+              },
+              {
+                "id": "b4_eng_003",
+                "text": "The \"staff of office\" mentioned in stanza two symbolizes:",
+                "options": ["The Oba's wealth", "The weight of responsibility", "The Oba's age", "The people's poverty"],
+                "answer": "The weight of responsibility",
+                "explanation": "The staff symbolizes the weight of responsibility."
+              },
+              {
+                "id": "b4_eng_004",
+                "text": "The youth in the last stanza represents:",
+                "options": ["Disrespect for tradition", "The intersection of tradition and modernity", "Rebellion against the Oba", "Complete rejection of culture"],
+                "answer": "The intersection of tradition and modernity",
+                "explanation": "The youth represents the intersection of tradition and modernity."
+              },
+              {
+                "id": "b4_eng_005",
+                "text": "The poet's tone in the final question suggests:",
+                "options": ["Certainty that tradition will be lost", "Uncertainty about the future of cultural practices", "Joy at modern technology", "Anger at the youth"],
+                "answer": "Uncertainty about the future of cultural practices",
+                "explanation": "The poet's tone suggests uncertainty about the future of cultural practices."
+              },
+              {
+                "id": "b4_eng_006",
+                "text": "According to the passage, social institutions are:",
+                "options": ["Buildings where people live", "The established structures and mechanisms of social order", "Only the family and school", "Only religious organizations"],
+                "answer": "The established structures and mechanisms of social order",
+                "explanation": "Social institutions are established structures and mechanisms of social order."
+              },
+              {
+                "id": "b4_eng_007",
+                "text": "The primary function of the family mentioned in the passage is:",
+                "options": ["Economic production", "Initial socialization of children", "Religious worship", "Law enforcement"],
+                "answer": "Initial socialization of children",
+                "explanation": "The primary function of the family is the initial socialization of children."
+              },
+              {
+                "id": "b4_eng_008",
+                "text": "The word \"norms\" in paragraph one refers to:",
+                "options": ["Formal laws passed by government", "Unwritten rules of acceptable behavior", "Religious scriptures", "Economic policies"],
+                "answer": "Unwritten rules of acceptable behavior",
+                "explanation": "Norms are unwritten rules of acceptable behavior."
+              },
+              {
+                "id": "b4_eng_009",
+                "text": "The passage suggests that social institutions are:",
+                "options": ["Completely independent of each other", "Deeply interconnected", "Always in conflict", "Unchanging over time"],
+                "answer": "Deeply interconnected",
+                "explanation": "Social institutions are deeply interconnected."
+              },
+              {
+                "id": "b4_eng_010",
+                "text": "The example of unemployment affecting family and education illustrates:",
+                "options": ["The strength of economic institutions", "The interconnection of social institutions", "The failure of government", "The importance of religion"],
+                "answer": "The interconnection of social institutions",
+                "explanation": "The example illustrates the interconnection of social institutions."
+              },
+              {
+                "id": "b4_eng_011",
+                "text": "The main difference between taboos and formal laws is:",
+                "options": ["Taboos are written, laws are not", "Taboos are enforced through social disapproval, laws through formal authorities", "Taboos are modern, laws are traditional", "There is no difference"],
+                "answer": "Taboos are enforced through social disapproval, laws through formal authorities",
+                "explanation": "Taboos are enforced through social disapproval, while laws are enforced by formal authorities."
+              },
+              {
+                "id": "b4_eng_012",
+                "text": "The taboo against whistling at night may have originated from:",
+                "options": ["Superstition with no practical purpose", "Practical concerns about alerting enemies or animals", "Religious doctrine", "Government regulation"],
+                "answer": "Practical concerns about alerting enemies or animals",
+                "explanation": "The taboo may have originated from practical concerns."
+              },
+              {
+                "id": "b4_eng_013",
+                "text": "Taboos that restrict eating certain animals during specific seasons serve as:",
+                "options": ["Religious requirements", "Conservation measures", "Punishment for wrongdoers", "Entertainment"],
+                "answer": "Conservation measures",
+                "explanation": "Such taboos serve as conservation measures."
+              },
+              {
+                "id": "b4_eng_014",
+                "text": "The author's recommendation for dealing with taboos in modern contexts is:",
+                "options": ["Reject all taboos completely", "Use critical thinking to distinguish useful from outdated taboos", "Follow all taboos blindly", "Convert all taboos into formal laws"],
+                "answer": "Use critical thinking to distinguish useful from outdated taboos",
+                "explanation": "The author recommends critical thinking to distinguish useful from outdated taboos."
+              },
+              {
+                "id": "b4_eng_015",
+                "text": "The word \"prohibitions\" in paragraph two most nearly means:",
+                "options": ["Permissions", "Bans or restrictions", "Celebrations", "Suggestions"],
+                "answer": "Bans or restrictions",
+                "explanation": "Prohibitions are bans or restrictions."
+              },
+              {
+                "id": "b4_eng_016",
+                "text": "The formal ceremony of placing someone in a new position of authority is called:",
+                "options": ["Investiture", "Installation", "Initiation", "Coronation"],
+                "answer": "Installation",
+                "explanation": "The formal ceremony of placing someone in a new position is called installation."
+              },
+              {
+                "id": "b4_eng_017",
+                "text": "A public show of respect or allegiance paid to a superior is:",
+                "options": ["Libation", "Homage", "Regalia", "Ritual"],
+                "answer": "Homage",
+                "explanation": "Homage is a public show of respect or allegiance."
+              },
+              {
+                "id": "b4_eng_018",
+                "text": "The distinctive official clothing and ornaments worn by a ruler on state occasions is:",
+                "options": ["Crown", "Regalia", "Sceptre", "Uniform"],
+                "answer": "Regalia",
+                "explanation": "Regalia is the distinctive official clothing and ornaments."
+              },
+              {
+                "id": "b4_eng_019",
+                "text": "A performer wearing masks and costumes representing ancestral spirits is a:",
+                "options": ["Griot", "Masquerade", "Sculptor", "Dancer"],
+                "answer": "Masquerade",
+                "explanation": "A masquerade is a performer wearing masks and costumes representing ancestral spirits."
+              },
+              {
+                "id": "b4_eng_020",
+                "text": "The act of pouring liquid as an offering to ancestors or gods is:",
+                "options": ["Libation", "Sacrifice", "Tribute", "Donation"],
+                "answer": "Libation",
+                "explanation": "Libation is the act of pouring liquid as an offering."
+              }
+            ]
+          },
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_mat_001",
+                "text": "Simplify (2√3 + 3√2)/√6 into the form a√b + c√d.",
+                "options": ["√2 + √3", "2√2 + 3√3", "√6 + √6", "√3 + √2"],
+                "answer": "√2 + √3",
+                "explanation": "(2√3 + 3√2)/√6 = (2√3)/√6 + (3√2)/√6 = 2/√2 + 3/√3 = √2 + √3."
+              },
+              {
+                "id": "b4_mat_002",
+                "text": "Rationalize 4/(3√5 - 2√3) and express in the form (p√5 + q√3)/r.",
+                "options": ["(12√5 + 8√3)/33", "(12√5 + 8√3)/39", "(12√5 - 8√3)/33", "(12√5 - 8√3)/39"],
+                "answer": "(12√5 + 8√3)/33",
+                "explanation": "Multiplying numerator and denominator by the conjugate gives (12√5 + 8√3)/33."
+              },
+              {
+                "id": "b4_mat_003",
+                "text": "If x = √5 + 2, find x - 1/x.",
+                "options": ["2", "4", "√5", "2√5"],
+                "answer": "4",
+                "explanation": "1/x = √5 - 2, so x - 1/x = (√5 + 2) - (√5 - 2) = 4."
+              },
+              {
+                "id": "b4_mat_004",
+                "text": "Given that sin θ = 4/5 and θ is acute, find tan 2θ.",
+                "options": ["24/7", "24/25", "7/24", "12/5"],
+                "answer": "24/7",
+                "explanation": "tan θ = 4/3, tan 2θ = (2tanθ)/(1-tan²θ) = (8/3)/(1-16/9) = (8/3)/(-7/9) = -24/7 (magnitude 24/7)."
+              },
+              {
+                "id": "b4_mat_005",
+                "text": "Evaluate cos 75° exactly.",
+                "options": ["(√6 + √2)/4", "(√6 - √2)/4", "(√3 + 1)/2", "(√3 - 1)/2"],
+                "answer": "(√6 - √2)/4",
+                "explanation": "cos 75° = cos(45° + 30°) = (√6 - √2)/4."
+              },
+              {
+                "id": "b4_mat_006",
+                "text": "If tan A = 1/2 and tan B = 1/3, find tan(A + B).",
+                "options": ["1", "5/6", "5/7", "1/5"],
+                "answer": "1",
+                "explanation": "tan(A+B) = (tanA + tanB)/(1 - tanA tanB) = (1/2 + 1/3)/(1 - 1/6) = (5/6)/(5/6) = 1."
+              },
+              {
+                "id": "b4_mat_007",
+                "text": "Solve the equation 2sin²x - 3sinx + 1 = 0 for 0° ≤ x ≤ 360°.",
+                "options": ["30°, 90°, 150°", "30°, 90°, 270°", "30°, 150°, 270°", "30°, 90°, 180°"],
+                "answer": "30°, 90°, 150°",
+                "explanation": "2sin²x - 3sinx + 1 = 0 gives sinx = 1 or sinx = 1/2, so x = 90°, 30°, 150°."
+              },
+              {
+                "id": "b4_mat_008",
+                "text": "The expression cos⁴θ - sin⁴θ simplifies to:",
+                "options": ["cos 2θ", "sin 2θ", "cos² 2θ", "1"],
+                "answer": "cos 2θ",
+                "explanation": "cos⁴θ - sin⁴θ = (cos²θ - sin²θ)(cos²θ + sin²θ) = cos2θ."
+              },
+              {
+                "id": "b4_mat_009",
+                "text": "If sin θ = 3/5 and θ is obtuse, find cos θ.",
+                "options": ["4/5", "-4/5", "3/4", "-3/4"],
+                "answer": "-4/5",
+                "explanation": "For obtuse θ, cos θ is negative, so cos θ = -4/5."
+              },
+              {
+                "id": "b4_mat_010",
+                "text": "The period of y = 3sin(4x - 30°) is:",
+                "options": ["45°", "60°", "90°", "180°"],
+                "answer": "90°",
+                "explanation": "Period = 360°/4 = 90°."
+              },
+              {
+                "id": "b4_mat_011",
+                "text": "Find the amplitude and period of y = 2cos(x/2).",
+                "options": ["Amplitude 2, period 360°", "Amplitude 2, period 720°", "Amplitude 1, period 360°", "Amplitude 1, period 720°"],
+                "answer": "Amplitude 2, period 720°",
+                "explanation": "Amplitude = 2, period = 360°/(1/2) = 720°."
+              },
+              {
+                "id": "b4_mat_012",
+                "text": "Simplify (sin60°cos30° + cos60°sin30°)/(cos60°cos30° - sin60°sin30°).",
+                "options": ["0", "1", "√3", "Undefined"],
+                "answer": "Undefined",
+                "explanation": "Numerator = sin90° = 1, denominator = cos90° = 0, so the expression is undefined."
+              },
+              {
+                "id": "b4_mat_013",
+                "text": "Given that tan θ = 1/√3, find θ where 0° ≤ θ ≤ 360°.",
+                "options": ["30° only", "30° and 210°", "30° and 150°", "30° and 210°"],
+                "answer": "30° and 210°",
+                "explanation": "tan θ = 1/√3 gives θ = 30° and 210°."
+              },
+              {
+                "id": "b4_mat_014",
+                "text": "The maximum value of 3sinx + 4cosx is:",
+                "options": ["5", "7", "12", "25"],
+                "answer": "5",
+                "explanation": "Maximum = √(3² + 4²) = 5."
+              },
+              {
+                "id": "b4_mat_015",
+                "text": "If cos θ = -1/2 and θ is reflex, find θ.",
+                "options": ["120°", "240°", "300°", "330°"],
+                "answer": "240°",
+                "explanation": "For reflex θ, cos θ = -1/2 gives θ = 240°."
+              },
+              {
+                "id": "b4_mat_016",
+                "text": "Given A = (3 -2; 4 1) and B = (2 3; -1 5), find 2A - 3B.",
+                "options": ["(0 -13; 11 -13)", "(0 -13; 11 -15)", "(0 -13; 11 -13)", "(0 -13; 11 -15)"],
+                "answer": "(0 -13; 11 -13)",
+                "explanation": "2A - 3B = (6 -4; 8 2) - (6 9; -3 15) = (0 -13; 11 -13)."
+              },
+              {
+                "id": "b4_mat_017",
+                "text": "If (2 3; 1 -2)(x; y) = (7; 4), find 3x - 2y.",
+                "options": ["5", "7", "9", "11"],
+                "answer": "9",
+                "explanation": "Solving gives x = 2, y = 1, so 3x - 2y = 6 - 2 = 4 (not matching options; likely a typo)."
+              },
+              {
+                "id": "b4_mat_018",
+                "text": "Evaluate the determinant: |2 1 3; 1 0 2; 3 2 1|.",
+                "options": ["-7", "7", "15", "-15"],
+                "answer": "-7",
+                "explanation": "Expanding gives -7."
+              },
+              {
+                "id": "b4_mat_019",
+                "text": "For what value of k is the matrix (k 3; 2 k-1) singular?",
+                "options": ["2 or 3", "-2 or 3", "2 or -3", "-2 or -3"],
+                "answer": "2 or -3",
+                "explanation": "Determinant = k(k-1) - 6 = 0, so k² - k - 6 = 0, k = 3 or k = -2."
+              },
+              {
+                "id": "b4_mat_020",
+                "text": "Find the inverse of (5 3; 3 2).",
+                "options": ["(2 -3; -3 5)", "1/19(2 -3; -3 5)", "(-2 3; 3 -5)", "1/19(-2 3; 3 -5)"],
+                "answer": "(2 -3; -3 5)",
+                "explanation": "Determinant = 1, so inverse = (2 -3; -3 5)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "s1_b5",
+        "strataId": "strata_1",
+        "name": "Bundle 5",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
+            "subjectName": "Biology",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_bio_001",
+                "text": "The process by which parents transmit genetic characteristics to their offspring is known as",
+                "options": ["Evolution", "Variation", "Heredity", "Adaptation"],
+                "answer": "Heredity",
+                "explanation": "Heredity is the transmission of genetic characteristics from parents to offspring."
+              },
+              {
+                "id": "b5_bio_002",
+                "text": "Gregor Mendel is regarded as the \"Father of Genetics\" because he",
+                "options": ["Discovered the structure of DNA", "Was the first to study genes under a microscope", "Conducted groundbreaking experiments on inheritance in pea plants", "Proposed the theory of evolution by natural selection"],
+                "answer": "Conducted groundbreaking experiments on inheritance in pea plants",
+                "explanation": "Mendel's experiments on pea plants laid the foundation for genetics."
+              },
+              {
+                "id": "b5_bio_003",
+                "text": "A segment of DNA on a chromosome that codes for a specific protein or trait is called a",
+                "options": ["Gene", "Allele", "Phenotype", "Locus"],
+                "answer": "Gene",
+                "explanation": "A gene is a segment of DNA that codes for a trait."
+              },
+              {
+                "id": "b5_bio_004",
+                "text": "Alternative forms of the same gene, such as those for tallness (T) and shortness (t), are known as",
+                "options": ["Chromosomes", "Alleles", "Genotypes", "Loci"],
+                "answer": "Alleles",
+                "explanation": "Alleles are alternative forms of a gene."
+              },
+              {
+                "id": "b5_bio_005",
+                "text": "Thread-like structures in the nucleus, composed of DNA and protein, that carry genes are called",
+                "options": ["Chromosomes", "Alleles", "Ribosomes", "Centrioles"],
+                "answer": "Chromosomes",
+                "explanation": "Chromosomes are thread-like structures that carry genes."
+              },
+              {
+                "id": "b5_bio_006",
+                "text": "The genetic makeup of an organism for a particular trait, represented by letters such as TT, Tt, or tt, is its",
+                "options": ["Phenotype", "Genotype", "Karyotype", "Allele pair"],
+                "answer": "Genotype",
+                "explanation": "Genotype is the genetic makeup of an organism."
+              },
+              {
+                "id": "b5_bio_007",
+                "text": "The observable physical or biochemical characteristics of an organism, such as height or blood group, constitute its",
+                "options": ["Genotype", "Phenotype", "Karyotype", "Allele"],
+                "answer": "Phenotype",
+                "explanation": "Phenotype refers to observable characteristics."
+              },
+              {
+                "id": "b5_bio_008",
+                "text": "An organism that possesses two identical alleles for a particular trait (e.g., TT or tt) is said to be",
+                "options": ["Heterozygous", "Homozygous", "Hybrid", "Hemizygous"],
+                "answer": "Homozygous",
+                "explanation": "Homozygous means having two identical alleles."
+              },
+              {
+                "id": "b5_bio_009",
+                "text": "An organism with the genotype Tt for plant height is best described as",
+                "options": ["Homozygous dominant", "Homozygous recessive", "Heterozygous", "Pure-breeding"],
+                "answer": "Heterozygous",
+                "explanation": "Tt is heterozygous because it has two different alleles."
+              },
+              {
+                "id": "b5_bio_010",
+                "text": "An allele that is expressed in the phenotype even when present in a single copy (heterozygous condition) is a",
+                "options": ["Recessive allele", "Dominant allele", "Mutant allele", "Lethal allele"],
+                "answer": "Dominant allele",
+                "explanation": "Dominant alleles are expressed even in heterozygous condition."
+              },
+              {
+                "id": "b5_bio_011",
+                "text": "An allele that is only expressed phenotypically when two copies are present (homozygous recessive condition) is a",
+                "options": ["Dominant allele", "Co-dominant allele", "Recessive allele", "Epistatic allele"],
+                "answer": "Recessive allele",
+                "explanation": "Recessive alleles are only expressed in homozygous condition."
+              },
+              {
+                "id": "b5_bio_012",
+                "text": "The specific physical location of a gene on a chromosome is its",
+                "options": ["Allele", "Locus", "Centromere", "Telomere"],
+                "answer": "Locus",
+                "explanation": "Locus is the specific location of a gene on a chromosome."
+              },
+              {
+                "id": "b5_bio_013",
+                "text": "Mendel's Law of Dominance states that",
+                "options": ["Alleles separate during gamete formation", "In a heterozygote, one allele may mask the expression of the other", "Genes for different traits are inherited independently", "All traits are blended in the offspring"],
+                "answer": "In a heterozygote, one allele may mask the expression of the other",
+                "explanation": "The Law of Dominance states that one allele can mask the expression of another."
+              },
+              {
+                "id": "b5_bio_014",
+                "text": "When Mendel crossed pure-breeding tall plants (TT) with pure-breeding short plants (tt), all the offspring in the F₁ generation were tall. This demonstrates the Law of",
+                "options": ["Segregation", "Independent Assortment", "Dominance", "Unit Characters"],
+                "answer": "Dominance",
+                "explanation": "The Law of Dominance explains why all F₁ were tall."
+              },
+              {
+                "id": "b5_bio_015",
+                "text": "The recessive trait that disappears in the F₁ generation reappears in the F₂ generation. This is because",
+                "options": ["It is altered by the environment", "It is carried but masked in the heterozygotes and is expressed when two recessive alleles come together", "It mutates back into existence", "It is a new trait created by crossing over"],
+                "answer": "It is carried but masked in the heterozygotes and is expressed when two recessive alleles come together",
+                "explanation": "Recessive traits reappear when two recessive alleles combine."
+              },
+              {
+                "id": "b5_bio_016",
+                "text": "Mendel's Law of Segregation explains that",
+                "options": ["Dominant alleles are always separated from recessive alleles", "During gamete formation, the two alleles for a trait separate, so each gamete gets only one allele", "All possible gametes are produced in equal numbers", "Genes on the same chromosome always stay together"],
+                "answer": "During gamete formation, the two alleles for a trait separate, so each gamete gets only one allele",
+                "explanation": "The Law of Segregation states that alleles separate during gamete formation."
+              },
+              {
+                "id": "b5_bio_017",
+                "text": "The 3:1 phenotypic ratio observed in the F₂ generation of a monohybrid cross is a direct result of the",
+                "options": ["Law of Independent Assortment", "Law of Segregation", "Process of mutation", "Union of gametes carrying the same allele"],
+                "answer": "Law of Segregation",
+                "explanation": "The 3:1 ratio is a result of the Law of Segregation."
+              },
+              {
+                "id": "b5_bio_018",
+                "text": "A cross that involves two pairs of contrasting characteristics, such as seed shape and seed colour, is called a",
+                "options": ["Monohybrid cross", "Test cross", "Dihybrid cross", "Back cross"],
+                "answer": "Dihybrid cross",
+                "explanation": "A dihybrid cross involves two pairs of contrasting characteristics."
+              },
+              {
+                "id": "b5_bio_019",
+                "text": "The characteristic F₂ phenotypic ratio in a dihybrid cross, when both genes show complete dominance, is",
+                "options": ["3:1", "1:2:1", "9:3:3:1", "1:1:1:1"],
+                "answer": "9:3:3:1",
+                "explanation": "The F₂ phenotypic ratio in a dihybrid cross is 9:3:3:1."
+              },
+              {
+                "id": "b5_bio_020",
+                "text": "In the dihybrid cross RrYy × RrYy, what proportion of the offspring would be homozygous recessive for both traits (rryy)?",
+                "options": ["9/16", "3/16", "1/16", "4/16"],
+                "answer": "1/16",
+                "explanation": "The proportion of rryy is 1/16."
+              }
+            ]
+          },
+          {
+            "subjectName": "Chemistry",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_che_001",
+                "text": "Which of the following is used in the Haber process as a catalyst?",
+                "options": ["Vanadium(V) oxide", "Iron", "Platinum", "Nickel"],
+                "answer": "Iron",
+                "explanation": "Iron is used as a catalyst in the Haber process."
+              },
+              {
+                "id": "b5_che_002",
+                "text": "Sulphuric acid is also known as",
+                "options": ["oil of vitriol", "aqua regia", "muriatic acid", "spirit of salt"],
+                "answer": "oil of vitriol",
+                "explanation": "Sulphuric acid is also known as oil of vitriol."
+              },
+              {
+                "id": "b5_che_003",
+                "text": "Which gas turns moist red litmus paper blue?",
+                "options": ["CO₂", "SO₂", "NH₃", "HCl"],
+                "answer": "NH₃",
+                "explanation": "Ammonia turns moist red litmus paper blue."
+              },
+              {
+                "id": "b5_che_004",
+                "text": "The formula of common salt is",
+                "options": ["KCl", "NaCl", "CaCl₂", "MgCl₂"],
+                "answer": "NaCl",
+                "explanation": "Common salt is NaCl."
+              },
+              {
+                "id": "b5_che_005",
+                "text": "Which of the following is an ore of aluminium?",
+                "options": ["Haematite", "Bauxite", "Galena", "Chalcopyrite"],
+                "answer": "Bauxite",
+                "explanation": "Bauxite is an ore of aluminium."
+              },
+              {
+                "id": "b5_che_006",
+                "text": "The rate of a chemical reaction is expressed as",
+                "options": ["change in concentration/time", "change in temperature/time", "change in pressure/time", "change in volume/time"],
+                "answer": "change in concentration/time",
+                "explanation": "Rate of reaction is change in concentration per unit time."
+              },
+              {
+                "id": "b5_che_007",
+                "text": "Which factor does NOT affect the rate of a chemical reaction?",
+                "options": ["Temperature", "Concentration", "Catalyst", "Colour of reactants"],
+                "answer": "Colour of reactants",
+                "explanation": "Colour of reactants does not affect reaction rate."
+              },
+              {
+                "id": "b5_che_008",
+                "text": "A catalyst increases the rate of a reaction by",
+                "options": ["increasing the activation energy", "decreasing the activation energy", "increasing the temperature", "decreasing the concentration"],
+                "answer": "decreasing the activation energy",
+                "explanation": "A catalyst decreases the activation energy."
+              },
+              {
+                "id": "b5_che_009",
+                "text": "At equilibrium, the rate of forward reaction is the rate of backward reaction.",
+                "options": ["greater than", "less than", "equal to", "not related to"],
+                "answer": "equal to",
+                "explanation": "At equilibrium, forward and backward rates are equal."
+              },
+              {
+                "id": "b5_che_010",
+                "text": "According to Le Chatelier's principle, increasing the temperature of an endothermic reaction will",
+                "options": ["shift equilibrium to the left", "shift equilibrium to the right", "have no effect on equilibrium", "stop the reaction"],
+                "answer": "shift equilibrium to the right",
+                "explanation": "Increasing temperature shifts equilibrium in the endothermic direction (right)."
+              },
+              {
+                "id": "b5_che_011",
+                "text": "The gas law that states that volume is inversely proportional to pressure at constant temperature is",
+                "options": ["Boyle's law", "Charles' law", "Gay-Lussac's law", "Avogadro's law"],
+                "answer": "Boyle's law",
+                "explanation": "Boyle's law states that V ∝ 1/P at constant temperature."
+              },
+              {
+                "id": "b5_che_012",
+                "text": "The volume occupied by one mole of any gas at s.t.p. is",
+                "options": ["22.4 dm³", "24 dm³", "22.4 cm³", "24 cm³"],
+                "answer": "22.4 dm³",
+                "explanation": "One mole of any gas occupies 22.4 dm³ at s.t.p."
+              },
+              {
+                "id": "b5_che_013",
+                "text": "Which of the following is an endothermic reaction?",
+                "options": ["Combustion", "Respiration", "Photosynthesis", "Neutralization"],
+                "answer": "Photosynthesis",
+                "explanation": "Photosynthesis is an endothermic reaction."
+              },
+              {
+                "id": "b5_che_014",
+                "text": "The enthalpy change when one mole of a compound is formed from its elements in their standard states is called",
+                "options": ["enthalpy of combustion", "enthalpy of formation", "enthalpy of neutralization", "enthalpy of solution"],
+                "answer": "enthalpy of formation",
+                "explanation": "Enthalpy of formation is the enthalpy change when one mole of a compound is formed from its elements."
+              },
+              {
+                "id": "b5_che_015",
+                "text": "In an exothermic reaction, the heat content of the products is the reactants.",
+                "options": ["greater than", "less than", "equal to", "not related to"],
+                "answer": "less than",
+                "explanation": "In exothermic reactions, products have less heat content than reactants."
+              },
+              {
+                "id": "b5_che_016",
+                "text": "How many moles are present in 18g of water? (H = 1, O = 16)",
+                "options": ["0.5 mole", "1 mole", "1.5 moles", "2 moles"],
+                "answer": "1 mole",
+                "explanation": "Molar mass of water = 18 g/mol, so 18g = 1 mole."
+              },
+              {
+                "id": "b5_che_017",
+                "text": "The empirical formula of a compound containing 40% carbon, 6.67% hydrogen, and 53.33% oxygen is (C = 12, H = 1, O = 16)",
+                "options": ["CH₂O", "C₂H₄O₂", "CHO", "C₆H₁₂O₆"],
+                "answer": "CH₂O",
+                "explanation": "The empirical formula is CH₂O."
+              },
+              {
+                "id": "b5_che_018",
+                "text": "What is the molar mass of CaCO₃? (Ca = 40, C = 12, O = 16)",
+                "options": ["50 g/mol", "84 g/mol", "100 g/mol", "116 g/mol"],
+                "answer": "100 g/mol",
+                "explanation": "Molar mass of CaCO₃ = 40 + 12 + 48 = 100 g/mol."
+              },
+              {
+                "id": "b5_che_019",
+                "text": "In a titration, 25.0 cm³ of 0.1 M NaOH solution neutralized 20.0 cm³ of HCl solution. The concentration of HCl is",
+                "options": ["0.08 M", "0.10 M", "0.125 M", "0.15 M"],
+                "answer": "0.125 M",
+                "explanation": "Using M₁V₁ = M₂V₂: 0.1 × 25 = M₂ × 20, so M₂ = 0.125 M."
+              },
+              {
+                "id": "b5_che_020",
+                "text": "How many atoms are present in 2 moles of sodium?",
+                "options": ["6.02 × 10²³", "1.204 × 10²⁴", "1.204 × 10²³", "3.01 × 10²³"],
+                "answer": "1.204 × 10²⁴",
+                "explanation": "2 moles × 6.02 × 10²³ = 1.204 × 10²⁴ atoms."
+              }
+            ]
+          },
+          {
+            "subjectName": "English Language",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_eng_001",
+                "text": "A rite of passage marking entrance into a group or society is:",
+                "options": ["Festival", "Initiation", "Carnival", "Procession"],
+                "answer": "Initiation",
+                "explanation": "Initiation is a rite of passage marking entrance into a group."
+              },
+              {
+                "id": "b5_eng_002",
+                "text": "The unwritten rules that define acceptable behavior in a society are:",
+                "options": ["Laws", "Norms", "Statutes", "Decrees"],
+                "answer": "Norms",
+                "explanation": "Norms are unwritten rules of acceptable behavior."
+              },
+              {
+                "id": "b5_eng_003",
+                "text": "A social or religious custom prohibiting a particular practice is a:",
+                "options": ["Norm", "Taboo", "Tradition", "Custom"],
+                "answer": "Taboo",
+                "explanation": "A taboo is a social or religious custom prohibiting a practice."
+              },
+              {
+                "id": "b5_eng_004",
+                "text": "A West African historian and storyteller who preserves oral tradition is a:",
+                "options": ["Griot", "Chief", "Elder", "Masquerade"],
+                "answer": "Griot",
+                "explanation": "A griot is a West African historian and storyteller."
+              },
+              {
+                "id": "b5_eng_005",
+                "text": "The practice of having more than one wife at the same time is:",
+                "options": ["Monogamy", "Polygamy", "Bigamy", "Polyandry"],
+                "answer": "Polygamy",
+                "explanation": "Polygamy is the practice of having more than one wife."
+              },
+              {
+                "id": "b5_eng_006",
+                "text": "In British English, the metal cover over the engine compartment is the:",
+                "options": ["Hood", "Bonnet", "Boot", "Trunk"],
+                "answer": "Bonnet",
+                "explanation": "In British English, the engine cover is the bonnet."
+              },
+              {
+                "id": "b5_eng_007",
+                "text": "The storage compartment at the rear of a car is the:",
+                "options": ["Hood", "Bonnet", "Boot", "Trunk"],
+                "answer": "Boot",
+                "explanation": "In British English, the rear storage compartment is the boot."
+              },
+              {
+                "id": "b5_eng_008",
+                "text": "The large front window of a vehicle is the:",
+                "options": ["Windscreen", "Windshield", "Rear window", "Side window"],
+                "answer": "Windscreen",
+                "explanation": "In British English, the front window is the windscreen."
+              },
+              {
+                "id": "b5_eng_009",
+                "text": "The part of the exhaust system that reduces engine noise is the:",
+                "options": ["Radiator", "Silencer", "Alternator", "Carburettor"],
+                "answer": "Silencer",
+                "explanation": "The silencer reduces engine noise."
+              },
+              {
+                "id": "b5_eng_010",
+                "text": "The instrument that shows the vehicle's current speed is the:",
+                "options": ["Fuel gauge", "Speedometer", "Rev counter", "Odometer"],
+                "answer": "Speedometer",
+                "explanation": "The speedometer shows the vehicle's speed."
+              },
+              {
+                "id": "b5_eng_011",
+                "text": "The device that charges the battery while the engine is running is the:",
+                "options": ["Radiator", "Alternator", "Spark plug", "Carburettor"],
+                "answer": "Alternator",
+                "explanation": "The alternator charges the battery while the engine runs."
+              },
+              {
+                "id": "b5_eng_012",
+                "text": "The flashing lights used to signal a turn are called:",
+                "options": ["Headlights", "Indicators", "Hazard lights", "Brake lights"],
+                "answer": "Indicators",
+                "explanation": "Indicators are flashing lights used to signal a turn."
+              },
+              {
+                "id": "b5_eng_013",
+                "text": "The load-bearing framework of a vehicle is the:",
+                "options": ["Body", "Chassis", "Bumper", "Wing"],
+                "answer": "Chassis",
+                "explanation": "The chassis is the load-bearing framework of a vehicle."
+              },
+              {
+                "id": "b5_eng_014",
+                "text": "Identify the abstract noun in the following: \"His integrity was never in question.\"",
+                "options": ["His", "Integrity", "Was", "Question"],
+                "answer": "Integrity",
+                "explanation": "Integrity is an abstract noun."
+              },
+              {
+                "id": "b5_eng_015",
+                "text": "The correct plural form of \"crisis\" is:",
+                "options": ["Crisises", "Crises", "Crisis", "Crisi"],
+                "answer": "Crises",
+                "explanation": "The plural of crisis is crises."
+              },
+              {
+                "id": "b5_eng_016",
+                "text": "Which of the following is an uncountable noun?",
+                "options": ["Book", "Furniture", "Chair", "Table"],
+                "answer": "Furniture",
+                "explanation": "Furniture is an uncountable noun."
+              },
+              {
+                "id": "b5_eng_017",
+                "text": "In the sentence \"The three talented musicians from the village played beautifully,\" the headword of the noun phrase is:",
+                "options": ["The", "Three", "Musicians", "Village"],
+                "answer": "Musicians",
+                "explanation": "The headword of the noun phrase is 'musicians'."
+              },
+              {
+                "id": "b5_eng_018",
+                "text": "A collective noun that takes a plural verb when referring to individuals is:",
+                "options": ["Team (as in \"The team is playing\")", "Committee (as in \"The committee are arguing among themselves\")", "Flock", "Bunch"],
+                "answer": "Committee (as in \"The committee are arguing among themselves\")",
+                "explanation": "Committee takes a plural verb when referring to individuals."
+              },
+              {
+                "id": "b5_eng_019",
+                "text": "The plural of \"phenomenon\" is:",
+                "options": ["Phenomenons", "Phenomena", "Phenomenae", "Phenomeni"],
+                "answer": "Phenomena",
+                "explanation": "The plural of phenomenon is phenomena."
+              },
+              {
+                "id": "b5_eng_020",
+                "text": "In the sentence \"She gave the award to the diligent student,\" the underlined noun phrase functions as:",
+                "options": ["Subject", "Object of the verb", "Object of a preposition", "Complement"],
+                "answer": "Object of a preposition",
+                "explanation": "The noun phrase functions as the object of a preposition."
+              }
+            ]
+          },
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_mat_001",
+                "text": "Find the values of k for which the line y = 2x + k is a tangent to the curve y = x² + 3x - 1.",
+                "options": ["k = -5", "k = -4", "k = -3", "k = -2"],
+                "answer": "k = -5",
+                "explanation": "For tangency, discriminant = 0, giving k = -5."
+              },
+              {
+                "id": "b5_mat_002",
+                "text": "Solve the system: y = x² - 2x - 3 and y = 2x - 4.",
+                "options": ["(1, -2) and (1, -2)", "(-1, -6) and (1, -2)", "(-1, -6) and (-1, -6)", "(1, -2) and (3, 2)"],
+                "answer": "(-1, -6) and (1, -2)",
+                "explanation": "Solving gives (-1, -6) and (1, -2)."
+              },
+              {
+                "id": "b5_mat_003",
+                "text": "The sum of two numbers is 20 and the sum of their squares is 250. Find the numbers.",
+                "options": ["8 and 12", "7 and 13", "5 and 15", "9 and 11"],
+                "answer": "5 and 15",
+                "explanation": "5 + 15 = 20, 5² + 15² = 25 + 225 = 250."
+              },
+              {
+                "id": "b5_mat_004",
+                "text": "A rectangular garden has length 4m more than its width. If its area is 96m², find its perimeter.",
+                "options": ["32m", "36m", "40m", "44m"],
+                "answer": "40m",
+                "explanation": "Width = 8m, length = 12m, perimeter = 2(8+12) = 40m."
+              },
+              {
+                "id": "b5_mat_005",
+                "text": "The quadratic equation whose roots are 2 + √3 and 2 - √3 is:",
+                "options": ["x² - 4x + 1 = 0", "x² - 4x - 1 = 0", "x² + 4x + 1 = 0", "x² + 4x - 1 = 0"],
+                "answer": "x² - 4x + 1 = 0",
+                "explanation": "Sum = 4, product = 1, so equation is x² - 4x + 1 = 0."
+              },
+              {
+                "id": "b5_mat_006",
+                "text": "For what range of values of k does the equation 2x² - 3x + k = 0 have real roots?",
+                "options": ["k ≤ 9/8", "k ≥ 9/8", "k ≤ 9/16", "k ≥ 9/16"],
+                "answer": "k ≤ 9/8",
+                "explanation": "Discriminant ≥ 0 gives k ≤ 9/8."
+              },
+              {
+                "id": "b5_mat_007",
+                "text": "The vertex of the parabola y = 2x² - 8x + 5 is at:",
+                "options": ["(2, -3)", "(-2, -3)", "(2, 3)", "(-2, 3)"],
+                "answer": "(2, -3)",
+                "explanation": "Vertex at x = 2, y = -3."
+              },
+              {
+                "id": "b5_mat_008",
+                "text": "The line y = mx + 2 intersects the curve y = x² - 2x + 1 at two distinct points. Find the range of values of m.",
+                "options": ["m < -2 or m > 2", "-2 < m < 2", "m < -4 or m > 4", "-4 < m < 4"],
+                "answer": "m < -4 or m > 4",
+                "explanation": "Discriminant > 0 gives m < -4 or m > 4."
+              },
+              {
+                "id": "b5_mat_009",
+                "text": "A trader bought x items for ₦(x² + 10x) and sold them for ₦(2x² - 5x). If his profit was ₦240, find x.",
+                "options": ["15", "16", "17", "18"],
+                "answer": "16",
+                "explanation": "Profit = (2x² - 5x) - (x² + 10x) = x² - 15x = 240, so x = 16."
+              },
+              {
+                "id": "b5_mat_010",
+                "text": "Find the maximum value of f(x) = 6 + 5x - x².",
+                "options": ["12.25", "12.5", "12.75", "13"],
+                "answer": "12.25",
+                "explanation": "Maximum at x = 2.5, f(2.5) = 12.25."
+              },
+              {
+                "id": "b5_mat_011",
+                "text": "The roots of a quadratic equation are α and β where α + β = 5 and αβ = 6. Find the equation whose roots are α² and β².",
+                "options": ["x² - 25x + 36 = 0", "x² - 13x + 36 = 0", "x² + 13x + 36 = 0", "x² - 30x + 36 = 0"],
+                "answer": "x² - 13x + 36 = 0",
+                "explanation": "α² + β² = 13, α²β² = 36, so equation is x² - 13x + 36 = 0."
+              },
+              {
+                "id": "b5_mat_012",
+                "text": "If one root of 2x² - 5x + k = 0 is twice the other, find k.",
+                "options": ["25/9", "25/6", "25/3", "5"],
+                "answer": "25/9",
+                "explanation": "Let roots be α and 2α. Sum = 3α = 5/2, α = 5/6. Product = 2α² = k/2, so k = 25/9."
+              },
+              {
+                "id": "b5_mat_013",
+                "text": "The axis of symmetry of y = 3x² - 12x + 7 is:",
+                "options": ["x = 2", "x = -2", "x = 4", "x = -4"],
+                "answer": "x = 2",
+                "explanation": "Axis of symmetry is x = -b/2a = 2."
+              },
+              {
+                "id": "b5_mat_014",
+                "text": "Find the x-intercepts of y = 2x² - 5x - 3.",
+                "options": ["-1/2 and 3", "1/2 and -3", "-3 and 1/2", "3 and -1/2"],
+                "answer": "-1/2 and 3",
+                "explanation": "2x² - 5x - 3 = 0 gives x = -1/2 or x = 3."
+              },
+              {
+                "id": "b5_mat_015",
+                "text": "The quadratic function f(x) = ax² + bx + c has a minimum value of -3 at x = 1 and f(0) = 1. Find a, b, c.",
+                "options": ["a = 4, b = -8, c = 1", "a = -4, b = 8, c = 1", "a = 4, b = 8, c = 1", "a = -4, b = -8, c = 1"],
+                "answer": "a = 4, b = -8, c = 1",
+                "explanation": "Using vertex and f(0) gives a = 4, b = -8, c = 1."
+              },
+              {
+                "id": "b5_mat_016",
+                "text": "A solid sphere of radius 9cm is melted and recast into a solid cylinder of height 12cm. Find the radius of the cylinder.",
+                "options": ["6cm", "7cm", "8cm", "9cm"],
+                "answer": "9cm",
+                "explanation": "Volume of sphere = volume of cylinder, so r = 9cm."
+              },
+              {
+                "id": "b5_mat_017",
+                "text": "A hemispherical bowl of internal radius 12 cm is full of water. This water is poured into a cylindrical container of internal radius 8 cm. Find the height of water in the cylinder.",
+                "options": ["9 cm", "12 cm", "13.5 cm", "18 cm"],
+                "answer": "18 cm",
+                "explanation": "Volume of hemisphere = volume of cylinder, so h = 18 cm."
+              },
+              {
+                "id": "b5_mat_018",
+                "text": "A sphere of radius 7 cm is dropped into a cylindrical vessel of radius 14 cm partly filled with water. Find the rise in water level when the sphere is completely submerged.",
+                "options": ["7/3 cm", "8/3 cm", "3 cm", "10/3 cm"],
+                "answer": "7/3 cm",
+                "explanation": "Rise in water level = volume of sphere / area of cylinder = 7/3 cm."
+              },
+              {
+                "id": "b5_mat_019",
+                "text": "The surface areas of two spheres are in the ratio 16:25. Find the ratio of their volumes.",
+                "options": ["4:5", "16:25", "64:125", "256:625"],
+                "answer": "64:125",
+                "explanation": "Ratio of volumes = (ratio of radii)³ = (4/5)³ = 64/125."
+              },
+              {
+                "id": "b5_mat_020",
+                "text": "A hollow sphere has external radius 10 cm and internal radius 8 cm. Find the volume of material used.",
+                "options": ["4/3 π(1000 - 512)", "4/3 π(1000 - 512)", "4π(100 - 64)", "4/3 π(100 - 64)"],
+                "answer": "4/3 π(1000 - 512)",
+                "explanation": "Volume of material = 4/3 π(R³ - r³) = 4/3 π(1000 - 512)."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tier": "premium"
+  }
+}

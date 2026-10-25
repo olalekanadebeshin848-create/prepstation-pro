@@ -39,3 +39,11 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Desktop builds and binaries
+electron-app/release/
+electron-app/electron-dist-ia32/
+BUILDS_32BIT/
+BUILDS_64BIT/
+
+

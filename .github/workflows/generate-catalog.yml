@@ -1,0 +1,37 @@
+name: Auto-Generate Strata Catalog
+
+on:
+  push:
+    paths:
+      - 'strata/**'
+  workflow_dispatch:
+
+jobs:
+  generate-catalog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 2. Set Up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 3. Build strata_catalog.json
+        run: node scripts/build-catalog.js
+
+      - name: 4. Commit and Push Catalog
+        run: |
+          git config --global user.name "PrepStation Bot"
+          git config --global user.email "bot@prepstation.app"
+          git add strata_catalog.json
+          if git diff --staged --quiet; then
+            echo "No changes to strata_catalog.json."
+          else
+            git commit -m "chore(strata): auto-update strata_catalog.json [skip ci]"
+            git push
+          fi

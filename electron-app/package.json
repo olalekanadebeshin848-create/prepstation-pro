@@ -1,0 +1,64 @@
+{
+  "name": "prepstation-desktop",
+  "version": "1.0.0",
+  "description": "PrepStation Pro — desktop (Electron shell for the React Native Web build)",
+  "main": "main/main.js",
+  "author": "Delmama Groups",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "electron .",
+    "copy-web": "node scripts/copy-web.js",
+    "dist": "npm run copy-web && electron-builder --win --x64",
+    "build:installer": "npm run copy-web && electron-builder --win nsis --x64",
+    "build:portable": "npm run copy-web && electron-builder --win portable --x64",
+    "dist:ia32": "npm run copy-web && electron-builder --win --ia32 --config electron-builder-ia32.json",
+    "build:installer:ia32": "npm run copy-web && electron-builder --win nsis --ia32 --config electron-builder-ia32.json",
+    "build:portable:ia32": "npm run copy-web && electron-builder --win portable --ia32 --config electron-builder-ia32.json"
+  },
+  "build": {
+    "appId": "com.delmamatiagroups.prepstationpro.desktop",
+    "productName": "PrepStation Pro",
+    "files": [
+      "main/**/*",
+      "web/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "${productName} Setup ${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${productName} Portable ${version}.${ext}"
+    },
+    "asar": true,
+    "asarUnpack": [
+      "**/node_modules/sql.js/dist/sql-wasm.wasm"
+    ]
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "dependencies": {
+    "sql.js": "^1.13.0",
+    "electron-store": "^8.2.0",
+    "jsrsasign": "^11.1.3",
+    "node-machine-id": "^1.1.12"
+  }
+}

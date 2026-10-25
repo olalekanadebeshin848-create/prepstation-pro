@@ -6,11 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "backgroundColor": "#0f172a",
-      "image": "./assets/splash-icon-with-text.png",
-      "resizeMode": "contain"
-    },
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.delmamatiagroups.prepstationpro"
@@ -21,10 +16,9 @@
         "backgroundColor": "#0f172a"
       },
       "package": "com.delmamatiagroups.prepstationpro",
+      "softwareKeyboardLayoutMode": "resize",
       "permissions": [
-        "CAMERA",
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO"
+        "CAMERA"
       ]
     },
     "web": {
@@ -45,11 +39,11 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#0f172a",
-          "image": "./assets/icon.png",
-          "imageWidth": 1,
+          "image": "./assets/splash-icon-with-text.png",
           "resizeMode": "contain"
         }
-      ]
+      ],
+      "expo-sharing"
     ],
     "extra": {
       "eas": {

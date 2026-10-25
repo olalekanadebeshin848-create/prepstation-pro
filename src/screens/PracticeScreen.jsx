@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import {
   StyleSheet,
   Text,
@@ -18,219 +18,10 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { logExamResult } from '../database/queries';
 import { isClassCategory } from '../config/categories';
 import { WebView } from 'react-native-webview';
-import { katexCSS, katexJS, autoRenderJS } from '../../assets/katex/katex-bundle';
+import MathText from '../components/MathText';
 import ResultScreen from './ResultScreen'; 
 import { applyBundleCompletionToStorage } from './HomeScreen';
 const { width } = Dimensions.get('window');
-
-function toLatex(raw) {
-  if (!raw) return '';
-  let s = raw;
-  const symbolMap = {
-    'π': '\\pi',
-    'α': '\\alpha', 'β': '\\beta', 'γ': '\\gamma', 'δ': '\\delta',
-    'θ': '\\theta', 'λ': '\\lambda', 'μ': '\\mu', 'σ': '\\sigma',
-    'Ω': '\\Omega', 'Σ': '\\Sigma', 'Δ': '\\Delta',
-    '±': '\\pm', '×': '\\times', '÷': '\\div',
-    '≤': '\\leq', '≥': '\\geq', '≠': '\\neq',
-    '∞': '\\infty', '∑': '\\sum', '∫': '\\int',
-    '√': '\\sqrt',
-    '°': '^{\\circ}',
-    '→': '\\rightarrow',
-    '⁻': '^{-}',
-  };
-  Object.entries(symbolMap).forEach(([sym, latex]) => {
-    s = s.split(sym).join(latex);
-  });
-  s = s.replace(/\^(\w+)/g, (_, exp) => `^{${exp}}`);
-  s = s.replace(/_(\w+)/g, (_, sub) => `_{${sub}}`);
-  s = s.replace(/([A-Za-z])(\d+)/g, (_, letter, digits) => `${letter}_{${digits}}`);
-  s = s.replace(/\\sqrt\(([^)]+)\)/g, (_, inner) => `\\sqrt{${inner}}`);
-  s = s.replace(/([A-Za-z0-9\}]+)\/([A-Za-z0-9\{][A-Za-z0-9\{\}]*)/g, (match, num, den) => {
-    if (match.includes('://')) return match;
-    return `\\frac{${num}}{${den}}`;
-  });
-  return s;
-}
-
-const MATH_TOKEN_RE = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$)/g;
-
-function looksLikeMath(word) {
-  if (/\\[a-zA-Z]/.test(word)) return true;
-  if (/[\^_{}]/.test(word)) return true;
-  if (/^-?\d+(\.\d+)?$/.test(word)) return false;
-  if (/[A-Za-z]\d/.test(word)) return true;
-  if (/\d+\/\d+/.test(word)) return true;
-  if (/\\(frac|sqrt|pm|times|div|leq|geq|neq|infty|sum|int|pi|alpha|rightarrow)/.test(word)) return true;
-  return false;
-}
-
-function parseSegments(rawText) {
-  if (!rawText) return [{ type: 'text', content: '' }];
-  const preprocessed = toLatex(rawText);
-  if (MATH_TOKEN_RE.test(preprocessed)) {
-    MATH_TOKEN_RE.lastIndex = 0;
-    const parts = [];
-    let lastIndex = 0;
-    let match;
-    MATH_TOKEN_RE.lastIndex = 0;
-    while ((match = MATH_TOKEN_RE.exec(preprocessed)) !== null) {
-      if (match.index > lastIndex) {
-        parts.push({ type: 'text', content: preprocessed.slice(lastIndex, match.index) });
-      }
-      const inner = match[0].replace(/^\$+|\$+$/g, '').trim();
-      parts.push({ type: 'math', content: inner });
-      lastIndex = match.index + match[0].length;
-    }
-    if (lastIndex < preprocessed.length) {
-      parts.push({ type: 'text', content: preprocessed.slice(lastIndex) });
-    }
-    return parts;
-  }
-  const words = preprocessed.split(/(\s+)/);
-  const segments = [];
-  let currentText = '';
-  let currentMath = '';
-  words.forEach((word) => {
-    const isSpace = /^\s+$/.test(word);
-    if (isSpace) {
-      if (currentMath) { currentMath += ' '; }
-      else { currentText += word; }
-      return;
-    }
-    if (looksLikeMath(word)) {
-      if (currentText.trim()) {
-        segments.push({ type: 'text', content: currentText });
-        currentText = '';
-      }
-      currentMath += (currentMath ? ' ' : '') + word;
-    } else {
-      if (currentMath.trim()) {
-        segments.push({ type: 'math', content: currentMath.trim() });
-        currentMath = '';
-      }
-      currentText += (currentText ? ' ' : '') + word;
-    }
-  });
-  if (currentMath.trim()) segments.push({ type: 'math', content: currentMath.trim() });
-  if (currentText.trim()) segments.push({ type: 'text', content: currentText.trim() });
-  return segments.length > 0 ? segments : [{ type: 'text', content: preprocessed }];
-}
-
-function buildKatexHtml(latex, fontSize, color) {
-  return `
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <style>${katexCSS}</style>
-  <script>${katexJS}</script>
-  <script>${autoRenderJS}</script>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, sans-serif;
-      font-size: ${fontSize}px;
-      color: ${color};
-      background: transparent;
-      line-height: 1.6;
-      padding: 2px 0;
-      word-break: break-word;
-    }
-    .katex { font-size: 1em; }
-    .katex-display { margin: 4px 0; }
-  </style>
-</head>
-<body>
-  <span id="content"></span>
-  <script>
-    document.getElementById('content').textContent = ${JSON.stringify(latex)};
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: '$$', right: '$$', display: true },
-        { left: '$',  right: '$',  display: false },
-        { left: '\\\\(', right: '\\\\)', display: false },
-        { left: '\\\\[', right: '\\\\]', display: true }
-      ],
-      throwOnError: false
-    });
-    function sendHeight() {
-      const h = document.body.scrollHeight;
-      if (window.ReactNativeWebView) {
-        window.ReactNativeWebView.postMessage(String(h));
-      } else if (window.parent) {
-        window.parent.postMessage(String(h), '*');
-      }
-    }
-    window.addEventListener('load', sendHeight);
-    setTimeout(sendHeight, 300);
-  </script>
-</body>
-</html>`;
-}
-
-function MathText({ text, textStyle, containerStyle }) {
-  const [webHeight, setWebHeight] = useState(30);
-  const iframeRef = useRef(null);
-  const segments = parseSegments(text || '');
-  const hasMath = segments.some(s => s.type === 'math');
-  const fontSize = StyleSheet.flatten(textStyle)?.fontSize || 15;
-  const color    = StyleSheet.flatten(textStyle)?.color    || '#0f172a';
-
-  const marked = hasMath
-    ? segments.map(seg => (seg.type === 'math' ? `$${seg.content}$` : seg.content)).join('')
-    : '';
-  const html = hasMath ? buildKatexHtml(marked, fontSize, color) : '';
-
-  // Web/Electron: react-native-webview has no web implementation ("not
-  // supported on this platform"), so we render the same KaTeX HTML inside
-  // a plain iframe instead — the browser renders it natively.
-  useEffect(() => {
-    if (Platform.OS !== 'web' || !hasMath) return;
-    function handleMessage(event) {
-      if (iframeRef.current && event.source === iframeRef.current.contentWindow) {
-        const h = parseInt(event.data, 10);
-        if (!isNaN(h) && h > 0) setWebHeight(h + 4);
-      }
-    }
-    window.addEventListener('message', handleMessage);
-    return () => window.removeEventListener('message', handleMessage);
-  }, [hasMath, html]);
-
-  if (!hasMath) {
-    return <Text style={textStyle}>{text}</Text>;
-  }
-
-  if (Platform.OS === 'web') {
-    return (
-      <View style={[{ width: '100%', height: webHeight }, containerStyle]}>
-        {React.createElement('iframe', {
-          ref: iframeRef,
-          srcDoc: html,
-          style: { width: '100%', height: '100%', border: 'none', background: 'transparent' },
-          title: 'math-content',
-        })}
-      </View>
-    );
-  }
-
-  return (
-    <View style={[{ width: '100%', height: webHeight }, containerStyle]}>
-      <WebView
-        originWhitelist={['*']}
-        source={{ html }}
-        scrollEnabled={false}
-        showsVerticalScrollIndicator={false}
-        onMessage={(e) => {
-          const h = parseInt(e.nativeEvent.data, 10);
-          if (!isNaN(h) && h > 0) setWebHeight(h + 4);
-        }}
-        style={{ backgroundColor: 'transparent', flex: 1 }}
-        androidLayerType="software"
-      />
-    </View>
-  );
-}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // QuestionImage — renders base64 images including SVG via WebView
@@ -347,18 +138,34 @@ function shuffleArray(arr) {
 function shuffleQuestionOptions(q) {
   const keys = ['A', 'B', 'C', 'D'];
   const pairs = keys
-    .filter(k => q[`option_${k.toLowerCase()}`] !== undefined && q[`option_${k.toLowerCase()}`] !== null)
+    .filter(k => { const v = q[`option_${k.toLowerCase()}`]; return v !== undefined && v !== null && String(v).trim() !== ''; })
     .map(k => ({ originalKey: k, text: q[`option_${k.toLowerCase()}`] }));
   const shuffled = shuffleArray(pairs);
 
   const newQ = { ...q };
+  delete newQ.shuffledOptions;
+  const origKey = String(q.correct_option || '').trim().toUpperCase();
+  const origAnswerText = String(q.correct_answer_text || q.answer || '').trim();
   let newCorrectKey = q.correct_option;
+
+  keys.forEach(k => {
+    newQ[`option_${k.toLowerCase()}`] = '';
+  });
+
   shuffled.forEach((pair, i) => {
     const newKey = keys[i];
     newQ[`option_${newKey.toLowerCase()}`] = pair.text;
-    if (pair.originalKey === q.correct_option) newCorrectKey = newKey;
+    if (pair.originalKey === origKey) {
+      newCorrectKey = newKey;
+    } else if (origAnswerText && String(pair.text).trim() === origAnswerText) {
+      newCorrectKey = newKey;
+    }
   });
+
   newQ.correct_option = newCorrectKey;
+  if (!newQ.correct_answer_text && newQ[`option_${newCorrectKey.toLowerCase()}`]) {
+    newQ.correct_answer_text = newQ[`option_${newCorrectKey.toLowerCase()}`];
+  }
   return newQ;
 }
 
@@ -907,14 +714,12 @@ export default function PracticeScreen({ sessionPayload, onExit }) {
   const currentSelection = selectedAnswers[currentQuestion.id];
   const isCurrentRevealed = revealedAnswers[currentQuestion.id];
 
-  const optionMapping = currentQuestion.shuffledOptions?.length
-    ? currentQuestion.shuffledOptions
-    : [
+  const optionMapping = [
         { key: 'A', text: currentQuestion.option_a },
         { key: 'B', text: currentQuestion.option_b },
         { key: 'C', text: currentQuestion.option_c },
         { key: 'D', text: currentQuestion.option_d },
-      ].filter(opt => opt.text != null);
+      ].filter(opt => opt.text != null && String(opt.text).trim() !== '');
 
   if (resultPayload) {
     return (
@@ -1237,7 +1042,7 @@ const styles = StyleSheet.create({
   timerTextUrgent: { color: '#dc2626' },
   practiceBox: { paddingVertical: 6, paddingHorizontal: 12, backgroundColor: '#eff6ff', borderRadius: 6 },
   practiceText: { fontSize: 13, fontWeight: '700', color: '#2563eb' },
-  subjectTabBar: { backgroundColor: '#1e293b', borderBottomWidth: 1, borderColor: '#334155' },
+  subjectTabBar: { backgroundColor: '#1e293b', borderBottomWidth: 1, borderColor: '#334155', height: 58, flexGrow: 0, flexShrink: 0 },
   subjectTabBarContent: { paddingHorizontal: 10, paddingVertical: 6, gap: 8, flexDirection: 'row', alignItems: 'center' },
   subjectTab: { paddingHorizontal: 14, paddingVertical: 6, borderRadius: 20, backgroundColor: '#334155', alignItems: 'center', minWidth: 60 },
   subjectTabActive: { backgroundColor: '#2563eb' },

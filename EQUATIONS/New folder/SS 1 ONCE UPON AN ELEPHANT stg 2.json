@@ -1,0 +1,2588 @@
+{
+  "strataMetadata": {
+    "label": "SS 1 Literature in English — Complete Question Set (200 Questions)",
+    "renderedAt": "2026-10-08",
+    "edition": "ED1",
+    "gradeLevel": "SS 1",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "SS 1",
+    "strataId": "strata_2",
+    "displayName": "STRATA 2",
+    "durationMinutes": 20,
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_2",
+        "name": "Bundle 1",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 10,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_ele_001",
+                "text": "Who is the playwright of the dramatic text 'Once Upon an Elephant'?",
+                "options": [
+                  "Femi Osofisan",
+                  "Bosede Ademilua-Afolayan",
+                  "Wole Soyinka",
+                  "Ola Rotimi"
+                ],
+                "answer": "B",
+                "explanation": "'Once Upon an Elephant' was written by the Nigerian dramatist and scholar Bosede Ademilua-Afolayan."
+              },
+              {
+                "id": "b1_ele_002",
+                "text": "What is the birth or personal name of the usurper king, Ajanaku?",
+                "options": [
+                  "Odejimi",
+                  "Olaniyonu",
+                  "Odekunle",
+                  "Akinjobi"
+                ],
+                "answer": "B",
+                "explanation": "Before assuming the monarchical praise-name Ajanaku, the character is personally named Olaniyonu."
+              },
+              {
+                "id": "b1_ele_003",
+                "text": "Who is the legitimate reigning monarch whose mysterious affliction creates the leadership vacuum?",
+                "options": [
+                  "Oba Ogundele",
+                  "Oba Akinjobi",
+                  "Oba Ajasa",
+                  "Oba Odejimi"
+                ],
+                "answer": "B",
+                "explanation": "Oba Akinjobi is the legitimate king who is incapacitated by a mysterious ailment engineered by palace conspirators."
+              },
+              {
+                "id": "b1_ele_004",
+                "text": "What role does Serubawon occupy in the traditional administration of the kingdom?",
+                "options": [
+                  "The Chief Priest of Ogun",
+                  "The Chief Kingmaker and senior council member",
+                  "The Captain of the Royal Guards",
+                  "The Palace Praise-singer"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon is the influential chief kingmaker whose political machinations subvert traditional succession."
+              },
+              {
+                "id": "b1_ele_005",
+                "text": "What sacred traditional coronation rites does Serubawon perform to enthrone Ajanaku?",
+                "options": [
+                  "The Ijedodo ritual",
+                  "The Olubori rites",
+                  "The Oro rites",
+                  "The Agemo ceremonies"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon manipulates traditional protocols by performing the sacred Olubori rites to crown Olaniyonu as king."
+              },
+              {
+                "id": "b1_ele_006",
+                "text": "Who is the steadfast chief that openly opposes the fraudulent enthronement of Ajanaku?",
+                "options": [
+                  "Ajasa",
+                  "Odejimi",
+                  "Serubawon",
+                  "Ogundele"
+                ],
+                "answer": "B",
+                "explanation": "Chief Odejimi steadfastly refuses to compromise, standing for traditional legitimacy and moral integrity."
+              },
+              {
+                "id": "b1_ele_007",
+                "text": "Who is the wife of Chief Odejimi?",
+                "options": [
+                  "Demoke",
+                  "Iyale",
+                  "Omoyeni",
+                  "Desola"
+                ],
+                "answer": "B",
+                "explanation": "Iyale is the devoted wife of Chief Odejimi and mother to Odekunle."
+              },
+              {
+                "id": "b1_ele_008",
+                "text": "Who is the wife of Serubawon and mother of Desola?",
+                "options": [
+                  "Iyale",
+                  "Demoke",
+                  "Omoyeni",
+                  "Yosola"
+                ],
+                "answer": "B",
+                "explanation": "Demoke is the wife of Serubawon who was also instrumental in past palace intrigues."
+              },
+              {
+                "id": "b1_ele_009",
+                "text": "Who is Iya Agba within the royal and historical framework of the kingdom?",
+                "options": [
+                  "The market queen mother",
+                  "The senior queen and eldest wife of the former monarch",
+                  "The chief priestess of the earth shrine",
+                  "Serubawon's estranged sister"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba is the venerable senior queen of the late king, possessing deep memory of ancestral customs."
+              },
+              {
+                "id": "b1_ele_010",
+                "text": "What malicious allegation did Serubawon and Demoke orchestrate against Iya Agba years before?",
+                "options": [
+                  "Stealing palace treasures",
+                  "Adultery and infidelity to the king",
+                  "Practicing witchcraft to kill the royal prince",
+                  "Poisoning communal wells"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon and Demoke framed Iya Agba for adultery, resulting in her humiliating expulsion from the royal palace."
+              },
+              {
+                "id": "b1_ele_011",
+                "text": "Who is the young hunter betrothed to Desola?",
+                "options": [
+                  "Delani",
+                  "Odekunle",
+                  "Dele",
+                  "Yele"
+                ],
+                "answer": "B",
+                "explanation": "Odekunle, son of Chief Odejimi and Iyale, is the betrothed lover of Desola."
+              },
+              {
+                "id": "b1_ele_012",
+                "text": "Who was the true betrothed lover of Omoyeni before King Ajanaku forcibly claimed her?",
+                "options": [
+                  "Odekunle",
+                  "Delani",
+                  "Lere",
+                  "Odegbami"
+                ],
+                "answer": "B",
+                "explanation": "Delani had completed bride-service for Omoyeni's father, Ajasa, before Ajanaku used monarchical power to seize her."
+              },
+              {
+                "id": "b1_ele_013",
+                "text": "What is the name of Omoyeni's father, who capitulates to royal pressure?",
+                "options": [
+                  "Odejimi",
+                  "Ajasa",
+                  "Serubawon",
+                  "Ogundele"
+                ],
+                "answer": "B",
+                "explanation": "Ajasa is Omoyeni's father who cowers before royal pressure and yields his daughter to Ajanaku."
+              },
+              {
+                "id": "b1_ele_014",
+                "text": "What dark ritual does King Ajanaku pursue to secure absolute power and physical immortality?",
+                "options": [
+                  "The Olubori rites",
+                  "The Ijedodo ritual",
+                  "The Ogun cleansing",
+                  "The Osun festival"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku seeks demonic invulnerability and eternal life through the horrific Ijedodo ritual."
+              },
+              {
+                "id": "b1_ele_015",
+                "text": "How many virgins are demanded as victims under the conditions of the Ijedodo ritual?",
+                "options": [
+                  "Three",
+                  "Six",
+                  "Seven",
+                  "Twelve"
+                ],
+                "answer": "B",
+                "explanation": "The dark covenant demands the sexual defilement and spiritual sacrifice of six virgins across ninety days."
+              },
+              {
+                "id": "b1_ele_016",
+                "text": "Who is ambushed on the bush path and becomes the tragic sixth virgin victim?",
+                "options": [
+                  "Yosola",
+                  "Desola",
+                  "Omoyeni",
+                  "Iyale"
+                ],
+                "answer": "B",
+                "explanation": "Desola, Serubawon's only beloved daughter, is seized on the pathway as the final victim."
+              },
+              {
+                "id": "b1_ele_017",
+                "text": "What fatal condition befalls the young women violated in the Ijedodo ritual?",
+                "options": [
+                  "They become mute palace handmaidens.",
+                  "They suffer a wasting illness and gradually die.",
+                  "They are blinded and cast into the forest.",
+                  "They are executed immediately in the shrine."
+                ],
+                "answer": "B",
+                "explanation": "The ritual siphons their life force, causing them to wither away in agony and die."
+              },
+              {
+                "id": "b1_ele_018",
+                "text": "Who is Desola's companion when she leaves the compound to meet Odekunle?",
+                "options": [
+                  "Omoyeni",
+                  "Yosola",
+                  "Iyale",
+                  "Demoke"
+                ],
+                "answer": "B",
+                "explanation": "Yosola is Desola's trusted confidante who accompanies her on her secret rendezvous."
+              },
+              {
+                "id": "b1_ele_019",
+                "text": "What startling biological truth does Iya Agba reveal about Ajanaku's paternity?",
+                "options": [
+                  "He is the legitimate son of late King Akinjobi.",
+                  "He is Serubawon's illegitimate son from an adulterous affair with Adebisi.",
+                  "He is an orphan child found in the shrine.",
+                  "He is the biological son of Chief Odejimi."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba reveals that Serubawon fathered Ajanaku out of wedlock with Adebisi, explaining his desperate scheme to crown him."
+              },
+              {
+                "id": "b1_ele_020",
+                "text": "How many scenes comprise the complete dramatic structure of 'Once Upon an Elephant'?",
+                "options": [
+                  "Ten scenes",
+                  "Fourteen scenes",
+                  "Twelve scenes",
+                  "Sixteen scenes"
+                ],
+                "answer": "B",
+                "explanation": "The play unfolds across a unified dramatic arc composed of fourteen sequential scenes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b2_b2",
+        "strataId": "strata_2",
+        "name": "Bundle 2: Motifs, Symbolism & Folklore (Questions 21 - 40)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_ele_021",
+                "text": "What does the titular 'Elephant' (Ajanaku/Erin) symbolize in the socio-political allegory?",
+                "options": [
+                  "Agrarian fertility and rainfall",
+                  "Heavy, destructive despotism and unbridled political tyranny",
+                  "Traditional spiritual enlightenment",
+                  "The commercial wealth of ivory trading"
+                ],
+                "answer": "B",
+                "explanation": "The elephant represents oppressive autocracy, military dictatorship, and rulers who crush the populace."
+              },
+              {
+                "id": "b2_ele_022",
+                "text": "Which traditional Yoruba trickster archetype does Chief Serubawon personify?",
+                "options": [
+                  "The Lion (Kiniun)",
+                  "The Tortoise (Ijapa)",
+                  "The Dog (Aja)",
+                  "The Falcon (Awodi)"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon embodies Ijapa, the manipulative trickster who orchestrates schemes and lures giants to destruction."
+              },
+              {
+                "id": "b2_ele_023",
+                "text": "Whose celebrated Yoruba oral poem provided key creative inspiration for the dramatist?",
+                "options": [
+                  "J.P. Clark's 'Night Rain'",
+                  "Adeboye Babalola's 'Salute to the Elephant'",
+                  "Gabriel Okara's 'Piano and Drums'",
+                  "Wole Soyinka's 'Idanre'"
+                ],
+                "answer": "B",
+                "explanation": "Ademilua-Afolayan was inspired by Adeboye Babalola's celebrated rendition of the Yoruba oral chant 'Salute to the Elephant'."
+              },
+              {
+                "id": "b2_ele_024",
+                "text": "What does the classical Yoruba proverb 'Ajanaku kọja mo ri nkan firi' emphasize in the play?",
+                "options": [
+                  "A fleeting glimpse is insufficient to comprehend the immense weight of the elephant.",
+                  "Hunters must never walk in pairs during night hunts.",
+                  "Small animals must flee whenever large drums are beaten.",
+                  "The king's crown is crafted from solid gold."
+                ],
+                "answer": "A",
+                "explanation": "The proverb denotes that the elephant's towering magnitude commands total, unavoidable attention."
+              },
+              {
+                "id": "b2_ele_025",
+                "text": "What does the folktale song 'Erin karele o wa joba' dramatize when sung by Iya Agba?",
+                "options": [
+                  "A genuine song of praise for royal valor",
+                  "The tortoise deceptively luring the elephant to a covered pit with promises of a throne",
+                  "A lullaby sung to royal infants",
+                  "A dirge sung during royal burials"
+                ],
+                "answer": "B",
+                "explanation": "The chant recalls the myth where the tortoise flatters the proud elephant to walk into a concealed death pit."
+              },
+              {
+                "id": "b2_ele_026",
+                "text": "What does the covered pit draped in luxurious cloth represent allegorically?",
+                "options": [
+                  "A well-built granary for food storage",
+                  "The perilous abyss of hubris and deceptive court sycophancy",
+                  "A secret armory built by hunters",
+                  "A sacred ancestral pool"
+                ],
+                "answer": "B",
+                "explanation": "The disguised pit represents the dangerous trap set by flattery that ensnares conceited rulers."
+              },
+              {
+                "id": "b2_ele_027",
+                "text": "Which hunter alongside Odejimi maintains unwavering integrity against palace corruption?",
+                "options": [
+                  "Odegbami",
+                  "Delani",
+                  "Yele",
+                  "Dele"
+                ],
+                "answer": "A",
+                "explanation": "Odegbami stands as a resolute hunter loyal to custom and opposed to Serubawon's unlawful designs."
+              },
+              {
+                "id": "b2_ele_028",
+                "text": "What is the primary literary genre of 'Once Upon an Elephant'?",
+                "options": [
+                  "Pastoral romantic comedy",
+                  "Political satirical drama",
+                  "Melodramatic domestic farce",
+                  "Biographical chronicle"
+                ],
+                "answer": "B",
+                "explanation": "The play is a biting political satire exposing governance decay, autocracy, and societal complicity."
+              },
+              {
+                "id": "b2_ele_029",
+                "text": "How does the play depict the traditional African worldview regarding the relationship between the ruler and the land?",
+                "options": [
+                  "The monarch's private conduct has no connection to nature.",
+                  "A wicked or illegitimate ruler brings spiritual defilement, drought, and sickness upon the entire realm.",
+                  "The gods favor any ruler who possesses the strongest army.",
+                  "Royal authority supersedes cosmic and natural laws."
+                ],
+                "answer": "B",
+                "explanation": "In African cosmologies, the moral rectitude of the sovereign is organically tied to the land's well-being and health."
+              },
+              {
+                "id": "b2_ele_030",
+                "text": "What does the Hunters' Guild represent in the societal structure of the kingdom?",
+                "options": [
+                  "A commercial meat trading syndicate",
+                  "The communal defense force, security vanguard, and champions of physical bravery",
+                  "A fringe religious cult without civic duties",
+                  "Servants dedicated to palace domestic labor"
+                ],
+                "answer": "B",
+                "explanation": "The hunters form the warrior backbone and defenders of societal boundaries and communal justice."
+              },
+              {
+                "id": "b2_ele_031",
+                "text": "What tragic irony engulfs Chief Serubawon regarding the Ijedodo virgin sacrifice?",
+                "options": [
+                  "He loses his palace title before the ritual concludes.",
+                  "His own daughter Desola becomes the sixth victim of the horrific ritual he helped enable.",
+                  "The gods turn him into an elephant.",
+                  "His co-conspirators banish him from the town council."
+                ],
+                "answer": "B",
+                "explanation": "In poetic justice, Serubawon's treasured daughter becomes the final sacrificial victim of his tyrannical creation."
+              },
+              {
+                "id": "b2_ele_032",
+                "text": "What is King Ajanaku's principal tragic flaw (hamartia)?",
+                "options": [
+                  "Indecisiveness and fear of battle",
+                  "Uncontrollable hubris, megalomania, and lust for divine immortality",
+                  "Excessive mercy toward political traitors",
+                  "Reckless squandering of state wealth on feasts"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku is undone by overwhelming pride, intoxication with power, and the delusion of living forever."
+              },
+              {
+                "id": "b2_ele_033",
+                "text": "How does Ajanaku rule on the land dispute brought before him by two peasant women?",
+                "options": [
+                  "He grants the land to the poorer woman.",
+                  "He confiscates the land for the palace and himself.",
+                  "He orders the elders to divide the parcel equally.",
+                  "He gives the land to Chief Serubawon."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku displays rapacious greed by appropriating the disputed land for his own personal domain."
+              },
+              {
+                "id": "b2_ele_034",
+                "text": "What does Ajanaku do when emissaries from an afflicted neighboring settlement come pleading for aid?",
+                "options": [
+                  "He provides grains from the royal storehouses.",
+                  "He mocks their misery and imposes steeper tribute requirements upon them.",
+                  "He deploys the royal guards to defend their boundaries.",
+                  "He steps down from his throne in sympathy."
+                ],
+                "answer": "B",
+                "explanation": "He exhibits callous disdain, rejecting their pleas and demanding further extortionate levies."
+              },
+              {
+                "id": "b2_ele_035",
+                "text": "Whom does Omoyeni name as the true father of the child in her womb?",
+                "options": [
+                  "King Ajanaku",
+                  "Delani",
+                  "Odekunle",
+                  "Serubawon"
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni reveals that her betrothed lover Delani fathered the baby, invalidating Ajanaku's claim."
+              },
+              {
+                "id": "b2_ele_036",
+                "text": "Who provides sanctuary, emotional strength, and traditional midwifery to Omoyeni?",
+                "options": [
+                  "Demoke",
+                  "Iya Agba",
+                  "Yosola",
+                  "Serubawon"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba shelters Omoyeni in her cottage and safely delivers the child away from palace malice."
+              },
+              {
+                "id": "b2_ele_037",
+                "text": "How does Chief Serubawon die at the climax of the play?",
+                "options": [
+                  "He is shot by Odekunle with an enchanted arrow.",
+                  "He commits suicide after the full revelation of his incestuous and treasonous misdeeds.",
+                  "He is trampled to death by an actual elephant.",
+                  "He dies in his sleep of an unknown disease."
+                ],
+                "answer": "B",
+                "explanation": "Shattered by guilt, public exposure, and his daughter's violation, Serubawon ends his own life."
+              },
+              {
+                "id": "b2_ele_038",
+                "text": "During which communal festival is Ajanaku's metaphysical power neutralized?",
+                "options": [
+                  "The New Yam Festival",
+                  "The Jobele Festival",
+                  "The Ogun Cleansing Rites",
+                  "The Egungun Masquerade"
+                ],
+                "answer": "B",
+                "explanation": "The counter-ritual is executed during the public Jobele festival, breaking Ajanaku's dark hold."
+              },
+              {
+                "id": "b2_ele_039",
+                "text": "What physical talisman is employed to sever Ajanaku's ritual power and heal Desola?",
+                "options": [
+                  "A sacred cowrie gourd",
+                  "A consecrated red cloth wrapped around his neck accompanied by Desola's embrace",
+                  "An iron broadsword quenched in palm wine",
+                  "A beaded leather wristband"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba directs Odekunle to bind Ajanaku with the charmed red cloth as Desola embraces him to reverse the curse."
+              },
+              {
+                "id": "b2_ele_040",
+                "text": "What core message does the play deliver regarding tyrannical governance?",
+                "options": [
+                  "Absolute oppression can never be dismantled once established.",
+                  "No matter how imposing a tyrant becomes, collective resolve and moral truth will bring about his downfall.",
+                  "Communities must submit passively to authoritarian rulers.",
+                  "Only external foreign armies can liberate an oppressed kingdom."
+                ],
+                "answer": "B",
+                "explanation": "The drama proves that hubristic despotism inevitably falls when a community unites with courage and ancestral truth."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b3_b3",
+        "strataId": "strata_2",
+        "name": "Bundle 3: Plot Nuances & Dialogue Dynamics (Questions 41 - 60)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_ele_041",
+                "text": "In Scene 1, what reason does Chief Serubawon give for hastening the coronation of Olaniyonu?",
+                "options": [
+                  "An invading army is at the city gates.",
+                  "The throne must not remain vacant while the king lies hopelessly incapacitated.",
+                  "The ancestors appeared to him in a direct daylight vision.",
+                  "The farmers refused to harvest crops without an active monarch."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon uses the king's persistent incapacitation to create a false emergency, pushing through the coronation."
+              },
+              {
+                "id": "b3_ele_042",
+                "text": "How does Odejimi characterize Serubawon's sudden coronation plans in Scene 1?",
+                "options": [
+                  "A courageous rescue of the kingdom",
+                  "A treacherous, self-serving violation of sacred custom",
+                  "A profitable economic development",
+                  "An honorable fulfillment of ancient treaties"
+                ],
+                "answer": "B",
+                "explanation": "Odejimi denounces the rushed enthronement as an abomination that bypasses customary vetting and legitimacy."
+              },
+              {
+                "id": "b3_ele_043",
+                "text": "What argument does Iyale use when begging Odejimi to attend Ajanaku's coronation?",
+                "options": [
+                  "She wants him to demand higher taxes.",
+                  "She fears the new ruler's wrath will destroy their household if he stays away.",
+                  "She hopes Odekunle will be named royal general.",
+                  "She believes Serubawon is truly acting in good faith."
+                ],
+                "answer": "B",
+                "explanation": "Iyale's plea is driven by self-preservation; she dreads the violent retribution an insecure tyrant visits on dissenters."
+              },
+              {
+                "id": "b3_ele_044",
+                "text": "How does Odejimi respond to his wife's fears of royal retaliation?",
+                "options": [
+                  "He relents and puts on his festive robe.",
+                  "He declares that a man who compromises his conscience to save his neck is already dead.",
+                  "He packs his household goods to escape into exile.",
+                  "He appeals to Serubawon for private pardon."
+                ],
+                "answer": "B",
+                "explanation": "Odejimi asserts that moral compromise and fear are far worse than physical danger, standing on principle."
+              },
+              {
+                "id": "b3_ele_045",
+                "text": "What does Demoke advise Serubawon regarding Chief Odejimi's defiance?",
+                "options": [
+                  "To invite him for a peaceful banquet",
+                  "To watch him carefully and crush his defiance before it infects the populace",
+                  "To surrender the chieftaincy title to him",
+                  "To apologize publicly to the hunter's guild"
+                ],
+                "answer": "B",
+                "explanation": "Demoke displays a ruthless political streak, urging her husband to suppress Odejimi's principled dissent."
+              },
+              {
+                "id": "b3_ele_046",
+                "text": "When Iya Agba appears in the palace in Scene 3, how do the courtiers view her entrance?",
+                "options": [
+                  "With joy and musical celebration",
+                  "With nervous shock, fear, and superstitious unease",
+                  "With open amusement and laughter",
+                  "With total indifference"
+                ],
+                "answer": "B",
+                "explanation": "Her unannounced return from exile strikes fear into those who engineered her banishment."
+              },
+              {
+                "id": "b3_ele_047",
+                "text": "What metaphor does Iya Agba use to describe Ajanaku's inflated majesty?",
+                "options": [
+                  "A deep well that never dries up",
+                  "A clay pot painted to look like bronze that will crack under fire",
+                  "A lion that hunts only at dusk",
+                  "An iron mountain immovable by winds"
+                ],
+                "answer": "B",
+                "explanation": "She compares his grandeur to a brittle clay pot masquerading as enduring bronze, destined to shatter."
+              },
+              {
+                "id": "b3_ele_048",
+                "text": "Why does Ajanaku refuse to execute Iya Agba on the spot when she defies him?",
+                "options": [
+                  "He respects her ancient wisdom.",
+                  "He fears shedding royal blood directly in the courtyard and dismisses her as a harmless madwoman.",
+                  "Serubawon begs him to spare her life.",
+                  "The palace guards refuse to touch her."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku conceals his inner superstitious dread by feigning contempt, brushing her off as an inconsequential lunatic."
+              },
+              {
+                "id": "b3_ele_049",
+                "text": "Where do Odekunle and Desola arrange to meet away from parental scrutiny?",
+                "options": [
+                  "In the royal granary",
+                  "Along the secluded bush path near the stream",
+                  "Inside the shrine of Sango",
+                  "At the central market stalls"
+                ],
+                "answer": "B",
+                "explanation": "The young lovers meet along the quiet bush path to avoid the political animosity separating their families."
+              },
+              {
+                "id": "b3_ele_050",
+                "text": "What misgivings does Desola share with Odekunle during their meeting?",
+                "options": [
+                  "She wishes to marry a city merchant.",
+                  "She feels a deep premonition of looming doom and fears her father's political ambitions.",
+                  "She dislikes Odekunle's hunting duties.",
+                  "She wants to leave her mother's household permanently."
+                ],
+                "answer": "B",
+                "explanation": "Desola expresses deep anxiety about her father's dangerous political games and senses impending misfortune."
+              },
+              {
+                "id": "b3_ele_051",
+                "text": "How is Odekunle incapacitated when King Ajanaku and his thugs ambush them?",
+                "options": [
+                  "He is shot with a poisoned arrow from behind.",
+                  "He is blindsided, overpowered by superior numbers, and beaten unconscious.",
+                  "He flees the scene in terror.",
+                  "He is restrained by magical paralysis."
+                ],
+                "answer": "B",
+                "explanation": "Odekunle fights to shield Desola but is overwhelmed and battered senseless by Ajanaku's henchmen."
+              },
+              {
+                "id": "b3_ele_052",
+                "text": "What physical evidence does Odekunle present when he recounts the assault to his friends?",
+                "options": [
+                  "A torn royal tunic",
+                  "Bruised limbs, cuts, and Desola's dropped bead necklace",
+                  "A dropped royal flywhisk",
+                  "A broken hunter's bow"
+                ],
+                "answer": "B",
+                "explanation": "Odekunle shows his wounds and Desola's broken ornaments, confirming the violent abduction."
+              },
+              {
+                "id": "b3_ele_053",
+                "text": "Who are Odekunle's hunter comrades who challenge his account of the skirmish?",
+                "options": [
+                  "Odegbami, Serubawon, and Ajasa",
+                  "Yele, Lere, and Dele",
+                  "Delani, Akinjobi, and Olaniyonu",
+                  "Ogundele, Demoke, and Iyale"
+                ],
+                "answer": "B",
+                "explanation": "Yele, Lere, and Dele are Odekunle's peers in the hunting guild who interrogate his account."
+              },
+              {
+                "id": "b3_ele_054",
+                "text": "What makes the hunters reluctant to march against the palace immediately?",
+                "options": [
+                  "They lack weapons and charms.",
+                  "Ajanaku is the consecrated wearer of the crown, and regicide carries terrible ancestral consequences.",
+                  "They support Ajanaku's land reforms.",
+                  "They believe Desola eloped willingly."
+                ],
+                "answer": "B",
+                "explanation": "Direct armed rebellion against a consecrated monarch carries severe spiritual and societal penalties under custom."
+              },
+              {
+                "id": "b3_ele_055",
+                "text": "How does Demoke react when Desola is brought home unconscious and bleeding?",
+                "options": [
+                  "She blames Desola for wandering into the bush.",
+                  "She wails in anguish, cursing the unknown predators who harmed her child.",
+                  "She immediately accuses Iya Agba of witchcraft.",
+                  "She demands that Serubawon celebrate the event."
+                ],
+                "answer": "B",
+                "explanation": "Demoke breaks down in grief, unaware that her own husband's political pawn committed the atrocity."
+              },
+              {
+                "id": "b3_ele_056",
+                "text": "What dark realization strikes Serubawon when he examines Desola's physical trauma?",
+                "options": [
+                  "She was bitten by a venomous viper.",
+                  "Her injuries match the horrific symptoms of Ajanaku's Ijedodo virgin ritual.",
+                  "She contracted a contagious epidemic.",
+                  "She was beaten by rival market maidens."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon recognizes the horrific physical signature of the very ritual he helped procure for Ajanaku."
+              },
+              {
+                "id": "b3_ele_057",
+                "text": "What does Serubawon do when he realizes Ajanaku violated his daughter?",
+                "options": [
+                  "He confronts Ajanaku with an army of palace guards.",
+                  "He sinks into quiet terror, realizing he cannot openly condemn his creature without exposing himself.",
+                  "He banishes Demoke from his home.",
+                  "He resigns his chieftaincy post immediately."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon is caught in a trap of his own making: exposing Ajanaku means exposing his own treason and complicity."
+              },
+              {
+                "id": "b3_ele_058",
+                "text": "Why does Iyale visit Iya Agba's forest dwelling?",
+                "options": [
+                  "To collect medicinal herbs for Odejimi's cough",
+                  "To seek spiritual intervention and healing for the dying Desola",
+                  "To purchase cowrie beads for a market trade",
+                  "To warn her of royal assassins"
+                ],
+                "answer": "B",
+                "explanation": "Knowing orthodox remedies are futile, Iyale turns to Iya Agba's esoteric knowledge to save Desola."
+              },
+              {
+                "id": "b3_ele_059",
+                "text": "What condition does Iya Agba set before agreeing to intervene on Desola's behalf?",
+                "options": [
+                  "A payment of forty bags of cowries",
+                  "Total truth, full disclosure of all past crimes, and genuine repentance from the conspirators",
+                  "The immediate execution of Chief Serubawon",
+                  "That Desola become a lifelong shrine devotee"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba insists that spiritual healing requires unmasking every hidden truth and confessing past guilt."
+              },
+              {
+                "id": "b3_ele_060",
+                "text": "What does Iya Agba reveal about Adebisi's past in connection to Serubawon?",
+                "options": [
+                  "She was a royal princess who fled into the savanna.",
+                  "She was the woman Serubawon secretly impregnated while married to Demoke, giving birth to Olaniyonu.",
+                  "She was the herbalist who poisoned the legitimate king.",
+                  "She was Iya Agba's younger sister."
+                ],
+                "answer": "B",
+                "explanation": "Adebisi was the mistress with whom Serubawon had Olaniyonu, making Ajanaku and Desola paternal half-siblings."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b4_b4",
+        "strataId": "strata_2",
+        "name": "Bundle 4: Themes, Conflicts & Irony (Questions 61 - 80)",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_ele_061",
+                "text": "What horrifying moral crime is committed through Ajanaku's assault on Desola?",
+                "options": [
+                  "Fratricide",
+                  "Unwitting incest between paternal half-siblings",
+                  "Matricide",
+                  "Treason against foreign ambassadors"
+                ],
+                "answer": "B",
+                "explanation": "Because Serubawon fathered both Ajanaku and Desola, the assault represents horrific incest, compounding the ritual atrocity."
+              },
+              {
+                "id": "b4_ele_062",
+                "text": "How does the revelation of incest affect Chief Serubawon's psychological state?",
+                "options": [
+                  "He dismisses it as a harmless coincidence.",
+                  "It drives him into boundless horror, psychological collapse, and suicidal despair.",
+                  "He blames his wife Demoke for keeping it secret.",
+                  "He plots to poison Iya Agba immediately."
+                ],
+                "answer": "B",
+                "explanation": "The realization that his political machinations led his son to violate his daughter shatters Serubawon's psyche."
+              },
+              {
+                "id": "b4_ele_063",
+                "text": "What role does Delani play in the thematic critique of royal entitlement?",
+                "options": [
+                  "He shows that commoners can easily buy royal titles.",
+                  "He embodies the oppressed subject whose rightful happiness is hijacked by monarchical greed.",
+                  "He proves that hunters are naturally treacherous.",
+                  "He acts as Ajanaku's chief tax collector."
+                ],
+                "answer": "B",
+                "explanation": "Delani's loss of Omoyeni demonstrates how ordinary citizens are stripped of dignity and happiness by predatory rulers."
+              },
+              {
+                "id": "b4_ele_064",
+                "text": "Why does Omoyeni resist Ajanaku's advances despite living in the royal palace?",
+                "options": [
+                  "She wishes to marry Chief Odejimi.",
+                  "Her heart remains bound to Delani, and she views Ajanaku as a violent oppressor.",
+                  "She wants to become the supreme kingmaker.",
+                  "She refuses to wear traditional royal robes."
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni views Ajanaku with contempt, keeping her love and loyalty anchored to Delani."
+              },
+              {
+                "id": "b4_ele_065",
+                "text": "How does King Ajanaku respond to Omoyeni's emotional coldness?",
+                "options": [
+                  "He releases her to return to her father's home.",
+                  "He becomes increasingly insecure, volatile, and demanding, treating her as a possession.",
+                  "He takes four additional wives to make her jealous.",
+                  "He abdicates his throne to prove his devotion."
+                ],
+                "answer": "B",
+                "explanation": "Wounded vanity drives Ajanaku to become more tyrannical, treating her resistance as defiance against his absolute power."
+              },
+              {
+                "id": "b4_ele_066",
+                "text": "What does Omoyeni do when she realizes she is carrying Delani's child?",
+                "options": [
+                  "She attempts to terminate the pregnancy.",
+                  "She flees to Iya Agba's sanctuary to protect the unborn life from the palace.",
+                  "She claims Ajanaku is the father to secure wealth for the baby.",
+                  "She leaves the kingdom with her father Ajasa."
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni seeks safety with Iya Agba, safeguarding the child from palace plots."
+              },
+              {
+                "id": "b4_ele_067",
+                "text": "What major thematic commentary does the play offer on institutional sycophancy?",
+                "options": [
+                  "Sycophancy ensures lasting peace and community stability.",
+                  "Sycophancy blinds despots to reality, accelerates administrative decay, and ends in ruin.",
+                  "Praising a monarch constantly is a citizen's highest moral duty.",
+                  "Courtiers should always support whatever ruler seizes power."
+                ],
+                "answer": "B",
+                "explanation": "The play shows that flattering despots breeds unchecked pride and shields them from the reality of their impending doom."
+              },
+              {
+                "id": "b4_ele_068",
+                "text": "How is dramatic irony sustained throughout Act Two regarding Desola's attacker?",
+                "options": [
+                  "The audience knows Odekunle attacked her, but the characters blame Ajanaku.",
+                  "The audience knows Ajanaku is the perpetrator and Serubawon's son, while Serubawon only discovers it late.",
+                  "The audience believes Desola fell from a palm tree.",
+                  "The characters know the attacker, but the audience remains uninformed."
+                ],
+                "answer": "B",
+                "explanation": "The audience witnesses the dark connections early on, watching with dread as Serubawon slowly realizes his complicity."
+              },
+              {
+                "id": "b4_ele_069",
+                "text": "What does the Jobele festival celebrate in the traditional calendar of the town?",
+                "options": [
+                  "The coronation of the chief hunter",
+                  "Communal renewal, harvest thanksgiving, and cultural solidarity",
+                  "The commemoration of ancestral wars",
+                  "The annual banishment of elders"
+                ],
+                "answer": "B",
+                "explanation": "The Jobele festival is an annual gathering for harvest thanksgiving, communal cohesion, and renewal."
+              },
+              {
+                "id": "b4_ele_070",
+                "text": "Why does Ajanaku insist on appearing in full royal majesty at the Jobele festival?",
+                "options": [
+                  "He wants to announce reduced taxes for the peasants.",
+                  "He intends to display his supposed invincibility and demand total submission from the populace.",
+                  "He plans to surrender his crown to Odekunle.",
+                  "He wishes to reconcile with Chief Odejimi."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku uses the public festival to showcase his absolute authority and demand uncritical worship."
+              },
+              {
+                "id": "b4_ele_071",
+                "text": "What role does the red cloth play in the counter-ritual devised by Iya Agba?",
+                "options": [
+                  "It serves as a royal coronation garment.",
+                  "It is a consecrated talisman that binds and reverses the dark metaphysical power of the Ijedodo covenant.",
+                  "It is a trade commodity brought from foreign merchants.",
+                  "It signals the arrival of the hunters' guild."
+                ],
+                "answer": "B",
+                "explanation": "The red cloth functions as a targeted spiritual antidote that neutralizes the demonic covenant of the virgin sacrifice."
+              },
+              {
+                "id": "b4_ele_072",
+                "text": "Why must Desola physically embrace Ajanaku to complete the counter-ritual?",
+                "options": [
+                  "To beg for his royal mercy",
+                  "To reconnect the stolen life essence back to its rightful owner and break the curse",
+                  "To demonstrate forgiveness in front of the townspeople",
+                  "To distract the palace guards while the hunters draw their weapons"
+                ],
+                "answer": "B",
+                "explanation": "The embrace reclaims the vital essence stolen during the ritual assault, breaking the spell and healing the victim."
+              },
+              {
+                "id": "b4_ele_073",
+                "text": "What happens to King Ajanaku the moment the counter-ritual is executed at the festival?",
+                "options": [
+                  "He transforms into an actual elephant and flees into the savanna.",
+                  "His artificial metaphysical invulnerability shatters, and he collapses in agonizing, helpless ruin.",
+                  "He draws his sword and executes Chief Odejimi.",
+                  "He disappears into thin air."
+                ],
+                "answer": "B",
+                "explanation": "His mystical protection shatters, and the stolen vitality drains away, leaving him broken and helpless."
+              },
+              {
+                "id": "b4_ele_074",
+                "text": "How do the townspeople react when they see Ajanaku fall in the festival square?",
+                "options": [
+                  "They wail and mourn his passing.",
+                  "They break into jubilant celebrations of liberation, recognizing that the tyrant's reign is broken.",
+                  "They attack Chief Odejimi in anger.",
+                  "They flee the town in fear of divine wrath."
+                ],
+                "answer": "B",
+                "explanation": "The populace celebrates with relief, rejoicing that the reign of terror has been broken."
+              },
+              {
+                "id": "b4_ele_075",
+                "text": "What happens to the dying Desola once the counter-ritual is completed?",
+                "options": [
+                  "She dies immediately from exhaustion.",
+                  "Her vital energy is restored, and she regains her physical strength and life.",
+                  "She loses her eyesight permanently.",
+                  "She falls into an eternal coma."
+                ],
+                "answer": "B",
+                "explanation": "Reclaiming her stolen spiritual essence breaks the wasting affliction, restoring Desola to vibrant health."
+              },
+              {
+                "id": "b4_ele_076",
+                "text": "What lesson does Demoke learn from the tragedy that struck her household?",
+                "options": [
+                  "That palace wealth is the only thing worth pursuing",
+                  "That treachery and past conspiracies inevitably rebound to consume one's own children",
+                  "That she should have supported Ajanaku more aggressively",
+                  "That hunters are more dangerous than monarchs"
+                ],
+                "answer": "B",
+                "explanation": "Demoke realizes that framing Iya Agba and helping Serubawon rise through deceit sowed seeds of ruin for her own family."
+              },
+              {
+                "id": "b4_ele_077",
+                "text": "What happens to Oba Akinjobi after the fall of Ajanaku?",
+                "options": [
+                  "He dies and is buried in the forest.",
+                  "His illness lifts with the breaking of the dark spells, restoring legitimate ancestral order.",
+                  "He abdicates and moves to another town.",
+                  "He names Odekunle as the new monarch."
+                ],
+                "answer": "B",
+                "explanation": "The spiritual purification of the realm breaks the demonic affliction holding the legitimate king, restoring order."
+              },
+              {
+                "id": "b4_ele_078",
+                "text": "How does the play resolve the romantic conflict between Delani and Omoyeni?",
+                "options": [
+                  "Delani rejects her because she lived in the palace.",
+                  "Their love is validated, and they are reunited along with their child.",
+                  "Omoyeni is exiled with the baby.",
+                  "Delani leaves the kingdom to join a foreign army."
+                ],
+                "answer": "B",
+                "explanation": "Justice prevails: Delani and Omoyeni are reunited in freedom to raise their child together without palace terror."
+              },
+              {
+                "id": "b4_ele_079",
+                "text": "What future awaits Odekunle and Desola at the conclusion of the play?",
+                "options": [
+                  "They separate due to the family scandals.",
+                  "Their love endures the trial, paving the way for their marriage and healing between the houses.",
+                  "Odekunle leaves the hunters' guild to live as a hermit.",
+                  "Desola becomes a priestess of the earth shrine."
+                ],
+                "answer": "B",
+                "explanation": "With Desola healed and the dark curse lifted, the young lovers look forward to a restored future."
+              },
+              {
+                "id": "b4_ele_080",
+                "text": "Which dramatic movement best captures the ideological tone of 'Once Upon an Elephant'?",
+                "options": [
+                  "Absurdist drama",
+                  "Social realist and satirical indigenous African drama",
+                  "Classical Elizabethan romantic farce",
+                  "Pure existentialist melodrama"
+                ],
+                "answer": "B",
+                "explanation": "The play blends African oral performance traditions with social realism to satirize political corruption and tyranny."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b5_b5",
+        "strataId": "strata_2",
+        "name": "Bundle 5: Social Realism & African Dramaturgy (Questions 81 - 100)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_ele_081",
+                "text": "How does Bosede Ademilua-Afolayan utilize oral performance devices in the text?",
+                "options": [
+                  "By writing exclusively in rhymed English iambic pentameter",
+                  "By incorporating proverbs, dirges, festive chants, incantations, and praise poetry (Oriki)",
+                  "By eliminating all musical instrumentation from the stage",
+                  "By using European chorus conventions exclusively"
+                ],
+                "answer": "B",
+                "explanation": "The play draws on total African theater, integrating proverbs, chanting, drums, and lyrical oral traditions."
+              },
+              {
+                "id": "b5_ele_082",
+                "text": "What do the proverbs spoken by Chief Odejimi reflect about his character?",
+                "options": [
+                  "His desire to confuse the townspeople",
+                  "His deep grounding in ancestral philosophy, wisdom, and unyielding moral truth",
+                  "His cowardice when speaking to rulers",
+                  "His ambition to become the new chief priest"
+                ],
+                "answer": "B",
+                "explanation": "Odejimi's mastery of proverbs reflects his moral depth and grounding in ancestral wisdom and custom."
+              },
+              {
+                "id": "b5_ele_083",
+                "text": "What is the function of the crowd and townspeople in the festival scene?",
+                "options": [
+                  "They act as decorative stage extras without dialogue.",
+                  "They represent the civic body, providing a gauge of public sentiment from fear to triumphant defiance.",
+                  "They represent foreign mercenaries supporting Ajanaku.",
+                  "They serve as comedic relief."
+                ],
+                "answer": "B",
+                "explanation": "The crowd reflects the communal consciousness, illustrating the journey from cowed submission to active resistance."
+              },
+              {
+                "id": "b5_ele_084",
+                "text": "How does the play treat the theme of gender in traditional power structures?",
+                "options": [
+                  "Women are shown as entirely helpless victims who play no part in civic life.",
+                  "Women like Iya Agba and Iyale are central to preserving memory, moral resistance, and spiritual restoration.",
+                  "Women are portrayed as the primary architects of military violence.",
+                  "Women are excluded from all scenes involving traditional customs."
+                ],
+                "answer": "B",
+                "explanation": "The playwright highlights the vital agency of women, positioning them as keepers of truth and catalysts of redemption."
+              },
+              {
+                "id": "b5_ele_085",
+                "text": "What warning does the play provide concerning leaders who divorce power from responsibility?",
+                "options": [
+                  "Such leaders achieve enduring international respect.",
+                  "Power exercised without justice becomes predatory and sows the seeds of its own destruction.",
+                  "Citizens will naturally revere ruthless strength above ethical leadership.",
+                  "Spiritual deities have no concern with human justice."
+                ],
+                "answer": "B",
+                "explanation": "The drama shows that authority detached from justice becomes monstrous and inevitably collapses under its own abuses."
+              },
+              {
+                "id": "b5_ele_086",
+                "text": "What does the sacred crown (*Ade*) symbolize when worn by an illegitimate ruler like Ajanaku?",
+                "options": [
+                  "The absolute forgiveness of all crimes",
+                  "A desecrated symbol of authority that torments the usurper and brings judgment upon the land",
+                  "A guarantee of military victory",
+                  "A commercial asset that can be traded for weapons"
+                ],
+                "answer": "B",
+                "explanation": "On a usurper's brow, the crown is a spiritual burden that mocks his illegitimacy and demands ancestral reckoning."
+              },
+              {
+                "id": "b5_ele_087",
+                "text": "What is the dramatic effect of staging the climax during a festive public celebration like Jobele?",
+                "options": [
+                  "It allows the actors to perform comedic dances.",
+                  "It maximizes theatrical impact by unmasking the tyrant's shame before the entire assembled community.",
+                  "It saves money on costume changes.",
+                  "It keeps the action hidden from the common people."
+                ],
+                "answer": "B",
+                "explanation": "Staging the denouement during a civic festival ensures the tyrant's public unmasking and collective liberation."
+              },
+              {
+                "id": "b5_ele_088",
+                "text": "How does the language of Ajanaku evolve as his power becomes more unhinged?",
+                "options": [
+                  "It becomes increasingly polite and philosophical.",
+                  "It shifts from political persuasion to megalomaniacal, boastful, and dismissive threats.",
+                  "He ceases speaking and communicates only through drumbeats.",
+                  "He speaks entirely in foreign loanwords."
+                ],
+                "answer": "B",
+                "explanation": "His speech shifts into grand, boastful declarations of invincibility, reflecting his slide into tyrannical delusion."
+              },
+              {
+                "id": "b5_ele_089",
+                "text": "What does Serubawon's name literally suggest in Yoruba onomastics?",
+                "options": [
+                  "Bringer of rainfall",
+                  "One who instills fear or terror in others",
+                  "The peaceful farmer",
+                  "The hunter of antelopes"
+                ],
+                "answer": "B",
+                "explanation": "'Serubawon' translates to 'frighten them' or 'instill terror in them,' signaling his intimidating political nature."
+              },
+              {
+                "id": "b5_ele_090",
+                "text": "What does the name 'Ajanaku' mean in Yoruba culture and lore?",
+                "options": [
+                  "The clever hare",
+                  "The mighty Elephant",
+                  "The swift leopard",
+                  "The resilient weaver bird"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku is the traditional poetic name for the elephant, embodying colossal, untamed physical power."
+              },
+              {
+                "id": "b5_ele_091",
+                "text": "What role does the off-stage presence of the incapacitated Oba Akinjobi play in the plot?",
+                "options": [
+                  "He serves as an irrelevant historical detail.",
+                  "He remains a moral reference point, reminding the audience of legitimate order subverted by conspiracy.",
+                  "He orchestrates the assassination of Serubawon from his bed.",
+                  "He represents foreign colonial influence."
+                ],
+                "answer": "B",
+                "explanation": "The bedridden king symbolizes interrupted legitimacy, keeping the necessity of restoration before the audience."
+              },
+              {
+                "id": "b5_ele_092",
+                "text": "How does the play portray the vulnerability of youth under tyrannical regimes?",
+                "options": [
+                  "Youth are completely insulated from political developments.",
+                  "Young people like Desola, Odekunle, and Omoyeni are assaulted, commodified, and sacrificed to elite ambition.",
+                  "Youth are the primary instigators of palace coups.",
+                  "Young characters easily overpower corrupt elders from the opening scene."
+                ],
+                "answer": "B",
+                "explanation": "The youth bear the brunt of autocratic depravity, suffering physical assault, exploitation, and lost innocence."
+              },
+              {
+                "id": "b5_ele_093",
+                "text": "What is the function of drum language in the performance of the play?",
+                "options": [
+                  "To entertain the actors during stage transitions",
+                  "To communicate warnings, herald royal arrivals, punctuate emotional shifts, and invoke ancestral power",
+                  "To replace spoken dialogue completely",
+                  "To mimic modern European military parades"
+                ],
+                "answer": "B",
+                "explanation": "Talking drums serve a rich dramatic function, commenting on the action, signaling danger, and evoking spiritual weight."
+              },
+              {
+                "id": "b5_ele_094",
+                "text": "Why is Chief Odejimi's refusal to attend the coronation an act of extraordinary courage?",
+                "options": [
+                  "Because Ajanaku had already pardoned him",
+                  "Because defying an absolute ruler invites execution, confiscation of goods, and destruction of his family",
+                  "Because his wife commanded him to remain indoors",
+                  "Because he had lost his chieftaincy regalia"
+                ],
+                "answer": "B",
+                "explanation": "Publicly boycotting a despot's enthronement constitutes treason, risking immediate execution and ruin."
+              },
+              {
+                "id": "b5_ele_095",
+                "text": "How does the play handle the concept of 'Ewo' (taboo or spiritual prohibition)?",
+                "options": [
+                  "As a set of harmless superstitions to be discarded by modern leaders",
+                  "As immutable moral and cosmic boundaries that, when broken by greed, trigger catastrophic retribution",
+                  "As rules meant only for slaves and commoners",
+                  "As guidelines that kings can alter at will"
+                ],
+                "answer": "B",
+                "explanation": "Taboos (*Ewo*) represent cosmic laws; violating them through incest and ritual murder triggers cosmic retribution."
+              },
+              {
+                "id": "b5_ele_096",
+                "text": "What contrast is established between the compound of Chief Odejimi and the Royal Palace?",
+                "options": [
+                  "Odejimi's compound is a place of poverty and despair, while the palace is peaceful.",
+                  "Odejimi's home represents integrity, truth, and familial harmony, while the palace is a pit of deceit, fear, and paranoia.",
+                  "Both spaces are identical in moral atmosphere.",
+                  "The palace is empty, while Odejimi's house is overflowing with royal guards."
+                ],
+                "answer": "B",
+                "explanation": "The modest home of Odejimi radiates moral clarity, contrasting sharply with the opulent paranoia of the palace."
+              },
+              {
+                "id": "b5_ele_097",
+                "text": "What does the playwright suggest about the role of ordinary citizens in ending oppression?",
+                "options": [
+                  "Citizens should wait for the gods to strike down oppressors without human effort.",
+                  "Liberation requires moral courage, speaking unvarnished truth, and collective civic action.",
+                  "Citizens should leave their homelands whenever misrule occurs.",
+                  "Citizens should appease tyrants with richer gifts."
+                ],
+                "answer": "B",
+                "explanation": "The play emphasizes human agency: divine and cosmic balance is restored when people stand together against injustice."
+              },
+              {
+                "id": "b5_ele_098",
+                "text": "How does Iya Agba's cottage on the outskirts of the town function dramatically?",
+                "options": [
+                  "As a prison where she is guarded day and night",
+                  "As an alternative sanctuary of historical truth, spiritual healing, and moral clarity away from court corruption",
+                  "As a marketplace stall for selling charms to foreign hunters",
+                  "As an armory for weapons of war"
+                ],
+                "answer": "B",
+                "explanation": "Her cottage acts as a sanctuary of truth and restorative power away from the compromised palace."
+              },
+              {
+                "id": "b5_ele_099",
+                "text": "What does the phrase 'Once Upon an Elephant' itself evoke in the reader's imagination?",
+                "options": [
+                  "A factual history textbook on colonial forestry",
+                  "A fable or parable opening that warns of the rise and fall of monstrous power",
+                  "A light comedy for kindergarten storytelling",
+                  "An instruction manual on big-game hunting"
+                ],
+                "answer": "B",
+                "explanation": "The title uses folktale framing to signal an allegorical fable on the intoxicating nature and fall of tyrannical power."
+              },
+              {
+                "id": "b5_ele_100",
+                "text": "What is the ultimate cathartic impact of the play's conclusion?",
+                "options": [
+                  "It leaves the audience in hopeless existential despair.",
+                  "It delivers moral and spiritual relief as justice is restored, the tyrant falls, and the wounded are healed.",
+                  "It ends in unresolved civil war and total destruction.",
+                  "It celebrates the success of political deceit."
+                ],
+                "answer": "B",
+                "explanation": "The climax provides powerful catharsis: the tyrant's defeat restores order, heals the innocent, and validates moral courage."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b6_b6",
+        "strataId": "strata_2",
+        "name": "Bundle 6: Character Psychology & Moral Choices (Questions 101 - 120)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b6_ele_101",
+                "text": "What internal conflict torments Chief Serubawon after Ajanaku is successfully installed on the throne?",
+                "options": [
+                  "He regrets not crowning himself directly.",
+                  "He realizes that the puppet king he created has grown into an uncontrollable, menacing monster who ignores his counsel.",
+                  "He worries that the British colonial officers will depose him.",
+                  "He fears that Oba Akinjobi has recovered his physical strength."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon realizes too late that his handpicked puppet has transformed into an uncontrollable tyrant."
+              },
+              {
+                "id": "b6_ele_102",
+                "text": "Why does Ajanaku feel an obsessive need to attain physical immortality through the Ijedodo ritual?",
+                "options": [
+                  "He wants to preserve his youth for his wives.",
+                  "Deep insecurity and gnawing terror that his fraudulent usurpation will be overturned by mortality and vengeance.",
+                  "The oracle of Ifa commanded him to rule forever.",
+                  "He wants to lead military conquests for a century."
+                ],
+                "answer": "B",
+                "explanation": "Illegitimate rulers live in constant paranoia; Ajanaku seeks magical immortality to escape the reckoning he knows he deserves."
+              },
+              {
+                "id": "b6_ele_103",
+                "text": "How does Odekunle's character demonstrate the transition from impetuous youth to mature warrior?",
+                "options": [
+                  "By abandoning hunting to become a palace tax collector.",
+                  "By channeling his rage into disciplined alignment with ancestral guidance and courageous action during the counter-ritual.",
+                  "By running away to an adjacent town when Desola is abducted.",
+                  "By challenging his father Chief Odejimi to a wrestling duel."
+                ],
+                "answer": "B",
+                "explanation": "Odekunle matures from a hotheaded youth into a disciplined warrior who follows ancestral direction to liberate his people."
+              },
+              {
+                "id": "b6_ele_104",
+                "text": "What makes Iyale's maternal role crucial in breaking the cycle of catastrophe?",
+                "options": [
+                  "She organizes a violent protest of women against the king's palace.",
+                  "She bridges the divide by putting aside political grudges to seek Iya Agba's healing help for Desola.",
+                  "She shoots King Ajanaku with an enchanted arrow.",
+                  "She convinces Chief Odejimi to flee into self-imposed exile."
+                ],
+                "answer": "B",
+                "explanation": "Iyale rises above factional hostility, bringing the dying daughter of her husband's enemy to Iya Agba for healing."
+              },
+              {
+                "id": "b6_ele_105",
+                "text": "How does Demoke's past complicity in framing Iya Agba mirror the larger political decay of the realm?",
+                "options": [
+                  "It shows that women had complete legal control over royal lands.",
+                  "It reveals how personal malice and deceit by palace insiders subverted righteous leadership long before Ajanaku's reign.",
+                  "It proves that the royal house was impoverished.",
+                  "It demonstrates that traditional justice was always corrupt."
+                ],
+                "answer": "B",
+                "explanation": "Demoke's historical lie shows that Ajanaku's tyranny did not emerge from a vacuum; it grew from years of moral decay among palace elites."
+              },
+              {
+                "id": "b6_ele_106",
+                "text": "What psychological motive drives Ajanaku's forced marriage to Omoyeni?",
+                "options": [
+                  "Genuine romantic devotion and emotional tenderness",
+                  "A desire to exert absolute dominance over all things, treating human beings and love as trophies of royal conquest.",
+                  "A treaty obligation made with Chief Ajasa",
+                  "The spiritual instructions of the Olubori rites"
+                ],
+                "answer": "B",
+                "explanation": "For Ajanaku, claiming Omoyeni is an exercise in domination: an autocrat takes what he wants simply to demonstrate that none can refuse him."
+              },
+              {
+                "id": "b6_ele_107",
+                "text": "Why does Chief Ajasa give his daughter Omoyeni to King Ajanaku despite her prior betrothal to Delani?",
+                "options": [
+                  "He hated Delani's family lineage.",
+                  "Spineless opportunism and fear of monarchical power, prioritizing proximity to royalty over honor and parental duty.",
+                  "Ajanaku gave him half of the kingdom's gold.",
+                  "Omoyeni begged him to allow her into the palace."
+                ],
+                "answer": "B",
+                "explanation": "Ajasa represents the spineless elder who trades his own daughter's happiness to appease power and gain favor."
+              },
+              {
+                "id": "b6_ele_108",
+                "text": "What distinguishes Chief Odejimi's brand of courage from mere recklessness?",
+                "options": [
+                  "He fights only when he has twenty armed hunters beside him.",
+                  "His courage is anchored on moral principle, respect for ancestral legitimacy, and refusal to normalize falsehood.",
+                  "He waits until Ajanaku is asleep before speaking against him.",
+                  "He consults foreign warriors to protect his farm."
+                ],
+                "answer": "B",
+                "explanation": "True courage is rooted in moral clarity; Odejimi stands firm not out of bravado, but out of devotion to truth and justice."
+              },
+              {
+                "id": "b6_ele_109",
+                "text": "How does Iya Agba embody the archetype of the 'Wise Old Woman' in African folklore?",
+                "options": [
+                  "She lives in a golden palace and dictates military campaigns.",
+                  "She retains ancestral memory, understands herbal and metaphysical mysteries, and diagnoses moral sickness.",
+                  "She casts malevolent curses on any traveler who walks near her home.",
+                  "She refuses to speak to anyone who does not bring bags of salt."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba preserves the community's moral memory, dispenses spiritual healing, and exposes the roots of hidden guilt."
+              },
+              {
+                "id": "b6_ele_110",
+                "text": "What does Delani's steadfast devotion to Omoyeni demonstrate amidst prevailing court corruption?",
+                "options": [
+                  "That romantic love is foolish during political struggles",
+                  "That genuine love, fidelity, and moral constancy endure even when assaulted by tyrannical power.",
+                  "That common hunters should never seek wives outside their clan",
+                  "That he was secretly conspiring with the royal guards"
+                ],
+                "answer": "B",
+                "explanation": "Delani's enduring love shines against palace treachery, proving that virtue and affection outlast tyrannical overreach."
+              },
+              {
+                "id": "b6_ele_111",
+                "text": "How does Desola's friendship with Yosola contrast with the relationships among the palace elders?",
+                "options": [
+                  "It is built on commercial transactions and bribes.",
+                  "It is marked by innocence, mutual care, and honesty, contrasting with the suspicion and deceit among the elders.",
+                  "Yosola is secretly plotting to displace Desola.",
+                  "They compete fiercely for the king's attention."
+                ],
+                "answer": "B",
+                "explanation": "The girls' innocent friendship provides a refreshing contrast to the deceit, suspicion, and greed of the court elites."
+              },
+              {
+                "id": "b6_ele_112",
+                "text": "What does Serubawon's suicide signify within the ethical framework of Yoruba tragic drama?",
+                "options": [
+                  "A cowardly escape that clears his name entirely",
+                  "The ultimate, unavoidable consequence of cosmic shame, self-judgment, and traditional reckoning for unforgivable abominations.",
+                  "A religious requirement to ensure his son remains on the throne",
+                  "An accident resulting from a poisoned hunting knife"
+                ],
+                "answer": "B",
+                "explanation": "In classical Yoruba tradition, suicide is the final recourse for a leader whose crimes are too monstrous for society to absorb."
+              },
+              {
+                "id": "b6_ele_113",
+                "text": "Why is King Ajanaku blind to the impending danger at the Jobele festival?",
+                "options": [
+                  "His eyes were afflicted with a physical sickness.",
+                  "His arrogance and belief that the completed Ijedodo ritual made him a god blinded him to mortal and divine reality.",
+                  "Serubawon assured him that no hunters would be present.",
+                  "The townspeople gave him poisoned palm wine."
+                ],
+                "answer": "B",
+                "explanation": "Hubris produces fatal blindness: convinced of his immortality, Ajanaku walks into his own destruction."
+              },
+              {
+                "id": "b6_ele_114",
+                "text": "How does the Hunters' Guild demonstrate the concept of communal solidarity during the crisis?",
+                "options": [
+                  "They abandon the village to hunt in distant provinces.",
+                  "They close ranks, overcome early divisions, and coordinate with ancestral wisdom to liberate the realm.",
+                  "They elect Odekunle as their absolute ruler.",
+                  "They burn down the palace without consulting the elders."
+                ],
+                "answer": "B",
+                "explanation": "The hunters unite and act in concert with ancestral wisdom to dismantle the oppressive regime."
+              },
+              {
+                "id": "b6_ele_115",
+                "text": "What does the character of Adebisi, though absent from the physical stage, represent in the backstory?",
+                "options": [
+                  "A foreign queen who invaded the territory",
+                  "The hidden, buried moral compromises of the past whose unacknowledged fruit (Ajanaku) returns to terrorize the present.",
+                  "The royal priestess who crowned King Akinjobi",
+                  "The market queen who built the town square"
+                ],
+                "answer": "B",
+                "explanation": "Adebisi represents the buried transgressions of the past whose hidden consequences resurface to threaten the entire community."
+              },
+              {
+                "id": "b6_ele_116",
+                "text": "How does Chief Odejimi treat his son Odekunle after the assault on Desola?",
+                "options": [
+                  "He disowns him for losing a fight.",
+                  "He listens with parental empathy, assesses the political danger, and channels his grief toward strategic, moral action.",
+                  "He commands him to marry another maiden immediately.",
+                  "He hands him over to Serubawon's guards."
+                ],
+                "answer": "B",
+                "explanation": "Odejimi listens with fatherly wisdom, transforming his son's raw pain into focused, principled action."
+              },
+              {
+                "id": "b6_ele_117",
+                "text": "Why does Omoyeni refuse to abort the pregnancy despite the dangerous suspicions of the palace?",
+                "options": [
+                  "She wants to blackmail King Ajanaku for land.",
+                  "She cherishes the life fathered by her true lover Delani and refuses to sacrifice innocent blood to court terror.",
+                  "The palace physicians forbade any medicine.",
+                  "Her father Ajasa commanded her to keep the child."
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni views the unborn baby as a sacred pledge of her love for Delani, refusing to destroy it."
+              },
+              {
+                "id": "b6_ele_118",
+                "text": "What is the psychological impact of the Ijedodo ritual on the town's collective morale?",
+                "options": [
+                  "It unites the people in worship of the new king.",
+                  "It casts a suffocating shroud of terror, paranoia, and moral outrage over families with young daughters.",
+                  "It encourages the farmers to clear more land.",
+                  "It attracts foreign merchants to the community market."
+                ],
+                "answer": "B",
+                "explanation": "The disappearance and wasting deaths of young maidens terrorize families and destroy communal security."
+              },
+              {
+                "id": "b6_ele_119",
+                "text": "How does Ajanaku respond when his advisors express caution regarding public anger?",
+                "options": [
+                  "He listens and reduces the tax burden.",
+                  "He ridicules their cowardice, boasts of his terrifying power, and demands harsher crackdowns on dissenters.",
+                  "He steps down from the throne for seven days.",
+                  "He seeks the counsel of Chief Odejimi."
+                ],
+                "answer": "B",
+                "explanation": "The despot dismisses prudent counsel as weakness, responding to public grumbling with harsher repression."
+              },
+              {
+                "id": "b6_ele_120",
+                "text": "What does the restoration of Desola's health signify for the kingdom's future?",
+                "options": [
+                  "That the royal lineage has ended permanently",
+                  "That the wounded, innocent generation can heal and flourish once the roots of evil and oppression are uprooted.",
+                  "That she must marry a new foreign prince",
+                  "That the hunters must surrender their weapons"
+                ],
+                "answer": "B",
+                "explanation": "Desola's recovery proves that the traumas inflicted by tyranny can be healed once corruption is purged."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b7_b7",
+        "strataId": "strata_2",
+        "name": "Bundle 7: Dramatic Structure & Stagecraft (Questions 121 - 140)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b7_ele_121",
+                "text": "What theatrical device opens Scene 1 to establish the rising political crisis?",
+                "options": [
+                  "A cheerful harvest dance by young maidens",
+                  "Solemn, urgent dialogue between conspirators plotting to fill the throne amidst ominous drum beats",
+                  "A comedic argument between market women",
+                  "An elaborate military march across the stage"
+                ],
+                "answer": "B",
+                "explanation": "Scene 1 begins with tense, conspiratorial dialogue set against ominous drumming, establishing the political crisis."
+              },
+              {
+                "id": "b7_ele_122",
+                "text": "How does the playwright use spatial settings (palace vs. forest vs. cottage) to reinforce thematic tensions?",
+                "options": [
+                  "The settings are completely interchangeable with no symbolic meaning.",
+                  "The palace represents corrupt power, the forest represents untamed trial, and Iya Agba's cottage represents restorative truth.",
+                  "All scenes take place exclusively inside Serubawon's compound.",
+                  "The settings represent different modern urban office spaces."
+                ],
+                "answer": "B",
+                "explanation": "The settings reflect the play's themes: the palace is a center of corruption, the forest tests courage, and the cottage shelters wisdom."
+              },
+              {
+                "id": "b7_ele_123",
+                "text": "What dramatic purpose is served by placing Desola's ambush in a secluded bush path rather than the palace?",
+                "options": [
+                  "It saves on stage lighting costs.",
+                  "It highlights the vulnerability of ordinary life outside fortified compounds and the predatory reach of the tyrant.",
+                  "It allows Odekunle to use a bow and arrow.",
+                  "It shows that Desola was trying to leave the kingdom."
+                ],
+                "answer": "B",
+                "explanation": "Setting the ambush on the pathway dramatizes how the tyrant's violence reaches into everyday spaces."
+              },
+              {
+                "id": "b7_ele_124",
+                "text": "How does the dialogue in the Hunters' Guild meeting in Scene 8 generate dramatic tension?",
+                "options": [
+                  "Through silent pantomime without words",
+                  "Through fiery debate between passionate youth demanding immediate rebellion and cautious elders wary of sacrilege",
+                  "By having the hunters recite ancient praise songs for King Ajanaku",
+                  "By having the hunters vote on meat prices"
+                ],
+                "answer": "B",
+                "explanation": "Tension crackles between impatient young hunters demanding action and cautious elders navigating the taboo of regicide."
+              },
+              {
+                "id": "b7_ele_125",
+                "text": "What is the function of the soliloquy delivered by Serubawon when he is alone in his chamber?",
+                "options": [
+                  "To explain his financial investments in cowries",
+                  "To expose his inner torment, gnawing guilt, and realization that his own ambition has destroyed his family",
+                  "To practice his praise poetry for the upcoming festival",
+                  "To mock Chief Odejimi's agricultural harvest"
+                ],
+                "answer": "B",
+                "explanation": "His soliloquy lays bare his unraveling psyche and agony as he realizes his daughter has fallen victim to his own scheme."
+              },
+              {
+                "id": "b7_ele_126",
+                "text": "How does the pacing of the play accelerate between Scene 10 and Scene 14?",
+                "options": [
+                  "The scenes become longer with leisurely philosophical discussions.",
+                  "The scenes become shorter, more urgent, and rapidly alternate between the cottage, the palace, and the festival grounds.",
+                  "The playwright eliminates all characters except Ajanaku.",
+                  "The dialogue shifts into prose chronicles read by a narrator."
+                ],
+                "answer": "B",
+                "explanation": "Rapid scene shifts between parallel locations build dramatic tension as the confrontation approaches."
+              },
+              {
+                "id": "b7_ele_127",
+                "text": "What auditory element is used to signal the beginning of the Jobele festival in Scene 13?",
+                "options": [
+                  "Total stage silence for five minutes",
+                  "Vibrant, complex festival drumming combining praise beats with dissonant ancestral undertones",
+                  "European trumpet flourishes",
+                  "The sound of modern gunfire"
+                ],
+                "answer": "B",
+                "explanation": "Layered festival drumming sets the stage, mixing public celebration with tense undertones of impending confrontation."
+              },
+              {
+                "id": "b7_ele_128",
+                "text": "How is King Ajanaku's costume at the festival designed to reflect his psychological state?",
+                "options": [
+                  "He wears ragged clothing to display false humility.",
+                  "He is dressed in flamboyant, heavy royal regalia, beaded crown, and ornaments that emphasize his hubris and visual bulk.",
+                  "He wears simple hunter's leather garments.",
+                  "He appears in white priestly vestments without beads."
+                ],
+                "answer": "B",
+                "explanation": "His heavy, ostentatious costume visually mirrors his pride and elephantine vanity."
+              },
+              {
+                "id": "b7_ele_129",
+                "text": "What visual contrast is created when the frail, recovering Desola approaches the imposing King Ajanaku?",
+                "options": [
+                  "A contrast between two equally matched warriors",
+                  "A stark visual contrast between innocent vulnerability and towering, monstrous tyranny",
+                  "A comedic encounter between two performers",
+                  "A formal diplomatic exchange between monarchs"
+                ],
+                "answer": "B",
+                "explanation": "The contrast between the frail girl and the hulking despot visually distills the play's moral conflict."
+              },
+              {
+                "id": "b7_ele_130",
+                "text": "What is the dramatic effect of having Odekunle wrap the charmed red cloth around Ajanaku from behind?",
+                "options": [
+                  "It allows Ajanaku to easily push him away.",
+                  "It creates a heart-stopping moment of suspense where mortal danger and ancestral justice hang in the balance.",
+                  "It produces comedic laughter among the crowd.",
+                  "It stops all music and dancing instantly."
+                ],
+                "answer": "B",
+                "explanation": "The sudden binding creates suspense: one misstep by Odekunle could unleash the despot's wrath."
+              },
+              {
+                "id": "b7_ele_131",
+                "text": "How do the stage directions describe Ajanaku's physical collapse during the counter-ritual?",
+                "options": [
+                  "He bows gracefully and exits the stage.",
+                  "He staggers, groans in sudden weakness, grasps his throat, and crashes heavily to the earth like a felled tree.",
+                  "He sits calmly on his throne and closes his eyes.",
+                  "He leaps into the air and runs off-stage."
+                ],
+                "answer": "B",
+                "explanation": "Stage directions portray a dramatic fall: he staggers, clutches his throat, and hits the ground like a collapsing elephant."
+              },
+              {
+                "id": "b7_ele_132",
+                "text": "What role does lighting play during the scenes set inside Iya Agba's cottage?",
+                "options": [
+                  "Blinding neon lights that highlight every modern corner",
+                  "Warm, flickering earthen light that suggests ancient mysteries, safety, and ancestral presence",
+                  "Pitch-black darkness where actors cannot be seen",
+                  "Strobe lights indicating a thunderstorm"
+                ],
+                "answer": "B",
+                "explanation": "Warm, earthen lighting creates an atmosphere of timeless sanctuary and spiritual grounding."
+              },
+              {
+                "id": "b7_ele_133",
+                "text": "How does the playwright maintain thematic unity throughout fourteen scenes?",
+                "options": [
+                  "By having every scene end with the exact same sentence",
+                  "By anchoring every plot thread to the central allegory of unbridled power and the inevitable reckoning of the usurper",
+                  "By featuring only two actors who play multiple roles",
+                  "By confining the entire plot to a single calendar day"
+                ],
+                "answer": "B",
+                "explanation": "Every subplot—the succession, the assault, the young lovers—ties back to the consequences of tyrannical overreach."
+              },
+              {
+                "id": "b7_ele_134",
+                "text": "What is the function of dramatic pauses and silences during Iya Agba's interrogations of the conspirators?",
+                "options": [
+                  "The actors forgot their written dialogue.",
+                  "To allow truth to weigh heavily in the space, compelling the guilty to confront their inner shame.",
+                  "To give the musicians time to tune their instruments",
+                  "To invite audience members to shout answers"
+                ],
+                "answer": "B",
+                "explanation": "Deliberate silences create moral tension, forcing characters to face the weight of their buried deeds."
+              },
+              {
+                "id": "b7_ele_135",
+                "text": "How does the final tableau (the concluding visual arrangement of actors on stage) communicate restoration?",
+                "options": [
+                  "The stage is left completely empty with corpses scattered around.",
+                  "The fallen tyrant lies isolated while the restored lovers, elders, and community gather together in unity and light.",
+                  "Chief Serubawon stands triumphant above the throne.",
+                  "King Ajanaku is carried off on the shoulders of his guards."
+                ],
+                "answer": "B",
+                "explanation": "The closing stage picture isolates the fallen tyrant while surrounding the reunited community in light."
+              },
+              {
+                "id": "b7_ele_136",
+                "text": "What is the linguistic style of the dialogue between Chief Odejimi and Chief Serubawon?",
+                "options": [
+                  "Broken Pidgin English with slapstick jokes",
+                  "Elevated, proverb-rich, and metaphorically dense traditional rhetoric characteristic of Yoruba elder statesmanship",
+                  "Academic legalistic English resembling modern court proceedings",
+                  "Monosyllabic, rapid insults without cultural references"
+                ],
+                "answer": "B",
+                "explanation": "Their exchanges feature dignified, proverb-laden dialogue fitting senior custodians of custom."
+              },
+              {
+                "id": "b7_ele_137",
+                "text": "How does the playwright handle the depiction of physical violence on stage?",
+                "options": [
+                  "With gratuitous, graphic gore that distracts from the political theme",
+                  "Through disciplined, stylized dramatic action that emphasizes moral and psychological impact over mere spectacle",
+                  "By cutting away to recorded modern film clips",
+                  "By having all violence occur off-stage without any visual representation"
+                ],
+                "answer": "B",
+                "explanation": "Action is staged with dramatic discipline, focusing on moral and psychological consequences rather than shock value."
+              },
+              {
+                "id": "b7_ele_138",
+                "text": "What purpose does the recurring motif of the royal bead necklace serve on stage?",
+                "options": [
+                  "It is a prop used strictly for commercial trade.",
+                  "It acts as a physical emblem of royal legitimacy, which becomes tainted when associated with violence and theft.",
+                  "It is used by Odekunle to bind game animals in the forest.",
+                  "It is given to foreign messengers as a passport."
+                ],
+                "answer": "B",
+                "explanation": "Beads symbolize consecrated authority; when worn by a violent usurper, they serve as a visible badge of corruption."
+              },
+              {
+                "id": "b7_ele_139",
+                "text": "How does the Chorus of Market Women in Scene 6 contribute to the play's socio-economic critique?",
+                "options": [
+                  "They sing praises of the king's wonderful tax policies.",
+                  "They voice the biting reality of food scarcity, exorbitant levies, and the daily suffering of commoners under the new regime.",
+                  "They announce that they are moving their stalls to the capital city.",
+                  "They refuse to sell food to anyone except palace guards."
+                ],
+                "answer": "B",
+                "explanation": "The market women voice the economic toll of misrule, highlighting sky-high food prices and extortionate levies."
+              },
+              {
+                "id": "b7_ele_140",
+                "text": "What makes the play's resolution characteristic of traditional African communal reconciliation rather than nihilistic tragedy?",
+                "options": [
+                  "Every single character in the kingdom is executed by the gods.",
+                  "The community does not perish in despair; rather, the evil is excised, life is affirmed, and the moral order is renewed.",
+                  "The tyrant wakes up and laughs, revealing it was all a dream.",
+                  "The kingdom is annexed by an aggressive foreign empire."
+                ],
+                "answer": "B",
+                "explanation": "Rather than collapsing into despair, the drama affirms life, purging the rot and renewing the community."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b8_b8",
+        "strataId": "strata_2",
+        "name": "Bundle 8: Proverbs, Rhetoric & Textual Quotes (Questions 141 - 160)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b8_ele_141",
+                "text": "Complete the proverb used by Iya Agba: 'The bird that dances on the pathway...'",
+                "options": [
+                  "...has built its nest in the sky.",
+                  "...has its drummer beating the rhythms in the nearby bush.",
+                  "...will be caught by the hunter's dog before evening.",
+                  "...knows the secrets of the cloud."
+                ],
+                "answer": "B",
+                "explanation": "The proverb signifies that a boastful puppet king is merely dancing to hidden rhythms drummed by conspirators."
+              },
+              {
+                "id": "b8_ele_142",
+                "text": "What does the proverb 'The stream that forgets its source will surely dry up' warn against in the play?",
+                "options": [
+                  "Digging irrigation wells near the farm",
+                  "A leader who turns his back on ancestral heritage, moral foundations, and traditional limits will meet ruin.",
+                  "Hunters who drink river water during night expeditions",
+                  "Market women who hike the price of fresh fish"
+                ],
+                "answer": "B",
+                "explanation": "It warns that rulers who abandon ancestral principles and moral accountability dry up their own mandate."
+              },
+              {
+                "id": "b8_ele_143",
+                "text": "When Chief Odejimi says, 'You cannot cover the smoke of a burning roof with a hand basket,' what does he mean?",
+                "options": [
+                  "The palace needs better building materials.",
+                  "Monstrous crimes, treason, and usurpation cannot be concealed by superficial ceremonies and lies.",
+                  "Hunters must bring water buckets to every meeting.",
+                  "Serubawon should construct a brick ceiling."
+                ],
+                "answer": "B",
+                "explanation": "The proverb emphasizes that colossal crimes cannot be whitewashed by superficial titles and lies."
+              },
+              {
+                "id": "b8_ele_144",
+                "text": "Who said the following lines: 'Let those who think they are elephants remember that the forest has pits deeper than their bulk'?",
+                "options": [
+                  "Chief Serubawon to Demoke",
+                  "Iya Agba to the palace courtiers",
+                  "Ajanaku to Chief Ajasa",
+                  "Yosola to Desola"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba delivers this warning, reminding courtiers that pride will not save a tyrant from the pit."
+              },
+              {
+                "id": "b8_ele_145",
+                "text": "What is the meaning of the traditional praise chant applied ironically to Ajanaku: 'O pa ma l'eku, o pa ma l'agbo'?",
+                "options": [
+                  "He who farms yams without clearing the grass",
+                  "He who slays without sparing, whose steps shake the earth",
+                  "The generous provider of fish and palm oil",
+                  "The gentle father of all royal orphans"
+                ],
+                "answer": "B",
+                "explanation": "The praise chant highlights frightening, destructive power—a title of terror turned back upon the oppressor."
+              },
+              {
+                "id": "b8_ele_146",
+                "text": "What does the proverb 'When the head is severed, what becomes of the cap?' imply about Serubawon's relationship to Ajanaku?",
+                "options": [
+                  "The weavers must craft new crowns for the prince.",
+                  "When the mastermind of conspiracy falls, all his artificial titles and creations will collapse with him.",
+                  "Hunters should never hunt without leather hats.",
+                  "The king's crown is too heavy for a young man."
+                ],
+                "answer": "B",
+                "explanation": "It emphasizes that artificial creations collapse when their scheming architect is brought down."
+              },
+              {
+                "id": "b8_ele_147",
+                "text": "When Ajanaku boasts, 'I am the boulder that breaks the pestle that dares to pound it,' which figure of speech is he using?",
+                "options": [
+                  "Hyperbolic metaphor reflecting his megalomania",
+                  "Understatement describing his modesty",
+                  "Euphemism regarding his royal diet",
+                  "Oxymoron showing his deep religious faith"
+                ],
+                "answer": "A",
+                "explanation": "Comparing himself to an unbreakable boulder is a bombastic metaphor illustrating his delusions of grandeur."
+              },
+              {
+                "id": "b8_ele_148",
+                "text": "What rhetorical purpose does Iya Agba's deployment of riddles serve when speaking to Chief Serubawon?",
+                "options": [
+                  "She wants to play entertaining games with him.",
+                  "She uses riddles to disarm his political defenses, expose his hidden crimes, and force him to judge himself.",
+                  "She has lost the ability to speak clearly.",
+                  "She wants him to buy her garden produce."
+                ],
+                "answer": "B",
+                "explanation": "Riddles allow her to dismantle his pretenses and guide him to recognize his guilt."
+              },
+              {
+                "id": "b8_ele_149",
+                "text": "Who exclaims, 'The crown on a thief's head does not turn him into an Oba; it only makes the crown an accessory to robbery'?",
+                "options": [
+                  "Demoke",
+                  "Chief Odejimi",
+                  "Ajasa",
+                  "Ajanaku"
+                ],
+                "answer": "B",
+                "explanation": "Odejimi cuts through royal pretensions, pointing out that regalia cannot legitimize a usurper."
+              },
+              {
+                "id": "b8_ele_150",
+                "text": "What traditional concept is embedded in the saying: 'Blood spilled in secret cries out from the pebbles'?",
+                "options": [
+                  "The river contains iron mineral wealth.",
+                  "The moral and cosmic belief that hidden crimes and ritual murders cannot remain concealed forever.",
+                  "Hunters must wash their feet after entering the town.",
+                  "Ancestors require wine offerings every Friday."
+                ],
+                "answer": "B",
+                "explanation": "This Yoruba metaphysical concept asserts that murder leaves an indelible mark that demands cosmic reckoning."
+              },
+              {
+                "id": "b8_ele_151",
+                "text": "How does Chief Serubawon address Ajanaku when trying to caution him in Scene 9?",
+                "options": [
+                  "With harsh curses and physical threats",
+                  "With a mixture of paternal familiarity, desperate advice, and growing fear of the monster he created",
+                  "With cold indifference as if to a stranger",
+                  "With foreign diplomatic salutations"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon vacillates between paternal advice and creeping dread as he realizes he has lost control."
+              },
+              {
+                "id": "b8_ele_152",
+                "text": "What is Ajanaku's dismissive retort when Serubawon warns him that the town elders are grumbling?",
+                "options": [
+                  "'I will invite them to share my royal meal.'",
+                  "'Let them grumble until their throats dry out! Can the barking of dogs ever stop the journey of an elephant?'",
+                  "'I will pack my robes and return to farming.'",
+                  "'Tell them Chief Odejimi will address their concerns.'"
+                ],
+                "answer": "B",
+                "explanation": "He scoffs at the elders' discontent, comparing public dissent to dogs barking uselessly at an elephant."
+              },
+              {
+                "id": "b8_ele_153",
+                "text": "What does the phrase 'Olubori' literally imply in the context of royal coronation rites?",
+                "options": [
+                  "The master of the fishing nets",
+                  "The conqueror of destinies / The ruler whose head triumphs over all heads",
+                  "The builder of city walls",
+                  "The keeper of the king's horses"
+                ],
+                "answer": "B",
+                "explanation": "'Olubori' evokes headship, destiny, and supremacy over all other heads in the realm."
+              },
+              {
+                "id": "b8_ele_154",
+                "text": "When Desola regains consciousness and whispers, 'Mother, the beast had the eyes of a king,' what literary device is used?",
+                "options": [
+                  "Hyperbole",
+                  "Paradoxical revelation / Dramatic unmasking",
+                  "Comic irony",
+                  "Onomatopoeia"
+                ],
+                "answer": "B",
+                "explanation": "Her words cut to the heart of the play's horror: the monster terrorizing the bush path sits on the throne."
+              },
+              {
+                "id": "b8_ele_155",
+                "text": "What does Iyale mean when she tells Demoke: 'We do not look at a child's face to determine whose house has caught fire'?",
+                "options": [
+                  "Children should be sent to fetch water from the stream.",
+                  "When disaster strikes innocent youth, all factional enmities must be forgotten to save lives.",
+                  "Every compound must build higher fences.",
+                  "Demoke should leave her daughter in the palace."
+                ],
+                "answer": "B",
+                "explanation": "Iyale asserts that helping an innocent child in mortal danger supersedes adult quarrels."
+              },
+              {
+                "id": "b8_ele_156",
+                "text": "Which proverb summarizes the ultimate fate of Chief Serubawon?",
+                "options": [
+                  "'The patient dog eats the fattest bone.'",
+                  "'He who digs a pit of deceit for another will surely tumble into its bottom.'",
+                  "'A rolling stone gathers no moss.'",
+                  "'The early bird catches the morning worm.'"
+                ],
+                "answer": "B",
+                "explanation": "Serubawon's downfall is a textbook example of falling into the very pit of deceit he dug for others."
+              },
+              {
+                "id": "b8_ele_157",
+                "text": "What rhetorical tone characterizes Iya Agba's chants during the preparation of the red cloth counter-ritual?",
+                "options": [
+                  "Timid and apologetic",
+                  "Authoritative, incisive, solemn, and charged with metaphysical certainty",
+                  "Frantic and confused",
+                  "Mournful and defeated"
+                ],
+                "answer": "B",
+                "explanation": "She speaks with authoritative certainty, channeling ancestral power to dismantle the curse."
+              },
+              {
+                "id": "b8_ele_158",
+                "text": "When Odekunle states, 'My bow was not carved to shoot shadows, but tonight the shadow wears a crown,' what does he mean?",
+                "options": [
+                  "He wants to practice archery at midnight.",
+                  "He recognizes that his hunt is no longer for bush game, but for an oppressive, illegitimate ruler.",
+                  "He is complaining about poor stage lighting.",
+                  "He believes King Ajanaku is a phantom spirit."
+                ],
+                "answer": "B",
+                "explanation": "He realizes that his hunting skills must be directed toward confronting the tyrant on the throne."
+              },
+              {
+                "id": "b8_ele_159",
+                "text": "What is the thematic significance of the final choral chant: 'The earth has reclaimed its own'?",
+                "options": [
+                  "The farmers are ready to plant corn.",
+                  "Cosmic and ecological balance has been restored by purging the unnatural usurper from the throne.",
+                  "The townspeople must relocate to another province.",
+                  "All hunters must bury their iron spears."
+                ],
+                "answer": "B",
+                "explanation": "The closing chant celebrates the land's spiritual cleansing and the return of moral and ecological balance."
+              },
+              {
+                "id": "b8_ele_160",
+                "text": "How does Bosede Ademilua-Afolayan's use of language elevate the drama beyond everyday prose?",
+                "options": [
+                  "By translating modern British slang into archaic forms",
+                  "By weaving philosophical proverbs, rhythmic chants, and rich cultural imagery into the core dramatic action",
+                  "By avoiding complex vocabulary completely",
+                  "By using only Latin phrases for legal matters"
+                ],
+                "answer": "B",
+                "explanation": "The dramatist enriches the play with proverbs, chants, and cultural metaphors, elevating it into poetic theater."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b9_b9",
+        "strataId": "strata_2",
+        "name": "Bundle 9: WAEC/NECO Examination Focus (Questions 161 - 180)",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b9_ele_161",
+                "text": "In a WAEC-standard examination essay, what is the most accurate classification of Ajanaku's role?",
+                "options": [
+                  "Comic foil",
+                  "Tragic antagonist and tyrannical usurper",
+                  "Benevolent mentor",
+                  "Neutral observer"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku functions as the tragic antagonist whose hubris and violent usurpation drive the central conflict."
+              },
+              {
+                "id": "b9_ele_162",
+                "text": "Which character serves as the primary protagonist and moral compass among the community elders?",
+                "options": [
+                  "Chief Serubawon",
+                  "Chief Odejimi",
+                  "Chief Ajasa",
+                  "Ajanaku"
+                ],
+                "answer": "B",
+                "explanation": "Chief Odejimi stands as the moral compass of the community, modeling unyielding integrity."
+              },
+              {
+                "id": "b9_ele_163",
+                "text": "What major dramatic technique is exemplified when the audience knows Ajanaku assaulted Desola while her father Serubawon does not?",
+                "options": [
+                  "Deus ex machina",
+                  "Dramatic irony",
+                  "Pathetic fallacy",
+                  "Stream of consciousness"
+                ],
+                "answer": "B",
+                "explanation": "Dramatic irony occurs when the audience understands crucial truths that remain hidden from characters on stage."
+              },
+              {
+                "id": "b9_ele_164",
+                "text": "How does the playwright depict the relationship between political power and traditional spirituality?",
+                "options": [
+                  "Spirituality is completely separate from political governance.",
+                  "Political authority without spiritual legitimacy and moral grounding degenerates into abusive despotism.",
+                  "Military strength always overrides spiritual taboos without consequence.",
+                  "Priests should be executed whenever the treasury is empty."
+                ],
+                "answer": "B",
+                "explanation": "The play shows that authority detached from moral grounding and ancestral taboos quickly becomes abusive."
+              },
+              {
+                "id": "b9_ele_165",
+                "text": "What is the primary function of Iya Agba's character in advancing the plot?",
+                "options": [
+                  "She provides comedic interludes between battles.",
+                  "She reveals hidden truths, dispenses spiritual remedies, and directs the counter-ritual that undoes the tyrant.",
+                  "She manages the king's palace treasury.",
+                  "She serves as Chief Serubawon's defense lawyer."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba is the linchpin of resolution: she unmasks past lies, heals the victim, and orchestrates the tyrant's defeat."
+              },
+              {
+                "id": "b9_ele_166",
+                "text": "Which theme is most prominently explored through the plight of Omoyeni and Desola?",
+                "options": [
+                  "The advantages of arranged marriages",
+                  "The exploitation, violation, and commodification of women under authoritarian patriarchy",
+                  "The unimportance of romance in traditional society",
+                  "The economic benefits of royal polygamy"
+                ],
+                "answer": "B",
+                "explanation": "Their suffering lays bare the vulnerability of women under patriarchal and autocratic systems that treat people as property."
+              },
+              {
+                "id": "b9_ele_167",
+                "text": "What does the resolution of the play imply about the nature of justice in human society?",
+                "options": [
+                  "Justice is an illusion that never occurs in mortal affairs.",
+                  "Justice requires moral courage, speaking truth to power, and the courage to challenge institutional corruption.",
+                  "Justice can only be enforced by foreign colonial authorities.",
+                  "The wicked always triumph over the righteous in the end."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that justice is active, requiring collective courage and principled action to triumph over wrong."
+              },
+              {
+                "id": "b9_ele_168",
+                "text": "How does the play critique the contemporary phenomenon of African 'sit-tight' rulers?",
+                "options": [
+                  "By praising leaders who rule for fifty years without elections",
+                  "By allegorizing the obsession with perpetual power through Ajanaku's desperate, monstrous quest for immortality",
+                  "By showing that old leaders are always superior to youth",
+                  "By arguing that constitutions should be abolished"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's desperate ritual quest for immortality mirrors modern sit-tight rulers who subvert institutions to hold power forever."
+              },
+              {
+                "id": "b9_ele_169",
+                "text": "What role does the theme of hubris play in classical tragedy as reflected in Ajanaku's character?",
+                "options": [
+                  "It allows the protagonist to escape divine judgment.",
+                  "It blinds the flawed leader to his vulnerability, leading him to overstep cosmic bounds and engineer his own doom.",
+                  "It makes the character beloved by his subjects.",
+                  "It causes him to surrender his throne to the elders."
+                ],
+                "answer": "B",
+                "explanation": "Hubris blinds the leader to reality, leading him to cross sacred boundaries and seal his own destruction."
+              },
+              {
+                "id": "b9_ele_170",
+                "text": "In literature examination terminology, what represents the inciting incident of the play?",
+                "options": [
+                  "The marriage of Delani and Omoyeni",
+                  "The mysterious incapacitation of Oba Akinjobi and Serubawon's plotting to enthrone Olaniyonu",
+                  "The suicide of Chief Serubawon",
+                  "The execution of the counter-ritual at the Jobele festival"
+                ],
+                "answer": "B",
+                "explanation": "The king's illness and Serubawon's plot to install Olaniyonu trigger the entire chain of dramatic events."
+              },
+              {
+                "id": "b9_ele_171",
+                "text": "What is the climax of 'Once Upon an Elephant'?",
+                "options": [
+                  "Chief Odejimi refusing to attend the coronation",
+                  "The dramatic confrontation at the Jobele festival where Desola embraces Ajanaku and Odekunle binds him with the red cloth",
+                  "The first meeting between Desola and Odekunle on the bush path",
+                  "Iya Agba leaving the palace in Scene 3"
+                ],
+                "answer": "B",
+                "explanation": "The climax occurs at the Jobele festival when the counter-ritual is executed in front of the assembled town."
+              },
+              {
+                "id": "b9_ele_172",
+                "text": "What constitutes the denouement (falling action and resolution) of the drama?",
+                "options": [
+                  "Ajanaku defeating the hunters' guild in battle",
+                  "The collapse of Ajanaku, Serubawon's suicide, Desola's healing, the reunion of the lovers, and the cleansing of the realm",
+                  "The coronation of Chief Ajasa as the new monarch",
+                  "The permanent exile of all women from the town"
+                ],
+                "answer": "B",
+                "explanation": "The denouement untangles every plot thread: the tyrant falls, the architect dies, the victims heal, and order returns."
+              },
+              {
+                "id": "b9_ele_173",
+                "text": "How is poetic justice demonstrated in the fate of Chief Serubawon?",
+                "options": [
+                  "He is rewarded with double lands by the recovering king.",
+                  "The very monster he birthed and crowned violates his beloved daughter, forcing him to face the bitter fruit of his ambition.",
+                  "He escapes to an adjacent town with the palace gold.",
+                  "He is named the new high priest of Ogun."
+                ],
+                "answer": "B",
+                "explanation": "Poetic justice is served when the dark instrument he created destroys his own family, exposing his treachery."
+              },
+              {
+                "id": "b9_ele_174",
+                "text": "What does the contrast between Chief Odejimi and Chief Ajasa reveal about parental duty?",
+                "options": [
+                  "Parents should always yield their children to royal demands.",
+                  "Odejimi protects his son and stands for truth, while Ajasa cowardly sells his daughter's happiness to appease power.",
+                  "Neither father cares about the welfare of his offspring.",
+                  "Ajasa is wiser because he avoids conflict with the palace."
+                ],
+                "answer": "B",
+                "explanation": "Odejimi defends his family with courage, while Ajasa cowardly trades his daughter's happiness for royal favor."
+              },
+              {
+                "id": "b9_ele_175",
+                "text": "Why is the play particularly relevant for contemporary African civic education?",
+                "options": [
+                  "It teaches students how to trap wild game in the savanna.",
+                  "It critiques autocracy, exposes the perils of sycophancy, champions women's agency, and emphasizes moral accountability.",
+                  "It advocates for the elimination of traditional ceremonies.",
+                  "It encourages citizens to submit blindly to military regimes."
+                ],
+                "answer": "B",
+                "explanation": "The drama serves as a potent civic critique, challenging autocracy and sycophancy while advocating moral courage."
+              },
+              {
+                "id": "b9_ele_176",
+                "text": "Which character serves as a dramatic foil to King Ajanaku?",
+                "options": [
+                  "Chief Serubawon",
+                  "Chief Odejimi (representing principled restraint and humility over tyrannical hubris)",
+                  "Chief Ajasa",
+                  "Odegbami"
+                ],
+                "answer": "B",
+                "explanation": "Odejimi serves as a moral foil to Ajanaku: humble where the king is arrogant, and principled where the king is rapacious."
+              },
+              {
+                "id": "b9_ele_177",
+                "text": "What does the term 'Ajanaku' symbolize in traditional African political discourse?",
+                "options": [
+                  "A delicate balance of democratic powers",
+                  "An overwhelming, unstoppable executive force that crushes dissent like an elephant in the forest",
+                  "The peaceful trade of agricultural produce",
+                  "The scholarly pursuit of traditional medicine"
+                ],
+                "answer": "B",
+                "explanation": "In African political discourse, the elephant symbolizes an overbearing executive power that tramples the grassroots."
+              },
+              {
+                "id": "b9_ele_178",
+                "text": "How does the playwright avoid turning the characters into simplistic two-dimensional caricatures?",
+                "options": [
+                  "By having all characters commit identical crimes",
+                  "By giving conspirators like Serubawon and Demoke genuine human affection for their daughter, making their tragedy poignant.",
+                  "By eliminating all dialogue between family members",
+                  "By making the tyrant apologize every morning"
+                ],
+                "answer": "B",
+                "explanation": "Giving the conspirators genuine parental love for Desola makes their moral complicity and grief profoundly tragic."
+              },
+              {
+                "id": "b9_ele_179",
+                "text": "What role does the setting of the 'Jobele Festival' play in highlighting dramatic irony?",
+                "options": [
+                  "It allows the actors to wear foreign costumes.",
+                  "The public celebrates harvest and joy, unaware that a life-and-death struggle to topple the tyrant is unfolding in their midst.",
+                  "It prevents the hunters from bringing weapons.",
+                  "It marks the end of the dry season."
+                ],
+                "answer": "B",
+                "explanation": "Dramatic irony shines as the crowd celebrates, oblivious to the high-stakes confrontation about to erupt."
+              },
+              {
+                "id": "b9_ele_180",
+                "text": "What central thesis does Ademilua-Afolayan's 'Once Upon an Elephant' advance regarding power?",
+                "options": [
+                  "Power belongs permanently to whoever possesses the greatest physical ruthlessness.",
+                  "Power is a sacred trust that, when corrupted by hubris and greed, destroys both the ruler and his co-conspirators.",
+                  "Monarchs have divine immunity from moral laws.",
+                  "Injustice can only be cured by foreign military intervention."
+                ],
+                "answer": "B",
+                "explanation": "The play's central thesis is that authority is a sacred trust; when twisted into tyranny, it devours ruler and enabler alike."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b10_b10",
+        "strataId": "strata_2",
+        "name": "Bundle 10: Deep Comprehension & Synthetic Review (Questions 181 - 200)",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 15,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b10_ele_181",
+                "text": "What does the title 'Once Upon an Elephant' signify about the cyclical nature of history?",
+                "options": [
+                  "That elephants will always inhabit Nigerian forests",
+                  "That tyrants rise periodically, but their monstrous reigns are fleeting chapters that eventually come to an end.",
+                  "That kingdoms must celebrate coronation ceremonies annually",
+                  "That storytelling is reserved exclusively for children"
+                ],
+                "answer": "B",
+                "explanation": "The fable title suggests that while tyrants rise periodically, their monstrous rules are ultimately fleeting chapters."
+              },
+              {
+                "id": "b10_ele_182",
+                "text": "Why is the dialogue between Iya Agba and Chief Serubawon in Scene 11 considered the turning point of the play?",
+                "options": [
+                  "Serubawon successfully arrests Iya Agba and locks her in the palace.",
+                  "The buried truth of Ajanaku's paternity and the incestuous nature of the assault are laid bare, breaking Serubawon's resolve.",
+                  "They agree to divide the kingdom's treasury equally.",
+                  "Iya Agba begs Serubawon for palace protection."
+                ],
+                "answer": "B",
+                "explanation": "Scene 11 breaks the conspiracy wide open: confronting the horror of his deeds shatters Serubawon's will to protect the tyrant."
+              },
+              {
+                "id": "b10_ele_183",
+                "text": "How does the play resolve the tension between ancestral custom and political manipulation?",
+                "options": [
+                  "By discarding all traditional customs in favor of foreign laws",
+                  "By demonstrating that while corrupt leaders manipulate customs for selfish ends, authentic traditions contain the tools to purify society.",
+                  "By proving that customs are inherently oppressive to all citizens",
+                  "By crowning a foreign trader as the permanent king"
+                ],
+                "answer": "B",
+                "explanation": "The play shows that while schemers manipulate custom, true ancestral traditions hold the moral power to heal the community."
+              },
+              {
+                "id": "b10_ele_184",
+                "text": "What is the thematic significance of Desola being an only child?",
+                "options": [
+                  "It reduces the financial burden on Serubawon's household.",
+                  "It heightens the tragedy of her violation, striking directly at the continuation of Serubawon's family lineage.",
+                  "It makes her ineligible for traditional marriage.",
+                  "It forces her to become a hunter."
+                ],
+                "answer": "B",
+                "explanation": "As an only child, Desola represents the entire future of her lineage; her violation strikes at the heart of Serubawon's legacy."
+              },
+              {
+                "id": "b10_ele_185",
+                "text": "How does the playwright depict the moral evolution of Demoke?",
+                "options": [
+                  "She remains an unrepentant conspirator until the very end.",
+                  "Her daughter's suffering shatters her arrogance, transforming her from a palace schemer into a weeping, repentant mother.",
+                  "She poisons Serubawon to seize his chieftaincy title.",
+                  "She joins Ajanaku's palace guards."
+                ],
+                "answer": "B",
+                "explanation": "Witnessing her daughter's torment breaks Demoke's pride, turning her from a ruthless schemer into a remorseful mother."
+              },
+              {
+                "id": "b10_ele_186",
+                "text": "What does the character of Odegbami contribute to the thematic representation of the Hunters' Guild?",
+                "options": [
+                  "He shows that hunters are easily bought with royal gifts.",
+                  "He represents the guild's loyalty to the land and customary order, serving as a pillar of martial resistance against despotism.",
+                  "He advises the hunters to abandon the kingdom.",
+                  "He acts as King Ajanaku's personal executioner."
+                ],
+                "answer": "B",
+                "explanation": "Odegbami embodies the hunters' integrity, demonstrating that true warriors defend the people, not tyrannical crowns."
+              },
+              {
+                "id": "b10_ele_187",
+                "text": "Why is the counter-ritual executed through a young woman (Desola) and a young hunter (Odekunle)?",
+                "options": [
+                  "The elder chiefs were too frail to attend the festival.",
+                  "It symbolizes the youth reclaiming their stolen future and leading the physical and spiritual renewal of the land.",
+                  "King Ajanaku refused to speak to older citizens.",
+                  "The traditional laws prohibited elders from wearing red cloth."
+                ],
+                "answer": "B",
+                "explanation": "Empowering Desola and Odekunle emphasizes the youth rising to reclaim their stolen future and restore the land."
+              },
+              {
+                "id": "b10_ele_188",
+                "text": "What does the play suggest about the danger of remaining silent during early signs of injustice?",
+                "options": [
+                  "Silence is the safest path to personal prosperity.",
+                  "Silence in the face of overreach allows corruption to take root until it grows into an unstoppable monster that devours all.",
+                  "Rulers respect silent subjects more than those who speak.",
+                  "Silence ensures that taxes remain low."
+                ],
+                "answer": "B",
+                "explanation": "The play shows that early complacency allows small abuses to mushroom into monstrous tyranny."
+              },
+              {
+                "id": "b10_ele_189",
+                "text": "How is the communal concept of 'Ajo' (collective assembly and solidarity) demonstrated in the resolution?",
+                "options": [
+                  "The townspeople scatter into different forests.",
+                  "All segments—elders, youth, women, hunters—unite to purge the abomination and celebrate collective liberation.",
+                  "The assembly votes to abolish traditional kingship forever.",
+                  "The townspeople hand the kingdom over to an invading army."
+                ],
+                "answer": "B",
+                "explanation": "True renewal is realized when all strata of society unite to purge the rot and rebuild communal life."
+              },
+              {
+                "id": "b10_ele_190",
+                "text": "What does the playwright imply regarding the role of memory and oral history in society?",
+                "options": [
+                  "Historical memory is useless and should be forgotten.",
+                  "Preserving historical truth (as embodied by Iya Agba) prevents the erasure of justice and arms the community against deceit.",
+                  "History should only be recorded by the ruling monarch.",
+                  "Oral memories should be replaced by foreign decrees."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba proves that remembering historical truth protects a society from falling prey to revisionist lies."
+              },
+              {
+                "id": "b10_ele_191",
+                "text": "Why does King Ajanaku mock the warnings of the ancestors?",
+                "options": [
+                  "He was educated in a foreign country that rejected religion.",
+                  "His intoxicating arrogance and belief in his ritual invulnerability made him view himself as superior to the gods.",
+                  "The ancestral priests had officially crowned him as a god.",
+                  "He knew the ancestors were fictional characters."
+                ],
+                "answer": "B",
+                "explanation": "Blinded by megalomania and ritual dark power, Ajanaku foolishly considers himself beyond ancestral reckoning."
+              },
+              {
+                "id": "b10_ele_192",
+                "text": "What is the symbolic function of the unmasked truth in dismantling Ajanaku's power?",
+                "options": [
+                  "It allows the British court to intervene.",
+                  "Tyranny thrives on secrecy and deceit; speaking unadorned truth dissolves the psychological illusion of the despot's invincibility.",
+                  "It convinces Ajanaku to give up his personal wealth.",
+                  "It causes the palace walls to collapse physically."
+                ],
+                "answer": "B",
+                "explanation": "Autocracy relies on secrecy and terror; bringing unvarnished truth to light shatters the illusion of invulnerability."
+              },
+              {
+                "id": "b10_ele_193",
+                "text": "How does the play treat the theme of legitimate vs. illegitimate succession?",
+                "options": [
+                  "Any individual who seizes power by force is fully legitimate.",
+                  "Legitimate rule requires adherence to customary vetted protocols, moral rectitude, and the genuine consensus of the governed.",
+                  "Legitimacy is determined strictly by the number of soldiers a ruler commands.",
+                  "Succession should be decided by wrestling matches."
+                ],
+                "answer": "B",
+                "explanation": "Legitimate governance demands constitutional protocols, moral integrity, and the genuine consent of the governed."
+              },
+              {
+                "id": "b10_ele_194",
+                "text": "What does Omoyeni's pregnancy symbolize in the larger narrative arc?",
+                "options": [
+                  "The continuation of King Ajanaku's royal line",
+                  "The persistence of innocent life, hope, and love outlasting the oppressive darkness of the palace.",
+                  "The inevitable triumph of royal polygamy",
+                  "A financial burden on Chief Ajasa's household"
+                ],
+                "answer": "B",
+                "explanation": "Her pregnancy represents life, endurance, and hope persevering despite the oppressive darkness of the palace."
+              },
+              {
+                "id": "b10_ele_195",
+                "text": "How does Chief Odejimi's household function as a thematic sanctuary in the drama?",
+                "options": [
+                  "It is built with iron walls that arrows cannot penetrate.",
+                  "It represents an unwavering sanctuary of ethical truth, mutual respect, and fidelity where conscience is never compromised.",
+                  "It is where all the kingdom's tax revenues are stored.",
+                  "It provides shelter for foreign mercenaries."
+                ],
+                "answer": "B",
+                "explanation": "Odejimi's home stands as an ethical lighthouse, modeling moral clarity in a sea of societal compromise."
+              },
+              {
+                "id": "b10_ele_196",
+                "text": "What does the collapse of King Ajanaku teach students about the limitations of physical might?",
+                "options": [
+                  "Physical strength is the only attribute that endures in human affairs.",
+                  "Brute physical power and political coercion are inherently fragile when confronted by moral truth and cosmic justice.",
+                  "Hunters should always avoid wrestling with kings.",
+                  "Only weapons made of bronze can defeat autocrats."
+                ],
+                "answer": "B",
+                "explanation": "The play shows that physical force is brittle; when confronted by truth and united will, autocracy collapses."
+              },
+              {
+                "id": "b10_ele_197",
+                "text": "In what way is 'Once Upon an Elephant' a cautionary tale for modern African political elites?",
+                "options": [
+                  "It warns elites to build stronger palace prisons for their critics.",
+                  "It warns that exploiting national institutions, abusing the vulnerable, and subverting justice will inevitably trigger ruinous reckoning.",
+                  "It advises leaders to ban all traditional harvest festivals.",
+                  "It suggests that leaders should rely exclusively on foreign loans."
+                ],
+                "answer": "B",
+                "explanation": "The drama warns that trampling institutions and exploiting citizens produces a reckoning no elite can escape."
+              },
+              {
+                "id": "b10_ele_198",
+                "text": "Why is the healing of Desola central to the play's moral resolution?",
+                "options": [
+                  "It allows her father Serubawon to reclaim his chieftaincy post.",
+                  "It confirms that the counter-ritual was successful, restoring not only the political order but also the physical and spiritual victims of tyranny.",
+                  "It enables her to become the next queen mother.",
+                  "It proves that European medicines are unnecessary in the village."
+                ],
+                "answer": "B",
+                "explanation": "Her restoration confirms the spiritual victory, showing that justice must heal the wounded, not merely punish the guilty."
+              },
+              {
+                "id": "b10_ele_199",
+                "text": "Which dramatic movement characterizes the final scenes of the play?",
+                "options": [
+                  "A descent into cynical nihilism and hopeless civil war",
+                  "A triumphant catharsis combining ritual purification, justice, romantic reunion, and communal renewal",
+                  "An abrupt, unexplained cliffhanger leaving all fates unresolved",
+                  "A silent transition into modern prose narration"
+                ],
+                "answer": "B",
+                "explanation": "The play ends in radiant catharsis, harmonizing justice, ritual cleansing, romance, and communal rebirth."
+              },
+              {
+                "id": "b10_ele_200",
+                "text": "What is the ultimate literary achievement of Bosede Ademilua-Afolayan in 'Once Upon an Elephant'?",
+                "options": [
+                  "She wrote a simple folktale intended exclusively for primary school children.",
+                  "She successfully fused indigenous oral performance traditions, Yoruba mythology, and biting political satire to create a masterpiece on the tragedy of tyranny.",
+                  "She translated classical Greek drama into modern English without African references.",
+                  "She documented the colonial history of big-game hunting in West Africa."
+                ],
+                "answer": "B",
+                "explanation": "Ademilua-Afolayan's achievement lies in blending indigenous oral theatre, myth, and satire into a timeless critique of power."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+

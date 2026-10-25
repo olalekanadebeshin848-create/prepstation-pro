@@ -1,0 +1,9 @@
+{
+  "electronDist": "electron-dist-ia32",
+  "nsis": {
+    "artifactName": "${productName} Setup ${version} (32-bit).${ext}"
+  },
+  "portable": {
+    "artifactName": "${productName} Portable ${version} (32-bit).${ext}"
+  }
+}

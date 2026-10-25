@@ -1,0 +1,39 @@
+{
+  "catalogVersion": 1,
+  "appName": "PrepStation Pro",
+  "organization": "Delmama Groups",
+  "lastUpdated": "2026-10-25T11:07:21.928Z",
+  "totalCount": 2,
+  "strataList": [
+    {
+      "id": "ss_1_once_upon_an_elephant_stg1",
+      "strataId": "strata_1",
+      "examCategory": "SS 1",
+      "displayName": "Once Upon an Elephant — Advanced Question Set (200 Questions) — SS 1/SS 2",
+      "description": "SS 1 First Term — comprehensive practice drills.",
+      "tier": "basic",
+      "version": "1.0.0",
+      "fileType": "json",
+      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/SS_1_ONCE_UPON_AN_ELEPHANT_stg1.json",
+      "size": "155 KB",
+      "totalBundles": 10,
+      "totalQuestions": 200,
+      "updatedAt": "2026-10-12T12:43:13.509Z"
+    },
+    {
+      "id": "ss_1_once_upon_an_elephant_stg2",
+      "strataId": "strata_2",
+      "examCategory": "SS 1",
+      "displayName": "SS 1 Literature in English — Complete Question Set (200 Questions)",
+      "description": "SS 1 First Term — comprehensive practice drills.",
+      "tier": "premium",
+      "version": "1.0.0",
+      "fileType": "json",
+      "fileUrl": "https://raw.githubusercontent.com/olalekanadebeshin848-create/prepstation-pro/main/strata/SS_1_ONCE_UPON_AN_ELEPHANT_stg2.json",
+      "size": "141 KB",
+      "totalBundles": 10,
+      "totalQuestions": 200,
+      "updatedAt": "2026-10-12T15:56:21.579Z"
+    }
+  ]
+}

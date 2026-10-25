@@ -7,18 +7,25 @@ import {
   ScrollView,
   StyleSheet,
   Modal,
-  Alert,
   Animated,
   Platform,
 } from 'react-native';
 import Svg, { Circle, G } from 'react-native-svg';
 import { CameraView, useCameraPermissions } from 'expo-camera';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useIsDesktop, DESKTOP_CONTENT_MAX_WIDTH } from '../hooks/useResponsive';
+import { Alert } from '../components/AlertProvider';
 import { getMyTeacherCode, decodePGMapPayload, TEACHER_CODE_LENGTH } from '../services/PGMapService';
+import { readAnswerBreakdownFile, pickAndReadAnswerBreakdownFile } from '../services/ReportService';
+import MathText from '../components/MathText';
+import * as DocumentPicker from 'expo-document-picker';
 import {
   getRosterPupils,
   upsertRosterPupil,
   deleteRosterPupil,
+  saveImportedReport,
+  getReportForPupil,
+  getReportPupilCodes,
 } from '../database/queries';
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -83,8 +90,13 @@ function RateRing({ rate = 0, size = 56, stroke = 6, track = '#e2e8f0', textColo
   );
 }
 
+// See HomeScreen.jsx for why this is needed — flex:1 ScrollViews on web
+// need minHeight: 0 or they grow instead of scrolling.
+const webScrollFix = { flex: 1, minHeight: 0 };
+
 export default function TeacherHomeScreen({ onSwitchToPupil }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const [myCode, setMyCode] = useState(null);
@@ -98,6 +110,14 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
   const [permission, requestPermission] = useCameraPermissions();
   const scanLock = useRef(false);
   const fade = useRef(new Animated.Value(0)).current;
+
+  // Answer-breakdown state: which pupils have an imported breakdown, a file-pick
+  // in-progress flag, and the currently-open pupil's decoded breakdown.
+  const [reportCodes, setReportCodes] = useState([]);       // device codes with a breakdown
+  const [importing, setImporting] = useState(false);        // file pick in progress
+  const [detailReport, setDetailReport] = useState(null);   // report for the open pupil
+  const [breakdownVisible, setBreakdownVisible] = useState(false);
+  const [openTestId, setOpenTestId] = useState(null);       // which test is expanded
 
   // Palette — indigo identity for teacher mode, on the app's slate base.
   const t = {
@@ -117,13 +137,30 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
     setRoster(list);
   }, []);
 
+  const loadReports = useCallback(async () => {
+    setReportCodes(await getReportPupilCodes());
+  }, []);
+
   useEffect(() => {
     (async () => {
       setMyCode(await getMyTeacherCode());
       await loadRoster();
+      await loadReports();
     })();
     Animated.timing(fade, { toValue: 1, duration: 380, useNativeDriver: true }).start();
-  }, [loadRoster, fade]);
+  }, [loadRoster, loadReports, fade]);
+
+  // When a pupil's detail sheet opens, pull their imported answer breakdown (if
+  // any) so the "View answer breakdown" button knows whether to show.
+  useEffect(() => {
+    let alive = true;
+    if (!detailPupil) { setDetailReport(null); return; }
+    (async () => {
+      const rep = await getReportForPupil(detailPupil.pupilDeviceCode);
+      if (alive) setDetailReport(rep);
+    })();
+    return () => { alive = false; };
+  }, [detailPupil]);
 
   const classes = useMemo(() => {
     const map = {};
@@ -184,6 +221,75 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
     setStatus(res);
   };
 
+  // Import a pupil's shared .psr breakdown FILE. Picks the file, decompresses +
+  // decodes it, verifies it's linked to this teacher, makes sure the pupil
+  // appears in the roster (without clobbering any PG Map performance already
+  // there), then stores the breakdown.
+const handlePickAndImport = async () => {
+    if (importing) return;
+    setImporting(true);
+    try {
+      let report = null;
+
+      // DESKTOP (Electron): expo-document-picker and expo-file-system have no
+      // web implementation, so use the native dialog + Node fs read instead.
+      if (typeof window !== 'undefined' && window.electronFile) {
+        report = await pickAndReadAnswerBreakdownFile();
+        if (report === null) { setImporting(false); return; } // user cancelled the dialog, or genuinely unreadable — both look the same here
+      } else {
+        // NATIVE / plain web: original expo-document-picker path.
+        const res = await DocumentPicker.getDocumentAsync({ type: '*/*', copyToCacheDirectory: true });
+        if (res.canceled || !res.assets || !res.assets[0]) { setImporting(false); return; }
+        report = await readAnswerBreakdownFile(res.assets[0].uri);
+      }
+
+      if (!report) {
+        Alert.alert('Couldn\u2019t read that file', 'Make sure you picked the .psr answer-breakdown file your pupil shared with you.');
+        setImporting(false); return;
+      }
+      if (!report.teacherCode) {
+        Alert.alert('Not linked', "This pupil hasn't linked a teacher yet.");
+        setImporting(false); return;
+      }
+      if (String(report.teacherCode) !== String(myCode)) {
+        Alert.alert('Different teacher', `This breakdown is linked to teacher ${report.teacherCode}, not your key (${myCode}).`);
+        setImporting(false); return;
+      }
+
+      const deviceCode = report.deviceCode || `pupil_${Date.now()}`;
+      const existing = roster.find((p) => p.pupilDeviceCode === deviceCode);
+      if (!existing) {
+        const classLevels = [...new Set((report.tests || []).map((tt) => tt.classLevel).filter(Boolean))];
+        const pcts = (report.tests || []).map((tt) => tt.percentage || 0);
+        const avg = pcts.length ? Math.round(pcts.reduce((s, n) => s + n, 0) / pcts.length) : 0;
+        await upsertRosterPupil({
+          pupilDeviceCode: deviceCode,
+          fullName: report.pupilName || 'Unnamed pupil',
+          classLevels,
+          overallRate: avg,
+          performance: {},
+          teacherCode: report.teacherCode,
+          snapshot: {},
+        });
+      }
+      const ok = await saveImportedReport({
+        pupilDeviceCode: deviceCode,
+        fullName: report.pupilName || 'Unnamed pupil',
+        teacherCode: report.teacherCode,
+        report,
+      });
+      if (!ok) { Alert.alert('Save failed', 'Could not save the breakdown. Try again.'); setImporting(false); return; }
+
+      await loadRoster();
+      await loadReports();
+      const misses = (report.tests || []).reduce((s, tt) => s + ((tt.misses || []).length), 0);
+      Alert.alert('Breakdown imported', `${report.pupilName || 'Pupil'}: ${(report.tests || []).length} test(s), ${misses} missed question(s). Open the pupil to view.`);
+    } catch (e) {
+      Alert.alert('Import error', 'Something went wrong reading that file. Try again.');
+    }
+    setImporting(false);
+  };
+
   const openScanner = async () => {
     let perm = permission;
     if (!perm || !perm.granted) perm = await requestPermission();
@@ -228,13 +334,13 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
   return (
     <View style={[styles.root, { backgroundColor: t.bg }]}>
       {/* Header band — indigo, spans the status bar for a clean edge-to-edge top */}
-      <View style={[styles.header, { paddingTop: insets.top + 12, backgroundColor: ACCENT }]}>
-        <View style={styles.headerRow}>
+      <View style={[styles.header, { paddingTop: insets.top + 12, backgroundColor: ACCENT }, isDesktop && styles.headerDesktop]}>
+        <View style={[styles.headerRow, isDesktop && styles.headerRowDesktop]}>
           <View style={styles.brandRow}>
             <View style={styles.brandMark}><Text style={{ fontSize: 18 }}>🏫</Text></View>
             <View>
               <Text style={styles.headerEyebrow}>PREPSTATION PRO</Text>
-              <Text style={styles.headerTitle}>Teacher Studio</Text>
+              <Text style={[styles.headerTitle, isDesktop && { fontSize: 24 }]}>Teacher Studio</Text>
             </View>
           </View>
           <View style={styles.headerActions}>
@@ -249,10 +355,20 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
         </View>
       </View>
 
-      <Animated.View style={{ flex: 1, opacity: fade, transform: [{ translateY: fade.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }}>
+      <Animated.View style={{ flex: 1, minHeight: 0, opacity: fade, transform: [{ translateY: fade.interpolate({ inputRange: [0, 1], outputRange: [10, 0] }) }] }}>
         <ScrollView
-          contentContainerStyle={{ padding: 16, paddingTop: 18, paddingBottom: insets.bottom + 36 }}
-          showsVerticalScrollIndicator={false}
+          style={webScrollFix}
+          contentContainerStyle={[
+            { padding: 16, paddingTop: 18, paddingBottom: insets.bottom + 36 },
+            isDesktop && {
+              width: '100%',
+              maxWidth: DESKTOP_CONTENT_MAX_WIDTH,
+              alignSelf: 'center',
+              paddingHorizontal: 40,
+              paddingTop: 28,
+            },
+          ]}
+          showsVerticalScrollIndicator={isDesktop}
           keyboardShouldPersistTaps="handled"
         >
           {/* CLASS KEY — presented like an access card the teacher reads aloud */}
@@ -347,6 +463,23 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
             )}
           </View>
 
+          {/* IMPORT ANSWER BREAKDOWN */}
+          <TouchableOpacity
+            style={[styles.card, styles.importCard, { backgroundColor: t.card, borderColor: t.border, opacity: importing ? 0.6 : 1 }]}
+            onPress={handlePickAndImport}
+            disabled={importing}
+            activeOpacity={0.85}
+          >
+            <View style={[styles.addIcon, { backgroundColor: ACCENT_SOFT }]}>
+              <Text style={{ fontSize: 17 }}>📄</Text>
+            </View>
+            <View style={{ flex: 1 }}>
+              <Text style={[styles.cardTitle, { color: t.textMain }]}>Import answer breakdown</Text>
+              <Text style={[styles.cardSub, { color: t.textSub }]}>{importing ? 'Opening…' : 'Open the file a pupil shared to see their missed questions'}</Text>
+            </View>
+            <Text style={[styles.chev, { color: t.textFaint }]}>›</Text>
+          </TouchableOpacity>
+
           {/* CLASSES */}
           {classes.length > 0 && (
             <View style={{ marginTop: 4 }}>
@@ -411,7 +544,14 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
                 >
                   <RateRing rate={p.overallRate} size={54} stroke={6} track={t.innerPanel} textColor={t.textMain} />
                   <View style={{ flex: 1, marginLeft: 14 }}>
-                    <Text style={[styles.pupilName, { color: t.textMain }]} numberOfLines={1}>{p.fullName}</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
+                      <Text style={[styles.pupilName, { color: t.textMain, flexShrink: 1 }]} numberOfLines={1}>{p.fullName}</Text>
+                      {reportCodes.includes(p.pupilDeviceCode) && (
+                        <View style={[styles.breakdownTag, { backgroundColor: ACCENT_SOFT }]}>
+                          <Text style={[styles.breakdownTagText, { color: ACCENT }]}>📄 breakdown</Text>
+                        </View>
+                      )}
+                    </View>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 6 }}>
                       {(p.classLevels || []).map((cl) => (
                         <View key={cl} style={[styles.classTag, { backgroundColor: ACCENT_SOFT }]}>
@@ -460,7 +600,7 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
         <View style={styles.sheetOverlay}>
           <View style={[styles.sheet, { backgroundColor: t.bg, paddingBottom: insets.bottom + 16 }]}>
             {detailPupil && (
-              <ScrollView showsVerticalScrollIndicator={false}>
+              <ScrollView showsVerticalScrollIndicator={isDesktop}>
                 <View style={styles.sheetHandle} />
                 <View style={{ alignItems: 'center', marginTop: 6 }}>
                   <RateRing rate={detailPupil.overallRate} size={110} stroke={10} track={t.innerPanel} textColor={t.textMain} />
@@ -499,10 +639,100 @@ export default function TeacherHomeScreen({ onSwitchToPupil }) {
                   Updated {detailPupil.updatedAt ? new Date(detailPupil.updatedAt).toLocaleDateString() : '\u2014'}
                 </Text>
 
+                {detailReport && (detailReport.tests || []).length > 0 && (
+                  <TouchableOpacity
+                    style={[styles.viewBreakdownBtn, { backgroundColor: ACCENT }]}
+                    onPress={() => { setOpenTestId(null); setBreakdownVisible(true); }}
+                    activeOpacity={0.9}
+                  >
+                    <Text style={{ fontSize: 15 }}>📄</Text>
+                    <Text style={styles.viewBreakdownText}>
+                      View answer breakdown ({detailReport.tests.length} {detailReport.tests.length === 1 ? 'test' : 'tests'})
+                    </Text>
+                  </TouchableOpacity>
+                )}
+
                 <TouchableOpacity style={[styles.removeBtn, { backgroundColor: isDarkMode ? '#3b1113' : '#fef2f2' }]} onPress={() => removePupil(detailPupil)} activeOpacity={0.85}>
                   <Text style={styles.removeBtnText}>Remove pupil</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.closeSheetBtn, { borderColor: t.border }]} onPress={() => setDetailPupil(null)} activeOpacity={0.85}>
+                  <Text style={[styles.closeSheetText, { color: t.textSub }]}>Close</Text>
+                </TouchableOpacity>
+              </ScrollView>
+            )}
+          </View>
+        </View>
+      </Modal>
+
+      {/* ANSWER BREAKDOWN VIEW MODAL */}
+      <Modal visible={breakdownVisible} transparent animationType="slide" onRequestClose={() => setBreakdownVisible(false)}>
+        <View style={styles.sheetOverlay}>
+          <View style={[styles.sheet, { backgroundColor: t.bg, paddingBottom: insets.bottom + 16 }]}>
+            {detailReport && (
+              <ScrollView showsVerticalScrollIndicator={isDesktop}>
+                <View style={styles.sheetHandle} />
+                <Text style={[styles.importTitle, { color: t.textMain }]}>{detailReport.pupilName || 'Pupil'} · misses</Text>
+                <Text style={[styles.importSub, { color: t.textSub }]}>
+                  Each question shows the option the pupil picked. The correct answer is deliberately hidden — teach it out together until they reach it.
+                </Text>
+
+                {(detailReport.tests || []).map((tst) => {
+                  const open = openTestId === tst.id;
+                  const bySubject = {};
+                  for (const m of (tst.misses || [])) {
+                    const key = m.subject || 'General';
+                    (bySubject[key] = bySubject[key] || []).push(m);
+                  }
+                  return (
+                    <View key={tst.id} style={[styles.testBlock, { backgroundColor: t.card, borderColor: t.border }]}>
+                      <TouchableOpacity activeOpacity={0.7} onPress={() => setOpenTestId(open ? null : tst.id)} style={styles.testHead}>
+                        <View style={{ flex: 1 }}>
+                          <Text style={[styles.testTitle, { color: t.textMain }]} numberOfLines={1}>
+                            {tst.bundleName || tst.subjectName || tst.classLevel || 'Test'}
+                          </Text>
+                          <Text style={[styles.testMeta, { color: t.textSub }]}>
+                            {tst.classLevel ? tst.classLevel + ' · ' : ''}{tst.date ? new Date(tst.date).toLocaleDateString() : ''} · {(tst.misses || []).length} missed
+                          </Text>
+                        </View>
+                        <Text style={[styles.testPct, { color: rateColor(tst.percentage || 0) }]}>{tst.percentage || 0}%</Text>
+                        <Text style={[styles.addChevron, { color: t.textFaint, marginLeft: 10 }]}>{open ? '▲' : '▼'}</Text>
+                      </TouchableOpacity>
+
+                      {open && (
+                        (tst.misses || []).length === 0 ? (
+                          <Text style={[styles.testMeta, { color: t.textFaint, marginTop: 10 }]}>No missed questions in this test. 🎉</Text>
+                        ) : (
+                          Object.entries(bySubject).map(([subj, list]) => (
+                            <View key={subj} style={{ marginTop: 14 }}>
+                              <Text style={[styles.missSubj, { color: ACCENT }]}>{subj}</Text>
+                              {list.map((m, i) => (
+                                <View key={i} style={[styles.missCard, { backgroundColor: t.innerPanel, borderColor: t.border }]}>
+                                  <View style={{ flexDirection: 'row' }}>
+                                    <Text style={[styles.missQ, { color: t.textMain }]}>{i + 1}. </Text>
+                                    <View style={{ flex: 1 }}>
+                                      <MathText text={m.q || 'Question'} textStyle={[styles.missQ, { color: t.textMain }]} />
+                                    </View>
+                                  </View>
+                                  <View style={styles.missPickRow}>
+                                    <Text style={[styles.missPickLabel, { color: t.textFaint }]}>PICKED</Text>
+                                    <View style={{ flex: 1 }}>
+                                      <MathText
+                                        text={`${m.pickedKey ? m.pickedKey + '.  ' : ''}${m.pickedText || 'Not answered'}`}
+                                        textStyle={[styles.missPickVal, { color: '#dc2626' }]}
+                                      />
+                                    </View>
+                                  </View>
+                                </View>
+                              ))}
+                            </View>
+                          ))
+                        )
+                      )}
+                    </View>
+                  );
+                })}
+
+                <TouchableOpacity style={[styles.closeSheetBtn, { borderColor: t.border, marginTop: 16 }]} onPress={() => setBreakdownVisible(false)} activeOpacity={0.85}>
                   <Text style={[styles.closeSheetText, { color: t.textSub }]}>Close</Text>
                 </TouchableOpacity>
               </ScrollView>
@@ -524,7 +754,9 @@ const styles = StyleSheet.create({
 
   // Header band
   header: { paddingHorizontal: 16, paddingBottom: 20, borderBottomLeftRadius: 22, borderBottomRightRadius: 22, ...shadow(6) },
+  headerDesktop: { paddingHorizontal: 40, paddingBottom: 26 },
   headerRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
+  headerRowDesktop: { width: '100%', maxWidth: DESKTOP_CONTENT_MAX_WIDTH, alignSelf: 'center' },
   brandRow: { flexDirection: 'row', alignItems: 'center', gap: 11 },
   brandMark: { width: 40, height: 40, borderRadius: 12, backgroundColor: 'rgba(255,255,255,0.16)', alignItems: 'center', justifyContent: 'center' },
   headerEyebrow: { color: '#c7d2fe', fontSize: 9.5, fontWeight: '900', letterSpacing: 1.6 },
@@ -624,4 +856,25 @@ const styles = StyleSheet.create({
   removeBtnText: { color: '#dc2626', fontWeight: '800', fontSize: 14 },
   closeSheetBtn: { marginTop: 10, borderRadius: 13, borderWidth: 1, paddingVertical: 14, alignItems: 'center' },
   closeSheetText: { fontWeight: '800', fontSize: 14 },
+
+  // Import + answer-breakdown
+  importCard: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  viewBreakdownBtn: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 9, borderRadius: 13, paddingVertical: 14, marginTop: 16, ...shadow(3) },
+  viewBreakdownText: { color: '#fff', fontWeight: '800', fontSize: 14 },
+  importTitle: { fontSize: 20, fontWeight: '900', marginTop: 6 },
+  importSub: { fontSize: 12.5, lineHeight: 18, marginTop: 8, marginBottom: 16 },
+  importInput: { minHeight: 90, borderWidth: 1, borderRadius: 12, padding: 12, fontSize: 12.5, fontFamily: Platform.OS === 'ios' ? 'Courier' : 'monospace' },
+  testBlock: { borderRadius: 16, borderWidth: 1, padding: 14, marginTop: 12 },
+  testHead: { flexDirection: 'row', alignItems: 'center' },
+  testTitle: { fontSize: 14.5, fontWeight: '800' },
+  testMeta: { fontSize: 11.5, fontWeight: '600', marginTop: 2 },
+  testPct: { fontSize: 16, fontWeight: '900' },
+  missSubj: { fontSize: 12, fontWeight: '900', letterSpacing: 0.5, marginBottom: 8 },
+  missCard: { borderRadius: 12, borderWidth: 1, padding: 12, marginBottom: 8 },
+  missQ: { fontSize: 13.5, fontWeight: '700', lineHeight: 19 },
+  missPickRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 8 },
+  missPickLabel: { fontSize: 9.5, fontWeight: '900', letterSpacing: 0.8 },
+  missPickVal: { flex: 1, fontSize: 13, fontWeight: '800' },
+  breakdownTag: { borderRadius: 6, paddingVertical: 2, paddingHorizontal: 7 },
+  breakdownTagText: { fontSize: 9.5, fontWeight: '900' },
 });

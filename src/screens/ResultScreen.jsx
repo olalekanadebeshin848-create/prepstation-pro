@@ -9,8 +9,10 @@ import {
   Dimensions,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useIsDesktop } from '../hooks/useResponsive';
 import { Linking } from 'react-native';
 import { WebView } from 'react-native-webview';
+import MathText from '../components/MathText';
 
 const { width } = Dimensions.get('window');
 
@@ -146,9 +148,7 @@ function WrongRow({ item, globalIndex, passed }) {
         <View style={[row.numBadge, { backgroundColor: c.bg }]}>
           <Text style={[row.num, { color: c.accent }]}>Q{globalIndex}</Text>
         </View>
-        <Text style={row.preview} numberOfLines={expanded ? 0 : 2}>
-          {item.questionText}
-        </Text>
+        <MathText text={item.questionText} textStyle={row.preview} />
         <Text style={row.chevron}>{expanded ? '▲' : '▼'}</Text>
       </View>
 
@@ -171,14 +171,14 @@ function WrongRow({ item, globalIndex, passed }) {
             <Text style={row.answerLabel}>
               {notAnswered ? '⬜ NOT ANSWERED' : `✗  YOUR ANSWER  (${item.studentKey})`}
             </Text>
-            <Text style={row.answerText}>{item.studentAnswer}</Text>
+            <MathText text={item.studentAnswer} textStyle={row.answerText} />
           </View>
 
           {/* Correct answer — only shown if user passed */}
           {passed && item.correctAnswerText ? (
             <View style={row.correctChip}>
               <Text style={row.correctLabel}>✓  CORRECT ANSWER  ({item.correctKey})</Text>
-              <Text style={row.correctText}>{item.correctAnswerText}</Text>
+              <MathText text={item.correctAnswerText} textStyle={row.correctText} />
             </View>
           ) : !passed ? (
             <TouchableOpacity
@@ -197,7 +197,7 @@ function WrongRow({ item, globalIndex, passed }) {
           {passed && item.explanation ? (
             <View style={row.explanationChip}>
               <Text style={row.explanationLabel}>💡 EXPLANATION</Text>
-              <Text style={row.explanationText}>{item.explanation}</Text>
+              <MathText text={item.explanation} textStyle={row.explanationText} />
             </View>
           ) : null}
 
@@ -240,8 +240,13 @@ const row = StyleSheet.create({
   communityNudgeText: { fontSize: 12, color: '#c4b5fd', lineHeight: 17 },
 });
 
+// See HomeScreen.jsx for why this is needed — flex:1 ScrollViews on web
+// need minHeight: 0 or they grow instead of scrolling.
+const webScrollFix = { flex: 1, minHeight: 0 };
+
 export default function ResultScreen({ resultPayload, onExit, onSessionComplete }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
   const {
     rawScore,
     penaltyDeduction,
@@ -285,10 +290,10 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
     <View style={[s.root, { paddingTop: insets.top }]}>
 
       {/* FIXED HEADER */}
-      <View style={s.header}>
+      <View style={[s.header, isDesktop && s.headerDesktop]}>
         <View>
           <Text style={s.headerEyebrow}>{examBody}  •  {bundleName}</Text>
-          <Text style={s.headerTitle}>RESULT PROFILE</Text>
+          <Text style={[s.headerTitle, isDesktop && s.headerTitleDesktop]}>RESULT PROFILE</Text>
         </View>
         <TouchableOpacity style={s.exitBtn} onPress={handleExit}>
           <Text style={s.exitBtnText}>
@@ -298,8 +303,9 @@ export default function ResultScreen({ resultPayload, onExit, onSessionComplete 
       </View>
 
       <ScrollView
-        contentContainerStyle={s.scroll}
-        showsVerticalScrollIndicator={false}
+        style={webScrollFix}
+        contentContainerStyle={[s.scroll, isDesktop && s.scrollDesktop]}
+        showsVerticalScrollIndicator={isDesktop}
       >
 
         {/* SECTION A: SCORE CARD */}
@@ -529,11 +535,20 @@ const s = StyleSheet.create({
     paddingHorizontal: 16, paddingVertical: 12,
     backgroundColor: '#111827', borderBottomWidth: 1, borderColor: '#1e293b',
   },
+  headerDesktop: { paddingHorizontal: 40, paddingVertical: 18 },
   headerEyebrow: { fontSize: 9, fontWeight: '800', color: '#475569', letterSpacing: 1.5, textTransform: 'uppercase' },
   headerTitle:   { fontSize: 18, fontWeight: '900', color: '#f8fafc', letterSpacing: 0.5, marginTop: 2 },
+  headerTitleDesktop: { fontSize: 22 },
   exitBtn:       { backgroundColor: '#1e293b', borderRadius: 8, paddingVertical: 8, paddingHorizontal: 14, borderWidth: 1, borderColor: '#334155' },
   exitBtnText:   { fontSize: 12, fontWeight: '800', color: '#94a3b8' },
   scroll: { padding: 16, paddingBottom: 20 },
+  scrollDesktop: {
+    width: '100%',
+    maxWidth: 760,
+    alignSelf: 'center',
+    paddingHorizontal: 8,
+    paddingTop: 28,
+  },
   scoreCard:   { backgroundColor: '#1e293b', borderRadius: 16, padding: 20, marginBottom: 14, borderWidth: 1, borderColor: '#334155' },
   statsRow:    { flexDirection: 'row', alignItems: 'center', marginTop: 16, marginBottom: 16 },
   statCell:    { flex: 1, alignItems: 'center' },

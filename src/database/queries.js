@@ -385,3 +385,102 @@ export async function clearRoster() {
     return false;
   }
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ANSWER BREAKDOWN — pupil side reads its own class tests (with the per-question
+// misses stored in wrong_answers); ReportService strips the solution before it
+// ever leaves the device. Teacher side stores imported breakdowns per pupil.
+// ─────────────────────────────────────────────────────────────────────────────
+
+// Every class-level test this device has taken, with its wrong-answer detail
+// parsed. Exam-body self-study tests (no class_level) are excluded — the teacher
+// only supervises class tests.
+export async function getClassTestsForReport() {
+  try {
+    const db = await getDb();
+    const rows = await db.getAllAsync(
+      `SELECT id, subject_name, bundle_name, class_level, teacher_code,
+              percentage, total_questions, wrong_answers, timestamp
+       FROM exam_history
+       WHERE class_level IS NOT NULL AND class_level != ''
+       ORDER BY timestamp DESC;`
+    );
+    return rows.map((r) => ({
+      id:             r.id,
+      subjectName:    r.subject_name || 'General',
+      bundleName:     r.bundle_name || '',
+      classLevel:     r.class_level || '',
+      teacherCode:    r.teacher_code || '',
+      percentage:     r.percentage || 0,
+      totalQuestions: r.total_questions || 0,
+      date:           r.timestamp,
+      wrongAnswers:   safeParse(r.wrong_answers, []),
+    }));
+  } catch (error) {
+    console.error("Failed to read class tests for report:", error);
+    return [];
+  }
+}
+
+// Teacher side: store (or refresh) a pupil's imported answer breakdown. One row
+// per pupil device — a newer import replaces the older one.
+export async function saveImportedReport({ pupilDeviceCode, fullName = '', teacherCode = '', report = {} }) {
+  try {
+    const db = await getDb();
+    if (!pupilDeviceCode) return false;
+    await db.runAsync(
+      `INSERT INTO pupil_reports (pupil_device_code, full_name, teacher_code, report, updated_at)
+       VALUES (?, ?, ?, ?, ?)
+       ON CONFLICT(pupil_device_code) DO UPDATE SET
+         full_name    = excluded.full_name,
+         teacher_code = excluded.teacher_code,
+         report       = excluded.report,
+         updated_at   = excluded.updated_at;`,
+      [pupilDeviceCode, fullName, teacherCode, JSON.stringify(report), new Date().toISOString()]
+    );
+    return true;
+  } catch (error) {
+    console.error("Failed to save imported report:", error);
+    return false;
+  }
+}
+
+export async function getReportForPupil(pupilDeviceCode) {
+  try {
+    const db = await getDb();
+    const row = await db.getFirstAsync(
+      "SELECT * FROM pupil_reports WHERE pupil_device_code = ?;",
+      [pupilDeviceCode]
+    );
+    if (!row) return null;
+    const parsed = safeParse(row.report, null);
+    return parsed ? { ...parsed, updatedAt: row.updated_at } : null;
+  } catch (error) {
+    console.error("Failed to read pupil report:", error);
+    return null;
+  }
+}
+
+// The set of pupil device codes that have an imported breakdown — lets the
+// roster show a small "breakdown available" marker without loading every report.
+export async function getReportPupilCodes() {
+  try {
+    const db = await getDb();
+    const rows = await db.getAllAsync("SELECT pupil_device_code FROM pupil_reports;");
+    return rows.map((r) => r.pupil_device_code);
+  } catch (error) {
+    console.error("Failed to read report codes:", error);
+    return [];
+  }
+}
+
+export async function deleteReportForPupil(pupilDeviceCode) {
+  try {
+    const db = await getDb();
+    await db.runAsync("DELETE FROM pupil_reports WHERE pupil_device_code = ?;", [pupilDeviceCode]);
+    return true;
+  } catch (error) {
+    console.error("Failed to delete pupil report:", error);
+    return false;
+  }
+}

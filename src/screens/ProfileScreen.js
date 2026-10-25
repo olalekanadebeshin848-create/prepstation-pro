@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useIsDesktop } from '../hooks/useResponsive';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // OPTIONS
@@ -91,6 +92,7 @@ function SelectChips({ options, selected, onSelect, multi = false }) {
 
 export default function ProfileScreen({ onComplete }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
   const scrollRef = useRef(null);
 
   const [fullName,        setFullName]        = useState('');
@@ -190,7 +192,7 @@ export default function ProfileScreen({ onComplete }) {
         <ScrollView
           ref={scrollRef}
           contentContainerStyle={[styles.scroll, { paddingBottom: insets.bottom + 100 }]}
-          showsVerticalScrollIndicator={false}
+          showsVerticalScrollIndicator={isDesktop}
           keyboardShouldPersistTaps="handled"
         >
 

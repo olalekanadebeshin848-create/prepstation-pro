@@ -1,6 +1,22 @@
 import * as SecureStore from 'expo-secure-store';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform } from 'react-native';
 
 const LICENSE_KEY = 'DEVICE_LICENSE_CODE';
+
+// expo-secure-store only works on real phones (iOS/Android). On web/Electron
+// it silently fails, which is why the desktop app was showing "------"
+// instead of a code. AsyncStorage works everywhere, so we use it on web
+// and keep SecureStore (the more secure option) on real devices.
+const isWeb = Platform.OS === 'web';
+
+async function storageGet(key) {
+  return isWeb ? AsyncStorage.getItem(key) : SecureStore.getItemAsync(key);
+}
+
+async function storageSet(key, value) {
+  return isWeb ? AsyncStorage.setItem(key, value) : SecureStore.setItemAsync(key, value);
+}
 
 // Generates a random 6-digit number as a string e.g. "482910"
 const generateSixDigitCode = () => {
@@ -10,11 +26,11 @@ const generateSixDigitCode = () => {
 // Call this on app startup — returns existing code or creates a new one
 export const getOrCreateDeviceLicense = async () => {
   try {
-    const existing = await SecureStore.getItemAsync(LICENSE_KEY);
+    const existing = await storageGet(LICENSE_KEY);
     if (existing) return existing;
 
     const newCode = generateSixDigitCode();
-    await SecureStore.setItemAsync(LICENSE_KEY, newCode);
+    await storageSet(LICENSE_KEY, newCode);
     return newCode;
   } catch (err) {
     console.error('LicenseService error:', err);

@@ -1,4 +1,5 @@
 import * as SQLite from 'expo-sqlite';
+import { Platform } from 'react-native';
 import { setDbInstance, setDbReadyPromise } from './queries';
 
 const DB_NAME = 'questions_v2.db';
@@ -18,7 +19,6 @@ function openAndSetupDb() {
 
     await db.execAsync(`
       PRAGMA foreign_keys = ON;
-      PRAGMA journal_mode = WAL;
 
       CREATE TABLE IF NOT EXISTS subjects (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -82,9 +82,34 @@ function openAndSetupDb() {
       );
 
       CREATE INDEX IF NOT EXISTS idx_roster_pupil ON teacher_roster(pupil_device_code);
+
+      CREATE TABLE IF NOT EXISTS pupil_reports (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        pupil_device_code TEXT UNIQUE,
+        full_name TEXT,
+        teacher_code TEXT,
+        report TEXT,
+        updated_at TEXT
+      );
+
+      CREATE INDEX IF NOT EXISTS idx_pupil_reports ON pupil_reports(pupil_device_code);
     `);
 
     console.log('✅ Schema ready');
+
+    // WAL mode is not supported by any browser SQLite backend as of today —
+    // forcing it on web/Electron leaves writes waiting on a lock that never
+    // releases, which is why db.runAsync() calls (INSERT/UPDATE) would hang
+    // forever with no error while reads kept working fine. Native platforms
+    // (iOS/Android) still get WAL for its normal concurrency benefits.
+    // busy_timeout makes native writes wait-and-retry instead of throwing
+    // "database is locked" under contention.
+    if (Platform.OS === 'web') {
+      try { await db.execAsync('PRAGMA journal_mode = DELETE;'); } catch (e) { /* default is fine */ }
+    } else {
+      try { await db.execAsync('PRAGMA journal_mode = WAL;'); } catch (e) { /* ignore */ }
+      try { await db.execAsync('PRAGMA busy_timeout = 3000;'); } catch (e) { /* ignore */ }
+    }
 
     const migrations = [
       `ALTER TABLE exam_history ADD COLUMN raw_score INTEGER DEFAULT 0;`,

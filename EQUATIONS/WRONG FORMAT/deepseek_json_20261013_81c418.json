@@ -1,0 +1,2468 @@
+﻿{
+  "strataMetadata": {
+    "label": "SS 1 Literature in English — Complete Question Set (200 Questions)",
+    "renderedAt": "2026-10-08",
+    "edition": "ED1",
+    "gradeLevel": "SS 1",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "SS 1",
+    "strataId": "strata_2",
+    "displayName": "STRATA 2",
+    "durationMinutes": 20,
+    "bundles": [
+      {
+        "id": "s2_b1",
+        "strataId": "strata_2",
+        "name": "Bundle 1",
+        "requiredScore": 80,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "questions": [
+          {
+            "id": "s2_b1_001",
+            "text": "In Act One Scene One, Taye's warning about Uncle Makinde reveals his suspicion. What specific observation about Makinde's life did Taye recall his father making?",
+            "options": [
+              "Makinde had never visited their home before",
+              "Makinde was jealous of his brother's two sons because he was childless",
+              "Makinde had stolen money from the family before",
+              "Makinde had refused to attend Yomi's funeral"
+            ],
+            "answer": "Makinde was jealous of his brother's two sons because he was childless",
+            "explanation": "Taye recalls his late father's observation that Makinde was jealous of his brother's two sons because Makinde was childless. This foreshadows Makinde's cruel treatment of Bolaji."
+          },
+          {
+            "id": "s2_b1_002",
+            "text": "When Bolaji promises to become wealthy and buy suits, what deeper motivation does this reveal about his character?",
+            "options": [
+              "He wants to show off to his friends",
+              "He seeks to escape poverty and uplift his family from ridicule",
+              "He intends to prove Taye wrong",
+              "He desires to impress his uncle"
+            ],
+            "answer": "He seeks to escape poverty and uplift his family from ridicule",
+            "explanation": "Bolaji's promise to buy suits and send money monthly is motivated by his desire to uplift the family from poverty and the insults of market women and Iya Korede."
+          },
+          {
+            "id": "s2_b1_003",
+            "text": "The dramatic irony in Act One Scene One is intensified when Iya Korede taunts Mama. What specific fate does she predict for Mama?",
+            "options": [
+              "That she will become wealthy",
+              "That her sons will leave her to burn to ashes",
+              "That she will remarry soon",
+              "That she will be arrested"
+            ],
+            "answer": "That her sons will leave her to burn to ashes",
+            "explanation": "Iya Korede warns Mama that her sons will leave her and she will 'burn to ashes.' This is dramatically ironic because Madam Bisola later sets fire to Mama's house herself."
+          },
+          {
+            "id": "s2_b1_004",
+            "text": "What specific moral principles does Bolaji recite as their late father's code?",
+            "options": [
+              "Wealth, power, and fame",
+              "Truth, peace, justice, virtue, patience, and avoiding revenge",
+              "Courage, strength, and victory",
+              "Honor, duty, and sacrifice"
+            ],
+            "answer": "Truth, peace, justice, virtue, patience, and avoiding revenge",
+            "explanation": "Bolaji recites their father's moral code: truth, peace, justice, virtue, patience, and avoiding revenge. This code becomes a recurring moral touchstone in the play."
+          },
+          {
+            "id": "s2_b1_005",
+            "text": "What is the significance of Taye being surrounded by old photographs and family mementos when the play opens?",
+            "options": [
+              "It shows he is materialistic",
+              "It symbolizes his deep attachment to family and memory",
+              "It indicates he is planning to sell them",
+              "It suggests he is forgetful"
+            ],
+            "answer": "It symbolizes his deep attachment to family and memory",
+            "explanation": "The old photographs and family mementos symbolize Taye's deep attachment to family and memory, particularly his bond with Bolaji and their late father."
+          },
+          {
+            "id": "s2_b1_006",
+            "text": "What specific detail about Alani community's roads is mentioned in the play?",
+            "options": [
+              "They are paved with interlocking stones",
+              "They are unpaved and gullied, eroded into a nearby stream",
+              "They are freshly tarred",
+              "They are lined with streetlights"
+            ],
+            "answer": "They are unpaved and gullied, eroded into a nearby stream",
+            "explanation": "Alani's roads are described as unpaved and gullied, eroded into a nearby stream. This detail establishes the community's neglect and poverty."
+          },
+          {
+            "id": "s2_b1_007",
+            "text": "What is the 'eko' that Mama Titi sells, and how many buckets does she use to distribute it?",
+            "options": [
+              "Bread; three buckets",
+              "Corn pap; two buckets (large and small)",
+              "Rice; four buckets",
+              "Stew; one bucket"
+            ],
+            "answer": "Corn pap; two buckets (large and small)",
+            "explanation": "Mama Titi sells 'eko' (corn pap) and distributes it in two buckets—one large and one small—which Taye helps carry before school."
+          },
+          {
+            "id": "s2_b1_008",
+            "text": "What is the specific title of the essay competition Taye enters?",
+            "options": [
+              "My Community and I",
+              "The Person I Would Like to Become",
+              "The Future of Nigeria",
+              "My Role Model"
+            ],
+            "answer": "The Person I Would Like to Become",
+            "explanation": "Taye writes about 'The Person I Would Like to Become,' choosing his mother as his subject. This essay wins the state-wide competition."
+          },
+          {
+            "id": "s2_b1_009",
+            "text": "During the school ambush, what specific insult from Korede finally causes Taye to snap and fight back?",
+            "options": [
+              "Korede called him poor",
+              "Korede called Mama a witch and accused her of killing Yomi",
+              "Korede mocked his torn uniform",
+              "Korede insulted his academic performance"
+            ],
+            "answer": "Korede called Mama a witch and accused her of killing Yomi",
+            "explanation": "Taye snaps when Korede calls Mama a witch and accuses her of killing Yomi. The insult against his deceased father is what he cannot endure."
+          },
+          {
+            "id": "s2_b1_010",
+            "text": "Where specifically does the school ambush take place?",
+            "options": [
+              "Inside the classroom",
+              "Near an uncompleted school building",
+              "At the school gate",
+              "In the school library"
+            ],
+            "answer": "Near an uncompleted school building",
+            "explanation": "The ambush by Korede, Seyi, and Dopemu occurs near an uncompleted school building after Taye parts with Mama at the school gates."
+          },
+          {
+            "id": "s2_b1_011",
+            "text": "What weapon does Mama initially confront Taye with upon seeing his torn uniform and bruises?",
+            "options": [
+              "A belt",
+              "A koboko (horsewhip)",
+              "A cane",
+              "A broom"
+            ],
+            "answer": "A koboko (horsewhip)",
+            "explanation": "Mama initially confronts Taye with a koboko (horsewhip), dismayed that he resorted to street fighting."
+          },
+          {
+            "id": "s2_b1_012",
+            "text": "What philosophical lesson does Mama teach Taye about name-calling?",
+            "options": [
+              "You should always fight back against insults",
+              "Calling someone a name does not make them one unless they accept it",
+              "You should report all insults to the police",
+              "Names have no power at all"
+            ],
+            "answer": "Calling someone a name does not make them one unless they accept it",
+            "explanation": "Mama teaches that calling someone a name does not make them one unless they accept it. This is a core moral lesson about dignity and self-worth."
+          },
+          {
+            "id": "s2_b1_013",
+            "text": "What specific action does Mama take after locking Taye outside to reflect?",
+            "options": [
+              "She leaves him outside all night",
+              "She opens the door, cleans his wounds with warm water, and serves him food",
+              "She calls the police",
+              "She sends him to bed without food"
+            ],
+            "answer": "She opens the door, cleans his wounds with warm water, and serves him food",
+            "explanation": "After locking Taye outside to reflect, Mama opens the door, cleans his wounds with warm water and a towel, and serves him food—demonstrating both discipline and tenderness."
+          },
+          {
+            "id": "s2_b1_014",
+            "text": "What is the core dictum Mama gives Taye at the end of Act One Scene Four?",
+            "options": [
+              "Violence is sometimes necessary",
+              "You are not your environment",
+              "Poverty is a curse",
+              "Education is the only way out"
+            ],
+            "answer": "You are not your environment",
+            "explanation": "Mama's core dictum is 'You are not your environment.' This becomes the philosophical backbone of the play."
+          },
+          {
+            "id": "s2_b1_015",
+            "text": "What specific detail about the generator enclosure symbolizes Bolaji's debasement?",
+            "options": [
+              "It is painted white",
+              "It is cramped, filthy, and stained with engine oil and soot",
+              "It has a comfortable bed",
+              "It is located in the main house"
+            ],
+            "answer": "It is cramped, filthy, and stained with engine oil and soot",
+            "explanation": "The generator enclosure is cramped, filthy, and stained with engine oil and soot—symbolizing Bolaji's degradation and dehumanization."
+          },
+          {
+            "id": "s2_b1_016",
+            "text": "What specific physical abuse does Makinde inflict on Bolaji when Bolaji objects to Sewa insulting his late father?",
+            "options": [
+              "He slaps him once",
+              "He brutally beats him with a belt",
+              "He locks him in a room",
+              "He denies him water"
+            ],
+            "answer": "He brutally beats him with a belt",
+            "explanation": "When Bolaji objects to Sewa insulting his late father, Makinde brutally beats him with a belt and warns him that he is nothing more than a servant."
+          },
+          {
+            "id": "s2_b1_017",
+            "text": "What specific threat does Makinde make to prevent Bolaji from escaping?",
+            "options": [
+              "He threatens to kill Mama and Taye",
+              "He tells him 'You will die if you try to do so'",
+              "He threatens to report him to the police",
+              "He threatens to burn his house"
+            ],
+            "answer": "He tells him 'You will die if you try to do so'",
+            "explanation": "Makinde threatens Bolaji with death if he attempts to escape, saying 'You will die if you try to do so.'"
+          },
+          {
+            "id": "s2_b1_018",
+            "text": "What specific substance does Makinde force up Bolaji's nostrils?",
+            "options": [
+              "Powdered pepper",
+              "Cocaine (white narcotics)",
+              "Cement dust",
+              "Flour"
+            ],
+            "answer": "Cocaine (white narcotics)",
+            "explanation": "Makinde forcefully administers cocaine (white narcotics) up Bolaji's nostrils, laughing hysterically as Bolaji chokes and wheezes."
+          },
+          {
+            "id": "s2_b1_019",
+            "text": "What specific conditions does Makinde place on Bolaji's phone call home?",
+            "options": [
+              "He must speak only in English",
+              "He must not reveal the truth or face violence",
+              "He must keep the call under one minute",
+              "He must pretend to be sick"
+            ],
+            "answer": "He must not reveal the truth or face violence",
+            "explanation": "Makinde threatens Bolaji with violence if he reveals the truth about his situation during the scripted phone call home."
+          },
+          {
+            "id": "s2_b1_020",
+            "text": "What specific detail about Bolaji's physical appearance during the phone call reveals his suffering?",
+            "options": [
+              "He is laughing",
+              "He is choking back tears and coughing from smoke",
+              "He is shouting",
+              "He is singing"
+            ],
+            "answer": "He is choking back tears and coughing from smoke",
+            "explanation": "During the phone call, Bolaji is choking back tears and coughing from smoke, revealing his suffering despite his lies about doing excellently."
+          },
+          {
+            "id": "s2_b1_021",
+            "text": "What specific detail about Makinde's compound contrasts with Alani's squalor?",
+            "options": [
+              "It has a garden",
+              "It features interlocking paving stones and a gateman",
+              "It has a swimming pool",
+              "It is made of mud"
+            ],
+            "answer": "It features interlocking paving stones and a gateman",
+            "explanation": "Makinde's compound features interlocking paving stones and a gateman, contrasting sharply with Alani's unpaved, gullied roads."
+          },
+          {
+            "id": "s2_b1_022",
+            "text": "What specific term does Sewa use to address Bolaji upon his arrival?",
+            "options": [
+              "Dear nephew",
+              "Filthy creature",
+              "Young man",
+              "Servant boy"
+            ],
+            "answer": "Filthy creature",
+            "explanation": "Aunty Sewa calls Bolaji a 'filthy creature' and refuses to allow him inside the main house, establishing her cruelty from the outset."
+          },
+          {
+            "id": "s2_b1_023",
+            "text": "What specific action does Bolaji take when he first meets Makinde in the city?",
+            "options": [
+              "He shakes his hand",
+              "He prostrates before him to plead for decent accommodation",
+              "He runs away",
+              "He refuses to speak"
+            ],
+            "answer": "He prostrates before him to plead for decent accommodation",
+            "explanation": "Bolaji prostrates before Makinde to plead for decent accommodation, but Makinde slaps him to the ground—shattering his illusions."
+          },
+          {
+            "id": "s2_b1_024",
+            "text": "What specific name is given to Alani community in the play's description?",
+            "options": [
+              "The garden of Eden",
+              "The bin of the community",
+              "The promised land",
+              "The city of lights"
+            ],
+            "answer": "The bin of the community",
+            "explanation": "Alani community is described as the 'bin of the community,' emphasizing its neglect and status as a dumping ground for social vices."
+          },
+          {
+            "id": "s2_b1_025",
+            "text": "What specific social vices are mentioned as rampant in Alani?",
+            "options": [
+              "Only theft",
+              "Thugs, street urchins, and harlots",
+              "Only drug abuse",
+              "Only gambling"
+            ],
+            "answer": "Thugs, street urchins, and harlots",
+            "explanation": "Alani is described as having rampant social vices including thugs, street urchins, and harlots."
+          },
+          {
+            "id": "s2_b1_026",
+            "text": "What specific role does the gateman play in Makinde's compound?",
+            "options": [
+              "He cooks meals",
+              "He guards the gate and maintains security",
+              "He cleans the house",
+              "He drives the car"
+            ],
+            "answer": "He guards the gate and maintains security",
+            "explanation": "The gateman guards the gate and maintains security at Makinde's compound, emphasizing the affluence and separation from the outside world."
+          },
+          {
+            "id": "s2_b1_027",
+            "text": "What specific detail about the parlour in Act One Scene Five indicates Makinde's drug use?",
+            "options": [
+              "It is brightly lit",
+              "It is smoky, with doors and windows shut tight",
+              "It is filled with plants",
+              "It has classical music playing"
+            ],
+            "answer": "It is smoky, with doors and windows shut tight",
+            "explanation": "The parlour is smoky, with doors and windows shut tight, indicating Makinde's drug use and creating a claustrophobic atmosphere."
+          },
+          {
+            "id": "s2_b1_028",
+            "text": "What specific object does Bolaji carry home from his first clandestine assignment?",
+            "options": [
+              "A suitcase of clothes",
+              "A heavy bag later revealed to contain sachets of white narcotics",
+              "A bag of groceries",
+              "A box of books"
+            ],
+            "answer": "A heavy bag later revealed to contain sachets of white narcotics",
+            "explanation": "Bolaji carries a heavy bag from his first assignment, which Makinde unzips to reveal large sachets of white narcotics (drugs)."
+          },
+          {
+            "id": "s2_b1_029",
+            "text": "What specific action does Makinde take when he reveals the bag's contents to Bolaji?",
+            "options": [
+              "He hides it immediately",
+              "He snorts powder and orders Bolaji to do the same",
+              "He calls the police",
+              "He throws it away"
+            ],
+            "answer": "He snorts powder and orders Bolaji to do the same",
+            "explanation": "Makinde snorts powder (cocaine) and orders Bolaji to do the same, demonstrating his control and corruption."
+          },
+          {
+            "id": "s2_b1_030",
+            "text": "What specific excuse does Bolaji give Makinde for refusing to take the drugs?",
+            "options": [
+              "He is allergic",
+              "He cites his father's principles",
+              "He is too young",
+              "He is feeling sick"
+            ],
+            "answer": "He cites his father's principles",
+            "explanation": "Bolaji refuses to take the drugs, citing his father's principles. This enrages Makinde, who then forces the powder up his nostrils."
+          },
+          {
+            "id": "s2_b1_031",
+            "text": "What specific reaction does Makinde have when Bolaji chokes on the forced drugs?",
+            "options": [
+              "He calls for help",
+              "He laughs hysterically",
+              "He apologizes",
+              "He looks away in shame"
+            ],
+            "answer": "He laughs hysterically",
+            "explanation": "Makinde laughs hysterically as Bolaji chokes and wheezes on the forced cocaine, revealing his sadistic nature."
+          },
+          {
+            "id": "s2_b1_032",
+            "text": "What specific promise does Makinde make to Mama Titi about Bolaji before they depart?",
+            "options": [
+              "That Bolaji will return in a month",
+              "That Bolaji will grow into greatness",
+              "That Bolaji will become a soldier",
+              "That Bolaji will learn a trade"
+            ],
+            "answer": "That Bolaji will grow into greatness",
+            "explanation": "Makinde deceitfully promises Mama Titi that Bolaji will grow into greatness. This promise is dramatically ironic given the enslavement that follows."
+          },
+          {
+            "id": "s2_b1_033",
+            "text": "What specific detail about Bolaji's departure indicates his naivety?",
+            "options": [
+              "He leaves with no luggage",
+              "He believes he will become wealthy and buy suits",
+              "He refuses to say goodbye",
+              "He cries uncontrollably"
+            ],
+            "answer": "He believes he will become wealthy and buy suits",
+            "explanation": "Bolaji's naivety is shown in his belief that he will become wealthy, buy suits, and send money monthly—illusions that Makinde's mentorship shatters."
+          },
+          {
+            "id": "s2_b1_034",
+            "text": "What specific role does Mama Titi play in the family's economic survival?",
+            "options": [
+              "She begs for alms",
+              "She cooks and hawks eko (corn pap)",
+              "She sells clothing",
+              "She works as a maid"
+            ],
+            "answer": "She cooks and hawks eko (corn pap)",
+            "explanation": "Mama Titi sustains her family by cooking and hawking eko (corn pap), demonstrating her industriousness and dignity in penury."
+          },
+          {
+            "id": "s2_b1_035",
+            "text": "What specific detail about the two buckets of eko is significant?",
+            "options": [
+              "They are both the same size",
+              "One is large and one is small",
+              "They are made of silver",
+              "They are both broken"
+            ],
+            "answer": "One is large and one is small",
+            "explanation": "The two buckets—one large and one small—symbolize maternal industry and the humble dignity of Mama's labor."
+          },
+          {
+            "id": "s2_b1_036",
+            "text": "What specific action does Taye take before parting with Mama at the school gates?",
+            "options": [
+              "He gives her money",
+              "He helps carry the buckets of eko",
+              "He tells her a story",
+              "He sings a song"
+            ],
+            "answer": "He helps carry the buckets of eko",
+            "explanation": "Taye helps Mama carry the buckets of eko before parting with her at the school gates, showing his filial devotion."
+          },
+          {
+            "id": "s2_b1_037",
+            "text": "What specific fate does Madam Bisola predict for Mama's house in Act One?",
+            "options": [
+              "That it will be sold",
+              "That it will burn to ashes",
+              "That it will collapse",
+              "That it will be demolished"
+            ],
+            "answer": "That it will burn to ashes",
+            "explanation": "Madam Bisola predicts that Mama's house will burn to ashes, foreshadowing her arson attack in Act Two."
+          },
+          {
+            "id": "s2_b1_038",
+            "text": "What specific detail about Taye's bedroom indicates the family's poverty?",
+            "options": [
+              "It has a large bed",
+              "It is dilapidated",
+              "It has new furniture",
+              "It is painted white"
+            ],
+            "answer": "It is dilapidated",
+            "explanation": "Taye's bedroom is described as dilapidated, indicating the family's severe poverty in Alani community."
+          },
+          {
+            "id": "s2_b1_039",
+            "text": "What specific time of day does Act One Scene One take place?",
+            "options": [
+              "Night",
+              "Morning (sun shines on Taye's bed)",
+              "Afternoon",
+              "Evening"
+            ],
+            "answer": "Morning (sun shines on Taye's bed)",
+            "explanation": "Act One Scene One takes place in the morning, with the sun shining on Taye's bed—creating a contrast between natural beauty and human suffering."
+          },
+          {
+            "id": "s2_b1_040",
+            "text": "What specific moral lesson does Mama give Taye about his father's legacy?",
+            "options": [
+              "That Yomi was a violent soldier",
+              "That Yomi fought for justice and non-violent conflict resolution",
+              "That Yomi was a wealthy man",
+              "That Yomi was a strict disciplinarian"
+            ],
+            "answer": "That Yomi fought for justice and non-violent conflict resolution",
+            "explanation": "Mama clarifies that late Yomi fought for justice and non-violent conflict resolution, not senseless brawls—correcting Taye's misconception about his father's legacy."
+          }
+        ]
+      },
+      {
+        "id": "s2_b2",
+        "strataId": "strata_2",
+        "name": "Bundle 2",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "questions": [
+          {
+            "id": "s2_b2_001",
+            "text": "One year later in Act Two Scene One, what specific event causes joyful shouting from Mama's flat next door?",
+            "options": [
+              "Bolaji's return",
+              "Taye winning the state-wide essay competition",
+              "Mama's remarriage",
+              "Taye's birthday"
+            ],
+            "answer": "Taye winning the state-wide essay competition",
+            "explanation": "One year later, joyful shouting erupts from Mama's flat because Taye has won the state-wide essay competition and secured a full university scholarship."
+          },
+          {
+            "id": "s2_b2_002",
+            "text": "What specific lie does Madam Bisola initially assume Taye is telling his mother to cause the celebration?",
+            "options": [
+              "That he has found a job",
+              "That he is giving her false hope",
+              "That he has met a rich man",
+              "That he has won a lottery"
+            ],
+            "answer": "That he is giving her false hope",
+            "explanation": "Madam Bisola mocks the celebration, assuming Taye is giving his mother false hope—revealing her cynical worldview."
+          },
+          {
+            "id": "s2_b2_003",
+            "text": "What specific truth does Korede confess to his mother about the essay competition?",
+            "options": [
+              "That he didn't enter",
+              "That Taye won, defeating contestants from across the state",
+              "That the competition was rigged",
+              "That he was sick"
+            ],
+            "answer": "That Taye won, defeating contestants from across the state",
+            "explanation": "Korede confesses that Taye won the state-wide essay competition, defeating contestants from across the state and securing a full university scholarship."
+          },
+          {
+            "id": "s2_b2_004",
+            "text": "What specific supernatural claim does Madam Bisola make to explain Taye's victory?",
+            "options": [
+              "That Taye cheated",
+              "That Mama Titi used witchcraft to divert Korede's destiny",
+              "That the judges were bribed",
+              "That Taye had inside information"
+            ],
+            "answer": "That Mama Titi used witchcraft to divert Korede's destiny",
+            "explanation": "Madam Bisola claims Mama Titi used witchcraft to divert Korede's destiny and give it to Taye—refusing to accept Taye's merit."
+          },
+          {
+            "id": "s2_b2_005",
+            "text": "What specific additional supernatural claim does Madam Bisola make about the landlord?",
+            "options": [
+              "That Mama bribed him",
+              "That Mama bewitched him into waiving rent",
+              "That he is a relative",
+              "That he fears Mama"
+            ],
+            "answer": "That Mama bewitched him into waiving rent",
+            "explanation": "Madam Bisola claims Mama Titi bewitched the landlord into waiving rent, adding to her irrational accusations of witchcraft."
+          },
+          {
+            "id": "s2_b2_006",
+            "text": "What specific action does Madam Bisola promise Korede at the end of Act Two Scene One?",
+            "options": [
+              "To report Taye to the police",
+              "To eliminate Mama and Taye that very night",
+              "To move away from Alani",
+              "To help Taye with his studies"
+            ],
+            "answer": "To eliminate Mama and Taye that very night",
+            "explanation": "Madam Bisola promises Korede that she will treat Mama like witches in her home village and eliminate them that very night—setting up the arson attack."
+          },
+          {
+            "id": "s2_b2_007",
+            "text": "What specific physical change has Bolaji undergone by Act Two Scene Two?",
+            "options": [
+              "He is now muscular",
+              "He is gaunt, emaciated, and 'thin as a rake'",
+              "He is taller",
+              "He has grown a beard"
+            ],
+            "answer": "He is gaunt, emaciated, and 'thin as a rake'",
+            "explanation": "Bolaji is described as gaunt, emaciated, 'thin as a rake,' hardened, and dangerous in appearance—showing the physical toll of his enslavement."
+          },
+          {
+            "id": "s2_b2_008",
+            "text": "What specific detail does Femi reveal about Makinde's pattern with child runners?",
+            "options": [
+              "He trains them for years",
+              "He usually discards them within six months",
+              "He sends them to school",
+              "He treats them like family"
+            ],
+            "answer": "He usually discards them within six months",
+            "explanation": "Femi reveals that Makinde usually discards child runners within six months. He is surprised Bolaji has survived a year."
+          },
+          {
+            "id": "s2_b2_009",
+            "text": "What specific relationship does Bolaji reveal to Femi?",
+            "options": [
+              "That Makinde is his teacher",
+              "That Makinde is his actual biological uncle",
+              "That Makinde is a stranger",
+              "That Makinde is his father"
+            ],
+            "answer": "That Makinde is his actual biological uncle",
+            "explanation": "Bolaji reveals that Makinde is his actual biological uncle, highlighting the hypocrisy of kinship and exploitation."
+          },
+          {
+            "id": "s2_b2_010",
+            "text": "What specific plan does Femi propose to Bolaji in Act Two Scene Two?",
+            "options": [
+              "To report Makinde to the police",
+              "To abscond with both Uncle's cash bag and the Master's drug bag",
+              "To return home together",
+              "To confront Makinde"
+            ],
+            "answer": "To abscond with both Uncle's cash bag and the Master's drug bag",
+            "explanation": "Femi proposes absconding with both Uncle's cash bag and the Master's drug bag—a dangerous plan that Bolaji initially refuses."
+          },
+          {
+            "id": "s2_b2_011",
+            "text": "What specific reason does Bolaji give for refusing Femi's escape proposal?",
+            "options": [
+              "He is afraid of the Master",
+              "He believes Makinde regularly sends money home to sustain Mama and Taye",
+              "He has nowhere to go",
+              "He trusts Makinde"
+            ],
+            "answer": "He believes Makinde regularly sends money home to sustain Mama and Taye",
+            "explanation": "Bolaji refuses because he believes Makinde regularly sends money home to sustain Mama and Taye. He endures servitude for his family's sake."
+          },
+          {
+            "id": "s2_b2_012",
+            "text": "What specific setting is used for the drug exchange in Act Two Scene Two?",
+            "options": [
+              "A busy market",
+              "An isolated uncompleted building",
+              "A shopping mall",
+              "A police station"
+            ],
+            "answer": "An isolated uncompleted building",
+            "explanation": "The drug exchange takes place in an isolated uncompleted building—a concrete shell used for clandestine deals."
+          },
+          {
+            "id": "s2_b2_013",
+            "text": "What specific item does Bolaji carry to the drug exchange?",
+            "options": [
+              "An empty bag",
+              "A loaded money bag",
+              "A bag of clothes",
+              "A food basket"
+            ],
+            "answer": "A loaded money bag",
+            "explanation": "Bolaji carries a loaded money bag to exchange for narcotics with Femi, Sola, and Wunmi."
+          },
+          {
+            "id": "s2_b2_014",
+            "text": "What specific detail about Femi's background is revealed in Act Two Scene Two?",
+            "options": [
+              "He is a university graduate",
+              "He has been in the drug underworld for nine years since age twelve",
+              "He is Makinde's son",
+              "He is a police informant"
+            ],
+            "answer": "He has been in the drug underworld for nine years since age twelve",
+            "explanation": "Femi has been in the drug underworld for nine years (since age twelve) and knows all city escape routes."
+          },
+          {
+            "id": "s2_b2_015",
+            "text": "What specific role do Sola and Wunmi play in the drug syndicate?",
+            "options": [
+              "They are Makinde's children",
+              "They are accomplices who assist in the drug trade and flee with Femi",
+              "They are police officers",
+              "They are teachers"
+            ],
+            "answer": "They are accomplices who assist in the drug trade and flee with Femi",
+            "explanation": "Sola and Wunmi are accomplices of Femi who assist in the drug trade and flee with him."
+          },
+          {
+            "id": "s2_b2_016",
+            "text": "What specific disaster strikes Alani community in Act Two Scene Three?",
+            "options": [
+              "A flood",
+              "A fire that engulfs Mama's house",
+              "An earthquake",
+              "A storm"
+            ],
+            "answer": "A fire that engulfs Mama's house",
+            "explanation": "A fire engulfs Mama's house in Act Two Scene Three, orchestrated by Madam Bisola's arson."
+          },
+          {
+            "id": "s2_b2_017",
+            "text": "What specific action does Taye take to escape the burning house?",
+            "options": [
+              "He jumps through a window",
+              "He wraps his hand in cloth, forces open the burning metal door lock, and escapes",
+              "He calls for help",
+              "He hides under the bed"
+            ],
+            "answer": "He wraps his hand in cloth, forces open the burning metal door lock, and escapes",
+            "explanation": "Taye wraps his hand in cloth, forces open the burning metal door lock, and escapes the inferno—showing his courage and quick thinking."
+          },
+          {
+            "id": "s2_b2_018",
+            "text": "What specific fate befalls Mama Titi during the fire?",
+            "options": [
+              "She escapes unharmed",
+              "She collapses unconscious inside and is pulled out by neighbors",
+              "She is trapped and dies",
+              "She runs out immediately"
+            ],
+            "answer": "She collapses unconscious inside and is pulled out by neighbors",
+            "explanation": "Mama Titi collapses unconscious inside and is pulled out by neighbors. She suffers smoke inhalation and is hospitalised."
+          },
+          {
+            "id": "s2_b2_019",
+            "text": "What specific malicious action does Madam Bisola take at the fire scene?",
+            "options": [
+              "She calls the fire service",
+              "She answers Mama's dropped phone and lies to Makinde that Mama and Taye died",
+              "She helps rescue Mama",
+              "She cries for help"
+            ],
+            "answer": "She answers Mama's dropped phone and lies to Makinde that Mama and Taye died",
+            "explanation": "Madam Bisola pretends to help at the fire scene but answers Mama's dropped phone and falsely informs Makinde that Mama Titi and Taye died in the fire."
+          },
+          {
+            "id": "s2_b2_020",
+            "text": "What specific reaction do Makinde and Sewa have to the false death report?",
+            "options": [
+              "They mourn sincerely",
+              "They celebrate, laughing that they now have zero obligation and can keep Bolaji enslaved",
+              "They call the police",
+              "They rush to Alani"
+            ],
+            "answer": "They celebrate, laughing that they now have zero obligation and can keep Bolaji enslaved",
+            "explanation": "Makinde and Sewa celebrate the false news, laughing that they now have zero obligation to anyone and can keep Bolaji enslaved permanently—revealing their villainy."
+          },
+          {
+            "id": "s2_b2_021",
+            "text": "What specific action does Bolaji take upon overhearing Makinde and Sewa's celebration?",
+            "options": [
+              "He confronts them",
+              "He retreats to the generator shed and weeps in boundless agony",
+              "He calls the police",
+              "He runs away immediately"
+            ],
+            "answer": "He retreats to the generator shed and weeps in boundless agony",
+            "explanation": "Bolaji overhears everything, retreats to the generator shed, and weeps in boundless agony—questioning why the wicked prosper and the righteous perish."
+          },
+          {
+            "id": "s2_b2_022",
+            "text": "What specific philosophical question does Bolaji ask in his soliloquy at the end of Act Two Scene Three?",
+            "options": [
+              "Why am I so unlucky?",
+              "Why do the wicked always succeed and the good end up enslaved by reckless sinners?",
+              "How can I escape?",
+              "What is the meaning of life?"
+            ],
+            "answer": "Why do the wicked always succeed and the good end up enslaved by reckless sinners?",
+            "explanation": "Bolaji asks: 'God, why do the wicked always succeed? Why do the good people end up being enslaved by reckless sinners?'—a profound theodicy question."
+          },
+          {
+            "id": "s2_b2_023",
+            "text": "What specific decision does Bolaji make in Act Two Scene Four?",
+            "options": [
+              "To return home",
+              "To join Femi, Sola, and Wunmi in stealing drugs and cash to flee the city",
+              "To confront Makinde",
+              "To report to the police"
+            ],
+            "answer": "To join Femi, Sola, and Wunmi in stealing drugs and cash to flee the city",
+            "explanation": "Realizing the family he was sacrificing himself for is supposedly dead, Bolaji agrees to join Femi's escape, taking both the cash bag and drug bag."
+          },
+          {
+            "id": "s2_b2_024",
+            "text": "What specific physical state is Bolaji in when he arrives at the uncompleted building in Act Two Scene Four?",
+            "options": [
+              "He is energetic",
+              "He is pale and ghostly after an entire night of mourning",
+              "He is injured",
+              "He is laughing"
+            ],
+            "answer": "He is pale and ghostly after an entire night of mourning",
+            "explanation": "Bolaji arrives pale and ghostly after an entire night of mourning—showing the emotional toll of believing his family is dead."
+          },
+          {
+            "id": "s2_b2_025",
+            "text": "What specific comment does Sola make about Bolaji's decision to join the escape?",
+            "options": [
+              "He criticizes him",
+              "He commends Bolaji for making a wise choice",
+              "He ignores him",
+              "He refuses to let him join"
+            ],
+            "answer": "He commends Bolaji for making a wise choice",
+            "explanation": "Sola commends Bolaji for making a wise choice, and the four run off into the hedges together."
+          },
+          {
+            "id": "s2_b2_026",
+            "text": "What specific direction do Bolaji, Femi, Sola, and Wunmi run after their escape?",
+            "options": [
+              "Towards the police station",
+              "Into the hedges",
+              "Towards Makinde's house",
+              "Towards Alani community"
+            ],
+            "answer": "Into the hedges",
+            "explanation": "The four run off into the hedges, escaping the city and the drug syndicate."
+          },
+          {
+            "id": "s2_b2_027",
+            "text": "What specific crisis unfolds in Makinde's parlour in Act Two Scene Five?",
+            "options": [
+              "Bolaji returns",
+              "Makinde paces nervously while Sewa rants; the Master demands his crew and drugs",
+              "The police raid the house",
+              "Taye arrives"
+            ],
+            "answer": "Makinde paces nervously while Sewa rants; the Master demands his crew and drugs",
+            "explanation": "In Act Two Scene Five, Makinde paces nervously while Sewa rants. The Master has called, demanding his crew and drugs."
+          },
+          {
+            "id": "s2_b2_028",
+            "text": "How long has Bolaji been missing when Act Two Scene Five opens?",
+            "options": [
+              "Two hours",
+              "Eight hours",
+              "One day",
+              "One week"
+            ],
+            "answer": "Eight hours",
+            "explanation": "Act Two Scene Five opens eight hours after Bolaji's disappearance, with Makinde's search parties finding no trace of him or Femi."
+          },
+          {
+            "id": "s2_b2_029",
+            "text": "What specific shocking sound does Makinde hear when he answers the ringing phone?",
+            "options": [
+              "The Master's voice",
+              "Taye's voice",
+              "The police",
+              "Femi's voice"
+            ],
+            "answer": "Taye's voice",
+            "explanation": "Makinde answers the phone and hears Taye's voice! He drops the phone in horror, realizing Madam Bisola lied and Mama and Taye are alive."
+          },
+          {
+            "id": "s2_b2_030",
+            "text": "What specific realization does Makinde have upon hearing Taye's voice?",
+            "options": [
+              "That Bolaji has returned",
+              "That Madam Bisola lied and Mama and Taye are alive",
+              "That the Master has forgiven him",
+              "That Sewa betrayed him"
+            ],
+            "answer": "That Madam Bisola lied and Mama and Taye are alive",
+            "explanation": "Makinde realizes Madam Bisola lied and Mama and Taye are alive, shattering his celebration and creating a new crisis."
+          },
+          {
+            "id": "s2_b2_031",
+            "text": "What specific diabolical scheme does Sewa propose to cover their tracks?",
+            "options": [
+              "To confess to the police",
+              "To call the family, claim Bolaji was rebellious, and send an unrelated video of a fiery road accident as proof of his death",
+              "To return Bolaji's belongings",
+              "To flee the country"
+            ],
+            "answer": "To call the family, claim Bolaji was rebellious, and send an unrelated video of a fiery road accident as proof of his death",
+            "explanation": "Sewa proposes calling the family, claiming Bolaji was rebellious, and sending an unrelated video of a fiery road accident as proof that Bolaji died—a sinister cover-up."
+          },
+          {
+            "id": "s2_b2_032",
+            "text": "What specific motivation does Sewa give for her diabolical scheme?",
+            "options": [
+              "To protect Bolaji",
+              "To cover their tracks and prevent inquiries",
+              "To help Mama Titi",
+              "To punish Madam Bisola"
+            ],
+            "answer": "To cover their tracks and prevent inquiries",
+            "explanation": "Sewa's motivation is to cover their tracks and prevent inquiries into Bolaji's disappearance, protecting their criminal operations."
+          },
+          {
+            "id": "s2_b2_033",
+            "text": "What specific detail about Makinde's reaction to Sewa's plan reveals his character?",
+            "options": [
+              "He hesitates",
+              "He enthusiastically adopts the plot",
+              "He rejects it",
+              "He cries"
+            ],
+            "answer": "He enthusiastically adopts the plot",
+            "explanation": "Makinde enthusiastically adopts the plot, revealing his complete lack of moral conscience and his commitment to evil."
+          },
+          {
+            "id": "s2_b2_034",
+            "text": "What specific setting is used for the climax in Act Two Scene Six?",
+            "options": [
+              "Mama's house",
+              "The community hospital",
+              "Makinde's parlour",
+              "The school"
+            ],
+            "answer": "The community hospital",
+            "explanation": "The climax takes place in the community hospital, where Mama is recovering from smoke inhalation and Taye is tending to her."
+          },
+          {
+            "id": "s2_b2_035",
+            "text": "What specific information does Taye bring to Mama about the landlord?",
+            "options": [
+              "That he is demanding rent",
+              "That he bears no grudges about the burnt flat",
+              "That he is evicting them",
+              "That he is suing them"
+            ],
+            "answer": "That he bears no grudges about the burnt flat",
+            "explanation": "Taye tells Mama that the landlord bears no grudges about the burnt flat, highlighting the landlord's generosity in contrast to Makinde's cruelty."
+          },
+          {
+            "id": "s2_b2_036",
+            "text": "What specific bewildering news does Taye share with Mama about Uncle Makinde?",
+            "options": [
+              "That Makinde is coming to visit",
+              "That Makinde claims Bolaji was rebellious and ran off",
+              "That Makinde has sent money",
+              "That Makinde is sick"
+            ],
+            "answer": "That Makinde claims Bolaji was rebellious and ran off",
+            "explanation": "Taye is bewildered by Uncle Makinde's sudden claims that Bolaji was rebellious and ran off, setting up the revelation of Bolaji's fabricated death."
+          },
+          {
+            "id": "s2_b2_037",
+            "text": "What specific crushing news does Mama reveal to Taye in the hospital?",
+            "options": [
+              "That she is dying",
+              "That Makinde sent a message claiming Bolaji was killed in a car accident",
+              "That they are homeless",
+              "That Taye lost the scholarship"
+            ],
+            "answer": "That Makinde sent a message claiming Bolaji was killed in a car accident",
+            "explanation": "Mama reveals Makinde's follow-up message claiming Bolaji was killed in a car accident, along with a video of a burning vehicle."
+          },
+          {
+            "id": "s2_b2_038",
+            "text": "What specific detail about the video sent by Makinde makes it convincing?",
+            "options": [
+              "It shows Bolaji's face clearly",
+              "It shows a burning vehicle and bodies being pulled out",
+              "It has clear audio",
+              "It is professionally made"
+            ],
+            "answer": "It shows a burning vehicle and bodies being pulled out",
+            "explanation": "The video shows a burning vehicle and bodies being pulled out, making it convincing enough for Mama and Taye to believe Bolaji is dead."
+          },
+          {
+            "id": "s2_b2_039",
+            "text": "Who arrives at the hospital at the climax of the play?",
+            "options": [
+              "Uncle Makinde and Sewa",
+              "Two men in business suits and Taye's school proprietress",
+              "Madam Bisola and Korede",
+              "The police"
+            ],
+            "answer": "Two men in business suits and Taye's school proprietress",
+            "explanation": "Two men in business suits and Taye's school proprietress arrive at the hospital—state government officials coming to present Taye's scholarship."
+          },
+          {
+            "id": "s2_b2_040",
+            "text": "What specific purpose do the state government officials have for visiting the hospital?",
+            "options": [
+              "To arrest Taye",
+              "To confirm Taye's essay authorship and present his university scholarship",
+              "To interview Mama",
+              "To investigate the fire"
+            ],
+            "answer": "To confirm Taye's essay authorship and present his university scholarship",
+            "explanation": "The state government officials came to confirm Taye's essay authorship and present his university scholarship—the bittersweet triumph amid grief."
+          }
+        ]
+      },
+      {
+        "id": "s2_b3",
+        "strataId": "strata_2",
+        "name": "Bundle 3",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "questions": [
+          {
+            "id": "s2_b3_001",
+            "text": "What specific dramatic technique is most prominently used when the audience knows Mama and Taye survived the fire while Bolaji believes they died?",
+            "options": [
+              "Foreshadowing",
+              "Dramatic irony",
+              "Soliloquy",
+              "Symbolism"
+            ],
+            "answer": "Dramatic irony",
+            "explanation": "Dramatic irony is pervasive in Act Two: the audience knows Mama and Taye survived the fire while Bolaji believes they died, creating intense emotional tension."
+          },
+          {
+            "id": "s2_b3_002",
+            "text": "What specific literary device is exemplified by Makinde promising to make Bolaji great but instead enslaving him?",
+            "options": [
+              "Metaphor",
+              "Situational irony",
+              "Alliteration",
+              "Onomatopoeia"
+            ],
+            "answer": "Situational irony",
+            "explanation": "Situational irony occurs when Makinde promises to make Bolaji great but instead turns him into an abused drug mule—the opposite of what was expected."
+          },
+          {
+            "id": "s2_b3_003",
+            "text": "What specific dramatic technique does Bolaji use in his monologue at the end of Act Two Scene Three?",
+            "options": [
+              "Dialogue",
+              "Soliloquy",
+              "Aside",
+              "Narrative"
+            ],
+            "answer": "Soliloquy",
+            "explanation": "Bolaji's moving monologue in the generator enclosure, crying out to God about why the wicked prosper, is a soliloquy—a speech revealing his inner thoughts."
+          },
+          {
+            "id": "s2_b3_004",
+            "text": "What specific symbolic meaning does the generator shed carry in the play?",
+            "options": [
+              "Hope and renewal",
+              "Degradation, dehumanization, and moral pollution",
+              "Education and enlightenment",
+              "Family unity"
+            ],
+            "answer": "Degradation, dehumanization, and moral pollution",
+            "explanation": "The generator shed symbolizes degradation, dehumanization, and moral pollution—representing Bolaji's forced descent into the criminal underworld."
+          },
+          {
+            "id": "s2_b3_005",
+            "text": "What specific symbolic meaning do the two buckets of eko carry?",
+            "options": [
+              "Wealth and prosperity",
+              "Maternal industry and humble dignity",
+              "Corruption and greed",
+              "Education and hope"
+            ],
+            "answer": "Maternal industry and humble dignity",
+            "explanation": "The two buckets of eko symbolize maternal industry and humble dignity—representing Mama Titi's hard work and principled survival."
+          },
+          {
+            "id": "s2_b3_006",
+            "text": "What specific symbolic meaning does the tailored suit carry in Bolaji's aspirations?",
+            "options": [
+              "Poverty and despair",
+              "Naive aspirations of urban success",
+              "Criminal intent",
+              "Academic excellence"
+            ],
+            "answer": "Naive aspirations of urban success",
+            "explanation": "The tailored suit symbolizes Bolaji's naive aspirations of urban success—his belief that he would become wealthy and buy suits."
+          },
+          {
+            "id": "s2_b3_007",
+            "text": "What specific symbolic meaning does the fire carry in the play?",
+            "options": [
+              "Purification and renewal",
+              "Blind envy and destructive malice",
+              "Warmth and comfort",
+              "Education and enlightenment"
+            ],
+            "answer": "Blind envy and destructive malice",
+            "explanation": "The fire symbolizes blind envy and destructive malice—representing Madam Bisola's irrational jealousy and her attempt to eliminate Mama and Taye."
+          },
+          {
+            "id": "s2_b3_008",
+            "text": "What specific foreshadowing occurs in Act One Scene One regarding Uncle Makinde?",
+            "options": [
+              "Taye warns that Makinde is jealous of Yomi's two sons",
+              "Makinde arrives late",
+              "Makinde brings gifts",
+              "Makinde promises to return"
+            ],
+            "answer": "Taye warns that Makinde is jealous of Yomi's two sons",
+            "explanation": "Taye's warning that Makinde was jealous of his brother's two sons because he was childless foreshadows Makinde's cruel treatment of Bolaji."
+          },
+          {
+            "id": "s2_b3_009",
+            "text": "What specific foreshadowing occurs when Iya Korede taunts Mama in Act One?",
+            "options": [
+              "She predicts Mama will become rich",
+              "She warns that Mama's sons will leave her and she will burn to ashes",
+              "She invites Mama to a party",
+              "She offers to help Mama"
+            ],
+            "answer": "She warns that Mama's sons will leave her and she will burn to ashes",
+            "explanation": "Iya Korede's warning that Mama's sons will leave her and she will 'burn to ashes' foreshadows both Bolaji's departure and the arson attack."
+          },
+          {
+            "id": "s2_b3_010",
+            "text": "What specific juxtaposition is created between Alani ghetto and Makinde's city residence?",
+            "options": [
+              "Both are equally poor",
+              "The squalor of Alani is contrasted with the opulent exterior of Makinde's city residence",
+              "Both are equally wealthy",
+              "Alani is wealthier than Makinde's residence"
+            ],
+            "answer": "The squalor of Alani is contrasted with the opulent exterior of Makinde's city residence",
+            "explanation": "The squalor of Alani ghetto is juxtaposed with the opulent exterior of Makinde's city residence—highlighting the inequality and hypocrisy."
+          },
+          {
+            "id": "s2_b3_011",
+            "text": "What specific juxtaposition is created between Taye and Korede?",
+            "options": [
+              "Both are bullies",
+              "The moral purity of Taye is contrasted with the malice of Korede and Madam Bisola",
+              "Both are academically gifted",
+              "Both are poor"
+            ],
+            "answer": "The moral purity of Taye is contrasted with the malice of Korede and Madam Bisola",
+            "explanation": "The moral purity of Taye is juxtaposed with the malice of Korede and Madam Bisola—highlighting the contrast between virtue and vice."
+          },
+          {
+            "id": "s2_b3_012",
+            "text": "What specific theme does the play explore through Makinde's exploitation of Bolaji?",
+            "options": [
+              "The importance of education",
+              "Child exploitation, trafficking, and modern enslavement",
+              "The benefits of city life",
+              "The value of family reunions"
+            ],
+            "answer": "Child exploitation, trafficking, and modern enslavement",
+            "explanation": "The play explores child exploitation, trafficking, and modern enslavement through Makinde's brutal treatment of Bolaji."
+          },
+          {
+            "id": "s2_b3_013",
+            "text": "What specific theme does Madam Bisola's behavior illustrate?",
+            "options": [
+              "The importance of education",
+              "The destructive power of superstition and envy",
+              "The value of hard work",
+              "The benefits of community"
+            ],
+            "answer": "The destructive power of superstition and envy",
+            "explanation": "Madam Bisola illustrates the destructive power of superstition and envy—she brands Mama a witch, claims spiritual destiny diversion, and resorts to arson."
+          },
+          {
+            "id": "s2_b3_014",
+            "text": "What specific theme is captured in Mama's dictum 'You are not your environment'?",
+            "options": [
+              "The importance of wealth",
+              "Moral integrity vs. environmental depravity",
+              "The value of city life",
+              "The benefits of education"
+            ],
+            "answer": "Moral integrity vs. environmental depravity",
+            "explanation": "Mama's dictum captures the theme of moral integrity vs. environmental depravity—despite living in Alani's 'bin of the community,' Taye maintains excellence and rectitude."
+          },
+          {
+            "id": "s2_b3_015",
+            "text": "What specific theme does Makinde's treatment of Bolaji illustrate about kinship?",
+            "options": [
+              "Family always protects each other",
+              "Blood ties offer no protection against evil",
+              "Kinship guarantees loyalty",
+              "Family is the most important thing"
+            ],
+            "answer": "Blood ties offer no protection against evil",
+            "explanation": "Makinde's treatment of Bolaji illustrates the hypocrisy of kinship—blood ties offer no protection against evil, as Makinde exploits his own nephew."
+          },
+          {
+            "id": "s2_b3_016",
+            "text": "What specific theme is illustrated by the contrast between Makinde and the landlord?",
+            "options": [
+              "Wealth brings happiness",
+              "The hypocrisy of kinship contrasted with unexpected kindness from strangers",
+              "Family is everything",
+              "City life is better than village life"
+            ],
+            "answer": "The hypocrisy of kinship contrasted with unexpected kindness from strangers",
+            "explanation": "The contrast between Makinde (cruel uncle) and the landlord (kind stranger) illustrates the hypocrisy of kinship contrasted with unexpected kindness from strangers."
+          },
+          {
+            "id": "s2_b3_017",
+            "text": "What specific theme does late Yomi's moral philosophy represent in the play?",
+            "options": [
+              "The importance of violence",
+              "Parental influence and legacy",
+              "The value of wealth",
+              "The benefits of military service"
+            ],
+            "answer": "Parental influence and legacy",
+            "explanation": "Late Yomi's moral philosophy represents parental influence and legacy—even when physically absent, the father's ethical standards shape Taye's and Bolaji's choices."
+          },
+          {
+            "id": "s2_b3_018",
+            "text": "What specific theme does the dramatic climax—Taye's scholarship and Bolaji's fabricated death—illustrate?",
+            "options": [
+              "The importance of education",
+              "Irony of fate and bittersweet triumph",
+              "The value of family",
+              "The benefits of hard work"
+            ],
+            "answer": "Irony of fate and bittersweet triumph",
+            "explanation": "The dramatic climax couples highest academic triumph (state scholarship) with deepest personal grief (fabricated death of Bolaji), illustrating the irony of fate."
+          },
+          {
+            "id": "s2_b3_019",
+            "text": "What specific detail about the play's structure indicates it is a two-act drama?",
+            "options": [
+              "It has 5 scenes in Act One and 6 scenes in Act Two",
+              "It has 3 scenes in Act One and 3 scenes in Act Two",
+              "It has 4 scenes in Act One and 4 scenes in Act Two",
+              "It has 6 scenes in Act One and 5 scenes in Act Two"
+            ],
+            "answer": "It has 5 scenes in Act One and 6 scenes in Act Two",
+            "explanation": "The play is structured into two acts: Act One contains 5 scenes, and Act Two contains 6 scenes."
+          },
+          {
+            "id": "s2_b3_020",
+            "text": "What specific temporal span separates Act One and Act Two?",
+            "options": [
+              "One week",
+              "One month",
+              "One year",
+              "Five years"
+            ],
+            "answer": "One year",
+            "explanation": "Approximately one year elapses between Act One and Act Two, indicated by Taye's growth from 12 to 13 and Bolaji's survival beyond Makinde's typical six-month pattern."
+          },
+          {
+            "id": "s2_b3_021",
+            "text": "What specific term describes the play's setting in 'Alani community'?",
+            "options": [
+              "A wealthy suburb",
+              "An impoverished, neglected ghetto",
+              "A military barracks",
+              "A university campus"
+            ],
+            "answer": "An impoverished, neglected ghetto",
+            "explanation": "Alani community is an impoverished, neglected ghetto known colloquially as the 'bin of the community,' characterized by unpaved roads and social vices."
+          },
+          {
+            "id": "s2_b3_022",
+            "text": "What specific socio-economic issue does the play highlight through the character of Bolaji?",
+            "options": [
+              "The benefits of urbanization",
+              "The exploitation of vulnerable children through trafficking",
+              "The importance of military service",
+              "The value of education"
+            ],
+            "answer": "The exploitation of vulnerable children through trafficking",
+            "explanation": "Through Bolaji, the play highlights the exploitation of vulnerable children through trafficking—economic vulnerability forces families to entrust children to exploiters."
+          },
+          {
+            "id": "s2_b3_023",
+            "text": "What specific role does the character Femi play in the drama's structure?",
+            "options": [
+              "Comic relief",
+              "A catalyst who offers Bolaji an escape route",
+              "A moral compass",
+              "A villain"
+            ],
+            "answer": "A catalyst who offers Bolaji an escape route",
+            "explanation": "Femi serves as a catalyst who offers Bolaji an escape route from the drug syndicate—his proposal drives the plot toward its tragic conclusion."
+          },
+          {
+            "id": "s2_b3_024",
+            "text": "What specific role does the character of the Proprietress play in the resolution?",
+            "options": [
+              "She arrests Taye",
+              "She brings state officials to the hospital",
+              "She fires Taye",
+              "She testifies against Mama"
+            ],
+            "answer": "She brings state officials to the hospital",
+            "explanation": "The Proprietress, described as compassionate and discerning, brings state officials directly to the hospital—facilitating the scholarship award."
+          },
+          {
+            "id": "s2_b3_025",
+            "text": "What specific role do the State Government Representatives play in the climax?",
+            "options": [
+              "They arrest Makinde",
+              "They confirm Taye's essay authorship and present his scholarship",
+              "They question Mama",
+              "They investigate the fire"
+            ],
+            "answer": "They confirm Taye's essay authorship and present his scholarship",
+            "explanation": "The State Government Representatives confirm Taye's essay authorship and present his university scholarship—providing the bittersweet triumph."
+          },
+          {
+            "id": "s2_b3_026",
+            "text": "What specific function does the character of late Yomi serve in the play's moral architecture?",
+            "options": [
+              "Comic relief",
+              "The moral backbone of the drama",
+              "The primary antagonist",
+              "A minor character"
+            ],
+            "answer": "The moral backbone of the drama",
+            "explanation": "Although dead before the play begins, late Yomi's teachings on truth, justice, peace, and non-violence serve as the moral backbone of the drama."
+          },
+          {
+            "id": "s2_b3_027",
+            "text": "What specific dramatic purpose does the landlord character serve?",
+            "options": [
+              "To create conflict",
+              "To show unexpected kindness from strangers",
+              "To arrest Makinde",
+              "To marry Mama"
+            ],
+            "answer": "To show unexpected kindness from strangers",
+            "explanation": "The landlord, who accommodates Mama despite unpaid rent and bears no resentment after the fire, serves to show unexpected kindness from strangers."
+          },
+          {
+            "id": "s2_b3_028",
+            "text": "What specific term best describes Madam Bisola's character type?",
+            "options": [
+              "Protagonist",
+              "Antagonist",
+              "Deuteragonist",
+              "Foil"
+            ],
+            "answer": "Antagonist",
+            "explanation": "Madam Bisola is an antagonist in Alani community—her envy, superstition, and arson make her a primary source of conflict."
+          },
+          {
+            "id": "s2_b3_029",
+            "text": "What specific term best describes Bolaji's character type in the play?",
+            "options": [
+              "Protagonist",
+              "Tragic deuteragonist",
+              "Antagonist",
+              "Foil"
+            ],
+            "answer": "Tragic deuteragonist",
+            "explanation": "Bolaji is a tragic deuteragonist—a self-sacrificing character whose noble intentions lead to suffering and apparent death."
+          },
+          {
+            "id": "s2_b3_030",
+            "text": "What specific term best describes Taye's character type in the play?",
+            "options": [
+              "Antagonist",
+              "Protagonist",
+              "Foil",
+              "Deuteragonist"
+            ],
+            "answer": "Protagonist",
+            "explanation": "Taye is the protagonist—the central character around whom the plot revolves and whose journey drives the narrative."
+          },
+          {
+            "id": "s2_b3_031",
+            "text": "What specific emotional response does the play's climax evoke from the audience?",
+            "options": [
+              "Pure joy",
+              "Bittersweet emotions—triumph mixed with grief",
+              "Anger",
+              "Indifference"
+            ],
+            "answer": "Bittersweet emotions—triumph mixed with grief",
+            "explanation": "The climax evokes bittersweet emotions—the triumph of Taye's scholarship is juxtaposed with the grief of Bolaji's fabricated death."
+          },
+          {
+            "id": "s2_b3_032",
+            "text": "What specific social issue does Mama's struggle against poverty represent?",
+            "options": [
+              "The benefits of hard work",
+              "The absence of social safety nets and systemic inequality",
+              "The value of education",
+              "The importance of family"
+            ],
+            "answer": "The absence of social safety nets and systemic inequality",
+            "explanation": "Mama's struggle represents the absence of social safety nets and systemic inequality—widows and the poor are left to fend for themselves."
+          },
+          {
+            "id": "s2_b3_033",
+            "text": "What specific contrast is created between Mama's survival strategy and Makinde's prosperity?",
+            "options": [
+              "Both are honest",
+              "Mama's dignified labor contrasts with Makinde's criminal exploitation",
+              "Both are criminal",
+              "Mama is wealthier"
+            ],
+            "answer": "Mama's dignified labor contrasts with Makinde's criminal exploitation",
+            "explanation": "Mama's dignified labor (hawking eko) contrasts with Makinde's criminal exploitation (drug trafficking)—highlighting the moral divide."
+          },
+          {
+            "id": "s2_b3_034",
+            "text": "What specific function does the school ambush scene serve in Taye's character development?",
+            "options": [
+              "It shows he is weak",
+              "It reveals his breaking point and subsequent moral correction",
+              "It shows he is a bully",
+              "It has no significance"
+            ],
+            "answer": "It reveals his breaking point and subsequent moral correction",
+            "explanation": "The school ambush reveals Taye's breaking point—his fierce defense of his mother's honor—and leads to Mama's moral correction about non-violence."
+          },
+          {
+            "id": "s2_b3_035",
+            "text": "What specific moral lesson does Mama teach through her reaction to Taye's fight?",
+            "options": [
+              "Violence is never acceptable",
+              "Calling someone a name does not make them one unless they accept it",
+              "You should always fight back",
+              "You should ignore all insults"
+            ],
+            "answer": "Calling someone a name does not make them one unless they accept it",
+            "explanation": "Mama teaches that calling someone a name does not make them one unless they accept it—a lesson about dignity and self-worth."
+          },
+          {
+            "id": "s2_b3_036",
+            "text": "What specific dramatic function does the phone call scene in Act One Scene Five serve?",
+            "options": [
+              "Comic relief",
+              "It establishes Makinde's control and Bolaji's deception",
+              "It resolves the conflict",
+              "It introduces new characters"
+            ],
+            "answer": "It establishes Makinde's control and Bolaji's deception",
+            "explanation": "The phone call scene establishes Makinde's control over Bolaji and Bolaji's forced deception of his family—deepening the tragedy."
+          },
+          {
+            "id": "s2_b3_037",
+            "text": "What specific detail about the phone call reveals the depth of Bolaji's suffering?",
+            "options": [
+              "He laughs during the call",
+              "He is choking back tears and coughing from smoke",
+              "He speaks confidently",
+              "He refuses to speak"
+            ],
+            "answer": "He is choking back tears and coughing from smoke",
+            "explanation": "Bolaji is choking back tears and coughing from smoke during the phone call—his physical state betrays his emotional suffering despite his lies."
+          },
+          {
+            "id": "s2_b3_038",
+            "text": "What specific dramatic purpose does the arson scene serve in the plot?",
+            "options": [
+              "It resolves the conflict",
+              "It is the pivotal catastrophe that triggers the play's tragic conclusion",
+              "It provides comic relief",
+              "It has no significance"
+            ],
+            "answer": "It is the pivotal catastrophe that triggers the play's tragic conclusion",
+            "explanation": "The arson is the pivotal catastrophe—it triggers Bolaji's belief that his family is dead, leading to his fatal decision to flee and his fabricated death."
+          },
+          {
+            "id": "s2_b3_039",
+            "text": "What specific role does Madam Bisola's lie play in the tragedy?",
+            "options": [
+              "It saves the family",
+              "It creates the misunderstanding that leads to Bolaji's decision to flee",
+              "It has no effect",
+              "It helps Bolaji"
+            ],
+            "answer": "It creates the misunderstanding that leads to Bolaji's decision to flee",
+            "explanation": "Madam Bisola's lie to Makinde creates the misunderstanding that Bolaji's family is dead, leading to his decision to flee and his fabricated death."
+          },
+          {
+            "id": "s2_b3_040",
+            "text": "What specific theme does the play ultimately affirm through its bittersweet conclusion?",
+            "options": [
+              "Wealth is the key to happiness",
+              "Virtue and perseverance ultimately triumph, even amid suffering",
+              "Crime pays",
+              "Family is unimportant"
+            ],
+            "answer": "Virtue and perseverance ultimately triumph, even amid suffering",
+            "explanation": "The play ultimately affirms that virtue and perseverance triumph—Taye's scholarship rewards his and Mama's principled endurance, even amid the tragedy of Bolaji's loss."
+          }
+        ]
+      },
+      {
+        "id": "s2_b4",
+        "strataId": "strata_2",
+        "name": "Bundle 4",
+        "requiredScore": 95,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "questions": [
+          {
+            "id": "s2_b4_001",
+            "text": "Analyze the significance of Taye's age progression from 12 to 13 between Act One and Act Two. What does this reveal about the play's thematic concerns?",
+            "options": [
+              "It shows time passing and Taye's maturation amid ongoing hardship",
+              "It indicates a flashback structure",
+              "It has no thematic significance",
+              "It suggests Taye is the same character throughout"
+            ],
+            "answer": "It shows time passing and Taye's maturation amid ongoing hardship",
+            "explanation": "Taye's age progression from 12 to 13 between acts shows time passing and his maturation amid ongoing hardship, emphasizing the duration of the family's suffering."
+          },
+          {
+            "id": "s2_b4_002",
+            "text": "What is the dramatic effect of having Makinde's phone call interrupt Madam Bisola's arson at the fire scene?",
+            "options": [
+              "It provides comic relief",
+              "It creates a pivotal moment of misunderstanding that drives the tragic conclusion",
+              "It resolves the conflict",
+              "It introduces a new character"
+            ],
+            "answer": "It creates a pivotal moment of misunderstanding that drives the tragic conclusion",
+            "explanation": "The phone call interrupting the arson creates the pivotal moment of misunderstanding—Bisola's lie convinces Makinde (and Bolaji, who overhears) that Mama and Taye are dead, driving the tragic conclusion."
+          },
+          {
+            "id": "s2_b4_003",
+            "text": "What is the significance of Makinde and Sewa celebrating the news of Mama and Taye's supposed deaths?",
+            "options": [
+              "It shows they are relieved",
+              "It reveals their complete moral depravity and inhumanity",
+              "It shows they cared about the family",
+              "It indicates they feared retribution"
+            ],
+            "answer": "It reveals their complete moral depravity and inhumanity",
+            "explanation": "Makinde and Sewa's celebration of the supposed deaths reveals their complete moral depravity—they can only think of how this frees them to continue exploiting Bolaji."
+          },
+          {
+            "id": "s2_b4_004",
+            "text": "Analyze the thematic significance of Bolaji's soliloquy questioning why the wicked prosper. What does this reveal about his spiritual crisis?",
+            "options": [
+              "He has abandoned all faith",
+              "He is experiencing a profound spiritual crisis, questioning divine justice",
+              "He is content with his situation",
+              "He has found peace"
+            ],
+            "answer": "He is experiencing a profound spiritual crisis, questioning divine justice",
+            "explanation": "Bolaji's soliloquy reveals a profound spiritual crisis—he questions why the wicked prosper while the righteous suffer, wrestling with the problem of evil."
+          },
+          {
+            "id": "s2_b4_005",
+            "text": "What is the dramatic significance of Bolaji's decision to join Femi's escape being triggered specifically by his belief that his family is dead?",
+            "options": [
+              "It shows his selfishness",
+              "It reveals that his entire sacrifice was for family, and without them he has no reason to endure",
+              "It shows he never cared about family",
+              "It indicates he was planning to leave anyway"
+            ],
+            "answer": "It reveals that his entire sacrifice was for family, and without them he has no reason to endure",
+            "explanation": "Bolaji's decision to flee only after hearing of his family's supposed death reveals that his entire sacrifice was for them—without family, he has no reason to endure enslavement."
+          },
+          {
+            "id": "s2_b4_006",
+            "text": "Analyze the dramatic irony of Makinde's fabricated video of Bolaji's death. What makes this particularly cruel?",
+            "options": [
+              "It is poorly made",
+              "It uses an unrelated accident to convince the family of a death that hasn't occurred, compounding their grief",
+              "It is obviously fake",
+              "It reveals the truth"
+            ],
+            "answer": "It uses an unrelated accident to convince the family of a death that hasn't occurred, compounding their grief",
+            "explanation": "The fabricated video is particularly cruel because it uses an unrelated accident to convince Mama and Taye of a death that hasn't occurred—compounding their grief with deception."
+          },
+          {
+            "id": "s2_b4_007",
+            "text": "What is the thematic significance of Taye's essay being about his mother rather than a famous person?",
+            "options": [
+              "It shows he lacks ambition",
+              "It reveals his recognition of true virtue and his deep appreciation for maternal sacrifice",
+              "It indicates he doesn't know any famous people",
+              "It shows he was forced to write about her"
+            ],
+            "answer": "It reveals his recognition of true virtue and his deep appreciation for maternal sacrifice",
+            "explanation": "Taye writing about his mother reveals his recognition of true virtue and his deep appreciation for her sacrifice—he sees her as the person he wants to become."
+          },
+          {
+            "id": "s2_b4_008",
+            "text": "Analyze the dramatic function of the essay competition as a plot device.",
+            "options": [
+              "It provides comic relief",
+              "It creates hope and provides the means for the family's escape from poverty",
+              "It resolves all conflicts",
+              "It has no significance"
+            ],
+            "answer": "It creates hope and provides the means for the family's escape from poverty",
+            "explanation": "The essay competition creates hope and provides the means for the family's escape from poverty—the scholarship represents the triumph of virtue and education."
+          },
+          {
+            "id": "s2_b4_009",
+            "text": "What is the significance of Madam Bisola's accusation that Mama used witchcraft to divert Korede's destiny?",
+            "options": [
+              "It shows she understands spiritual matters",
+              "It reveals her inability to accept her son's failure and her projection of blame onto others",
+              "It proves Mama is a witch",
+              "It shows she cares about education"
+            ],
+            "answer": "It reveals her inability to accept her son's failure and her projection of blame onto others",
+            "explanation": "Madam Bisola's witchcraft accusation reveals her inability to accept Korede's failure—she projects blame onto Mama rather than acknowledging her own poor parenting."
+          },
+          {
+            "id": "s2_b4_010",
+            "text": "Analyze the symbolic significance of the fire as it relates to Madam Bisola's character.",
+            "options": [
+              "It represents purification",
+              "It embodies her blind envy and willingness to destroy what she cannot have",
+              "It shows her desire to help",
+              "It represents her love for Mama"
+            ],
+            "answer": "It embodies her blind envy and willingness to destroy what she cannot have",
+            "explanation": "The fire embodies Madam Bisola's blind envy and willingness to destroy what she cannot have—she would rather burn Mama's house than accept Taye's success."
+          },
+          {
+            "id": "s2_b4_011",
+            "text": "What is the dramatic significance of Taye having to force open the burning door to escape?",
+            "options": [
+              "It shows his physical weakness",
+              "It symbolizes his active role in his own survival and his family's resilience",
+              "It shows he was trapped",
+              "It indicates he needed help"
+            ],
+            "answer": "It symbolizes his active role in his own survival and his family's resilience",
+            "explanation": "Taye forcing open the burning door symbolizes his active role in his own survival—like his academic achievement, he takes action rather than waiting for rescue."
+          },
+          {
+            "id": "s2_b4_012",
+            "text": "Analyze the thematic contrast between Makinde's city residence and the uncompleted building used for drug deals.",
+            "options": [
+              "Both are equally luxurious",
+              "The completed, opulent house masks criminality, while the uncompleted building reveals the true nature of the enterprise",
+              "Both are in Alani",
+              "The uncompleted building is more luxurious"
+            ],
+            "answer": "The completed, opulent house masks criminality, while the uncompleted building reveals the true nature of the enterprise",
+            "explanation": "The contrast between Makinde's completed, opulent house and the uncompleted building used for drug deals reveals the true nature of his enterprise—his wealth is built on criminal foundations."
+          },
+          {
+            "id": "s2_b4_013",
+            "text": "What is the significance of Femi having been in the drug underworld since age twelve?",
+            "options": [
+              "It shows he chose this life",
+              "It parallels Bolaji's situation and highlights the systemic exploitation of children",
+              "It shows he is older",
+              "It has no significance"
+            ],
+            "answer": "It parallels Bolaji's situation and highlights the systemic exploitation of children",
+            "explanation": "Femi's nine years in the drug underworld since age twelve parallels Bolaji's situation and highlights the systemic exploitation of vulnerable children."
+          },
+          {
+            "id": "s2_b4_014",
+            "text": "Analyze the dramatic purpose of the phone call from Taye to Makinde in Act Two Scene Five.",
+            "options": [
+              "It provides comic relief",
+              "It exposes Madam Bisola's lie and creates a new crisis for Makinde and Sewa",
+              "It resolves the conflict",
+              "It introduces a new character"
+            ],
+            "answer": "It exposes Madam Bisola's lie and creates a new crisis for Makinde and Sewa",
+            "explanation": "Taye's phone call to Makinde exposes Madam Bisola's lie and creates a new crisis—Makinde must now cover up his own involvement in Bolaji's disappearance."
+          },
+          {
+            "id": "s2_b4_015",
+            "text": "What is the thematic significance of Sewa devising the plan to fabricate Bolaji's death?",
+            "options": [
+              "It shows her kindness",
+              "It reveals her as the true mastermind of evil, more calculating than Makinde",
+              "It shows she fears the police",
+              "It indicates she cares about the family"
+            ],
+            "answer": "It reveals her as the true mastermind of evil, more calculating than Makinde",
+            "explanation": "Sewa devising the plan to fabricate Bolaji's death reveals her as the true mastermind of evil—she is more calculating and diabolical than Makinde."
+          },
+          {
+            "id": "s2_b4_016",
+            "text": "Analyze the dramatic effect of the hospital setting for the play's climax.",
+            "options": [
+              "It provides a neutral space",
+              "It juxtaposes physical healing with emotional devastation and academic triumph",
+              "It shows the family is wealthy",
+              "It has no significance"
+            ],
+            "answer": "It juxtaposes physical healing with emotional devastation and academic triumph",
+            "explanation": "The hospital setting juxtaposes physical healing (Mama's recovery) with emotional devastation (Bolaji's fabricated death) and academic triumph (the scholarship)."
+          },
+          {
+            "id": "s2_b4_017",
+            "text": "What is the thematic significance of the landlord bearing no grudges about the burnt flat?",
+            "options": [
+              "It shows he is afraid of Mama",
+              "It illustrates unexpected kindness and contrasts with Makinde's exploitation",
+              "It shows he is wealthy",
+              "It indicates he plans to sue"
+            ],
+            "answer": "It illustrates unexpected kindness and contrasts with Makinde's exploitation",
+            "explanation": "The landlord's forgiveness illustrates unexpected kindness from a stranger, contrasting sharply with Makinde's exploitation of his own nephew."
+          },
+          {
+            "id": "s2_b4_018",
+            "text": "Analyze the dramatic significance of the state officials arriving at the hospital rather than at a formal ceremony.",
+            "options": [
+              "It shows they are lazy",
+              "It emphasizes the bittersweet nature of the triumph—joy arrives amid grief",
+              "It shows they are disorganized",
+              "It indicates the scholarship is unimportant"
+            ],
+            "answer": "It emphasizes the bittersweet nature of the triumph—joy arrives amid grief",
+            "explanation": "The officials arriving at the hospital emphasizes the bittersweet nature of the triumph—joy (scholarship) arrives amid grief (Bolaji's supposed death)."
+          },
+          {
+            "id": "s2_b4_019",
+            "text": "What is the thematic significance of Taye continuing the scholarship interview despite his grief?",
+            "options": [
+              "It shows he doesn't care about Bolaji",
+              "It demonstrates resilience and the importance of perseverance amid adversity",
+              "It shows he is selfish",
+              "It indicates he has forgotten his brother"
+            ],
+            "answer": "It demonstrates resilience and the importance of perseverance amid adversity",
+            "explanation": "Taye continuing the interview despite his grief demonstrates resilience—he perseveres amid adversity, embodying the play's theme of endurance."
+          },
+          {
+            "id": "s2_b4_020",
+            "text": "Analyze the dramatic function of the community hospital staff sedating Mama.",
+            "options": [
+              "It shows they are cruel",
+              "It emphasizes the overwhelming nature of her grief and the need for medical intervention",
+              "It shows she is violent",
+              "It indicates she is physically ill"
+            ],
+            "answer": "It emphasizes the overwhelming nature of her grief and the need for medical intervention",
+            "explanation": "The staff sedating Mama emphasizes the overwhelming nature of her grief—her emotional devastation requires medical intervention."
+          },
+          {
+            "id": "s2_b4_021",
+            "text": "What is the thematic significance of Mama's house burning despite her innocence and hard work?",
+            "options": [
+              "It shows she deserves it",
+              "It illustrates the unjust suffering of the righteous and the problem of evil",
+              "It shows she was careless",
+              "It indicates divine punishment"
+            ],
+            "answer": "It illustrates the unjust suffering of the righteous and the problem of evil",
+            "explanation": "Mama's house burning despite her innocence illustrates the unjust suffering of the righteous and the problem of evil—the wicked often prosper while the good suffer."
+          },
+          {
+            "id": "s2_b4_022",
+            "text": "Analyze the significance of the play's title 'Once Upon an Elephant' in relation to its themes.",
+            "options": [
+              "It refers to a literal elephant",
+              "It suggests a fairy tale that becomes a harsh reality, with the 'elephant in the room' being systemic injustice",
+              "It has no thematic relevance",
+              "It refers to a character named Elephant"
+            ],
+            "answer": "It suggests a fairy tale that becomes a harsh reality, with the 'elephant in the room' being systemic injustice",
+            "explanation": "The title suggests a fairy tale ('Once Upon') that becomes harsh reality, with the 'elephant in the room' being the systemic injustice that society ignores."
+          },
+          {
+            "id": "s2_b4_023",
+            "text": "What is the dramatic significance of Taye being the one to discover Bolaji's supposed death through the video?",
+            "options": [
+              "It shows he is curious",
+              "It compounds his grief—he who wrote about his mother must now comfort her while grieving himself",
+              "It shows he doesn't trust Makinde",
+              "It indicates he is suspicious"
+            ],
+            "answer": "It compounds his grief—he who wrote about his mother must now comfort her while grieving himself",
+            "explanation": "Taye discovering the video compounds his grief—he who wrote about his mother as his inspiration must now comfort her while processing his own loss."
+          },
+          {
+            "id": "s2_b4_024",
+            "text": "Analyze the thematic significance of Bolaji's physical resemblance to Taye being mentioned early in the play.",
+            "options": [
+              "It has no significance",
+              "It creates dramatic irony when Taye thinks he recognizes Bolaji in the accident video",
+              "It shows they are twins",
+              "It indicates they are not related"
+            ],
+            "answer": "It creates dramatic irony when Taye thinks he recognizes Bolaji in the accident video",
+            "explanation": "Bolaji's physical resemblance to Taye creates dramatic irony when Taye thinks he recognizes Bolaji in the accident video—the resemblance makes the deception more convincing."
+          },
+          {
+            "id": "s2_b4_025",
+            "text": "What is the dramatic function of Mama's koboko (horsewhip) in Act One Scene Four?",
+            "options": [
+              "It shows she is violent",
+              "It symbolizes her strict moral discipline, which she ultimately tempers with maternal care",
+              "It indicates she abuses Taye",
+              "It has no significance"
+            ],
+            "answer": "It symbolizes her strict moral discipline, which she ultimately tempers with maternal care",
+            "explanation": "The koboko symbolizes Mama's strict moral discipline, which she ultimately tempers with maternal care—she locks Taye out but then cleans his wounds and feeds him."
+          },
+          {
+            "id": "s2_b4_026",
+            "text": "Analyze the thematic significance of Taye helping Mama carry the buckets of eko before school.",
+            "options": [
+              "It shows he is forced to work",
+              "It demonstrates filial devotion and shared family responsibility",
+              "It indicates he has no time for school",
+              "It shows Mama is lazy"
+            ],
+            "answer": "It demonstrates filial devotion and shared family responsibility",
+            "explanation": "Taye helping Mama carry the buckets demonstrates filial devotion and shared family responsibility—he contributes to the family's survival before attending school."
+          },
+          {
+            "id": "s2_b4_027",
+            "text": "What is the dramatic significance of Mama's house being the target of arson rather than, say, the school?",
+            "options": [
+              "It has no significance",
+              "It strikes at the family's only shelter and symbol of their struggle for dignity",
+              "It shows Madam Bisola is strategic",
+              "It indicates Mama's house is flammable"
+            ],
+            "answer": "It strikes at the family's only shelter and symbol of their struggle for dignity",
+            "explanation": "The arson targets the family's only shelter—their home represents their struggle for dignity, and burning it is an attempt to destroy their very existence."
+          },
+          {
+            "id": "s2_b4_028",
+            "text": "Analyze the thematic significance of Bolaji overhearing Makinde and Sewa's celebration.",
+            "options": [
+              "It provides comic relief",
+              "It is the final blow that destroys his will to endure and leads to his fatal decision",
+              "It has no significance",
+              "It shows he was eavesdropping"
+            ],
+            "answer": "It is the final blow that destroys his will to endure and leads to his fatal decision",
+            "explanation": "Bolaji overhearing the celebration is the final blow—it destroys his will to endure and leads to his fatal decision to flee with Femi."
+          },
+          {
+            "id": "s2_b4_029",
+            "text": "What is the dramatic purpose of Madam Bisola's taunt about Mama burning to ashes in Act One?",
+            "options": [
+              "It provides comic relief",
+              "It foreshadows the arson attack in Act Two",
+              "It shows she is psychic",
+              "It has no significance"
+            ],
+            "answer": "It foreshadows the arson attack in Act Two",
+            "explanation": "Madam Bisola's taunt about Mama burning to ashes foreshadows the arson attack—the very thing she predicts, she herself perpetrates."
+          },
+          {
+            "id": "s2_b4_030",
+            "text": "Analyze the significance of the play ending with Taye returning to his mother's bedside.",
+            "options": [
+              "It shows Taye is tired",
+              "It emphasizes the centrality of the mother-son bond and the bittersweet nature of the conclusion",
+              "It shows he has given up",
+              "It indicates he is ill"
+            ],
+            "answer": "It emphasizes the centrality of the mother-son bond and the bittersweet nature of the conclusion",
+            "explanation": "The play ending with Taye returning to his mother's bedside emphasizes the centrality of the mother-son bond and the bittersweet nature of the conclusion—triumph and grief intertwined."
+          },
+          {
+            "id": "s2_b4_031",
+            "text": "What is the thematic significance of Korede's confession to his mother about Taye's victory?",
+            "options": [
+              "It shows Korede is honest",
+              "It reveals the truth that Madam Bisola refuses to accept, highlighting her willful denial",
+              "It shows Korede is proud of Taye",
+              "It indicates Korede wants to congratulate Taye"
+            ],
+            "answer": "It reveals the truth that Madam Bisola refuses to accept, highlighting her willful denial",
+            "explanation": "Korede's confession reveals the truth that Madam Bisola refuses to accept—she willfully denies reality to maintain her worldview of victimhood."
+          },
+          {
+            "id": "s2_b4_032",
+            "text": "Analyze the dramatic function of the two buckets of eko in the opening scene.",
+            "options": [
+              "They provide comic relief",
+              "They establish the family's poverty and Mama's industriousness",
+              "They show Mama is wealthy",
+              "They have no significance"
+            ],
+            "answer": "They establish the family's poverty and Mama's industriousness",
+            "explanation": "The two buckets of eko establish the family's poverty and Mama's industriousness—she works hard to sustain her family through dignified labor."
+          },
+          {
+            "id": "s2_b4_033",
+            "text": "What is the significance of the play's subtitle 'The Drama of Taye & Bolaji'?",
+            "options": [
+              "It indicates Taye is the only important character",
+              "It emphasizes the centrality of the brothers' relationship to the play's dramatic arc",
+              "It shows Bolaji is the protagonist",
+              "It indicates they are twins"
+            ],
+            "answer": "It emphasizes the centrality of the brothers' relationship to the play's dramatic arc",
+            "explanation": "The subtitle emphasizes the centrality of the brothers' relationship—their bond, separation, and the tragic misunderstanding form the play's dramatic core."
+          },
+          {
+            "id": "s2_b4_034",
+            "text": "Analyze the thematic significance of Makinde's childlessness being the root of his envy.",
+            "options": [
+              "It shows he wants children",
+              "It reveals that his cruelty stems from his own inadequacy and jealousy of his brother's virility",
+              "It shows he loves children",
+              "It has no significance"
+            ],
+            "answer": "It reveals that his cruelty stems from his own inadequacy and jealousy of his brother's virility",
+            "explanation": "Makinde's childlessness being the root of his envy reveals that his cruelty stems from his own inadequacy—he cannot bear his brother's blessing of two sons."
+          },
+          {
+            "id": "s2_b4_035",
+            "text": "What is the dramatic purpose of Madam Bisola answering Mama's phone at the fire scene?",
+            "options": [
+              "It provides comic relief",
+              "It creates the pivotal misunderstanding that drives the plot to its tragic conclusion",
+              "It shows she is helpful",
+              "It has no significance"
+            ],
+            "answer": "It creates the pivotal misunderstanding that drives the plot to its tragic conclusion",
+            "explanation": "Madam Bisola answering the phone creates the pivotal misunderstanding—her lie to Makinde (overheard by Bolaji) convinces both that the family is dead."
+          },
+          {
+            "id": "s2_b4_036",
+            "text": "Analyze the thematic significance of Mama's reaction to the fabricated video of Bolaji's death.",
+            "options": [
+              "It shows she is gullible",
+              "It reveals the devastating power of deception and the depth of maternal love",
+              "It indicates she doesn't trust Bolaji",
+              "It shows she expected this"
+            ],
+            "answer": "It reveals the devastating power of deception and the depth of maternal love",
+            "explanation": "Mama's reaction to the video reveals the devastating power of deception and the depth of maternal love—she is utterly broken by the false news of her son's death."
+          },
+          {
+            "id": "s2_b4_037",
+            "text": "What is the dramatic significance of the play ending without a definitive resolution to Bolaji's fate?",
+            "options": [
+              "It indicates the playwright ran out of ideas",
+              "It creates an open ending that emphasizes uncertainty and the ongoing nature of the family's suffering",
+              "It shows Bolaji is definitely dead",
+              "It indicates a sequel"
+            ],
+            "answer": "It creates an open ending that emphasizes uncertainty and the ongoing nature of the family's suffering",
+            "explanation": "The open ending emphasizes uncertainty—the audience (and characters) don't know Bolaji's true fate, mirroring the family's ongoing suffering and lack of closure."
+          },
+          {
+            "id": "s2_b4_038",
+            "text": "Analyze the significance of Taye's essay being titled 'The Person I Would Like to Become' rather than 'My Role Model.'",
+            "options": [
+              "It shows he lacks role models",
+              "It emphasizes his aspiration to embody his mother's virtues rather than merely admire them",
+              "It indicates he doesn't understand the topic",
+              "It shows he was forced to write about her"
+            ],
+            "answer": "It emphasizes his aspiration to embody his mother's virtues rather than merely admire them",
+            "explanation": "The title 'The Person I Would Like to Become' emphasizes Taye's aspiration to embody his mother's virtues—he doesn't just admire her, he wants to be like her."
+          },
+          {
+            "id": "s2_b4_039",
+            "text": "What is the thematic significance of the play's portrayal of the drug syndicate as a system that exploits children?",
+            "options": [
+              "It shows children are naturally criminal",
+              "It reveals the systemic nature of child exploitation in the underworld",
+              "It shows the drug trade is harmless",
+              "It indicates children choose this life"
+            ],
+            "answer": "It reveals the systemic nature of child exploitation in the underworld",
+            "explanation": "The play reveals the systemic nature of child exploitation—children like Bolaji and Femi are trapped in the drug underworld by adults who exploit their vulnerability."
+          },
+          {
+            "id": "s2_b4_040",
+            "text": "Analyze the ultimate message of the play regarding the power of education.",
+            "options": [
+              "Education is useless",
+              "Education provides a pathway out of poverty and a means of triumph over adversity",
+              "Education only benefits the rich",
+              "Education is not important"
+            ],
+            "answer": "Education provides a pathway out of poverty and a means of triumph over adversity",
+            "explanation": "The play ultimately affirms that education provides a pathway out of poverty and a means of triumph over adversity—Taye's scholarship represents the redemptive power of learning."
+          }
+        ]
+      },
+      {
+        "id": "s2_b5",
+        "strataId": "strata_2",
+        "name": "Bundle 5",
+        "requiredScore": 95,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "questions": [
+          {
+            "id": "s2_b5_001",
+            "text": "Critically analyze how the play uses the character of Madam Bisola to critique societal attitudes toward witchcraft and superstition in Nigerian communities.",
+            "options": [
+              "She represents enlightenment values",
+              "She embodies the destructive irrationality of projecting personal failures onto neighbors as witchcraft",
+              "She shows the benefits of traditional beliefs",
+              "She represents education and progress"
+            ],
+            "answer": "She embodies the destructive irrationality of projecting personal failures onto neighbors as witchcraft",
+            "explanation": "Madam Bisola embodies the destructive irrationality of witchcraft accusations—she projects her son's failure onto Mama rather than addressing her own parenting and Korede's laziness."
+          },
+          {
+            "id": "s2_b5_002",
+            "text": "What is the dramatic significance of the play showing Makinde's drug use and forced administration to Bolaji?",
+            "options": [
+              "It provides comic relief",
+              "It demonstrates how traffickers use addiction to control their victims",
+              "It shows Makinde's generosity",
+              "It indicates Bolaji wanted drugs"
+            ],
+            "answer": "It demonstrates how traffickers use addiction to control their victims",
+            "explanation": "Makinde's forced administration of drugs to Bolaji demonstrates how traffickers use addiction to control their victims—it makes escape physically and psychologically harder."
+          },
+          {
+            "id": "s2_b5_003",
+            "text": "Analyze the dramatic purpose of the play's detailed description of Alani's physical environment.",
+            "options": [
+              "It has no dramatic purpose",
+              "It establishes the oppressive environment that shapes the characters' choices and struggles",
+              "It shows Alani is beautiful",
+              "It provides comic relief"
+            ],
+            "answer": "It establishes the oppressive environment that shapes the characters' choices and struggles",
+            "explanation": "The detailed description of Alani's squalor establishes the oppressive environment that shapes the characters' choices—Taye's excellence is more remarkable because of his surroundings."
+          },
+          {
+            "id": "s2_b5_004",
+            "text": "What is the dramatic significance of the play's use of the phrase 'You are not your environment'?",
+            "options": [
+              "It has no significance",
+              "It crystallizes the play's central philosophical message about maintaining integrity despite adverse circumstances",
+              "It shows Mama is naive",
+              "It indicates Taye should be ashamed of his home"
+            ],
+            "answer": "It crystallizes the play's central philosophical message about maintaining integrity despite adverse circumstances",
+            "explanation": "The phrase crystallizes the play's central message—one can maintain moral integrity despite adverse environmental circumstances."
+          },
+          {
+            "id": "s2_b5_005",
+            "text": "Critically analyze how the play portrays the failure of extended family systems to protect vulnerable children.",
+            "options": [
+              "It shows extended families are perfect",
+              "It reveals how economic pressures and individual greed can transform relatives into exploiters",
+              "It shows extended families always help",
+              "It indicates children should never trust relatives"
+            ],
+            "answer": "It reveals how economic pressures and individual greed can transform relatives into exploiters",
+            "explanation": "The play reveals how economic pressures and individual greed can transform relatives into exploiters—Makinde's treatment of Bolaji shows that kinship is no guarantee of protection."
+          },
+          {
+            "id": "s2_b5_006",
+            "text": "What is the dramatic function of the play's detailed focus on Taye's academic achievement?",
+            "options": [
+              "It provides comic relief",
+              "It establishes education as a counterforce to the despair and corruption surrounding the family",
+              "It shows Taye is better than others",
+              "It has no significance"
+            ],
+            "answer": "It establishes education as a counterforce to the despair and corruption surrounding the family",
+            "explanation": "Taye's academic achievement establishes education as a counterforce to despair and corruption—his scholarship represents hope and a way out of poverty."
+          },
+          {
+            "id": "s2_b5_007",
+            "text": "Analyze the symbolic significance of the generator shed as Bolaji's sleeping quarters.",
+            "options": [
+              "It represents comfort",
+              "It symbolizes his descent into a mechanized, dehumanized existence with no dignity or privacy",
+              "It shows he is respected",
+              "It indicates he is privileged"
+            ],
+            "answer": "It symbolizes his descent into a mechanized, dehumanized existence with no dignity or privacy",
+            "explanation": "The generator shed symbolizes Bolaji's descent into a mechanized, dehumanized existence—he is treated worse than the machines he sleeps beside."
+          },
+          {
+            "id": "s2_b5_008",
+            "text": "Critically analyze how the play portrays the relationship between poverty and crime.",
+            "options": [
+              "It shows poverty guarantees crime",
+              "It reveals that poverty creates vulnerability to criminal exploitation while also showing individuals can choose integrity",
+              "It shows crime is always the answer",
+              "It indicates wealth prevents crime"
+            ],
+            "answer": "It reveals that poverty creates vulnerability to criminal exploitation while also showing individuals can choose integrity",
+            "explanation": "The play reveals that poverty creates vulnerability to criminal exploitation (Bolaji, Femi) while also showing that individuals can choose integrity (Taye, Mama)."
+          },
+          {
+            "id": "s2_b5_009",
+            "text": "What is the dramatic significance of the play's use of the phone call as a plot device in multiple scenes?",
+            "options": [
+              "It has no significance",
+              "It creates misunderstandings and connections between characters who are physically separated",
+              "It shows the characters are wealthy",
+              "It provides comic relief"
+            ],
+            "answer": "It creates misunderstandings and connections between characters who are physically separated",
+            "explanation": "The phone calls create misunderstandings (Makinde's forced call, Bisola's lie) and connections between separated characters—they drive the plot's tragic developments."
+          },
+          {
+            "id": "s2_b5_010",
+            "text": "Critically analyze the play's portrayal of masculinity through the characters of Makinde and Bolaji.",
+            "options": [
+              "It shows all men are violent",
+              "It contrasts toxic masculinity (Makinde's brutality) with protective masculinity (Bolaji's sacrifice)",
+              "It shows men are weak",
+              "It has no gender commentary"
+            ],
+            "answer": "It contrasts toxic masculinity (Makinde's brutality) with protective masculinity (Bolaji's sacrifice)",
+            "explanation": "The play contrasts toxic masculinity (Makinde's violence and exploitation) with protective masculinity (Bolaji's self-sacrifice for family)."
+          },
+          {
+            "id": "s2_b5_011",
+            "text": "What is the dramatic significance of Mama's profession as an eko hawker?",
+            "options": [
+              "It shows she is lazy",
+              "It represents dignified labor and the resilience of women in poverty",
+              "It indicates she is wealthy",
+              "It has no significance"
+            ],
+            "answer": "It represents dignified labor and the resilience of women in poverty",
+            "explanation": "Mama's profession as an eko hawker represents dignified labor and the resilience of women in poverty—she sustains her family through honest work."
+          },
+          {
+            "id": "s2_b5_012",
+            "text": "Critically analyze how the play uses the essay competition to comment on merit versus corruption.",
+            "options": [
+              "It shows merit is always rewarded",
+              "It contrasts the merit-based recognition of Taye's intelligence with the corruption represented by Makinde and drug trafficking",
+              "It shows corruption always wins",
+              "It has no significance"
+            ],
+            "answer": "It contrasts the merit-based recognition of Taye's intelligence with the corruption represented by Makinde and drug trafficking",
+            "explanation": "The essay competition contrasts merit-based recognition (Taye's genuine victory) with corruption (Makinde's criminal wealth)—virtue is rewarded through legitimate means."
+          },
+          {
+            "id": "s2_b5_013",
+            "text": "What is the dramatic significance of the play's structure alternating between Alani and the city?",
+            "options": [
+              "It has no significance",
+              "It creates a parallel narrative showing different forms of struggle and exploitation in both settings",
+              "It shows they are the same",
+              "It provides comic relief"
+            ],
+            "answer": "It creates a parallel narrative showing different forms of struggle and exploitation in both settings",
+            "explanation": "The alternating structure creates a parallel narrative—Taye faces bullying and arson in Alani while Bolaji faces enslavement in the city, showing struggle in both settings."
+          },
+          {
+            "id": "s2_b5_014",
+            "text": "Critically analyze the play's portrayal of religion and faith through Mama Titi's character.",
+            "options": [
+              "It shows religion is irrelevant",
+              "It reveals faith as a source of strength and resilience in the face of overwhelming adversity",
+              "It shows religion causes problems",
+              "It indicates Mama is foolish"
+            ],
+            "answer": "It reveals faith as a source of strength and resilience in the face of overwhelming adversity",
+            "explanation": "Mama's faith reveals religion as a source of strength and resilience—her deep religiosity sustains her through poverty, fire, and fabricated bereavement."
+          },
+          {
+            "id": "s2_b5_015",
+            "text": "What is the dramatic significance of Taye's temporary loss of composure during the school ambush?",
+            "options": [
+              "It shows he is weak",
+              "It humanizes him by showing even the most disciplined can reach a breaking point when family honor is attacked",
+              "It shows he is violent by nature",
+              "It has no significance"
+            ],
+            "answer": "It humanizes him by showing even the most disciplined can reach a breaking point when family honor is attacked",
+            "explanation": "Taye's temporary loss of composure humanizes him—even the most disciplined individual can reach a breaking point when family honor is attacked."
+          },
+          {
+            "id": "s2_b5_016",
+            "text": "Critically analyze how the play uses the character of Korede to comment on parenting and entitlement.",
+            "options": [
+              "It shows Korede is a victim",
+              "It reveals how poor parenting (Madam Bisola's indulgence and denial) produces entitled, lazy, and aggressive children",
+              "It shows Korede is gifted",
+              "It has no significance"
+            ],
+            "answer": "It reveals how poor parenting (Madam Bisola's indulgence and denial) produces entitled, lazy, and aggressive children",
+            "explanation": "Korede reveals how poor parenting (Madam Bisola's indulgence and denial) produces entitled, lazy, and aggressive children who blame others for their failures."
+          },
+          {
+            "id": "s2_b5_017",
+            "text": "What is the dramatic significance of the play's use of the uncompleted building as a setting for drug deals?",
+            "options": [
+              "It shows construction is ongoing",
+              "It symbolizes the incomplete, broken lives of those trapped in the drug trade",
+              "It provides comic relief",
+              "It indicates the drug trade is legitimate"
+            ],
+            "answer": "It symbolizes the incomplete, broken lives of those trapped in the drug trade",
+            "explanation": "The uncompleted building symbolizes the incomplete, broken lives of those trapped in the drug trade—like the building, their lives are shells of what they could have been."
+          },
+          {
+            "id": "s2_b5_018",
+            "text": "Critically analyze the play's treatment of the theme of sacrifice through Bolaji's character.",
+            "options": [
+              "It shows sacrifice is foolish",
+              "It reveals the tragic irony of sacrifice—Bolaji endures enslavement for a family he believes is dead, making his suffering meaningless",
+              "It shows sacrifice is always rewarded",
+              "It indicates Bolaji was selfish"
+            ],
+            "answer": "It reveals the tragic irony of sacrifice—Bolaji endures enslavement for a family he believes is dead, making his suffering meaningless",
+            "explanation": "Bolaji's sacrifice reveals tragic irony—he endures enslavement for a family he believes is dead, making his suffering seem meaningless and leading to his fatal decision."
+          },
+          {
+            "id": "s2_b5_019",
+            "text": "What is the dramatic significance of the play's portrayal of the Master as an unseen character?",
+            "options": [
+              "It shows he is unimportant",
+              "It makes him more terrifying as an unseen, omnipresent threat representing the vast, impersonal drug syndicate",
+              "It indicates he doesn't exist",
+              "It provides comic relief"
+            ],
+            "answer": "It makes him more terrifying as an unseen, omnipresent threat representing the vast, impersonal drug syndicate",
+            "explanation": "The Master's unseen presence makes him more terrifying—he represents the vast, impersonal drug syndicate that controls and destroys lives."
+          },
+          {
+            "id": "s2_b5_020",
+            "text": "Critically analyze how the play uses the theme of sibling love to create emotional impact.",
+            "options": [
+              "It shows siblings always fight",
+              "It establishes the depth of Taye and Bolaji's bond, making their separation and the fabricated death more devastating",
+              "It shows siblings are unimportant",
+              "It indicates they are enemies"
+            ],
+            "answer": "It establishes the depth of Taye and Bolaji's bond, making their separation and the fabricated death more devastating",
+            "explanation": "The sibling love between Taye and Bolaji establishes their deep bond, making their separation and the fabricated death more emotionally devastating."
+          },
+          {
+            "id": "s2_b5_021",
+            "text": "What is the dramatic significance of the play showing Bolaji's physical deterioration over one year?",
+            "options": [
+              "It shows he is growing normally",
+              "It visually represents the destructive toll of exploitation on vulnerable children",
+              "It indicates he is well-fed",
+              "It has no significance"
+            ],
+            "answer": "It visually represents the destructive toll of exploitation on vulnerable children",
+            "explanation": "Bolaji's physical deterioration (gaunt, emaciated, 'thin as a rake') visually represents the destructive toll of exploitation on vulnerable children."
+          },
+          {
+            "id": "s2_b5_022",
+            "text": "Critically analyze the play's use of the theme of education as a form of resistance.",
+            "options": [
+              "It shows education is passive",
+              "It reveals how Taye's academic excellence is an act of resistance against the poverty and despair of his environment",
+              "It shows education is irrelevant",
+              "It indicates education causes problems"
+            ],
+            "answer": "It reveals how Taye's academic excellence is an act of resistance against the poverty and despair of his environment",
+            "explanation": "Taye's academic excellence is an act of resistance—he refuses to be defined by his environment, proving that excellence can emerge from poverty."
+          },
+          {
+            "id": "s2_b5_023",
+            "text": "What is the dramatic significance of the play's use of the fire as both a literal and symbolic event?",
+            "options": [
+              "It is only literal",
+              "It functions literally (destroying the house) and symbolically (representing envy and the destruction of innocence)",
+              "It is only symbolic",
+              "It has no significance"
+            ],
+            "answer": "It functions literally (destroying the house) and symbolically (representing envy and the destruction of innocence)",
+            "explanation": "The fire functions both literally (destroying Mama's house) and symbolically (representing envy, malice, and the destruction of innocence)."
+          },
+          {
+            "id": "s2_b5_024",
+            "text": "Critically analyze how the play portrays the vulnerability of widows in Nigerian society.",
+            "options": [
+              "It shows widows are protected",
+              "It reveals the systemic neglect and exploitation of widows who lack male protection",
+              "It shows widows are wealthy",
+              "It indicates widows need no help"
+            ],
+            "answer": "It reveals the systemic neglect and exploitation of widows who lack male protection",
+            "explanation": "Mama's struggle reveals the systemic neglect and exploitation of widows—without male protection, she faces poverty, harassment, and exploitation."
+          },
+          {
+            "id": "s2_b5_025",
+            "text": "What is the dramatic significance of the play's use of the two brothers' separation as its central structural device?",
+            "options": [
+              "It has no significance",
+              "It creates two parallel narratives that converge tragically, emphasizing the interconnectedness of the family's suffering",
+              "It shows they are enemies",
+              "It provides comic relief"
+            ],
+            "answer": "It creates two parallel narratives that converge tragically, emphasizing the interconnectedness of the family's suffering",
+            "explanation": "The brothers' separation creates parallel narratives—Taye's struggle in Alani and Bolaji's enslavement in the city converge tragically in the climax."
+          },
+          {
+            "id": "s2_b5_026",
+            "text": "Critically analyze the play's treatment of the theme of hope through Taye's character.",
+            "options": [
+              "It shows hope is foolish",
+              "It reveals hope as a necessary counterforce to despair, embodied in Taye's academic achievement despite overwhelming odds",
+              "It indicates hope is irrelevant",
+              "It shows Taye is naive"
+            ],
+            "answer": "It reveals hope as a necessary counterforce to despair, embodied in Taye's academic achievement despite overwhelming odds",
+            "explanation": "Taye's character embodies hope as a necessary counterforce to despair—his academic achievement despite overwhelming odds represents the possibility of triumph."
+          },
+          {
+            "id": "s2_b5_027",
+            "text": "What is the dramatic significance of the play's portrayal of the landlord as a benevolent figure?",
+            "options": [
+              "It shows all landlords are good",
+              "It provides a counterpoint to Makinde's exploitation, demonstrating that kindness can exist outside family bonds",
+              "It indicates the landlord is foolish",
+              "It has no significance"
+            ],
+            "answer": "It provides a counterpoint to Makinde's exploitation, demonstrating that kindness can exist outside family bonds",
+            "explanation": "The landlord provides a counterpoint to Makinde—kindness can exist outside family bonds, as shown by his generosity to Mama despite unpaid rent."
+          },
+          {
+            "id": "s2_b5_028",
+            "text": "Critically analyze how the play uses the motif of phone calls to explore themes of connection and deception.",
+            "options": [
+              "It shows phones are important",
+              "It reveals how technology can both connect and deceive, with phone calls serving as moments of revelation and betrayal",
+              "It indicates phones cause problems",
+              "It has no significance"
+            ],
+            "answer": "It reveals how technology can both connect and deceive, with phone calls serving as moments of revelation and betrayal",
+            "explanation": "Phone calls serve as moments of connection (Bolaji's forced call home) and deception (Bisola's lie, Sewa's fabricated death report)—technology is both bridge and weapon."
+          },
+          {
+            "id": "s2_b5_029",
+            "text": "What is the dramatic significance of the play's use of the essay competition as a symbol of hope?",
+            "options": [
+              "It shows competitions are meaningless",
+              "It represents the possibility of escape from poverty through legitimate means and the recognition of genuine merit",
+              "It indicates Taye cheated",
+              "It has no significance"
+            ],
+            "answer": "It represents the possibility of escape from poverty through legitimate means and the recognition of genuine merit",
+            "explanation": "The essay competition represents the possibility of escape from poverty through legitimate means—Taye's scholarship is a reward for genuine merit."
+          },
+          {
+            "id": "s2_b5_030",
+            "text": "Critically analyze the play's portrayal of the theme of justice through the fates of the characters.",
+            "options": [
+              "It shows justice always prevails",
+              "It reveals the complexity of justice—the virtuous suffer while the wicked seem to prosper, creating moral ambiguity",
+              "It shows there is no justice",
+              "It indicates the wicked are punished"
+            ],
+            "answer": "It reveals the complexity of justice—the virtuous suffer while the wicked seem to prosper, creating moral ambiguity",
+            "explanation": "The play reveals the complexity of justice—the virtuous (Mama, Taye, Bolaji) suffer while the wicked (Makinde, Sewa, Bisola) seem to prosper, creating moral ambiguity."
+          },
+          {
+            "id": "s2_b5_031",
+            "text": "What is the dramatic significance of the play's use of the setting of the community hospital for its climax?",
+            "options": [
+              "It has no significance",
+              "It represents a space of healing and vulnerability where both triumph and tragedy are revealed",
+              "It shows the family is wealthy",
+              "It provides comic relief"
+            ],
+            "answer": "It represents a space of healing and vulnerability where both triumph and tragedy are revealed",
+            "explanation": "The community hospital represents a space of healing and vulnerability—it is where Mama's physical recovery, the fabricated death, and the scholarship announcement converge."
+          },
+          {
+            "id": "s2_b5_032",
+            "text": "Critically analyze how the play uses the character of Taye to embody the theme of resilience.",
+            "options": [
+              "It shows he is weak",
+              "It reveals resilience as the ability to maintain integrity and hope despite overwhelming adversity",
+              "It shows he gives up",
+              "It indicates he is lucky"
+            ],
+            "answer": "It reveals resilience as the ability to maintain integrity and hope despite overwhelming adversity",
+            "explanation": "Taye embodies resilience—he maintains integrity and hope despite poverty, bullying, arson, and his brother's supposed death, demonstrating true strength."
+          },
+          {
+            "id": "s2_b5_033",
+            "text": "What is the dramatic significance of the play's portrayal of the drug syndicate as a corrupting force on youth?",
+            "options": [
+              "It shows drugs are beneficial",
+              "It reveals how the drug trade preys on vulnerable children, destroying their innocence and potential",
+              "It indicates children choose this life",
+              "It has no significance"
+            ],
+            "answer": "It reveals how the drug trade preys on vulnerable children, destroying their innocence and potential",
+            "explanation": "The drug syndicate reveals how the trade preys on vulnerable children—Bolaji and Femi are recruited as children and their potential is destroyed by exploitation."
+          },
+          {
+            "id": "s2_b5_034",
+            "text": "Critically analyze the play's use of the motif of the garden/landlord to explore themes of community and compassion.",
+            "options": [
+              "It shows communities are always helpful",
+              "It reveals that compassion can exist even in neglected communities, as shown by the landlord's kindness",
+              "It indicates landlords are cruel",
+              "It has no significance"
+            ],
+            "answer": "It reveals that compassion can exist even in neglected communities, as shown by the landlord's kindness",
+            "explanation": "The landlord's kindness reveals that compassion can exist even in neglected communities—Alani's poverty doesn't preclude generosity and humanity."
+          },
+          {
+            "id": "s2_b5_035",
+            "text": "What is the dramatic significance of the play's use of the theme of education to challenge systemic inequality?",
+            "options": [
+              "It shows education maintains inequality",
+              "It reveals education as a means for marginalized individuals to challenge and overcome systemic barriers",
+              "It shows education is irrelevant",
+              "It indicates education is only for the rich"
+            ],
+            "answer": "It reveals education as a means for marginalized individuals to challenge and overcome systemic barriers",
+            "explanation": "Education is presented as a means for marginalized individuals like Taye to challenge and overcome systemic barriers—his scholarship enables him to escape poverty."
+          },
+          {
+            "id": "s2_b5_036",
+            "text": "Critically analyze how the play portrays the theme of motherhood through Mama Titi's character.",
+            "options": [
+              "It shows mothers are weak",
+              "It reveals motherhood as a source of strength, sacrifice, and moral guidance",
+              "It indicates mothers are absent",
+              "It shows mothers are unimportant"
+            ],
+            "answer": "It reveals motherhood as a source of strength, sacrifice, and moral guidance",
+            "explanation": "Mama Titi embodies motherhood as a source of strength (enduring poverty), sacrifice (selling eko), and moral guidance (teaching non-violence and integrity)."
+          },
+          {
+            "id": "s2_b5_037",
+            "text": "What is the dramatic significance of the play's use of the theme of sacrifice to explore the nature of love?",
+            "options": [
+              "It shows sacrifice is foolish",
+              "It reveals that true love is manifested through sacrifice, as shown by Bolaji's selflessness and Mama's devotion",
+              "It indicates love is selfish",
+              "It has no significance"
+            ],
+            "answer": "It reveals that true love is manifested through sacrifice, as shown by Bolaji's selflessness and Mama's devotion",
+            "explanation": "The play reveals that true love is manifested through sacrifice—Bolaji's selflessness and Mama's devotion demonstrate the depth of familial love."
+          },
+          {
+            "id": "s2_b5_038",
+            "text": "Critically analyze the play's portrayal of the theme of betrayal through Makinde's character.",
+            "options": [
+              "It shows betrayal is inevitable",
+              "It reveals the devastating impact of betrayal by those who should protect, as Makinde exploits his own nephew",
+              "It indicates betrayal is justified",
+              "It has no significance"
+            ],
+            "answer": "It reveals the devastating impact of betrayal by those who should protect, as Makinde exploits his own nephew",
+            "explanation": "Makinde's betrayal of Bolaji reveals the devastating impact of betrayal by those who should protect—he exploits the very child he should nurture."
+          },
+          {
+            "id": "s2_b5_039",
+            "text": "What is the dramatic significance of the play's use of the theme of hope amidst despair?",
+            "options": [
+              "It shows hope is impossible",
+              "It reveals that hope can coexist with despair, as Taye's triumph and Mama's resilience are affirmed despite tragedy",
+              "It shows despair always wins",
+              "It has no significance"
+            ],
+            "answer": "It reveals that hope can coexist with despair, as Taye's triumph and Mama's resilience are affirmed despite tragedy",
+            "explanation": "The play reveals that hope can coexist with despair—Taye's triumph and Mama's resilience are affirmed despite the tragedy of Bolaji's supposed death."
+          },
+          {
+            "id": "s2_b5_040",
+            "text": "Critically analyze the ultimate message of 'Once Upon an Elephant' regarding the triumph of the human spirit.",
+            "options": [
+              "It shows the human spirit is easily broken",
+              "It reveals the indomitable nature of the human spirit—capable of maintaining hope, integrity, and love even in the face of overwhelming adversity",
+              "It shows the human spirit is meaningless",
+              "It indicates human beings are naturally evil"
+            ],
+            "answer": "It reveals the indomitable nature of the human spirit—capable of maintaining hope, integrity, and love even in the face of overwhelming adversity",
+            "explanation": "The play ultimately reveals the indomitable nature of the human spirit—Taye, Mama, and even Bolaji demonstrate that hope, integrity, and love can endure overwhelming adversity."
+          }
+        ]
+      }
+    ],
+    "tier": "premium"
+  }
+}

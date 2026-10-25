@@ -4,6 +4,7 @@ import {
   ScrollView, ActivityIndicator, Alert,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useIsDesktop } from '../hooks/useResponsive';
 import { getExamHistory, clearExamHistory } from '../database/queries';
 
 const SUBJECT_COLORS = {
@@ -63,6 +64,7 @@ const bar = StyleSheet.create({
 
 export default function AnalyticsScreen({ onBack }) {
   const insets = useSafeAreaInsets();
+  const isDesktop = useIsDesktop();
   const [loading, setLoading] = useState(true);
   const [history, setHistory] = useState([]);
   const [activeTab, setActiveTab] = useState('OVERVIEW');
@@ -194,7 +196,7 @@ export default function AnalyticsScreen({ onBack }) {
         <ScrollView
           style={{ flex: 1 }}
           contentContainerStyle={s.scroll}
-          showsVerticalScrollIndicator={false}
+          showsVerticalScrollIndicator={isDesktop}
         >
 
           {/* ══════════════════════════════════════════

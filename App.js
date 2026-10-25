@@ -4,6 +4,7 @@ import { View, ActivityIndicator } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { initDatabase } from './src/database/setup';
 import { AppProvider, useApp } from './src/context/AppContext';
+import { AlertProvider } from './src/components/AlertProvider';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import HomeScreen from './src/screens/HomeScreen';
 import PracticeScreen from './src/screens/PracticeScreen';
@@ -12,6 +13,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 
 import TeacherHomeScreen from './src/screens/TeacherHomeScreen';
+import StrataSyncCenterScreen from './src/screens/StrataSyncCenterScreen';
 SplashScreen.preventAutoHideAsync();
 
 function MainNavigationRouter() {
@@ -19,6 +21,7 @@ function MainNavigationRouter() {
   const [currentView, setCurrentView] = useState('WELCOME');
   const [activeSession, setActiveSession] = useState(null);
   const [homeReloadKey, setHomeReloadKey] = useState(0);
+  const [syncInitialCategory, setSyncInitialCategory] = useState('ALL');
 
   if (isCheckingSecurity) {
     return (
@@ -59,8 +62,20 @@ function MainNavigationRouter() {
   if (currentView === 'ANALYTICS') {
     return <AnalyticsScreen onBack={() => setCurrentView('HOME')} />;
   }
-if (currentView === 'ANALYTICS') {
-    return <AnalyticsScreen onBack={() => setCurrentView('HOME')} />;
+
+  if (currentView === 'SYNC_CENTER') {
+    return (
+      <StrataSyncCenterScreen
+        initialCategory={syncInitialCategory}
+        onBack={() => {
+          setHomeReloadKey(k => k + 1); // signal HomeScreen to reload new strata
+          setCurrentView('HOME');
+        }}
+        onSyncCompleted={() => {
+          setHomeReloadKey(k => k + 1);
+        }}
+      />
+    );
   }
 
   if (currentView === 'TEACHER') {
@@ -90,16 +105,15 @@ if (currentView === 'ANALYTICS') {
         setActiveSession(null);
         setCurrentView('ANALYTICS');
       }}
-
-      onOpenAnalytics={() => {
+      onOpenSyncCenter={(cat) => {
+        setSyncInitialCategory(cat || 'ALL');
         setActiveSession(null);
-        setCurrentView('ANALYTICS');
+        setCurrentView('SYNC_CENTER');
       }}
       onSwitchToTeacher={() => {
         setActiveSession(null);
         setCurrentView('TEACHER');
       }}
-    
     />
   );
 }
@@ -125,7 +139,9 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <AppProvider>
-        <MainNavigationRouter />
+        <AlertProvider>
+          <MainNavigationRouter />
+        </AlertProvider>
       </AppProvider>
     </SafeAreaProvider>
   );

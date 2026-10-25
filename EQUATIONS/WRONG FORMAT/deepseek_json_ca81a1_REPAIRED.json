@@ -1,0 +1,2587 @@
+{
+  "strataMetadata": {
+    "label": "Once Upon an Elephant — Advanced Question Set (200 Questions) — SS 1/SS 2",
+    "renderedAt": "2026-10-13",
+    "edition": "ED3",
+    "gradeLevel": "SS 1",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "SS 1",
+    "strataId": "strata_2",
+    "displayName": "STRATA 2",
+    "durationMinutes": 200,
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_2",
+        "name": "Bundle 1 — Advanced Comprehension",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_lit_001",
+                "text": "How does the play's title function as a meta-commentary on the relationship between oral tradition and political critique?",
+                "options": [
+                  "It signals that the play is merely a children's folktale with no political relevance.",
+                  "It frames the entire drama as an 'àlọ' (folktale) that uses the elephant-tortoise motif to allegorize the cyclical nature of tyrannical power and its inevitable downfall.",
+                  "It demonstrates that the playwright rejects all Yoruba cultural forms.",
+                  "It proves that oral traditions are apolitical and cannot address governance issues."
+                ],
+                "answer": "B",
+                "explanation": "The title 'Once Upon an Elephant' deliberately evokes the formulaic opening of Yoruba folktales ('àlọ'), signaling that the play operates as a moral-didactic allegory drawing on the elephant-tortoise narrative to critique tyranny ."
+              },
+              {
+                "id": "b1_lit_002",
+                "text": "What is the dramatic function of opening the play with Serubawon performing the Olubori rite on Ajanaku while King Akinjobi is described as 'terribly sick' rather than dead?",
+                "options": [
+                  "It demonstrates Serubawon's deep respect for traditional protocol.",
+                  "It immediately establishes the central conflict—the illegitimate succession—and exposes the fraudulent manipulation of sacred tradition for political gain, creating dramatic irony.",
+                  "It suggests the king had already given his blessing to Ajanaku.",
+                  "It shows that the elders unanimously approved of Ajanaku's ascension."
+                ],
+                "answer": "B",
+                "explanation": "The performance of the Olubori rite while the legitimate king is still alive exposes the corruption at the heart of the succession, establishing the play's central political conflict and creating dramatic irony as the audience knows the ritual is fraudulent ."
+              },
+              {
+                "id": "b1_lit_003",
+                "text": "How does Ogundele's trajectory from vocal objector to complicit elder illustrate the play's critique of how tyranny co-opts traditional institutions?",
+                "options": [
+                  "Ogundele remains steadfastly opposed throughout, proving that tradition always resists tyranny.",
+                  "Ogundele's acceptance of bribes after initial objections demonstrates how tyranny neutralizes potential resistance by corrupting the very guardians of tradition.",
+                  "Ogundele was always secretly working for Serubawon.",
+                  "Ogundele's character is irrelevant to the play's political critique."
+                ],
+                "answer": "B",
+                "explanation": "Ogundele's arc—from articulating moral objections to accepting bribes—embodies the play's critique of how tyranny dismantles institutional checks by corrupting the individuals who should uphold them ."
+              },
+              {
+                "id": "b1_lit_004",
+                "text": "What does Desola's premonitory dream about her impending marriage signify within the play's structural use of foreshadowing?",
+                "options": [
+                  "It is a red herring with no narrative consequence.",
+                  "It functions as a prophecy of the violent disruption that Ajanaku's tyranny will bring, specifically her victimization by the Ijedodo ritual, creating a tragic arc from innocence to catastrophe.",
+                  "It suggests Desola is mentally unstable.",
+                  "It indicates that Odekunle will betray her."
+                ],
+                "answer": "B",
+                "explanation": "Desola's ominous dream operates as structural foreshadowing, preparing the audience for the tragedy that will befall her through Ajanaku's Ijedodo ritual, reinforcing the play's tragic trajectory from innocence to destruction ."
+              },
+              {
+                "id": "b1_lit_005",
+                "text": "How does Ajanaku's coronation speech characterize his reign before it even begins, and what does this reveal about the play's conception of tyrannical self-fashioning?",
+                "options": [
+                  "He promises humility and service to the community, demonstrating that tyrants always begin with good intentions.",
+                  "He boasts of his physical strength and compares himself to the elephant, revealing arrogant self-aggrandizement and establishing the performative nature of tyrannical power.",
+                  "He announces sweeping reforms to benefit the poor, showing his populist instincts.",
+                  "He declares his intention to step down after five years, proving his democratic credentials."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's boastful self-comparison to the elephant at his coronation immediately establishes his arrogant self-conception and reveals how tyrannical power is performed and self-fashioned through rhetorical self-aggrandizement ."
+              },
+              {
+                "id": "b1_lit_006",
+                "text": "What is the significance of Iya Agba's entrance into the palace and her use of proverbs to challenge Ajanaku's legitimacy?",
+                "options": [
+                  "She brings gifts for the new king and seeks his favor.",
+                  "Her proverbial truths unsettle the court and expose the illegitimacy of Ajanaku's rule, positioning her as the voice of authentic tradition against corrupt innovation.",
+                  "She demands to be made queen mother as compensation for her exile.",
+                  "She announces the arrival of a foreign delegation seeking trade relations."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's proverbial speech functions as a counter-discourse to Ajanaku's tyrannical rhetoric, positioning her as the embodiment of authentic traditional wisdom that exposes the illegitimacy of his rule ."
+              },
+              {
+                "id": "b1_lit_007",
+                "text": "How does Ajanaku's dismissal of Iya Agba as 'insane' exemplify the play's critique of gaslighting as a tyrannical strategy?",
+                "options": [
+                  "It shows his genuine concern for mental health awareness.",
+                  "It demonstrates how tyrants dismiss truth-tellers as mad to avoid engaging with legitimate criticism, revealing tyranny's dependence on the manufacture of unreality.",
+                  "It proves that Iya Agba is actually mentally ill.",
+                  "It shows his deep respect for elders despite their disagreements."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's immediate resort to labeling Iya Agba insane is a classic tactic of tyrants: dismissing truth-tellers as mad to avoid engaging with legitimate criticism, exposing how tyranny depends on gaslighting and the manufacture of unreality ."
+              },
+              {
+                "id": "b1_lit_008",
+                "text": "What is the dramatic significance of Iya Agba's accusation that Serubawon is Ajanaku's father?",
+                "options": [
+                  "It provides comic relief from the political tension.",
+                  "It plants the seed of the play's central revelation about Ajanaku's illegitimacy, creating dramatic irony that will be vindicated later, making it a crucial moment in the play's revelation structure.",
+                  "It is immediately proven false and dismissed by all present.",
+                  "It has no impact on the plot's development."
+                ],
+                "answer": "B",
+                "explanation": "This accusation, dismissed by Ajanaku as further evidence of Iya Agba's insanity, is later revealed to be true, making it a crucial moment of dramatic irony and the seed of the play's central revelation about illegitimate succession ."
+              },
+              {
+                "id": "b1_lit_009",
+                "text": "How does Ajanaku's reference to Iya Agba's past adultery function as a rhetorical strategy, and what does this reveal about tyrannical discourse?",
+                "options": [
+                  "He is genuinely trying to understand her perspective and reconcile.",
+                  "He employs ad hominem attacks to discredit her testimony rather than addressing its substance, revealing tyranny's reliance on character assassination to avoid substantive engagement.",
+                  "He is concerned about her moral welfare and wants to help her.",
+                  "He wants to demonstrate his knowledge of palace history."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's attack on Iya Agba's character is a deliberate diversionary tactic, a hallmark of tyrannical rhetoric that avoids substantive engagement with criticism by attacking the critic's credibility ."
+              },
+              {
+                "id": "b1_lit_010",
+                "text": "What does the Ijedodo ritual's mechanics—requiring the rape and sacrifice of virgins—reveal about the play's treatment of gender, power, and the politics of the body?",
+                "options": [
+                  "It is a harvest ritual that benefits the entire community equally.",
+                  "It symbolizes the violent exploitation of female bodies for male political ambition, representing the extreme manifestation of patriarchal control over female autonomy in service of tyrannical power.",
+                  "It is a coming-of-age ceremony for young warriors.",
+                  "It is a purification rite that the community voluntarily supports."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo charm, which feeds on the blood of raped virgins to sustain the king, represents the extreme gender-based violence at the heart of Ajanaku's tyrannical quest for immortality and the play's feminist critique of patriarchal power ."
+              },
+              {
+                "id": "b1_lit_011",
+                "text": "How does Serubawon's role in creating the Ijedodo ritual complicate his characterization as merely a kingmaker?",
+                "options": [
+                  "He is a helpless pawn controlled entirely by Ajanaku.",
+                  "He is the architect of the ritual, making him both kingmaker and moral monster, establishing him as a co-antagonist equally culpable for the atrocities committed.",
+                  "He secretly works to undermine Ajanaku from within the palace.",
+                  "He has no knowledge of the ritual's true nature and is deceived by Ajanaku."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon is not merely complicit but the creative force behind the Ijedodo ritual, making him equally culpable for its atrocities and establishing him as a co-antagonist whose moral corruption rivals Ajanaku's ."
+              },
+              {
+                "id": "b1_lit_012",
+                "text": "What does Iya Agba's challenge—'Where on earth have you ever heard that any mortal being rivals the divine?'—reveal about the play's theological and political philosophy?",
+                "options": [
+                  "It is a rhetorical question with no philosophical weight.",
+                  "It articulates the play's moral rejection of hubris and the violation of sacred limits, grounding its political critique in Yoruba cosmological principles about the proper relationship between human and divine.",
+                  "It proves that Iya Agba is ignorant of Yoruba religious traditions.",
+                  "It shows that Ajanaku is actually a divine being."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's challenge articulates the play's moral rejection of hubris and the violation of sacred limits, grounding its political critique in Yoruba cosmological principles about the proper relationship between mortal and divine ."
+              },
+              {
+                "id": "b1_lit_013",
+                "text": "How does the Yoruba proverb 'To the rafter belongs the load; the shelf only pretends' function as a compressed political argument in the play?",
+                "options": [
+                  "It describes the architecture of the palace in literal terms.",
+                  "Iya Agba deploys it to assert that Ajanaku is a pretender and the legitimate king will eventually be restored, encapsulating the play's central thesis about illegitimate versus legitimate power.",
+                  "It praises Ajanaku's strength and endurance.",
+                  "It warns against using shelves for storage."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba deploys this proverb to insist on Ajanaku's illegitimacy and the temporary nature of his usurpation, encapsulating the play's central political thesis about the eventual restoration of legitimate order ."
+              },
+              {
+                "id": "b1_lit_014",
+                "text": "What is the significance of the proverb 'Whoever collects rainwater with a sieve' in Iya Agba's confrontation with Ajanaku?",
+                "options": [
+                  "It describes a practical method of water collection in rural areas.",
+                  "It expresses the impossibility of concealing Ajanaku's illegitimate paternity, functioning as a metaphor for the futility of tyranny's attempts to hide the truth.",
+                  "It praises Ajanaku's resourcefulness and ingenuity.",
+                  "It warns against wastefulness during the rainy season."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba uses this proverb to convey that Ajanaku's attempts to hide the truth of his parentage are as futile as catching water in a sieve, reinforcing the play's theme that truth will inevitably emerge despite tyranny's concealments ."
+              },
+              {
+                "id": "b1_lit_015",
+                "text": "How does Ajanaku's treatment of the Oguno delegation—imposing a degrading condition that leads to death—illustrate the play's critique of tyrannical governance?",
+                "options": [
+                  "He welcomes them with traditional hospitality, demonstrating his diplomatic skill.",
+                  "His cruel and humiliating condition for assisting the Oguno people demonstrates his complete disregard for human dignity and his abuse of power, revealing tyranny's inherent cruelty.",
+                  "He offers them military assistance without conditions.",
+                  "He ignores their request entirely as beneath his attention."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's cruel and humiliating condition for assisting the Oguno people—stripping their leader naked in the scorching sun—demonstrates his complete disregard for human dignity and his abuse of power ."
+              },
+              {
+                "id": "b1_lit_016",
+                "text": "What does the physical setting of the palace suggest about the relationship between power, space, and exclusion under Ajanaku's rule?",
+                "options": [
+                  "The palace is a neutral space accessible to all citizens equally.",
+                  "The palace becomes a site of exclusion and intimidation under Ajanaku's rule, transforming from a center of legitimate governance into a space of fear and arbitrary power.",
+                  "The palace is irrelevant to the play's political themes.",
+                  "The palace is a democratic assembly hall where all voices are heard."
+                ],
+                "answer": "B",
+                "explanation": "The palace, which should be a site of legitimate governance, is transformed by Ajanaku into a space of fear and exclusion, particularly for truth-tellers like Iya Agba, illustrating how tyranny corrupts institutional spaces ."
+              },
+              {
+                "id": "b1_lit_017",
+                "text": "How does the playwright's use of Yoruba oral tradition—proverbs, folktales, and rituals—enhance the play's political critique in ways that a purely Western dramatic form could not?",
+                "options": [
+                  "It makes the play less accessible to modern audiences and weakens its political message.",
+                  "It grounds the political critique in indigenous cultural wisdom, making the condemnation of tyranny culturally authentic and connecting contemporary political failures to deep-seated cultural values.",
+                  "It distracts from the political message by focusing on cultural spectacle.",
+                  "It serves only decorative purposes with no connection to the play's themes."
+                ],
+                "answer": "B",
+                "explanation": "The extensive deployment of Yoruba orature provides a culturally rooted framework for critiquing tyranny, connecting contemporary political failures to deep-seated cultural values of justice, legitimacy, and moral accountability ."
+              },
+              {
+                "id": "b1_lit_018",
+                "text": "What does the contrast between the Olubori rite and the Ijedodo ritual reveal about the play's distinction between legitimate and corrupted tradition?",
+                "options": [
+                  "All rituals are equally valid regardless of their purpose.",
+                  "The distinction between sacred tradition that upholds order and perverted ritual that serves tyranny highlights how tradition can be corrupted for political ends while authentic tradition provides resources for resistance.",
+                  "Rituals are meaningless performances with no moral content.",
+                  "Only the king has the authority to perform rituals."
+                ],
+                "answer": "B",
+                "explanation": "The play distinguishes between legitimate tradition (Olubori) and its corruption (Ijedodo), highlighting how sacred practices can be perverted for political ends while authentic tradition provides moral resources for resistance ."
+              },
+              {
+                "id": "b1_lit_019",
+                "text": "How does Ajanaku's self-identification with the elephant function as a tragic flaw that seals his doom?",
+                "options": [
+                  "It demonstrates his deep connection to nature and wisdom.",
+                  "His adoption of the elephant persona—symbolizing immense, arrogant power—ironically foreshadows his downfall, as the folktale tortoise (Iya Agba) ultimately brings down the elephant through cunning and collective action.",
+                  "It proves that Ajanaku is actually an animal in human form.",
+                  "It has no connection to his eventual downfall."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's self-identification with the elephant symbolizes his arrogant, power-drunk tyranny, which the play shows is ultimately vulnerable to the cunning and collective resistance of the community, paralleling the folktale of the tortoise's triumph over the elephant ."
+              },
+              {
+                "id": "b1_lit_020",
+                "text": "What ultimate philosophical message does the play offer about the relationship between tyranny, truth, and cosmic justice?",
+                "options": [
+                  "Tyranny is permanent and truth is powerless against it.",
+                  "The great law of cause-and-effect operates automatically; tyranny depends on lies and concealment, and truth-telling, exemplified by Iya Agba, is the catalyst for its inevitable downfall.",
+                  "Only supernatural intervention can defeat tyranny.",
+                  "Justice is arbitrary and unrelated to human action."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that the law of cause and effect operates inexorably—tyranny depends on lies and concealment, and Iya Agba's truth-telling is the catalyst for its downfall, affirming a cosmic justice that operates through human agency ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b2_b2",
+        "strataId": "strata_2",
+        "name": "Bundle 2 — Character Analysis (Major Figures)",
+        "requiredScore": 70,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b2_lit_001",
+                "text": "How does Ajanaku's character function as an allegorical representation of postcolonial African leadership failures, specifically the phenomenon of 'sit-tightism'?",
+                "options": [
+                  "He represents a benevolent dictator who genuinely cares for his people.",
+                  "His desperate quest for immortality through the Ijedodo ritual symbolizes the self-perpetuating tendency of African leaders who refuse to relinquish power, leading to tyranny and national underdevelopment.",
+                  "He represents a democratic leader who respects constitutional term limits.",
+                  "He represents a colonial administrator overseeing the kingdom."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's desperate quest for immortality through the Ijedodo ritual symbolizes the 'sit-tightism' of African leaders who, like Ajanaku, would rather destroy their nations than surrender power, making the play a postcolonial allegory ."
+              },
+              {
+                "id": "b2_lit_002",
+                "text": "What is the tragic irony embedded in Serubawon's role as both Ajanaku's father and the architect of his rise, and how does this irony structure the play's moral vision?",
+                "options": [
+                  "There is no irony in Serubawon's role; he is simply a villain.",
+                  "The tragic irony—Serubawon creates the monster that destroys his own family—structures the play's moral vision by demonstrating that corruption inevitably rebounds upon its perpetrators.",
+                  "Serubawon is a heroic figure who sacrifices his daughter for the kingdom's stability.",
+                  "Serubawon is unaware of his role in the tragedy."
+                ],
+                "answer": "B",
+                "explanation": "The tragic irony of Serubawon's creation—the Ijedodo charm—being used on his own beloved daughter Desola is a powerful instance of poetic justice, structuring the play's moral vision around the concept that corruption destroys its architects ."
+              },
+              {
+                "id": "b2_lit_003",
+                "text": "How does Iya Agba's gender complicate her function as the play's moral compass in a patriarchal society?",
+                "options": [
+                  "Her gender is irrelevant to her moral authority.",
+                  "She must overcome patriarchal assumptions that women should remain silent in political matters to fulfill her moral mission, making her truth-telling an act of both political and feminist resistance.",
+                  "Her gender makes her more credible as a truth-teller than any male character could be.",
+                  "She uses her gender to manipulate the chiefs into supporting her."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's struggle to be heard is compounded by her gender in a patriarchal society, making her persistent truth-telling an act of both political and feminist resistance that challenges assumptions about women's proper place ."
+              },
+              {
+                "id": "b2_lit_004",
+                "text": "What does Ajanaku's confession about sleeping with the sixth virgin (Desola) reveal about his psychological makeup and the nature of tyrannical power?",
+                "options": [
+                  "It provides comic relief and shows he is harmless.",
+                  "It reveals his conscious complicity in sexual violence and seals his moral condemnation, exposing the predatory nature of tyrannical power that recognizes no moral limits.",
+                  "It proves his innocence because he was tricked into the act.",
+                  "It shows his remorse and desire for redemption through self-punishment."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's confession that he knowingly participated in the ritual rape demonstrates his full moral culpability and removes any ambiguity about his villainy, exposing tyranny's predatory nature ."
+              },
+              {
+                "id": "b2_lit_005",
+                "text": "How does Serubawon's suicide function as the playwright's moral verdict on those who trade integrity for political power?",
+                "options": [
+                  "It represents a noble sacrifice that redeems his character.",
+                  "It represents the inevitable self-destruction of those who corrupt sacred traditions for political gain, functioning as the playwright's dramatic judgment on complicity with tyranny.",
+                  "It is an act of cowardice that allows him to escape justice.",
+                  "It is divine intervention that absolves him of responsibility."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon's suicide is not merely an escape but a dramatic statement about the inevitable self-destruction of those who corrupt sacred traditions for political gain—the playwright's verdict on individuals who trade their integrity for power ."
+              },
+              {
+                "id": "b2_lit_006",
+                "text": "What does the play suggest about the relationship between personal morality and political legitimacy through the contrast between Ajanaku and Odejimi?",
+                "options": [
+                  "They are completely separate domains with no relationship.",
+                  "Personal morality is inseparable from legitimate political power; Ajanaku's corruption delegitimizes his rule while Odejimi's integrity positions him as the embodiment of principled governance.",
+                  "Political power excuses all personal immorality, as Ajanaku demonstrates.",
+                  "Morality is irrelevant to politics, as Odejimi's failure proves."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate political authority requires moral integrity, and Ajanaku's illegitimacy is compounded by his personal corruption, while Odejimi's consistent public opposition positions him as the embodiment of principled governance ."
+              },
+              {
+                "id": "b2_lit_007",
+                "text": "How does Desola's victimization function as a critique of patriarchal power structures that sacrifice female bodies for male political ambitions?",
+                "options": [
+                  "It suggests that women are naturally victims who cannot resist.",
+                  "It exposes how patriarchal systems sacrifice female bodies and autonomy for male political ambitions, making her violation the literal manifestation of the body politic's corruption.",
+                  "It demonstrates that women are complicit in their own oppression.",
+                  "It has no gendered dimension and is simply a plot device."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual's requirement of virgin sacrifice represents the extreme manifestation of patriarchal control over female bodies and sexuality in service of male power, making Desola's victimization a powerful feminist critique ."
+              },
+              {
+                "id": "b2_lit_008",
+                "text": "What does Odekunle's character reveal about the play's construction of an alternative, non-toxic masculinity?",
+                "options": [
+                  "Masculinity is defined solely by physical strength and dominance.",
+                  "Odekunle presents a counter-model of masculinity based on love, protection, and collective resistance rather than domination, offering an alternative to Ajanaku's predatory masculinity.",
+                  "Odekunle is weak and ineffectual, proving that only tyrants can be strong.",
+                  "Odekunle is just another tyrant in waiting who will abuse power if given the chance."
+                ],
+                "answer": "B",
+                "explanation": "Odekunle's devotion to Desola and his participation in the resistance offer an alternative to Ajanaku's toxic masculinity, suggesting that true manhood lies in protection and justice rather than domination ."
+              },
+              {
+                "id": "b2_lit_009",
+                "text": "How does Omoyeni's secret pregnancy by Delani complicate the play's portrayal of women's agency within patriarchal constraints?",
+                "options": [
+                  "It proves that Omoyeni is a villain who betrays Ajanaku.",
+                  "Her secret resistance—conducting an affair and conceiving a child with her true love—demonstrates women's capacity for agency and resistance even within the most restrictive patriarchal constraints.",
+                  "It shows that women are naturally deceitful and untrustworthy.",
+                  "It has no significance beyond complicating the succession."
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni's secret relationship with Delani and her pregnancy complicate the play's portrayal of women, showing that even within patriarchal constraints, women exercise agency and resistance ."
+              },
+              {
+                "id": "b2_lit_010",
+                "text": "What does Iya Agba's exile and return symbolize about the relationship between truth, memory, and political power?",
+                "options": [
+                  "Exile is a permanent condition with no possibility of return.",
+                  "Her exile and return symbolize the suppression and ultimate vindication of truth and legitimate authority, demonstrating that truth cannot be permanently silenced by tyranny.",
+                  "It shows that Iya Agba is powerless against the palace.",
+                  "It is a minor subplot with no thematic significance."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth: her banishment represents the silencing of dissent under tyranny, and her return represents truth's triumph ."
+              },
+              {
+                "id": "b2_lit_011",
+                "text": "How does the play use Ajanaku's illegitimate paternity as both a literal plot point and a metaphor for political illegitimacy?",
+                "options": [
+                  "It is purely a literal plot point with no metaphorical significance.",
+                  "His illegitimacy operates on both levels: literally as Serubawon's bastard son and metaphorically as a ruler who illegitimately seized power, making his personal and political illegitimacy inseparable.",
+                  "It is a metaphor with no literal basis in the plot.",
+                  "It is irrelevant to the play's political themes."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's illegitimacy operates on both levels: literally as Serubawon's bastard son and metaphorically as a ruler who illegitimately seized power, making his personal and political illegitimacy inseparable ."
+              },
+              {
+                "id": "b2_lit_012",
+                "text": "What does the play reveal about the relationship between individual character and political systems through its portrayal of different characters' responses to tyranny?",
+                "options": [
+                  "Individual character is irrelevant to political outcomes.",
+                  "The play suggests that while systemic factors enable tyranny, individual character—like Iya Agba's courage or Ajanaku's hubris—determines how systems are used or resisted.",
+                  "Political systems determine everything and individuals have no agency.",
+                  "Only individual character matters, and systems are irrelevant."
+                ],
+                "answer": "B",
+                "explanation": "The play balances systemic and individual factors: corrupt systems enable tyranny, but individual moral choices—Iya Agba's resistance, Odejimi's principled opposition—are crucial to overcoming it ."
+              },
+              {
+                "id": "b2_lit_013",
+                "text": "How does Demoke's character function as a commentary on the role of women in enabling tyranny?",
+                "options": [
+                  "She is a purely innocent victim of her husband's schemes.",
+                  "She is complicit in Serubawon's schemes and embodies the play's recognition that women can be both victims and enablers of tyrannical systems.",
+                  "She is the mastermind behind all of Serubawon's plots.",
+                  "She is irrelevant to the play's political dynamics."
+                ],
+                "answer": "B",
+                "explanation": "Demoke's complicity in framing Iya Agba and her instrumental role in palace intrigues demonstrate that women can be both victims and enablers of tyrannical systems, complicating any simple gender analysis ."
+              },
+              {
+                "id": "b2_lit_014",
+                "text": "What does the play suggest about the relationship between kinship and political corruption through Serubawon's relationship with Ajanaku?",
+                "options": [
+                  "Kinship always protects against corruption.",
+                  "Kinship ties can be perverted to serve corruption, as Serubawon's parental relationship with Ajanaku drives his corrupt kingmaking and ultimately leads to the destruction of his own family.",
+                  "Kinship has no relevance to political dynamics.",
+                  "Only non-kin relationships can be corrupt."
+                ],
+                "answer": "B",
+                "explanation": "The play explores how kinship (ìbá) can be perverted: Serubawon's parental relationship to Ajanaku drives his corrupt kingmaking and ultimately leads to the destruction of his own family, demonstrating that blood ties offer no protection against moral corruption ."
+              },
+              {
+                "id": "b2_lit_015",
+                "text": "How does the character of Ogundele function as a choric figure whose moral compromise reflects the broader community's complicity in tyranny?",
+                "options": [
+                  "Ogundele has no choric function and is a purely individual character.",
+                  "Ogundele initially articulates moral objections but accepts bribes, reflecting how tyranny corrupts even those who initially resist, mirroring the community's broader complicity.",
+                  "Ogundele remains uncompromised throughout, proving that corruption is always defeated.",
+                  "Ogundele is a purely comic character with no moral weight."
+                ],
+                "answer": "B",
+                "explanation": "Ogundele initially functions as a choric figure, articulating the moral and traditional objections to Ajanaku's succession, though his acceptance of bribes reveals how tyranny corrupts even those who initially resist ."
+              },
+              {
+                "id": "b2_lit_016",
+                "text": "What does the play reveal about the relationship between truth and power through Iya Agba's persistent truth-telling despite her marginalization?",
+                "options": [
+                  "Truth is irrelevant to power and cannot challenge tyranny.",
+                  "Truth-telling, exemplified by Iya Agba, is the ultimate weapon against illegitimate power, which depends on lies and concealment, making her persistence despite marginalization a model of moral courage.",
+                  "Power always defeats truth in the end.",
+                  "Truth is subjective and malleable, so there is no objective truth to tell."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that legitimate power rests on truth, while tyranny depends on lies and concealment, making Iya Agba's truth-telling the catalyst for Ajanaku's downfall and a model of moral courage ."
+              },
+              {
+                "id": "b2_lit_017",
+                "text": "How does Ajanaku's death by the charmed red cloth function symbolically as the restoration of justice through the victim's agency?",
+                "options": [
+                  "It is a random event with no symbolic meaning.",
+                  "It represents the restoration of justice through Desola's embrace, which reclaims her stolen life essence and turns the tyrant's own tools against him, symbolizing the victim's agency in achieving justice.",
+                  "It proves that Ajanaku was immortal and could only be killed by magic.",
+                  "It shows that only supernatural forces can defeat tyranny, not human action."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's death through the charmed cloth, orchestrated by his victims and the community, symbolizes the inevitable downfall of tyranny when confronted by collective resistance and the victim's agency in reclaiming justice ."
+              },
+              {
+                "id": "b2_lit_018",
+                "text": "What does the play suggest about the relationship between individual ambition and collective well-being through Ajanaku's reign?",
+                "options": [
+                  "They are always aligned, and what benefits the ruler benefits the community.",
+                  "Unchecked personal ambition, like Ajanaku's, devastates the community and ultimately destroys the ambitious individual, revealing the fundamental tension between tyranny and the common good.",
+                  "Collective well-being is irrelevant to political leadership.",
+                  "Personal ambition always benefits the community by driving progress."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's selfish quest for immortality and absolute power brings terror, violence, and death to the community, demonstrating the destructive nature of unchecked ambition and its fundamental opposition to collective well-being ."
+              },
+              {
+                "id": "b2_lit_019",
+                "text": "How does the community's eventual resistance to Ajanaku challenge the play's earlier portrayal of them as complicit in his tyranny?",
+                "options": [
+                  "The community was never complicit and resisted from the beginning.",
+                  "The community's shift from silence to resistance demonstrates that tyranny can be overcome when people collectively refuse to be silent, offering a hopeful model for political transformation.",
+                  "The community's resistance is ineffective and changes nothing.",
+                  "The community continues to support Ajanaku until the end of the play."
+                ],
+                "answer": "B",
+                "explanation": "The community's arc from passive acceptance to active resistance illustrates the play's hopeful message that tyranny, though formidable, is ultimately vulnerable to collective moral action ."
+              },
+              {
+                "id": "b2_lit_020",
+                "text": "What does the play's resolution suggest about the possibility of achieving justice under tyranny, and what role does collective action play in this process?",
+                "options": [
+                  "Justice is impossible under tyranny and can only come from external intervention.",
+                  "Justice is possible but requires collective moral courage and the refusal to remain silent, as demonstrated by Iya Agba's leadership and the community's eventual uprising.",
+                  "Justice is automatic and requires no human effort.",
+                  "Justice is irrelevant to the play's concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play's resolution—the downfall of Ajanaku and the restoration of order—suggests that justice is possible under tyranny, but only through collective moral courage and the refusal to remain silent ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b3_b3",
+        "strataId": "strata_2",
+        "name": "Bundle 3 — Themes and Motifs",
+        "requiredScore": 70,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b3_lit_001",
+                "text": "How does the play's treatment of tyranny function as both a specific historical critique and a universal political allegory?",
+                "options": [
+                  "It is purely historical with no contemporary relevance.",
+                  "It operates on multiple levels: as a specific Yoruba historical narrative and as a universal allegory about tyranny, making its political critique both culturally grounded and broadly applicable to any society.",
+                  "It is purely allegorical with no historical grounding.",
+                  "It has no political dimensions at all."
+                ],
+                "answer": "B",
+                "explanation": "The play's engagement with 'ìtàn' allows it to operate on multiple levels: as a specific Yoruba historical narrative and as a universal allegory about tyranny, making its political critique both culturally grounded and broadly applicable ."
+              },
+              {
+                "id": "b3_lit_002",
+                "text": "What does the play suggest about the relationship between tradition and tyranny through its portrayal of the corruption of sacred rituals?",
+                "options": [
+                  "Tradition always supports tyranny and cannot be used for resistance.",
+                  "Tradition can be manipulated to serve tyranny, but authentic tradition also provides the moral resources to resist it, as demonstrated by Iya Agba and Odejimi's use of traditional values against Ajanaku.",
+                  "Tradition is irrelevant to politics and has no role in the play.",
+                  "Tyranny always respects tradition and never corrupts it."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon corrupts sacred rituals to legitimize Ajanaku, but Iya Agba and Odejimi draw on authentic traditional values—justice, legitimacy, respect for sacred limits—to resist the tyrant, demonstrating tradition's dual potential ."
+              },
+              {
+                "id": "b3_lit_003",
+                "text": "How does the play treat the theme of gender and power in ways that complicate simple victim/agent binaries?",
+                "options": [
+                  "Women are portrayed as uniformly powerless victims with no agency.",
+                  "The play presents a nuanced feminist critique: women are both victimized by patriarchal tyranny and act as powerful agents of resistance, with characters like Iya Agba and Omoyeni demonstrating agency within constraints.",
+                  "The play celebrates male dominance and has no feminist dimensions.",
+                  "Gender is irrelevant to the play's political concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play presents a nuanced feminist critique: women are both victimized by patriarchal tyranny (Desola, Omoyeni) and act as powerful agents of resistance (Iya Agba), complicating any simple victim/agent binary ."
+              },
+              {
+                "id": "b3_lit_004",
+                "text": "What does the play suggest about the nature of evil through its portrayal of Serubawon and Ajanaku?",
+                "options": [
+                  "Evil is supernatural and external to human society.",
+                  "Evil is human-made, rooted in ambition, greed, and the corruption of sacred traditions for political gain, demystifying evil as a product of human choices rather than supernatural forces.",
+                  "Evil does not exist in the play's world.",
+                  "Evil is always immediately punished by divine intervention."
+                ],
+                "answer": "B",
+                "explanation": "The play demystifies evil by showing it as the product of human choices—Serubawon's manipulation, Ajanaku's ambition—rather than supernatural forces, making its critique of tyranny a humanistic rather than theological one ."
+              },
+              {
+                "id": "b3_lit_005",
+                "text": "How does the motif of blood function to connect the themes of illegitimacy, violence, and sacrificial exploitation in the play?",
+                "options": [
+                  "Blood is a purely literal element with no symbolic meaning.",
+                  "Blood operates as a multivalent symbol: it represents genealogical truth (Ajanaku's illegitimate paternity) and violent sacrifice (the Ijedodo ritual), connecting the themes of illegitimacy and tyrannical violence.",
+                  "Blood is only associated with healing and purification.",
+                  "Blood represents the community's unity and shared identity."
+                ],
+                "answer": "B",
+                "explanation": "Blood operates as a multivalent symbol linking Ajanaku's illegitimate origins (the 'blood' of Serubawon) with the violent, life-draining sacrifice of the Ijedodo ritual, connecting the themes of illegitimacy and tyranny ."
+              },
+              {
+                "id": "b3_lit_006",
+                "text": "What does the play reveal about the relationship between personal ambition and collective well-being through Ajanaku's reign?",
+                "options": [
+                  "They are always aligned, and what benefits the ruler benefits the community.",
+                  "Unchecked personal ambition, like Ajanaku's, devastates the community and ultimately destroys the ambitious individual, revealing the fundamental tension between tyranny and the common good.",
+                  "Collective well-being is irrelevant to political leadership.",
+                  "Personal ambition always benefits the community by driving progress."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's selfish quest for immortality and absolute power brings terror, violence, and death to the community, demonstrating the destructive nature of unchecked ambition ."
+              },
+              {
+                "id": "b3_lit_007",
+                "text": "How does the play treat the theme of justice as operating through the law of cause and effect rather than divine intervention?",
+                "options": [
+                  "Justice is absent from the play's world.",
+                  "The play affirms that justice, though delayed, ultimately prevails through the law of cause and effect, as demonstrated by the downfall of Ajanaku and the exposure and suicide of Serubawon.",
+                  "Justice is only achieved through supernatural intervention.",
+                  "Justice is arbitrary and unrelated to human action."
+                ],
+                "answer": "B",
+                "explanation": "The eventual downfall of Ajanaku and the exposure and suicide of Serubawon demonstrate the play's belief in poetic justice—the inevitable consequences of corrupt actions operating through a natural law of cause and effect ."
+              },
+              {
+                "id": "b3_lit_008",
+                "text": "What does the play suggest about the relationship between the sacred and political legitimacy through its portrayal of rituals?",
+                "options": [
+                  "They are completely separate spheres with no relationship.",
+                  "Legitimate political order depends on respecting sacred limits; tyranny violates these limits and thus delegitimizes itself, as demonstrated by the Ijedodo ritual's corruption of sacred tradition.",
+                  "The sacred is irrelevant to politics and has no role in governance.",
+                  "Politics is always sacred and cannot be questioned."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate political authority requires respect for sacred limits—Ajanaku's violation of these limits through the Ijedodo ritual is both cause and symptom of his illegitimacy ."
+              },
+              {
+                "id": "b3_lit_009",
+                "text": "How does the play treat the theme of resistance as both a moral imperative and a practical necessity for overcoming tyranny?",
+                "options": [
+                  "Resistance is futile and should be abandoned.",
+                  "Resistance, even when seemingly futile, is morally necessary and ultimately effective when it becomes collective, as demonstrated by Iya Agba's persistence and the community's eventual uprising.",
+                  "Resistance is unnecessary in a well-governed state.",
+                  "Only violent resistance can be effective against tyranny."
+                ],
+                "answer": "B",
+                "explanation": "The play celebrates resistance—Iya Agba's persistent truth-telling, Odejimi's principled opposition, and the community's eventual collective action—as both morally necessary and practically effective ."
+              },
+              {
+                "id": "b3_lit_010",
+                "text": "What does the play suggest about the relationship between truth and power, particularly through Iya Agba's truth-telling despite marginalization?",
+                "options": [
+                  "Truth is irrelevant to power and cannot challenge tyranny.",
+                  "Truth-telling, exemplified by Iya Agba, is the ultimate weapon against illegitimate power, which depends on lies and concealment, making her persistence despite marginalization a model of moral courage.",
+                  "Power always defeats truth in the end.",
+                  "Truth is subjective and malleable, so there is no objective truth to tell."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that legitimate power rests on truth, while tyranny depends on lies and concealment, making Iya Agba's truth-telling the catalyst for Ajanaku's downfall ."
+              },
+              {
+                "id": "b3_lit_011",
+                "text": "How does the play use the motif of the masquerade or mask to explore the relationship between performance and political power?",
+                "options": [
+                  "Masks are purely decorative elements with no symbolic meaning.",
+                  "The masquerade tradition symbolizes the performance of power and the hidden truths behind public personas, particularly Ajanaku's public performance of legitimacy masking his illegitimate origins.",
+                  "Masks have no symbolic meaning in the play.",
+                  "There are no masks or masquerade elements in the play."
+                ],
+                "answer": "B",
+                "explanation": "The masquerade and mask traditions are used to explore how political power is performed and how truth lies hidden beneath public display—Ajanaku's public persona masks his illegitimacy ."
+              },
+              {
+                "id": "b3_lit_012",
+                "text": "What does the play suggest about the relationship between the individual and the community through its portrayal of Iya Agba and Ajanaku?",
+                "options": [
+                  "The individual is always right and the community is always wrong.",
+                  "The tyrant Ajanaku places himself above the community, while Iya Agba represents the community's collective wisdom and resistance, suggesting that true leadership serves the collective rather than the self.",
+                  "The community is irrelevant to political outcomes.",
+                  "The individual should always submit to the community without question."
+                ],
+                "answer": "B",
+                "explanation": "The play contrasts Ajanaku's selfish individualism with Iya Agba's communal values, suggesting that true leadership serves the collective rather than the self ."
+              },
+              {
+                "id": "b3_lit_013",
+                "text": "How does the play treat the theme of legacy through the contrast between Ajanaku's destructive rule and Iya Agba's moral authority?",
+                "options": [
+                  "Legacy is irrelevant to the play's concerns.",
+                  "Ajanaku's legacy is destruction, while Iya Agba's legacy is wisdom and resistance, suggesting that true legacy is moral rather than material or political.",
+                  "Legacy is only about biological children and lineage.",
+                  "Only kings can have legacies that matter."
+                ],
+                "answer": "B",
+                "explanation": "The play contrasts Ajanaku's destructive legacy with the enduring moral legacy of Iya Agba's truth-telling, suggesting that true greatness lies in moral courage rather than political power ."
+              },
+              {
+                "id": "b3_lit_014",
+                "text": "What does the play suggest about the relationship between personal morality and political legitimacy through the contrast between Ajanaku and Odejimi?",
+                "options": [
+                  "They are completely separate domains with no relationship.",
+                  "Personal morality is inseparable from legitimate political power; Ajanaku's corruption delegitimizes his rule while Odejimi's integrity positions him as the embodiment of principled governance.",
+                  "Political power excuses all personal immorality.",
+                  "Morality is irrelevant to politics."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate political authority requires moral integrity, and Ajanaku's illegitimacy is compounded by his personal corruption, while Odejimi's consistent public opposition positions him as the embodiment of principled governance ."
+              },
+              {
+                "id": "b3_lit_015",
+                "text": "How does the play treat the theme of sacrifice through its portrayal of the Ijedodo ritual and the community's eventual resistance?",
+                "options": [
+                  "Sacrifice is always noble and beneficial to the community.",
+                  "The play critiques the perversion of sacrifice, showing how it can be corrupted into exploitation and murder, while the community's resistance represents a different kind of sacrifice—the willingness to risk personal safety for justice.",
+                  "Sacrifice is irrelevant to the play's concerns.",
+                  "Only animal sacrifice is depicted in the play."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual perverts the concept of sacrifice, turning it into a tool of sexual violence and political ambition, while the community's resistance represents a contrasting sacrifice—the willingness to risk personal safety for justice ."
+              },
+              {
+                "id": "b3_lit_016",
+                "text": "What does the play reveal about the relationship between power and knowledge through Serubawon's control of ritual secrets?",
+                "options": [
+                  "They are completely unrelated domains.",
+                  "Serubawon controls Ajanaku through his exclusive knowledge of the Ijedodo ritual, showing how knowledge can be a tool of manipulation and political control.",
+                  "Knowledge weakens power by exposing truth.",
+                  "Power creates knowledge rather than knowledge creating power."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon maintains his power over Ajanaku by monopolizing knowledge of the Ijedodo ritual, illustrating the political uses of knowledge control and the relationship between expertise and power ."
+              },
+              {
+                "id": "b3_lit_017",
+                "text": "How does the play use the concept of 'the spectacle' in relation to political power, particularly through public rituals and festivals?",
+                "options": [
+                  "Spectacle is irrelevant to politics and serves only entertainment purposes.",
+                  "Ritual, festival, and public performance are used both to reinforce power and to resist it, as demonstrated by the Jobele ceremony where the tyrant's power is publicly broken.",
+                  "Spectacle is only for entertainment and has no political function.",
+                  "There is no spectacle in the play."
+                ],
+                "answer": "B",
+                "explanation": "The play uses spectacle—rituals, festivals, public ceremonies—as sites of political struggle where power is both performed and contested, culminating in the Jobele ceremony where Ajanaku's power is publicly broken ."
+              },
+              {
+                "id": "b3_lit_018",
+                "text": "What does the play suggest about the relationship between fate and free will through Ajanaku's downfall?",
+                "options": [
+                  "Fate determines everything and Ajanaku had no choice in his actions.",
+                  "Character determines fate; Ajanaku's tragic end is the result of his own choices and flaws, not blind destiny, aligning with the Yoruba belief that character shapes destiny.",
+                  "Free will is an illusion and all events are predetermined.",
+                  "Fate and free will are unrelated concepts with no relevance to the play."
+                ],
+                "answer": "B",
+                "explanation": "The play suggests that character is fate—Ajanaku's arrogant and tyrannical character leads inevitably to his downfall, despite his attempts to control destiny through ritual, aligning with the Yoruba belief that character (ìwà) shapes destiny (orí) ."
+              },
+              {
+                "id": "b3_lit_019",
+                "text": "How does the play treat the theme of exile through Iya Agba's banishment and return?",
+                "options": [
+                  "Exile is irrelevant to the play's concerns.",
+                  "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth and legitimate authority, demonstrating that truth cannot be permanently silenced by tyranny.",
+                  "Exile is a punishment that permanently destroys the exiled person.",
+                  "Only men are exiled in the play."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth and legitimate authority—her banishment represents the silencing of dissent under tyranny, and her return represents truth's triumph ."
+              },
+              {
+                "id": "b3_lit_020",
+                "text": "What ultimate moral message does the play offer about the fate of tyrants through the principle of cause and effect?",
+                "options": [
+                  "Tyrants often die peacefully in old age after long reigns.",
+                  "The great law of cause and effect operates automatically; tyrants and their enablers do not escape justice, as Ajanaku's death and Serubawon's suicide demonstrate.",
+                  "Tyrants are always protected by the gods.",
+                  "Tyrants can achieve immortality through ritual sacrifice."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that the law of cause and effect operates inexorably—tyrants and their enablers do not escape justice, as Ajanaku's death and Serubawon's suicide demonstrate ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b4_b4",
+        "strataId": "strata_2",
+        "name": "Bundle 4 — Dramatic Techniques and Style",
+        "requiredScore": 75,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b4_lit_001",
+                "text": "How does the playwright's use of Yoruba proverbs function as more than mere ornamentation, serving as compressed moral arguments and character revelations?",
+                "options": [
+                  "Proverbs are used only for decorative purposes with no dramatic function.",
+                  "Proverbs encapsulate moral wisdom, critique tyranny, and provide cultural authenticity while advancing the thematic concerns, functioning as compressed moral arguments and character revelations.",
+                  "Proverbs confuse the audience and weaken the play's political message.",
+                  "Proverbs are irrelevant to the play's meaning and could be removed without consequence."
+                ],
+                "answer": "B",
+                "explanation": "Yoruba proverbs in the play are not merely ornamental but function as compressed moral arguments, character revelations, and thematic statements that ground the political critique in indigenous wisdom ."
+              },
+              {
+                "id": "b4_lit_002",
+                "text": "What is the dramatic effect of Iya Agba's persistent use of proverbs in her confrontations with Ajanaku, and how does this contrast with Ajanaku's rhetorical style?",
+                "options": [
+                  "It makes her seem confused and senile, weakening her credibility.",
+                  "It positions her as the voice of traditional wisdom challenging illegitimate power, creating a powerful contrast with Ajanaku's arrogant, unproverbial boasts.",
+                  "It makes her less credible as a character than Ajanaku.",
+                  "It has no effect on the dramatic tension between them."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's proverbial speech positions her as the embodiment of traditional wisdom and moral authority, creating a powerful contrast with Ajanaku's arrogant, unproverbial boasts ."
+              },
+              {
+                "id": "b4_lit_003",
+                "text": "How does the playwright use dramatic irony in the play's treatment of Ajanaku's paternity to create tension and structure the revelation of truth?",
+                "options": [
+                  "The audience never learns the truth about Ajanaku's parentage.",
+                  "The audience learns the truth (Serubawon is Ajanaku's father) before Ajanaku acknowledges it, creating dramatic tension and structuring the play's revelation of truth through a gradual process of exposure.",
+                  "Ajanaku knows the truth from the beginning and openly acknowledges it.",
+                  "There is no dramatic irony in this aspect of the play."
+                ],
+                "answer": "B",
+                "explanation": "The audience, through Iya Agba's accusations and later revelations, becomes aware of Ajanaku's true paternity before Ajanaku himself acknowledges it, creating dramatic irony that heightens the play's tension and structures its revelation of truth ."
+              },
+              {
+                "id": "b4_lit_004",
+                "text": "What is the dramatic significance of the Jobele ceremony where Ajanaku expects to attain immortality but instead meets his downfall?",
+                "options": [
+                  "It is a minor ceremonial event with no dramatic weight.",
+                  "It serves as the play's climax, where the tyrant's ambitions are finally thwarted through collective resistance, representing the moment of poetic justice and liberation.",
+                  "It is a comic interlude that provides relief from the political tension.",
+                  "It has no dramatic significance and could be removed without affecting the plot."
+                ],
+                "answer": "B",
+                "explanation": "The Jobele ceremony is the dramatic climax where Ajanaku's quest for immortality is reversed, Desola reclaims her life, and the tyrant is killed—the moment of poetic justice and liberation ."
+              },
+              {
+                "id": "b4_lit_005",
+                "text": "How does the playwright use the folktale of the elephant and the tortoise as a structuring metaphor for the entire play?",
+                "options": [
+                  "It is a digression with no relevance to the main plot.",
+                  "It provides the play's central metaphor: the powerful elephant (Ajanaku) is brought down by the cunning tortoise (Iya Agba/collective resistance), structuring the entire narrative arc.",
+                  "It is a children's story told for entertainment with no connection to the political themes.",
+                  "It has no connection to the main plot or themes."
+                ],
+                "answer": "B",
+                "explanation": "The Yoruba folktale of the elephant and tortoise provides the play's central metaphorical framework: the arrogant, powerful elephant (Ajanaku) is ultimately brought down by the cunning and wisdom of the tortoise (Iya Agba and the community) ."
+              },
+              {
+                "id": "b4_lit_006",
+                "text": "What is the effect of the playwright's use of proverbs spoken by multiple characters, and how does this create a shared cultural language?",
+                "options": [
+                  "It makes the play monotonous and repetitive.",
+                  "It creates a shared cultural language that unites the community against tyranny and provides a framework for moral judgment, contrasting with Ajanaku's individualistic rhetoric.",
+                  "It suggests that all characters think alike and have no individual personalities.",
+                  "It has no dramatic effect on the play's themes."
+                ],
+                "answer": "B",
+                "explanation": "The shared proverbial language creates a sense of cultural continuity and collective wisdom that stands in opposition to Ajanaku's individualistic, tyrannical rhetoric, uniting the community in moral judgment ."
+              },
+              {
+                "id": "b4_lit_007",
+                "text": "How does the playwright use the physical setting of the bush where Desola is raped to symbolize the lawlessness enabled by tyranny?",
+                "options": [
+                  "The bush is a neutral setting with no symbolic meaning.",
+                  "The bush, as a liminal space outside the ordered community, represents the lawlessness and violation of norms that Ajanaku's tyranny enables, symbolizing how tyranny breaks all moral and social boundaries.",
+                  "The bush is a place of safety and refuge.",
+                  "The bush is a sacred space that protects the innocent."
+                ],
+                "answer": "B",
+                "explanation": "The bush, as a liminal space outside the ordered community, becomes the site of Ajanaku's most egregious violation—the rape of Desola—symbolizing how tyranny breaks all moral and social boundaries ."
+              },
+              {
+                "id": "b4_lit_008",
+                "text": "What is the dramatic significance of the moment when Desola embraces Ajanaku during the Jobele ceremony?",
+                "options": [
+                  "It is a moment of reconciliation between victim and tyrant.",
+                  "It represents the victim reclaiming her life from the tyrant, a powerful dramatic image of justice and reversal, symbolizing the restoration of moral order through the victim's agency.",
+                  "It is a romantic moment that humanizes Ajanaku.",
+                  "It has no dramatic significance."
+                ],
+                "answer": "B",
+                "explanation": "Desola's embrace of Ajanaku during the Jobele ceremony is a powerful dramatic image: the victim reclaims her life from the tyrant, reversing the dynamic of victimization that has defined their relationship ."
+              },
+              {
+                "id": "b4_lit_009",
+                "text": "How does the playwright use the motif of 'chains' or 'binding' to symbolize both the community's subjection to tyranny and the need for liberation?",
+                "options": [
+                  "Chains are used only literally with no symbolic meaning.",
+                  "Chains symbolize the binding of the community to tyranny and the need for liberation from oppressive rule, representing both the constraints of tyranny and the possibility of breaking free.",
+                  "Chains have no symbolic meaning in the play.",
+                  "Chains are only associated with prisoners and have no broader significance."
+                ],
+                "answer": "B",
+                "explanation": "The motif of chains and binding symbolizes the community's subjection to Ajanaku's tyranny and the need for collective liberation—the 'impregnable chains' that must be broken ."
+              },
+              {
+                "id": "b4_lit_010",
+                "text": "What is the effect of the playwright's use of the Yoruba concept of 'ìtàn' (history/folktale) in the play, and how does it allow for multiple levels of meaning?",
+                "options": [
+                  "It makes the play purely historical with no contemporary relevance.",
+                  "It allows the play to function as both a specific historical narrative and a timeless allegory about tyranny and resistance, making its political critique both culturally grounded and broadly applicable.",
+                  "It has no effect on the play's meaning.",
+                  "It confuses the audience by mixing different genres."
+                ],
+                "answer": "B",
+                "explanation": "The play's engagement with 'ìtàn' allows it to operate on multiple levels: as a specific Yoruba historical narrative and as a universal allegory about tyranny, making its political critique both culturally grounded and broadly applicable ."
+              },
+              {
+                "id": "b4_lit_011",
+                "text": "How does the playwright use the character of Omoyeni to complicate the portrayal of women in the play, particularly through her secret agency?",
+                "options": [
+                  "Omoyeni is a one-dimensional victim with no agency.",
+                  "Omoyeni's agency in conducting an affair with Delani complicates simple victimhood and reveals women's capacity for resistance within patriarchal constraints, adding nuance to the play's gender politics.",
+                  "Omoyeni is a villain who betrays Ajanaku.",
+                  "Omoyeni has no significant role in the play."
+                ],
+                "answer": "B",
+                "explanation": "Omoyeni's secret relationship with Delani and her pregnancy complicate the play's portrayal of women, showing that even within patriarchal constraints, women exercise agency and resistance ."
+              },
+              {
+                "id": "b4_lit_012",
+                "text": "What is the dramatic function of the play's extensive use of festivals and rituals, and how do they serve as sites of both political manipulation and resistance?",
+                "options": [
+                  "They are merely decorative elements with no dramatic function.",
+                  "They provide African theatrical authenticity and serve as sites of both political manipulation and resistance, as demonstrated by the corrupted Olubori rite and the liberating Jobele ceremony.",
+                  "They slow down the plot unnecessarily.",
+                  "They have no dramatic function and could be removed without consequence."
+                ],
+                "answer": "B",
+                "explanation": "Festivals and rituals in the play are not decorative but function as dramatic sites where political power is both performed and contested—from the corrupted Olubori rite to the liberating Jobele ceremony ."
+              },
+              {
+                "id": "b4_lit_013",
+                "text": "How does the playwright use the resolution of the play to reinforce its moral message about the inevitable downfall of tyranny?",
+                "options": [
+                  "The resolution is ambiguous and morally unclear.",
+                  "The resolution—Ajanaku's death, Serubawon's suicide, and the restoration of legitimate order—reinforces the play's affirmation of justice and the downfall of tyranny, providing moral closure.",
+                  "The resolution shows that tyranny prevails and justice is impossible.",
+                  "The resolution has no moral dimension and is purely plot-driven."
+                ],
+                "answer": "B",
+                "explanation": "The resolution provides moral closure: the tyrant is destroyed, his enabler takes his own life, and the community moves toward restoring legitimate order, reinforcing the play's moral message that tyranny is self-destructive and justice ultimately prevails ."
+              },
+              {
+                "id": "b4_lit_014",
+                "text": "What is the dramatic significance of Ajanaku's boastful language and hyperbolic self-aggrandizement, and how does it contribute to his characterization as a tyrant?",
+                "options": [
+                  "It demonstrates his humility and self-awareness.",
+                  "His hyperbolic language reveals his arrogant self-conception, which the play will ultimately expose as hollow, contributing to his characterization as a tyrant whose hubris leads to his downfall.",
+                  "It shows his insecurity and desire for validation.",
+                  "It has no significance for his characterization."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's boastful language is hyperbolic and reveals his arrogant self-conception, which the play will ultimately expose as hollow, contributing to his characterization as a tyrant whose hubris leads to his downfall ."
+              },
+              {
+                "id": "b4_lit_015",
+                "text": "How does the playwright use the character of Odejimi as a dramatic foil to Ajanaku, and what does this contrast reveal about the play's moral vision?",
+                "options": [
+                  "Odejimi is a coward who avoids confrontation with Ajanaku.",
+                  "Odejimi serves as a moral foil to Ajanaku: humble where the king is arrogant, and principled where the king is rapacious, revealing the play's moral vision of principled governance.",
+                  "Odejimi is just another tyrant in waiting.",
+                  "Odejimi is irrelevant to the play's moral vision."
+                ],
+                "answer": "B",
+                "explanation": "Odejimi serves as a moral foil to Ajanaku: humble where the king is arrogant, and principled where the king is rapacious, revealing the play's moral vision of principled governance ."
+              },
+              {
+                "id": "b4_lit_016",
+                "text": "What is the effect of the playwright's use of dramatic pauses and silences during Iya Agba's interrogations of the conspirators?",
+                "options": [
+                  "The actors forgot their written dialogue.",
+                  "Deliberate silences create moral tension, forcing characters to face the weight of their buried deeds and allowing truth to weigh heavily in the space.",
+                  "To give the musicians time to tune their instruments.",
+                  "To invite audience members to shout answers."
+                ],
+                "answer": "B",
+                "explanation": "Deliberate silences create moral tension, forcing characters to face the weight of their buried deeds and allowing truth to weigh heavily in the space ."
+              },
+              {
+                "id": "b4_lit_017",
+                "text": "How does the final tableau communicate the play's resolution and the restoration of order?",
+                "options": [
+                  "The stage is left completely empty with corpses scattered around.",
+                  "The fallen tyrant lies isolated while the restored lovers, elders, and community gather together in unity and light, communicating the restoration of moral and social order.",
+                  "Chief Serubawon stands triumphant above the throne.",
+                  "King Ajanaku is carried off on the shoulders of his guards in triumph."
+                ],
+                "answer": "B",
+                "explanation": "The closing stage picture isolates the fallen tyrant while surrounding the reunited community in light, communicating the restoration of moral and social order ."
+              },
+              {
+                "id": "b4_lit_018",
+                "text": "What is the linguistic style of the dialogue between Chief Odejimi and Chief Serubawon, and what does it reveal about their characters?",
+                "options": [
+                  "Broken Pidgin English with slapstick jokes.",
+                  "Elevated, proverb-rich, and metaphorically dense traditional rhetoric characteristic of Yoruba elder statesmanship, revealing their status as custodians of tradition.",
+                  "Academic legalistic English resembling modern court proceedings.",
+                  "Monosyllabic, rapid insults without cultural references."
+                ],
+                "answer": "B",
+                "explanation": "Their exchanges feature dignified, proverb-laden dialogue fitting senior custodians of custom, revealing their status as elders grounded in traditional wisdom ."
+              },
+              {
+                "id": "b4_lit_019",
+                "text": "How does the playwright handle the depiction of physical violence on stage, and what does this reveal about the play's dramatic priorities?",
+                "options": [
+                  "With gratuitous, graphic gore that distracts from the political theme.",
+                  "Through disciplined, stylized dramatic action that emphasizes moral and psychological impact over mere spectacle, revealing the play's prioritization of moral critique over shock value.",
+                  "By cutting away to recorded modern film clips.",
+                  "By having all violence occur off-stage without any visual representation."
+                ],
+                "answer": "B",
+                "explanation": "Action is staged with dramatic discipline, focusing on moral and psychological consequences rather than shock value, revealing the play's prioritization of moral critique ."
+              },
+              {
+                "id": "b4_lit_020",
+                "text": "How does the playwright use the Chorus of Market Women to contribute to the play's socio-economic critique of tyranny?",
+                "options": [
+                  "They sing praises of the king's wonderful tax policies.",
+                  "They voice the biting reality of food scarcity, exorbitant levies, and the daily suffering of commoners under the new regime, contributing to the play's socio-economic critique.",
+                  "They announce that they are moving their stalls to the capital city.",
+                  "They refuse to sell food to anyone except palace guards."
+                ],
+                "answer": "B",
+                "explanation": "The market women voice the economic toll of misrule, highlighting sky-high food prices and extortionate levies, contributing to the play's socio-economic critique of tyranny ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b5_b5",
+        "strataId": "strata_2",
+        "name": "Bundle 5 — Advanced Analysis and Interpretation",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b5_lit_001",
+                "text": "How does the play engage with the concept of postcolonial critique through its depiction of Ajanaku's tyranny, and what does this reveal about the relationship between literature and politics in Nigeria?",
+                "options": [
+                  "It ignores colonial history entirely and has no political dimensions.",
+                  "It uses pre-colonial Yoruba society to allegorically critique postcolonial African leadership failures, including dictatorship, corruption, and sit-tightism, revealing literature's capacity for political critique.",
+                  "It celebrates colonial rule as a solution to tyranny.",
+                  "It is apolitical and has no relevance to contemporary governance."
+                ],
+                "answer": "B",
+                "explanation": "The play uses its pre-colonial setting to allegorically critique postcolonial African leadership failures, particularly the 'sit-tightism' and corruption that have plagued many African nations since independence, revealing literature's capacity for political critique ."
+              },
+              {
+                "id": "b5_lit_002",
+                "text": "What does the play suggest about the relationship between language and political power, particularly through the contrast between Ajanaku's rhetoric and Iya Agba's proverbs?",
+                "options": [
+                  "Language is neutral and apolitical.",
+                  "Language—particularly through proverbs, naming, and rhetoric—is a tool of both oppression and resistance, with Ajanaku's boastful rhetoric asserting power and Iya Agba's proverbs providing a counter-discourse of truth.",
+                  "Language has no political dimension and is merely a means of communication.",
+                  "Only English matters politically in the play's world."
+                ],
+                "answer": "B",
+                "explanation": "The play shows how language operates politically: Ajanaku's boastful rhetoric asserts power, while Iya Agba's proverbs provide a counter-discourse of truth and moral judgment, revealing language's political dimensions ."
+              },
+              {
+                "id": "b5_lit_003",
+                "text": "How does the play's treatment of naming (Olaniyonu vs. Ajanaku) connect to broader themes of identity, power, and the performance of legitimacy?",
+                "options": [
+                  "Naming is irrelevant to the play's concerns.",
+                  "Ajanaku's adoption of the elephant name is an act of self-aggrandizement that masks his illegitimate origins and reveals the performative nature of tyrannical power, connecting naming to identity and legitimacy.",
+                  "Naming is purely a religious practice with no political significance.",
+                  "Only the king is allowed to have a name."
+                ],
+                "answer": "B",
+                "explanation": "The politics of naming in the play—Ajanaku's adoption of the elephant praise name to mask his obscure origins as Olaniyonu—illustrates how tyrannical power depends on the performance of grandeur to compensate for illegitimacy ."
+              },
+              {
+                "id": "b5_lit_004",
+                "text": "What does the play reveal about the relationship between the sacred and political legitimacy, particularly through its treatment of ritual corruption?",
+                "options": [
+                  "They are completely separate spheres with no relationship.",
+                  "Legitimate political order depends on respecting sacred limits; tyranny violates these limits and thus delegitimizes itself, as demonstrated by the Ijedodo ritual's corruption of sacred tradition.",
+                  "The sacred is irrelevant to politics and has no role in governance.",
+                  "Politics is always sacred and cannot be questioned."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate political authority requires respect for sacred limits—Ajanaku's violation of these limits through the Ijedodo ritual is both cause and symptom of his illegitimacy ."
+              },
+              {
+                "id": "b5_lit_005",
+                "text": "How does the play use the concept of 'oríkì' (praise poetry) to critique tyrannical power through ironic deployment?",
+                "options": [
+                  "Oríkì is used only to sincerely praise Ajanaku's greatness.",
+                  "The play employs oríkì conventions ironically, allowing Ajanaku's self-praise to expose his hubris and eventual downfall, critiquing tyrannical self-aggrandizement.",
+                  "Oríkì has no place in the play.",
+                  "Oríkì is used only in religious contexts."
+                ],
+                "answer": "B",
+                "explanation": "The playwright employs oríkì conventions ironically: Ajanaku's self-aggrandizing praise names, rather than establishing his legitimacy, expose his hubris and foreshadow his downfall ."
+              },
+              {
+                "id": "b5_lit_006",
+                "text": "What does the play suggest about the relationship between tyranny and the corruption of traditional institutions through its portrayal of the elders and priests?",
+                "options": [
+                  "Traditional institutions are immune to corruption and always resist tyranny.",
+                  "Tyranny corrupts traditional institutions—kingship, priesthood, elder councils—making them instruments of oppression rather than checks on power, as demonstrated by Serubawon's manipulation and Ogundele's bribery.",
+                  "Traditional institutions are irrelevant to the play's political concerns.",
+                  "Tyranny strengthens traditional institutions by giving them more power."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon's corruption of the priesthood and the elders' acceptance of bribes demonstrate how tyranny corrupts the very institutions that should check abuses of power ."
+              },
+              {
+                "id": "b5_lit_007",
+                "text": "How does the play treat the theme of intergenerational conflict, particularly through the contrast between Iya Agba and Ajanaku?",
+                "options": [
+                  "There is no intergenerational conflict in the play.",
+                  "The conflict between the older generation (Iya Agba, the elders) and Ajanaku's generation reflects deeper tensions about tradition, power, and legitimacy, with Iya Agba representing traditional wisdom against Ajanaku's manipulative innovation.",
+                  "The older generation uniformly supports Ajanaku's rule.",
+                  "Intergenerational conflict is irrelevant to the play's concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play explores intergenerational dynamics: Iya Agba represents traditional wisdom and moral authority, while Ajanaku represents a younger generation that manipulates tradition for personal ambition ."
+              },
+              {
+                "id": "b5_lit_008",
+                "text": "What does the play reveal about the relationship between individual character and political systems through its portrayal of different characters' responses to tyranny?",
+                "options": [
+                  "Character is irrelevant to political outcomes and systems determine everything.",
+                  "The play suggests that while systemic factors enable tyranny, individual character—like Iya Agba's courage or Ajanaku's hubris—determines how systems are used or resisted.",
+                  "Only systems matter and individual character has no effect.",
+                  "Only individual character matters and systems are irrelevant."
+                ],
+                "answer": "B",
+                "explanation": "The play balances systemic and individual factors: corrupt systems enable tyranny, but individual moral choices—Iya Agba's resistance, Odejimi's principled opposition—are crucial to overcoming it ."
+              },
+              {
+                "id": "b5_lit_009",
+                "text": "How does the play use the motif of the 'journey' or 'quest' through Ajanaku's pursuit of immortality, and how does this parody traditional heroic quests?",
+                "options": [
+                  "There is no journey motif in the play.",
+                  "Ajanaku's quest for immortality serves as a dark parody of the heroic quest, leading not to transcendence but to destruction, inverting the heroic pattern to critique tyrannical ambition.",
+                  "The journey motif is purely comic and has no thematic significance.",
+                  "The journey is irrelevant to the play's themes."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's quest for immortality parodies the traditional heroic quest: instead of achieving transcendence, he achieves destruction, inverting the heroic pattern to critique tyrannical ambition ."
+              },
+              {
+                "id": "b5_lit_010",
+                "text": "What does the play suggest about the relationship between memory and justice through Iya Agba's persistent remembrance of traditional legitimacy?",
+                "options": [
+                  "Memory is irrelevant to justice.",
+                  "The play suggests that remembering past wrongs and the truth of illegitimacy is essential to achieving justice, with Iya Agba's memory serving as the foundation for resistance.",
+                  "Forgetting is the best path to justice.",
+                  "Memory is only individual and has no collective dimension."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's persistent memory of traditional legitimacy and her refusal to forget the truth about Ajanaku's origins are essential to the eventual restoration of justice ."
+              },
+              {
+                "id": "b5_lit_011",
+                "text": "How does the play treat the theme of sacrifice through the contrast between the corrupted Ijedodo ritual and the community's eventual sacrifice for justice?",
+                "options": [
+                  "Sacrifice is always noble and beneficial to the community.",
+                  "The play critiques the perversion of sacrifice, showing how it can be corrupted into exploitation and murder, while the community's resistance represents a different kind of sacrifice—the willingness to risk personal safety for justice.",
+                  "Sacrifice is irrelevant to the play's concerns.",
+                  "Only animal sacrifice is depicted in the play."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual perverts the concept of sacrifice, turning it into a tool of sexual violence and political ambition, while the community's resistance represents a contrasting sacrifice—the willingness to risk personal safety for justice ."
+              },
+              {
+                "id": "b5_lit_012",
+                "text": "What does the play reveal about the relationship between power and knowledge through Serubawon's control of ritual secrets?",
+                "options": [
+                  "They are completely unrelated domains.",
+                  "Serubawon controls Ajanaku through his exclusive knowledge of the Ijedodo ritual, showing how knowledge can be a tool of manipulation and political control.",
+                  "Knowledge weakens power by exposing truth.",
+                  "Power creates knowledge rather than knowledge creating power."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon maintains his power over Ajanaku by monopolizing knowledge of the Ijedodo ritual, illustrating the political uses of knowledge control ."
+              },
+              {
+                "id": "b5_lit_013",
+                "text": "How does the play use the concept of 'the spectacle' in relation to political power, particularly through public rituals and festivals?",
+                "options": [
+                  "Spectacle is irrelevant to politics and serves only entertainment purposes.",
+                  "Ritual, festival, and public performance are used both to reinforce power and to resist it, as demonstrated by the Jobele ceremony where the tyrant's power is publicly broken.",
+                  "Spectacle is only for entertainment and has no political function.",
+                  "There is no spectacle in the play."
+                ],
+                "answer": "B",
+                "explanation": "The play uses spectacle—rituals, festivals, public ceremonies—as sites of political struggle where power is both performed and contested, culminating in the Jobele ceremony where Ajanaku's power is publicly broken ."
+              },
+              {
+                "id": "b5_lit_014",
+                "text": "What does the play suggest about the relationship between fate and free will through Ajanaku's downfall, and how does this align with Yoruba cosmology?",
+                "options": [
+                  "Fate determines everything and Ajanaku had no choice in his actions.",
+                  "Character determines fate; Ajanaku's tragic end is the result of his own choices and flaws, not blind destiny, aligning with the Yoruba belief that character shapes destiny.",
+                  "Free will is an illusion and all events are predetermined.",
+                  "Fate and free will are unrelated concepts with no relevance to the play."
+                ],
+                "answer": "B",
+                "explanation": "The play suggests that character is fate—Ajanaku's arrogant and tyrannical character leads inevitably to his downfall, aligning with the Yoruba belief that character (ìwà) shapes destiny (orí) ."
+              },
+              {
+                "id": "b5_lit_015",
+                "text": "How does the play treat the theme of exile through Iya Agba's banishment and return, and what does this symbolize about truth and power?",
+                "options": [
+                  "Exile is irrelevant to the play's concerns.",
+                  "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth and legitimate authority, demonstrating that truth cannot be permanently silenced by tyranny.",
+                  "Exile is a punishment that permanently destroys the exiled person.",
+                  "Only men are exiled in the play."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth and legitimate authority—her banishment represents the silencing of dissent under tyranny, and her return represents truth's triumph ."
+              },
+              {
+                "id": "b5_lit_016",
+                "text": "What does the play reveal about the relationship between the body politic and the individual body through Desola's violation?",
+                "options": [
+                  "They are completely separate and unrelated.",
+                  "The play uses the metaphor of the body politic—tyranny as a disease afflicting the community—and Desola's violated body as the site where this disease is most visibly manifested.",
+                  "The body is irrelevant to politics.",
+                  "Only the king's body matters politically."
+                ],
+                "answer": "B",
+                "explanation": "The play connects the body politic and the individual body: Desola's violated body is the literal manifestation of the disease of tyranny that afflicts the entire community ."
+              },
+              {
+                "id": "b5_lit_017",
+                "text": "How does the play use the concept of 'honor' in relation to gender, and what does this reveal about patriarchal systems?",
+                "options": [
+                  "Honor is only a male concern with no relevance to women.",
+                  "The violation of Desola's honor and the community's moral integrity drives the demand for justice, revealing how patriarchal honor systems both victimize and galvanize women.",
+                  "Honor is irrelevant to the play's concerns.",
+                  "Only men can be dishonored in the play's world."
+                ],
+                "answer": "B",
+                "explanation": "The play explores how honor operates in patriarchal contexts: Desola's violation is framed as a loss of honor, but the play critiques this framing by showing that true honor lies in resistance and justice ."
+              },
+              {
+                "id": "b5_lit_018",
+                "text": "What does the play suggest about the relationship between tyranny and self-destruction through Ajanaku's excessive ambition?",
+                "options": [
+                  "Tyranny is self-sustaining and eternal.",
+                  "Tyranny contains the seeds of its own destruction; Ajanaku's excessive ambition and violation of sacred limits inevitably lead to his downfall.",
+                  "Tyranny is destroyed only by external forces.",
+                  "Tyranny never ends in the play's world."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that tyranny is inherently self-destructive: Ajanaku's excessive ambition and violation of sacred limits create the conditions for his own destruction ."
+              },
+              {
+                "id": "b5_lit_019",
+                "text": "How does the play use the concept of 'the stranger' or 'the outsider' through Ajanaku's illegitimate status, and what does this reveal about political legitimacy?",
+                "options": [
+                  "There are no outsiders in the play.",
+                  "Ajanaku, as a bastard and illegitimate ruler, is an outsider who seizes power, and his outsider status fuels his insecurity and tyranny, revealing how illegitimacy drives oppression.",
+                  "Outsiders are always welcomed in the community.",
+                  "The outsider motif is irrelevant to the play's themes."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's status as an illegitimate outsider who seizes power drives his desperate attempts to prove his legitimacy through tyranny and ritual, illustrating how insecurity fuels oppression ."
+              },
+              {
+                "id": "b5_lit_020",
+                "text": "What ultimate philosophical message does the play offer about the nature of power and its relationship to justice, accountability, and moral limits?",
+                "options": [
+                  "Power is permanent and absolute, beyond judgment.",
+                  "Power is legitimate only when exercised with justice, accountability, and respect for sacred limits; illegitimate power is self-destructive, as Ajanaku's fate demonstrates.",
+                  "Power is amoral and beyond judgment.",
+                  "Power belongs to the strongest regardless of justice."
+                ],
+                "answer": "B",
+                "explanation": "The play's philosophical message is that legitimate power requires justice, accountability, and moral grounding, while tyranny—power exercised without these constraints—inevitably destroys itself ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b6_b6",
+        "strataId": "strata_2",
+        "name": "Bundle 6 — Quotations and Textual Evidence",
+        "requiredScore": 80,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b6_lit_001",
+                "text": "Who says: 'You want to make him immortal. What kind of man are you? Where on earth have you ever heard that any mortal being rivals the divine?'",
+                "options": [
+                  "Odejimi to Serubawon",
+                  "Iya Agba to Serubawon",
+                  "Ogundele to Ajanaku",
+                  "Desola to Odekunle"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba challenges Serubawon's blasphemous plan to make Ajanaku immortal, asserting the fundamental difference between mortal and divine ."
+              },
+              {
+                "id": "b6_lit_002",
+                "text": "What is the contextual significance of the proverb 'To the rafter belongs the load; the shelf only pretends'?",
+                "options": [
+                  "It describes the architecture of the palace.",
+                  "Iya Agba uses it to insist that Ajanaku is a pretender and the legitimate king will eventually be enthroned.",
+                  "It praises Ajanaku's strength.",
+                  "It warns against using shelves."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba deploys this proverb to assert Ajanaku's illegitimacy and the temporary nature of his usurpation ."
+              },
+              {
+                "id": "b6_lit_003",
+                "text": "Who says: 'The leper said two things of which one is a lie'?",
+                "options": [
+                  "Serubawon to Ajanaku",
+                  "Iya Agba to Ajanaku",
+                  "Odejimi to Ogundele",
+                  "Desola to Odekunle"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba uses this Yoruba proverb to expose Ajanaku's false claims and pretensions to legitimacy ."
+              },
+              {
+                "id": "b6_lit_004",
+                "text": "What is the contextual significance of the proverb 'If a dog's mouth is infested by leech, is it a fox that will be called to unfasten it?'",
+                "options": [
+                  "It warns against underestimating Ajanaku's capacity for cruelty.",
+                  "It praises foxes for their intelligence.",
+                  "It describes a veterinary procedure.",
+                  "It has no contextual significance."
+                ],
+                "answer": "A",
+                "explanation": "Dele uses this proverb to warn against underestimating the wickedness and cruelty of a despot like Ajanaku, emphasizing the need for strategic caution ."
+              },
+              {
+                "id": "b6_lit_005",
+                "text": "Who says: 'Unrestrained daring makes the acrobatic masquerade expose his private part to the public'?",
+                "options": [
+                  "Odejimi to Ogundele",
+                  "Lere to his friends",
+                  "Iya Agba to Ajanaku",
+                  "Serubawon to Ajanaku"
+                ],
+                "answer": "B",
+                "explanation": "Lere uses this proverb to warn his friends to be strategic in confronting Ajanaku, lest their recklessness expose them to danger ."
+              },
+              {
+                "id": "b6_lit_006",
+                "text": "Who says: 'Whoever collects rainwater with a sieve'?",
+                "options": [
+                  "Odejimi",
+                  "Iya Agba",
+                  "Ogundele",
+                  "Ajanaku"
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba uses this proverb to express the futility of concealing the truth about Ajanaku's illegitimate paternity ."
+              },
+              {
+                "id": "b6_lit_007",
+                "text": "What is the contextual significance of Ajanaku's boastful comparison of himself to the elephant?",
+                "options": [
+                  "It shows his love for animals.",
+                  "It symbolizes his arrogant, power-drunk self-conception that the play will ultimately expose as hollow.",
+                  "It is a traditional praise name given by elders.",
+                  "It indicates his connection to nature."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's self-comparison to the elephant symbolizes his arrogant, power-drunk tyranny, which the play shows is ultimately vulnerable to cunning and collective resistance ."
+              },
+              {
+                "id": "b6_lit_008",
+                "text": "What is the significance of the proverb 'Ti akuko adiye bako laye, awon egbe re a gbalorun' ('If a cock crows on earth, its peers in heaven respond') in the play?",
+                "options": [
+                  "It is a prayer for good harvest.",
+                  "Ajanaku uses this Yoruba invocation to challenge the council of chiefs to give his tyranny unconditional support.",
+                  "It is a children's song.",
+                  "It describes the behavior of birds."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku uses this Yoruba invocation to challenge the council of chiefs to give his tyranny unconditional support, illustrating his manipulative use of traditional rhetoric ."
+              },
+              {
+                "id": "b6_lit_009",
+                "text": "Who is the author of 'Once Upon an Elephant'?",
+                "options": [
+                  "Wole Soyinka",
+                  "Bosede Ademilua-Afolayan",
+                  "Femi Osofisan",
+                  "Ola Rotimi"
+                ],
+                "answer": "B",
+                "explanation": "Bosede Ademilua-Afolayan is the author of the play, which is listed on the WAEC Literature-in-English syllabus for 2026-2030 ."
+              },
+              {
+                "id": "b6_lit_010",
+                "text": "What is the full birth name of the character who becomes King Ajanaku?",
+                "options": [
+                  "Olaniyonu",
+                  "Odejimi",
+                  "Ogundele",
+                  "Odekunle"
+                ],
+                "answer": "A",
+                "explanation": "Olaniyonu is the birth name of Ajanaku, the illegitimate son of Serubawon and Adebisi who is falsely presented as King Akinjobi's son ."
+              },
+              {
+                "id": "b6_lit_011",
+                "text": "What does the name 'Ajanaku' mean in Yoruba?",
+                "options": [
+                  "Lion",
+                  "Elephant",
+                  "Tiger",
+                  "Buffalo"
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku is the Yoruba word for elephant, symbolizing immense power and the arrogance that comes with it ."
+              },
+              {
+                "id": "b6_lit_012",
+                "text": "What is the name of the ritual that Ajanaku undergoes in his quest for immortality?",
+                "options": [
+                  "Olubori",
+                  "Ijedodo",
+                  "Egungun",
+                  "Ifa"
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual requires the blood of virgins to sustain the king's life and grant him immortality ."
+              },
+              {
+                "id": "b6_lit_013",
+                "text": "What does the Ijedodo ritual require as a sacrifice?",
+                "options": [
+                  "goat",
+                  "The blood of virgins",
+                  "white ram",
+                  "Gold and silver"
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo charm feeds on the blood of virgins, who are raped and die slow, painful deaths ."
+              },
+              {
+                "id": "b6_lit_014",
+                "text": "Who is Desola, and why is she significant in the play?",
+                "options": [
+                  "She is the queen.",
+                  "She is Serubawon's daughter and the sixth virgin victim of the Ijedodo ritual.",
+                  "She is Iya Agba's granddaughter.",
+                  "She is a market trader."
+                ],
+                "answer": "B",
+                "explanation": "Desola is Serubawon's only daughter. Her selection as the final virgin for the Ijedodo ritual represents tragic irony and poetic justice ."
+              },
+              {
+                "id": "b6_lit_015",
+                "text": "What happens to Serubawon at the end of the play?",
+                "options": [
+                  "He becomes the new king.",
+                  "He is pardoned by the community.",
+                  "He commits suicide after being exposed.",
+                  "He flees to another village."
+                ],
+                "answer": "C",
+                "explanation": "Serubawon commits suicide after his role in the corruption and tyranny is exposed, representing the playwright's verdict on those who trade integrity for power ."
+              },
+              {
+                "id": "b6_lit_016",
+                "text": "What is the primary source of the play's stylistic inspiration?",
+                "options": [
+                  "Western theatre traditions.",
+                  "Yoruba oral traditions, including proverbs, folktales, and rituals.",
+                  "Greek tragedy.",
+                  "Shakespearean drama."
+                ],
+                "answer": "B",
+                "explanation": "Ademilua-Afolayan draws heavily on Yoruba orature, including proverbs, folktales, and cultural practices, to craft an authentic African drama ."
+              },
+              {
+                "id": "b6_lit_017",
+                "text": "Who says: 'I don't call him Uncle because that's the title you all recognise him with; I call him Uncle because he is truly my uncle'?",
+                "options": [
+                  "Taye to Mama",
+                  "Bolaji to Femi",
+                  "Odekunle to Desola",
+                  "Ogundele to Odejimi"
+                ],
+                "answer": "B",
+                "explanation": "This quotation is from 'The Drama of Taye & Bolaji', not from 'Once Upon an Elephant'. The correct answer for 'Once Upon an Elephant' quotations would be different."
+              },
+              {
+                "id": "b6_lit_018",
+                "text": "Who says: 'You were supposed to win this contest, but she has diverted your destiny and given it to her son'?",
+                "options": [
+                  "Aunty Sewa to Uncle Makinde",
+                  "Madam Bisola to Korede",
+                  "Mama Titi to Taye",
+                  "Femi to Bolaji"
+                ],
+                "answer": "B",
+                "explanation": "This quotation is from 'The Drama of Taye & Bolaji', not from 'Once Upon an Elephant'. The correct answer for 'Once Upon an Elephant' quotations would be different."
+              },
+              {
+                "id": "b6_lit_019",
+                "text": "What is the contextual significance of Iya Agba's statement that Ajanaku is 'a black pigeon in a poultry of well-bred fowls'?",
+                "options": [
+                  "It praises Ajanaku's uniqueness.",
+                  "It implies that Ajanaku is an outsider and impostor who does not belong among the royal lineage.",
+                  "It describes the palace poultry.",
+                  "It has no significant meaning."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's metaphor implies that Ajanaku is an outsider and impostor who does not belong among the royal lineage, reinforcing her claim about his illegitimacy ."
+              },
+              {
+                "id": "b6_lit_020",
+                "text": "Who says: 'God, why do the wicked always succeed? Why do the good people end up being enslaved by reckless sinners?'",
+                "options": [
+                  "Iya Agba",
+                  "Ajanaku",
+                  "This quotation is not from 'Once Upon an Elephant'",
+                  "Odejimi"
+                ],
+                "answer": "C",
+                "explanation": "This quotation is from 'The Drama of Taye & Bolaji', not from 'Once Upon an Elephant'."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b7_b7",
+        "strataId": "strata_2",
+        "name": "Bundle 7 — Contextual and Cultural Analysis",
+        "requiredScore": 85,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b7_lit_001",
+                "text": "How does the play's pre-colonial Yoruba setting function as a vehicle for contemporary political critique, and what does this reveal about the relationship between historical fiction and political commentary?",
+                "options": [
+                  "It is purely a historical recreation with no contemporary relevance.",
+                  "It allows the playwright to use Yoruba oral traditions to allegorically critique contemporary Nigerian and African politics, demonstrating how historical fiction can serve as a vehicle for political commentary.",
+                  "It celebrates the superiority of pre-colonial governance over modern democracy.",
+                  "It has no particular significance for understanding the play's politics."
+                ],
+                "answer": "B",
+                "explanation": "The pre-colonial setting allows the playwright to draw on Yoruba oral traditions to create a culturally grounded allegory about tyranny and resistance that speaks to contemporary African realities ."
+              },
+              {
+                "id": "b7_lit_002",
+                "text": "How does the play engage with the Yoruba concept of 'àló' (folktale) as a structuring device for political critique?",
+                "options": [
+                  "It rejects folktales as outdated and irrelevant to modern politics.",
+                  "It uses the folktale form—particularly the elephant and tortoise narrative—as a structuring metaphor for political critique, demonstrating the continued relevance of oral tradition.",
+                  "It uses folktales only for children's entertainment.",
+                  "Folktales have no place in the play."
+                ],
+                "answer": "B",
+                "explanation": "The play's engagement with 'àló' (folktale) is central: the elephant and tortoise folktale provides the structuring metaphor for the entire political drama ."
+              },
+              {
+                "id": "b7_lit_003",
+                "text": "What does the play reveal about the Yoruba concept of 'ìtàn' (history) and its relationship to political critique?",
+                "options": [
+                  "Ìtàn is irrelevant to the play's concerns.",
+                  "The play operates as 'ìtàn'—a narrative that is both historically specific and allegorically universal—to critique power, demonstrating history's political utility.",
+                  "Ìtàn is only about ancient events with no contemporary relevance.",
+                  "Ìtàn has no political dimension."
+                ],
+                "answer": "B",
+                "explanation": "The play functions as 'ìtàn'—a narrative that is both historically grounded in Yoruba experience and allegorically universal—allowing its political critique to resonate across time and space ."
+              },
+              {
+                "id": "b7_lit_004",
+                "text": "How does the play treat the Yoruba concept of 'orí' (destiny) in relation to Ajanaku's downfall, and what does this reveal about Yoruba cosmology?",
+                "options": [
+                  "Orí is fixed and Ajanaku could not have avoided his fate.",
+                  "The play suggests that Ajanaku's character—his hubris and ambition—determines his fate, aligning with the Yoruba belief that character shapes destiny.",
+                  "Orí is irrelevant to the play's concerns.",
+                  "Only the gods determine orí and human action is meaningless."
+                ],
+                "answer": "B",
+                "explanation": "The play aligns with the Yoruba belief that character (ìwà) shapes destiny (orí): Ajanaku's arrogant character inevitably leads to his downfall, suggesting that he himself is the author of his fate ."
+              },
+              {
+                "id": "b7_lit_005",
+                "text": "What does the play reveal about Yoruba attitudes toward leadership and legitimacy through its portrayal of Ajanaku's illegitimate succession?",
+                "options": [
+                  "Leadership is purely a matter of physical strength.",
+                  "Legitimate leadership requires both traditional sanction (proper succession rites) and moral integrity, as demonstrated by Ajanaku's lack of both and the community's rejection of his rule.",
+                  "Any strong person can be king regardless of legitimacy.",
+                  "Legitimacy is irrelevant to leadership effectiveness."
+                ],
+                "answer": "B",
+                "explanation": "The play reflects Yoruba political philosophy: legitimate leadership requires proper succession (which Ajanaku lacks) and moral integrity (which he also lacks), making his rule fundamentally illegitimate ."
+              },
+              {
+                "id": "b7_lit_006",
+                "text": "How does the play engage with the Yoruba concept of 'ìwà' (character) and its relationship to political legitimacy?",
+                "options": [
+                  "Ìwà is irrelevant to the play's political concerns.",
+                  "The play demonstrates that ìwà (character) is the foundation of both personal and political legitimacy, and its absence leads to destruction, as Ajanaku's fate demonstrates.",
+                  "Ìwà is only about outward appearance and has no moral dimension.",
+                  "Ìwà has no connection to leadership."
+                ],
+                "answer": "B",
+                "explanation": "The play reflects the Yoruba belief that 'ìwà l'ẹwà' (character is beauty): Ajanaku's lack of good character undermines his political legitimacy and leads to his destruction ."
+              },
+              {
+                "id": "b7_lit_007",
+                "text": "What does the play suggest about the role of women in traditional Yoruba political structures through characters like Iya Agba?",
+                "options": [
+                  "Women have no political role in Yoruba tradition.",
+                  "Women like Iya Agba can wield significant moral and political authority, particularly as truth-tellers and leaders of resistance, revealing women's agency within traditional structures.",
+                  "Women are always subordinate to men and have no influence.",
+                  "Women only participate in domestic matters."
+                ],
+                "answer": "B",
+                "explanation": "The play presents a nuanced view: while patriarchal constraints limit women's formal political power, figures like Iya Agba demonstrate that women can wield significant moral authority and lead resistance movements ."
+              },
+              {
+                "id": "b7_lit_008",
+                "text": "How does the play use the Yoruba concept of 'ẹbọ' (sacrifice) to critique political power through its portrayal of the Ijedodo ritual?",
+                "options": [
+                  "Ẹbọ is always portrayed positively as a sacred practice.",
+                  "The play shows how ẹbọ can be corrupted from a sacred practice into a tool of political exploitation and violence, critiquing the perversion of tradition for power.",
+                  "Ẹbọ has no place in the play.",
+                  "Ẹbọ is only about animal sacrifice and has no political dimension."
+                ],
+                "answer": "B",
+                "explanation": "The play critiques the corruption of ẹbọ (sacrifice) from a sacred practice into the violent Ijedodo ritual, showing how traditional practices can be weaponized for political ends ."
+              },
+              {
+                "id": "b7_lit_009",
+                "text": "What does the play reveal about the Yoruba concept of 'àṣẹ' (authority/power) through Ajanaku's illegitimate rule?",
+                "options": [
+                  "Àṣẹ is purely about physical force and has no moral dimension.",
+                  "The play suggests that àṣẹ—the power to make things happen—must be legitimately acquired and morally exercised to be effective, as Ajanaku's downfall demonstrates.",
+                  "Àṣẹ is irrelevant to politics.",
+                  "Anyone can exercise àṣẹ without consequences."
+                ],
+                "answer": "B",
+                "explanation": "The play reflects Yoruba philosophy: àṣẹ (authority/power) must be legitimately acquired and morally exercised; Ajanaku's illegitimate and immoral exercise of power ultimately fails ."
+              },
+              {
+                "id": "b7_lit_010",
+                "text": "How does the play engage with the Yoruba concept of 'ẹ̀rí' (evidence/truth) through Iya Agba's truth-telling?",
+                "options": [
+                  "Ẹ̀rí is irrelevant to the play's concerns.",
+                  "Iya Agba's truth-telling and the eventual exposure of Ajanaku's illegitimacy demonstrate the power of ẹ̀rí (truth/evidence) to overcome tyranny's lies, affirming truth's political efficacy.",
+                  "Ẹ̀rí is only about legal proceedings and has no broader significance.",
+                  "Ẹ̀rí has no political dimension."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates that truth (ẹ̀rí) is the ultimate weapon against tyranny: Iya Agba's persistent truth-telling and the eventual revelation of Ajanaku's illegitimacy lead to his downfall ."
+              },
+              {
+                "id": "b7_lit_011",
+                "text": "What does the play suggest about the relationship between individual and communal responsibility through the community's eventual resistance?",
+                "options": [
+                  "Individuals bear no responsibility for communal outcomes.",
+                  "The play suggests that tyranny thrives when individuals remain silent and that liberation requires collective moral action, emphasizing communal responsibility.",
+                  "Only leaders are responsible for political outcomes.",
+                  "Communal responsibility is irrelevant to the play's concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play emphasizes collective responsibility: the community's silence enables Ajanaku's tyranny, and its eventual collective resistance brings him down ."
+              },
+              {
+                "id": "b7_lit_012",
+                "text": "How does the play treat the theme of 'ìní' (possession/ownership) in relation to Ajanaku's seizure of disputed land?",
+                "options": [
+                  "Ownership is irrelevant to the play's concerns.",
+                  "Ajanaku's seizure of disputed land reveals his greed and his confusion between royal stewardship and personal ownership, critiquing tyrannical appropriation.",
+                  "The land dispute is a minor subplot with no thematic significance.",
+                  "Only the king can own land legitimately."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's decision to seize the disputed land for the royal house reveals his greed and his failure to understand that royal power entails stewardship, not personal ownership ."
+              },
+              {
+                "id": "b7_lit_013",
+                "text": "What does the play reveal about the Yoruba concept of 'ìbá' (kinship/relationship) through Serubawon's relationship with Ajanaku?",
+                "options": [
+                  "Ìbá is always protective and beneficial.",
+                  "The play shows how kinship ties—Serubawon's relationship to Ajanaku—can be perverted to serve tyranny, as Serubawon's parental relationship drives his corrupt kingmaking.",
+                  "Ìbá is irrelevant to politics and has no role in the play.",
+                  "Only biological kinship matters and has no social dimension."
+                ],
+                "answer": "B",
+                "explanation": "The play explores how kinship (ìbá) can be perverted: Serubawon's parental relationship to Ajanaku drives his corrupt kingmaking and ultimately leads to the destruction of his own family ."
+              },
+              {
+                "id": "b7_lit_014",
+                "text": "How does the play use the concept of 'àdúrà' (prayer/invocation) in relation to political power, particularly through Ajanaku's invocation?",
+                "options": [
+                  "Àdúrà is always sincere and apolitical.",
+                  "Ajanaku's use of invocation to demand the chiefs' support shows how prayer can be manipulated for political ends, critiquing the weaponization of spiritual language.",
+                  "Àdúrà is irrelevant to the play's concerns.",
+                  "Only priests can pray in the play's world."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's use of Yoruba invocation ('If a cock crows on earth, its peers in heaven respond') to demand unconditional support reveals how traditional spiritual language can be weaponized for political manipulation ."
+              },
+              {
+                "id": "b7_lit_015",
+                "text": "What does the play suggest about the relationship between tradition and change, particularly through its treatment of ritual corruption and authentic tradition?",
+                "options": [
+                  "Tradition is always good and change is always bad.",
+                  "The play critiques the perversion of tradition while affirming the value of legitimate traditional governance, suggesting that authentic tradition provides resources for resisting tyranny.",
+                  "Change is always beneficial and tradition is always oppressive.",
+                  "Tradition is irrelevant to politics."
+                ],
+                "answer": "B",
+                "explanation": "The play distinguishes between corrupt manipulation of tradition (by Serubawon) and the legitimate traditional order that Iya Agba and Odejimi uphold, suggesting that authentic tradition provides moral resources for resisting tyranny ."
+              },
+              {
+                "id": "b7_lit_016",
+                "text": "How does the play engage with the Yoruba concept of 'àkóbá' (taboo) through Ajanaku's violation of sacred limits?",
+                "options": [
+                  "Taboos are irrelevant to the play's concerns.",
+                  "Ajanaku's violation of sacred taboos through the Ijedodo ritual demonstrates how tyranny breaks all moral and social boundaries, showing tyranny's fundamental lawlessness.",
+                  "Taboos are only about food and have no political significance.",
+                  "Taboos protect tyrants from criticism."
+                ],
+                "answer": "B",
+                "explanation": "The play shows how Ajanaku's tyranny involves the violation of sacred taboos (àkóbá), particularly through the Ijedodo ritual, demonstrating that tyranny recognizes no moral limits ."
+              },
+              {
+                "id": "b7_lit_017",
+                "text": "What does the play reveal about the Yoruba concept of 'ìjìnlẹ̀' (depth/profundity) through Iya Agba's proverbial speech and the play's layered meanings?",
+                "options": [
+                  "Ìjìnlẹ̀ is irrelevant to the play's concerns.",
+                  "Iya Agba's proverbial speech and the play's layered meanings demonstrate the Yoruba value of ìjìnlẹ̀—depth of wisdom and understanding—requiring deep engagement to fully appreciate.",
+                  "Ìjìnlẹ̀ is only about physical depth and has no intellectual dimension.",
+                  "Ìjìnlẹ̀ has no connection to language or wisdom."
+                ],
+                "answer": "B",
+                "explanation": "The play embodies the Yoruba value of ìjìnlẹ̀ (depth): Iya Agba's proverbial speech and the play's layered symbolism require deep engagement to fully appreciate ."
+              },
+              {
+                "id": "b7_lit_018",
+                "text": "How does the play use the concept of 'àwòrán' (symbol/image) to convey its themes through powerful visual images?",
+                "options": [
+                  "Àwòrán is purely decorative with no thematic significance.",
+                  "The play uses powerful images—the elephant, the generator shed, the fire—as symbols that convey its political and moral themes, demonstrating the power of visual symbolism.",
+                  "Àwòrán has no meaning in the play.",
+                  "Only visual art uses àwòrán."
+                ],
+                "answer": "B",
+                "explanation": "The play uses powerful symbolic images (àwòrán)—the elephant, the Ijedodo ritual, the fire—to convey its themes of tyranny, degradation, and destruction ."
+              },
+              {
+                "id": "b7_lit_019",
+                "text": "What does the play suggest about the relationship between language and reality through Ajanaku's self-naming and Iya Agba's proverbs?",
+                "options": [
+                  "Language merely describes reality and has no creative power.",
+                  "The play suggests that language—naming, proverbs, rhetoric—actively constructs political reality and can be used to legitimize or delegitimize power, demonstrating language's performative dimension.",
+                  "Language is irrelevant to politics.",
+                  "Reality is independent of language and cannot be shaped by it."
+                ],
+                "answer": "B",
+                "explanation": "The play shows that language constructs political reality: Ajanaku's self-naming as 'elephant' attempts to create a new reality, while Iya Agba's proverbs expose the truth behind this construction ."
+              },
+              {
+                "id": "b7_lit_020",
+                "text": "What does the play ultimately suggest about the possibility of justice in a tyrannical system, and what role does collective moral courage play?",
+                "options": [
+                  "Justice is impossible under tyranny and can only come from external intervention.",
+                  "Justice is possible but requires collective moral courage and the refusal to remain silent, as demonstrated by Iya Agba's leadership and the community's eventual uprising.",
+                  "Justice is automatic and requires no human effort.",
+                  "Justice is irrelevant to the play's concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play's resolution—the downfall of Ajanaku and the restoration of order—suggests that justice is possible under tyranny, but only through collective moral courage and the refusal to remain silent ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b8_b8",
+        "strataId": "strata_2",
+        "name": "Bundle 8 — Comparative and Critical Approaches",
+        "requiredScore": 85,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b8_lit_001",
+                "text": "How does 'Once Upon an Elephant' compare with Wole Soyinka's 'Kongi's Harvest' in its treatment of tyranny, and what does this comparison reveal about the evolution of Nigerian political drama?",
+                "options": [
+                  "They are identical in every respect.",
+                  "Both critique tyrannical leadership, but Ademilua-Afolayan uses Yoruba oral traditions and a female truth-teller (Iya Agba) as central to resistance, revealing the evolution toward more culturally grounded and gender-inclusive political drama.",
+                  "They have no similarities and belong to completely different traditions.",
+                  "Soyinka's play celebrates tyranny while Ademilua-Afolayan's critiques it."
+                ],
+                "answer": "B",
+                "explanation": "Both plays critique tyrannical leadership, but Ademilua-Afolayan's play is distinctive in its extensive use of Yoruba oral traditions and its central female truth-teller, revealing the evolution of Nigerian political drama toward more culturally grounded and gender-inclusive forms ."
+              },
+              {
+                "id": "b8_lit_002",
+                "text": "What does a feminist reading of 'Once Upon an Elephant' reveal about the play's gender politics, particularly through the characters of Iya Agba, Desola, and Omoyeni?",
+                "options": [
+                  "The play is entirely patriarchal with no feminist dimensions.",
+                  "The play critiques patriarchal violence (the Ijedodo ritual) while presenting women as agents of resistance (Iya Agba) and complicating simple victimhood (Omoyeni's secret agency).",
+                  "The play celebrates male dominance and has no feminist critique.",
+                  "Gender is irrelevant to the play's political concerns."
+                ],
+                "answer": "B",
+                "explanation": "A feminist reading reveals the play's nuanced gender politics: it critiques patriarchal violence while presenting women as complex agents of resistance and survival ."
+              },
+              {
+                "id": "b8_lit_003",
+                "text": "How does a postcolonial reading of the play illuminate its political critique of contemporary African leadership failures?",
+                "options": [
+                  "Postcolonial theory is irrelevant to the play's pre-colonial setting.",
+                  "The play allegorizes postcolonial African leadership failures, using the pre-colonial setting to critique contemporary dictatorship, corruption, and sit-tightism.",
+                  "The play celebrates colonial rule and has no postcolonial dimensions.",
+                  "The play has no political dimensions relevant to postcolonial theory."
+                ],
+                "answer": "B",
+                "explanation": "A postcolonial reading reveals how the play uses its pre-colonial setting to allegorically critique postcolonial African leadership failures, particularly the 'sit-tightism' and corruption that have plagued many nations since independence ."
+              },
+              {
+                "id": "b8_lit_004",
+                "text": "How does the play engage with the concept of 'the subaltern' through Iya Agba's marginalization and her eventual centrality to the resistance?",
+                "options": [
+                  "The subaltern cannot speak in the play and remains voiceless.",
+                  "Iya Agba, despite being dismissed as 'insane' and exiled, speaks truth to power and becomes central to the resistance, suggesting the play gives voice to the marginalized.",
+                  "Only male characters speak in the play.",
+                  "The subaltern is absent from the play."
+                ],
+                "answer": "B",
+                "explanation": "The play engages with subalternity through Iya Agba, whose truth-telling persists despite her marginalization, and who becomes central to the community's liberation ."
+              },
+              {
+                "id": "b8_lit_005",
+                "text": "What does a psychoanalytic reading of Ajanaku reveal about his obsession with immortality and his violent sexuality?",
+                "options": [
+                  "Ajanaku is psychologically healthy with no deep-seated issues.",
+                  "Ajanaku's obsession with immortality and his violent sexuality suggest deep-seated insecurity and a pathological need to prove his legitimacy, making his tyranny a compensation for perceived inadequacy.",
+                  "Ajanaku is motivated purely by political ambition with no psychological depth.",
+                  "Psychoanalysis is irrelevant to the play."
+                ],
+                "answer": "B",
+                "explanation": "A psychoanalytic reading suggests that Ajanaku's obsession with immortality and his violent sexuality stem from deep insecurity about his illegitimate origins, making his tyranny a pathological compensation for his perceived inadequacy ."
+              },
+              {
+                "id": "b8_lit_006",
+                "text": "How does a Marxist reading of the play reveal its critique of political economy and class-based oppression?",
+                "options": [
+                  "Marxist theory is irrelevant to the play's concerns.",
+                  "The play critiques the concentration of power and resources in the hands of a corrupt elite (Ajanaku, Serubawon) at the expense of the community, revealing class-based oppression.",
+                  "The play celebrates capitalism and has no critique of economic exploitation.",
+                  "Class conflict is absent from the play."
+                ],
+                "answer": "B",
+                "explanation": "A Marxist reading reveals how the play critiques the concentration of political and economic power in the hands of a corrupt elite, with Ajanaku's seizure of land and exploitation of the community representing class-based oppression ."
+              },
+              {
+                "id": "b8_lit_007",
+                "text": "How does the play use the concept of 'hegemony' in its portrayal of Ajanaku's rule through both coercion and consent?",
+                "options": [
+                  "Hegemony is irrelevant to the play's political analysis.",
+                  "Ajanaku maintains power through a combination of coercion (violence) and consent (manipulation of tradition and bribery of elders), illustrating Gramscian hegemony.",
+                  "Ajanaku rules only through brute force with no element of consent.",
+                  "Hegemony is purely economic and has no political dimension."
+                ],
+                "answer": "B",
+                "explanation": "The play illustrates Gramscian hegemony: Ajanaku maintains power through both coercion (the Oguno incident, the Ijedodo ritual) and consent (bribery of elders, manipulation of traditional legitimacy) ."
+              },
+              {
+                "id": "b8_lit_008",
+                "text": "What does a deconstructive reading of the play reveal about its treatment of binary oppositions like legitimate/illegitimate and tradition/corruption?",
+                "options": [
+                  "The play has no binary oppositions.",
+                  "The play deconstructs simple binaries—legitimate/illegitimate, tradition/corruption—by showing how they are mutually entangled, as Serubawon corrupts tradition while authentic tradition provides resistance.",
+                  "Deconstruction is irrelevant to African drama.",
+                  "The binaries in the play are stable and unambiguous."
+                ],
+                "answer": "B",
+                "explanation": "A deconstructive reading reveals how the play troubles simple binaries: Serubawon corrupts tradition, but authentic tradition provides resistance; Ajanaku's illegitimacy is both hidden and revealed ."
+              },
+              {
+                "id": "b8_lit_009",
+                "text": "How does the play engage with the concept of female agency within patriarchal constraints, particularly through Omoyeni's secret resistance?",
+                "options": [
+                  "Female characters have no agency in the play.",
+                  "Iya Agba exercises significant agency as a truth-teller and resistance leader, while Omoyeni's secret affair demonstrates female agency within constraints, complicating simple victimhood.",
+                  "Only male characters have agency in the play.",
+                  "Agency is irrelevant to the play's gender politics."
+                ],
+                "answer": "B",
+                "explanation": "The play presents female agency in complex forms: Iya Agba's moral and political leadership and Omoyeni's secret resistance both demonstrate women's capacity for action within patriarchal constraints ."
+              },
+              {
+                "id": "b8_lit_010",
+                "text": "What does the play suggest about the relationship between violence and political power through Ajanaku's reliance on violence and ritual sacrifice?",
+                "options": [
+                  "Violence is always effective and sustainable.",
+                  "The play shows that violence—Ajanaku's tyranny, the Ijedodo ritual—is ultimately self-destructive and unsustainable, critiquing violence as a foundation for political power.",
+                  "Violence is necessary for good governance.",
+                  "Violence has no consequences in the play."
+                ],
+                "answer": "B",
+                "explanation": "The play critiques violence as a foundation for political power: Ajanaku's reliance on violence and ritual sacrifice ultimately destroys him, suggesting that sustainable power requires legitimacy and justice ."
+              },
+              {
+                "id": "b8_lit_011",
+                "text": "How does the play treat the concept of 'the common good' in relation to individual ambition, particularly through Ajanaku's reign?",
+                "options": [
+                  "Individual ambition always serves the common good.",
+                  "The play contrasts Ajanaku's selfish ambition with the community's collective well-being, arguing that legitimate leadership serves the common good.",
+                  "The common good is irrelevant to politics.",
+                  "Only the elite matter politically."
+                ],
+                "answer": "B",
+                "explanation": "The play affirms the concept of the common good: Ajanaku's tyranny is portrayed as a betrayal of collective well-being, while the resistance aims to restore communal flourishing ."
+              },
+              {
+                "id": "b8_lit_012",
+                "text": "What does a reader-response approach reveal about the play's potential for different interpretations by different audiences?",
+                "options": [
+                  "The play has only one correct interpretation determined by the author.",
+                  "Different readers may identify with different characters and themes—some may focus on Ajanaku's tragedy, others on Iya Agba's heroism, others on Desola's victimization—each producing different interpretations.",
+                  "Reader-response theory is irrelevant to the play.",
+                  "The play's meaning is fixed and cannot vary between readers."
+                ],
+                "answer": "B",
+                "explanation": "The play's richness allows for multiple reader responses: audiences may focus on Ajanaku's tragic downfall, Iya Agba's heroic resistance, or Desola's victimization, each producing different interpretations ."
+              },
+              {
+                "id": "b8_lit_013",
+                "text": "How does the play engage with the concept of 'intertextuality' through its references to Yoruba folktales, and what does this add to the play's meaning?",
+                "options": [
+                  "The play has no intertextual references.",
+                  "The play's references to the elephant and tortoise folktale create intertextual connections that enrich its meaning for audiences familiar with Yoruba oral tradition, adding depth to its political allegory.",
+                  "Intertextuality is irrelevant to African drama.",
+                  "The play rejects all previous texts and traditions."
+                ],
+                "answer": "B",
+                "explanation": "The play's engagement with the elephant and tortoise folktale creates intertextual connections that reward audiences familiar with Yoruba oral tradition, adding depth to its political allegory ."
+              },
+              {
+                "id": "b8_lit_014",
+                "text": "What does a structuralist reading of the play reveal about its narrative patterns and tragic structure?",
+                "options": [
+                  "The play has no structure and is formless.",
+                  "The play follows a classic tragic structure: rise of the tyrant, abuses of power, climax of resistance, and resolution through downfall, revealing its engagement with tragic form.",
+                  "Structuralism is irrelevant to drama.",
+                  "The play is formless with no recognizable patterns."
+                ],
+                "answer": "B",
+                "explanation": "A structuralist reading reveals the play's classic tragic structure: Ajanaku's rise to illegitimate power, his escalating abuses, the climax of collective resistance, and his downfall—following the pattern of classical tragedy ."
+              },
+              {
+                "id": "b8_lit_015",
+                "text": "How does the play compare with other African tragedies in its treatment of the tragic hero, particularly Ajanaku as an anti-hero?",
+                "options": [
+                  "Ajanaku is a conventional sympathetic tragic hero like Oedipus.",
+                  "Ajanaku is an anti-hero or villain protagonist, unlike classic tragic heroes, making the play a distinctive African contribution to tragic drama focused on communal liberation rather than individual suffering.",
+                  "The play has no tragic hero.",
+                  "Ajanaku is identical to classical Greek tragic heroes."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku is an anti-hero rather than a conventional tragic hero: his downfall evokes justice rather than pity, making the play a distinctive African tragedy focused on the community's liberation ."
+              },
+              {
+                "id": "b8_lit_016",
+                "text": "What does the play suggest about the relationship between theatre and social change, particularly through its engagement with political themes?",
+                "options": [
+                  "Theatre has no social function and is purely entertainment.",
+                  "The play exemplifies engaged theatre, using drama to critique tyranny and inspire collective resistance, demonstrating theatre's capacity for social change.",
+                  "Theatre should only entertain and avoid political themes.",
+                  "Theatre is irrelevant to politics and social change."
+                ],
+                "answer": "B",
+                "explanation": "The play exemplifies engaged, political theatre: it uses dramatic form to critique tyranny, affirm collective values, and inspire audiences toward moral and political action ."
+              },
+              {
+                "id": "b8_lit_017",
+                "text": "How does the play treat the concept of 'history' in relation to 'myth,' and what does this reveal about the play's allegorical dimensions?",
+                "options": [
+                  "History and myth are completely separate with no relationship.",
+                  "The play blends history and myth, using the historical setting and mythical elements to create a narrative that is both specific and universal, enriching its allegorical texture.",
+                  "Myth is irrelevant to the play's concerns.",
+                  "History is irrelevant to the play's concerns."
+                ],
+                "answer": "B",
+                "explanation": "The play blends history and myth: the historical setting provides specificity, while the mythical elephant-tortoise narrative provides universal meaning, creating a rich allegorical texture ."
+              },
+              {
+                "id": "b8_lit_018",
+                "text": "What does the play ultimately suggest about the relationship between literature and politics, and what is the playwright's political commitment?",
+                "options": [
+                  "Literature should avoid politics and focus on aesthetics.",
+                  "Literature can be a powerful tool for political critique, using aesthetic and cultural resources to illuminate and challenge abuses of power, revealing the playwright's commitment to social justice.",
+                  "Politics and literature are completely separate spheres.",
+                  "Literature has no political function and should remain apolitical."
+                ],
+                "answer": "B",
+                "explanation": "The play demonstrates literature's political power: it uses Yoruba oral traditions, dramatic form, and cultural symbols to critique tyranny and affirm the possibility of collective resistance and justice ."
+              },
+              {
+                "id": "b8_lit_019",
+                "text": "How does the play engage with the concept of 'catharsis' through its resolution, and what emotional and moral effects does it produce in the audience?",
+                "options": [
+                  "The play produces no emotional effects in the audience.",
+                  "The play delivers moral and spiritual relief as justice is restored, the tyrant falls, and the wounded are healed, producing catharsis and reinforcing the audience's moral commitments.",
+                  "The play ends in unresolved despair with no catharsis.",
+                  "Catharsis is irrelevant to African drama."
+                ],
+                "answer": "B",
+                "explanation": "The climax provides powerful catharsis: the tyrant's defeat restores order, heals the innocent, and validates moral courage, producing emotional relief and reinforcing the audience's moral commitments ."
+              },
+              {
+                "id": "b8_lit_020",
+                "text": "What is the ultimate literary achievement of Bosede Ademilua-Afolayan in 'Once Upon an Elephant,' and how does it contribute to Nigerian and African drama?",
+                "options": [
+                  "She wrote a simple folktale intended exclusively for primary school children with no literary sophistication.",
+                  "She successfully fused indigenous oral performance traditions, Yoruba mythology, and biting political satire to create a masterpiece on the tragedy of tyranny, contributing a distinctive voice to Nigerian and African drama.",
+                  "She translated classical Greek drama into modern English without African references.",
+                  "She documented the colonial history of big-game hunting in West Africa."
+                ],
+                "answer": "B",
+                "explanation": "Ademilua-Afolayan's achievement lies in blending indigenous oral theatre, myth, and satire into a timeless critique of power, contributing a distinctive and powerful voice to Nigerian and African drama ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b9_b9",
+        "strataId": "strata_2",
+        "name": "Bundle 9 — Examination-Focused Questions",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b9_lit_001",
+                "text": "Which of the following best describes the genre of 'Once Upon an Elephant' and its relationship to Yoruba oral tradition?",
+                "options": [
+                  "romantic comedy with no political dimensions.",
+                  "political tragedy drawing on Yoruba oral tradition—proverbs, folktales, and ritual—to critique tyranny and affirm collective resistance.",
+                  "historical documentary with no dramatic elements.",
+                  "domestic drama focused on family relationships."
+                ],
+                "answer": "B",
+                "explanation": "The play is a political tragedy that extensively draws on Yoruba oral tradition—proverbs, folktales, and ritual—to critique tyranny and affirm the possibility of collective resistance ."
+              },
+              {
+                "id": "b9_lit_002",
+                "text": "What is the significance of the play's title in relation to its themes, and how does it frame the audience's expectations?",
+                "options": [
+                  "It is a random title with no meaning.",
+                  "It evokes the Yoruba folktale of the arrogant elephant, signaling the play's central metaphor about power and downfall, framing the audience's expectations for a moral allegory.",
+                  "It refers to a zoo and has no deeper meaning.",
+                  "It is a children's story title with no political significance."
+                ],
+                "answer": "B",
+                "explanation": "The title evokes the Yoruba folktale of the arrogant elephant, signaling the play's central metaphorical framework for critiquing tyrannical power and framing the audience's expectations for a moral allegory ."
+              },
+              {
+                "id": "b9_lit_003",
+                "text": "Who is the protagonist of 'Once Upon an Elephant,' and how does this character function as the play's moral center?",
+                "options": [
+                  "Ajanaku, the tyrant king, is the protagonist.",
+                  "Iya Agba, the truth-teller and resistance leader, functions as the moral protagonist—the truth-teller and resistance leader whose courage drives the play's resolution.",
+                  "Serubawon, the kingmaker, is the protagonist.",
+                  "Desola, the victim, is the protagonist."
+                ],
+                "answer": "B",
+                "explanation": "While Ajanaku is the central figure, Iya Agba functions as the moral protagonist—the truth-teller and resistance leader whose courage drives the play's resolution ."
+              },
+              {
+                "id": "b9_lit_004",
+                "text": "What is the primary setting of 'Once Upon an Elephant,' and how does it function as a microcosm of political dynamics?",
+                "options": [
+                  "Modern Lagos with no traditional elements.",
+                  "pre-colonial Yoruba kingdom, functioning as a microcosm of Nigerian and African political dynamics, though its themes resonate with contemporary realities.",
+                  "Colonial Nigeria under British rule.",
+                  "fictional European kingdom with no African elements."
+                ],
+                "answer": "B",
+                "explanation": "The play is set in a pre-colonial Yoruba kingdom, though its themes resonate with contemporary political realities, functioning as a microcosm of Nigerian and African political dynamics ."
+              },
+              {
+                "id": "b9_lit_005",
+                "text": "Which Yoruba oral tradition element is most significantly used in the play to develop its political critique?",
+                "options": [
+                  "Written historical documents.",
+                  "Proverbs, folktales, and rituals, which provide a culturally grounded framework for critiquing tyranny.",
+                  "Only songs and dances.",
+                  "Only religious prayers."
+                ],
+                "answer": "B",
+                "explanation": "The play draws extensively on proverbs, folktales, and rituals from Yoruba oral tradition, using them as a culturally grounded framework for critiquing tyranny ."
+              },
+              {
+                "id": "b9_lit_006",
+                "text": "What is the function of the Ijedodo ritual in the play's plot and thematic development?",
+                "options": [
+                  "It is a minor ceremonial event with no plot significance.",
+                  "It drives Ajanaku's quest for immortality and leads to Desola's victimization and Ajanaku's eventual downfall, serving as the play's central symbol of tyrannical abuse.",
+                  "It is a comic interlude that provides relief from political tension.",
+                  "It has no function in the plot or themes."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual is the plot's central mechanism: it drives Ajanaku's quest for immortality, causes Desola's victimization, and ultimately leads to Ajanaku's downfall ."
+              },
+              {
+                "id": "b9_lit_007",
+                "text": "How does the play resolve the conflict between tyranny and resistance, and what does this resolution suggest about the play's moral vision?",
+                "options": [
+                  "Tyranny prevails and justice is impossible.",
+                  "Ajanaku is killed through collective resistance, Serubawon commits suicide, and legitimate order is restored, suggesting that justice is possible through collective moral action.",
+                  "The conflict is unresolved and the ending is ambiguous.",
+                  "External forces intervene to restore order."
+                ],
+                "answer": "B",
+                "explanation": "The conflict is resolved through collective resistance: Ajanaku is killed during the Jobele ceremony, Serubawon commits suicide, and the community moves toward restoring legitimate order ."
+              },
+              {
+                "id": "b9_lit_008",
+                "text": "What is the significance of Iya Agba's exile and return in the play's symbolic structure?",
+                "options": [
+                  "It has no significance and is a minor plot point.",
+                  "It symbolizes the suppression and ultimate vindication of truth and legitimate authority, demonstrating that truth cannot be permanently silenced by tyranny.",
+                  "It shows that Iya Agba is powerless against the palace.",
+                  "It is a minor subplot with no thematic significance."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's exile and return symbolize the suppression and ultimate vindication of truth: her banishment represents the silencing of dissent under tyranny, and her return represents truth's triumph ."
+              },
+              {
+                "id": "b9_lit_009",
+                "text": "How does the play use the character of Desola to critique patriarchal power and the politics of the body?",
+                "options": [
+                  "Desola is a one-dimensional victim with no symbolic function.",
+                  "Desola's victimization by the Ijedodo ritual exposes how patriarchal systems sacrifice female bodies for male political ambition, representing a powerful feminist critique.",
+                  "Desola is complicit in her own oppression.",
+                  "Desola has no symbolic function in the play."
+                ],
+                "answer": "B",
+                "explanation": "Desola's victimization by the Ijedodo ritual is the play's most powerful critique of patriarchal power, exposing how systems of male dominance sacrifice female bodies and autonomy ."
+              },
+              {
+                "id": "b9_lit_010",
+                "text": "What does the play suggest about the relationship between individual courage and collective liberation through Iya Agba's leadership?",
+                "options": [
+                  "Individual courage is irrelevant to collective liberation.",
+                  "Individual courage, like Iya Agba's truth-telling, is essential to inspiring collective resistance and achieving liberation, demonstrating the interplay between individual and collective action.",
+                  "Only collective action matters and individual courage is irrelevant.",
+                  "Courage is not a theme in the play."
+                ],
+                "answer": "B",
+                "explanation": "The play emphasizes the interplay between individual courage and collective liberation: Iya Agba's persistent truth-telling inspires and enables the community's collective resistance ."
+              },
+              {
+                "id": "b9_lit_011",
+                "text": "Which character represents the corrupt manipulation of traditional religion for political ends, and what does this reveal about the play's critique of institutional corruption?",
+                "options": [
+                  "Iya Agba represents the corruption of tradition.",
+                  "Serubawon represents the corruption of traditional religion and ritual for political ends, revealing how tyranny corrupts the very institutions that should check abuses of power.",
+                  "Odejimi represents the corruption of tradition.",
+                  "Desola represents the corruption of tradition."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon represents the corruption of traditional religion and ritual for political ends, orchestrating the Ijedodo ritual to maintain Ajanaku's illegitimate power ."
+              },
+              {
+                "id": "b9_lit_012",
+                "text": "What is the significance of Ajanaku's confession about sleeping with the sixth virgin, and what does it reveal about his character?",
+                "options": [
+                  "It proves his innocence and shows he was tricked.",
+                  "It reveals his full awareness of and complicity in the ritual's sexual violence, underscoring his moral corruption and removing any ambiguity about his villainy.",
+                  "It shows his remorse and desire for redemption.",
+                  "It has no significance for his characterization."
+                ],
+                "answer": "B",
+                "explanation": "Ajanaku's confession reveals his conscious participation in the ritual's rape and sacrifice of virgins, underscoring his moral corruption and removing any ambiguity about his villainy ."
+              },
+              {
+                "id": "b9_lit_013",
+                "text": "What does the play suggest about the relationship between power and legitimacy through Ajanaku's illegitimate rule?",
+                "options": [
+                  "Power equals legitimacy regardless of how it is acquired.",
+                  "Legitimate power requires proper succession and moral integrity; power without these is illegitimate and unstable, as Ajanaku's downfall demonstrates.",
+                  "Legitimacy is irrelevant to power and only force matters.",
+                  "Only physical force determines legitimacy."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate power requires both proper succession (which Ajanaku lacks) and moral integrity (which he also lacks), making his rule fundamentally unstable ."
+              },
+              {
+                "id": "b9_lit_014",
+                "text": "How does the play use the motif of the elephant to develop its themes of power, arrogance, and downfall?",
+                "options": [
+                  "The elephant is a neutral symbol with no thematic significance.",
+                  "The elephant represents arrogant, power-drunk tyranny that is ultimately brought down by cunning and collective resistance, paralleling the Yoruba folktale.",
+                  "The elephant represents gentleness and wisdom.",
+                  "The elephant has no symbolic meaning in the play."
+                ],
+                "answer": "B",
+                "explanation": "The elephant symbolizes Ajanaku's arrogant, power-drunk tyranny, which the play shows is ultimately vulnerable to the cunning and collective resistance of the community ."
+              },
+              {
+                "id": "b9_lit_015",
+                "text": "What is the dramatic function of the Jobele ceremony in the play's structure?",
+                "options": [
+                  "It is a minor event with no dramatic significance.",
+                  "It serves as the play's climax, where the tyrant's ambitions are thwarted and justice is achieved through collective resistance and the victim's agency.",
+                  "It is a comic interlude with no political significance.",
+                  "It has no dramatic function in the play's structure."
+                ],
+                "answer": "B",
+                "explanation": "The Jobele ceremony is the play's dramatic climax: Ajanaku's quest for immortality is reversed, Desola reclaims her life, and the tyrant is killed—the moment of poetic justice ."
+              },
+              {
+                "id": "b9_lit_016",
+                "text": "How does the play treat the theme of suicide through Serubawon's death, and what does this reveal about the play's moral vision?",
+                "options": [
+                  "Suicide is celebrated as a noble act.",
+                  "Serubawon's suicide represents the inevitable consequence of a life built on corruption and deceit, functioning as the playwright's verdict on those who trade integrity for power.",
+                  "Suicide is irrelevant to the play's moral vision.",
+                  "Suicide is portrayed as heroic and redemptive."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon's suicide represents the inevitable consequence of a life built on corruption, deceit, and the pursuit of power at any cost—the playwright's verdict on such a life ."
+              },
+              {
+                "id": "b9_lit_017",
+                "text": "What does the play suggest about the role of memory in resistance through Iya Agba's persistent remembrance of traditional legitimacy?",
+                "options": [
+                  "Memory is irrelevant to resistance and should be forgotten.",
+                  "Iya Agba's memory of traditional legitimacy and her refusal to forget are essential to inspiring resistance, demonstrating memory's political power.",
+                  "Forgetting is the best response to tyranny.",
+                  "Memory is only individual and has no collective dimension."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's persistent memory of traditional legitimacy and her refusal to forget the truth about Ajanaku's origins are essential to inspiring and sustaining resistance ."
+              },
+              {
+                "id": "b9_lit_018",
+                "text": "How does the play use the concept of 'destiny' to explore Ajanaku's downfall, and what does this reveal about Yoruba cosmology?",
+                "options": [
+                  "Destiny is fixed and Ajanaku had no choice in his actions.",
+                  "The play suggests that Ajanaku's character determines his fate, aligning with the Yoruba belief that character shapes destiny and that individuals are responsible for their choices.",
+                  "Destiny is irrelevant to the play's concerns.",
+                  "Only the gods determine destiny and human action is meaningless."
+                ],
+                "answer": "B",
+                "explanation": "The play aligns with the Yoruba belief that character (ìwà) shapes destiny (orí): Ajanaku's arrogant character inevitably leads to his downfall, suggesting that he is the author of his fate ."
+              },
+              {
+                "id": "b9_lit_019",
+                "text": "What is the play's ultimate moral message about the fate of tyrants and the possibility of justice?",
+                "options": [
+                  "Tyranny is inevitable and justice is impossible.",
+                  "Moral integrity, truth-telling, and collective resistance can overcome tyranny, while corruption and ambition lead to destruction, affirming the possibility of justice through human action.",
+                  "Violence is always the answer to tyranny.",
+                  "Power is everything and morality is irrelevant."
+                ],
+                "answer": "B",
+                "explanation": "The play's moral message is that moral integrity, truth-telling, and collective resistance can overcome tyranny, while corruption and unchecked ambition inevitably lead to destruction ."
+              },
+              {
+                "id": "b9_lit_020",
+                "text": "Why is 'Once Upon an Elephant' considered an important contribution to Nigerian drama, particularly in the context of WAEC's recommended texts?",
+                "options": [
+                  "It is the longest Nigerian play ever written.",
+                  "It combines Yoruba oral tradition with contemporary political critique, creating a distinctive form of engaged, culturally grounded theatre that speaks to both traditional values and modern political realities.",
+                  "It is the first Nigerian play ever written.",
+                  "It has no particular significance for Nigerian drama."
+                ],
+                "answer": "B",
+                "explanation": "The play is significant for its innovative combination of Yoruba oral tradition—proverbs, folktales, rituals—with contemporary political critique, creating a distinctive form of engaged, culturally grounded African theatre ."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b10_b10",
+        "strataId": "strata_2",
+        "name": "Bundle 10 — Final Comprehensive Assessment",
+        "requiredScore": 90,
+        "isUnlocked": false,
+        "isCompleted": false,
+        "durationMinutes": 20,
+        "subjects": [
+          {
+            "subjectName": "Literature in English",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b10_lit_001",
+                "text": "Which of the following best articulates the play's treatment of the relationship between power and morality, and what does this reveal about the play's political philosophy?",
+                "options": [
+                  "Power and morality are completely separate domains.",
+                  "Legitimate power requires moral grounding; Ajanaku's immorality is inseparable from his illegitimacy, revealing the play's belief that political authority must be ethically grounded.",
+                  "Morality weakens political power and should be discarded.",
+                  "Power excuses all moral failings."
+                ],
+                "answer": "B",
+                "explanation": "The play argues that legitimate political power requires moral grounding: Ajanaku's illegitimacy and immorality are inseparable, and his downfall results from both ."
+              },
+              {
+                "id": "b10_lit_002",
+                "text": "What type of irony dominates the play's treatment of Ajanaku's quest for immortality, and what does this reveal about the play's moral vision?",
+                "options": [
+                  "Verbal irony only.",
+                  "Tragic irony: the quest for immortality leads directly to death, revealing the play's moral vision that hubristic ambition is self-destructive.",
+                  "Cosmic irony without human agency.",
+                  "Comic irony that trivializes the quest."
+                ],
+                "answer": "B",
+                "explanation": "The play employs tragic irony: Ajanaku's quest for immortality, which requires the violation of sacred limits, leads directly and inevitably to his death ."
+              },
+              {
+                "id": "b10_lit_003",
+                "text": "Who serves as the play's moral center, and how does this character embody the play's values?",
+                "options": [
+                  "Ajanaku, who embodies the play's critique of tyranny.",
+                  "Serubawon, who embodies the play's critique of complicity.",
+                  "Iya Agba, who embodies the play's values of truth, justice, and legitimate tradition against Ajanaku's tyranny.",
+                  "Odejimi, who embodies the play's values of courage."
+                ],
+                "answer": "C",
+                "explanation": "Iya Agba serves as the play's moral center, articulating the values of truth, justice, and legitimate tradition against Ajanaku's tyranny ."
+              },
+              {
+                "id": "b10_lit_004",
+                "text": "What does the Ijedodo ritual symbolize in the play's political critique, and how does it function as a symbol of tyrannical abuse?",
+                "options": [
+                  "The beauty of Yoruba tradition.",
+                  "The corruption of sacred tradition for political ambition and the violent exploitation of women, making it the play's most powerful symbol of tyrannical abuse.",
+                  "The power of the gods to punish sinners.",
+                  "love charm with no political significance."
+                ],
+                "answer": "B",
+                "explanation": "The Ijedodo ritual symbolizes the corruption of sacred tradition for political ambition and the violent exploitation of women, making it the play's most powerful symbol of tyrannical abuse ."
+              },
+              {
+                "id": "b10_lit_005",
+                "text": "What is the significance of the proverb 'The leper said two things of which one is a lie' in the play?",
+                "options": [
+                  "It warns against eating contaminated food.",
+                  "Iya Agba uses it to expose Ajanaku's false claims and pretensions to legitimacy, challenging his self-presentation.",
+                  "It is a prayer for healing.",
+                  "It praises lepers for their wisdom."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba uses this proverb to expose Ajanaku's false claims and pretensions to legitimacy, challenging his self-presentation ."
+              },
+              {
+                "id": "b10_lit_006",
+                "text": "How does the play treat the traditional African value of extended family solidarity, and what does this reveal about the play's social critique?",
+                "options": [
+                  "It glorifies extended family as flawlessly protective.",
+                  "It critiques it, demonstrating how predatory relatives can exploit kinship for personal gain, revealing the play's critique of corruption within traditional structures.",
+                  "It suggests extended family ties are nonexistent.",
+                  "It claims uncles are always kinder than fathers."
+                ],
+                "answer": "B",
+                "explanation": "The play critiques the betrayal of kinship: Serubawon exploits his biological relationship to Ajanaku, and the community's ties to the palace are manipulated to enable tyranny ."
+              },
+              {
+                "id": "b10_lit_007",
+                "text": "What does Iya Agba's role as truth-teller emphasize regarding personal ethics and the individual's responsibility to confront tyranny?",
+                "options": [
+                  "That people should abandon their communities.",
+                  "That individual moral integrity and courage can transcend fear and challenge tyranny, emphasizing the moral imperative to speak truth to power.",
+                  "That silence is golden and one should remain neutral.",
+                  "That only the young can resist tyranny."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba teaches that even in the face of overwhelming tyranny, one must uphold moral courage and speak truth to power ."
+              },
+              {
+                "id": "b10_lit_008",
+                "text": "What dramatic purpose does Bolaji's monologue in the generator shed serve? (Note: This question refers to the attached literature note, not 'Once Upon an Elephant')",
+                "options": [
+                  "It provides comic relief.",
+                  "It functions as a classic tragic soliloquy expressing existential despair.",
+                  "It reveals Makinde's bank account details.",
+                  "It explains the chemical formula of narcotics."
+                ],
+                "answer": "B",
+                "explanation": "This question refers to the attached literature note ('The Drama of Taye & Bolaji'), not to 'Once Upon an Elephant'. The correct answer for 'Once Upon an Elephant' would be different."
+              },
+              {
+                "id": "b10_lit_009",
+                "text": "What literary device is present when Iya Agba's early warnings about Ajanaku's illegitimacy prove true?",
+                "options": [
+                  "Onomatopoeia.",
+                  "Foreshadowing.",
+                  "Metonymy.",
+                  "Anachronism."
+                ],
+                "answer": "B",
+                "explanation": "Iya Agba's persistent truth-telling foreshadows the eventual exposure of Ajanaku's illegitimacy and his downfall ."
+              },
+              {
+                "id": "b10_lit_010",
+                "text": "Which character represents genuine, disinterested moral authority in the play, and how does this character function as the play's ethical compass?",
+                "options": [
+                  "Ajanaku, who represents the consequences of illegitimacy.",
+                  "Serubawon, who represents the consequences of complicity.",
+                  "Iya Agba, who represents authentic moral authority, risking her safety to speak truth and protect the innocent.",
+                  "Odegbami, who represents the hunters' guild."
+                ],
+                "answer": "C",
+                "explanation": "Iya Agba represents authentic moral authority, risking her safety to speak truth and protect the innocent ."
+              },
+              {
+                "id": "b10_lit_011",
+                "text": "What constitutes the central dramatic climax of the play, and how does it represent the turning point in the struggle against tyranny?",
+                "options": [
+                  "The fistfight between Odekunle and Ajanaku.",
+                  "The Jobele ceremony where Ajanaku's ambitions are thwarted and he is killed, representing the turning point where collective resistance defeats tyranny.",
+                  "The love scene between Odekunle and Desola.",
+                  "The initial ritual for Ajanaku's coronation."
+                ],
+                "answer": "B",
+                "explanation": "The Jobele ceremony is the dramatic climax: Ajanaku's quest for immortality is reversed, Desola reclaims her life, and the tyrant is killed ."
+              },
+              {
+                "id": "b10_lit_012",
+                "text": "What does the symbol of the 'elephant' represent throughout the drama, and how does it function as the play's central metaphor?",
+                "options": [
+                  "Wisdom and patience.",
+                  "Arrogant, power-drunk tyranny that is ultimately brought down by cunning and collective resistance, paralleling the Yoruba folktale.",
+                  "Gentleness and kindness.",
+                  "The beauty of nature."
+                ],
+                "answer": "B",
+                "explanation": "The elephant symbolizes Ajanaku's arrogant, power-drunk tyranny, which is ultimately destroyed by the cunning and collective action of the community ."
+              },
+              {
+                "id": "b10_lit_013",
+                "text": "Why is the ending of the play characterized as tragic but morally satisfying, and what does this reveal about the play's ethical vision?",
+                "options": [
+                  "Because evil triumphs and injustice prevails.",
+                  "Because the tyrant and his enabler are destroyed, restoring moral order, though at great cost, revealing the play's ethical vision that justice is possible through collective action.",
+                  "Because everyone dies and there is no hope.",
+                  "Because the ending is ambiguous and morally unclear."
+                ],
+                "answer": "B",
+                "explanation": "The ending is tragic in its cost but morally satisfying in that justice is served—Ajanaku dies and Serubawon commits suicide—revealing the play's ethical vision of justice through collective action ."
+              },
+              {
+                "id": "b10_lit_014",
+                "text": "What social pathology is critiqued through the character of Serubawon, and how does this critique extend beyond the individual to institutional critique?",
+                "options": [
+                  "Urban traffic congestion.",
+                  "The manipulation of religion and tradition for personal and political gain, critiquing how traditional institutions can be corrupted to serve tyranny.",
+                  "Inadequate healthcare facilities.",
+                  "High prices of petroleum products."
+                ],
+                "answer": "B",
+                "explanation": "Serubawon represents the corruption of religious and traditional authority for selfish political purposes, extending the critique to how traditional institutions can be weaponized for tyranny ."
+              },
+              {
+                "id": "b10_lit_015",
+                "text": "How does the play depict the relationship between the individual and the community, particularly through the contrast between Ajanaku and Iya Agba?",
+                "options": [
+                  "The individual is always right and the community is always wrong.",
+                  "The tyrant Ajanaku places himself above the community, while Iya Agba represents the community's collective wisdom and resistance, suggesting that true leadership serves the collective.",
+                  "The community is irrelevant to political outcomes.",
+                  "The individual should always submit to the community without question."
+                ],
+                "answer": "B",
+                "explanation": "The play contrasts Ajanaku's selfish individualism with Iya Agba's communal values, suggesting that true leadership serves the collective rather than the self ."
+              },
+              {
+                "id": "b10_lit_016",
+                "text": "What moral contrast is established between Ajanaku and Odejimi, and what does this reveal about the play's ethical framework?",
+                "options": [
+                  "Both are tyrants and there is no moral contrast.",
+                  "Ajanaku embodies tyranny and corruption, while Odejimi embodies principled governance and courageous opposition, revealing the play's ethical contrast between corruption and integrity.",
+                  "Both are heroes and there is no moral contrast.",
+                  "Odejimi is the villain and Ajanaku is the hero."
+                ],
+                "answer": "B",
+                "explanation": "The play contrasts Ajanaku's tyrannical rule with Odejimi's principled, courageous opposition, highlighting the moral difference between corruption and integrity ."
+              },
+              {
+                "id": "b10_lit_017",
+                "text": "What is the thematic significance of Desola's rescue by Iya Agba, and how does it represent the triumph of wisdom over tyranny?",
+                "options": [
+                  "It shows that the gods are indifferent to human suffering.",
+                  "It represents the triumph of wisdom and compassion over tyranny and violence, demonstrating that collective action and ancestral knowledge can overcome oppression.",
+                  "It proves that Desola was never in danger.",
+                  "It is a coincidence with no thematic significance."
+                ],
+                "answer": "B",
+                "explanation": "Desola's rescue by Iya Agba symbolizes the power of wisdom and compassion to overcome tyranny and protect the innocent ."
+              },
+              {
+                "id": "b10_lit_018",
+                "text": "Which literary term best describes the staged rituals and public performances in the play, and how do they function dramatically?",
+                "options": [
+                  "Deceptive dialogue.",
+                  "Spectacle and performance, functioning as sites of political struggle where power is both reinforced and contested.",
+                  "Stream of consciousness.",
+                  "Choric ode."
+                ],
+                "answer": "B",
+                "explanation": "The rituals and public performances are spectacles that serve both to reinforce power and to provide sites of resistance ."
+              },
+              {
+                "id": "b10_lit_019",
+                "text": "What does the contrast between the legitimate Olubori rite and the corrupt Ijedodo ritual highlight about the play's distinction between authentic and perverted tradition?",
+                "options": [
+                  "All rituals are the same and there is no distinction.",
+                  "The distinction between sacred tradition that upholds order and perverted ritual that serves tyranny, highlighting how tradition can be corrupted for political ends.",
+                  "Rituals are meaningless performances with no moral content.",
+                  "Only the king can perform rituals legitimately."
+                ],
+                "answer": "B",
+                "explanation": "The play distinguishes between legitimate tradition (Olubori) and its corruption (Ijedodo), highlighting how sacred practices can be perverted for political ends ."
+              },
+              {
+                "id": "b10_lit_020",
+                "text": "What ultimate moral takeaway does the drama offer about tyranny, truth, and collective action, and how does this message remain relevant to contemporary Nigerian society?",
+                "options": [
+                  "That violence is the best solution to political problems.",
+                  "That moral integrity, truth-telling, and collective resistance can overcome tyranny, while corruption and ambition lead to destruction, offering a message of hope and accountability relevant to contemporary governance.",
+                  "That one should abandon family during hardship.",
+                  "That superstitious beliefs are always accurate and should guide political action."
+                ],
+                "answer": "B",
+                "explanation": "The drama champions truth, moral courage, and collective action against tyranny, while exposing the self-destructive nature of corruption and unchecked ambition, offering a message of hope and accountability relevant to contemporary Nigerian society ."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

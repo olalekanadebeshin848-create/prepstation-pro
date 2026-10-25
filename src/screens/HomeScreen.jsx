@@ -385,7 +385,7 @@ export async function applyBundleCompletionToStorage(bundleId, score, examCatego
 // there anyway).
 const webScrollFix = { flex: 1, minHeight: 0 };
 
-export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchToTeacher, historicalPerformanceData }) {
+export default function HomeScreen({ onStartPractice, onOpenAnalytics, onOpenSyncCenter, onSwitchToTeacher, historicalPerformanceData }) {
   const insets = useSafeAreaInsets();
   const isDesktop = useIsDesktop();
   const pgScrollRef = useRef(null);
@@ -777,27 +777,111 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
     }));
   };
 
+  // ── PSZ decryption helpers (mirrors the admin tool exactly) ──────────────
+  const PSZ_MAGIC   = 'PSZ1';
+  const PSZ_APP_SALT = 'PSP_2025_DMS_GROUPS_SECURE_KEY_XK92';
+
+  const derivePszKey = (deviceCode) =>
+    PSZ_APP_SALT + '::' + deviceCode + '::' + PSZ_APP_SALT.split('').reverse().join('');
+
+  const xorBytes = (data, key) => {
+    const enc = new TextEncoder();
+    const keyBytes = enc.encode(key);
+    const out = new Uint8Array(data.length);
+    for (let i = 0; i < data.length; i++) out[i] = data[i] ^ keyBytes[i % keyBytes.length];
+    return out;
+  };
+
+  const checksumBytes = (data) => {
+    let sum = 0;
+    for (let i = 0; i < data.length; i++) sum = (sum + data[i]) & 0xFFFFFFFF;
+    return sum;
+  };
+
+  const bytesToUint32 = (b, offset) =>
+    (((b[offset] << 24) | (b[offset+1] << 16) | (b[offset+2] << 8) | b[offset+3]) >>> 0);
+
+  const unpackPsz = (bytes, deviceCode) => {
+    const magic = new TextDecoder().decode(bytes.slice(0, 4));
+    if (magic !== PSZ_MAGIC && magic !== 'PSR1') return { ok: false, reason: 'Not a valid .psz or .psr file.' };
+    const checksum  = bytesToUint32(bytes, 5);
+    const storedDev = new TextDecoder().decode(bytes.slice(9, 45)).replace(/\0/g, '').trim();
+    const isUniversal = storedDev === 'UNIVERSAL' || storedDev === 'ALL' || storedDev === 'PUBLIC';
+    if (storedDev && !isUniversal && deviceCode && storedDev !== deviceCode) {
+      return { ok: false, reason: `File locked to device: ${storedDev}\nYour device: ${deviceCode}` };
+    }
+    const encrypted = bytes.slice(45);
+    const key       = derivePszKey(isUniversal ? storedDev : (deviceCode || '000000'));
+    const decrypted = xorBytes(encrypted, key);
+    if (checksumBytes(decrypted) !== checksum) return { ok: false, reason: 'Checksum mismatch — file is corrupted or tampered.' };
+    try {
+      return { ok: true, payload: JSON.parse(new TextDecoder().decode(decrypted)) };
+    } catch {
+      return { ok: false, reason: 'Decryption produced invalid data. Wrong device or corrupted file.' };
+    }
+  };
+  // ── End PSZ helpers ───────────────────────────────────────────────────────
+
   const handleLocalFileUpdatePick = async () => {
     try {
       const fileResult = await DocumentPicker.getDocumentAsync({
-        type: ['application/json', 'text/plain', 'application/octet-stream'],
+        type: ['application/json', 'text/plain', 'application/octet-stream', '*/*'],
         copyToCacheDirectory: true,
       });
       if (fileResult.canceled || !fileResult.assets?.length) return;
       setIsProcessingUpdate(true);
-      const raw  = await (await fetch(fileResult.assets[0].uri)).text();
-      const pack = JSON.parse(raw.trim());
 
-      const licenseCheck = await validateLicenseInFile(pack);
-      if (!licenseCheck.valid) {
-        const msg = licenseCheck.reason === 'NO_LICENSE_IN_FILE'
-          ? `This file has no device license.\n\nYour device code:\n🔑 ${deviceLicenseCode}`
-          : licenseCheck.reason === 'MISMATCH'
-          ? `File locked to a different device.\n\nFile code: ${licenseCheck.fileCode}\nThis device: ${deviceLicenseCode}`
-          : 'License verification failed.';
-        Alert.alert('🔒 Device License Mismatch', msg);
-        setIsProcessingUpdate(false); return;
+      const pickedAsset = fileResult.assets[0];
+      const fileName    = pickedAsset.name || '';
+      const isPsz       = /\.(psz|psr)$/i.test(fileName);
+
+      let pack;
+
+      if (isPsz) {
+        // ── PSZ path: binary fetch → decrypt → extract strata JSON ──
+        const response  = await fetch(pickedAsset.uri);
+        const buffer    = await response.arrayBuffer();
+        const bytes     = new Uint8Array(buffer);
+        const devCode   = deviceLicenseCode;
+
+        if (!devCode) {
+          Alert.alert('🔒 Device Code Unavailable', 'Could not read your device license code. Please restart the app and try again.');
+          setIsProcessingUpdate(false); return;
+        }
+
+        const result = unpackPsz(bytes, devCode);
+        if (!result.ok) {
+          Alert.alert('🔒 PSZ Decryption Failed', result.reason);
+          setIsProcessingUpdate(false); return;
+        }
+
+        // The psz payload wraps the original strata JSON under .strata
+        pack = result.payload.strata || result.payload;
+        if (!pack) {
+          Alert.alert('❌ PSZ Format Error', 'Decrypted package has no strata data.');
+          setIsProcessingUpdate(false); return;
+        }
+      } else {
+        // ── JSON path: existing flow unchanged ──
+        const raw = await (await fetch(pickedAsset.uri)).text();
+        pack = JSON.parse(raw.trim());
       }
+
+      // ── License check: PSZ files are already device-verified above,
+      //    JSON files go through the existing sig_a/sig_b license gate ──
+      if (!isPsz) {
+        const licenseCheck = await validateLicenseInFile(pack);
+        if (!licenseCheck.valid) {
+          const msg = licenseCheck.reason === 'NO_LICENSE_IN_FILE'
+            ? `This file has no device license.\n\nYour device code:\n🔑 ${deviceLicenseCode}`
+            : licenseCheck.reason === 'MISMATCH'
+            ? `File locked to a different device.\n\nFile code: ${licenseCheck.fileCode}\nThis device: ${deviceLicenseCode}`
+            : 'License verification failed.';
+          Alert.alert('🔒 Device License Mismatch', msg);
+          setIsProcessingUpdate(false); return;
+        }
+      }
+
       if (!pack.structuralStrata) { Alert.alert('Format Mismatch', 'Valid strata signature missing.'); setIsProcessingUpdate(false); return; }
 
       const incoming = pack.structuralStrata;
@@ -967,7 +1051,18 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
               option_b:            q.options[1] || '',
               option_c:            q.options[2] || '',
               option_d:            q.options[3] || '',
-              correct_option:      q.answer === q.options[0] ? 'A' : q.answer === q.options[1] ? 'B' : q.answer === q.options[2] ? 'C' : 'D',
+              correct_option:      (()=>{
+                const raw = q.correct_option || q.correct_answer || q.answer || '';
+                const str = String(raw).trim();
+                const up = str.toUpperCase();
+                if (['A', 'B', 'C', 'D'].includes(up)) return up;
+                const opts = (q.options || []).map(o => String(o ?? '').trim());
+                if (opts[0] && (str === opts[0] || raw === q.options[0])) return 'A';
+                if (opts[1] && (str === opts[1] || raw === q.options[1])) return 'B';
+                if (opts[2] && (str === opts[2] || raw === q.options[2])) return 'C';
+                if (opts[3] && (str === opts[3] || raw === q.options[3])) return 'D';
+                return 'A';
+              })(),
               correct_answer_text: q.answer || '',
               explanation:         q.explanation || '',
             }));
@@ -1058,6 +1153,9 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
           <TouchableOpacity style={[styles.headerActionButton, isDesktop && styles.headerActionButtonDesktop]} onPress={() => setIsDarkMode(!isDarkMode)}>
             <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>{isDarkMode ? '☀️' : '🌙'}</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={[styles.headerActionButton, { backgroundColor: '#064e3b', borderColor: '#10b981' }, isDesktop && styles.headerActionButtonDesktop]} onPress={() => onOpenSyncCenter(selectedExam)}>
+            <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>☁️</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={[styles.headerActionButton, isDesktop && styles.headerActionButtonDesktop]} onPress={onOpenAnalytics}>
             <Text style={[styles.actionButtonEmoji, isDesktop && styles.actionButtonEmojiDesktop]}>📊</Text>
           </TouchableOpacity>
@@ -1138,6 +1236,40 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
         <TickerBanner isDarkMode={isDarkMode} t={t} />
 
         <TouchableOpacity
+          style={[
+            styles.smartFocusShortcutActionCardContainer,
+            {
+              backgroundColor: isDarkMode ? '#06281e' : '#f0fdf4',
+              borderWidth: 2,
+              borderColor: '#10b981',
+              marginBottom: 10,
+            },
+          ]}
+          activeOpacity={0.9}
+          onPress={() => onOpenSyncCenter(selectedExam)}
+        >
+          <View style={styles.smartFocusLeftContentLayoutColumn}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: 2 }}>
+              <Text style={[styles.smartFocusHeadingTitle, { color: isDarkMode ? '#6ee7b7' : '#047857' }]}>
+                ☁️ Strata Download & Sync Hub
+              </Text>
+              <View style={{ backgroundColor: '#10b981', borderRadius: 6, paddingHorizontal: 6, paddingVertical: 2 }}>
+                <Text style={{ color: '#022c22', fontSize: 9, fontWeight: '900' }}>AUTO-DETECT</Text>
+              </View>
+            </View>
+            <Text style={[styles.smartFocusBriefDescriptionParagraph, { color: isDarkMode ? '#cbd5e1' : '#334155' }]}>
+              New strata uploaded online? One-tap download & instant auto-import into your app with zero file-picker stress.
+            </Text>
+            <View style={[styles.smartFocusActionInlineActionPillBtn, { backgroundColor: '#10b981' }]}>
+              <Text style={[styles.smartFocusActionInlineActionPillBtnText, { color: '#022c22' }]}>
+                Open Cloud Download Hub ⚡
+              </Text>
+            </View>
+          </View>
+          <Text style={styles.smartFocusRightGraphicEmojiIcon}>📥</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
           style={[styles.smartFocusShortcutActionCardContainer, { backgroundColor: '#0d2e1f', borderWidth: 1.5, borderColor: '#10b981' }]}
           activeOpacity={0.9}
           onPress={() => Linking.openURL('https://community.dmsgroups.com.ng')}
@@ -1162,6 +1294,30 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
           isDarkMode={isDarkMode}
           onSelect={selectCategory}
         />
+
+        <TouchableOpacity
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            backgroundColor: isDarkMode ? '#06281e' : '#f0fdf4',
+            paddingHorizontal: 12,
+            paddingVertical: 8,
+            borderRadius: 8,
+            marginBottom: 12,
+            borderWidth: 1,
+            borderColor: '#10b981',
+          }}
+          activeOpacity={0.8}
+          onPress={() => onOpenSyncCenter(selectedExam)}
+        >
+          <Text style={{ fontSize: 11, fontWeight: '700', color: isDarkMode ? '#6ee7b7' : '#047857' }}>
+            ☁️ Looking for more {selectedExam} Strata files?
+          </Text>
+          <Text style={{ fontSize: 11, fontWeight: '800', color: '#10b981' }}>
+            Browse Cloud Hub →
+          </Text>
+        </TouchableOpacity>
 
         <Text style={[styles.sectionLabel, { color: t.textSub }]}>2. Choose Your Bundle Here</Text>
 
@@ -1399,9 +1555,18 @@ export default function HomeScreen({ onStartPractice, onOpenAnalytics, onSwitchT
             <Text style={{ fontSize: 11, color: t.textSub, marginBottom: 8 }}>
               The file must be generated for this specific device code.
             </Text>
+            <TouchableOpacity
+              style={[styles.fileSelectButton, { backgroundColor: '#10b981', marginBottom: 10 }]}
+              onPress={() => onOpenSyncCenter(selectedExam)}
+            >
+              <Text style={[styles.fileSelectButtonText, { color: '#022c22', fontWeight: '900' }]}>
+                ☁️ Open Cloud Strata Download & Sync Hub ⚡
+              </Text>
+            </TouchableOpacity>
+
             <TouchableOpacity style={styles.fileSelectButton} onPress={handleLocalFileUpdatePick} disabled={isProcessingUpdate}>
               <Text style={styles.fileSelectButtonText}>
-                {isProcessingUpdate ? 'Verifying License...' : 'Upload Strata Update Matrix (FILE) 📎'}
+                {isProcessingUpdate ? 'Verifying License...' : 'Or Upload Strata File from Device 📎'}
               </Text>
             </TouchableOpacity>
           </View>
