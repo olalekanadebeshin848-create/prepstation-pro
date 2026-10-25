@@ -14,7 +14,8 @@
     "build:portable": "npm run copy-web && electron-builder --win portable --x64",
     "dist:ia32": "npm run copy-web && electron-builder --win --ia32 --config electron-builder-ia32.json",
     "build:installer:ia32": "npm run copy-web && electron-builder --win nsis --ia32 --config electron-builder-ia32.json",
-    "build:portable:ia32": "npm run copy-web && electron-builder --win portable --ia32 --config electron-builder-ia32.json"
+    "build:portable:ia32": "npm run copy-web && electron-builder --win portable --ia32 --config electron-builder-ia32.json",
+    "publish:strata": "cd .. && npm run publish:strata"
   },
   "build": {
     "appId": "com.delmamatiagroups.prepstationpro.desktop",
