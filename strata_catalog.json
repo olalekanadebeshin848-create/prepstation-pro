@@ -2,7 +2,7 @@
   "catalogVersion": 1,
   "appName": "PrepStation Pro",
   "organization": "Delmama Groups",
-  "lastUpdated": "2026-10-25T11:07:21.928Z",
+  "lastUpdated": "2026-10-25T11:49:20.739Z",
   "totalCount": 2,
   "strataList": [
     {
@@ -18,7 +18,7 @@
       "size": "155 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-12T12:43:13.509Z"
+      "updatedAt": "2026-10-25T11:49:15.155Z"
     },
     {
       "id": "ss_1_once_upon_an_elephant_stg2",
@@ -33,7 +33,7 @@
       "size": "141 KB",
       "totalBundles": 10,
       "totalQuestions": 200,
-      "updatedAt": "2026-10-12T15:56:21.579Z"
+      "updatedAt": "2026-10-25T11:49:15.155Z"
     }
   ]
 }
