@@ -1,15 +1,15 @@
 ﻿{
   "strataMetadata": {
-    "label": "JS 2 Strata 1 — Complete Question Set",
+    "label": "JSS 2 Strata 1 — Complete Question Set",
     "renderedAt": "2026-10-01",
     "edition": "ED1",
-    "gradeLevel": "JS 2",
+    "gradeLevel": "JSS 2",
     "term": "First Term",
     "sig_a": "Y2Fi",
     "sig_b": "bgYA"
   },
   "structuralStrata": {
-    "examCategory": "JS 2",
+    "examCategory": "JSS 2",
     "strataId": "strata_1",
     "displayName": "STRATA 1",
     "durationMinutes": 20,
