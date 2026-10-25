@@ -39,7 +39,8 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "build:catalog": "node scripts/build-catalog.js"
+    "build:catalog": "node scripts/build-catalog.js",
+    "publish:strata": "git pull && git add strata/ && git commit -m \"chore: update strata files\" && git push origin main"
   },
   "private": true,
   "devDependencies": {
