@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PrepStation Pro — Strata Cloud Publisher Portal</title>
+<style>
+  :root {
+    --bg-main: #0b1120;
+    --bg-card: #151f32;
+    --bg-card-sub: #1e293b;
+    --border: #334155;
+    --border-focus: #3b82f6;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --accent: #38bdf8;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --success: #10b981;
+    --success-bg: #064e3b;
+    --danger: #ef4444;
+    --danger-bg: #7f1d1d;
+    --warning: #f59e0b;
+    --warning-bg: #78350f;
+    --purple: #8b5cf6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+  body { background: var(--bg-main); color: var(--text-main); min-height: 100vh; padding: 24px 16px; }
+  .container { max-width: 980px; margin: 0 auto; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 28px; }
+  .header-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 9999px; font-size: 11px; font-weight: 700; background: rgba(56, 189, 248, 0.1); color: var(--accent); border: 1px solid rgba(56, 189, 248, 0.25); margin-bottom: 10px; }
+  .header h1 { font-size: 26px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 6px; }
+  .header p { font-size: 13px; color: var(--text-muted); max-width: 620px; margin: 0 auto; line-height: 1.5; }
+
+  /* Connection Banner */
+  .network-strip { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-radius: 10px; margin-bottom: 20px; font-size: 12px; font-weight: 600; background: var(--bg-card); border: 1px solid var(--border); }
+  .network-status { display: flex; align-items: center; gap: 8px; }
+  .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--text-dim); }
+  .pulse-dot.online { background: var(--success); box-shadow: 0 0 10px var(--success); }
+  .pulse-dot.offline { background: var(--danger); box-shadow: 0 0 10px var(--danger); }
+
+  /* Cards */
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; margin-bottom: 20px; }
+  .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .card-title { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent); display: flex; align-items: center; gap: 8px; }
+  .step-pill { background: var(--primary); color: #fff; font-size: 10px; font-weight: 900; padding: 3px 8px; border-radius: 6px; }
+
+  /* Forms & Grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .grid-3 { display: grid; grid-template-columns: 1.2fr 1fr 0.8fr; gap: 14px; }
+  @media (max-width: 720px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+  .form-group { margin-bottom: 12px; }
+  label { display: block; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.5px; }
+  input[type="text"], input[type="password"], select { width: 100%; background: var(--bg-main); border: 1.5px solid var(--border); border-radius: 8px; padding: 10px 12px; color: var(--text-main); font-size: 13px; font-weight: 600; outline: none; transition: border-color 0.2s; }
+  input:focus, select:focus { border-color: var(--border-focus); }
+  .input-with-btn { display: flex; gap: 8px; }
+  .input-with-btn input { flex: 1; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; padding: 10px 16px; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; border: none; transition: all 0.2s; color: #fff; text-decoration: none; }
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+  .btn-primary { background: var(--primary); }
+  .btn-success { background: var(--success); }
+  .btn-danger { background: var(--danger); }
+  .btn-warning { background: var(--warning); color: #000; }
+  .btn-purple { background: var(--purple); }
+  .btn-outline { background: transparent; border: 1.5px solid var(--border); color: var(--text-muted); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .btn-sm { padding: 6px 10px; font-size: 11px; border-radius: 6px; }
+
+  /* Drag Drop Zone */
+  .dropzone { border: 2px dashed var(--border); border-radius: 12px; padding: 32px 16px; text-align: center; cursor: pointer; transition: all 0.2s; position: relative; background: rgba(30, 41, 59, 0.4); }
+  .dropzone:hover, .dropzone.dragover { border-color: var(--accent); background: rgba(56, 189, 248, 0.05); }
+  .dropzone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+  .dropzone-icon { font-size: 36px; margin-bottom: 8px; }
+  .dropzone-title { font-size: 14px; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+  .dropzone-hint { font-size: 11px; color: var(--text-muted); }
+
+  /* Staged Files List */
+  .staged-list { margin-top: 16px; display: flex; flex-direction: column; gap: 10px; }
+  .staged-item { background: var(--bg-card-sub); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .staged-info { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 240px; }
+  .staged-icon { font-size: 22px; }
+  .staged-name { font-size: 13px; font-weight: 700; color: var(--text-main); word-break: break-all; }
+  .staged-meta { font-size: 11px; color: var(--text-muted); display: flex; gap: 8px; margin-top: 2px; }
+  .staged-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .badge-tag { font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; }
+  .tag-basic { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+  .tag-premium { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+  /* Console & Logs */
+  .log-console { background: #070c18; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-family: "Courier New", Courier, monospace; font-size: 11px; max-height: 200px; overflow-y: auto; color: #a5f3fc; line-height: 1.6; margin-top: 12px; display: none; }
+  .log-entry { margin-bottom: 2px; }
+  .log-success { color: #4ade80; }
+  .log-err { color: #f87171; }
+  .log-warn { color: #facc15; }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin-top: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 10px 12px; background: #0f172a; color: var(--text-dim); text-transform: uppercase; font-size: 10px; font-weight: 800; border-bottom: 1px solid var(--border); }
+  td { padding: 10px 12px; border-bottom: 1px solid rgba(51, 65, 85, 0.6); color: var(--text-main); vertical-align: middle; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* Alert / Notice */
+  .alert { border-radius: 10px; padding: 12px 16px; font-size: 12px; line-height: 1.5; margin-bottom: 16px; display: flex; gap: 10px; align-items: flex-start; }
+  .alert-info { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: #bae6fd; }
+  .alert-success { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: #a7f3d0; }
+  .alert-danger { background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); color: #fecaca; }
+
+  /* Progress Bar */
+  .progress-wrap { height: 6px; background: #0f172a; border-radius: 9999px; overflow: hidden; margin-top: 10px; display: none; }
+  .progress-bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-badge">☁️ PREPSTATION PRO CLOUD PORTAL</div>
+    <h1>Universal Strata Cloud Publisher</h1>
+    <p>
+      Publish and manage Strata files directly to GitHub from <strong>any device or browser</strong> — no command-line, Git installations, or terminal required. Prevents push conflicts and protects you against system crashes.
+    </p>
+  </div>
+
+  <!-- Network Strip -->
+  <div class="network-strip">
+    <div class="network-status">
+      <div class="pulse-dot online" id="netDot"></div>
+      <span id="netStatusText">System Online — Ready to Sync</span>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <span style="color:var(--text-dim);font-size:11px;" id="cloudSyncTime">Last Cloud Check: Never</span>
+      <button class="btn btn-sm btn-outline" onclick="checkCloudConnection()">🔄 Refresh Connection</button>
+    </div>
+  </div>
+
+  <!-- STEP 1: GitHub Connection -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        <span class="step-pill">STEP 1</span>
+        GitHub Cloud Connection & Credentials
+      </div>
+      <button class="btn btn-sm btn-outline" onclick="toggleTokenVisibility()" id="btnToggleToken">👁️ Show Token</button>
+    </div>
+
+    <div class="alert alert-info">
+      <div>💡</div>
+      <div>
+        <strong>Safe & Secure:</strong> Credentials are saved only in your device's browser <code>localStorage</code>. No external server receives your token.
+        <a href="https://github.com/settings/tokens/new?scopes=repo&description=PrepStation+Cloud+Publisher" target="_blank" style="color:var(--accent);font-weight:700;margin-left:6px;">Create a Personal Access Token (classic or fine-grained with contents:write) →</a>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="form-group">
+        <label>GitHub Personal Access Token (PAT)</label>
+        <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" onchange="saveConfig()"/>
+      </div>
+      <div class="form-group">
+        <label>Repository Owner / Org</label>
+        <input type="text" id="ghOwner" value="olalekanadebeshin848-create" onchange="saveConfig()"/>
+      </div>
+      <div class="form-group">
+        <label>Repository Name</label>
+        <input type="text" id="ghRepo" value="prepstation-pro" onchange="saveConfig()"/>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:6px;">
+      <div style="font-size:11px;color:var(--text-muted);" id="tokenHelp">
+        Target Folder: <code style="color:var(--accent);">strata/</code> &bull; Target Branch: <code style="color:var(--accent);">main</code>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-outline btn-sm" onclick="clearConfig()">🗑️ Forget Credentials</button>
+        <button class="btn btn-primary btn-sm" onclick="testGitHubAuth()">⚡ Test & Connect</button>
+      </div>
+    </div>
+    <div id="authStatusAlert" style="margin-top:12px;"></div>
+  </div>
+
+  <!-- STEP 2: Attach Strata Files -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        <span class="step-pill">STEP 2</span>
+        Attach & Stage Strata Packages
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);">
+        Supports <code style="color:var(--accent);">.json</code>, <code style="color:var(--accent);">.psz</code>, <code style="color:var(--accent);">.psr</code>
+      </div>
+    </div>
+
+    <div class="dropzone" id="dropzone" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+      <input type="file" id="filePicker" multiple accept=".json,.psz,.psr,application/json,application/octet-stream" onchange="handleFileSelect(event)"/>
+      <div class="dropzone-icon">📦</div>
+      <div class="dropzone-title">Drag & Drop Strata Files Here or Click to Browse</div>
+      <div class="dropzone-hint">You can attach multiple files at once. The publisher will inspect and prepare each package.</div>
+    </div>
+
+    <!-- Staged Files Area -->
+    <div id="stagedContainer" style="display:none;margin-top:16px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <div style="font-size:12px;font-weight:700;color:var(--accent);" id="stagedSummary">Staged Files (0)</div>
+        <button class="btn btn-sm btn-outline" onclick="clearStaged()">Clear Queue</button>
+      </div>
+      <div class="staged-list" id="stagedList"></div>
+
+      <!-- Commit Message and Push Button -->
+      <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);">
+        <div class="form-group">
+          <label>Commit Message</label>
+          <input type="text" id="commitMsg" value="sync: publish strata packages via Cloud Publisher"/>
+        </div>
+
+        <div class="progress-wrap" id="pushProgressWrap">
+          <div class="progress-bar" id="pushProgressBar"></div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px;flex-wrap:wrap;gap:10px;">
+          <div style="font-size:11px;color:var(--text-muted);">
+            ⚡ Once pushed, the GitHub robot triggers <code>generate-catalog.yml</code> and publishes to all devices immediately!
+          </div>
+          <button class="btn btn-success" id="btnPush" onclick="pushStagedToGitHub()">
+            🚀 Commit & Push to Strata Cloud
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="log-console" id="logConsole"></div>
+  </div>
+
+  <!-- STEP 3: Live Cloud Strata Manager -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        <span class="step-pill">LIVE CLOUD</span>
+        Active Strata Packages in GitHub Repository
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-sm btn-outline" onclick="fetchLiveStrataList()">🔄 Refresh Cloud Files</button>
+        <button class="btn btn-sm btn-purple" onclick="triggerCatalogRebuild()">🤖 Trigger Catalog Rebuild</button>
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">
+      These are the files live right now in <code>strata/</code> on GitHub. Any file deleted or added here directly updates all PrepStation apps worldwide.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Package Name</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Direct Download URL</th>
+            <th style="text-align:right;">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="cloudTableBody">
+          <tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">Connect your GitHub token in Step 1 to load active strata packages.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // State
+  let stagedFiles = [];
+  let existingCloudFiles = new Map(); // filename -> { sha, size, download_url }
+
+  const CONFIG_KEY = 'prepstation_cloud_publisher_config';
+
+  window.addEventListener('DOMContentLoaded', () => {
+    loadConfig();
+    updateNetworkStatus();
+    window.addEventListener('online', updateNetworkStatus);
+    window.addEventListener('offline', updateNetworkStatus);
+
+    if (document.getElementById('ghToken').value.trim()) {
+      testGitHubAuth(true); // silent test
+    }
+  });
+
+  function updateNetworkStatus() {
+    const isOnline = navigator.onLine;
+    const dot = document.getElementById('netDot');
+    const text = document.getElementById('netStatusText');
+    if (isOnline) {
+      dot.className = 'pulse-dot online';
+      text.textContent = 'System Online — Ready to Sync';
+    } else {
+      dot.className = 'pulse-dot offline';
+      text.textContent = 'System Offline — Check Internet Connection';
+    }
+  }
+
+  function loadConfig() {
+    try {
+      const raw = localStorage.getItem(CONFIG_KEY);
+      if (raw) {
+        const c = JSON.parse(raw);
+        if (c.token) document.getElementById('ghToken').value = c.token;
+        if (c.owner) document.getElementById('ghOwner').value = c.owner;
+        if (c.repo) document.getElementById('ghRepo').value = c.repo;
+      }
+    } catch(e) {}
+  }
+
+  function saveConfig() {
+    try {
+      const config = {
+        token: document.getElementById('ghToken').value.trim(),
+        owner: document.getElementById('ghOwner').value.trim() || 'olalekanadebeshin848-create',
+        repo: document.getElementById('ghRepo').value.trim() || 'prepstation-pro'
+      };
+      localStorage.setItem(CONFIG_KEY, JSON.stringify(config));
+    } catch(e) {}
+  }
+
+  function clearConfig() {
+    if (confirm('Clear saved GitHub token and repo settings from this browser?')) {
+      localStorage.removeItem(CONFIG_KEY);
+      document.getElementById('ghToken').value = '';
+      showAuthAlert('Credentials cleared from browser.', 'info');
+      existingCloudFiles.clear();
+      renderCloudTable([]);
+    }
+  }
+
+  function toggleTokenVisibility() {
+    const inp = document.getElementById('ghToken');
+    const btn = document.getElementById('btnToggleToken');
+    if (inp.type === 'password') {
+      inp.type = 'text';
+      btn.textContent = '🔒 Hide Token';
+    } else {
+      inp.type = 'password';
+      btn.textContent = '👁️ Show Token';
+    }
+  }
+
+  function log(msg, type = 'normal') {
+    const c = document.getElementById('logConsole');
+    c.style.display = 'block';
+    const d = document.createElement('div');
+    d.className = 'log-entry ' + (type === 'success' ? 'log-success' : type === 'err' ? 'log-err' : type === 'warn' ? 'log-warn' : '');
+    const time = new Date().toLocaleTimeString();
+    d.textContent = `[${time}] ${msg}`;
+    c.appendChild(d);
+    c.scrollTop = c.scrollHeight;
+  }
+
+  function showAuthAlert(msg, type = 'info') {
+    const a = document.getElementById('authStatusAlert');
+    a.innerHTML = `<div class="alert alert-${type === 'ok' ? 'success' : type === 'err' ? 'danger' : 'info'}">${msg}</div>`;
+  }
+
+  // GitHub API Fetcher
+  async function ghApi(endpoint, options = {}) {
+    const token = document.getElementById('ghToken').value.trim();
+    if (!token) throw new Error('GitHub Personal Access Token is required.');
+    const headers = {
+      'Accept': 'application/vnd.github+json',
+      'Authorization': `Bearer ${token}`,
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(options.headers || {})
+    };
+    const res = await fetch(`https://api.github.com${endpoint}`, {
+      ...options,
+      headers
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const err = data.message || `GitHub HTTP ${res.status}`;
+      throw new Error(err);
+    }
+    return data;
+  }
+
+  async function testGitHubAuth(silent = false) {
+    const token = document.getElementById('ghToken').value.trim();
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+
+    if (!token) {
+      if (!silent) showAuthAlert('❌ Please paste your GitHub Personal Access Token.', 'err');
+      return;
+    }
+
+    if (!silent) showAuthAlert('⏳ Validating GitHub credentials and repository permissions...', 'info');
+
+    try {
+      const user = await ghApi('/user');
+      const repoData = await ghApi(`/repos/${owner}/${repo}`);
+      saveConfig();
+
+      showAuthAlert(`✅ Connected successfully as <strong>${user.login}</strong>! Write access to <strong>${repoData.full_name}</strong> confirmed.`, 'ok');
+      document.getElementById('cloudSyncTime').textContent = `Last Cloud Check: ${new Date().toLocaleTimeString()}`;
+      await fetchLiveStrataList();
+    } catch(err) {
+      if (!silent) {
+        showAuthAlert(`❌ Connection failed: ${err.message}. Ensure your token has <code>contents:write</code> or <code>repo</code> scope.`, 'err');
+      }
+    }
+  }
+
+  function checkCloudConnection() {
+    testGitHubAuth(false);
+  }
+
+  // Fetch Existing Strata from GitHub
+  async function fetchLiveStrataList() {
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+    try {
+      const contents = await ghApi(`/repos/${owner}/${repo}/contents/strata?ref=main`);
+      existingCloudFiles.clear();
+      const files = Array.isArray(contents) ? contents : [];
+      files.forEach(f => {
+        if (f.type === 'file') {
+          existingCloudFiles.set(f.name, f);
+        }
+      });
+      renderCloudTable(files);
+      document.getElementById('cloudSyncTime').textContent = `Last Cloud Check: ${new Date().toLocaleTimeString()}`;
+    } catch(err) {
+      log(`Could not load strata list from GitHub: ${err.message}`, 'warn');
+    }
+  }
+
+  function renderCloudTable(files) {
+    const tbody = document.getElementById('cloudTableBody');
+    if (!files.length) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">No files found in strata/ folder on GitHub.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = files.map(f => {
+      const ext = f.name.split('.').pop().toLowerCase();
+      const sizeKb = Math.max(1, Math.round((f.size || 0) / 1024)) + ' KB';
+      const rawUrl = `https://raw.githubusercontent.com/${document.getElementById('ghOwner').value.trim()}/${document.getElementById('ghRepo').value.trim()}/main/strata/${encodeURIComponent(f.name)}`;
+      return `
+        <tr>
+          <td>
+            <div style="font-weight:700;color:var(--text-main);">${f.name}</div>
+          </td>
+          <td><span class="badge-tag" style="background:#1e293b;color:var(--accent);border:1px solid var(--border);">${ext.toUpperCase()}</span></td>
+          <td style="color:var(--text-muted);">${sizeKb}</td>
+          <td>
+            <a href="${rawUrl}" target="_blank" style="color:var(--accent);text-decoration:none;font-family:monospace;font-size:11px;">
+              🔗 Open Raw URL
+            </a>
+          </td>
+          <td style="text-align:right;">
+            <button class="btn btn-sm btn-danger" onclick="deleteCloudFile('${f.name}', '${f.sha}')">🗑️ Delete</button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  async function deleteCloudFile(filename, sha) {
+    if (!confirm(`Are you sure you want to PERMANENTLY delete "${filename}" from GitHub Cloud?\n\nThis will trigger the robot to remove it from the catalog for all student devices.`)) {
+      return;
+    }
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+
+    log(`Deleting ${filename} from GitHub...`);
+    try {
+      await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodeURIComponent(filename)}`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+          message: `sync(strata): remove ${filename} via Cloud Publisher`,
+          sha: sha,
+          branch: 'main'
+        })
+      });
+      log(`✔ Deleted "${filename}" from GitHub successfully!`, 'success');
+      alert(`✔ "${filename}" has been deleted from GitHub.\n\nThe catalog rebuild action has been triggered automatically.`);
+      await fetchLiveStrataList();
+    } catch(err) {
+      log(`❌ Deletion failed: ${err.message}`, 'err');
+      alert(`Deletion failed: ${err.message}`);
+    }
+  }
+
+  async function triggerCatalogRebuild() {
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+    log(`Dispatching workflow: generate-catalog.yml ...`);
+    try {
+      await ghApi(`/repos/${owner}/${repo}/actions/workflows/generate-catalog.yml/dispatches`, {
+        method: 'POST',
+        body: JSON.stringify({ ref: 'main' })
+      });
+      log(`✔ Rebuild workflow triggered successfully! Check GitHub Actions.`, 'success');
+      alert('✔ Catalog rebuild triggered! The robot is rebuilding strata_catalog.json now.');
+    } catch(err) {
+      log(`⚠️ Workflow dispatch notice: ${err.message}`, 'warn');
+      alert(`Rebuild dispatch note: ${err.message}\n(Note: A push or commit to strata/ also triggers this automatically).`);
+    }
+  }
+
+  // File Staging Handlers
+  function handleDragOver(e) { e.preventDefault(); document.getElementById('dropzone').classList.add('dragover'); }
+  function handleDragLeave(e) { e.preventDefault(); document.getElementById('dropzone').classList.remove('dragover'); }
+  function handleDrop(e) {
+    e.preventDefault();
+    document.getElementById('dropzone').classList.remove('dragover');
+    if (e.dataTransfer.files) processSelectedFiles(e.dataTransfer.files);
+  }
+  function handleFileSelect(e) {
+    if (e.target.files) processSelectedFiles(e.target.files);
+  }
+
+  async function processSelectedFiles(fileList) {
+    for (const file of Array.from(fileList)) {
+      const ext = file.name.split('.').pop().toLowerCase();
+      if (!['json', 'psz', 'psr'].includes(ext)) {
+        alert(`Skipped "${file.name}": Only .json, .psz, and .psr files are supported.`);
+        continue;
+      }
+
+      // Check duplicate in staged
+      if (stagedFiles.some(f => f.name === file.name)) continue;
+
+      let meta = {
+        title: file.name.replace(/\.[^/.]+$/, "").replace(/_/g, " "),
+        category: 'SS 1',
+        tier: 'basic',
+        questionCount: 0,
+        bundleCount: 1
+      };
+
+      // Heuristic category detection
+      const up = file.name.toUpperCase();
+      if (up.includes('WAEC')) meta.category = 'WAEC';
+      else if (up.includes('JAMB')) meta.category = 'JAMB';
+      else if (up.includes('NECO')) meta.category = 'NECO';
+      else if (up.includes('JSS 3') || up.includes('JSS3')) meta.category = 'JSS 3';
+      else if (up.includes('JSS 2') || up.includes('JSS2')) meta.category = 'JSS 2';
+      else if (up.includes('JSS 1') || up.includes('JSS1')) meta.category = 'JSS 1';
+      else if (up.includes('SS 3') || up.includes('SS3')) meta.category = 'SS 3';
+      else if (up.includes('SS 2') || up.includes('SS2')) meta.category = 'SS 2';
+      else if (up.includes('SS 1') || up.includes('SS1')) meta.category = 'SS 1';
+
+      if (up.includes('PREMIUM') || up.includes('PAID') || up.includes('STAGE 2') || up.includes('STAGE 3')) {
+        meta.tier = 'premium';
+      }
+
+      // If JSON, parse lightweight metadata
+      if (ext === 'json') {
+        try {
+          const text = await file.text();
+          const json = JSON.parse(text);
+          const structural = json.structuralStrata || json;
+          if (structural.examCategory) meta.category = structural.examCategory;
+          if (structural.tier) meta.tier = structural.tier;
+          if (structural.bundles && Array.isArray(structural.bundles)) {
+            meta.bundleCount = structural.bundles.length;
+            meta.questionCount = structural.bundles.reduce((acc, b) => acc + (b.questions ? b.questions.length : 0), 0);
+          }
+        } catch(e) {}
+      }
+
+      stagedFiles.push({
+        file,
+        name: file.name,
+        size: file.size,
+        ext,
+        meta
+      });
+    }
+
+    renderStagedList();
+  }
+
+  function renderStagedList() {
+    const wrap = document.getElementById('stagedContainer');
+    const list = document.getElementById('stagedList');
+    const summary = document.getElementById('stagedSummary');
+
+    if (!stagedFiles.length) {
+      wrap.style.display = 'none';
+      list.innerHTML = '';
+      return;
+    }
+
+    wrap.style.display = 'block';
+    summary.textContent = `Staged Packages (${stagedFiles.length} file${stagedFiles.length > 1 ? 's' : ''})`;
+
+    list.innerHTML = stagedFiles.map((item, idx) => {
+      const sizeKb = Math.max(1, Math.round(item.size / 1024)) + ' KB';
+      const isExistingOnCloud = existingCloudFiles.has(item.name);
+      return `
+        <div class="staged-item">
+          <div class="staged-info">
+            <div class="staged-icon">${item.ext === 'json' ? '📄' : '🔐'}</div>
+            <div>
+              <div class="staged-name">
+                ${item.name}
+                ${isExistingOnCloud ? '<span class="badge-tag" style="background:#78350f;color:#fde047;border:1px solid #ca8a04;margin-left:6px;">⚠️ Exists Online (Will Update)</span>' : '<span class="badge-tag" style="background:#064e3b;color:#4ade80;border:1px solid #10b981;margin-left:6px;">✨ New Package</span>'}
+              </div>
+              <div class="staged-meta">
+                <span>Size: ${sizeKb}</span>
+                <span>&bull;</span>
+                <span>Category: <strong>${item.meta.category}</strong></span>
+                <span>&bull;</span>
+                <span>Tier: <strong style="color:${item.meta.tier === 'premium' ? '#fbbf24' : '#34d399'}">${item.meta.tier.toUpperCase()}</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="staged-controls">
+            <select style="width:105px;padding:5px 8px;font-size:11px;" onchange="updateStagedCategory(${idx}, this.value)">
+              <option value="SS 1" ${item.meta.category === 'SS 1' ? 'selected' : ''}>SS 1</option>
+              <option value="SS 2" ${item.meta.category === 'SS 2' ? 'selected' : ''}>SS 2</option>
+              <option value="SS 3" ${item.meta.category === 'SS 3' ? 'selected' : ''}>SS 3</option>
+              <option value="WAEC" ${item.meta.category === 'WAEC' ? 'selected' : ''}>WAEC</option>
+              <option value="JAMB" ${item.meta.category === 'JAMB' ? 'selected' : ''}>JAMB</option>
+              <option value="NECO" ${item.meta.category === 'NECO' ? 'selected' : ''}>NECO</option>
+              <option value="JSS 1" ${item.meta.category === 'JSS 1' ? 'selected' : ''}>JSS 1</option>
+              <option value="JSS 2" ${item.meta.category === 'JSS 2' ? 'selected' : ''}>JSS 2</option>
+              <option value="JSS 3" ${item.meta.category === 'JSS 3' ? 'selected' : ''}>JSS 3</option>
+              <option value="BASIC 6" ${item.meta.category === 'BASIC 6' ? 'selected' : ''}>BASIC 6</option>
+              <option value="BASIC 5" ${item.meta.category === 'BASIC 5' ? 'selected' : ''}>BASIC 5</option>
+            </select>
+
+            <button class="btn btn-sm ${item.meta.tier === 'premium' ? 'btn-warning' : 'btn-outline'}" onclick="toggleStagedTier(${idx})">
+              ${item.meta.tier === 'premium' ? '👑 Premium' : '⭐ Basic'}
+            </button>
+
+            <button class="btn btn-sm btn-danger" onclick="removeStaged(${idx})">✕</button>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function updateStagedCategory(idx, cat) {
+    if (stagedFiles[idx]) stagedFiles[idx].meta.category = cat;
+  }
+
+  function toggleStagedTier(idx) {
+    if (stagedFiles[idx]) {
+      stagedFiles[idx].meta.tier = stagedFiles[idx].meta.tier === 'premium' ? 'basic' : 'premium';
+      renderStagedList();
+    }
+  }
+
+  function removeStaged(idx) {
+    stagedFiles.splice(idx, 1);
+    renderStagedList();
+  }
+
+  function clearStaged() {
+    stagedFiles = [];
+    renderStagedList();
+  }
+
+  // Convert File to Base64
+  function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const result = reader.result;
+        // Strip data:*;base64, prefix
+        const base64 = result.split(',')[1];
+        resolve(base64);
+      };
+      reader.onerror = error => reject(error);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // Push Staged to GitHub
+  async function pushStagedToGitHub() {
+    const token = document.getElementById('ghToken').value.trim();
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+    const commitMsg = document.getElementById('commitMsg').value.trim() || 'sync: publish strata packages';
+
+    if (!token) {
+      alert('Please enter your GitHub Personal Access Token in Step 1.');
+      return;
+    }
+    if (!stagedFiles.length) {
+      alert('No files are staged for upload.');
+      return;
+    }
+
+    const btnPush = document.getElementById('btnPush');
+    const pWrap = document.getElementById('pushProgressWrap');
+    const pBar = document.getElementById('pushProgressBar');
+
+    btnPush.disabled = true;
+    pWrap.style.display = 'block';
+    pBar.style.width = '10%';
+
+    log(`🚀 Starting cloud upload for ${stagedFiles.length} file(s)...`);
+
+    let uploaded = 0;
+    try {
+      // First ensure we have the latest remote file SHAs
+      await fetchLiveStrataList();
+
+      for (let i = 0; i < stagedFiles.length; i++) {
+        const item = stagedFiles[i];
+        log(`[${i+1}/${stagedFiles.length}] Encoding and uploading ${item.name}...`);
+
+        const base64 = await fileToBase64(item.file);
+        const existing = existingCloudFiles.get(item.name);
+        const sha = existing ? existing.sha : undefined;
+
+        const body = {
+          message: `${commitMsg} [${item.name}]`,
+          content: base64,
+          branch: 'main'
+        };
+        if (sha) body.sha = sha;
+
+        await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodeURIComponent(item.name)}`, {
+          method: 'PUT',
+          body: JSON.stringify(body)
+        });
+
+        uploaded++;
+        const pct = Math.round((uploaded / stagedFiles.length) * 90);
+        pBar.style.width = `${pct}%`;
+        log(`✔ Successfully uploaded ${item.name} to strata/${item.name}`, 'success');
+      }
+
+      pBar.style.width = '100%';
+      log(`🎉 ALL ${uploaded} FILE(S) COMMITTED TO GITHUB!`, 'success');
+      log(`🤖 GitHub Actions is now auto-generating the strata_catalog.json manifest...`, 'success');
+
+      alert(`🎉 SUCCESS!\n\nAll ${uploaded} Strata package(s) have been committed directly to GitHub.\n\n• The GitHub robot is now updating strata_catalog.json.\n• All PrepStation Pro mobile and desktop apps can now download them in the Strata Cloud Hub!`);
+
+      stagedFiles = [];
+      renderStagedList();
+      await fetchLiveStrataList();
+    } catch(err) {
+      log(`❌ Push aborted: ${err.message}`, 'err');
+      alert(`Push error: ${err.message}`);
+    } finally {
+      btnPush.disabled = false;
+      setTimeout(() => { pWrap.style.display = 'none'; pBar.style.width = '0%'; }, 2500);
+    }
+  }
+</script>
+
+</body>
+</html>
