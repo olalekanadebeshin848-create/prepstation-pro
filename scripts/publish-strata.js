@@ -24,9 +24,9 @@ console.log('\n🚀 [PrepStation Cloud Sync] Publishing your strata changes...')
 // 1. Pull latest cloud updates first
 console.log('📥 1. Pulling latest cloud updates from GitHub...');
 try {
-  run('git pull --rebase origin main');
+  run('git pull --rebase --autostash origin main');
 } catch (e) {
-  console.log('Already up to date with cloud.');
+  console.log('ℹ️ Pull note:', e.message || 'Already up to date with cloud.');
 }
 
 // 2. Stage ALL additions, updates, AND REMOVALS in the strata/ folder

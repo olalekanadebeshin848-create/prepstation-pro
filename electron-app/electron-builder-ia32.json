@@ -1,9 +1,37 @@
 {
+  "appId": "com.delmamatiagroups.prepstationpro.desktop",
+  "productName": "PrepStation Pro",
   "electronDist": "electron-dist-ia32",
+  "files": [
+    "main/**/*",
+    "web/**/*",
+    "package.json"
+  ],
+  "directories": {
+    "output": "release"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      "portable"
+    ],
+    "icon": "build/icon.ico"
+  },
   "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "build/icon.ico",
+    "uninstallerIcon": "build/icon.ico",
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
     "artifactName": "${productName} Setup ${version} (32-bit).${ext}"
   },
   "portable": {
     "artifactName": "${productName} Portable ${version} (32-bit).${ext}"
-  }
+  },
+  "asar": true,
+  "asarUnpack": [
+    "**/node_modules/sql.js/dist/sql-wasm.wasm"
+  ]
 }
+
