@@ -283,8 +283,14 @@
   // State
   let stagedFiles = [];
   let existingCloudFiles = new Map(); // filename -> { sha, size, download_url }
+  window.currentCloudList = [];
 
   const CONFIG_KEY = 'prepstation_cloud_publisher_config';
+
+  // RFC 3986 strict URI encoder (strictly encodes characters like '!', '(', ')', '*', and single quotes)
+  function strictEncode(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, c => '%' + c.charCodeAt(0).toString(16).toUpperCase());
+  }
 
   window.addEventListener('DOMContentLoaded', () => {
     loadConfig();
@@ -371,8 +377,8 @@
     a.innerHTML = `<div class="alert alert-${type === 'ok' ? 'success' : type === 'err' ? 'danger' : 'info'}">${msg}</div>`;
   }
 
-  // GitHub API Fetcher
-  async function ghApi(endpoint, options = {}) {
+  // Robust GitHub API Fetcher with JSON content-type and backoff retries for transient 500s
+  async function ghApi(endpoint, options = {}, retries = 2) {
     const token = document.getElementById('ghToken').value.trim();
     if (!token) throw new Error('GitHub Personal Access Token is required.');
     const headers = {
@@ -381,14 +387,38 @@
       'X-GitHub-Api-Version': '2022-11-28',
       ...(options.headers || {})
     };
-    const res = await fetch(`https://api.github.com${endpoint}`, {
-      ...options,
-      headers
-    });
-    const data = await res.json().catch(() => ({}));
+
+    // Guarantee Content-Type: application/json whenever sending a request body
+    if (options.body && !headers['Content-Type']) {
+      headers['Content-Type'] = 'application/json';
+    }
+
+    let res, text, data = {};
+    try {
+      res = await fetch(`https://api.github.com${endpoint}`, {
+        ...options,
+        headers
+      });
+      text = await res.text();
+      try { data = JSON.parse(text); } catch (e) {}
+    } catch (netErr) {
+      if (retries > 0) {
+        log(`Network glitch, retrying in 1.5s...`, 'warn');
+        await new Promise(r => setTimeout(r, 1500));
+        return ghApi(endpoint, options, retries - 1);
+      }
+      throw netErr;
+    }
+
     if (!res.ok) {
-      const err = data.message || `GitHub HTTP ${res.status}`;
-      throw new Error(err);
+      // Retry transient server errors (GitHub ref locks or temporary 500s)
+      if ([500, 502, 503, 504].includes(res.status) && retries > 0) {
+        log(`⚠️ GitHub returned HTTP ${res.status}. Automatic retry in 2 seconds...`, 'warn');
+        await new Promise(r => setTimeout(r, 2000));
+        return ghApi(endpoint, options, retries - 1);
+      }
+      const errMsg = data.message || (text && text.length < 200 ? text : `GitHub HTTP ${res.status}`);
+      throw new Error(errMsg);
     }
     return data;
   }
@@ -445,15 +475,19 @@
   }
 
   function renderCloudTable(files) {
+    window.currentCloudList = files;
     const tbody = document.getElementById('cloudTableBody');
     if (!files.length) {
       tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">No files found in strata/ folder on GitHub.</td></tr>';
       return;
     }
-    tbody.innerHTML = files.map(f => {
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+
+    tbody.innerHTML = files.map((f, idx) => {
       const ext = f.name.split('.').pop().toLowerCase();
       const sizeKb = Math.max(1, Math.round((f.size || 0) / 1024)) + ' KB';
-      const rawUrl = `https://raw.githubusercontent.com/${document.getElementById('ghOwner').value.trim()}/${document.getElementById('ghRepo').value.trim()}/main/strata/${encodeURIComponent(f.name)}`;
+      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/strata/${strictEncode(f.name)}`;
       return `
         <tr>
           <td>
@@ -467,36 +501,54 @@
             </a>
           </td>
           <td style="text-align:right;">
-            <button class="btn btn-sm btn-danger" onclick="deleteCloudFile('${f.name}', '${f.sha}')">🗑️ Delete</button>
+            <button class="btn btn-sm btn-danger" onclick="handleCloudDelete(${idx})">🗑️ Delete</button>
           </td>
         </tr>
       `;
     }).join('');
   }
 
-  async function deleteCloudFile(filename, sha) {
-    if (!confirm(`Are you sure you want to PERMANENTLY delete "${filename}" from GitHub Cloud?\n\nThis will trigger the robot to remove it from the catalog for all student devices.`)) {
+  async function handleCloudDelete(idx) {
+    const file = window.currentCloudList && window.currentCloudList[idx];
+    if (!file) return;
+
+    if (!confirm(`Are you sure you want to PERMANENTLY delete "${file.name}" from GitHub Cloud?\n\nThis will trigger the robot to update strata_catalog.json for all student devices.`)) {
       return;
     }
+
     const owner = document.getElementById('ghOwner').value.trim();
     const repo = document.getElementById('ghRepo').value.trim();
 
-    log(`Deleting ${filename} from GitHub...`);
+    log(`Initiating deletion of "${file.name}"...`);
+
     try {
-      await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodeURIComponent(filename)}`, {
+      // Step 1: Always retrieve the fresh SHA right now from GitHub to prevent ref-lock conflicts
+      log(`Fetching latest remote SHA for "${file.name}"...`);
+      let freshSha = file.sha;
+      try {
+        const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}?ref=main`);
+        if (liveInfo && liveInfo.sha) freshSha = liveInfo.sha;
+      } catch (shaErr) {
+        log(`Note on SHA lookup: ${shaErr.message}. Using cached SHA.`, 'warn');
+      }
+
+      // Step 2: Send DELETE request with strictly-encoded filename and explicit Content-Type
+      log(`Sending DELETE request to GitHub for strata/${file.name}...`);
+      await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}`, {
         method: 'DELETE',
         body: JSON.stringify({
-          message: `sync(strata): remove ${filename} via Cloud Publisher`,
-          sha: sha,
+          message: `sync(strata): remove ${file.name} via Cloud Publisher`,
+          sha: freshSha,
           branch: 'main'
         })
       });
-      log(`✔ Deleted "${filename}" from GitHub successfully!`, 'success');
-      alert(`✔ "${filename}" has been deleted from GitHub.\n\nThe catalog rebuild action has been triggered automatically.`);
+
+      log(`✔ Deleted "${file.name}" from GitHub successfully!`, 'success');
+      alert(`✔ "${file.name}" has been deleted from GitHub.\n\nThe GitHub robot is now updating strata_catalog.json automatically.`);
       await fetchLiveStrataList();
     } catch(err) {
       log(`❌ Deletion failed: ${err.message}`, 'err');
-      alert(`Deletion failed: ${err.message}`);
+      alert(`Deletion failed: ${err.message}\n\nPlease verify that your token has 'repo' or 'contents:write' scope and try again.`);
     }
   }
 
@@ -513,7 +565,7 @@
       alert('✔ Catalog rebuild triggered! The robot is rebuilding strata_catalog.json now.');
     } catch(err) {
       log(`⚠️ Workflow dispatch notice: ${err.message}`, 'warn');
-      alert(`Rebuild dispatch note: ${err.message}\n(Note: A push or commit to strata/ also triggers this automatically).`);
+      alert(`Rebuild dispatch note: ${err.message}\n(Note: Any push or file change in strata/ also triggers this automatically).`);
     }
   }
 
@@ -724,8 +776,13 @@
         log(`[${i+1}/${stagedFiles.length}] Encoding and uploading ${item.name}...`);
 
         const base64 = await fileToBase64(item.file);
-        const existing = existingCloudFiles.get(item.name);
-        const sha = existing ? existing.sha : undefined;
+        
+        // Fetch fresh remote SHA if updating
+        let sha = undefined;
+        try {
+          const fresh = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(item.name)}?ref=main`);
+          if (fresh && fresh.sha) sha = fresh.sha;
+        } catch(e) {}
 
         const body = {
           message: `${commitMsg} [${item.name}]`,
@@ -734,7 +791,7 @@
         };
         if (sha) body.sha = sha;
 
-        await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodeURIComponent(item.name)}`, {
+        await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(item.name)}`, {
           method: 'PUT',
           body: JSON.stringify(body)
         });
@@ -766,3 +823,4 @@
 
 </body>
 </html>
+
