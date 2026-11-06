@@ -1,0 +1,3103 @@
+{
+  "strataMetadata": {
+    "label": "Algebraic Processes and Word Problems — Complete Practice Set",
+    "renderedAt": "2026-11-06",
+    "edition": "ED1",
+    "gradeLevel": "JSS 2",
+    "term": "First Term"
+  },
+  "structuralStrata": {
+    "examCategory": "JSS 2",
+    "strataId": "strata_1",
+    "displayName": "ALGEBRAIC PROCESSES & WORD PROBLEMS",
+    "durationMinutes": 45,
+    "tier": "basic",
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_1",
+        "name": "Bundle 1 — Mathematical Symbols, Generalization & Substitution",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 45,
+        "subjects": [
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 50,
+            "questions": [
+              {
+                "id": "b1_mat_001",
+                "text": "Which mathematical symbol is universally used to mean 'is approximately equal to'?",
+                "options": [
+                  "=",
+                  "≠",
+                  "≅",
+                  ">"
+                ],
+                "answer": "≅",
+                "explanation": "The symbol '≅' (or '≈') denotes 'is approximately equal to'. For example, 22/7 ≅ 3.142."
+              },
+              {
+                "id": "b1_mat_002",
+                "text": "The statement 'negative ten is less than two' is written mathematically as:",
+                "options": [
+                  "-10 > 2",
+                  "-10 < 2",
+                  "-10 = 2",
+                  "-10 ≠ 2"
+                ],
+                "answer": "-10 < 2",
+                "explanation": "The symbol '<' means 'is less than'. Therefore, -10 is less than 2 is written as -10 < 2."
+              },
+              {
+                "id": "b1_mat_003",
+                "text": "Which of the following symbols denotes 'is not equal to'?",
+                "options": [
+                  ">",
+                  "<",
+                  "≠",
+                  "="
+                ],
+                "answer": "≠",
+                "explanation": "The symbol '≠' means 'is not equal to'. For example, 2 ≠ 3."
+              },
+              {
+                "id": "b1_mat_004",
+                "text": "The algebraic statement 'y lies between 8 and 12' is correctly expressed as:",
+                "options": [
+                  "8 < y < 12",
+                  "8 > y > 12",
+                  "y = 8 or 12",
+                  "8 ≤ y = 12"
+                ],
+                "answer": "8 < y < 12",
+                "explanation": "'y lies between 8 and 12' means y is strictly greater than 8 and strictly less than 12, written as 8 < y < 12."
+              },
+              {
+                "id": "b1_mat_005",
+                "text": "Translate into symbols: 'Twice y equals fourteen, therefore y equals seven.'",
+                "options": [
+                  "y + 2 = 14 ∴ y = 7",
+                  "2y = 14 ∴ y = 7",
+                  "y² = 14 ∴ y = 7",
+                  "2 + y = 14 ∴ y = 7"
+                ],
+                "answer": "2y = 14 ∴ y = 7",
+                "explanation": "'Twice y' means 2 × y = 2y. The symbol '∴' means therefore. So 2y = 14 ∴ y = 7."
+              },
+              {
+                "id": "b1_mat_006",
+                "text": "What is the verbal interpretation of the inequality statement '18 > 10'?",
+                "options": [
+                  "Eighteen is less than ten",
+                  "Eighteen is equal to ten",
+                  "Eighteen is greater than ten",
+                  "Eighteen is approximately ten"
+                ],
+                "answer": "Eighteen is greater than ten",
+                "explanation": "The symbol '>' means 'is greater than'. Hence, 18 > 10 means eighteen is greater than ten."
+              },
+              {
+                "id": "b1_mat_007",
+                "text": "Which of the following represents 'x is greater than or equal to -4'?",
+                "options": [
+                  "x > -4",
+                  "x < -4",
+                  "x ≥ -4",
+                  "x ≤ -4"
+                ],
+                "answer": "x ≥ -4",
+                "explanation": "'Greater than or equal to' is written using the symbol '≥', so x ≥ -4."
+              },
+              {
+                "id": "b1_mat_008",
+                "text": "If 22/7 ≅ 3.142, what relationship between 22/7 and 3.142 is expressed?",
+                "options": [
+                  "They are strictly equal",
+                  "22/7 is approximately equal to 3.142",
+                  "22/7 is less than 3.142",
+                  "22/7 is not related to 3.142"
+                ],
+                "answer": "22/7 is approximately equal to 3.142",
+                "explanation": "The symbol ≅ indicates an approximation."
+              },
+              {
+                "id": "b1_mat_009",
+                "text": "Write using symbols: 'M is equal to 8 and N is not equal to 5.'",
+                "options": [
+                  "M = 8 and N = 5",
+                  "M = 8 and N ≠ 5",
+                  "M ≠ 8 and N = 5",
+                  "M < 8 and N > 5"
+                ],
+                "answer": "M = 8 and N ≠ 5",
+                "explanation": "'=' means is equal to, and '≠' means not equal to."
+              },
+              {
+                "id": "b1_mat_010",
+                "text": "The statement 'k is at most 15' means:",
+                "options": [
+                  "k > 15",
+                  "k < 15",
+                  "k ≥ 15",
+                  "k ≤ 15"
+                ],
+                "answer": "k ≤ 15",
+                "explanation": "'At most 15' means k cannot exceed 15; it can be equal to 15 or less than 15 (k ≤ 15)."
+              },
+              {
+                "id": "b1_mat_011",
+                "text": "The statement 'p is at least 20' is represented algebraically as:",
+                "options": [
+                  "p ≤ 20",
+                  "p ≥ 20",
+                  "p < 20",
+                  "p = 20"
+                ],
+                "answer": "p ≥ 20",
+                "explanation": "'At least 20' means 20 or more, which is written as p ≥ 20."
+              },
+              {
+                "id": "b1_mat_012",
+                "text": "What is the operational meaning of the algebraic term '2x'?",
+                "options": [
+                  "Add 2 to x",
+                  "Multiply x by 2",
+                  "Divide x by 2",
+                  "Square x"
+                ],
+                "answer": "Multiply x by 2",
+                "explanation": "In algebra, 2x means 2 multiplied by x."
+              },
+              {
+                "id": "b1_mat_013",
+                "text": "What is the operational meaning of '2 + x'?",
+                "options": [
+                  "Multiply 2 by x",
+                  "Add two to x",
+                  "Divide 2 by x",
+                  "Subtract x from 2"
+                ],
+                "answer": "Add two to x",
+                "explanation": "2 + x represents the addition of two and x."
+              },
+              {
+                "id": "b1_mat_014",
+                "text": "What is the operational meaning of 'x / 2'?",
+                "options": [
+                  "Multiply x by 2",
+                  "Subtract 2 from x",
+                  "Divide x by 2",
+                  "Square x"
+                ],
+                "answer": "Divide x by 2",
+                "explanation": "x / 2 indicates dividing x into 2 equal parts."
+              },
+              {
+                "id": "b1_mat_015",
+                "text": "What is the operational meaning of 'x - 5'?",
+                "options": [
+                  "Subtract five from x",
+                  "Subtract x from five",
+                  "Multiply x by 5",
+                  "Divide x by 5"
+                ],
+                "answer": "Subtract five from x",
+                "explanation": "x - 5 means taking 5 away from x."
+              },
+              {
+                "id": "b1_mat_016",
+                "text": "What is the operational meaning of 'x²'?",
+                "options": [
+                  "Multiply x by 2",
+                  "Add x to 2",
+                  "Square x (multiply x by x)",
+                  "Divide x by 2"
+                ],
+                "answer": "Square x (multiply x by x)",
+                "explanation": "x² means x raised to power 2, i.e., multiplying x by itself."
+              },
+              {
+                "id": "b1_mat_017",
+                "text": "What is the meaning of the algebraic expression 'x + yz'?",
+                "options": [
+                  "Multiply x by y and add z",
+                  "Add x, y, and z",
+                  "Multiply y by z and add the result to x",
+                  "Multiply x by y and z"
+                ],
+                "answer": "Multiply y by z and add the result to x",
+                "explanation": "By order of operations, yz means y multiplied by z, which is then added to x."
+              },
+              {
+                "id": "b1_mat_018",
+                "text": "If x = 8, what is the value of 2x?",
+                "options": [
+                  "10",
+                  "16",
+                  "64",
+                  "4"
+                ],
+                "answer": "16",
+                "explanation": "2x = 2 × 8 = 16."
+              },
+              {
+                "id": "b1_mat_019",
+                "text": "If x = 8, find the value of 2 + x.",
+                "options": [
+                  "16",
+                  "10",
+                  "6",
+                  "4"
+                ],
+                "answer": "10",
+                "explanation": "2 + x = 2 + 8 = 10."
+              },
+              {
+                "id": "b1_mat_020",
+                "text": "If x = 8, find the value of x / 2.",
+                "options": [
+                  "16",
+                  "10",
+                  "4",
+                  "6"
+                ],
+                "answer": "4",
+                "explanation": "x / 2 = 8 / 2 = 4."
+              },
+              {
+                "id": "b1_mat_021",
+                "text": "If x = 8, find the value of x - 5.",
+                "options": [
+                  "3",
+                  "13",
+                  "-3",
+                  "40"
+                ],
+                "answer": "3",
+                "explanation": "x - 5 = 8 - 5 = 3."
+              },
+              {
+                "id": "b1_mat_022",
+                "text": "If x = 8, find the value of x².",
+                "options": [
+                  "16",
+                  "64",
+                  "88",
+                  "32"
+                ],
+                "answer": "64",
+                "explanation": "x² = 8 × 8 = 64."
+              },
+              {
+                "id": "b1_mat_023",
+                "text": "If x = 8, y = 3, and z = 9, evaluate x + yz.",
+                "options": [
+                  "35",
+                  "99",
+                  "27",
+                  "81"
+                ],
+                "answer": "35",
+                "explanation": "x + yz = 8 + (3 × 9) = 8 + 27 = 35."
+              },
+              {
+                "id": "b1_mat_024",
+                "text": "If a = 5, b = -3, and c = 2, find the value of 2a + b - c.",
+                "options": [
+                  "5",
+                  "9",
+                  "11",
+                  "3"
+                ],
+                "answer": "5",
+                "explanation": "2(5) + (-3) - 2 = 10 - 3 - 2 = 5."
+              },
+              {
+                "id": "b1_mat_025",
+                "text": "If a = 5, find the value of 5a - 8.",
+                "options": [
+                  "17",
+                  "33",
+                  "25",
+                  "13"
+                ],
+                "answer": "17",
+                "explanation": "5(5) - 8 = 25 - 8 = 17."
+              },
+              {
+                "id": "b1_mat_026",
+                "text": "If a = 5, b = -3, and c = 2, find the value of 8ac - 2b.",
+                "options": [
+                  "74",
+                  "86",
+                  "-74",
+                  "80"
+                ],
+                "answer": "86",
+                "explanation": "8ac - 2b = 8(5)(2) - 2(-3) = 80 - (-6) = 80 + 6 = 86."
+              },
+              {
+                "id": "b1_mat_027",
+                "text": "If a = 5, b = -3, and c = 2, evaluate (a + b + c) / 4.",
+                "options": [
+                  "1",
+                  "2",
+                  "4",
+                  "0"
+                ],
+                "answer": "1",
+                "explanation": "(a + b + c) / 4 = (5 + (-3) + 2) / 4 = 4 / 4 = 1."
+              },
+              {
+                "id": "b1_mat_028",
+                "text": "If p = 4 and q = -2, evaluate 3p - 4q.",
+                "options": [
+                  "4",
+                  "20",
+                  "-4",
+                  "12"
+                ],
+                "answer": "20",
+                "explanation": "3(4) - 4(-2) = 12 - (-8) = 12 + 8 = 20."
+              },
+              {
+                "id": "b1_mat_029",
+                "text": "If m = -6 and n = 5, find the value of m² + n².",
+                "options": [
+                  "-11",
+                  "61",
+                  "11",
+                  "-61"
+                ],
+                "answer": "61",
+                "explanation": "(-6)² + (5)² = 36 + 25 = 61."
+              },
+              {
+                "id": "b1_mat_030",
+                "text": "Given x = 3 and y = -4, evaluate (x + y)².",
+                "options": [
+                  "1",
+                  "49",
+                  "-1",
+                  "25"
+                ],
+                "answer": "1",
+                "explanation": "(3 + (-4))² = (-1)² = 1."
+              },
+              {
+                "id": "b1_mat_031",
+                "text": "Evaluate x² - y² when x = 5 and y = 3.",
+                "options": [
+                  "16",
+                  "4",
+                  "34",
+                  "8"
+                ],
+                "answer": "16",
+                "explanation": "5² - 3² = 25 - 9 = 16."
+              },
+              {
+                "id": "b1_mat_032",
+                "text": "If u = 10, a = 4, and t = 3, find the value of v from the equation v = u + at.",
+                "options": [
+                  "42",
+                  "22",
+                  "17",
+                  "70"
+                ],
+                "answer": "22",
+                "explanation": "v = 10 + (4 × 3) = 10 + 12 = 22."
+              },
+              {
+                "id": "b1_mat_033",
+                "text": "Find the value of s = ut + ½at² when u = 0, a = 10, and t = 4.",
+                "options": [
+                  "40",
+                  "80",
+                  "160",
+                  "20"
+                ],
+                "answer": "80",
+                "explanation": "s = 0(4) + ½(10)(4²) = 0 + 5(16) = 80."
+              },
+              {
+                "id": "b1_mat_034",
+                "text": "If x = 12 and y = 4, evaluate (x - y) / (x + y) in simplest form.",
+                "options": [
+                  "1/2",
+                  "2",
+                  "3/4",
+                  "1/4"
+                ],
+                "answer": "1/2",
+                "explanation": "(12 - 4) / (12 + 4) = 8 / 16 = 1/2."
+              },
+              {
+                "id": "b1_mat_035",
+                "text": "If a = 6, b = 2, and c = -1, evaluate a / b - 3c.",
+                "options": [
+                  "0",
+                  "6",
+                  "-6",
+                  "9"
+                ],
+                "answer": "6",
+                "explanation": "(6 / 2) - 3(-1) = 3 - (-3) = 3 + 3 = 6."
+              },
+              {
+                "id": "b1_mat_036",
+                "text": "If k = -5, what is the value of 2k³?",
+                "options": [
+                  "-250",
+                  "250",
+                  "-1000",
+                  "-150"
+                ],
+                "answer": "-250",
+                "explanation": "k³ = (-5)³ = -125. 2k³ = 2 × (-125) = -250."
+              },
+              {
+                "id": "b1_mat_037",
+                "text": "Find the value of 2πr when r = 7 and π = 22/7.",
+                "options": [
+                  "44",
+                  "22",
+                  "88",
+                  "154"
+                ],
+                "answer": "44",
+                "explanation": "2 × (22/7) × 7 = 44."
+              },
+              {
+                "id": "b1_mat_038",
+                "text": "Given that x = -2, find the value of 4 - 3x.",
+                "options": [
+                  "-2",
+                  "10",
+                  "-10",
+                  "2"
+                ],
+                "answer": "10",
+                "explanation": "4 - 3(-2) = 4 - (-6) = 4 + 6 = 10."
+              },
+              {
+                "id": "b1_mat_039",
+                "text": "Find the value of √(a² + b²) when a = 6 and b = 8.",
+                "options": [
+                  "14",
+                  "10",
+                  "100",
+                  "12"
+                ],
+                "answer": "10",
+                "explanation": "√(6² + 8²) = √(36 + 64) = √100 = 10."
+              },
+              {
+                "id": "b1_mat_040",
+                "text": "If p = 3 and q = -1, evaluate (2p - q) / (p + 2q).",
+                "options": [
+                  "7",
+                  "5",
+                  "1",
+                  "-7"
+                ],
+                "answer": "7",
+                "explanation": "[2(3) - (-1)] / [3 + 2(-1)] = (6 + 1) / (3 - 2) = 7 / 1 = 7."
+              },
+              {
+                "id": "b1_mat_041",
+                "text": "Evaluate 3x² - 2x + 5 when x = -2.",
+                "options": [
+                  "13",
+                  "21",
+                  "-3",
+                  "17"
+                ],
+                "answer": "21",
+                "explanation": "3(-2)² - 2(-2) + 5 = 3(4) + 4 + 5 = 12 + 4 + 5 = 21."
+              },
+              {
+                "id": "b1_mat_042",
+                "text": "If m = 1/2 and n = 3/4, find the value of 4m + 8n.",
+                "options": [
+                  "6",
+                  "8",
+                  "10",
+                  "7"
+                ],
+                "answer": "8",
+                "explanation": "4(1/2) + 8(3/4) = 2 + 6 = 8."
+              },
+              {
+                "id": "b1_mat_043",
+                "text": "Evaluate (a + b)(a - b) when a = 7 and b = 4.",
+                "options": [
+                  "33",
+                  "11",
+                  "28",
+                  "65"
+                ],
+                "answer": "33",
+                "explanation": "(7 + 4)(7 - 4) = 11 × 3 = 33 (or 7² - 4² = 49 - 16 = 33)."
+              },
+              {
+                "id": "b1_mat_044",
+                "text": "If x = 5, what is the value of 100 / (2x)?",
+                "options": [
+                  "10",
+                  "25",
+                  "50",
+                  "20"
+                ],
+                "answer": "10",
+                "explanation": "2x = 2(5) = 10. 100 / 10 = 10."
+              },
+              {
+                "id": "b1_mat_045",
+                "text": "Given that y = -3, find the value of y³ - y².",
+                "options": [
+                  "-36",
+                  "-18",
+                  "18",
+                  "36"
+                ],
+                "answer": "-36",
+                "explanation": "y³ = (-3)³ = -27; y² = (-3)² = 9. So -27 - 9 = -36."
+              },
+              {
+                "id": "b1_mat_046",
+                "text": "If a = 2, b = 3, and c = 4, evaluate abc / (a + b + c).",
+                "options": [
+                  "8/3",
+                  "24",
+                  "9/24",
+                  "3"
+                ],
+                "answer": "8/3",
+                "explanation": "abc = 2 × 3 × 4 = 24. a + b + c = 2 + 3 + 4 = 9. 24 / 9 = 8/3."
+              },
+              {
+                "id": "b1_mat_047",
+                "text": "Evaluate 5(2x - 1) when x = 3.",
+                "options": [
+                  "25",
+                  "15",
+                  "29",
+                  "35"
+                ],
+                "answer": "25",
+                "explanation": "5(2(3) - 1) = 5(6 - 1) = 5(5) = 25."
+              },
+              {
+                "id": "b1_mat_048",
+                "text": "If z = -4, find the value of |z| + z².",
+                "options": [
+                  "20",
+                  "12",
+                  "-12",
+                  "-20"
+                ],
+                "answer": "20",
+                "explanation": "|-4| = 4; (-4)² = 16. 4 + 16 = 20."
+              },
+              {
+                "id": "b1_mat_049",
+                "text": "Evaluate (x + 3)(x - 2) when x = 5.",
+                "options": [
+                  "24",
+                  "15",
+                  "16",
+                  "28"
+                ],
+                "answer": "24",
+                "explanation": "(5 + 3)(5 - 2) = 8 × 3 = 24."
+              },
+              {
+                "id": "b1_mat_050",
+                "text": "If a = 10, b = 2, and c = 5, find the value of a / (b + c) + (a + b) / c.",
+                "options": [
+                  "134/35",
+                  "26/7",
+                  "3",
+                  "38/7"
+                ],
+                "answer": "134/35",
+                "explanation": "a / (b + c) = 10 / 7. (a + b) / c = 12 / 5. (10/7) + (12/5) = (50 + 84) / 35 = 134/35."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b2",
+        "strataId": "strata_1",
+        "name": "Bundle 2 — Like & Unlike Terms, Simplification & Bracket Expansion",
+        "requiredScore": 75,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 45,
+        "subjects": [
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 50,
+            "questions": [
+              {
+                "id": "b2_mat_001",
+                "text": "Which of the following pairs represents like terms?",
+                "options": [
+                  "3xy and -7xy",
+                  "4x² and 4x",
+                  "5a and 5ab",
+                  "2x²y and 2xy²"
+                ],
+                "answer": "3xy and -7xy",
+                "explanation": "Like terms have the exact same variables raised to the exact same powers. 3xy and -7xy both have variables xy."
+              },
+              {
+                "id": "b2_mat_002",
+                "text": "Which of the following is an unlike term to 5ab²?",
+                "options": [
+                  "-2ab²",
+                  "7ab²",
+                  "5a²b",
+                  "ab²"
+                ],
+                "answer": "5a²b",
+                "explanation": "5a²b has 'a' squared and 'b' to the first power, whereas 5ab² has 'a' to the first power and 'b' squared, making them unlike terms."
+              },
+              {
+                "id": "b2_mat_003",
+                "text": "Simplify by collecting like terms: 4x + 7y - 2x + 3y",
+                "options": [
+                  "2x + 10y",
+                  "6x + 10y",
+                  "2x + 4y",
+                  "6x + 4y"
+                ],
+                "answer": "2x + 10y",
+                "explanation": "(4x - 2x) + (7y + 3y) = 2x + 10y."
+              },
+              {
+                "id": "b2_mat_004",
+                "text": "Simplify: 9a - 3b - 5a + 8b",
+                "options": [
+                  "4a + 5b",
+                  "14a + 5b",
+                  "4a - 11b",
+                  "14a - 11b"
+                ],
+                "answer": "4a + 5b",
+                "explanation": "(9a - 5a) + (-3b + 8b) = 4a + 5b."
+              },
+              {
+                "id": "b2_mat_005",
+                "text": "Simplify: 6m² + 4m - 2m² + 3m",
+                "options": [
+                  "4m² + 7m",
+                  "8m² + 7m",
+                  "4m² + m",
+                  "8m² + m"
+                ],
+                "answer": "4m² + 7m",
+                "explanation": "(6m² - 2m²) + (4m + 3m) = 4m² + 7m."
+              },
+              {
+                "id": "b2_mat_006",
+                "text": "Combine like terms: 12p - 5q + 3 - 4p + 2q - 7",
+                "options": [
+                  "8p - 3q - 4",
+                  "8p - 7q - 4",
+                  "16p - 3q + 10",
+                  "8p + 3q - 4"
+                ],
+                "answer": "8p - 3q - 4",
+                "explanation": "(12p - 4p) + (-5q + 2q) + (3 - 7) = 8p - 3q - 4."
+              },
+              {
+                "id": "b2_mat_007",
+                "text": "Simplify: 5xy + 3x - 2xy + 4x",
+                "options": [
+                  "3xy + 7x",
+                  "7xy + 7x",
+                  "3xy - x",
+                  "10x²y"
+                ],
+                "answer": "3xy + 7x",
+                "explanation": "(5xy - 2xy) + (3x + 4x) = 3xy + 7x."
+              },
+              {
+                "id": "b2_mat_008",
+                "text": "Simplify: -8k + 3m - 2k - 7m",
+                "options": [
+                  "-10k - 4m",
+                  "-6k - 4m",
+                  "-10k + 10m",
+                  "-6k + 4m"
+                ],
+                "answer": "-10k - 4m",
+                "explanation": "(-8k - 2k) + (3m - 7m) = -10k - 4m."
+              },
+              {
+                "id": "b2_mat_009",
+                "text": "A fence is made of 3 hurdles of length x meters each, 5 hurdles of length y meters each, and 2 hurdles of length z meters each. What is the total length?",
+                "options": [
+                  "(3x + 5y + 2z) m",
+                  "(3x + 5y - 2z) m",
+                  "10xyz m",
+                  "(x + y + z) m"
+                ],
+                "answer": "(3x + 5y + 2z) m",
+                "explanation": "Total length = 3(x) + 5(y) + 2(z) = (3x + 5y + 2z) meters."
+              },
+              {
+                "id": "b2_mat_010",
+                "text": "A tourist walked at x km/h for 3 hours on the first day and at x km/h for y hours on the second day. What is the total distance walked?",
+                "options": [
+                  "(3x + xy) km",
+                  "(3 + xy) km",
+                  "3xy km",
+                  "(3x + y) km"
+                ],
+                "answer": "(3x + xy) km",
+                "explanation": "Distance on day 1 = 3x km. Distance on day 2 = x × y = xy km. Total = (3x + xy) km."
+              },
+              {
+                "id": "b2_mat_011",
+                "text": "A family eats 'a' loaves of bread a day. How many loaves are needed for 'm' days?",
+                "options": [
+                  "am loaves",
+                  "a + m loaves",
+                  "a/m loaves",
+                  "m/a loaves"
+                ],
+                "answer": "am loaves",
+                "explanation": "Daily consumption = a. For m days, total loaves = a × m = am loaves."
+              },
+              {
+                "id": "b2_mat_012",
+                "text": "A family eats 'a' loaves of bread a day. How many loaves will be needed for 'k' weeks?",
+                "options": [
+                  "7ak loaves",
+                  "ak loaves",
+                  "7a/k loaves",
+                  "7 + ak loaves"
+                ],
+                "answer": "7ak loaves",
+                "explanation": "There are 7 days in a week, so k weeks = 7k days. Total loaves = a × 7k = 7ak loaves."
+              },
+              {
+                "id": "b2_mat_013",
+                "text": "If a family consumes 'a' loaves of bread per day, how many days will 'p' loaves last?",
+                "options": [
+                  "p / a days",
+                  "pa days",
+                  "p - a days",
+                  "a / p days"
+                ],
+                "answer": "p / a days",
+                "explanation": "Number of days = (Total loaves) / (Daily consumption) = p / a days."
+              },
+              {
+                "id": "b2_mat_014",
+                "text": "A trader buys x pens at ₦50 each and y exercise books at ₦120 each. What is the total cost in Naira?",
+                "options": [
+                  "₦(50x + 120y)",
+                  "₦(170xy)",
+                  "₦(120x + 50y)",
+                  "₦(50 + 120 + x + y)"
+                ],
+                "answer": "₦(50x + 120y)",
+                "explanation": "Cost of pens = 50x. Cost of books = 120y. Total = ₦(50x + 120y)."
+              },
+              {
+                "id": "b2_mat_015",
+                "text": "A farmer has x goats and y chickens. What is the total number of legs on the animals?",
+                "options": [
+                  "4x + 2y",
+                  "2x + 4y",
+                  "4x + 4y",
+                  "6(x + y)"
+                ],
+                "answer": "4x + 2y",
+                "explanation": "Goats have 4 legs each (4x) and chickens have 2 legs each (2y). Total legs = 4x + 2y."
+              },
+              {
+                "id": "b2_mat_016",
+                "text": "Simplify by expanding the bracket: 3(x + 4)",
+                "options": [
+                  "3x + 12",
+                  "3x + 4",
+                  "3x + 7",
+                  "x + 12"
+                ],
+                "answer": "3x + 12",
+                "explanation": "3(x + 4) = 3(x) + 3(4) = 3x + 12."
+              },
+              {
+                "id": "b2_mat_017",
+                "text": "Expand: -4(2a - 3)",
+                "options": [
+                  "-8a + 12",
+                  "-8a - 12",
+                  "-8a - 3",
+                  "8a + 12"
+                ],
+                "answer": "-8a + 12",
+                "explanation": "-4(2a) - (-4)(3) = -8a + 12."
+              },
+              {
+                "id": "b2_mat_018",
+                "text": "Expand and simplify: 2(3x + 5) + 4(x - 2)",
+                "options": [
+                  "10x + 2",
+                  "10x + 18",
+                  "10x - 2",
+                  "14x + 2"
+                ],
+                "answer": "10x + 2",
+                "explanation": "6x + 10 + 4x - 8 = (6x + 4x) + (10 - 8) = 10x + 2."
+              },
+              {
+                "id": "b2_mat_019",
+                "text": "Expand and simplify: 5(2y - 1) - 3(y - 4)",
+                "options": [
+                  "7y + 7",
+                  "7y - 17",
+                  "7y - 7",
+                  "13y + 7"
+                ],
+                "answer": "7y + 7",
+                "explanation": "10y - 5 - 3y + 12 = 7y + 7."
+              },
+              {
+                "id": "b2_mat_020",
+                "text": "Remove brackets and simplify: -(4m - 7n)",
+                "options": [
+                  "-4m + 7n",
+                  "-4m - 7n",
+                  "4m - 7n",
+                  "4m + 7n"
+                ],
+                "answer": "-4m + 7n",
+                "explanation": "Distributing the negative sign: -4m + 7n."
+              },
+              {
+                "id": "b2_mat_021",
+                "text": "Simplify: 3a(b + 2c) - 2b(a - c)",
+                "options": [
+                  "ab + 6ac + 2bc",
+                  "5ab + 6ac - 2bc",
+                  "ab + 6ac - 2bc",
+                  "5ab + 4ac"
+                ],
+                "answer": "ab + 6ac + 2bc",
+                "explanation": "3ab + 6ac - 2ab + 2bc = ab + 6ac + 2bc."
+              },
+              {
+                "id": "b2_mat_022",
+                "text": "Expand and simplify: 4(x + 3) - 2(3x - 5)",
+                "options": [
+                  "-2x + 22",
+                  "-2x + 2",
+                  "10x + 22",
+                  "-2x - 2"
+                ],
+                "answer": "-2x + 22",
+                "explanation": "4x + 12 - 6x + 10 = -2x + 22."
+              },
+              {
+                "id": "b2_mat_023",
+                "text": "Simplify: 7(p - 2q) + 3(2p + 5q)",
+                "options": [
+                  "13p + q",
+                  "13p - q",
+                  "10p + 3q",
+                  "13p - 29q"
+                ],
+                "answer": "13p + q",
+                "explanation": "7p - 14q + 6p + 15q = 13p + q."
+              },
+              {
+                "id": "b2_mat_024",
+                "text": "Find the perimeter of a rectangle with length (2x + 3) cm and width (x + 1) cm.",
+                "options": [
+                  "(6x + 8) cm",
+                  "(3x + 4) cm",
+                  "(2x² + 5x + 3) cm",
+                  "(4x + 6) cm"
+                ],
+                "answer": "(6x + 8) cm",
+                "explanation": "Perimeter = 2(length + width) = 2[(2x + 3) + (x + 1)] = 2[3x + 4] = (6x + 8) cm."
+              },
+              {
+                "id": "b2_mat_025",
+                "text": "The three sides of a triangle are (x + 2) cm, (2x - 1) cm, and (3x + 4) cm. What is its perimeter?",
+                "options": [
+                  "(6x + 5) cm",
+                  "(6x + 7) cm",
+                  "(5x + 5) cm",
+                  "(6x - 5) cm"
+                ],
+                "answer": "(6x + 5) cm",
+                "explanation": "Perimeter = (x + 2) + (2x - 1) + (3x + 4) = (x + 2x + 3x) + (2 - 1 + 4) = (6x + 5) cm."
+              },
+              {
+                "id": "b2_mat_026",
+                "text": "The perimeter of an equilateral triangle is (9x - 12) cm. What is the length of one side?",
+                "options": [
+                  "(3x - 4) cm",
+                  "(3x - 12) cm",
+                  "(27x - 36) cm",
+                  "(3x + 4) cm"
+                ],
+                "answer": "(3x - 4) cm",
+                "explanation": "An equilateral triangle has 3 equal sides. Side = (9x - 12) / 3 = (3x - 4) cm."
+              },
+              {
+                "id": "b2_mat_027",
+                "text": "Expand: x(x + 5) + 3(x + 5)",
+                "options": [
+                  "x² + 8x + 15",
+                  "x² + 15",
+                  "x² + 5x + 15",
+                  "2x + 15"
+                ],
+                "answer": "x² + 8x + 15",
+                "explanation": "x² + 5x + 3x + 15 = x² + 8x + 15."
+              },
+              {
+                "id": "b2_mat_028",
+                "text": "Simplify: 2(a + b) + 3(a - b) - 4(a + 2b)",
+                "options": [
+                  "a - 9b",
+                  "a + 9b",
+                  "-a - 9b",
+                  "9a - b"
+                ],
+                "answer": "a - 9b",
+                "explanation": "2a + 2b + 3a - 3b - 4a - 8b = (2a + 3a - 4a) + (2b - 3b - 8b) = a - 9b."
+              },
+              {
+                "id": "b2_mat_029",
+                "text": "Simplify: 8k - (3k - 5)",
+                "options": [
+                  "5k + 5",
+                  "5k - 5",
+                  "11k - 5",
+                  "5k + 13"
+                ],
+                "answer": "5k + 5",
+                "explanation": "8k - 3k + 5 = 5k + 5."
+              },
+              {
+                "id": "b2_mat_030",
+                "text": "Expand: -2x(3x - 4y + 1)",
+                "options": [
+                  "-6x² + 8xy - 2x",
+                  "-6x² - 8xy - 2x",
+                  "-6x² + 8xy + 2x",
+                  "6x² - 8xy + 2x"
+                ],
+                "answer": "-6x² + 8xy - 2x",
+                "explanation": "(-2x)(3x) + (-2x)(-4y) + (-2x)(1) = -6x² + 8xy - 2x."
+              },
+              {
+                "id": "b2_mat_031",
+                "text": "A rectangular floor has length (3x + 2) meters and width 4 meters. What is the area of the floor?",
+                "options": [
+                  "(12x + 8) m²",
+                  "(3x + 6) m²",
+                  "(6x + 12) m²",
+                  "(12x + 2) m²"
+                ],
+                "answer": "(12x + 8) m²",
+                "explanation": "Area = length × width = 4(3x + 2) = (12x + 8) m²."
+              },
+              {
+                "id": "b2_mat_032",
+                "text": "Expand: (x + 3)(x + 4)",
+                "options": [
+                  "x² + 7x + 12",
+                  "x² + 12x + 7",
+                  "x² + 7x + 7",
+                  "2x + 12"
+                ],
+                "answer": "x² + 7x + 12",
+                "explanation": "x(x + 4) + 3(x + 4) = x² + 4x + 3x + 12 = x² + 7x + 12."
+              },
+              {
+                "id": "b2_mat_033",
+                "text": "Expand: (y - 5)(y + 2)",
+                "options": [
+                  "y² - 3y - 10",
+                  "y² + 3y - 10",
+                  "y² - 7y - 10",
+                  "y² - 10"
+                ],
+                "answer": "y² - 3y - 10",
+                "explanation": "y² + 2y - 5y - 10 = y² - 3y - 10."
+              },
+              {
+                "id": "b2_mat_034",
+                "text": "Expand: (2x + 1)(x - 3)",
+                "options": [
+                  "2x² - 5x - 3",
+                  "2x² + 5x - 3",
+                  "2x² - 7x - 3",
+                  "2x² - 3"
+                ],
+                "answer": "2x² - 5x - 3",
+                "explanation": "2x² - 6x + x - 3 = 2x² - 5x - 3."
+              },
+              {
+                "id": "b2_mat_035",
+                "text": "Expand: (m - 4)²",
+                "options": [
+                  "m² - 8m + 16",
+                  "m² - 16",
+                  "m² + 8m + 16",
+                  "m² - 4m + 16"
+                ],
+                "answer": "m² - 8m + 16",
+                "explanation": "(m - 4)(m - 4) = m² - 4m - 4m + 16 = m² - 8m + 16."
+              },
+              {
+                "id": "b2_mat_036",
+                "text": "Simplify: 6(2x - 3y) - 4(3x - 2y)",
+                "options": [
+                  "-10y",
+                  "10y",
+                  "24x - 10y",
+                  "-26y"
+                ],
+                "answer": "-10y",
+                "explanation": "12x - 18y - 12x + 8y = -10y."
+              },
+              {
+                "id": "b2_mat_037",
+                "text": "Subtract (3x - 5y) from (7x + 2y).",
+                "options": [
+                  "4x + 7y",
+                  "4x - 3y",
+                  "10x - 3y",
+                  "-4x - 7y"
+                ],
+                "answer": "4x + 7y",
+                "explanation": "(7x + 2y) - (3x - 5y) = 7x + 2y - 3x + 5y = 4x + 7y."
+              },
+              {
+                "id": "b2_mat_038",
+                "text": "What must be added to (2a + 3b) to obtain (5a - b)?",
+                "options": [
+                  "3a - 4b",
+                  "3a + 2b",
+                  "7a + 2b",
+                  "-3a + 4b"
+                ],
+                "answer": "3a - 4b",
+                "explanation": "(5a - b) - (2a + 3b) = 5a - b - 2a - 3b = 3a - 4b."
+              },
+              {
+                "id": "b2_mat_039",
+                "text": "A bus carries 'p' adults paying ₦200 each and 'q' children paying ₦100 each. What is the total fare collected?",
+                "options": [
+                  "₦(200p + 100q)",
+                  "₦(300pq)",
+                  "₦(100p + 200q)",
+                  "₦(200p - 100q)"
+                ],
+                "answer": "₦(200p + 100q)",
+                "explanation": "Adult fare = 200p, Child fare = 100q. Total = ₦(200p + 100q)."
+              },
+              {
+                "id": "b2_mat_040",
+                "text": "A boy is x years old. His sister is 4 years younger than him. What is the sum of their ages?",
+                "options": [
+                  "2x - 4 years",
+                  "2x + 4 years",
+                  "x - 4 years",
+                  "4x years"
+                ],
+                "answer": "2x - 4 years",
+                "explanation": "Boy = x, Sister = x - 4. Sum = x + (x - 4) = 2x - 4 years."
+              },
+              {
+                "id": "b2_mat_041",
+                "text": "A man earns ₦x per day for 5 days and ₦y per day for 2 days. What are his total earnings for the week?",
+                "options": [
+                  "₦(5x + 2y)",
+                  "₦(7xy)",
+                  "₦(2x + 5y)",
+                  "₦(5x - 2y)"
+                ],
+                "answer": "₦(5x + 2y)",
+                "explanation": "Total = 5(x) + 2(y) = ₦(5x + 2y)."
+              },
+              {
+                "id": "b2_mat_042",
+                "text": "Simplify: 15ab / (3b) where b ≠ 0",
+                "options": [
+                  "5a",
+                  "5b",
+                  "12a",
+                  "5ab"
+                ],
+                "answer": "5a",
+                "explanation": "(15/3) × (a) × (b/b) = 5a."
+              },
+              {
+                "id": "b2_mat_043",
+                "text": "Simplify: (8x²y) / (4xy) where x, y ≠ 0",
+                "options": [
+                  "2x",
+                  "2y",
+                  "2xy",
+                  "4x"
+                ],
+                "answer": "2x",
+                "explanation": "(8/4) × (x²/x) × (y/y) = 2x."
+              },
+              {
+                "id": "b2_mat_044",
+                "text": "Factorize completely: 6x + 9",
+                "options": [
+                  "3(2x + 3)",
+                  "3(2x + 9)",
+                  "6(x + 3)",
+                  "9(x + 1)"
+                ],
+                "answer": "3(2x + 3)",
+                "explanation": "The HCF of 6x and 9 is 3. Factoring gives 3(2x + 3)."
+              },
+              {
+                "id": "b2_mat_045",
+                "text": "Factorize completely: 4ab - 8a",
+                "options": [
+                  "4a(b - 2)",
+                  "4(ab - 2a)",
+                  "8a(b - 1)",
+                  "4a(b + 2)"
+                ],
+                "answer": "4a(b - 2)",
+                "explanation": "The HCF of 4ab and 8a is 4a. 4ab - 8a = 4a(b - 2)."
+              },
+              {
+                "id": "b2_mat_046",
+                "text": "Factorize completely: 5x² - 15x",
+                "options": [
+                  "5x(x - 3)",
+                  "5(x² - 3x)",
+                  "x(5x - 15)",
+                  "15x(x - 1)"
+                ],
+                "answer": "5x(x - 3)",
+                "explanation": "5x is the highest common factor. 5x² - 15x = 5x(x - 3)."
+              },
+              {
+                "id": "b2_mat_047",
+                "text": "Simplify: 3x² + 5x - x² + 2x - 7",
+                "options": [
+                  "2x² + 7x - 7",
+                  "4x² + 7x - 7",
+                  "2x² + 3x - 7",
+                  "2x² + 7x + 7"
+                ],
+                "answer": "2x² + 7x - 7",
+                "explanation": "(3x² - x²) + (5x + 2x) - 7 = 2x² + 7x - 7."
+              },
+              {
+                "id": "b2_mat_048",
+                "text": "If a tailor uses y meters of cloth for one shirt, how many meters are needed for (x + 2) shirts?",
+                "options": [
+                  "y(x + 2) meters",
+                  "(y + x + 2) meters",
+                  "(x + 2)/y meters",
+                  "2xy meters"
+                ],
+                "answer": "y(x + 2) meters",
+                "explanation": "Total meters = number of shirts × cloth per shirt = y(x + 2) meters."
+              },
+              {
+                "id": "b2_mat_049",
+                "text": "Expand and simplify: 3(x - 1) + 2(x + 2) - 5x",
+                "options": [
+                  "1",
+                  "0",
+                  "5x + 1",
+                  "-1"
+                ],
+                "answer": "1",
+                "explanation": "3x - 3 + 2x + 4 - 5x = (3x + 2x - 5x) + (-3 + 4) = 0 + 1 = 1."
+              },
+              {
+                "id": "b2_mat_050",
+                "text": "Simplify: 2[3x - (x - 4)]",
+                "options": [
+                  "4x + 8",
+                  "4x - 8",
+                  "8x + 8",
+                  "2x + 8"
+                ],
+                "answer": "4x + 8",
+                "explanation": "Inside the bracket: 3x - x + 4 = 2x + 4. Multiplying by 2: 2(2x + 4) = 4x + 8."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b3",
+        "strataId": "strata_1",
+        "name": "Bundle 3 — Word Problems: Sum, Difference, Product & Consecutive Numbers",
+        "requiredScore": 80,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 45,
+        "subjects": [
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 50,
+            "questions": [
+              {
+                "id": "b3_mat_001",
+                "text": "When 30 is added to a number, the result is -18. What is the number?",
+                "options": [
+                  "-48",
+                  "48",
+                  "-12",
+                  "12"
+                ],
+                "answer": "-48",
+                "explanation": "Let the number be x. x + 30 = -18 => x = -18 - 30 = -48."
+              },
+              {
+                "id": "b3_mat_002",
+                "text": "When 15 is subtracted from a number, the result is 32. Find the number.",
+                "options": [
+                  "47",
+                  "17",
+                  "-17",
+                  "-47"
+                ],
+                "answer": "47",
+                "explanation": "x - 15 = 32 => x = 32 + 15 = 47."
+              },
+              {
+                "id": "b3_mat_003",
+                "text": "The difference between a number and -5 is 20. If the number is positive, find the number.",
+                "options": [
+                  "15",
+                  "25",
+                  "-25",
+                  "10"
+                ],
+                "answer": "15",
+                "explanation": "x - (-5) = 20 => x + 5 = 20 => x = 15."
+              },
+              {
+                "id": "b3_mat_004",
+                "text": "The difference between a number and -5 is 20. If the number is less than -5, find the number.",
+                "options": [
+                  "-25",
+                  "-15",
+                  "15",
+                  "25"
+                ],
+                "answer": "-25",
+                "explanation": "-5 - x = 20 => -x = 25 => x = -25."
+              },
+              {
+                "id": "b3_mat_005",
+                "text": "The sum of two numbers is 85. If one of the numbers is 38, find the other number.",
+                "options": [
+                  "47",
+                  "57",
+                  "37",
+                  "43"
+                ],
+                "answer": "47",
+                "explanation": "85 - 38 = 47."
+              },
+              {
+                "id": "b3_mat_006",
+                "text": "The sum of three consecutive integers is 120. Find the smallest of the three numbers.",
+                "options": [
+                  "39",
+                  "40",
+                  "41",
+                  "38"
+                ],
+                "answer": "39",
+                "explanation": "Let the numbers be x, x+1, x+2. 3x + 3 = 120 => 3x = 117 => x = 39."
+              },
+              {
+                "id": "b3_mat_007",
+                "text": "The sum of three consecutive integers is 120. Find the largest of the three numbers.",
+                "options": [
+                  "41",
+                  "39",
+                  "40",
+                  "42"
+                ],
+                "answer": "41",
+                "explanation": "The integers are 39, 40, 41. The largest is 41."
+              },
+              {
+                "id": "b3_mat_008",
+                "text": "The sum of three consecutive integers is 138. Find the middle number.",
+                "options": [
+                  "46",
+                  "45",
+                  "47",
+                  "44"
+                ],
+                "answer": "46",
+                "explanation": "Let the numbers be n-1, n, n+1. Sum = 3n = 138 => n = 46. The middle number is 46."
+              },
+              {
+                "id": "b3_mat_009",
+                "text": "The sum of three consecutive integers is 72. What are the three integers?",
+                "options": [
+                  "23, 24, 25",
+                  "22, 24, 26",
+                  "24, 25, 26",
+                  "21, 22, 23"
+                ],
+                "answer": "23, 24, 25",
+                "explanation": "3n + 3 = 72 => 3n = 69 => n = 23. The numbers are 23, 24, and 25."
+              },
+              {
+                "id": "b3_mat_010",
+                "text": "The sum of four consecutive integers is 90. Find the smallest integer.",
+                "options": [
+                  "21",
+                  "22",
+                  "20",
+                  "23"
+                ],
+                "answer": "21",
+                "explanation": "x + (x+1) + (x+2) + (x+3) = 90 => 4x + 6 = 90 => 4x = 84 => x = 21."
+              },
+              {
+                "id": "b3_mat_011",
+                "text": "The sum of three consecutive odd numbers is 57. What is the largest of these numbers?",
+                "options": [
+                  "21",
+                  "19",
+                  "17",
+                  "23"
+                ],
+                "answer": "21",
+                "explanation": "Let numbers be n, n+2, n+4. 3n + 6 = 57 => 3n = 51 => n = 17. The numbers are 17, 19, 21. Largest = 21."
+              },
+              {
+                "id": "b3_mat_012",
+                "text": "The sum of three consecutive even numbers is 102. Find the smallest number.",
+                "options": [
+                  "32",
+                  "34",
+                  "36",
+                  "30"
+                ],
+                "answer": "32",
+                "explanation": "x + (x+2) + (x+4) = 102 => 3x + 6 = 102 => 3x = 96 => x = 32."
+              },
+              {
+                "id": "b3_mat_013",
+                "text": "The greatest of 5 consecutive even numbers is 2a. What is the sum of all five numbers?",
+                "options": [
+                  "10a - 20",
+                  "10a - 10",
+                  "10a + 20",
+                  "5a - 20"
+                ],
+                "answer": "10a - 20",
+                "explanation": "The numbers are 2a-8, 2a-6, 2a-4, 2a-2, 2a. Sum = 5(2a) - (8+6+4+2) = 10a - 20."
+              },
+              {
+                "id": "b3_mat_014",
+                "text": "The smallest of 4 consecutive odd numbers is 2k + 1. What is the sum of the four numbers?",
+                "options": [
+                  "8k + 16",
+                  "8k + 12",
+                  "8k + 4",
+                  "4k + 16"
+                ],
+                "answer": "8k + 16",
+                "explanation": "Numbers: (2k+1), (2k+3), (2k+5), (2k+7). Sum = 8k + 16."
+              },
+              {
+                "id": "b3_mat_015",
+                "text": "The angles of a triangle in degrees are 2x, (3x + 5), and 4(x + 10). What is the value of x?",
+                "options": [
+                  "15°",
+                  "20°",
+                  "10°",
+                  "25°"
+                ],
+                "answer": "15°",
+                "explanation": "2x + 3x + 5 + 4x + 40 = 180 => 9x + 45 = 180 => 9x = 135 => x = 15°."
+              },
+              {
+                "id": "b3_mat_016",
+                "text": "The angles of a triangle in degrees are 2x, (3x + 5), and 4(x + 10). Find the smallest angle.",
+                "options": [
+                  "30°",
+                  "50°",
+                  "100°",
+                  "15°"
+                ],
+                "answer": "30°",
+                "explanation": "For x = 15°: 2x = 30°, 3x + 5 = 50°, 4(x + 10) = 100°. The smallest angle is 30°."
+              },
+              {
+                "id": "b3_mat_017",
+                "text": "The angles of a triangle in degrees are 2x, (3x + 5), and 4(x + 10). Find the largest angle.",
+                "options": [
+                  "100°",
+                  "50°",
+                  "30°",
+                  "120°"
+                ],
+                "answer": "100°",
+                "explanation": "4(15 + 10) = 4(25) = 100°."
+              },
+              {
+                "id": "b3_mat_018",
+                "text": "The angles of a triangle are in the ratio 1:2:3 and are given by x, 2x, and 3x. Find x.",
+                "options": [
+                  "30°",
+                  "45°",
+                  "60°",
+                  "20°"
+                ],
+                "answer": "30°",
+                "explanation": "x + 2x + 3x = 180 => 6x = 180 => x = 30°."
+              },
+              {
+                "id": "b3_mat_019",
+                "text": "The angles of a triangle are (x + 10)°, (2x - 20)°, and (3x + 10)°. Find the value of x.",
+                "options": [
+                  "30°",
+                  "25°",
+                  "35°",
+                  "40°"
+                ],
+                "answer": "30°",
+                "explanation": "(x + 10) + (2x - 20) + (3x + 10) = 180 => 6x = 180 => x = 30°."
+              },
+              {
+                "id": "b3_mat_020",
+                "text": "Two angles are supplementary. One angle is 3x and the other is 2x + 20°. Find the value of x.",
+                "options": [
+                  "32°",
+                  "30°",
+                  "35°",
+                  "40°"
+                ],
+                "answer": "32°",
+                "explanation": "Supplementary angles sum to 180°. 3x + 2x + 20 = 180 => 5x = 160 => x = 32°."
+              },
+              {
+                "id": "b3_mat_021",
+                "text": "Two angles are complementary. If one angle is (x + 15)° and the other is (2x - 15)°, find x.",
+                "options": [
+                  "30°",
+                  "45°",
+                  "25°",
+                  "35°"
+                ],
+                "answer": "30°",
+                "explanation": "Complementary angles sum to 90°. (x + 15) + (2x - 15) = 90 => 3x = 90 => x = 30°."
+              },
+              {
+                "id": "b3_mat_022",
+                "text": "Find the product of 1 3/4, -0.8, and -2 1/2.",
+                "options": [
+                  "3.5",
+                  "-3.5",
+                  "2.8",
+                  "7.0"
+                ],
+                "answer": "3.5",
+                "explanation": "(7/4) × (-4/5) × (-5/2) = (7/4) × 2 = 7/2 = 3.5."
+              },
+              {
+                "id": "b3_mat_023",
+                "text": "What number must be multiplied by 25 to make 3/4?",
+                "options": [
+                  "0.03",
+                  "0.3",
+                  "3.0",
+                  "0.003"
+                ],
+                "answer": "0.03",
+                "explanation": "25x = 3/4 => x = 3 / (4 × 25) = 3 / 100 = 0.03."
+              },
+              {
+                "id": "b3_mat_024",
+                "text": "What number must be multiplied by 8 to give -56?",
+                "options": [
+                  "-7",
+                  "7",
+                  "-8",
+                  "8"
+                ],
+                "answer": "-7",
+                "explanation": "8x = -56 => x = -56 / 8 = -7."
+              },
+              {
+                "id": "b3_mat_025",
+                "text": "The product of three numbers is 3600. If two of the numbers are equal and the third number is 25, find the positive equal numbers.",
+                "options": [
+                  "12",
+                  "144",
+                  "10",
+                  "15"
+                ],
+                "answer": "12",
+                "explanation": "25 × x² = 3600 => x² = 3600 / 25 = 144 => x = √144 = 12."
+              },
+              {
+                "id": "b3_mat_026",
+                "text": "The product of two consecutive positive integers is 156. Find the smaller integer.",
+                "options": [
+                  "12",
+                  "13",
+                  "11",
+                  "14"
+                ],
+                "answer": "12",
+                "explanation": "n(n + 1) = 156 => n² + n - 156 = 0 => (n - 12)(n + 13) = 0 => n = 12."
+              },
+              {
+                "id": "b3_mat_027",
+                "text": "The product of a certain number and 6 is equal to the number added to 45. What is the number?",
+                "options": [
+                  "9",
+                  "8",
+                  "10",
+                  "7"
+                ],
+                "answer": "9",
+                "explanation": "6x = x + 45 => 5x = 45 => x = 9."
+              },
+              {
+                "id": "b3_mat_028",
+                "text": "Add the sum of 20 and 30.5 to the positive difference between 25 and 45.",
+                "options": [
+                  "70.5",
+                  "50.5",
+                  "90.5",
+                  "65.5"
+                ],
+                "answer": "70.5",
+                "explanation": "Sum = 20 + 30.5 = 50.5. Positive difference = 45 - 25 = 20. Total = 50.5 + 20 = 70.5."
+              },
+              {
+                "id": "b3_mat_029",
+                "text": "From the sum of -8 and 7, subtract the difference (15 - 24).",
+                "options": [
+                  "8",
+                  "-10",
+                  "-8",
+                  "10"
+                ],
+                "answer": "8",
+                "explanation": "Sum = -8 + 7 = -1. Difference = 15 - 24 = -9. Result = -1 - (-9) = -1 + 9 = 8."
+              },
+              {
+                "id": "b3_mat_030",
+                "text": "Find the product of 3 3/4 and 5/6 in mixed fraction form.",
+                "options": [
+                  "3 1/8",
+                  "2 1/8",
+                  "3 1/4",
+                  "4 1/2"
+                ],
+                "answer": "3 1/8",
+                "explanation": "3 3/4 = 15/4. (15/4) × (5/6) = (5/4) × (5/2) = 25/8 = 3 1/8."
+              },
+              {
+                "id": "b3_mat_031",
+                "text": "A number is doubled and then increased by 9. The result is 35. Find the number.",
+                "options": [
+                  "13",
+                  "12",
+                  "14",
+                  "15"
+                ],
+                "answer": "13",
+                "explanation": "2x + 9 = 35 => 2x = 26 => x = 13."
+              },
+              {
+                "id": "b3_mat_032",
+                "text": "When four times a number is diminished by 7, the result is 45. What is the number?",
+                "options": [
+                  "13",
+                  "11",
+                  "12",
+                  "14"
+                ],
+                "answer": "13",
+                "explanation": "4x - 7 = 45 => 4x = 52 => x = 13."
+              },
+              {
+                "id": "b3_mat_033",
+                "text": "Seven times a number is equal to 36 more than three times the number. Find the number.",
+                "options": [
+                  "9",
+                  "8",
+                  "12",
+                  "6"
+                ],
+                "answer": "9",
+                "explanation": "7x = 3x + 36 => 4x = 36 => x = 9."
+              },
+              {
+                "id": "b3_mat_034",
+                "text": "The sum of a number and twice itself is 75. What is the number?",
+                "options": [
+                  "25",
+                  "20",
+                  "30",
+                  "15"
+                ],
+                "answer": "25",
+                "explanation": "x + 2x = 75 => 3x = 75 => x = 25."
+              },
+              {
+                "id": "b3_mat_035",
+                "text": "If 12 is added to five times a number, the result is 72. Find the number.",
+                "options": [
+                  "12",
+                  "10",
+                  "14",
+                  "15"
+                ],
+                "answer": "12",
+                "explanation": "5x + 12 = 72 => 5x = 60 => x = 12."
+              },
+              {
+                "id": "b3_mat_036",
+                "text": "When 8 is subtracted from three times a number, the result is 31. Find the number.",
+                "options": [
+                  "13",
+                  "11",
+                  "14",
+                  "12"
+                ],
+                "answer": "13",
+                "explanation": "3x - 8 = 31 => 3x = 39 => x = 13."
+              },
+              {
+                "id": "b3_mat_037",
+                "text": "The sum of two numbers is 50. If one number is 6 more than the other, find the smaller number.",
+                "options": [
+                  "22",
+                  "28",
+                  "24",
+                  "26"
+                ],
+                "answer": "22",
+                "explanation": "x + (x + 6) = 50 => 2x + 6 = 50 => 2x = 44 => x = 22."
+              },
+              {
+                "id": "b3_mat_038",
+                "text": "A rope of length 84 meters is cut into two pieces such that one piece is 12 meters longer than the other. Find the length of the shorter piece.",
+                "options": [
+                  "36 m",
+                  "48 m",
+                  "42 m",
+                  "30 m"
+                ],
+                "answer": "36 m",
+                "explanation": "x + (x + 12) = 84 => 2x = 72 => x = 36 m."
+              },
+              {
+                "id": "b3_mat_039",
+                "text": "The difference between two numbers is 18. If their sum is 86, what is the larger number?",
+                "options": [
+                  "52",
+                  "34",
+                  "68",
+                  "48"
+                ],
+                "answer": "52",
+                "explanation": "x + y = 86 and x - y = 18. Adding equations: 2x = 104 => x = 52."
+              },
+              {
+                "id": "b3_mat_040",
+                "text": "Twice the sum of a number and 5 is equal to 36. What is the number?",
+                "options": [
+                  "13",
+                  "15",
+                  "18",
+                  "8"
+                ],
+                "answer": "13",
+                "explanation": "2(x + 5) = 36 => x + 5 = 18 => x = 13."
+              },
+              {
+                "id": "b3_mat_041",
+                "text": "Three times the difference between a number and 4 is 27. Find the number.",
+                "options": [
+                  "13",
+                  "11",
+                  "15",
+                  "9"
+                ],
+                "answer": "13",
+                "explanation": "3(x - 4) = 27 => x - 4 = 9 => x = 13."
+              },
+              {
+                "id": "b3_mat_042",
+                "text": "When 24 is added to three times a number, the result is 6 times the number. What is the number?",
+                "options": [
+                  "8",
+                  "6",
+                  "12",
+                  "4"
+                ],
+                "answer": "8",
+                "explanation": "3x + 24 = 6x => 3x = 24 => x = 8."
+              },
+              {
+                "id": "b3_mat_043",
+                "text": "A number exceeds 17 by as much as 45 exceeds the number. Find the number.",
+                "options": [
+                  "31",
+                  "28",
+                  "33",
+                  "29"
+                ],
+                "answer": "31",
+                "explanation": "x - 17 = 45 - x => 2x = 62 => x = 31."
+              },
+              {
+                "id": "b3_mat_044",
+                "text": "The sum of a number, twice the number, and three times the number is 108. Find the number.",
+                "options": [
+                  "18",
+                  "16",
+                  "20",
+                  "12"
+                ],
+                "answer": "18",
+                "explanation": "x + 2x + 3x = 108 => 6x = 108 => x = 18."
+              },
+              {
+                "id": "b3_mat_045",
+                "text": "If a number is subtracted from 100, the result is equal to four times the number. Find the number.",
+                "options": [
+                  "20",
+                  "25",
+                  "15",
+                  "30"
+                ],
+                "answer": "20",
+                "explanation": "100 - x = 4x => 5x = 100 => x = 20."
+              },
+              {
+                "id": "b3_mat_046",
+                "text": "Divide 60 into two parts such that one part is three times the other. What is the larger part?",
+                "options": [
+                  "45",
+                  "15",
+                  "30",
+                  "40"
+                ],
+                "answer": "45",
+                "explanation": "x + 3x = 60 => 4x = 60 => x = 15. The larger part is 3(15) = 45."
+              },
+              {
+                "id": "b3_mat_047",
+                "text": "The product of two numbers is 72. If one number is 9, what is the other number?",
+                "options": [
+                  "8",
+                  "6",
+                  "12",
+                  "7"
+                ],
+                "answer": "8",
+                "explanation": "9 × y = 72 => y = 72 / 9 = 8."
+              },
+              {
+                "id": "b3_mat_048",
+                "text": "When 50 is reduced by three times a number, the result is 14. What is the number?",
+                "options": [
+                  "12",
+                  "11",
+                  "13",
+                  "14"
+                ],
+                "answer": "12",
+                "explanation": "50 - 3x = 14 => 3x = 36 => x = 12."
+              },
+              {
+                "id": "b3_mat_049",
+                "text": "Find three consecutive integers whose sum is -33.",
+                "options": [
+                  "-12, -11, -10",
+                  "-13, -12, -11",
+                  "-11, -10, -9",
+                  "-14, -13, -12"
+                ],
+                "answer": "-12, -11, -10",
+                "explanation": "n + (n+1) + (n+2) = -33 => 3n + 3 = -33 => 3n = -36 => n = -12. Numbers: -12, -11, -10."
+              },
+              {
+                "id": "b3_mat_050",
+                "text": "The sum of two consecutive multiples of 5 is 75. Find the smaller multiple.",
+                "options": [
+                  "35",
+                  "40",
+                  "30",
+                  "25"
+                ],
+                "answer": "35",
+                "explanation": "5k + (5k + 5) = 75 => 10k = 70 => k = 7. Smaller multiple = 5(7) = 35."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b4",
+        "strataId": "strata_1",
+        "name": "Bundle 4 — Algebraic Fractions & Word Problems with Fractions",
+        "requiredScore": 85,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 45,
+        "subjects": [
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 50,
+            "questions": [
+              {
+                "id": "b4_mat_001",
+                "text": "Find three-fifths of the sum of 45 and -60.",
+                "options": [
+                  "-9",
+                  "9",
+                  "-15",
+                  "15"
+                ],
+                "answer": "-9",
+                "explanation": "3/5 × (45 - 60) = 3/5 × (-15) = 3 × (-3) = -9."
+              },
+              {
+                "id": "b4_mat_002",
+                "text": "Divide the difference between 25 and 10 by the product of 6 and 5.",
+                "options": [
+                  "0.5",
+                  "1.5",
+                  "2.0",
+                  "0.2"
+                ],
+                "answer": "0.5",
+                "explanation": "(25 - 10) / (6 × 5) = 15 / 30 = 0.5 (or 1/2)."
+              },
+              {
+                "id": "b4_mat_003",
+                "text": "Find one-quarter of the sum of (2 1/8 × 3 1/5) and (1 1/2 × 4/9).",
+                "options": [
+                  "1 13/15",
+                  "2 1/5",
+                  "1 1/4",
+                  "1 7/15"
+                ],
+                "answer": "1 13/15",
+                "explanation": "(17/8 × 16/5) = 34/5. (3/2 × 4/9) = 2/3. 34/5 + 2/3 = 112/15. One-quarter = 1/4 × 112/15 = 28/15 = 1 13/15."
+              },
+              {
+                "id": "b4_mat_004",
+                "text": "What is two-thirds of the difference between 50 and 14?",
+                "options": [
+                  "24",
+                  "18",
+                  "36",
+                  "12"
+                ],
+                "answer": "24",
+                "explanation": "50 - 14 = 36. 2/3 × 36 = 24."
+              },
+              {
+                "id": "b4_mat_005",
+                "text": "Find three-quarters of 84.",
+                "options": [
+                  "63",
+                  "56",
+                  "72",
+                  "48"
+                ],
+                "answer": "63",
+                "explanation": "3/4 × 84 = 3 × 21 = 63."
+              },
+              {
+                "id": "b4_mat_006",
+                "text": "Simplify the algebraic fraction: (12x) / 18",
+                "options": [
+                  "2x / 3",
+                  "3x / 2",
+                  "4x / 6",
+                  "2 / 3x"
+                ],
+                "answer": "2x / 3",
+                "explanation": "Dividing numerator and denominator by 6 gives 2x / 3."
+              },
+              {
+                "id": "b4_mat_007",
+                "text": "Simplify: (5a + 10) / 5",
+                "options": [
+                  "a + 2",
+                  "a + 10",
+                  "5a + 2",
+                  "a + 5"
+                ],
+                "answer": "a + 2",
+                "explanation": "5(a + 2) / 5 = a + 2."
+              },
+              {
+                "id": "b4_mat_008",
+                "text": "Simplify: (3x² + 6x) / (3x) for x ≠ 0",
+                "options": [
+                  "x + 2",
+                  "x² + 2",
+                  "3x + 2",
+                  "x + 6"
+                ],
+                "answer": "x + 2",
+                "explanation": "3x(x + 2) / (3x) = x + 2."
+              },
+              {
+                "id": "b4_mat_009",
+                "text": "Simplify: x/4 + x/2",
+                "options": [
+                  "3x / 4",
+                  "2x / 6",
+                  "x / 6",
+                  "2x / 4"
+                ],
+                "answer": "3x / 4",
+                "explanation": "x/4 + 2x/4 = 3x/4."
+              },
+              {
+                "id": "b4_mat_010",
+                "text": "Simplify: 2m/3 - m/6",
+                "options": [
+                  "m / 2",
+                  "m / 6",
+                  "3m / 6",
+                  "m / 3"
+                ],
+                "answer": "m / 2",
+                "explanation": "4m/6 - m/6 = 3m/6 = m/2."
+              },
+              {
+                "id": "b4_mat_011",
+                "text": "Express as a single fraction: a/2 + b/3",
+                "options": [
+                  "(3a + 2b) / 6",
+                  "(a + b) / 5",
+                  "(2a + 3b) / 6",
+                  "ab / 6"
+                ],
+                "answer": "(3a + 2b) / 6",
+                "explanation": "Common denominator is 6: 3a/6 + 2b/6 = (3a + 2b)/6."
+              },
+              {
+                "id": "b4_mat_012",
+                "text": "Simplify: (x + 1)/2 + (x - 1)/3",
+                "options": [
+                  "(5x + 1) / 6",
+                  "(5x - 1) / 6",
+                  "(2x) / 5",
+                  "(5x + 5) / 6"
+                ],
+                "answer": "(5x + 1) / 6",
+                "explanation": "[3(x + 1) + 2(x - 1)] / 6 = (3x + 3 + 2x - 2) / 6 = (5x + 1) / 6."
+              },
+              {
+                "id": "b4_mat_013",
+                "text": "Simplify: (3y - 2)/4 - (y + 1)/2",
+                "options": [
+                  "(y - 4) / 4",
+                  "(y - 3) / 4",
+                  "(y - 1) / 4",
+                  "(5y - 4) / 4"
+                ],
+                "answer": "(y - 4) / 4",
+                "explanation": "[3y - 2 - 2(y + 1)] / 4 = (3y - 2 - 2y - 2) / 4 = (y - 4) / 4."
+              },
+              {
+                "id": "b4_mat_014",
+                "text": "Solve for x: x / 3 = 7",
+                "options": [
+                  "x = 21",
+                  "x = 10",
+                  "x = 4",
+                  "x = 7/3"
+                ],
+                "answer": "x = 21",
+                "explanation": "Multiply both sides by 3: x = 7 × 3 = 21."
+              },
+              {
+                "id": "b4_mat_015",
+                "text": "Solve for x: x / 4 + x / 3 = 7",
+                "options": [
+                  "x = 12",
+                  "x = 14",
+                  "x = 24",
+                  "x = 7"
+                ],
+                "answer": "x = 12",
+                "explanation": "Multiply by 12: 3x + 4x = 84 => 7x = 84 => x = 12."
+              },
+              {
+                "id": "b4_mat_016",
+                "text": "Solve for y: 2y / 5 = 10",
+                "options": [
+                  "y = 25",
+                  "y = 20",
+                  "y = 4",
+                  "y = 50"
+                ],
+                "answer": "y = 25",
+                "explanation": "2y = 50 => y = 25."
+              },
+              {
+                "id": "b4_mat_017",
+                "text": "Solve: (x + 5) / 3 = 4",
+                "options": [
+                  "x = 7",
+                  "x = 12",
+                  "x = 9",
+                  "x = 17"
+                ],
+                "answer": "x = 7",
+                "explanation": "x + 5 = 12 => x = 12 - 5 = 7."
+              },
+              {
+                "id": "b4_mat_018",
+                "text": "Solve: (2x - 3) / 5 = 3",
+                "options": [
+                  "x = 9",
+                  "x = 6",
+                  "x = 12",
+                  "x = 15"
+                ],
+                "answer": "x = 9",
+                "explanation": "2x - 3 = 15 => 2x = 18 => x = 9."
+              },
+              {
+                "id": "b4_mat_019",
+                "text": "Solve: (3x + 1) / 4 = (x + 5) / 2",
+                "options": [
+                  "x = 9",
+                  "x = 7",
+                  "x = 11",
+                  "x = 5"
+                ],
+                "answer": "x = 9",
+                "explanation": "Multiply both sides by 4: 3x + 1 = 2(x + 5) => 3x + 1 = 2x + 10 => x = 9."
+              },
+              {
+                "id": "b4_mat_020",
+                "text": "When 3/5 of a number is added to 30, the result is equal to 20 added to the number. Find the number.",
+                "options": [
+                  "25",
+                  "20",
+                  "30",
+                  "15"
+                ],
+                "answer": "25",
+                "explanation": "3/5 x + 30 = x + 20 => 10 = x - 3/5 x => 2/5 x = 10 => x = 25."
+              },
+              {
+                "id": "b4_mat_021",
+                "text": "When the sum of 28 and a certain number is divided by 5, the result is equal to treble the original number. What is the number?",
+                "options": [
+                  "2",
+                  "4",
+                  "3",
+                  "5"
+                ],
+                "answer": "2",
+                "explanation": "(28 + x) / 5 = 3x => 28 + x = 15x => 14x = 28 => x = 2."
+              },
+              {
+                "id": "b4_mat_022",
+                "text": "One-third of a number is added to one-fifth of the number, giving 16. Find the number.",
+                "options": [
+                  "30",
+                  "24",
+                  "45",
+                  "60"
+                ],
+                "answer": "30",
+                "explanation": "x/3 + x/5 = 16 => 8x/15 = 16 => 8x = 240 => x = 30."
+              },
+              {
+                "id": "b4_mat_023",
+                "text": "A boy spends 1/3 of his pocket money on books and 1/4 on snacks. What fraction of his pocket money remains?",
+                "options": [
+                  "5/12",
+                  "7/12",
+                  "1/2",
+                  "1/6"
+                ],
+                "answer": "5/12",
+                "explanation": "Fraction spent = 1/3 + 1/4 = 7/12. Remaining = 1 - 7/12 = 5/12."
+              },
+              {
+                "id": "b4_mat_024",
+                "text": "A student spends 2/5 of his savings and has ₦3,600 left. What was his total savings?",
+                "options": [
+                  "₦6,000",
+                  "₦5,400",
+                  "₦7,200",
+                  "₦9,000"
+                ],
+                "answer": "₦6,000",
+                "explanation": "Remaining fraction = 3/5. (3/5)x = 3600 => x = (3600 × 5) / 3 = ₦6,000."
+              },
+              {
+                "id": "b4_mat_025",
+                "text": "If 3/8 of a class of 40 students are boys, how many girls are in the class?",
+                "options": [
+                  "25",
+                  "15",
+                  "20",
+                  "28"
+                ],
+                "answer": "25",
+                "explanation": "Fraction of girls = 5/8. Number of girls = 5/8 × 40 = 25."
+              },
+              {
+                "id": "b4_mat_026",
+                "text": "A water tank is 2/3 full. After 50 liters are used, it is 1/2 full. What is the capacity of the tank?",
+                "options": [
+                  "300 liters",
+                  "250 liters",
+                  "200 liters",
+                  "150 liters"
+                ],
+                "answer": "300 liters",
+                "explanation": "(2/3 - 1/2)C = 50 => (1/6)C = 50 => C = 300 liters."
+              },
+              {
+                "id": "b4_mat_027",
+                "text": "Two-fifths of a number exceeds one-third of the number by 4. Find the number.",
+                "options": [
+                  "60",
+                  "45",
+                  "30",
+                  "75"
+                ],
+                "answer": "60",
+                "explanation": "2/5 x - 1/3 x = 4 => (6 - 5)/15 x = 4 => x / 15 = 4 => x = 60."
+              },
+              {
+                "id": "b4_mat_028",
+                "text": "Half of a number added to three-quarters of the same number gives 25. What is the number?",
+                "options": [
+                  "20",
+                  "16",
+                  "24",
+                  "18"
+                ],
+                "answer": "20",
+                "explanation": "x/2 + 3x/4 = 25 => 5x/4 = 25 => x = 20."
+              },
+              {
+                "id": "b4_mat_029",
+                "text": "Solve for x: (x - 2) / 3 = (x + 4) / 5",
+                "options": [
+                  "x = 11",
+                  "x = 9",
+                  "x = 7",
+                  "x = 13"
+                ],
+                "answer": "x = 11",
+                "explanation": "5(x - 2) = 3(x + 4) => 5x - 10 = 3x + 12 => 2x = 22 => x = 11."
+              },
+              {
+                "id": "b4_mat_030",
+                "text": "Solve for k: 4 / k = 2 / 5",
+                "options": [
+                  "k = 10",
+                  "k = 8",
+                  "k = 20",
+                  "k = 5"
+                ],
+                "answer": "k = 10",
+                "explanation": "2k = 20 => k = 10."
+              },
+              {
+                "id": "b4_mat_031",
+                "text": "A wire 60 cm long is cut into two pieces. One piece is 2/3 the length of the other. Find the length of the shorter piece.",
+                "options": [
+                  "24 cm",
+                  "36 cm",
+                  "20 cm",
+                  "30 cm"
+                ],
+                "answer": "24 cm",
+                "explanation": "Let other piece be x. x + 2/3 x = 60 => 5/3 x = 60 => x = 36 cm. Shorter = 60 - 36 = 24 cm."
+              },
+              {
+                "id": "b4_mat_032",
+                "text": "If 3/4 of a number is 48, what is 1/2 of the same number?",
+                "options": [
+                  "32",
+                  "24",
+                  "36",
+                  "40"
+                ],
+                "answer": "32",
+                "explanation": "3/4 x = 48 => x = 64. 1/2 of 64 = 32."
+              },
+              {
+                "id": "b4_mat_033",
+                "text": "Subtract 2/3 of a number from 5/6 of the number. If the difference is 7, what is the number?",
+                "options": [
+                  "42",
+                  "36",
+                  "48",
+                  "35"
+                ],
+                "answer": "42",
+                "explanation": "5/6 x - 2/3 x = 7 => 1/6 x = 7 => x = 42."
+              },
+              {
+                "id": "b4_mat_034",
+                "text": "A farmer sold 3/7 of his cattle and was left with 48 cows. How many cows did he have originally?",
+                "options": [
+                  "84",
+                  "72",
+                  "96",
+                  "112"
+                ],
+                "answer": "84",
+                "explanation": "Remaining fraction = 4/7. 4/7 x = 48 => x = (48 × 7) / 4 = 84."
+              },
+              {
+                "id": "b4_mat_035",
+                "text": "Solve: 5 / (2x - 1) = 1",
+                "options": [
+                  "x = 3",
+                  "x = 2",
+                  "x = 4",
+                  "x = 1"
+                ],
+                "answer": "x = 3",
+                "explanation": "2x - 1 = 5 => 2x = 6 => x = 3."
+              },
+              {
+                "id": "b4_mat_036",
+                "text": "Simplify: (x / 2) × (4 / x) for x ≠ 0",
+                "options": [
+                  "2",
+                  "4",
+                  "2x",
+                  "x / 2"
+                ],
+                "answer": "2",
+                "explanation": "(4x) / (2x) = 2."
+              },
+              {
+                "id": "b4_mat_037",
+                "text": "Simplify: (3a / b) ÷ (6a / b²)",
+                "options": [
+                  "b / 2",
+                  "2 / b",
+                  "2b",
+                  "ab / 2"
+                ],
+                "answer": "b / 2",
+                "explanation": "(3a / b) × (b² / 6a) = (3ab²) / (6ab) = b / 2."
+              },
+              {
+                "id": "b4_mat_038",
+                "text": "A fruit seller sells 1/2 of his oranges in the morning and 1/3 of the remainder in the afternoon. If 20 oranges are left, how many did he have initially?",
+                "options": [
+                  "60",
+                  "80",
+                  "100",
+                  "50"
+                ],
+                "answer": "60",
+                "explanation": "Morning: sells 1/2, leaves 1/2. Afternoon: sells 1/3 of 1/2 = 1/6. Leaves 1/2 - 1/6 = 1/3. (1/3)x = 20 => x = 60."
+              },
+              {
+                "id": "b4_mat_039",
+                "text": "Find the number which when decreased by 1/4 of itself gives 45.",
+                "options": [
+                  "60",
+                  "56",
+                  "64",
+                  "52"
+                ],
+                "answer": "60",
+                "explanation": "x - 1/4 x = 45 => 3/4 x = 45 => x = (45 × 4) / 3 = 60."
+              },
+              {
+                "id": "b4_mat_040",
+                "text": "When 10 is added to 2/3 of a number, the result is 26. Find the number.",
+                "options": [
+                  "24",
+                  "27",
+                  "21",
+                  "30"
+                ],
+                "answer": "24",
+                "explanation": "2/3 x + 10 = 26 => 2/3 x = 16 => x = (16 × 3) / 2 = 24."
+              },
+              {
+                "id": "b4_mat_041",
+                "text": "Solve for x: (28 + x) / 5 = 3x",
+                "options": [
+                  "x = 2",
+                  "x = 3",
+                  "x = 1",
+                  "x = 4"
+                ],
+                "answer": "x = 2",
+                "explanation": "28 + x = 15x => 14x = 28 => x = 2."
+              },
+              {
+                "id": "b4_mat_042",
+                "text": "A man gives 1/5 of his wealth to his son, 3/10 to his daughter, and the remaining ₦2,500,000 to his wife. What was his total wealth?",
+                "options": [
+                  "₦5,000,000",
+                  "₦4,500,000",
+                  "₦6,000,000",
+                  "₦7,500,000"
+                ],
+                "answer": "₦5,000,000",
+                "explanation": "Fraction given = 1/5 + 3/10 = 5/10 = 1/2. Wife gets 1/2. Total = 2 × 2,500,000 = ₦5,000,000."
+              },
+              {
+                "id": "b4_mat_043",
+                "text": "Solve for x: x / 2 - x / 3 = 5",
+                "options": [
+                  "x = 30",
+                  "x = 25",
+                  "x = 20",
+                  "x = 15"
+                ],
+                "answer": "x = 30",
+                "explanation": "x / 6 = 5 => x = 30."
+              },
+              {
+                "id": "b4_mat_044",
+                "text": "Solve for x: (3x - 1) / 2 = 7",
+                "options": [
+                  "x = 5",
+                  "x = 4",
+                  "x = 6",
+                  "x = 7"
+                ],
+                "answer": "x = 5",
+                "explanation": "3x - 1 = 14 => 3x = 15 => x = 5."
+              },
+              {
+                "id": "b4_mat_045",
+                "text": "If 2/3 of a number plus 1/2 of the number equals 28, find the number.",
+                "options": [
+                  "24",
+                  "20",
+                  "28",
+                  "32"
+                ],
+                "answer": "24",
+                "explanation": "4/6 x + 3/6 x = 28 => 7/6 x = 28 => x = (28 × 6) / 7 = 24."
+              },
+              {
+                "id": "b4_mat_046",
+                "text": "A journey is 240 km. A driver covers 5/8 of the journey before stopping. How many kilometers are left?",
+                "options": [
+                  "90 km",
+                  "150 km",
+                  "80 km",
+                  "100 km"
+                ],
+                "answer": "90 km",
+                "explanation": "Fraction left = 3/8. Remaining = 3/8 × 240 = 90 km."
+              },
+              {
+                "id": "b4_mat_047",
+                "text": "Solve for p: p / 3 + 4 = 10",
+                "options": [
+                  "p = 18",
+                  "p = 14",
+                  "p = 21",
+                  "p = 12"
+                ],
+                "answer": "p = 18",
+                "explanation": "p / 3 = 6 => p = 18."
+              },
+              {
+                "id": "b4_mat_048",
+                "text": "Solve for m: (2m + 4) / 3 = m",
+                "options": [
+                  "m = 4",
+                  "m = 2",
+                  "m = 6",
+                  "m = 8"
+                ],
+                "answer": "m = 4",
+                "explanation": "2m + 4 = 3m => m = 4."
+              },
+              {
+                "id": "b4_mat_049",
+                "text": "A recipe requires 3/4 cup of sugar for one cake. How many cups of sugar are needed for 6 cakes?",
+                "options": [
+                  "4 1/2 cups",
+                  "4 cups",
+                  "5 cups",
+                  "3 1/2 cups"
+                ],
+                "answer": "4 1/2 cups",
+                "explanation": "6 × 3/4 = 18/4 = 4 1/2 cups."
+              },
+              {
+                "id": "b4_mat_050",
+                "text": "Solve for x: (x + 3) / 4 - (x - 2) / 3 = 1",
+                "options": [
+                  "x = 5",
+                  "x = -1",
+                  "x = 1",
+                  "x = -5"
+                ],
+                "answer": "x = 5",
+                "explanation": "Multiply by 12: 3(x + 3) - 4(x - 2) = 12 => 3x + 9 - 4x + 8 = 12 => -x + 17 = 12 => x = 5."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b5",
+        "strataId": "strata_1",
+        "name": "Bundle 5 — Linear Equations & Advanced Real-World Word Problems",
+        "requiredScore": 90,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 45,
+        "subjects": [
+          {
+            "subjectName": "Mathematics",
+            "totalQuestions": 50,
+            "questions": [
+              {
+                "id": "b5_mat_001",
+                "text": "Solve the linear equation: 5x - 7 = 3x + 9",
+                "options": [
+                  "x = 8",
+                  "x = 6",
+                  "x = 4",
+                  "x = 10"
+                ],
+                "answer": "x = 8",
+                "explanation": "5x - 3x = 9 + 7 => 2x = 16 => x = 8."
+              },
+              {
+                "id": "b5_mat_002",
+                "text": "Solve: 8x + 3 = 5x + 18",
+                "options": [
+                  "x = 5",
+                  "x = 6",
+                  "x = 7",
+                  "x = 4"
+                ],
+                "answer": "x = 5",
+                "explanation": "8x - 5x = 18 - 3 => 3x = 15 => x = 5."
+              },
+              {
+                "id": "b5_mat_003",
+                "text": "Solve: 4(x - 3) = 2(x + 5)",
+                "options": [
+                  "x = 11",
+                  "x = 9",
+                  "x = 8",
+                  "x = 12"
+                ],
+                "answer": "x = 11",
+                "explanation": "4x - 12 = 2x + 10 => 2x = 22 => x = 11."
+              },
+              {
+                "id": "b5_mat_004",
+                "text": "Solve: 3(2x + 1) - 5 = 4(x + 2)",
+                "options": [
+                  "x = 5",
+                  "x = 4",
+                  "x = 6",
+                  "x = 3"
+                ],
+                "answer": "x = 5",
+                "explanation": "6x + 3 - 5 = 4x + 8 => 6x - 2 = 4x + 8 => 2x = 10 => x = 5."
+              },
+              {
+                "id": "b5_mat_005",
+                "text": "Solve: 7 - 2(x - 4) = 3x - 5",
+                "options": [
+                  "x = 4",
+                  "x = 3",
+                  "x = 5",
+                  "x = 2"
+                ],
+                "answer": "x = 4",
+                "explanation": "7 - 2x + 8 = 3x - 5 => 15 - 2x = 3x - 5 => 5x = 20 => x = 4."
+              },
+              {
+                "id": "b5_mat_006",
+                "text": "A father is 4 times as old as his son. In 5 years' time, the sum of their ages will be 55 years. Find the son's present age.",
+                "options": [
+                  "9 years",
+                  "10 years",
+                  "8 years",
+                  "7 years"
+                ],
+                "answer": "9 years",
+                "explanation": "Let son = x, father = 4x. In 5 yrs: (x + 5) + (4x + 5) = 55 => 5x + 10 = 55 => 5x = 45 => x = 9 years."
+              },
+              {
+                "id": "b5_mat_007",
+                "text": "A father is 4 times as old as his son. In 5 years' time, the sum of their ages will be 55 years. Find the father's present age.",
+                "options": [
+                  "36 years",
+                  "40 years",
+                  "32 years",
+                  "45 years"
+                ],
+                "answer": "36 years",
+                "explanation": "Father's age = 4x = 4 × 9 = 36 years."
+              },
+              {
+                "id": "b5_mat_008",
+                "text": "A mother is 28 years older than her daughter. In 6 years, the mother will be three times as old as the daughter. Find the daughter's present age.",
+                "options": [
+                  "8 years",
+                  "10 years",
+                  "7 years",
+                  "9 years"
+                ],
+                "answer": "8 years",
+                "explanation": "Daughter = d, Mother = d + 28. (d + 28 + 6) = 3(d + 6) => d + 34 = 3d + 18 => 2d = 16 => d = 8 years."
+              },
+              {
+                "id": "b5_mat_009",
+                "text": "A man is 32 years older than his son. In 10 years, he will be twice as old as his son. Find the son's current age.",
+                "options": [
+                  "22 years",
+                  "20 years",
+                  "18 years",
+                  "24 years"
+                ],
+                "answer": "22 years",
+                "explanation": "Son = s, Man = s + 32. In 10 yrs: s + 42 = 2(s + 10) => s + 42 = 2s + 20 => s = 22 years."
+              },
+              {
+                "id": "b5_mat_010",
+                "text": "The sum of the present ages of a mother and her son is 60 years. Five years ago, the mother was 4 times as old as her son. Find the son's present age.",
+                "options": [
+                  "15 years",
+                  "12 years",
+                  "18 years",
+                  "10 years"
+                ],
+                "answer": "15 years",
+                "explanation": "Son = s, Mother = 60 - s. Five yrs ago: (55 - s) = 4(s - 5) => 55 - s = 4s - 20 => 5s = 75 => s = 15 years."
+              },
+              {
+                "id": "b5_mat_011",
+                "text": "The length of a rectangle is 5 cm more than its width. If the perimeter is 58 cm, find the width.",
+                "options": [
+                  "12 cm",
+                  "17 cm",
+                  "14 cm",
+                  "10 cm"
+                ],
+                "answer": "12 cm",
+                "explanation": "2(w + w + 5) = 58 => 4w + 10 = 58 => 4w = 48 => w = 12 cm."
+              },
+              {
+                "id": "b5_mat_012",
+                "text": "The length of a rectangle is 5 cm more than its width. If the perimeter is 58 cm, find the length.",
+                "options": [
+                  "17 cm",
+                  "12 cm",
+                  "19 cm",
+                  "20 cm"
+                ],
+                "answer": "17 cm",
+                "explanation": "Length = w + 5 = 12 + 5 = 17 cm."
+              },
+              {
+                "id": "b5_mat_013",
+                "text": "The length of a rectangular plot is twice its width. If the perimeter is 72 meters, find the length of the plot.",
+                "options": [
+                  "24 m",
+                  "12 m",
+                  "36 m",
+                  "18 m"
+                ],
+                "answer": "24 m",
+                "explanation": "2(2w + w) = 72 => 6w = 72 => w = 12 m. Length = 2(12) = 24 m."
+              },
+              {
+                "id": "b5_mat_014",
+                "text": "The perimeter of an isosceles triangle is 42 cm. If the two equal sides are each (2x + 1) cm and the base is x cm, find x.",
+                "options": [
+                  "8 cm",
+                  "7 cm",
+                  "9 cm",
+                  "10 cm"
+                ],
+                "answer": "8 cm",
+                "explanation": "(2x + 1) + (2x + 1) + x = 42 => 5x + 2 = 42 => 5x = 40 => x = 8 cm."
+              },
+              {
+                "id": "b5_mat_015",
+                "text": "In a right-angled triangle, one acute angle is 10° greater than the other. What is the measure of the smaller acute angle?",
+                "options": [
+                  "40°",
+                  "50°",
+                  "45°",
+                  "35°"
+                ],
+                "answer": "40°",
+                "explanation": "Acute angles sum to 90°. x + (x + 10) = 90 => 2x = 80 => x = 40°."
+              },
+              {
+                "id": "b5_mat_016",
+                "text": "A fruit vendor bought 50 apples and oranges altogether for ₦4,600. If an apple costs ₦100 and an orange costs ₦80, how many apples did he buy?",
+                "options": [
+                  "30 apples",
+                  "20 apples",
+                  "25 apples",
+                  "35 apples"
+                ],
+                "answer": "30 apples",
+                "explanation": "Let apples = a, oranges = 50 - a. 100a + 80(50 - a) = 4600 => 20a + 4000 = 4600 => 20a = 600 => a = 30."
+              },
+              {
+                "id": "b5_mat_017",
+                "text": "A fruit vendor bought 50 apples and oranges altogether for ₦4,600. If an apple costs ₦100 and an orange costs ₦80, how many oranges did he buy?",
+                "options": [
+                  "20 oranges",
+                  "30 oranges",
+                  "25 oranges",
+                  "15 oranges"
+                ],
+                "answer": "20 oranges",
+                "explanation": "Number of oranges = 50 - 30 = 20 oranges."
+              },
+              {
+                "id": "b5_mat_018",
+                "text": "A school bought 15 footballs and 10 basketballs for ₦75,000. If a football costs ₦1,500 less than a basketball, find the cost of a football.",
+                "options": [
+                  "₦2,400",
+                  "₦3,900",
+                  "₦3,000",
+                  "₦2,500"
+                ],
+                "answer": "₦2,400",
+                "explanation": "Let football = f, basketball = f + 1500. 15f + 10(f + 1500) = 75000 => 25f + 15000 = 75000 => 25f = 60000 => f = ₦2,400."
+              },
+              {
+                "id": "b5_mat_019",
+                "text": "Mary has ₦1,200 more than John. Together they have ₦5,000. How much money does John have?",
+                "options": [
+                  "₦1,900",
+                  "₦3,100",
+                  "₦2,500",
+                  "₦1,800"
+                ],
+                "answer": "₦1,900",
+                "explanation": "j + (j + 1200) = 5000 => 2j = 3800 => j = ₦1,900."
+              },
+              {
+                "id": "b5_mat_020",
+                "text": "Share ₦14,000 between Amina and Bola such that Amina receives ₦2,000 more than twice Bola's share. How much does Bola receive?",
+                "options": [
+                  "₦4,000",
+                  "₦10,000",
+                  "₦5,000",
+                  "₦3,500"
+                ],
+                "answer": "₦4,000",
+                "explanation": "b + (2b + 2000) = 14000 => 3b = 12000 => b = ₦4,000."
+              },
+              {
+                "id": "b5_mat_021",
+                "text": "A car travels at 60 km/h for t hours and at 80 km/h for (t + 1) hours. If the total distance covered is 360 km, find t.",
+                "options": [
+                  "2 hours",
+                  "3 hours",
+                  "1.5 hours",
+                  "2.5 hours"
+                ],
+                "answer": "2 hours",
+                "explanation": "60t + 80(t + 1) = 360 => 140t + 80 = 360 => 140t = 280 => t = 2 hours."
+              },
+              {
+                "id": "b5_mat_022",
+                "text": "Two cyclists start from the same point and travel in opposite directions at 15 km/h and 20 km/h respectively. In how many hours will they be 140 km apart?",
+                "options": [
+                  "4 hours",
+                  "3.5 hours",
+                  "5 hours",
+                  "4.5 hours"
+                ],
+                "answer": "4 hours",
+                "explanation": "Combined speed = 15 + 20 = 35 km/h. Time = 140 / 35 = 4 hours."
+              },
+              {
+                "id": "b5_mat_023",
+                "text": "A cyclist travels from Town A to Town B at 12 km/h and returns at 8 km/h. If the return journey takes 1 hour longer, find the distance between the towns.",
+                "options": [
+                  "24 km",
+                  "18 km",
+                  "36 km",
+                  "30 km"
+                ],
+                "answer": "24 km",
+                "explanation": "d/8 - d/12 = 1 => d/24 = 1 => d = 24 km."
+              },
+              {
+                "id": "b5_mat_024",
+                "text": "A collection of 25 items consists of ₦20 coins and ₦50 notes with a total value of ₦800. How many ₦50 notes are there?",
+                "options": [
+                  "10",
+                  "15",
+                  "12",
+                  "8"
+                ],
+                "answer": "10",
+                "explanation": "Let 50-notes be n. 50n + 20(25 - n) = 800 => 30n + 500 = 800 => 30n = 300 => n = 10."
+              },
+              {
+                "id": "b5_mat_025",
+                "text": "In the coin collection of question 24 with 25 coins/notes worth ₦800, how many ₦20 coins are there?",
+                "options": [
+                  "15",
+                  "10",
+                  "13",
+                  "12"
+                ],
+                "answer": "15",
+                "explanation": "25 - 10 = 15 coins."
+              },
+              {
+                "id": "b5_mat_026",
+                "text": "Solve for x: 2(3x - 4) = 5(x - 1) + 3",
+                "options": [
+                  "x = 6",
+                  "x = 4",
+                  "x = 8",
+                  "x = 5"
+                ],
+                "answer": "x = 6",
+                "explanation": "6x - 8 = 5x - 5 + 3 => 6x - 8 = 5x - 2 => x = 6."
+              },
+              {
+                "id": "b5_mat_027",
+                "text": "Solve for y: (y + 3) / 2 - (y - 1) / 3 = 2",
+                "options": [
+                  "y = 1",
+                  "y = 2",
+                  "y = 3",
+                  "y = 0"
+                ],
+                "answer": "y = 1",
+                "explanation": "3(y + 3) - 2(y - 1) = 12 => 3y + 9 - 2y + 2 = 12 => y + 11 = 12 => y = 1."
+              },
+              {
+                "id": "b5_mat_028",
+                "text": "Solve for p: 0.3p + 1.2 = 0.5p - 0.4",
+                "options": [
+                  "p = 8",
+                  "p = 6",
+                  "p = 10",
+                  "p = 4"
+                ],
+                "answer": "p = 8",
+                "explanation": "1.2 + 0.4 = 0.5p - 0.3p => 0.2p = 1.6 => p = 8."
+              },
+              {
+                "id": "b5_mat_029",
+                "text": "Solve for m: 5m - 2(m - 3) = 15",
+                "options": [
+                  "m = 3",
+                  "m = 5",
+                  "m = 4",
+                  "m = 7"
+                ],
+                "answer": "m = 3",
+                "explanation": "5m - 2m + 6 = 15 => 3m = 9 => m = 3."
+              },
+              {
+                "id": "b5_mat_030",
+                "text": "Solve for x: (2x + 5) / 3 = 3x - 10",
+                "options": [
+                  "x = 5",
+                  "x = 4",
+                  "x = 6",
+                  "x = 7"
+                ],
+                "answer": "x = 5",
+                "explanation": "2x + 5 = 9x - 30 => 7x = 35 => x = 5."
+              },
+              {
+                "id": "b5_mat_031",
+                "text": "The sum of three numbers is 105. The second number is twice the first, and the third number is 15 more than the second. Find the first number.",
+                "options": [
+                  "18",
+                  "20",
+                  "16",
+                  "24"
+                ],
+                "answer": "18",
+                "explanation": "x + 2x + (2x + 15) = 105 => 5x + 15 = 105 => 5x = 90 => x = 18."
+              },
+              {
+                "id": "b5_mat_032",
+                "text": "A wire 90 cm long is bent to form a rectangle whose length is twice its width. Find the area of the rectangle.",
+                "options": [
+                  "450 cm²",
+                  "400 cm²",
+                  "500 cm²",
+                  "360 cm²"
+                ],
+                "answer": "450 cm²",
+                "explanation": "2(2w + w) = 90 => 6w = 90 => w = 15 cm. Length = 30 cm. Area = 30 × 15 = 450 cm²."
+              },
+              {
+                "id": "b5_mat_033",
+                "text": "A trader marks an article at ₦x. He offers a discount of ₦250 and sells it for ₦1,750. What was the marked price x?",
+                "options": [
+                  "₦2,000",
+                  "₦1,500",
+                  "₦2,250",
+                  "₦1,900"
+                ],
+                "answer": "₦2,000",
+                "explanation": "x - 250 = 1750 => x = ₦2,000."
+              },
+              {
+                "id": "b5_mat_034",
+                "text": "A farmer has 120 poultry birds consisting of layers and broilers. If there are 30 more layers than broilers, how many layers are there?",
+                "options": [
+                  "75 layers",
+                  "45 layers",
+                  "80 layers",
+                  "65 layers"
+                ],
+                "answer": "75 layers",
+                "explanation": "b + (b + 30) = 120 => 2b = 90 => b = 45 broilers. Layers = 45 + 30 = 75 layers."
+              },
+              {
+                "id": "b5_mat_035",
+                "text": "If a number is multiplied by 4 and then 15 is added, the result is the same as multiplying the number by 7 and subtracting 6. What is the number?",
+                "options": [
+                  "7",
+                  "6",
+                  "8",
+                  "9"
+                ],
+                "answer": "7",
+                "explanation": "4x + 15 = 7x - 6 => 3x = 21 => x = 7."
+              },
+              {
+                "id": "b5_mat_036",
+                "text": "The perimeter of a square is equal to the perimeter of a rectangle of dimensions 14 cm by 10 cm. What is the side length of the square?",
+                "options": [
+                  "12 cm",
+                  "14 cm",
+                  "10 cm",
+                  "16 cm"
+                ],
+                "answer": "12 cm",
+                "explanation": "Rectangle perimeter = 2(14 + 10) = 48 cm. Square side = 48 / 4 = 12 cm."
+              },
+              {
+                "id": "b5_mat_037",
+                "text": "Solve for x: 3(x + 2) - 2(2x - 1) = 0",
+                "options": [
+                  "x = 8",
+                  "x = 6",
+                  "x = 7",
+                  "x = 9"
+                ],
+                "answer": "x = 8",
+                "explanation": "3x + 6 - 4x + 2 = 0 => -x + 8 = 0 => x = 8."
+              },
+              {
+                "id": "b5_mat_038",
+                "text": "A boy walks x km to school at 4 km/h and runs back at 6 km/h. The total time for the round trip is 50 minutes (5/6 hour). Find x.",
+                "options": [
+                  "2 km",
+                  "3 km",
+                  "2.5 km",
+                  "1.5 km"
+                ],
+                "answer": "2 km",
+                "explanation": "x/4 + x/6 = 5/6. Multiply by 12: 3x + 2x = 10 => 5x = 10 => x = 2 km."
+              },
+              {
+                "id": "b5_mat_039",
+                "text": "A bucket contains 24 liters of water. If a cup holding x liters is dipped 8 times and 4 liters remain in the bucket, what is the capacity of the cup?",
+                "options": [
+                  "2.5 liters",
+                  "2.0 liters",
+                  "3.0 liters",
+                  "2.25 liters"
+                ],
+                "answer": "2.5 liters",
+                "explanation": "24 - 8x = 4 => 8x = 20 => x = 2.5 liters."
+              },
+              {
+                "id": "b5_mat_040",
+                "text": "The ratio of boys to girls in a club is 3:2. If there are 15 more boys than girls, what is the total number of members in the club?",
+                "options": [
+                  "75",
+                  "60",
+                  "90",
+                  "45"
+                ],
+                "answer": "75",
+                "explanation": "Let boys = 3k, girls = 2k. 3k - 2k = 15 => k = 15. Total members = 5k = 5(15) = 75."
+              },
+              {
+                "id": "b5_mat_041",
+                "text": "Solve for x: 6(x - 2) - 3(x + 1) = 2(x + 3)",
+                "options": [
+                  "x = 21",
+                  "x = 15",
+                  "x = 18",
+                  "x = 24"
+                ],
+                "answer": "x = 21",
+                "explanation": "6x - 12 - 3x - 3 = 2x + 6 => 3x - 15 = 2x + 6 => x = 21."
+              },
+              {
+                "id": "b5_mat_042",
+                "text": "A tank can be filled by tap A in 6 hours and emptied by tap B in 8 hours. If both taps are open, how long will it take to fill the tank?",
+                "options": [
+                  "24 hours",
+                  "14 hours",
+                  "12 hours",
+                  "18 hours"
+                ],
+                "answer": "24 hours",
+                "explanation": "Net rate per hour = 1/6 - 1/8 = (4 - 3)/24 = 1/24. Time to fill = 24 hours."
+              },
+              {
+                "id": "b5_mat_043",
+                "text": "When 40 is added to 3 times the square root of a number, the result is 55. What is the number?",
+                "options": [
+                  "25",
+                  "16",
+                  "36",
+                  "9"
+                ],
+                "answer": "25",
+                "explanation": "40 + 3√x = 55 => 3√x = 15 => √x = 5 => x = 25."
+              },
+              {
+                "id": "b5_mat_044",
+                "text": "A woman is 3 times as old as her son. If the sum of their ages is 48 years, how old will the woman be in 5 years?",
+                "options": [
+                  "41 years",
+                  "36 years",
+                  "42 years",
+                  "40 years"
+                ],
+                "answer": "41 years",
+                "explanation": "s + 3s = 48 => 4s = 48 => s = 12. Woman = 36 years. In 5 years: 36 + 5 = 41 years."
+              },
+              {
+                "id": "b5_mat_045",
+                "text": "The average of four numbers is 18. If three of the numbers are 15, 20, and 22, what is the fourth number?",
+                "options": [
+                  "15",
+                  "18",
+                  "16",
+                  "14"
+                ],
+                "answer": "15",
+                "explanation": "Total = 4 × 18 = 72. Sum of three = 15 + 20 + 22 = 57. Fourth = 72 - 57 = 15."
+              },
+              {
+                "id": "b5_mat_046",
+                "text": "Solve for x: (3x - 5) / 4 = (x + 1) / 2",
+                "options": [
+                  "x = 7",
+                  "x = 6",
+                  "x = 8",
+                  "x = 5"
+                ],
+                "answer": "x = 7",
+                "explanation": "Multiply by 4: 3x - 5 = 2(x + 1) => 3x - 5 = 2x + 2 => x = 7."
+              },
+              {
+                "id": "b5_mat_047",
+                "text": "A bookshelf has 84 books arranged in two rows. The top row has 12 books fewer than the bottom row. How many books are in the bottom row?",
+                "options": [
+                  "48 books",
+                  "36 books",
+                  "42 books",
+                  "50 books"
+                ],
+                "answer": "48 books",
+                "explanation": "(b - 12) + b = 84 => 2b = 96 => b = 48 books."
+              },
+              {
+                "id": "b5_mat_048",
+                "text": "A labourer is paid ₦3,000 per day for normal work and ₦500 per hour for overtime. If he worked 5 days and earned ₦19,500, how many hours of overtime did he work?",
+                "options": [
+                  "9 hours",
+                  "8 hours",
+                  "10 hours",
+                  "7 hours"
+                ],
+                "answer": "9 hours",
+                "explanation": "Normal pay = 5 × 3000 = ₦15,000. Overtime pay = 19500 - 15000 = ₦4,500. Hours = 4500 / 500 = 9 hours."
+              },
+              {
+                "id": "b5_mat_049",
+                "text": "Solve for x: 2(x - 1) + 3(2x - 3) = 4(x + 1) + 5",
+                "options": [
+                  "x = 5",
+                  "x = 4",
+                  "x = 6",
+                  "x = 3"
+                ],
+                "answer": "x = 5",
+                "explanation": "2x - 2 + 6x - 9 = 4x + 4 + 5 => 8x - 11 = 4x + 9 => 4x = 20 => x = 5."
+              },
+              {
+                "id": "b5_mat_050",
+                "text": "A two-digit number has tens digit x and units digit y. The sum of its digits is 9, and the units digit is twice the tens digit. What is the number?",
+                "options": [
+                  "36",
+                  "63",
+                  "27",
+                  "18"
+                ],
+                "answer": "36",
+                "explanation": "x + y = 9 and y = 2x => x + 2x = 9 => 3x = 9 => x = 3, y = 6. The number is 36."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
