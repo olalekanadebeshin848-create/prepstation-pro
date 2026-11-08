@@ -522,33 +522,75 @@
     log(`Initiating deletion of "${file.name}"...`);
 
     try {
-      // Step 1: Always retrieve the fresh SHA right now from GitHub to prevent ref-lock conflicts
+      // Step 1: Always retrieve the fresh SHA right now from GitHub
+      const encodedName = encodeURIComponent(file.name);
       log(`Fetching latest remote SHA for "${file.name}"...`);
       let freshSha = file.sha;
       try {
-        const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}?ref=main`);
+        const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}?ref=main`);
         if (liveInfo && liveInfo.sha) freshSha = liveInfo.sha;
       } catch (shaErr) {
-        log(`Note on SHA lookup: ${shaErr.message}. Using cached SHA.`, 'warn');
+        // Fallback with strict encoding
+        try {
+          const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}?ref=main`);
+          if (liveInfo && liveInfo.sha) freshSha = liveInfo.sha;
+        } catch (e2) {
+          log(`Note on SHA lookup: ${shaErr.message}. Using cached SHA.`, 'warn');
+        }
       }
 
-      // Step 2: Send DELETE request with strictly-encoded filename and explicit Content-Type
+      // Step 2: Send DELETE request with explicit committer and author
       log(`Sending DELETE request to GitHub for strata/${file.name}...`);
-      await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}`, {
-        method: 'DELETE',
-        body: JSON.stringify({
-          message: `sync(strata): remove ${file.name} via Cloud Publisher`,
-          sha: freshSha,
-          branch: 'main'
-        })
-      });
+      const deleteBody = {
+        message: `sync(strata): remove ${file.name} via Cloud Publisher`,
+        sha: freshSha,
+        branch: 'main',
+        committer: {
+          name: 'PrepStation Admin',
+          email: 'admin@prepstation.app'
+        },
+        author: {
+          name: 'PrepStation Admin',
+          email: 'admin@prepstation.app'
+        }
+      };
+
+      try {
+        await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}`, {
+          method: 'DELETE',
+          body: JSON.stringify(deleteBody)
+        });
+      } catch (delErr) {
+        // If GitHub threw 500, verify whether git committed the deletion despite response glitch
+        log(`Verifying deletion status on GitHub (${delErr.message})...`, 'warn');
+        await new Promise(r => setTimeout(r, 1500));
+        let stillExists = true;
+        try {
+          await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}?ref=main`);
+        } catch (chk) {
+          if (chk.message && (chk.message.includes('404') || chk.message.includes('Not Found'))) {
+            stillExists = false;
+          }
+        }
+
+        if (stillExists) {
+          log(`File still present. Retrying with alternative path encoding...`, 'warn');
+          await new Promise(r => setTimeout(r, 2000));
+          await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}`, {
+            method: 'DELETE',
+            body: JSON.stringify(deleteBody)
+          });
+        } else {
+          log(`✔ Verified: File was successfully removed on GitHub!`, 'success');
+        }
+      }
 
       log(`✔ Deleted "${file.name}" from GitHub successfully!`, 'success');
       alert(`✔ "${file.name}" has been deleted from GitHub.\n\nThe GitHub robot is now updating strata_catalog.json automatically.`);
       await fetchLiveStrataList();
     } catch(err) {
       log(`❌ Deletion failed: ${err.message}`, 'err');
-      alert(`Deletion failed: ${err.message}\n\nPlease verify that your token has 'repo' or 'contents:write' scope and try again.`);
+      alert(`Deletion failed: ${err.message}\n\nTroubleshooting:\n1. If a GitHub Action or push was running simultaneously, git ref-lock occurs. Wait 15 seconds and try again.\n2. Ensure your token has 'repo' or 'contents:write' scope.`);
     }
   }
 

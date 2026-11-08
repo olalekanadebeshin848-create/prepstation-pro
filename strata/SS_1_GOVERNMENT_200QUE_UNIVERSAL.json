@@ -1,0 +1,2806 @@
+{
+  "strataMetadata": {
+    "title": "SS 1 Government 200 Questions (Foundation)",
+    "subject": "Government",
+    "examCategory": "SS 1",
+    "gradeLevel": "SS 1",
+    "term": "First Term / Comprehensive",
+    "renderedAt": "2026-11-08",
+    "edition": "ED2",
+    "totalQuestions": 200,
+    "totalBundles": 10
+  },
+  "deviceLicense": "UNIVERSAL",
+  "structuralStrata": {
+    "examCategory": "SS 1",
+    "strataId": "strata_1",
+    "displayName": "STRATA 1 — GOVERNMENT (200 QUESTIONS)",
+    "description": "Comprehensive 10-bundle progressive practice covering SS 1 Government curriculum.",
+    "durationMinutes": 200,
+    "isUnlocked": true,
+    "tier": "basic",
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "name": "Bundle 1",
+        "isUnlocked": true,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b1_gov_001",
+                "text": "Government can be defined in three main aspects. Which of the following is NOT one of them?",
+                "options": [
+                  "Government as an institution of the state",
+                  "Government as an art of governing or process of administration",
+                  "Government as an academic field of study",
+                  "Government as a cultural heritage of the people"
+                ],
+                "answer": "Government as a cultural heritage of the people",
+                "correct_option": "D",
+                "explanation": "Government is defined in three main aspects: as an institution of the state, as an art of governing or process of administration, and as an academic field of study. 'Cultural heritage' is not one of the recognised definitions."
+              },
+              {
+                "id": "b1_b1_gov_002",
+                "text": "Government as an institution of the state may be defined as:",
+                "options": [
+                  "A body of people who make laws for a particular society only.",
+                  "A machinery established by the state to organise, manage the affairs of the state and administer its functions and duties.",
+                  "A process of selecting leaders through elections.",
+                  "An academic discipline taught in universities."
+                ],
+                "answer": "A machinery established by the state to organise, manage the affairs of the state and administer its functions and duties.",
+                "correct_option": "B",
+                "explanation": "Government as an institution of the state is the machinery established by the state to organise, manage the affairs of the state, and administer its functions and duties. It is the instrument through which the state puts its plans into action."
+              },
+              {
+                "id": "b1_b1_gov_003",
+                "text": "Which arm of government is concerned with policy formulation and implementation?",
+                "options": [
+                  "The Legislature",
+                  "The Judiciary",
+                  "The Executive",
+                  "The Civil Service"
+                ],
+                "answer": "The Executive",
+                "correct_option": "C",
+                "explanation": "The Executive arm of government is concerned with policy formulation and implementation. The Legislature makes laws, and the Judiciary interprets laws."
+              },
+              {
+                "id": "b1_b1_gov_004",
+                "text": "Which arm of government is concerned with law making which every member of society must obey?",
+                "options": [
+                  "The Executive",
+                  "The Legislature",
+                  "The Judiciary",
+                  "The Police Force"
+                ],
+                "answer": "The Legislature",
+                "correct_option": "B",
+                "explanation": "The Legislature is concerned with law making. Laws made by the legislature are binding on every member of society."
+              },
+              {
+                "id": "b1_b1_gov_005",
+                "text": "Which arm of government concentrates mainly on the interpretation of the law and decides how to apply the laws in specific disputes?",
+                "options": [
+                  "The Executive",
+                  "The Legislature",
+                  "The Judiciary",
+                  "The Armed Forces"
+                ],
+                "answer": "The Judiciary",
+                "correct_option": "C",
+                "explanation": "The Judiciary concentrates mainly on the interpretation of the law and decides how to apply the laws in specific disputes. It also administers justice."
+              },
+              {
+                "id": "b1_b1_gov_006",
+                "text": "A body of people and institutions that make and enforce laws for a particular society is called:",
+                "options": [
+                  "Dictatorship",
+                  "Anarchy",
+                  "Government",
+                  "Democracy"
+                ],
+                "answer": "Government",
+                "correct_option": "C",
+                "explanation": "Government is the group of people and institutions to which legitimate authority is conferred to govern a country or state. They make laws, implement and formulate policies, interpret laws, and settle disputes in society."
+              },
+              {
+                "id": "b1_b1_gov_007",
+                "text": "Government is the machinery established to manage the affairs of the:",
+                "options": [
+                  "Rulers",
+                  "Institutions",
+                  "Legislators",
+                  "State"
+                ],
+                "answer": "State",
+                "correct_option": "D",
+                "explanation": "Government is the machinery established to manage the affairs of the state. It is the instrument through which the will of the state is formulated, expressed, and realised."
+              },
+              {
+                "id": "b1_b1_gov_008",
+                "text": "Government as an institution of the state can be defined as a body that:",
+                "options": [
+                  "Recruits and trains political leaders",
+                  "Settles disputes and interprets law for the state",
+                  "Legislates, executes and adjudicates",
+                  "Conducts elections for the state"
+                ],
+                "answer": "Legislates, executes and adjudicates",
+                "correct_option": "C",
+                "explanation": "Government as an institution of the state has three major arms: the legislature (law making), the executive (policy formulation and implementation), and the judiciary (interpretation of laws). Together, they legislate, execute, and adjudicate."
+              },
+              {
+                "id": "b1_b1_gov_009",
+                "text": "Government as an institution of the state means the:",
+                "options": [
+                  "Method of organising political parties and pressure groups",
+                  "Process of decision making in a society",
+                  "Method of resolution of conflicts among people",
+                  "Structures and systems for decision making in a society"
+                ],
+                "answer": "Structures and systems for decision making in a society",
+                "correct_option": "D",
+                "explanation": "Government as an institution of the state refers to the structures and systems for decision making in a society. It is the machinery through which the state's decisions are made and implemented."
+              },
+              {
+                "id": "b1_b1_gov_010",
+                "text": "Which of the following best defines government as an institution of a state?",
+                "options": [
+                  "An institution established for class struggles",
+                  "Machinery established for exercising political parties",
+                  "A process of organising societal values",
+                  "The art through which political parties are managed"
+                ],
+                "answer": "A process of organising societal values",
+                "correct_option": "C",
+                "explanation": "Government as an institution of the state is a process of organising societal values. It is the machinery established by the state to organise and manage the affairs of the state."
+              },
+              {
+                "id": "b1_b1_gov_011",
+                "text": "Government as an art of governing or process of administration may be defined as:",
+                "options": [
+                  "A body vested with power and authority for maintaining security, peace, and stability by making and enforcing laws.",
+                  "A group of people who make laws only.",
+                  "An academic discipline studied in universities.",
+                  "A cultural organisation for social welfare."
+                ],
+                "answer": "A body vested with power and authority for maintaining security, peace, and stability by making and enforcing laws.",
+                "correct_option": "A",
+                "explanation": "Government as an art of governing is a body vested with the power and authority for maintaining security, peace, and stability by making and enforcing conventional and fundamental laws in a given state or society."
+              },
+              {
+                "id": "b1_b1_gov_012",
+                "text": "The process of carrying out the affairs of a country is referred to as:",
+                "options": [
+                  "Democracy",
+                  "Gerrymandering",
+                  "Governance",
+                  "Delegated legislation"
+                ],
+                "answer": "Governance",
+                "correct_option": "C",
+                "explanation": "The process of carrying out the affairs of a country is referred to as governance. Government as an art of governing involves supreme powers of state affairs vested in a few individuals to maintain peace, order, and security."
+              },
+              {
+                "id": "b1_b1_gov_013",
+                "text": "Which of the following is related to government as a process of governing?",
+                "options": [
+                  "Implementation and adjudication of laws",
+                  "The role of pressure groups within the state",
+                  "Disagreement between state and local government",
+                  "Abrogation of fundamental human rights"
+                ],
+                "answer": "Implementation and adjudication of laws",
+                "correct_option": "A",
+                "explanation": "Government as a process of governing refers to the implementation, making, reviewing, and amending of laws in society. This administrative structure is known as the process of governing people."
+              },
+              {
+                "id": "b1_b1_gov_014",
+                "text": "Government as the act of governing means the:",
+                "options": [
+                  "Activities of pressure groups and political parties",
+                  "Act of vetoing a bill",
+                  "Orders of judiciary and legislative",
+                  "Activities by which government policies are made and implemented"
+                ],
+                "answer": "Activities by which government policies are made and implemented",
+                "correct_option": "D",
+                "explanation": "Government as the act of governing means the activities by which government policies are made and implemented. It involves rule making, rule implementation, and rule adjudication."
+              },
+              {
+                "id": "b1_b1_gov_015",
+                "text": "Government as an art of governance refers to the process of:",
+                "options": [
+                  "Ruling people in the society",
+                  "Establishing political parties",
+                  "Making and enforcing laws",
+                  "Conducting elections"
+                ],
+                "answer": "Making and enforcing laws",
+                "correct_option": "C",
+                "explanation": "Government as an art of governance refers to the process of making and enforcing laws. It involves the formulation and implementation of policies for the well-being of society."
+              },
+              {
+                "id": "b1_b1_gov_016",
+                "text": "Policy formulation involves developing strategies for dealing with policy issues which have been placed on an agenda. Which of the following is NOT part of policy formulation and implementation?",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule elimination"
+                ],
+                "answer": "Rule elimination",
+                "correct_option": "D",
+                "explanation": "Policy formulation and implementation involves rule making, rule implementation, and rule adjudication. 'Rule elimination' is not part of the process."
+              },
+              {
+                "id": "b1_b1_gov_017",
+                "text": "The process by which a government reviews policy formulation and policy implementation and comes to a decision which determines successful formulation and implementation is called:",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule amendment"
+                ],
+                "answer": "Rule adjudication",
+                "correct_option": "C",
+                "explanation": "Rule adjudication is the process by which a government reviews policy formulation and policy implementation and comes to a decision which determines successful formulation and implementation. It is a process by which formulated and implemented rules are ranked and evaluated."
+              },
+              {
+                "id": "b1_b1_gov_018",
+                "text": "Government as an academic field of study may be defined as the study of:",
+                "options": [
+                  "Agencies, political institutions and the dynamics of the state",
+                  "Only the executive arm of government",
+                  "Only the constitution of a country",
+                  "Only political parties and elections"
+                ],
+                "answer": "Agencies, political institutions and the dynamics of the state",
+                "correct_option": "A",
+                "explanation": "Government as an academic field of study is the study of agencies, political institutions, and the dynamics of the state. It is studied under various names such as political science, politics, or public affairs."
+              },
+              {
+                "id": "b1_b1_gov_019",
+                "text": "In the study of government, public administration covers the:",
+                "options": [
+                  "Army, prison officers and public force",
+                  "Civil service, public corporations and local government",
+                  "Ministries of education, health and agriculture",
+                  "Schools, hospitals and health centres"
+                ],
+                "answer": "Civil service, public corporations and local government",
+                "correct_option": "B",
+                "explanation": "Public administration in government as a subject covers the civil service, public corporations, and local government. It focuses on the methods and techniques used by government functionaries in the management of state affairs."
+              },
+              {
+                "id": "b1_b1_gov_020",
+                "text": "Government as a subject refers to the study of:",
+                "options": [
+                  "Territorial expansion",
+                  "Political leaders",
+                  "The various nations of the world",
+                  "The constituents of the state"
+                ],
+                "answer": "The constituents of the state",
+                "correct_option": "D",
+                "explanation": "Government as a subject refers to the study of the constituents of the state. It involves the study of constitution, political institutions, and the dynamics of the state."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b2",
+        "name": "Bundle 2",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b2_gov_001",
+                "text": "Government can be defined as the study of:",
+                "options": [
+                  "Federalism",
+                  "Cabinet system of government only",
+                  "How people rule themselves",
+                  "Presidential system of government only"
+                ],
+                "answer": "How people rule themselves",
+                "correct_option": "C",
+                "explanation": "Government as an academic field of study involves the study of political institutions in the state. The political institutions consist of political thinkers that help the people to rule themselves."
+              },
+              {
+                "id": "b1_b2_gov_002",
+                "text": "The study of government in schools is important because the student can:",
+                "options": [
+                  "Be assisted by political leaders",
+                  "Learn about their rights",
+                  "Qualify for elections",
+                  "Be nominated for a trip abroad"
+                ],
+                "answer": "Learn about their rights",
+                "correct_option": "B",
+                "explanation": "The study of government in schools is important because the student can learn about their rights, duties, and obligations as citizens. It also helps them understand the processes of governance."
+              },
+              {
+                "id": "b1_b2_gov_003",
+                "text": "Which of the following is NOT an academic branch of government?",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Commercial Agriculture"
+                ],
+                "answer": "Commercial Agriculture",
+                "correct_option": "D",
+                "explanation": "The academic branches of government include Public Administration, International Relations, Comparative Politics, Political Theory, Political Economy, and National Politics. Commercial Agriculture is not a branch of government."
+              },
+              {
+                "id": "b1_b2_gov_004",
+                "text": "The academic branch of government that deals with relations between nations as well as the environment within which these relations are maintained is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "International Relations",
+                "correct_option": "B",
+                "explanation": "International Relations deals with relations between nations as well as the environment within which these relations are maintained. It covers international organisations, international law, diplomacy, international economics, and foreign policy."
+              },
+              {
+                "id": "b1_b2_gov_005",
+                "text": "The academic branch of government that focuses on the comparison of different governments in order to discover cross-cultural similarities and differences is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "Comparative Politics",
+                "correct_option": "C",
+                "explanation": "Comparative Politics focuses on the comparison of different governments in order to discover cross-cultural similarities and differences. Students learn about Western European nations, communist nations, developing nations, and other nations."
+              },
+              {
+                "id": "b1_b2_gov_006",
+                "text": "The academic branch of government that concerns philosophical explanations related to the origin, form, behaviour, and purposes of human organisation is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "Political Theory",
+                "correct_option": "D",
+                "explanation": "Political Theory concerns philosophical explanations which relate to the origin, form, behaviour, and purposes of human organisation. Some doctrines are based on speculations while others are based on empirical observations of political life."
+              },
+              {
+                "id": "b1_b2_gov_007",
+                "text": "The academic branch of government that deals with the fiscal and monetary policies of a country is:",
+                "options": [
+                  "Political Economy",
+                  "National Politics",
+                  "Public Administration",
+                  "International Relations"
+                ],
+                "answer": "Political Economy",
+                "correct_option": "A",
+                "explanation": "Political Economy deals with the fiscal and monetary policies of a country. It studies how politics influences economics and how economics affects politics. It includes public finance, budgeting, social welfare, and the relationship between government and business."
+              },
+              {
+                "id": "b1_b2_gov_008",
+                "text": "The academic branch of government that focuses on the organisation of a specific government is:",
+                "options": [
+                  "Political Economy",
+                  "National Politics",
+                  "Public Administration",
+                  "International Relations"
+                ],
+                "answer": "National Politics",
+                "correct_option": "B",
+                "explanation": "National Politics focuses on the organisation of a specific government. It teaches students about their own country under topics such as the legislature, the executive, the courts, the constitution, political parties, elections, and political awareness."
+              },
+              {
+                "id": "b1_b2_gov_009",
+                "text": "Which of the following is a reason why government is an academic field of study?",
+                "options": [
+                  "It is taught in schools, colleges, and universities.",
+                  "It has specialised areas in tertiary institutions.",
+                  "It borrows ideas from other established disciplines.",
+                  "All of the above."
+                ],
+                "answer": "All of the above.",
+                "correct_option": "D",
+                "explanation": "Government is an academic field of study because it is taught in schools, colleges, and universities; it has specialised areas in tertiary institutions; it borrows ideas from other established disciplines like philosophy, history, sociology, economics, and law; and it uses scientific methods, tools, and statistics in research and analysis."
+              },
+              {
+                "id": "b1_b2_gov_010",
+                "text": "Government as an academic field of study borrows ideas from renowned philosophers like:",
+                "options": [
+                  "Plato, Aristotle, Hobbes, Rousseau, John Locke, Karl Marx",
+                  "Newton, Einstein, Galileo, Darwin",
+                  "Shakespeare, Dickens, Achebe, Soyinka",
+                  "Mozart, Beethoven, Bach, Handel"
+                ],
+                "answer": "Plato, Aristotle, Hobbes, Rousseau, John Locke, Karl Marx",
+                "correct_option": "A",
+                "explanation": "Government as an academic field of study borrows ideas from renowned philosophers like Plato, Aristotle, Hobbes, Rousseau, John Locke, and Karl Marx, among others."
+              },
+              {
+                "id": "b1_b2_gov_011",
+                "text": "Which of the following is NOT a characteristic or attribute of government?",
+                "options": [
+                  "Political Power",
+                  "Legitimate Authority",
+                  "Periodic Change",
+                  "Permanent Tenure"
+                ],
+                "answer": "Permanent Tenure",
+                "correct_option": "D",
+                "explanation": "The characteristics of government include political power, legitimate authority, law making, revenue, work force, protection, periodic change, and welfare services. 'Permanent Tenure' is not a characteristic of government, especially in a democracy where periodic change is expected."
+              },
+              {
+                "id": "b1_b2_gov_012",
+                "text": "The power that enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all is:",
+                "options": [
+                  "Political Power",
+                  "Legitimate Authority",
+                  "Sovereignty",
+                  "Revenue"
+                ],
+                "answer": "Political Power",
+                "correct_option": "A",
+                "explanation": "Political Power is the power that enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all."
+              },
+              {
+                "id": "b1_b2_gov_013",
+                "text": "Any legally constituted government must have legitimate authority arising from:",
+                "options": [
+                  "The social acceptance of the people",
+                  "The military strength of the state",
+                  "The wealth of the ruling class",
+                  "The support of foreign powers"
+                ],
+                "answer": "The social acceptance of the people",
+                "correct_option": "A",
+                "explanation": "Any legally constituted government must have legitimate authority arising from the social acceptance of the people. It is the acceptance of the people that gives government the right to govern."
+              },
+              {
+                "id": "b1_b2_gov_014",
+                "text": "The primary function of government in a state is to:",
+                "options": [
+                  "Build schools and hospitals",
+                  "Provide transport services",
+                  "Engage in campaigns and rallies",
+                  "Maintain law and order"
+                ],
+                "answer": "Maintain law and order",
+                "correct_option": "D",
+                "explanation": "The primary function of government in a state is to maintain law and order. This is essential before the government can function properly and provide other services."
+              },
+              {
+                "id": "b1_b2_gov_015",
+                "text": "The functions of government include all of the following EXCEPT:",
+                "options": [
+                  "Maintenance of peace and order",
+                  "Provision of social services",
+                  "Protection of citizens from malicious attack",
+                  "Provision of free medical services for all"
+                ],
+                "answer": "Provision of free medical services for all",
+                "correct_option": "D",
+                "explanation": "It is the responsibility of government to maintain peace and order, provide social services, and protect citizens from malicious attack. However, government cannot provide free medical services for all citizens; it can only make provision for health centres and hospitals."
+              },
+              {
+                "id": "b1_b2_gov_016",
+                "text": "The state performs the following functions EXCEPT:",
+                "options": [
+                  "Promoting the welfare of the citizens",
+                  "Encouraging the struggle for power",
+                  "Providing social services",
+                  "Encouraging trade with other states"
+                ],
+                "answer": "Encouraging the struggle for power",
+                "correct_option": "B",
+                "explanation": "Government can never encourage the struggle for power. It encourages peace and unity in society. The struggle for power can lead to riots, demonstrations, etc., that will disturb the peace and order of society."
+              },
+              {
+                "id": "b1_b2_gov_017",
+                "text": "Government can be made responsible and accountable to its citizens through the following methods EXCEPT:",
+                "options": [
+                  "Periodic change of government",
+                  "Demonstration",
+                  "Political education",
+                  "Public opinion"
+                ],
+                "answer": "Demonstration",
+                "correct_option": "B",
+                "explanation": "Government can be made responsible and accountable to its citizens through periodic change of government, political education, public opinion, and the provision of social amenities and basic infrastructure. Demonstration is a form of violence and is not a formal process of deliberations or method of identifying the needs of the people."
+              },
+              {
+                "id": "b1_b2_gov_018",
+                "text": "The functions of the state are achieved through:",
+                "options": [
+                  "Political socialism",
+                  "Separation of powers",
+                  "Organs of government",
+                  "Diplomatic means"
+                ],
+                "answer": "Organs of government",
+                "correct_option": "C",
+                "explanation": "The functions of the state are achieved through the organs of government. The three organs of government are the executive (policy formulation and implementation), the legislature (law making), and the judiciary (interpretation of laws). Without these three organs, the objectives and goals of the state cannot be easily achieved."
+              },
+              {
+                "id": "b1_b2_gov_019",
+                "text": "Which of the following is NOT an acceptable function of government?",
+                "options": [
+                  "Safe guarding life and property",
+                  "Subversion",
+                  "Maintaining laws and orders",
+                  "Providing basic welfare needs"
+                ],
+                "answer": "Subversion",
+                "correct_option": "B",
+                "explanation": "Subversion is not an acceptable function of government. Subversion means the act of trying to destroy or damage an established system or government."
+              },
+              {
+                "id": "b1_b2_gov_020",
+                "text": "The defense of a country is a major function of the:",
+                "options": [
+                  "Government of a state",
+                  "Judiciary",
+                  "Legislature",
+                  "Diplomatic corps"
+                ],
+                "answer": "Government of a state",
+                "correct_option": "A",
+                "explanation": "The defense of a country is a major function of the government of a state. The government defends the state from external and internal aggression. It is the duty of the armed forces to maintain the territorial integrity of the state."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b3",
+        "name": "Bundle 3",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b3_gov_001",
+                "text": "Government is the machinery established to manage the affairs of the:",
+                "options": [
+                  "Rulers",
+                  "Aliens",
+                  "Civil service",
+                  "State"
+                ],
+                "answer": "State",
+                "correct_option": "D",
+                "explanation": "Government is the machinery established to manage the affairs of the state. It is the instrument through which the state organises, manages, and administers its functions and duties."
+              },
+              {
+                "id": "b1_b3_gov_002",
+                "text": "Government refers to all the following EXCEPT:",
+                "options": [
+                  "An institution of the state",
+                  "The process of ruling a political community",
+                  "The exercise of power and authority",
+                  "The act of civil disobedience"
+                ],
+                "answer": "The act of civil disobedience",
+                "correct_option": "D",
+                "explanation": "Government refers to an institution of the state, the process of ruling a political community, and the exercise of power and authority. Government can never be an act of civil disobedience."
+              },
+              {
+                "id": "b1_b3_gov_003",
+                "text": "Government can be defined as:",
+                "options": [
+                  "The process of selecting some people to form a government",
+                  "The way by which people rule the government",
+                  "The machinery through which the will of the state is formed",
+                  "The system by which authority is shared among the privileged few in society"
+                ],
+                "answer": "The machinery through which the will of the state is formed",
+                "correct_option": "C",
+                "explanation": "Government can be defined as the machinery through which the will of the state is formed. It also helps the opinion of the citizens to be established."
+              },
+              {
+                "id": "b1_b3_gov_004",
+                "text": "Government as an institution of the state refers to the:",
+                "options": [
+                  "Police and the armed forces",
+                  "Judiciary, the president and his ministers",
+                  "Legislature, the executive and the judiciary",
+                  "Economic and political institutions"
+                ],
+                "answer": "Legislature, the executive and the judiciary",
+                "correct_option": "C",
+                "explanation": "Government as an institution of the state refers to the legislature that makes laws, the executive that formulates and implements policies, and the judiciary that interprets the law. These are the three organs of government."
+              },
+              {
+                "id": "b1_b3_gov_005",
+                "text": "The institution through which governments discharge responsibilities is known as:",
+                "options": [
+                  "Organs of government",
+                  "Pressure groups",
+                  "Political parties",
+                  "National assembly"
+                ],
+                "answer": "Organs of government",
+                "correct_option": "A",
+                "explanation": "The institution through which governments discharge responsibilities is known as the organs of government. The organs of government enhance and coordinate the affairs of the state."
+              },
+              {
+                "id": "b1_b3_gov_006",
+                "text": "The term Government refers to all the following EXCEPT:",
+                "options": [
+                  "An academic field of study",
+                  "A process or art of governing",
+                  "A process of making and enforcing laws in a state",
+                  "An institution made up of persons with common interest"
+                ],
+                "answer": "An institution made up of persons with common interest",
+                "correct_option": "D",
+                "explanation": "Government refers to an academic field of study, a process or art of governing, a process of making and enforcing laws in a state, and an institution of the state for achieving the will of the state. It is not an institution made up of persons with common interest."
+              },
+              {
+                "id": "b1_b3_gov_007",
+                "text": "The process by which a particular society is ruled is called:",
+                "options": [
+                  "Government",
+                  "Legislature",
+                  "Judiciary",
+                  "Constitution"
+                ],
+                "answer": "Government",
+                "correct_option": "A",
+                "explanation": "The process by which a particular society is ruled is called government. It involves making, enforcing, and interpreting laws."
+              },
+              {
+                "id": "b1_b3_gov_008",
+                "text": "Government can be defined as:",
+                "options": [
+                  "The process of setting some people to form a government",
+                  "The way by which people rule the state is formulated and enforced",
+                  "The machinery through which the will of the state is formed",
+                  "A group of people that makes laws in a society"
+                ],
+                "answer": "The machinery through which the will of the state is formed",
+                "correct_option": "C",
+                "explanation": "Government can be defined as the machinery through which the will of the state is formed and enforced. It is the instrument through which the state puts its plans into action."
+              },
+              {
+                "id": "b1_b3_gov_009",
+                "text": "Which of the following is NOT a means by which government maintains law and order?",
+                "options": [
+                  "Law making",
+                  "Maintenance of police and other security personnel",
+                  "Provision of socio-economic services",
+                  "Establishment of provision associations"
+                ],
+                "answer": "Establishment of provision associations",
+                "correct_option": "D",
+                "explanation": "Government maintains law and order through law making, maintenance of police and other security personnel, provision of socio-economic services, and effective communication networks. 'Establishment of provision associations' is not a means by which government maintains law and order."
+              },
+              {
+                "id": "b1_b3_gov_010",
+                "text": "The institution and processes connected with making, enforcing and reviewing of laws in any society is referred to as:",
+                "options": [
+                  "The Judiciary",
+                  "Constitution drafting committee",
+                  "Government",
+                  "Bar association"
+                ],
+                "answer": "Government",
+                "correct_option": "C",
+                "explanation": "The institution and processes connected with making, enforcing, and reviewing of laws in any society is referred to as government. It is the machinery through which the will of the state is formulated and realised."
+              },
+              {
+                "id": "b1_b3_gov_011",
+                "text": "Government maintains law and order through the following EXCEPT:",
+                "options": [
+                  "Policies",
+                  "Immigration",
+                  "The legislature",
+                  "Prison service"
+                ],
+                "answer": "Immigration",
+                "correct_option": "B",
+                "explanation": "Government makes laws and enforces them on the people through the legislature, police, and prison services. The legislature makes, reviews, and amends laws; the police ensure that the laws are obeyed by citizens; the judiciary pronounces judgment on offenders; and the prison services provide accommodation for inmates or suspected criminals. Immigration is not primarily a means of maintaining law and order."
+              },
+              {
+                "id": "b1_b3_gov_012",
+                "text": "Government as an art of governing is the process of carrying out the day-to-day administration of the affairs of a state which involves:",
+                "options": [
+                  "Making, enforcing and interpreting laws",
+                  "Only making laws",
+                  "Only interpreting laws",
+                  "Only enforcing laws"
+                ],
+                "answer": "Making, enforcing and interpreting laws",
+                "correct_option": "A",
+                "explanation": "Government as an art of governing is the process of carrying out the day-to-day administration of the affairs of a state which involves making, enforcing, and interpreting laws."
+              },
+              {
+                "id": "b1_b3_gov_013",
+                "text": "Government can be described as the art of:",
+                "options": [
+                  "Making constitutions",
+                  "Collecting taxes",
+                  "Engineering social conflicts",
+                  "Making and enforcing laws"
+                ],
+                "answer": "Making and enforcing laws",
+                "correct_option": "D",
+                "explanation": "Government can be described as the art of making and enforcing laws. It involves the formulation and implementation of policies for the well-being of society."
+              },
+              {
+                "id": "b1_b3_gov_014",
+                "text": "In the process of governing, input refers to the:",
+                "options": [
+                  "Decisions and actions of the authorities",
+                  "Regulations made by the government for individuals and groups",
+                  "Demands made by individuals and groups for actions by the authorities",
+                  "Demands which have become official policies"
+                ],
+                "answer": "Demands made by individuals and groups for actions by the authorities",
+                "correct_option": "C",
+                "explanation": "In the process of governing, input refers to the demands made by individuals and groups for actions by the authorities. These demands are processed by the government to produce output."
+              },
+              {
+                "id": "b1_b3_gov_015",
+                "text": "In the process of governing, output refers to:",
+                "options": [
+                  "The influence of pressure groups",
+                  "The demand of the political party",
+                  "The decision of the government",
+                  "The opinion of the electorate"
+                ],
+                "answer": "The decision of the government",
+                "correct_option": "C",
+                "explanation": "In the process of governing, output refers to the decisions of the government. These decisions are the result of processing inputs (demands) from individuals and groups."
+              },
+              {
+                "id": "b1_b3_gov_016",
+                "text": "The study of government is important because it:",
+                "options": [
+                  "Directs people's attention to the development of non-state institutions",
+                  "Enables citizens to understand the processes for managing state affairs",
+                  "Encourages individuals to take decisions that satisfy their aspirations",
+                  "Encourages the elites to remain in power"
+                ],
+                "answer": "Enables citizens to understand the processes for managing state affairs",
+                "correct_option": "B",
+                "explanation": "The study of government is important because it enables citizens to understand the processes for managing state affairs. It empowers citizens or learners to understand different systems of government and how such governments operate."
+              },
+              {
+                "id": "b1_b3_gov_017",
+                "text": "Which of the following is a reason for studying government?",
+                "options": [
+                  "Knowledge of the rights of the individual",
+                  "Acquisition of skills to work in a state-owned establishment",
+                  "Helps the individual to form a pressure group",
+                  "Enables citizens to vote during election"
+                ],
+                "answer": "Knowledge of the rights of the individual",
+                "correct_option": "A",
+                "explanation": "Government is a subject that empowers its learners with the ability and knowledge of identifying their fundamental human rights as citizens and how to defend themselves based on the constitution of the state."
+              },
+              {
+                "id": "b1_b3_gov_018",
+                "text": "The study of Government offers an individual all the following EXCEPT:",
+                "options": [
+                  "Knowledge of his rights and duties",
+                  "Training in good citizenship",
+                  "Knowledge of the processes of government",
+                  "Training to become a judge"
+                ],
+                "answer": "Training to become a judge",
+                "correct_option": "D",
+                "explanation": "Government as a subject empowers citizens with knowledge of their rights and obligations, trains them to become good citizens, and enhances their knowledge of leadership and governance. However, it does not train individuals to become judges; that requires legal education."
+              },
+              {
+                "id": "b1_b3_gov_019",
+                "text": "Which of the following best describes the subject matter of Government?",
+                "options": [
+                  "Election",
+                  "People",
+                  "Political party",
+                  "Political power"
+                ],
+                "answer": "Political power",
+                "correct_option": "D",
+                "explanation": "Political power is an authority held by a group within a society that allows for the administration of public resources and the implementation of policies for society. Power may be acquired as a means of government direction or in opposition to a government group."
+              },
+              {
+                "id": "b1_b3_gov_020",
+                "text": "The study of government essentially facilitates the understanding of the:",
+                "options": [
+                  "Organisation of the executive arm of government",
+                  "Observance of fundamental human rights",
+                  "Functioning of the entire social formation",
+                  "Governance of human societies"
+                ],
+                "answer": "Governance of human societies",
+                "correct_option": "D",
+                "explanation": "The study of government essentially facilitates the understanding of the governance of human societies and its ideology. It provides knowledge about how societies are governed and the principles underlying governance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b4",
+        "name": "Bundle 4",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b4_gov_001",
+                "text": "A state may be defined as a politically organised body of people occupying a definite geographical territory with an organised legitimate government. Which of the following is NOT a feature of a state?",
+                "options": [
+                  "Population",
+                  "Territory",
+                  "Sovereignty",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The features of a state include population, permanence, territory, recognition, government, sovereignty, and laws. Political parties are not a feature of a state; they are organisations within a state."
+              },
+              {
+                "id": "b1_b4_gov_002",
+                "text": "Which of the following is alternatively known as a state?",
+                "options": [
+                  "Country",
+                  "Province",
+                  "District",
+                  "County"
+                ],
+                "answer": "Country",
+                "correct_option": "A",
+                "explanation": "A state is alternatively known as a country. In most government textbooks, the term 'state' refers to a country."
+              },
+              {
+                "id": "b1_b4_gov_003",
+                "text": "The following are examples of states EXCEPT:",
+                "options": [
+                  "Maiduguri",
+                  "Nigeria",
+                  "Britain",
+                  "Ghana"
+                ],
+                "answer": "Maiduguri",
+                "correct_option": "A",
+                "explanation": "A state is a national or territorial entity considered as an organised political community under one government. Examples of states include Nigeria, Ghana, Britain, USA, Senegal, and Canada. Maiduguri is a city, not a state."
+              },
+              {
+                "id": "b1_b4_gov_004",
+                "text": "An essential feature of a state is:",
+                "options": [
+                  "Availability of mineral resources",
+                  "Developed infrastructure",
+                  "An organised system of laws",
+                  "Developed markets"
+                ],
+                "answer": "An organised system of laws",
+                "correct_option": "C",
+                "explanation": "An essential feature of a state is an organised system of laws. These laws are put in place to guide the members of the state. Laws ensure that every citizen knows what is expected of him or her by the state."
+              },
+              {
+                "id": "b1_b4_gov_005",
+                "text": "Which of the following is a feature of a state?",
+                "options": [
+                  "Pursuance of sectorial interest",
+                  "Colonial experience",
+                  "Territorial boundary",
+                  "Temporary existence"
+                ],
+                "answer": "Territorial boundary",
+                "correct_option": "C",
+                "explanation": "A feature of a state is territorial boundary. A state has clear and well-defined boundaries separating it from other states."
+              },
+              {
+                "id": "b1_b4_gov_006",
+                "text": "The most visible feature of a state is:",
+                "options": [
+                  "Compulsory membership",
+                  "Defined geographical territory",
+                  "Written constitution",
+                  "Sovereign power"
+                ],
+                "answer": "Defined geographical territory",
+                "correct_option": "B",
+                "explanation": "The most visible feature of a state is its defined geographical territory. A state has clear and well-defined boundaries separating it from other states."
+              },
+              {
+                "id": "b1_b4_gov_007",
+                "text": "The primary purpose of a state is to:",
+                "options": [
+                  "Establish a system of law and order",
+                  "Train people to become good citizens",
+                  "Cater for all the needs of the citizens",
+                  "Ensure the self-sufficiency of its people"
+                ],
+                "answer": "Establish a system of law and order",
+                "correct_option": "A",
+                "explanation": "The primary purpose of a state is to establish a system of law and order. A state without law and order is a place where everyone has the right to do whatsoever they wish. It means the state has no constitution and government."
+              },
+              {
+                "id": "b1_b4_gov_008",
+                "text": "A state may be defined as a community of people:",
+                "options": [
+                  "Established to implement government policies",
+                  "With differing interests to control the government",
+                  "With institutions to make laws",
+                  "Organised as a unit for the purpose of government"
+                ],
+                "answer": "Organised as a unit for the purpose of government",
+                "correct_option": "D",
+                "explanation": "A state may be defined as a politically organised body of people inhabiting a defined geographical entity with an organised legitimate government. It is organised as a unit for the purpose of government."
+              },
+              {
+                "id": "b1_b4_gov_009",
+                "text": "The main attributes of a state are:",
+                "options": [
+                  "Population, territory, government and sovereignty",
+                  "The press, the legislature, the executive and the judiciary",
+                  "Federal, state and local government",
+                  "Government, the police and the armed forces"
+                ],
+                "answer": "Population, territory, government and sovereignty",
+                "correct_option": "A",
+                "explanation": "The main attributes of a state are population, territory, government, and sovereignty. These are the essential features that define a state."
+              },
+              {
+                "id": "b1_b4_gov_010",
+                "text": "A society that is politically organized under a government is called a:",
+                "options": [
+                  "Sovereign state",
+                  "Community",
+                  "National state",
+                  "Polity"
+                ],
+                "answer": "Sovereign state",
+                "correct_option": "A",
+                "explanation": "A society that is politically organized under a government is called a sovereign state. It is an independent country with standing in international law."
+              },
+              {
+                "id": "b1_b4_gov_011",
+                "text": "Sovereignty is the absolute, supreme and ultimate dominion and authority of a political state, subject to no higher power expressed within its territory and in complete freedom from any outside influence. Which of the following is NOT a characteristic of a state?",
+                "options": [
+                  "Population",
+                  "Territory",
+                  "Recognition",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The characteristics of a state include population, territory, recognition, sovereignty, permanence, government, and laws. Political parties are not a characteristic of a state; they are organisations within a state."
+              },
+              {
+                "id": "b1_b4_gov_012",
+                "text": "A state may be defined as a politically organised body of people occupying a definite geographical territory with an organised legitimate government. Which of the following is NOT one of the features of a state?",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The features of a state include population, permanence, territory, recognition, government, sovereignty, and laws. Political parties are not a feature of a state."
+              },
+              {
+                "id": "b1_b4_gov_013",
+                "text": "Government is different from other political organisations because:",
+                "options": [
+                  "It has legitimate power over citizens",
+                  "Its officials have fixed terms of office",
+                  "It can punish those who violate its rules",
+                  "It is made up of elected officials"
+                ],
+                "answer": "It has legitimate power over citizens",
+                "correct_option": "A",
+                "explanation": "Government is different from other political organisations because it has legitimate power over citizens. This legitimate power is derived from the social acceptance of the people."
+              },
+              {
+                "id": "b1_b4_gov_014",
+                "text": "Which of the following defines the concept of government?",
+                "options": [
+                  "The process of administering justice in a country",
+                  "The process of supervising the activities of the legislature",
+                  "The orderly management and control of the affairs of a country",
+                  "The orderly transfer of power to duly elected politicians"
+                ],
+                "answer": "The orderly management and control of the affairs of a country",
+                "correct_option": "C",
+                "explanation": "Government is defined as the orderly management and control of the affairs of a country. It involves making, enforcing, and interpreting laws for the well-being of society."
+              },
+              {
+                "id": "b1_b4_gov_015",
+                "text": "A common feature of government is:",
+                "options": [
+                  "A written constitution",
+                  "The independence of the judiciary",
+                  "The suspension of powers",
+                  "The making of public policy"
+                ],
+                "answer": "The making of public policy",
+                "correct_option": "D",
+                "explanation": "A common feature of government is the making of public policy. Government formulates and implements policies for the well-being of the people."
+              },
+              {
+                "id": "b1_b4_gov_016",
+                "text": "The institution and processes connected with making, enforcing and reviewing of laws in any society is referred to as the:",
+                "options": [
+                  "Judiciary",
+                  "Constitution drafting committee",
+                  "Government",
+                  "Bar association"
+                ],
+                "answer": "Government",
+                "correct_option": "C",
+                "explanation": "The institution and processes connected with making, enforcing, and reviewing of laws in any society is referred to as government. It is the machinery through which the will of the state is formulated and realised."
+              },
+              {
+                "id": "b1_b4_gov_017",
+                "text": "An indispensable feature of any government is:",
+                "options": [
+                  "A written constitution",
+                  "The independence of the judiciary",
+                  "The separation of powers",
+                  "Political power"
+                ],
+                "answer": "Political power",
+                "correct_option": "D",
+                "explanation": "An indispensable feature of any government is political power. Political power enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all."
+              },
+              {
+                "id": "b1_b4_gov_018",
+                "text": "The institutions which constitute the main organs of the government of a nation are the:",
+                "options": [
+                  "Legislature, the executive and the judiciary",
+                  "Judiciary and the civil service",
+                  "Trustee and the presidium",
+                  "Civil service and the senate"
+                ],
+                "answer": "Legislature, the executive and the judiciary",
+                "correct_option": "A",
+                "explanation": "The institutions which constitute the main organs of the government of a nation are the legislature, the executive, and the judiciary. These three organs work together to make the running of the system easy and effective."
+              },
+              {
+                "id": "b1_b4_gov_019",
+                "text": "Government is different from other political organizations because:",
+                "options": [
+                  "It has legitimate power over citizens",
+                  "Its officials have fixed terms of office",
+                  "It can punish those who violate its rules",
+                  "It is made up of elected officials"
+                ],
+                "answer": "It has legitimate power over citizens",
+                "correct_option": "A",
+                "explanation": "Government is different from other political organizations because it has legitimate power over its citizens. This legitimate power is derived from the social acceptance of the people."
+              },
+              {
+                "id": "b1_b4_gov_020",
+                "text": "An ideology is essentially:",
+                "options": [
+                  "A guide to political action",
+                  "A manual for revolution",
+                  "A curse of political actors",
+                  "A non-political concept"
+                ],
+                "answer": "A guide to political action",
+                "correct_option": "A",
+                "explanation": "An ideology is essentially a guide to political action. It is a set of opinions or beliefs of a group or an individual. Very often, ideology refers to a set of political beliefs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b5",
+        "name": "Bundle 5",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b5_gov_001",
+                "text": "The state has the following characteristics EXCEPT:",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Temporary existence"
+                ],
+                "answer": "Temporary existence",
+                "correct_option": "D",
+                "explanation": "The state has the following characteristics: population, permanence, territory, recognition, government, sovereignty, and laws. Temporary existence is not a characteristic of a state; the state is permanent."
+              },
+              {
+                "id": "b1_b5_gov_002",
+                "text": "Which of the following is an essential feature of a state because a state is occupied by people and there is no limitation to the number of people making up a state?",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Sovereignty"
+                ],
+                "answer": "Population",
+                "correct_option": "A",
+                "explanation": "Population is an essential feature of a state because a state is occupied by people and there is no limitation to the number of people making up a state in any constitution."
+              },
+              {
+                "id": "b1_b5_gov_003",
+                "text": "The state is a permanent place that cannot be easily changed. Government may change but the state remains. This feature of the state is called:",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Recognition"
+                ],
+                "answer": "Permanence",
+                "correct_option": "B",
+                "explanation": "Permanence is the feature of the state that makes it a permanent place that cannot be easily changed. Government may change, but the state remains."
+              },
+              {
+                "id": "b1_b5_gov_004",
+                "text": "A state has clear and well-defined boundaries separating it from other states, e.g., Nigeria and Cameroon or Benin Republic. This feature is called:",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Recognition"
+                ],
+                "answer": "Territory",
+                "correct_option": "C",
+                "explanation": "Territory is the feature of a state that gives it clear and well-defined boundaries separating it from other states."
+              },
+              {
+                "id": "b1_b5_gov_005",
+                "text": "A state must be recognised both internally and externally. The people of a state must realise and recognise the corporate existence of their state, while other states in the international environment must equally give recognition to an existing state. This feature is called:",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Recognition"
+                ],
+                "answer": "Recognition",
+                "correct_option": "D",
+                "explanation": "Recognition is the feature of a state that requires it to be recognised both internally and externally. The people of a state must realise and recognise the corporate existence of their state, while other states in the international environment must equally give recognition to an existing state."
+              },
+              {
+                "id": "b1_b5_gov_006",
+                "text": "Government is not a permanent feature of a state but it remains a significant feature because it is a machinery set up by the state to pilot the affairs of the people making up that state. The maintenance and prestige of a state are in the hands of the government. This feature is called:",
+                "options": [
+                  "Population",
+                  "Government",
+                  "Territory",
+                  "Sovereignty"
+                ],
+                "answer": "Government",
+                "correct_option": "B",
+                "explanation": "Government is a significant feature of a state because it is the machinery set up by the state to pilot the affairs of the people making up that state. The maintenance and prestige of a state are in the hands of the government."
+              },
+              {
+                "id": "b1_b5_gov_007",
+                "text": "The supreme power to make decisions and enforce them on the people is with the state. This power is not negotiable and must be free from external interference and control. This feature is called:",
+                "options": [
+                  "Population",
+                  "Government",
+                  "Territory",
+                  "Sovereignty"
+                ],
+                "answer": "Sovereignty",
+                "correct_option": "D",
+                "explanation": "Sovereignty is the supreme power to make decisions and enforce them on the people. It is not negotiable and must be free from external interference and control."
+              },
+              {
+                "id": "b1_b5_gov_008",
+                "text": "It is the duty of the government to maintain law and order in the state. But to do this, certain laws must be in place to guide members of the state. In Nigeria, the primary source of law is:",
+                "options": [
+                  "The Constitution",
+                  "The Legislature",
+                  "The Judiciary",
+                  "The Executive"
+                ],
+                "answer": "The Constitution",
+                "correct_option": "A",
+                "explanation": "In Nigeria, the primary source of law is the Constitution. The Constitution guides the activities, beliefs, and behaviour of the citizens and outlines the duties of those in government, their limitations, rights, and obligations."
+              },
+              {
+                "id": "b1_b5_gov_009",
+                "text": "The state must protect its citizens from outside attack while also ensuring domestic peace. This is called:",
+                "options": [
+                  "Establishment of order",
+                  "Promotion of individual's welfare",
+                  "Promotion of general welfare",
+                  "Economic function"
+                ],
+                "answer": "Establishment of order",
+                "correct_option": "A",
+                "explanation": "Establishment of order is the function of the state that involves protecting its citizens from outside attack while also ensuring domestic peace."
+              },
+              {
+                "id": "b1_b5_gov_010",
+                "text": "The state must provide conditions necessary for the full development of every citizen. Such conditions must include the protection of individual's liberty. This is called:",
+                "options": [
+                  "Establishment of order",
+                  "Promotion of individual's welfare",
+                  "Promotion of general welfare",
+                  "Administrative function"
+                ],
+                "answer": "Promotion of individual's welfare",
+                "correct_option": "B",
+                "explanation": "Promotion of individual's welfare is the function of the state that involves providing conditions necessary for the full development of every citizen, including the protection of individual's liberty."
+              },
+              {
+                "id": "b1_b5_gov_011",
+                "text": "The state must strive to ensure happiness for the greatest number of citizens living within the state. It is the duty of the state to promote united action aimed at achieving those goals which individuals cannot achieve. This is called:",
+                "options": [
+                  "Establishment of order",
+                  "Promotion of individual's welfare",
+                  "Promotion of general welfare",
+                  "International relations"
+                ],
+                "answer": "Promotion of general welfare",
+                "correct_option": "C",
+                "explanation": "Promotion of general welfare is the function of the state that involves striving to ensure happiness for the greatest number of citizens living within the state. The state must also harmonise varying interests, whether among groups, between individuals, or between groups and society as a whole."
+              },
+              {
+                "id": "b1_b5_gov_012",
+                "text": "The primary purpose of a state is to:",
+                "options": [
+                  "Establish a system of law and order",
+                  "Train people to become good citizens",
+                  "Cater for all the needs of the citizens",
+                  "Ensure the self-sufficiency of its people"
+                ],
+                "answer": "Establish a system of law and order",
+                "correct_option": "A",
+                "explanation": "The primary purpose of a state is to establish a system of law and order. A state without law and order is a place where everyone has the right to do whatsoever they wish."
+              },
+              {
+                "id": "b1_b5_gov_013",
+                "text": "Which of the following is NOT a difference between a state and other human associations?",
+                "options": [
+                  "Membership of a state is compulsory",
+                  "Rules made by the state are authoritative and generally binding on all residents",
+                  "The state has legitimate authority to fine, imprison or execute law breakers",
+                  "Membership of a state is voluntary"
+                ],
+                "answer": "Membership of a state is voluntary",
+                "correct_option": "D",
+                "explanation": "Membership of a state is compulsory, not voluntary. Other human associations have voluntary membership. The rules made by the state are authoritative and generally binding on all residents, and the state has legitimate authority to fine, imprison, or execute law breakers."
+              },
+              {
+                "id": "b1_b5_gov_014",
+                "text": "The state has legitimate authority to fine, imprison or execute law breakers. This is a difference between a state and other human associations because:",
+                "options": [
+                  "Other human associations do not have such authority for their members",
+                  "Other human associations are permanent",
+                  "Other human associations have compulsory membership",
+                  "Other human associations can use force to guarantee obedience"
+                ],
+                "answer": "Other human associations do not have such authority for their members",
+                "correct_option": "A",
+                "explanation": "The state has legitimate authority to fine, imprison, or execute law breakers, while other human associations do not have such authority for their members. This is a key difference between a state and other human associations."
+              },
+              {
+                "id": "b1_b5_gov_015",
+                "text": "The state can use force to ensure that its citizens obey its laws and regulations. This is a difference between a state and other human associations because:",
+                "options": [
+                  "Other associations cannot use force to guarantee obedience to their rules and regulations",
+                  "Other associations are permanent",
+                  "Other associations have compulsory membership",
+                  "Other associations have legitimate authority to fine and imprison"
+                ],
+                "answer": "Other associations cannot use force to guarantee obedience to their rules and regulations",
+                "correct_option": "A",
+                "explanation": "The state can use force to ensure that its citizens obey its laws and regulations, while other associations cannot use force to guarantee obedience to their rules and regulations."
+              },
+              {
+                "id": "b1_b5_gov_016",
+                "text": "The state is a permanent association while other associations are non-permanent and may disappear and re-emerge. This is a difference between:",
+                "options": [
+                  "A state and government",
+                  "A state and other human associations",
+                  "A state and a nation",
+                  "A state and a society"
+                ],
+                "answer": "A state and other human associations",
+                "correct_option": "B",
+                "explanation": "The state is a permanent association, while other human associations are non-permanent and may disappear and re-emerge. This is one of the differences between a state and other human associations."
+              },
+              {
+                "id": "b1_b5_gov_017",
+                "text": "A state is a territorial association of people with defined boundaries. It has its elements as population, territory, government and sovereignty. A state is more inclusive and therefore greater than government because:",
+                "options": [
+                  "It embraces all the people and associations within a given area",
+                  "It is temporary",
+                  "It has no defined boundaries",
+                  "It is made up of elected officials"
+                ],
+                "answer": "It embraces all the people and associations within a given area",
+                "correct_option": "A",
+                "explanation": "A state is more inclusive and therefore greater than government because it embraces all the people and associations within a given area. The state is permanent, while government is temporary."
+              },
+              {
+                "id": "b1_b5_gov_018",
+                "text": "The primary function of the state that includes defence from external aggression and maintenance of law and order is called:",
+                "options": [
+                  "Defensive Function",
+                  "Administrative Function",
+                  "International Relations",
+                  "Economic Function"
+                ],
+                "answer": "Defensive Function",
+                "correct_option": "A",
+                "explanation": "The Defensive Function of the state includes defence from external aggression and maintenance of law and order. These are essential for economic development."
+              },
+              {
+                "id": "b1_b5_gov_019",
+                "text": "The function of the state that involves setting up administrative structures and agencies for administering and controlling the different departments in the country is called:",
+                "options": [
+                  "Defensive Function",
+                  "Administrative Function",
+                  "International Relations",
+                  "Economic Function"
+                ],
+                "answer": "Administrative Function",
+                "correct_option": "B",
+                "explanation": "The Administrative Function of the state involves setting up administrative structures and agencies for administering and controlling the different departments in the country."
+              },
+              {
+                "id": "b1_b5_gov_020",
+                "text": "The function of the state that involves maintaining friendly relations with other states in the world, including participation in international organisations and conferences and joint treaties with other states, is called:",
+                "options": [
+                  "Defensive Function",
+                  "Administrative Function",
+                  "International Relations",
+                  "Economic Function"
+                ],
+                "answer": "International Relations",
+                "correct_option": "C",
+                "explanation": "International Relations is the function of the state that involves maintaining friendly relations with other states in the world. This includes participation in international organisations, international conferences, and joint treaties with other states."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b6",
+        "name": "Bundle 6",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b6_gov_001",
+                "text": "A state is a nation or territory considered as an organized political community under one government. A nation is a stable community of people formed on the basis of:",
+                "options": [
+                  "Common language, territory, history, ethnicity or psychological makeup manifested in a common culture",
+                  "Common political party and elections",
+                  "Common government and constitution",
+                  "Common military and police force"
+                ],
+                "answer": "Common language, territory, history, ethnicity or psychological makeup manifested in a common culture",
+                "correct_option": "A",
+                "explanation": "A nation is a stable community of people formed on the basis of a common language, territory, history, ethnicity, or psychological makeup manifested in a common culture. A nation can also be defined as a cultural-political community that has become conscious of its autonomy, unity, and particular interests."
+              },
+              {
+                "id": "b1_b6_gov_002",
+                "text": "In Nigeria, there are several nations namely:",
+                "options": [
+                  "Yoruba, Hausa, Fulani, Ibibio, Urhobo, Igbo, Edo, etc.",
+                  "Lagos, Kano, Ibadan, Port Harcourt, etc.",
+                  "North, South, East, West, etc.",
+                  "Christians, Muslims, Traditionalists, etc."
+                ],
+                "answer": "Yoruba, Hausa, Fulani, Ibibio, Urhobo, Igbo, Edo, etc.",
+                "correct_option": "A",
+                "explanation": "In Nigeria, there are several nations namely: Yoruba, Hausa, Fulani, Ibibio, Urhobo, Igbo, Edo, etc. A nation may not necessarily be a state."
+              },
+              {
+                "id": "b1_b6_gov_003",
+                "text": "A common language is one of the attributes of a:",
+                "options": [
+                  "Government",
+                  "Society",
+                  "Nation",
+                  "State"
+                ],
+                "answer": "Nation",
+                "correct_option": "C",
+                "explanation": "A nation could be seen as a body of people who feel themselves to be naturally linked together, share common ties, and believe that they can live happily together. Similarly, these people share the same language, culture, and have a feeling of nationality."
+              },
+              {
+                "id": "b1_b6_gov_004",
+                "text": "A nation refers to a group of people who have similar:",
+                "options": [
+                  "Institutions of learning",
+                  "Customs and traditions",
+                  "Range of age",
+                  "Level of wealth"
+                ],
+                "answer": "Customs and traditions",
+                "correct_option": "B",
+                "explanation": "A nation has also been defined as a cultural-political community that has become conscious of their similar customs and traditions."
+              },
+              {
+                "id": "b1_b6_gov_005",
+                "text": "A nation is best defined as a group of people with common:",
+                "options": [
+                  "Colonial history",
+                  "Government",
+                  "History, language and culture",
+                  "Origin"
+                ],
+                "answer": "History, language and culture",
+                "correct_option": "C",
+                "explanation": "A nation is best defined as a group of people with common history, language, and culture. They share common ties and believe they can live happily together."
+              },
+              {
+                "id": "b1_b6_gov_006",
+                "text": "A nation could be seen as a body of people who feel the following EXCEPT:",
+                "options": [
+                  "Naturally linked together",
+                  "Live happily together",
+                  "Misbehave among themselves",
+                  "Believe in each other"
+                ],
+                "answer": "Misbehave among themselves",
+                "correct_option": "C",
+                "explanation": "A nation is a body of people who feel they are naturally linked together, live happily with each other, believe in one another, and see themselves as their brother's keeper. The people are not satisfied when they are disunited and cannot tolerate subjection to people who do not share these ties."
+              },
+              {
+                "id": "b1_b6_gov_007",
+                "text": "A state must be sovereign. People continue as a nation even if they do not remain sovereign. This is a difference between:",
+                "options": [
+                  "A state and government",
+                  "A state and a nation",
+                  "A state and a society",
+                  "A state and a community"
+                ],
+                "answer": "A state and a nation",
+                "correct_option": "B",
+                "explanation": "A state must be sovereign, while people continue as a nation even if they do not remain sovereign. This is one of the differences between a state and a nation."
+              },
+              {
+                "id": "b1_b6_gov_008",
+                "text": "A state is populated by heterogeneous groups of people, while a nation is populated by:",
+                "options": [
+                  "Homogeneous groups of people",
+                  "Heterogeneous groups of people",
+                  "People from different states",
+                  "People with different cultures"
+                ],
+                "answer": "Homogeneous groups of people",
+                "correct_option": "A",
+                "explanation": "A state is populated by heterogeneous groups of people, while a nation is populated by homogeneous groups of people. The people in a nation have many ties in common, which makes them distinct from other people."
+              },
+              {
+                "id": "b1_b6_gov_009",
+                "text": "A state has no racial connotation. It does not show individualism or exclusiveness. It is not associated with tribal features or in-group, out-group relationship among the people. A nation, however:",
+                "options": [
+                  "Has a racial significance and is limited to a particular geographical entity with its own peculiar features",
+                  "Has no racial significance",
+                  "Is not limited to any geographical entity",
+                  "Has no peculiar features"
+                ],
+                "answer": "Has a racial significance and is limited to a particular geographical entity with its own peculiar features",
+                "correct_option": "A",
+                "explanation": "A nation has a racial significance. It is limited to a particular geographical entity and has its own peculiar features. A state, on the other hand, has no racial connotation and does not show individualism or exclusiveness."
+              },
+              {
+                "id": "b1_b6_gov_010",
+                "text": "A state is recognized as an actor in international relations. It is seen as a corporate entity that can sue and be sued in the course of its relation with other states. It can enter into agreements or treaties with other states. A nation, however:",
+                "options": [
+                  "Is not recognized in relations among states and cannot enter into any agreement or treaty with states at the international level",
+                  "Is recognized as an actor in international relations",
+                  "Can enter into agreements or treaties with other states",
+                  "Can sue and be sued in the course of its relation with other states"
+                ],
+                "answer": "Is not recognized in relations among states and cannot enter into any agreement or treaty with states at the international level",
+                "correct_option": "A",
+                "explanation": "A nation is not recognized in relations among states. It cannot enter into any agreement or treaty with states at the international level. A state, however, is recognized as an actor in international relations and can enter into agreements or treaties with other states."
+              },
+              {
+                "id": "b1_b6_gov_011",
+                "text": "Nationalism is the sense of belonging and love for a nation as a result of shared attributes, namely:",
+                "options": [
+                  "Race, language, geographical location, religion and political aspirations",
+                  "Political party, elections, government and constitution",
+                  "Military, police, judiciary and legislature",
+                  "Tax, revenue, budget and expenditure"
+                ],
+                "answer": "Race, language, geographical location, religion and political aspirations",
+                "correct_option": "A",
+                "explanation": "Nationalism is the sense of belonging and love for a nation as a result of shared attributes, namely: race, language, geographical location, religion, and political aspirations. It is a feeling held by a people to live together."
+              },
+              {
+                "id": "b1_b6_gov_012",
+                "text": "A society is a group of individuals involved in persistent social interaction, or a large social group sharing the same spatial or social territory, typically subject to the same political authority and dominant cultural expectations. Which of the following is NOT a feature of a society?",
+                "options": [
+                  "It is controlled by rules, regulations, norms, conventions and customs",
+                  "Membership of a society is voluntary",
+                  "It is permanent in nature",
+                  "Membership of a society is compulsory"
+                ],
+                "answer": "Membership of a society is compulsory",
+                "correct_option": "D",
+                "explanation": "Membership of a society is voluntary, not compulsory. A society is controlled by rules, regulations, norms, conventions, and customs; it is permanent in nature; and members depend on one another for survival."
+              },
+              {
+                "id": "b1_b6_gov_013",
+                "text": "The society is controlled by rules, regulations, norms, conventions and customs. It applies sanctions on its members as a means of ensuring or affecting discipline. It also applies the use of coercive means to ensure compliance with norms, rules and customs. These are features of:",
+                "options": [
+                  "A state",
+                  "A nation",
+                  "A society",
+                  "A government"
+                ],
+                "answer": "A society",
+                "correct_option": "C",
+                "explanation": "These are features of a society. A society is controlled by rules, regulations, norms, conventions, and customs. It applies sanctions on its members as a means of ensuring or affecting discipline. It also applies the use of coercive means to ensure compliance with norms, rules, and customs."
+              },
+              {
+                "id": "b1_b6_gov_014",
+                "text": "The rules and regulations of a society are binding on all residents. Membership of a society is voluntary. It is permanent in nature. Members depend on one another for survival. These are features of:",
+                "options": [
+                  "A state",
+                  "A nation",
+                  "A society",
+                  "A government"
+                ],
+                "answer": "A society",
+                "correct_option": "C",
+                "explanation": "These are features of a society. The rules and regulations of a society are binding on all residents, membership is voluntary, it is permanent in nature, and members depend on one another for survival."
+              },
+              {
+                "id": "b1_b6_gov_015",
+                "text": "A society is permanent in nature. Membership of a society is voluntary. The roles in society are dynamic. The rules and regulations of a society are binding on all residents. These are:",
+                "options": [
+                  "Features of a state",
+                  "Features of a nation",
+                  "Features of a society",
+                  "Features of a government"
+                ],
+                "answer": "Features of a society",
+                "correct_option": "C",
+                "explanation": "These are features of a society. A society is permanent in nature; membership is voluntary; roles are dynamic; and the rules and regulations are binding on all residents."
+              },
+              {
+                "id": "b1_b6_gov_016",
+                "text": "A society is a group of individuals involved in persistent social interaction, or a large social group sharing the same spatial or social territory, typically subject to the same political authority and dominant cultural expectations. This is the definition of:",
+                "options": [
+                  "A state",
+                  "A nation",
+                  "A society",
+                  "A government"
+                ],
+                "answer": "A society",
+                "correct_option": "C",
+                "explanation": "This is the definition of a society. A society is a group of individuals involved in persistent social interaction, or a large social group sharing the same spatial or social territory, typically subject to the same political authority and dominant cultural expectations."
+              },
+              {
+                "id": "b1_b6_gov_017",
+                "text": "The state indicates a political system. The state possesses sovereignty. The state controls external relations. The state came into existence after the origin of society. The state has a fixed territory. The state has the power to enforce laws. The scope of the state is limited. These are:",
+                "options": [
+                  "Differences between the state and society",
+                  "Differences between the state and nation",
+                  "Differences between the state and government",
+                  "Differences between the state and community"
+                ],
+                "answer": "Differences between the state and society",
+                "correct_option": "A",
+                "explanation": "These are differences between the state and society. The state indicates a political system, possesses sovereignty, controls external relations, came into existence after the origin of society, has a fixed territory, has the power to enforce laws, and has a limited scope. Society, on the other hand, has no fixed territory, no power to enforce laws, and a much wider scope."
+              },
+              {
+                "id": "b1_b6_gov_018",
+                "text": "A society has no fixed territory. Society has no power to enforce laws. The scope of society is much wider. These are:",
+                "options": [
+                  "Features of a society",
+                  "Differences between the state and society",
+                  "Features of a state",
+                  "Differences between the state and nation"
+                ],
+                "answer": "Differences between the state and society",
+                "correct_option": "B",
+                "explanation": "These are differences between the state and society. A society has no fixed territory, no power to enforce laws, and a much wider scope than the state."
+              },
+              {
+                "id": "b1_b6_gov_019",
+                "text": "A state is different from other forms of human associations because membership is:",
+                "options": [
+                  "Obligatory",
+                  "Reserved for professionals only",
+                  "Reserved for the rich",
+                  "Temporary",
+                  "Voluntary"
+                ],
+                "answer": "Obligatory",
+                "correct_option": "A",
+                "explanation": "A state is different from other forms of human associations because membership is obligatory (compulsory). Members have no right to choose their state of origin. Other human associations have voluntary membership."
+              },
+              {
+                "id": "b1_b6_gov_020",
+                "text": "A state is a special form of human association because it:",
+                "options": [
+                  "Has a legitimate monopoly of life and death penalties over its citizens",
+                  "Is the richest association in society",
+                  "Has a constitution approved by the citizens",
+                  "Has a government"
+                ],
+                "answer": "Has a legitimate monopoly of life and death penalties over its citizens",
+                "correct_option": "A",
+                "explanation": "A state is a special form of human association because it has a legitimate monopoly of life and death penalties over its citizens. This means the state has the legitimate authority to fine, imprison, or execute law breakers, which other associations do not have."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b7",
+        "name": "Bundle 7",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b7_gov_001",
+                "text": "The state is different from Government because:",
+                "options": [
+                  "The state unlike the government is permanent",
+                  "The government is made up of powerful people",
+                  "Members of the government are elected",
+                  "The state can exercise absolute power"
+                ],
+                "answer": "The state unlike the government is permanent",
+                "correct_option": "A",
+                "explanation": "The state is different from government because the state is permanent; it has defined boundaries, armed forces, currency, etc. Government is tenured by election. It is temporary and must work based on the constitution of the state."
+              },
+              {
+                "id": "b1_b7_gov_002",
+                "text": "Which of the following groups has a compulsory membership?",
+                "options": [
+                  "Community",
+                  "State",
+                  "Society",
+                  "Club"
+                ],
+                "answer": "State",
+                "correct_option": "B",
+                "explanation": "State is a group of individuals that has compulsory membership. The members have no right to choose their state of origin. Other groups like community, society, and club have voluntary membership."
+              },
+              {
+                "id": "b1_b7_gov_003",
+                "text": "A state may accommodate people of:",
+                "options": [
+                  "Language",
+                  "Culture",
+                  "Religious belief",
+                  "Different states"
+                ],
+                "answer": "Different states",
+                "correct_option": "D",
+                "explanation": "A state may accommodate people from different states because a state can be defined as a territory with its own government and borders within a larger country. A state is populated by heterogeneous groups of people."
+              },
+              {
+                "id": "b1_b7_gov_004",
+                "text": "What is a state?",
+                "options": [
+                  "A geographical territory occupied by a group of people of different cultural background with an organized government",
+                  "A cultural community with a common language",
+                  "A voluntary association of people with common interests",
+                  "A temporary political organisation"
+                ],
+                "answer": "A geographical territory occupied by a group of people of different cultural background with an organized government",
+                "correct_option": "A",
+                "explanation": "A state is a geographical territory occupied by a group of people of different cultural background with an organized government. A state can also be defined as a territory with its own government and borders or an organized political community acting under a government."
+              },
+              {
+                "id": "b1_b7_gov_005",
+                "text": "A state is a type of political entity. It is an organized political community that lives under a single system of government. A state is an independent country with standing in international laws such as:",
+                "options": [
+                  "Membership of the United Nations and recognition by other independent states",
+                  "Membership of a political party",
+                  "Membership of a cultural organisation",
+                  "Membership of a trade union"
+                ],
+                "answer": "Membership of the United Nations and recognition by other independent states",
+                "correct_option": "A",
+                "explanation": "A state is an independent country with standing in international laws, such as membership of the United Nations and recognition by other independent states."
+              },
+              {
+                "id": "b1_b7_gov_006",
+                "text": "The primary purpose of the state is to:",
+                "options": [
+                  "Establish a system of law and order",
+                  "Train people to become good citizens",
+                  "Cater for all the needs of the citizens",
+                  "Ensure the self-sufficiency of its people"
+                ],
+                "answer": "Establish a system of law and order",
+                "correct_option": "A",
+                "explanation": "The primary purpose of the state is to establish a system of law and order. A state without law and order is a place where everyone has the right to do whatsoever they wish. It means the state has no constitution and government."
+              },
+              {
+                "id": "b1_b7_gov_007",
+                "text": "A state may be defined as a community of people:",
+                "options": [
+                  "Established to implement government policies",
+                  "With differing interests to control the government",
+                  "With institutions to make laws",
+                  "Organised as a unit for the purpose of government"
+                ],
+                "answer": "Organised as a unit for the purpose of government",
+                "correct_option": "D",
+                "explanation": "A state may be defined as a politically organised body of people inhabiting a defined geographical entity with an organised legitimate government. It is organised as a unit for the purpose of government."
+              },
+              {
+                "id": "b1_b7_gov_008",
+                "text": "What characteristics must a state possess?",
+                "options": [
+                  "Permanence, population, territory, recognition, government and sovereignty",
+                  "Political parties, elections, campaigns and rallies",
+                  "Tax, revenue, budget and expenditure",
+                  "Army, navy, air force and police"
+                ],
+                "answer": "Permanence, population, territory, recognition, government and sovereignty",
+                "correct_option": "A",
+                "explanation": "The characteristics or features of a state include permanence, population, territory, recognition, government, sovereignty, and laws."
+              },
+              {
+                "id": "b1_b7_gov_009",
+                "text": "The main attributes of a state are:",
+                "options": [
+                  "Population, territory, government and sovereignty",
+                  "The press, the legislature, the executive and the judiciary",
+                  "Federal, state and local government",
+                  "Government, the police and the armed forces"
+                ],
+                "answer": "Population, territory, government and sovereignty",
+                "correct_option": "A",
+                "explanation": "The main attributes of a state are population, territory, government, and sovereignty. These are the essential features that define a state."
+              },
+              {
+                "id": "b1_b7_gov_010",
+                "text": "A society that is politically organized under a government is called a:",
+                "options": [
+                  "Sovereign state",
+                  "Community",
+                  "National state",
+                  "Polity"
+                ],
+                "answer": "Sovereign state",
+                "correct_option": "A",
+                "explanation": "A society that is politically organized under a government is called a sovereign state. It is an independent country with standing in international law."
+              },
+              {
+                "id": "b1_b7_gov_011",
+                "text": "What is sovereignty of a state?",
+                "options": [
+                  "The absolute, supreme and ultimate dominion and authority of a political state, subject to no higher power expressed within its territory and in complete freedom from any outside influence",
+                  "The power of the government to make laws",
+                  "The authority of the judiciary to interpret laws",
+                  "The power of the executive to implement policies"
+                ],
+                "answer": "The absolute, supreme and ultimate dominion and authority of a political state, subject to no higher power expressed within its territory and in complete freedom from any outside influence",
+                "correct_option": "A",
+                "explanation": "Sovereignty is the absolute, supreme and ultimate dominion and authority of a political state, subject to no higher power expressed within its territory and in complete freedom from any outside influence."
+              },
+              {
+                "id": "b1_b7_gov_012",
+                "text": "Which of the following is NOT a characteristic of a state?",
+                "options": [
+                  "Population",
+                  "Territory",
+                  "Recognition",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The characteristics of a state include population, territory, recognition, sovereignty, permanence, government, and laws. Political parties are not a characteristic of a state; they are organisations within a state."
+              },
+              {
+                "id": "b1_b7_gov_013",
+                "text": "A state may be defined as a politically organised body of people occupying a definite geographical territory with an organised legitimate government. Which of the following is NOT a feature of a state?",
+                "options": [
+                  "Population",
+                  "Permanence",
+                  "Territory",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The features of a state include population, permanence, territory, recognition, government, sovereignty, and laws. Political parties are not a feature of a state."
+              },
+              {
+                "id": "b1_b7_gov_014",
+                "text": "An institution that transforms a myriad of demands into a more manageable proposal is the:",
+                "options": [
+                  "Executive",
+                  "Legislative",
+                  "Government",
+                  "Political party"
+                ],
+                "answer": "Government",
+                "correct_option": "C",
+                "explanation": "Government is the only institution that transforms a myriad of demands into a more manageable proposal by giving elected or appointed few individuals among the citizens the authority to govern a country or state. 'Myriad' means a countless or extremely great number of people or things."
+              },
+              {
+                "id": "b1_b7_gov_015",
+                "text": "Government as an academic field of study refers to the:",
+                "options": [
+                  "President and his ministers",
+                  "Study of political institutions and processes",
+                  "Working of the organs of government",
+                  "Membership of international organizations"
+                ],
+                "answer": "Study of political institutions and processes",
+                "correct_option": "B",
+                "explanation": "Government as an academic field of study refers to the study of political institutions and their processes. It also educates us about different forms of government in the world."
+              },
+              {
+                "id": "b1_b7_gov_016",
+                "text": "Government exercises political power on behalf of the:",
+                "options": [
+                  "Elite",
+                  "Citizens",
+                  "Party caucus",
+                  "Vocal few"
+                ],
+                "answer": "Citizens",
+                "correct_option": "B",
+                "explanation": "Government exercises political power on behalf of the citizens. As it is impossible for everyone to take a hand in running the country, the people (citizens) elect representatives to act on their behalf."
+              },
+              {
+                "id": "b1_b7_gov_017",
+                "text": "The common characteristic or attribute of government is the ability of:",
+                "options": [
+                  "The separation of powers",
+                  "The making of public policy",
+                  "The independence of the judiciary",
+                  "A written constitution"
+                ],
+                "answer": "The making of public policy",
+                "correct_option": "B",
+                "explanation": "The common characteristic or attribute of government is the ability of making public policy. Government formulates and implements policies for the well-being of the people."
+              },
+              {
+                "id": "b1_b7_gov_018",
+                "text": "An indispensable feature of any government is:",
+                "options": [
+                  "A written constitution",
+                  "The independence of the judiciary",
+                  "The separation of powers",
+                  "Political power"
+                ],
+                "answer": "Political power",
+                "correct_option": "D",
+                "explanation": "An indispensable feature of any government is political power. Political power enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all."
+              },
+              {
+                "id": "b1_b7_gov_019",
+                "text": "The institutions which constitute the main organs of the government of a nation are the:",
+                "options": [
+                  "Legislature, the executive and the judiciary",
+                  "Judiciary and the civil service",
+                  "Trustee and the presidium",
+                  "Civil service and the senate"
+                ],
+                "answer": "Legislature, the executive and the judiciary",
+                "correct_option": "A",
+                "explanation": "The institutions which constitute the main organs of the government of a nation are the legislature, the executive, and the judiciary. These three organs work together to make the running of the system easy and effective."
+              },
+              {
+                "id": "b1_b7_gov_020",
+                "text": "Government is different from other political organizations because:",
+                "options": [
+                  "It has legitimate power over citizens",
+                  "Its officials have fixed terms of office",
+                  "It can punish those who violate its rules",
+                  "It is made up of elected officials"
+                ],
+                "answer": "It has legitimate power over citizens",
+                "correct_option": "A",
+                "explanation": "Government is different from other political organizations because it has legitimate power over its citizens. This legitimate power is derived from the social acceptance of the people."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b8",
+        "name": "Bundle 8",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b8_gov_001",
+                "text": "An ideology is essentially:",
+                "options": [
+                  "A guide to political action",
+                  "A manual for revolution",
+                  "A curse of political actors",
+                  "A non-political concept"
+                ],
+                "answer": "A guide to political action",
+                "correct_option": "A",
+                "explanation": "An ideology is essentially a guide to political action. It is a set of opinions or beliefs of a group or an individual. Very often, ideology refers to a set of political beliefs."
+              },
+              {
+                "id": "b1_b8_gov_002",
+                "text": "Government as an institution of the state may be defined as a machinery established by the state to organise, manage the affairs of the state and administer its functions and duties. Which of the following is NOT one of the three major arms of government as an institution of the state?",
+                "options": [
+                  "The Executive",
+                  "The Legislature",
+                  "The Judiciary",
+                  "The Civil Service"
+                ],
+                "answer": "The Civil Service",
+                "correct_option": "D",
+                "explanation": "Government as an institution of the state has three major arms: the executive, the legislature, and the judiciary. The civil service is not one of the three major arms of government; it is the workforce that implements policies."
+              },
+              {
+                "id": "b1_b8_gov_003",
+                "text": "The primary function of the Executive arm of government is:",
+                "options": [
+                  "Policy formulation and implementation",
+                  "Law making",
+                  "Interpretation of the law",
+                  "Adjudication of disputes"
+                ],
+                "answer": "Policy formulation and implementation",
+                "correct_option": "A",
+                "explanation": "The Executive arm of government is concerned with policy formulation and implementation. It is responsible for carrying out the day-to-day administration of the state."
+              },
+              {
+                "id": "b1_b8_gov_004",
+                "text": "The primary function of the Legislature is:",
+                "options": [
+                  "Policy formulation and implementation",
+                  "Law making which every member of the society must obey",
+                  "Interpretation of the law",
+                  "Adjudication of disputes"
+                ],
+                "answer": "Law making which every member of the society must obey",
+                "correct_option": "B",
+                "explanation": "The Legislature is concerned with law making which every member of the society must obey. Laws made by the legislature are binding on all residents of the state."
+              },
+              {
+                "id": "b1_b8_gov_005",
+                "text": "The primary function of the Judiciary is:",
+                "options": [
+                  "Policy formulation and implementation",
+                  "Law making",
+                  "Interpretation of the law and deciding how to apply the laws in specific disputes",
+                  "Collection of taxes"
+                ],
+                "answer": "Interpretation of the law and deciding how to apply the laws in specific disputes",
+                "correct_option": "C",
+                "explanation": "The Judiciary concentrates mainly on the interpretation of the law and decides how to apply the laws in specific disputes. It also administers justice."
+              },
+              {
+                "id": "b1_b8_gov_006",
+                "text": "Government as an art of governing or process of administration may be defined as a body vested with the power and authority for maintaining security, peace, and stability by:",
+                "options": [
+                  "Making and enforcing conventional and fundamental laws in a given state or society",
+                  "Making laws only",
+                  "Enforcing laws only",
+                  "Interpreting laws only"
+                ],
+                "answer": "Making and enforcing conventional and fundamental laws in a given state or society",
+                "correct_option": "A",
+                "explanation": "Government as an art of governing is a body vested with the power and authority for maintaining security, peace, and stability by making and enforcing conventional and fundamental laws in a given state or society."
+              },
+              {
+                "id": "b1_b8_gov_007",
+                "text": "Policy formulation involves developing strategies for dealing with policy issues which have been placed on an agenda. Which of the following is NOT part of policy formulation and implementation?",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule elimination"
+                ],
+                "answer": "Rule elimination",
+                "correct_option": "D",
+                "explanation": "Policy formulation and implementation involves rule making, rule implementation, and rule adjudication. 'Rule elimination' is not part of the process."
+              },
+              {
+                "id": "b1_b8_gov_008",
+                "text": "The process of making a rule or policy that is expected to have a binding effect on the populace is called:",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule amendment"
+                ],
+                "answer": "Rule making",
+                "correct_option": "A",
+                "explanation": "Rule making is the process of making a rule or policy that is expected to have a binding effect on the policy or the populace. Policy formulation goes with rule making that has an effect on the people, or that is expected to produce results."
+              },
+              {
+                "id": "b1_b8_gov_009",
+                "text": "Having made rules, it is important that the rules are implemented for them to be effective. This means that the rules have to be put to use for results to be gained. This process is called:",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule amendment"
+                ],
+                "answer": "Rule implementation",
+                "correct_option": "B",
+                "explanation": "Rule implementation is the process by which rules that have been made are put to use for results to be gained. It is important that rules are implemented for them to be effective."
+              },
+              {
+                "id": "b1_b8_gov_010",
+                "text": "The process by which a government reviews policy formulation and policy implementation and comes to a decision which determines successful formulation and implementation is called:",
+                "options": [
+                  "Rule making",
+                  "Rule implementation",
+                  "Rule adjudication",
+                  "Rule amendment"
+                ],
+                "answer": "Rule adjudication",
+                "correct_option": "C",
+                "explanation": "Rule adjudication is the process by which a government reviews policy formulation and policy implementation and comes to a decision which determines successful formulation and implementation. It is a process by which formulated and implemented rules are ranked and evaluated."
+              },
+              {
+                "id": "b1_b8_gov_011",
+                "text": "Government as an academic field of study may be defined as the study of:",
+                "options": [
+                  "Agencies, political institutions and the dynamics of the state",
+                  "Only the executive arm of government",
+                  "Only the constitution of a country",
+                  "Only political parties and elections"
+                ],
+                "answer": "Agencies, political institutions and the dynamics of the state",
+                "correct_option": "A",
+                "explanation": "Government as an academic field of study is the study of agencies, political institutions, and the dynamics of the state. It is studied under various names such as political science, politics, or public affairs."
+              },
+              {
+                "id": "b1_b8_gov_012",
+                "text": "In the study of government, public administration covers the:",
+                "options": [
+                  "Army, prison officers and public force",
+                  "Civil service, public corporations and local government",
+                  "Ministries of education, health and agriculture",
+                  "Schools, hospitals and health centres"
+                ],
+                "answer": "Civil service, public corporations and local government",
+                "correct_option": "B",
+                "explanation": "Public administration in government as a subject covers the civil service, public corporations, and local government. It focuses on the methods and techniques used by government functionaries in the management of state affairs."
+              },
+              {
+                "id": "b1_b8_gov_013",
+                "text": "Government as a subject refers to the study of:",
+                "options": [
+                  "Territorial expansion",
+                  "Political leaders",
+                  "The various nations of the world",
+                  "The constituents of the state"
+                ],
+                "answer": "The constituents of the state",
+                "correct_option": "D",
+                "explanation": "Government as a subject refers to the study of the constituents of the state. It involves the study of constitution, political institutions, and the dynamics of the state."
+              },
+              {
+                "id": "b1_b8_gov_014",
+                "text": "Government can be defined as the study of:",
+                "options": [
+                  "Federalism",
+                  "Cabinet system of government only",
+                  "How people rule themselves",
+                  "Presidential system of government only"
+                ],
+                "answer": "How people rule themselves",
+                "correct_option": "C",
+                "explanation": "Government as an academic field of study involves the study of political institutions in the state. The political institutions consist of political thinkers that help the people to rule themselves."
+              },
+              {
+                "id": "b1_b8_gov_015",
+                "text": "The study of government in schools is important because the student can:",
+                "options": [
+                  "Be assisted by political leaders",
+                  "Learn about their rights",
+                  "Qualify for elections",
+                  "Be nominated for a trip abroad"
+                ],
+                "answer": "Learn about their rights",
+                "correct_option": "B",
+                "explanation": "The study of government in schools is important because the student can learn about their rights, duties, and obligations as citizens. It also helps them understand the processes of governance."
+              },
+              {
+                "id": "b1_b8_gov_016",
+                "text": "Which of the following is NOT an academic branch of government?",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Commercial Agriculture"
+                ],
+                "answer": "Commercial Agriculture",
+                "correct_option": "D",
+                "explanation": "The academic branches of government include Public Administration, International Relations, Comparative Politics, Political Theory, Political Economy, and National Politics. Commercial Agriculture is not a branch of government."
+              },
+              {
+                "id": "b1_b8_gov_017",
+                "text": "The academic branch of government that deals with relations between nations as well as the environment within which these relations are maintained is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "International Relations",
+                "correct_option": "B",
+                "explanation": "International Relations deals with relations between nations as well as the environment within which these relations are maintained. It covers international organisations, international law, diplomacy, international economics, and foreign policy."
+              },
+              {
+                "id": "b1_b8_gov_018",
+                "text": "The academic branch of government that focuses on the comparison of different governments in order to discover cross-cultural similarities and differences is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "Comparative Politics",
+                "correct_option": "C",
+                "explanation": "Comparative Politics focuses on the comparison of different governments in order to discover cross-cultural similarities and differences. Students learn about Western European nations, communist nations, developing nations, and other nations."
+              },
+              {
+                "id": "b1_b8_gov_019",
+                "text": "The academic branch of government that concerns philosophical explanations related to the origin, form, behaviour, and purposes of human organisation is:",
+                "options": [
+                  "Public Administration",
+                  "International Relations",
+                  "Comparative Politics",
+                  "Political Theory"
+                ],
+                "answer": "Political Theory",
+                "correct_option": "D",
+                "explanation": "Political Theory concerns philosophical explanations which relate to the origin, form, behaviour, and purposes of human organisation. Some doctrines are based on speculations while others are based on empirical observations of political life."
+              },
+              {
+                "id": "b1_b8_gov_020",
+                "text": "The academic branch of government that deals with the fiscal and monetary policies of a country is:",
+                "options": [
+                  "Political Economy",
+                  "National Politics",
+                  "Public Administration",
+                  "International Relations"
+                ],
+                "answer": "Political Economy",
+                "correct_option": "A",
+                "explanation": "Political Economy deals with the fiscal and monetary policies of a country. It studies how politics influences economics and how economics affects politics. It includes public finance, budgeting, social welfare, and the relationship between government and business."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b9",
+        "name": "Bundle 9",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b9_gov_001",
+                "text": "The academic branch of government that focuses on the organisation of a specific government is:",
+                "options": [
+                  "Political Economy",
+                  "National Politics",
+                  "Public Administration",
+                  "International Relations"
+                ],
+                "answer": "National Politics",
+                "correct_option": "B",
+                "explanation": "National Politics focuses on the organisation of a specific government. It teaches students about their own country under topics such as the legislature, the executive, the courts, the constitution, political parties, elections, and political awareness."
+              },
+              {
+                "id": "b1_b9_gov_002",
+                "text": "Which of the following is a reason why government is an academic field of study?",
+                "options": [
+                  "It is taught in schools, colleges, and universities.",
+                  "It has specialised areas in tertiary institutions.",
+                  "It borrows ideas from other established disciplines.",
+                  "All of the above."
+                ],
+                "answer": "All of the above.",
+                "correct_option": "D",
+                "explanation": "Government is an academic field of study because it is taught in schools, colleges, and universities; it has specialised areas in tertiary institutions; it borrows ideas from other established disciplines like philosophy, history, sociology, economics, and law; and it uses scientific methods, tools, and statistics in research and analysis."
+              },
+              {
+                "id": "b1_b9_gov_003",
+                "text": "Government as an academic field of study borrows ideas from renowned philosophers like:",
+                "options": [
+                  "Plato, Aristotle, Hobbes, Rousseau, John Locke, Karl Marx",
+                  "Newton, Einstein, Galileo, Darwin",
+                  "Shakespeare, Dickens, Achebe, Soyinka",
+                  "Mozart, Beethoven, Bach, Handel"
+                ],
+                "answer": "Plato, Aristotle, Hobbes, Rousseau, John Locke, Karl Marx",
+                "correct_option": "A",
+                "explanation": "Government as an academic field of study borrows ideas from renowned philosophers like Plato, Aristotle, Hobbes, Rousseau, John Locke, and Karl Marx, among others."
+              },
+              {
+                "id": "b1_b9_gov_004",
+                "text": "Which of the following is NOT a characteristic or attribute of government?",
+                "options": [
+                  "Political Power",
+                  "Legitimate Authority",
+                  "Periodic Change",
+                  "Permanent Tenure"
+                ],
+                "answer": "Permanent Tenure",
+                "correct_option": "D",
+                "explanation": "The characteristics of government include political power, legitimate authority, law making, revenue, work force, protection, periodic change, and welfare services. 'Permanent Tenure' is not a characteristic of government, especially in a democracy where periodic change is expected."
+              },
+              {
+                "id": "b1_b9_gov_005",
+                "text": "The power that enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all is:",
+                "options": [
+                  "Political Power",
+                  "Legitimate Authority",
+                  "Sovereignty",
+                  "Revenue"
+                ],
+                "answer": "Political Power",
+                "correct_option": "A",
+                "explanation": "Political Power is the power that enables government to control the behaviour of citizens through formulated and implemented policies for the benefit of all."
+              },
+              {
+                "id": "b1_b9_gov_006",
+                "text": "Any legally constituted government must have legitimate authority arising from:",
+                "options": [
+                  "The social acceptance of the people",
+                  "The military strength of the state",
+                  "The wealth of the ruling class",
+                  "The support of foreign powers"
+                ],
+                "answer": "The social acceptance of the people",
+                "correct_option": "A",
+                "explanation": "Any legally constituted government must have legitimate authority arising from the social acceptance of the people. It is the acceptance of the people that gives government the right to govern."
+              },
+              {
+                "id": "b1_b9_gov_007",
+                "text": "The primary function of government in a state is to:",
+                "options": [
+                  "Build schools and hospitals",
+                  "Provide transport services",
+                  "Engage in campaigns and rallies",
+                  "Maintain law and order"
+                ],
+                "answer": "Maintain law and order",
+                "correct_option": "D",
+                "explanation": "The primary function of government in a state is to maintain law and order. This is essential before the government can function properly and provide other services."
+              },
+              {
+                "id": "b1_b9_gov_008",
+                "text": "The functions of government include all of the following EXCEPT:",
+                "options": [
+                  "Maintenance of peace and order",
+                  "Provision of social services",
+                  "Protection of citizens from malicious attack",
+                  "Provision of free medical services for all"
+                ],
+                "answer": "Provision of free medical services for all",
+                "correct_option": "D",
+                "explanation": "It is the responsibility of government to maintain peace and order, provide social services, and protect citizens from malicious attack. However, government cannot provide free medical services for all citizens; it can only make provision for health centres and hospitals."
+              },
+              {
+                "id": "b1_b9_gov_009",
+                "text": "The state performs the following functions EXCEPT:",
+                "options": [
+                  "Promoting the welfare of the citizens",
+                  "Encouraging the struggle for power",
+                  "Providing social services",
+                  "Encouraging trade with other states"
+                ],
+                "answer": "Encouraging the struggle for power",
+                "correct_option": "B",
+                "explanation": "Government can never encourage the struggle for power. It encourages peace and unity in society. The struggle for power can lead to riots, demonstrations, etc., that will disturb the peace and order of society."
+              },
+              {
+                "id": "b1_b9_gov_010",
+                "text": "Government can be made responsible and accountable to its citizens through the following methods EXCEPT:",
+                "options": [
+                  "Periodic change of government",
+                  "Demonstration",
+                  "Political education",
+                  "Public opinion"
+                ],
+                "answer": "Demonstration",
+                "correct_option": "B",
+                "explanation": "Government can be made responsible and accountable to its citizens through periodic change of government, political education, public opinion, and the provision of social amenities and basic infrastructure. Demonstration is a form of violence and is not a formal process of deliberations or method of identifying the needs of the people."
+              },
+              {
+                "id": "b1_b9_gov_011",
+                "text": "The functions of the state are achieved through:",
+                "options": [
+                  "Political socialism",
+                  "Separation of powers",
+                  "Organs of government",
+                  "Diplomatic means"
+                ],
+                "answer": "Organs of government",
+                "correct_option": "C",
+                "explanation": "The functions of the state are achieved through the organs of government. The three organs of government are the executive (policy formulation and implementation), the legislature (law making), and the judiciary (interpretation of laws). Without these three organs, the objectives and goals of the state cannot be easily achieved."
+              },
+              {
+                "id": "b1_b9_gov_012",
+                "text": "Which of the following is NOT an acceptable function of government?",
+                "options": [
+                  "Safe guarding life and property",
+                  "Subversion",
+                  "Maintaining laws and orders",
+                  "Providing basic welfare needs"
+                ],
+                "answer": "Subversion",
+                "correct_option": "B",
+                "explanation": "Subversion is not an acceptable function of government. Subversion means the act of trying to destroy or damage an established system or government."
+              },
+              {
+                "id": "b1_b9_gov_013",
+                "text": "The defense of a country is a major function of the:",
+                "options": [
+                  "Government of a state",
+                  "Judiciary",
+                  "Legislature",
+                  "Diplomatic corps"
+                ],
+                "answer": "Government of a state",
+                "correct_option": "A",
+                "explanation": "The defense of a country is a major function of the government of a state. The government defends the state from external and internal aggression. It is the duty of the armed forces to maintain the territorial integrity of the state."
+              },
+              {
+                "id": "b1_b9_gov_014",
+                "text": "Government is the machinery established to manage the affairs of the:",
+                "options": [
+                  "Rulers",
+                  "Aliens",
+                  "Civil service",
+                  "State"
+                ],
+                "answer": "State",
+                "correct_option": "D",
+                "explanation": "Government is the machinery established to manage the affairs of the state. It is the instrument through which the state organises, manages, and administers its functions and duties."
+              },
+              {
+                "id": "b1_b9_gov_015",
+                "text": "Government refers to all the following EXCEPT:",
+                "options": [
+                  "An institution of the state",
+                  "The process of ruling a political community",
+                  "The exercise of power and authority",
+                  "The act of civil disobedience"
+                ],
+                "answer": "The act of civil disobedience",
+                "correct_option": "D",
+                "explanation": "Government refers to an institution of the state, the process of ruling a political community, and the exercise of power and authority. Government can never be an act of civil disobedience."
+              },
+              {
+                "id": "b1_b9_gov_016",
+                "text": "Government can be defined as:",
+                "options": [
+                  "The process of selecting some people to form a government",
+                  "The way by which people rule the government",
+                  "The machinery through which the will of the state is formed",
+                  "The system by which authority is shared among the privileged few in society"
+                ],
+                "answer": "The machinery through which the will of the state is formed",
+                "correct_option": "C",
+                "explanation": "Government can be defined as the machinery through which the will of the state is formed. It also helps the opinion of the citizens to be established."
+              },
+              {
+                "id": "b1_b9_gov_017",
+                "text": "Government as an institution of the state refers to the:",
+                "options": [
+                  "Police and the armed forces",
+                  "Judiciary, the president and his ministers",
+                  "Legislature, the executive and the judiciary",
+                  "Economic and political institutions"
+                ],
+                "answer": "Legislature, the executive and the judiciary",
+                "correct_option": "C",
+                "explanation": "Government as an institution of the state refers to the legislature that makes laws, the executive that formulates and implements policies, and the judiciary that interprets the law. These are the three organs of government."
+              },
+              {
+                "id": "b1_b9_gov_018",
+                "text": "The institution through which governments discharge responsibilities is known as:",
+                "options": [
+                  "Organs of government",
+                  "Pressure groups",
+                  "Political parties",
+                  "National assembly"
+                ],
+                "answer": "Organs of government",
+                "correct_option": "A",
+                "explanation": "The institution through which governments discharge responsibilities is known as the organs of government. The organs of government enhance and coordinate the affairs of the state."
+              },
+              {
+                "id": "b1_b9_gov_019",
+                "text": "The term Government refers to all the following EXCEPT:",
+                "options": [
+                  "An academic field of study",
+                  "A process or art of governing",
+                  "A process of making and enforcing laws in a state",
+                  "An institution made up of persons with common interest"
+                ],
+                "answer": "An institution made up of persons with common interest",
+                "correct_option": "D",
+                "explanation": "Government refers to an academic field of study, a process or art of governing, a process of making and enforcing laws in a state, and an institution of the state for achieving the will of the state. It is not an institution made up of persons with common interest."
+              },
+              {
+                "id": "b1_b9_gov_020",
+                "text": "The process by which a particular society is ruled is called:",
+                "options": [
+                  "Government",
+                  "Legislature",
+                  "Judiciary",
+                  "Constitution"
+                ],
+                "answer": "Government",
+                "correct_option": "A",
+                "explanation": "The process by which a particular society is ruled is called government. It involves making, enforcing, and interpreting laws."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "b1_b10",
+        "name": "Bundle 10",
+        "isUnlocked": false,
+        "isCompleted": false,
+        "requiredScore": 70,
+        "lastScore": null,
+        "attempts": [],
+        "subjects": [
+          {
+            "subjectId": "sub_gov",
+            "subjectName": "Government",
+            "totalQuestions": 20,
+            "questions": [
+              {
+                "id": "b1_b10_gov_001",
+                "text": "Government can be defined as:",
+                "options": [
+                  "The process of setting some people to form a government",
+                  "The way by which people rule the state is formulated and enforced",
+                  "The machinery through which the will of the state is formed",
+                  "A group of people that makes laws in a society"
+                ],
+                "answer": "The machinery through which the will of the state is formed",
+                "correct_option": "C",
+                "explanation": "Government can be defined as the machinery through which the will of the state is formed and enforced. It is the instrument through which the state puts its plans into action."
+              },
+              {
+                "id": "b1_b10_gov_002",
+                "text": "Which of the following is NOT a means by which government maintains law and order?",
+                "options": [
+                  "Law making",
+                  "Maintenance of police and other security personnel",
+                  "Provision of socio-economic services",
+                  "Establishment of provision associations"
+                ],
+                "answer": "Establishment of provision associations",
+                "correct_option": "D",
+                "explanation": "Government maintains law and order through law making, maintenance of police and other security personnel, provision of socio-economic services, and effective communication networks. 'Establishment of provision associations' is not a means by which government maintains law and order."
+              },
+              {
+                "id": "b1_b10_gov_003",
+                "text": "The institution and processes connected with making, enforcing and reviewing of laws in any society is referred to as:",
+                "options": [
+                  "The Judiciary",
+                  "Constitution drafting committee",
+                  "Government",
+                  "Bar association"
+                ],
+                "answer": "Government",
+                "correct_option": "C",
+                "explanation": "The institution and processes connected with making, enforcing, and reviewing of laws in any society is referred to as government. It is the machinery through which the will of the state is formulated and realised."
+              },
+              {
+                "id": "b1_b10_gov_004",
+                "text": "Government maintains law and order through the following EXCEPT:",
+                "options": [
+                  "Policies",
+                  "Immigration",
+                  "The legislature",
+                  "Prison service"
+                ],
+                "answer": "Immigration",
+                "correct_option": "B",
+                "explanation": "Government makes laws and enforces them on the people through the legislature, police, and prison services. The legislature makes, reviews, and amends laws; the police ensure that the laws are obeyed by citizens; the judiciary pronounces judgment on offenders; and the prison services provide accommodation for inmates or suspected criminals. Immigration is not primarily a means of maintaining law and order."
+              },
+              {
+                "id": "b1_b10_gov_005",
+                "text": "Government as an art of governing is the process of carrying out the day-to-day administration of the affairs of a state which involves:",
+                "options": [
+                  "Making, enforcing and interpreting laws",
+                  "Only making laws",
+                  "Only interpreting laws",
+                  "Only enforcing laws"
+                ],
+                "answer": "Making, enforcing and interpreting laws",
+                "correct_option": "A",
+                "explanation": "Government as an art of governing is the process of carrying out the day-to-day administration of the affairs of a state which involves making, enforcing, and interpreting laws."
+              },
+              {
+                "id": "b1_b10_gov_006",
+                "text": "Government can be described as the art of:",
+                "options": [
+                  "Making constitutions",
+                  "Collecting taxes",
+                  "Engineering social conflicts",
+                  "Making and enforcing laws"
+                ],
+                "answer": "Making and enforcing laws",
+                "correct_option": "D",
+                "explanation": "Government can be described as the art of making and enforcing laws. It involves the formulation and implementation of policies for the well-being of society."
+              },
+              {
+                "id": "b1_b10_gov_007",
+                "text": "In the process of governing, input refers to the:",
+                "options": [
+                  "Decisions and actions of the authorities",
+                  "Regulations made by the government for individuals and groups",
+                  "Demands made by individuals and groups for actions by the authorities",
+                  "Demands which have become official policies"
+                ],
+                "answer": "Demands made by individuals and groups for actions by the authorities",
+                "correct_option": "C",
+                "explanation": "In the process of governing, input refers to the demands made by individuals and groups for actions by the authorities. These demands are processed by the government to produce output."
+              },
+              {
+                "id": "b1_b10_gov_008",
+                "text": "In the process of governing, output refers to:",
+                "options": [
+                  "The influence of pressure groups",
+                  "The demand of the political party",
+                  "The decision of the government",
+                  "The opinion of the electorate"
+                ],
+                "answer": "The decision of the government",
+                "correct_option": "C",
+                "explanation": "In the process of governing, output refers to the decisions of the government. These decisions are the result of processing inputs (demands) from individuals and groups."
+              },
+              {
+                "id": "b1_b10_gov_009",
+                "text": "The study of government is important because it:",
+                "options": [
+                  "Directs people's attention to the development of non-state institutions",
+                  "Enables citizens to understand the processes for managing state affairs",
+                  "Encourages individuals to take decisions that satisfy their aspirations",
+                  "Encourages the elites to remain in power"
+                ],
+                "answer": "Enables citizens to understand the processes for managing state affairs",
+                "correct_option": "B",
+                "explanation": "The study of government is important because it enables citizens to understand the processes for managing state affairs. It empowers citizens or learners to understand different systems of government and how such governments operate."
+              },
+              {
+                "id": "b1_b10_gov_010",
+                "text": "Which of the following is a reason for studying government?",
+                "options": [
+                  "Knowledge of the rights of the individual",
+                  "Acquisition of skills to work in a state-owned establishment",
+                  "Helps the individual to form a pressure group",
+                  "Enables citizens to vote during election"
+                ],
+                "answer": "Knowledge of the rights of the individual",
+                "correct_option": "A",
+                "explanation": "Government is a subject that empowers its learners with the ability and knowledge of identifying their fundamental human rights as citizens and how to defend themselves based on the constitution of the state."
+              },
+              {
+                "id": "b1_b10_gov_011",
+                "text": "The study of Government offers an individual all the following EXCEPT:",
+                "options": [
+                  "Knowledge of his rights and duties",
+                  "Training in good citizenship",
+                  "Knowledge of the processes of government",
+                  "Training to become a judge"
+                ],
+                "answer": "Training to become a judge",
+                "correct_option": "D",
+                "explanation": "Government as a subject empowers citizens with knowledge of their rights and obligations, trains them to become good citizens, and enhances their knowledge of leadership and governance. However, it does not train individuals to become judges; that requires legal education."
+              },
+              {
+                "id": "b1_b10_gov_012",
+                "text": "Which of the following best describes the subject matter of Government?",
+                "options": [
+                  "Election",
+                  "People",
+                  "Political party",
+                  "Political power"
+                ],
+                "answer": "Political power",
+                "correct_option": "D",
+                "explanation": "Political power is an authority held by a group within a society that allows for the administration of public resources and the implementation of policies for society. Power may be acquired as a means of government direction or in opposition to a government group."
+              },
+              {
+                "id": "b1_b10_gov_013",
+                "text": "The study of government essentially facilitates the understanding of the:",
+                "options": [
+                  "Organisation of the executive arm of government",
+                  "Observance of fundamental human rights",
+                  "Functioning of the entire social formation",
+                  "Governance of human societies"
+                ],
+                "answer": "Governance of human societies",
+                "correct_option": "D",
+                "explanation": "The study of government essentially facilitates the understanding of the governance of human societies and its ideology. It provides knowledge about how societies are governed and the principles underlying governance."
+              },
+              {
+                "id": "b1_b10_gov_014",
+                "text": "A state may be defined as a politically organised body of people occupying a definite geographical territory with an organised legitimate government. Which of the following is NOT a feature of a state?",
+                "options": [
+                  "Population",
+                  "Territory",
+                  "Sovereignty",
+                  "Political parties"
+                ],
+                "answer": "Political parties",
+                "correct_option": "D",
+                "explanation": "The features of a state include population, permanence, territory, recognition, government, sovereignty, and laws. Political parties are not a feature of a state; they are organisations within a state."
+              },
+              {
+                "id": "b1_b10_gov_015",
+                "text": "Which of the following is alternatively known as a state?",
+                "options": [
+                  "Country",
+                  "Province",
+                  "District",
+                  "County"
+                ],
+                "answer": "Country",
+                "correct_option": "A",
+                "explanation": "A state is alternatively known as a country. In most government textbooks, the term 'state' refers to a country."
+              },
+              {
+                "id": "b1_b10_gov_016",
+                "text": "The following are examples of states EXCEPT:",
+                "options": [
+                  "Maiduguri",
+                  "Nigeria",
+                  "Britain",
+                  "Ghana"
+                ],
+                "answer": "Maiduguri",
+                "correct_option": "A",
+                "explanation": "A state is a national or territorial entity considered as an organised political community under one government. Examples of states include Nigeria, Ghana, Britain, USA, Senegal, and Canada. Maiduguri is a city, not a state."
+              },
+              {
+                "id": "b1_b10_gov_017",
+                "text": "An essential feature of a state is:",
+                "options": [
+                  "Availability of mineral resources",
+                  "Developed infrastructure",
+                  "An organised system of laws",
+                  "Developed markets"
+                ],
+                "answer": "An organised system of laws",
+                "correct_option": "C",
+                "explanation": "An essential feature of a state is an organised system of laws. These laws are put in place to guide the members of the state. Laws ensure that every citizen knows what is expected of him or her by the state."
+              },
+              {
+                "id": "b1_b10_gov_018",
+                "text": "Which of the following is a feature of a state?",
+                "options": [
+                  "Pursuance of sectorial interest",
+                  "Colonial experience",
+                  "Territorial boundary",
+                  "Temporary existence"
+                ],
+                "answer": "Territorial boundary",
+                "correct_option": "C",
+                "explanation": "A feature of a state is territorial boundary. A state has clear and well-defined boundaries separating it from other states."
+              },
+              {
+                "id": "b1_b10_gov_019",
+                "text": "The most visible feature of a state is:",
+                "options": [
+                  "Compulsory membership",
+                  "Defined geographical territory",
+                  "Written constitution",
+                  "Sovereign power"
+                ],
+                "answer": "Defined geographical territory",
+                "correct_option": "B",
+                "explanation": "The most visible feature of a state is its defined geographical territory. A state has clear and well-defined boundaries separating it from other states."
+              },
+              {
+                "id": "b1_b10_gov_020",
+                "text": "The primary purpose of the state is to:",
+                "options": [
+                  "Establish a system of law and order",
+                  "Train people to become good citizens",
+                  "Cater for all the needs of the citizens",
+                  "Ensure the self-sufficiency of its people"
+                ],
+                "answer": "Establish a system of law and order",
+                "correct_option": "A",
+                "explanation": "The primary purpose of the state is to establish a system of law and order. A state without law and order is a place where everyone has the right to do whatsoever they wish. It means the state has no constitution and government."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

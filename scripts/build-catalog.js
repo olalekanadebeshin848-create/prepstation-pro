@@ -82,17 +82,46 @@ const strataList = allFiles.map((filename) => {
     strataId = `strata_${stgMatch[1]}`;
   }
 
-  // Parse JSON file contents for rich metadata
-  if (!isPsz) {
+  // Helper: Try unpack PSZ
+  function tryUnpackPsz(p) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      // Strip UTF-8 Byte Order Mark (BOM) if present
-      content = content.replace(/^\uFEFF/, '').trim();
-      const parsed = JSON.parse(content);
-      const structural = parsed.structuralStrata || parsed;
-      const meta = parsed.strataMetadata || {};
+      const bytes = new Uint8Array(fs.readFileSync(p));
+      const magic = new TextDecoder().decode(bytes.slice(0, 4));
+      if (magic !== 'PSZ1' && magic !== 'PSR1') return null;
+      const storedDev = new TextDecoder().decode(bytes.slice(9, 45)).replace(/\0/g, '').trim();
+      const PSZ_APP_SALT = 'PSP_2025_DMS_GROUPS_SECURE_KEY_XK92';
+      const key = PSZ_APP_SALT + '::' + storedDev + '::' + PSZ_APP_SALT.split('').reverse().join('');
+      const enc = new TextEncoder();
+      const keyBytes = enc.encode(key);
+      const encrypted = bytes.slice(45);
+      const out = new Uint8Array(encrypted.length);
+      for (let i = 0; i < encrypted.length; i++) {
+        out[i] = encrypted[i] ^ keyBytes[i % keyBytes.length];
+      }
+      return JSON.parse(new TextDecoder().decode(out));
+    } catch {
+      return null;
+    }
+  }
 
-      if (meta.label) {
+  // Parse file contents for rich metadata
+  let parsed = null;
+  try {
+    if (isPsz) {
+      parsed = tryUnpackPsz(filePath);
+    } else {
+      let content = fs.readFileSync(filePath, 'utf8');
+      content = content.replace(/^\uFEFF/, '').trim();
+      parsed = JSON.parse(content);
+    }
+
+    if (parsed) {
+      const structural = parsed.structuralStrata || parsed.strata?.structuralStrata || parsed.strata || parsed;
+      const meta = parsed.strataMetadata || parsed.strata?.strataMetadata || {};
+
+      if (meta.title) {
+        displayName = meta.title;
+      } else if (meta.label) {
         displayName = meta.label;
       } else if (structural.displayName && structural.displayName !== 'STRATA 1') {
         displayName = structural.displayName;
@@ -118,6 +147,7 @@ const strataList = allFiles.map((filename) => {
 
       if (Array.isArray(structural.bundles)) {
         totalBundles = structural.bundles.length;
+        totalQuestions = 0;
         for (const bundle of structural.bundles) {
           if (Array.isArray(bundle.questions)) {
             totalQuestions += bundle.questions.length;
@@ -132,17 +162,22 @@ const strataList = allFiles.map((filename) => {
           }
         }
       }
-    } catch (err) {
-      console.warn(`[PrepStation Catalog] ⚠️ Could not parse JSON for ${filename}:`, err.message);
     }
-  } else {
-    // Default estimated numbers for encrypted binary packages
-    totalBundles = 10;
-    totalQuestions = 200;
+  } catch (err) {
+    console.warn(`[PrepStation Catalog] ⚠️ Could not parse file for ${filename}:`, err.message);
   }
 
   // Tier detection:
-  // If filename or strata ID explicitly indicates premium, mark as premium; otherwise basic
+  // Honor explicit tier declared in package metadata, otherwise detect
+  let explicitTier = null;
+  if (parsed) {
+    explicitTier =
+      parsed.structuralStrata?.tier ||
+      parsed.strata?.structuralStrata?.tier ||
+      parsed.tier ||
+      parsed.strata?.tier;
+  }
+
   const isPremium =
     upperName.includes('PREMIUM') ||
     upperName.includes('PAID') ||
@@ -150,7 +185,7 @@ const strataList = allFiles.map((filename) => {
     strataId === 'strata_3' ||
     strataId === 'strata_4';
 
-  const tier = isPremium ? 'premium' : 'basic';
+  const tier = explicitTier || (isPremium ? 'premium' : 'basic');
   const id = cleanBaseName.toLowerCase().replace(/[^a-z0-9]/g, '_');
 
   return {
