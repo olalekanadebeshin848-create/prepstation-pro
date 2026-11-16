@@ -249,20 +249,22 @@
         <span class="step-pill">LIVE CLOUD</span>
         Active Strata Packages in GitHub Repository
       </div>
-      <div style="display:flex;gap:8px;">
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <button class="btn btn-sm btn-danger" id="btnDeleteBatch" style="display:none;" onclick="handleBatchDelete()">🗑️ Delete Selected (<span id="batchCount">0</span>)</button>
         <button class="btn btn-sm btn-outline" onclick="fetchLiveStrataList()">🔄 Refresh Cloud Files</button>
         <button class="btn btn-sm btn-purple" onclick="triggerCatalogRebuild()">🤖 Trigger Catalog Rebuild</button>
       </div>
     </div>
 
     <p style="font-size:12px;color:var(--text-muted);margin-bottom:12px;">
-      These are the files live right now in <code>strata/</code> on GitHub. Any file deleted or added here directly updates all PrepStation apps worldwide.
+      These are the files live right now in <code>strata/</code> on GitHub. Any file deleted or added here directly updates all PrepStation apps worldwide. You can select multiple files to delete them in a single batch.
     </p>
 
     <div class="table-wrap">
       <table>
         <thead>
           <tr>
+            <th style="width:36px;text-align:center;"><input type="checkbox" id="chkSelectAll" onchange="toggleSelectAllCloudFiles(this.checked)"/></th>
             <th>Package Name</th>
             <th>Type</th>
             <th>Size</th>
@@ -271,7 +273,7 @@
           </tr>
         </thead>
         <tbody id="cloudTableBody">
-          <tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">Connect your GitHub token in Step 1 to load active strata packages.</td></tr>
+          <tr><td colspan="6" style="text-align:center;color:var(--text-dim);padding:20px;">Connect your GitHub token in Step 1 to load active strata packages.</td></tr>
         </tbody>
       </table>
     </div>
@@ -474,11 +476,50 @@
     }
   }
 
+  // Selected files for batch operations
+  const selectedCloudFileNames = new Set();
+
+  function toggleSelectAllCloudFiles(checked) {
+    selectedCloudFileNames.clear();
+    if (checked && window.currentCloudList) {
+      window.currentCloudList.forEach(f => selectedCloudFileNames.add(f.name));
+    }
+    updateBatchDeleteUI();
+    const cbs = document.querySelectorAll('.cloud-file-chk');
+    cbs.forEach(cb => cb.checked = checked);
+  }
+
+  function toggleCloudFileSelection(name, checked) {
+    if (checked) {
+      selectedCloudFileNames.add(name);
+    } else {
+      selectedCloudFileNames.delete(name);
+    }
+    updateBatchDeleteUI();
+  }
+
+  function updateBatchDeleteUI() {
+    const btn = document.getElementById('btnDeleteBatch');
+    const cnt = document.getElementById('batchCount');
+    const count = selectedCloudFileNames.size;
+    if (btn && cnt) {
+      cnt.textContent = count;
+      btn.style.display = count > 0 ? 'inline-flex' : 'none';
+    }
+    const selectAll = document.getElementById('chkSelectAll');
+    if (selectAll && window.currentCloudList) {
+      selectAll.checked = window.currentCloudList.length > 0 && selectedCloudFileNames.size === window.currentCloudList.length;
+    }
+  }
+
   function renderCloudTable(files) {
     window.currentCloudList = files;
+    selectedCloudFileNames.clear();
+    updateBatchDeleteUI();
+
     const tbody = document.getElementById('cloudTableBody');
     if (!files.length) {
-      tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;color:var(--text-dim);padding:20px;">No files found in strata/ folder on GitHub.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-dim);padding:20px;">No files found in strata/ folder on GitHub.</td></tr>';
       return;
     }
     const owner = document.getElementById('ghOwner').value.trim();
@@ -490,6 +531,9 @@
       const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/strata/${strictEncode(f.name)}`;
       return `
         <tr>
+          <td style="text-align:center;">
+            <input type="checkbox" class="cloud-file-chk" value="${f.name}" onchange="toggleCloudFileSelection('${f.name.replace(/'/g, "\\'")}', this.checked)"/>
+          </td>
           <td>
             <div style="font-weight:700;color:var(--text-main);">${f.name}</div>
           </td>
@@ -508,89 +552,140 @@
     }).join('');
   }
 
+  // Robust Git Data Trees API Deletion (Completely bypasses Contents API 500 bugs)
+  async function deleteViaGitTreeApi(owner, repo, relativePaths, commitMsg) {
+    if (!Array.isArray(relativePaths)) relativePaths = [relativePaths];
+    log(`Executing Git Data Trees deletion for ${relativePaths.length} file(s)...`);
+
+    // Step 1: Get latest commit SHA on main
+    const refData = await ghApi(`/repos/${owner}/${repo}/git/ref/heads/main`);
+    const latestCommitSha = refData.object.sha;
+
+    // Step 2: Get base tree SHA
+    const commitData = await ghApi(`/repos/${owner}/${repo}/git/commits/${latestCommitSha}`);
+    const baseTreeSha = commitData.tree.sha;
+
+    // Step 3: Create new tree with entries set to sha: null (Git removes these paths from the tree)
+    const treeEntries = relativePaths.map(p => ({
+      path: p.startsWith('strata/') ? p : `strata/${p}`,
+      mode: '100644',
+      type: 'blob',
+      sha: null
+    }));
+
+    const newTreeData = await ghApi(`/repos/${owner}/${repo}/git/trees`, {
+      method: 'POST',
+      body: JSON.stringify({
+        base_tree: baseTreeSha,
+        tree: treeEntries
+      })
+    });
+
+    // Step 4: Create commit pointing to new tree
+    const newCommitData = await ghApi(`/repos/${owner}/${repo}/git/commits`, {
+      method: 'POST',
+      body: JSON.stringify({
+        message: commitMsg,
+        tree: newTreeData.sha,
+        parents: [latestCommitSha]
+      })
+    });
+
+    // Step 5: Update branch ref
+    await ghApi(`/repos/${owner}/${repo}/git/refs/heads/main`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        sha: newCommitData.sha,
+        force: false
+      })
+    });
+
+    log(`✔ Git Data Trees deletion committed successfully (${newCommitData.sha.substring(0, 7)})!`, 'success');
+    return true;
+  }
+
   async function handleCloudDelete(idx) {
     const file = window.currentCloudList && window.currentCloudList[idx];
     if (!file) return;
 
-    if (!confirm(`Are you sure you want to PERMANENTLY delete "${file.name}" from GitHub Cloud?\n\nThis will trigger the robot to update strata_catalog.json for all student devices.`)) {
+    if (!confirm(`Are you sure you want to PERMANENTLY delete "${file.name}" from GitHub Cloud?\n\nThis will update all student devices automatically.`)) {
       return;
     }
 
     const owner = document.getElementById('ghOwner').value.trim();
     const repo = document.getElementById('ghRepo').value.trim();
+    const targetPath = `strata/${file.name}`;
+    const commitMsg = `sync(strata): remove ${file.name} via Cloud Publisher`;
 
     log(`Initiating deletion of "${file.name}"...`);
 
+    let success = false;
+
+    // Method 1: Try Contents API with strict RFC 3986 encoding & authenticated committer
     try {
-      // Step 1: Always retrieve the fresh SHA right now from GitHub
-      const encodedName = encodeURIComponent(file.name);
-      log(`Fetching latest remote SHA for "${file.name}"...`);
+      log(`Checking latest remote SHA for "${file.name}"...`);
       let freshSha = file.sha;
       try {
-        const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}?ref=main`);
+        const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}?ref=main`);
         if (liveInfo && liveInfo.sha) freshSha = liveInfo.sha;
-      } catch (shaErr) {
-        // Fallback with strict encoding
-        try {
-          const liveInfo = await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}?ref=main`);
-          if (liveInfo && liveInfo.sha) freshSha = liveInfo.sha;
-        } catch (e2) {
-          log(`Note on SHA lookup: ${shaErr.message}. Using cached SHA.`, 'warn');
-        }
-      }
+      } catch (e) {}
 
-      // Step 2: Send DELETE request with explicit committer and author
-      log(`Sending DELETE request to GitHub for strata/${file.name}...`);
-      const deleteBody = {
-        message: `sync(strata): remove ${file.name} via Cloud Publisher`,
-        sha: freshSha,
-        branch: 'main',
-        committer: {
-          name: 'PrepStation Admin',
-          email: 'admin@prepstation.app'
-        },
-        author: {
-          name: 'PrepStation Admin',
-          email: 'admin@prepstation.app'
-        }
-      };
-
+      log(`Sending DELETE request to Contents API...`);
+      await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+          message: commitMsg,
+          sha: freshSha,
+          branch: 'main'
+        })
+      });
+      success = true;
+    } catch (delErr) {
+      log(`Contents API returned error (${delErr.message}). Switching to Git Trees API engine...`, 'warn');
       try {
-        await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}`, {
-          method: 'DELETE',
-          body: JSON.stringify(deleteBody)
-        });
-      } catch (delErr) {
-        // If GitHub threw 500, verify whether git committed the deletion despite response glitch
-        log(`Verifying deletion status on GitHub (${delErr.message})...`, 'warn');
-        await new Promise(r => setTimeout(r, 1500));
-        let stillExists = true;
-        try {
-          await ghApi(`/repos/${owner}/${repo}/contents/strata/${encodedName}?ref=main`);
-        } catch (chk) {
-          if (chk.message && (chk.message.includes('404') || chk.message.includes('Not Found'))) {
-            stillExists = false;
-          }
-        }
-
-        if (stillExists) {
-          log(`File still present. Retrying with alternative path encoding...`, 'warn');
-          await new Promise(r => setTimeout(r, 2000));
-          await ghApi(`/repos/${owner}/${repo}/contents/strata/${strictEncode(file.name)}`, {
-            method: 'DELETE',
-            body: JSON.stringify(deleteBody)
-          });
-        } else {
-          log(`✔ Verified: File was successfully removed on GitHub!`, 'success');
-        }
+        // Method 2: Git Data Trees API fallback (immune to HTTP 500 router/concurrency glitches)
+        await deleteViaGitTreeApi(owner, repo, [targetPath], commitMsg);
+        success = true;
+      } catch (treeErr) {
+        log(`❌ Both deletion engines failed: ${treeErr.message}`, 'err');
+        alert(`Deletion failed: ${treeErr.message}\n\nPlease check token permissions or retry in 10 seconds.`);
+        return;
       }
+    }
 
+    if (success) {
       log(`✔ Deleted "${file.name}" from GitHub successfully!`, 'success');
       alert(`✔ "${file.name}" has been deleted from GitHub.\n\nThe GitHub robot is now updating strata_catalog.json automatically.`);
       await fetchLiveStrataList();
-    } catch(err) {
-      log(`❌ Deletion failed: ${err.message}`, 'err');
-      alert(`Deletion failed: ${err.message}\n\nTroubleshooting:\n1. If a GitHub Action or push was running simultaneously, git ref-lock occurs. Wait 15 seconds and try again.\n2. Ensure your token has 'repo' or 'contents:write' scope.`);
+    }
+  }
+
+  async function handleBatchDelete() {
+    const fileNames = Array.from(selectedCloudFileNames);
+    if (!fileNames.length) return;
+
+    if (!confirm(`Are you sure you want to PERMANENTLY delete ${fileNames.length} selected package(s) from GitHub Cloud in a single atomic commit?\n\nFiles:\n• ${fileNames.join('\n• ')}`)) {
+      return;
+    }
+
+    const owner = document.getElementById('ghOwner').value.trim();
+    const repo = document.getElementById('ghRepo').value.trim();
+    const commitMsg = `sync(strata): batch remove ${fileNames.length} packages via Cloud Publisher`;
+
+    log(`🚀 Initiating batch deletion of ${fileNames.length} file(s)...`);
+
+    try {
+      await deleteViaGitTreeApi(owner, repo, fileNames.map(f => `strata/${f}`), commitMsg);
+      log(`🎉 Successfully batch deleted ${fileNames.length} file(s) from GitHub!`, 'success');
+      alert(`✔ ${fileNames.length} file(s) deleted successfully from GitHub!\n\nThe GitHub robot is updating strata_catalog.json.`);
+      selectedCloudFileNames.clear();
+      updateBatchDeleteUI();
+      await fetchLiveStrataList();
+    } catch (err) {
+      log(`❌ Batch deletion failed: ${err.message}`, 'err');
+      alert(`Batch deletion failed: ${err.message}`);
+    }
+  }
     }
   }
 
