@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // Automatically syncs additions, updates, AND removals in the 'strata/' folder.
 // Whenever you run this script:
-// 1. Configures Git on Windows to bypass unreachable revocation servers.
+// 1. Configures Git to use OpenSSL backend to prevent Windows Schannel revocation errors.
 // 2. Pulls latest cloud state (git pull --rebase).
 // 3. Stages all file changes and DELETIONS in strata/ (git add -A strata/).
 // 4. Commits and pushes to GitHub.
@@ -20,8 +20,10 @@ function run(cmd) {
   return execSync(cmd, { cwd: ROOT_DIR, stdio: 'inherit' });
 }
 
-// 0. Ensure Windows SChannel does not fail on offline CRL/OCSP revocation servers
+// 0. Ensure OpenSSL backend is active to prevent Windows SChannel offline revocation errors
 try {
+  execSync('git config http.sslBackend openssl', { cwd: ROOT_DIR, stdio: 'ignore' });
+  execSync('git config --global http.sslBackend openssl', { cwd: ROOT_DIR, stdio: 'ignore' });
   execSync('git config http.schannelCheckRevoke false', { cwd: ROOT_DIR, stdio: 'ignore' });
   execSync('git config --global http.schannelCheckRevoke false', { cwd: ROOT_DIR, stdio: 'ignore' });
 } catch (e) {}
@@ -61,11 +63,4 @@ try {
   console.log('════════════════════════════════════════════════════════════════\n');
 } catch (e) {
   console.error('\n❌ Push failed:', e.message);
-  console.log('\n💡 Troubleshooting Tips:');
-  console.log('1. If Windows SChannel reports CRYPT_E_REVOCATION_OFFLINE, run:');
-  console.log('   git config --global http.schannelCheckRevoke false');
-  console.log('2. Alternatively, switch to OpenSSL backend:');
-  console.log('   git config --global http.sslBackend openssl');
-  console.log('3. Or publish without git using the Web Portal:');
-  console.log('   Open PrepStation_Strata_Cloud_Publisher.html in your browser!\n');
 }

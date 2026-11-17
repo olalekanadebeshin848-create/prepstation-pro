@@ -1,28 +1,27 @@
-{
-  "strata": {
-    "strataId": "SS_1_CRS_500QUE_UNIVERSAL",
-    "title": "Senior Secondary CRS Comprehensive (500 Questions)",
+﻿{
+  "strataMetadata": {
+    "label": "SS 1 Strata 1 — CRS",
+    "renderedAt": "2026-10-24",
+    "edition": "ED1",
+    "gradeLevel": "SS 1",
+    "term": "First Term"
+  },
+  "structuralStrata": {
     "examCategory": "SS 1",
-    "tier": "basic",
-    "totalBundles": 10,
-    "totalQuestions": 500,
-    "structuralStrata": {
-      "strataId": "SS_1_CRS_500QUE_UNIVERSAL",
-      "title": "Senior Secondary CRS Comprehensive (500 Questions)",
-      "description": "500 comprehensive Christian Religious Studies questions covering God's Sovereignty, Creation Accounts, Covenants, and Leadership with progressive bundle unlocking.",
-      "examCategory": "SS 1",
-      "tier": "basic",
-      "totalBundles": 10,
-      "totalQuestions": 500,
-      "bundles": [
-        {
-          "id": "b1_b1",
-          "name": "Bundle 1: The Sovereignty of God & The First Creation Account (Gen 1:1 - 2:3)",
-          "isUnlocked": true,
-          "requiredScore": 70,
-          "totalQuestions": 50,
-          "subjects": [
-            {
+    "strataId": "strata_1",
+    "displayName": "STRATA 1",
+    "durationMinutes": 20,
+    "bundles": [
+      {
+        "id": "b1_b1",
+        "strataId": "strata_1",
+        "name": "Bundle 1",
+        "requiredScore": 70,
+        "isUnlocked": true,
+        "isCompleted": false,
+        "durationMinutes": 30,
+        "subjects": [
+          {
               "subjectName": "Christian Religious Studies",
               "subjectId": "sub_crs",
               "totalQuestions": 50,
